@@ -1,0 +1,32 @@
+commit 90a1ae7b924b231254935314e7a1af195c6cb54d
+tree 2a88a89e442ea212276bef20420b072462e570e4
+parent cd86990fee3a9c14ecced09260899c6c52d61297
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-08 22:13:28 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-08 22:13:28 +0900
+
+    [android]ビルド所要時間を通知
+
+
+:100644 100644 74a08a6617a5f3f51150deaa250b934d9c71f6f9 6d0adff02b184594ada3af62b98b32253cf97151 M	pipeline_script/DevBuild/android/build.groovy
+commit cd86990fee3a9c14ecced09260899c6c52d61297
+tree 1ed156130c55ad4af519ba7b9d7f0e980634a06e
+parent d55ca1e69471d3bdd4344c993c8d5b39fd9d0bf9
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-08 21:38:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-08 21:38:49 +0900
+
+    [util]入れるとこミスったので修正
+
+
+:100644 100644 9fea798418b28227b69db7e950e97c3278863d94 c9f3cf0e2ab2fbc14141af9e2017ecca7ca97b07 M	pipeline_script/utils/notify/slackUtility.groovy
+commit d55ca1e69471d3bdd4344c993c8d5b39fd9d0bf9
+tree 11711ee1eec3fd060002c1f5ae1c55b80c73130c
+parent 29bd1ae7776398868d5e82d5b1c60107e5f87e45
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-08 20:40:17 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-08 20:40:17 +0900
+
+    ビルド所要時間の追加（iosだけ取り急ぎお試し）
+
+
+:100644 100644 664a409060c58a09ea97801b024cd88f7c296eca cde769f2c45b6df5cffc82d406f2864efd75aedc M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 e61e470b9333086dc7cb5c16a34a6f9816172f73 f4d10c86d7ee4655088d1e443539b88a5b323ecc M	pipeline_script/utils/notify/SlackNotify.groovy
+:100644 100644 a4e795d2233be1b074565ad2955a7bd598754670 9fea798418b28227b69db7e950e97c3278863d94 M	pipeline_script/utils/notify/slackUtility.groovy

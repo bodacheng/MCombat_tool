@@ -1,0 +1,11 @@
+commit 136a4c05a25b61a3aa518d3707145fd09e53cfe0
+tree d78e846e3979b87549c934ab2ca1a397dc6c9360
+parent e36a5114f302ed2665781ddbd72b8488ca5882fa
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 16:44:02 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 16:44:02 +0900
+
+    一旦git log情報を抜いて通知
+
+
+:100644 100644 03476ce8101dce1288d82881c61e7ecfd59a94b5 00b900f2e7e69656664d586863199a1f84b665a4 M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 09b66f0c3f602acef7532190434b6b208edda57e 24e2d46017f7fe02214ed7837c811ecdf5b181f4 M	pipeline_script/DevBuild/ios/build_beta.groovy

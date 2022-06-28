@@ -1,0 +1,162 @@
+commit 865249077ad4169004d6e313724e04ec40b2da72
+tree ac86fd6e728cc4a0ecf84928aa588d4f916cc577
+parent a2ba518be0ca334288c1a2af2e7edf528c225afd
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-21 11:28:29 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-21 11:28:29 +0900
+
+    fix frame animation
+
+
+:100644 100644 4fe871e7ccadb88cf85729e5941271856a82d2f1 e687eb0b6bea2da19492ec4415865732aad7f199 M	Assets/AddressableAssetsData/AssetGroups/DefaultPrefabGroup.asset
+:100644 100644 4e0a40e0f54e0cf7c1ae7601b09346003ea2640e 2e6e1c12f40262479bc273d1040eb3d971d8154f M	Assets/App/Prefabs/ItemAction/FrameItemAnimator.controller
+commit 084198cc2fe8f5c8985cc6a2f0c3c306395f132f
+tree b252250abf6e888e517ef3b35f12ec7f27ed9203
+parent f691d3841a89812f7be5b30167a185b0818b6431
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 19:14:02 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 19:14:02 +0900
+
+    TRIA-3662 【ダブリスト】他人のダブリストに自分の所持数が表示される
+
+
+:100644 100644 29663d4e8de48082f5995ecf1e66b69c3581088f 4d2d9829cc9b9f7b83ec7a073806c8701993c780 M	Assets/App/Scripts/Contents/Inventory/InventoryHandler.cs
+:100644 100644 eb515a9cd9a71a736ccf95fb1a5c3c076f57fe2c 0db1b4dacaa0c4492345d32882a8a337bd1dccfc M	Assets/App/Scripts/Contents/Inventory/InventoryListItem.cs
+commit fe5548d344aeb3115ed3b3434a3f9526d40f84db
+tree 3bdb4ecdefb90896ee9eca1c487a6631adc816eb
+parent 3820b665df9079993e00115d2b0694a0290bc197
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-04-20 17:53:40 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-04-20 17:53:40 +0900
+
+    パーティ中のイベントバナー表示・デザイン対応
+
+
+:100644 100644 446a24cc13bdb11dedd189c83ceb852c1d0e195c 8b5c61a23bfd4111a81d8767b94cd686988d1178 M	Assets/App/UIAnimation/Header/EventBannerAreaEntry.anim
+:100644 100644 e5069170dd38ad1b7e03cd4e762c574a8f62ccaa bc65023afec9403469de1ae1c2f93695d155865f M	Assets/App/UIAnimation/Header/EventBannerAreaHide.anim
+:100644 100644 0766cabfd201012ec96f35828901e96ccc002cb9 47bda8bfd462758701621e3041b280c3731b4108 M	Assets/Resources/UI/Main/BannerAreaLayer.prefab
+commit 3820b665df9079993e00115d2b0694a0290bc197
+tree f3491c869fae704635ecf7b957e52058e3bdf7c6
+parent 008b8a350da37d76c010313415173e6b2c8e5f01
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-04-20 16:36:33 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-04-20 16:36:33 +0900
+
+    FIX: TRIA-3661【パーティ】パーティ中のイベントボタン表示
+
+
+:100644 100644 440b765b3a56f12ffb1cbc226921a850ca901eb5 d2a38beefc8e2271dafec25a775490f9813a8e66 M	Assets/App/Scripts/Contents/Main/BannerAreaLayer.cs
+:100644 100644 b0178c92bce1551133d4dba1ebdf871557d1cc2f d5c714fe0261b8978e09277d2f6adbb9213339dd M	Assets/App/Scripts/Contents/Main/MainHeaderService.cs
+:100644 100644 fb75b6a15b33b08ff77634f2ee16103deed56e18 0766cabfd201012ec96f35828901e96ccc002cb9 M	Assets/Resources/UI/Main/BannerAreaLayer.prefab
+commit 54aa6f677cf6487b3367c6c7240df9ec65fe2356
+tree 0639918a0fa197120481162675b8543437f8c236
+parent 008b8a350da37d76c010313415173e6b2c8e5f01
+author yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-04-20 15:30:18 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-04-20 16:28:11 +0900
+
+    メンバー離脱時に会話エフェクトを消す
+
+
+:100644 100644 01237f5f6fe15ac6626ff178a2644a3563686698 f1905533abbbb2c4eea9af5f6cd9d45a6189d6de M	Assets/App/Scripts/Contents/Party/PartyHandler.cs
+commit 008b8a350da37d76c010313415173e6b2c8e5f01
+tree 1b22ff1947f02014ff41d6a69faf616db334987a
+parent fb6336d4b362f36aa82f0462afa34424f75b39a6
+author ito.midori <ito_midori@cocone.co.jp> 2022-04-20 16:25:06 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-04-20 16:25:06 +0900
+
+    ログインボーナス受け取りダイアログの文言変更
+
+
+:100644 100644 94e98dd6b6891db575329c7cf4ff6e865b4b68c7 705fc4a76b6cfe939eb9c35a85742f388ec92859 M	Assets/Resources/UI/LoginBonus/LoginBonusReceiveDialog.prefab
+commit ef26d61c239d3016e7b0a7064c0de13194df6cab
+tree fb06a358a449785372071d020119b233d8497fbb
+parent 92c0b8b16038ed014b3a36b2c2a0b3e18eb547a6
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-20 16:12:35 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-20 16:12:35 +0900
+
+    fix eye shader
+
+
+:100644 100644 ff09baf5c58d4440124efb503627bd4bdcc9842f c5c3c79bfee69c1885c9c2f3ff357403cb9994e7 M	Assets/App/Materials/Shaders/Low/LowFaceEye.shadergraph
+commit ac10d61ce94cf1467405f014109a481209d0b7a3
+tree 1553bde32f91b6bd2dd6b0ac3d3a26afa23d681d
+parent 1acc1fb7a0bce006298a760bf9541780e85a9eaa
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 15:33:56 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 15:36:14 +0900
+
+    TRIA-3506　【パーティ】もちもの画面確認後パーティ設定の木の実詳細にプレゼントボタンが表示される
+
+
+:100644 100644 b9483feb15ebbb14a95f31d3fb8a8c7177da2ea8 008e581663aff18e79a14d342b09116b945dde8e M	Assets/App/Scripts/ItemDetail/ItemDetailLayer.cs
+commit 1acc1fb7a0bce006298a760bf9541780e85a9eaa
+tree 56180144267474b1c7a19032eefe1bd6bde4d40d
+parent 92c0b8b16038ed014b3a36b2c2a0b3e18eb547a6
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 15:24:33 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 15:36:13 +0900
+
+    TRIA-3617　【セットアイテム】【仕様確認】親アイテムの詳細に「プレゼントする」ボタンが表示される
+
+
+:100644 100644 6d6395f8bd7df93a8e955bbb1cfc45efb34a18e9 734d4a5a34b38321bd271108cce134d22bc4bf38 M	Assets/App/Scripts/ItemDetail/ItemDetailHandler.cs
+commit 92c0b8b16038ed014b3a36b2c2a0b3e18eb547a6
+tree 42e0441c6f831e664aa05ea38d7035b6d7a09dc7
+parent 7287b969cbe2061b3c4a8bd83167db4ff07a544c
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-20 15:16:14 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-20 15:16:21 +0900
+
+    FIX: TRIA-3511 【もようがえ】保存コーデに着せ替え後アプリ再起動・お出かけを行うと着せ替えがリセットされる
+
+
+:100644 100644 3ebcb8b772c0ea14a5e1b524f7c474547eda433c 6e3322ebc6f93e024ca217ae5214a720959e4655 M	Assets/App/Scripts/Contents/Coordinate/Planet/PlanetCoordinateHandler.cs
+commit 024b4871709c764c38bc5cd736ad0756de1a6b7e
+tree 3cfaa0aee64e2e485ef9ce453f35748baee06e4c
+parent aa513cfef4e978dd968638bf783cde3a712c809b
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 14:43:18 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 15:00:31 +0900
+
+    TRIA-3384
+
+
+:100644 100644 4a23cf2cfdbff2002dcccc58ad691f4f90d2f26f 6d6395f8bd7df93a8e955bbb1cfc45efb34a18e9 M	Assets/App/Scripts/ItemDetail/ItemDetailHandler.cs
+commit aa513cfef4e978dd968638bf783cde3a712c809b
+tree 09f4b01c0feca166bce5586e265f4754627f1948
+parent 4291c41d06c2102ca50d4182145cc734c49e764c
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 14:20:29 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 15:00:30 +0900
+
+    撮影モードチュートリアル関連問題修正
+
+
+:100644 100644 8f3d4a237e907f1676c28d4aa4c7876da13f9f05 a0b8bdd9da76b280fd9e0e80235486b3f31f6a87 M	Assets/App/Scripts/Contents/Photo/PhotoHandler.cs
+:100644 100644 c020d4fd8d9a24652d9e4c749ee23cf88c1bd120 ade25ed084604d088f2124e8e240a3d6e61a52fd M	Assets/App/Scripts/Scenes/WorldScene.Party.cs
+:100644 100644 950eabf8a9f33ca954c4e1691aded8b067bbe675 f8c204bd4bb28c4736662786d0f1e50d369f431a M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:000000 100644 0000000000000000000000000000000000000000 7823d68c80cd8d14533c2c89f94d9df2b93bd4d5 A	Assets/App/Scripts/View/World/VCamController.FreeMode.cs
+:000000 100644 0000000000000000000000000000000000000000 944561e065a2bb6b771b57a7a31855cb0e060148 A	Assets/App/Scripts/View/World/VCamController.FreeMode.cs.meta
+:100644 100644 97f9ef5ea17286985a9bf5122f24cfd056d6d483 8838cd4eba848c30b3ee3e990715ced38f8760a0 M	Assets/App/Scripts/View/World/VCamController.cs
+:100644 100644 6d906aa6cdb925ca5658352e634ab1fcf94a9cf9 fcec42c34afbe1a561f90a374c7db3c895d212bd M	Assets/App/Scripts/View/World/WorldController.cs
+commit 4291c41d06c2102ca50d4182145cc734c49e764c
+tree 29c8283baa6eefe54dbca4436e986ac452f23160
+parent 3214039256566a0594529d034cd27af4eb90e0f1
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-19 20:55:15 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 15:00:30 +0900
+
+    TRIA-3643、TRIA-3630
+
+
+:100644 100644 57cc63f8f9ea8f09ac033824b6dda227a361c1fb 8f3d4a237e907f1676c28d4aa4c7876da13f9f05 M	Assets/App/Scripts/Contents/Photo/PhotoHandler.cs
+commit 3214039256566a0594529d034cd27af4eb90e0f1
+tree 2f01c98e55c405205322dd5b52ca0d7940f2fc1b
+parent 0772475ec3afa27d0c4e517f8264f943e90e0d02
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-19 18:28:50 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-20 15:00:29 +0900
+
+    TRIA-3469
+
+
+:100644 100644 44ea3b596581fc4eaf935749efa2f2f243df29c7 29663d4e8de48082f5995ecf1e66b69c3581088f M	Assets/App/Scripts/Contents/Inventory/InventoryHandler.cs
+commit 0772475ec3afa27d0c4e517f8264f943e90e0d02
+tree 200506b3f2b4794f687130e04509128c03175a00
+parent 1ea975e72550ee8e1807695b56b381af254fb6e8
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-04-20 14:57:55 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-04-20 14:57:55 +0900
+
+    FIX: TRIA-3492【パーティ】木の実を購入した際にアイテム詳細モーダル内の所持数が即時に反映されない
+
+
+:100644 100644 3ff4f81d10e353513dba1576bdb2fc777baa39d1 0f1b18c08605ed6c063108bcd3df81bdfeda35ba M	Assets/App/Scripts/Contents/PartyTop/PartyTopHandler.cs

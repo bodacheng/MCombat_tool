@@ -1,0 +1,108 @@
+commit 826e6a613c6c6b1afa0971f129b3956a57d7b2cb
+tree a2d3af0c8efac63262508ca6904c50f0426572d9
+parent 2dcfc61224069706b954449bca87a94f70481d79
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-16 14:36:59 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-03-16 14:36:59 +0900
+
+    fix texture setting
+
+
+:100644 100644 00ca20612862db3fd0b43f064c43f6459eccc201 f1d88cb3aac8afe63d976b2c703880618829e471 M	Assets/ExternalAssets/Items/N0018/FN0018TP01/Low2ndOpaque_TP01_M.tga.meta
+commit 300be7319b166a8c9121ad71f6459db8b4873d35
+tree b4184fe552a9b85163a7f5ed40d80bd802aa6fac
+parent 0b319ea1af95c24a216312eba8da0ad3196e1374
+author kim_choongeui <kim_choongeui@cocone.co.jp> 2022-03-16 10:49:58 +0900
+committer kim_choongeui <kim_choongeui@cocone.co.jp> 2022-03-16 10:49:58 +0900
+
+    TRIA-3004, TRIA-3006 再対応
+
+
+:100644 100644 67db9a1158cc29e50836fd1b11d7dae440cd75b6 aa3d581bfaafdd7e843b8537a2134f26e247d7d3 M	Assets/ExternalAssets/Items/N0018/FN0018OP02/Transparent_OP02_M.tga
+:100644 100644 ba4152c05608acf629232acc041ba1a2bb320c20 90e77114ddcf8ec7216fc23ff8393314ef8616f6 M	Assets/ExternalAssets/Items/N0018/FN0018TP01/Low2ndOpaque_TP01_M.tga
+commit 8d5de6e8435432a73a1adaae10d11294ade6ce35
+tree 77469a01cd2dd0aa658ebee20366e161d6590940
+parent 759afd0e39df0824849fc69da1dd26839c8409c9
+author sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-03-15 21:03:51 +0900
+committer sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-03-15 21:03:51 +0900
+
+    FN0023 サムネイル調整　ロゴ追加　髪の毛影の加筆
+
+
+:100644 100644 62e01c7eba43efc49534e9dee7f3b0db9e97f193 c8e344239d21643efe63fa4274895f7c87155a82 M	Assets/ExternalAssets/Items/N0023/FN0023BA01/thumb_s.png
+:100644 100644 0b2d46034cc927e093df22978ca9a5be7e4c3308 5b257b2904f4ce34942ca75fd250034642d41f32 M	Assets/ExternalAssets/Items/N0023/FN0023BA02/thumb_s.png
+:100644 100644 b497d3e7636697b09a3f31a7bd435caa4966577c 964ed760cb7574454ccf93fb3eae8b5f4948ac30 M	Assets/ExternalAssets/Items/N0023/FN0023BH01/Hair_BH01_M.tga
+:100644 100644 dc906f48fef6a14fb0e2a4bf8d8a6bae957e765a 31d12b19eaab6d67c6096e9a76593368d2713211 M	Assets/ExternalAssets/Items/N0023/FN0023BH01/thumb_l.png
+:100644 100644 ad9996cfc1a41d4df759480a9caf8ee9f1f00b9e 856b515cea5a8401bf0c3a7be9f45374dda0e036 M	Assets/ExternalAssets/Items/N0023/FN0023BH01/thumb_s.png
+:100644 100644 b497d3e7636697b09a3f31a7bd435caa4966577c 964ed760cb7574454ccf93fb3eae8b5f4948ac30 M	Assets/ExternalAssets/Items/N0023/FN0023BH02/Hair_BH02_M.tga
+:100644 100644 a0dd1ad1d5a705c53852ff7e92b3c81e896769f3 5bfb6de4417528a61528aa00aa64d8d876fc313a M	Assets/ExternalAssets/Items/N0023/FN0023BH02/thumb_l.png
+:100644 100644 0a2a5e660b5ba70f8abc7c5ed59c5c5d4114e46f 9c02e3f1d1d3d2a19e1fdf4dd710265b331acd30 M	Assets/ExternalAssets/Items/N0023/FN0023BH02/thumb_s.png
+:100644 100644 8b1be27f62d3f34459f0ebe646a4ed44cece8637 e1fdd2321f2a7dbf7a1c00617ff04648655851e6 M	Assets/ExternalAssets/Items/N0023/FN0023BT01/thumb_s.png
+:100644 100644 d18203c014791a4446ce563f72cd6a08295907ad b0f965f0a7dc77079474960ab76d07c1883b5bd0 M	Assets/ExternalAssets/Items/N0023/FN0023BT02/thumb_s.png
+:100644 100644 3d6738ca2cf1086d6eba0ffa6a2779915435ce99 a3fba49942f6c9ba4ca6808b34eeccd054161a5b M	Assets/ExternalAssets/Items/N0023/FN0023BT03/thumb_s.png
+:100644 100644 466dbf34207774d39c211dde1a82a54f3ca244d0 ac607b0b8777828bb8a8d57a6437641718f51670 M	Assets/ExternalAssets/Items/N0023/FN0023BT04/thumb_l.png
+:100644 100644 161ace376ef368b8fe1778a38735f607686363e1 d0274972954c1ccb43de484e3c272b772ce62110 M	Assets/ExternalAssets/Items/N0023/FN0023BT04/thumb_s.png
+:100644 100644 fb1772de0dc306c6d09be672df3af924b9d87863 ac52dada7687574f20ffa0e869e94f75af9afebd M	Assets/ExternalAssets/Items/N0023/FN0023EY01/thumb_s.png
+:100644 100644 172ec95d25e5dcb27fe6105fdfd93958c33c28ba 41eefa00fc99bff52a9156869543783fd387f5ec M	Assets/ExternalAssets/Items/N0023/FN0023FH01/thumb_l.png
+:100644 100644 2032274a5d38152b47d7da5e3f24c70e7576b8db 5f9196baad2d3374a660733cd2e259ecad06a6ab M	Assets/ExternalAssets/Items/N0023/FN0023FH01/thumb_s.png
+:100644 100644 8b7d74e667f4514acf341e33928303fd379fd90e eaabfb1bf9211494b9f957f3e54f9d48b4b18b8a M	Assets/ExternalAssets/Items/N0023/FN0023FH02/thumb_l.png
+:100644 100644 0bf8e265c7ae7389273f7a27b126aa633b90dbb3 30f2289258190ca85a0cfde61c3c45d3d206e15e M	Assets/ExternalAssets/Items/N0023/FN0023FH02/thumb_s.png
+:100644 100644 0c96ba63f903f40bf5a30c2d896e862e87def3a9 7ef1e967bfe35be28c826fa84810de80b9f693b2 M	Assets/ExternalAssets/Items/N0023/FN0023HR01/thumb_l.png
+:100644 100644 54961e7bddadd9e7b91a52cb5f17731826e913a6 bdf423518311fa2e13b54d30c7f64c308832e322 M	Assets/ExternalAssets/Items/N0023/FN0023HR01/thumb_s.png
+:100644 100644 5a16ab45344f90637843abb50c0d4b4311bb8e97 9f081a669b53f018a410c0211e8e40cdb44b0970 M	Assets/ExternalAssets/Items/N0023/FN0023HR02/thumb_l.png
+:100644 100644 2601d27af7c0ba3251fcbedaa546c3006c145e4e 6ac0edb0898174eaf051ec2a621d6ff1b04776a1 M	Assets/ExternalAssets/Items/N0023/FN0023HR02/thumb_s.png
+:100644 100644 bdbf4347b54704d589eb1bde238251d2e8fd4571 a422c67797ca5010215849a39cace2760cdda02e M	Assets/ExternalAssets/Items/N0023/FN0023IW01/thumb_s.png
+:100644 100644 d4e65f25cab2500eacf2f4a83e1b22c55e58c1ee 480b51c07be97f4500995451c557ad2a9b0cbf1c M	Assets/ExternalAssets/Items/N0023/FN0023MT01/thumb_s.png
+:100644 100644 daaf457b6d2b96054af1c7055c6d940ef46cb8a7 0f8a872bf92871d24fe60e776462508368e1ad40 M	Assets/ExternalAssets/Items/N0023/FN0023SH01/thumb_s.png
+:100644 100644 85cfbb4df25006a2f32ca28dad32c22e53dfdfaf ad7158d771d5ac33b764587ad97962491194f194 M	Assets/ExternalAssets/Items/N0023/FN0023SH02/thumb_s.png
+:100644 100644 aadbc938734e8e4e858e0679d473180b0663c66b 2e3cb8310f5af587fb5eacb6c2941775833b60e3 M	Assets/ExternalAssets/Items/N0023/FN0023TP01/thumb_s.png
+:100644 100644 50e260169f721e15e1f32622764c4f444ba709c0 986523755986aaf456d5aefb22944d69ac5ccde2 M	Assets/ExternalAssets/Items/N0023/FN0023TP02/thumb_s.png
+commit e7d4f05f4bbbb31a6bc6d9449ca0a0f74daa6633
+tree 06eb83fae4536328a1a39a16b888e9cdebde92ac
+parent d4c37d91302f0de281d31118d0b6b8e58cd6d5a3
+author NIto Tomoko <nito_tomoko@cocone.co.jp> 2022-03-15 20:10:00 +0900
+committer NIto Tomoko <nito_tomoko@cocone.co.jp> 2022-03-15 20:10:00 +0900
+
+    PG0033 修正_sky,tex
+
+
+:100644 100644 42543fdce7b1a4f961208fde2206eb6b57bae06c 18052222d2637ef48c128145bdd65d817f577e14 M	Assets/ExternalAssets/Items/G0025/PG0025SK01/Transparent_SK01_B.tga
+:100644 100644 177be1fdc2bdb3c5f164d872b07a20de5fb3cf66 87c8a33b82466ee57e0d473b010a2d7bdbb7ba84 M	Assets/ExternalAssets/Items/G0025/PG0025SK01/Transparent_SK01_B.tga.meta
+commit 0b319ea1af95c24a216312eba8da0ad3196e1374
+tree 495791a0e5b8d3c78ab3e46d9654aa577da96866
+parent af7912ca702ab49e3df87d766b139f60a6c224a6
+author kim_choongeui <kim_choongeui@cocone.co.jp> 2022-03-15 19:59:46 +0900
+committer kim_choongeui <kim_choongeui@cocone.co.jp> 2022-03-15 19:59:46 +0900
+
+    TRIA-3004 TRIA-3006 対応
+
+
+:100644 100644 7f86bf629d229994929404cda971b7d87f453e80 aa3d581bfaafdd7e843b8537a2134f26e247d7d3 M	Assets/ExternalAssets/Items/N0018/FN0018OP01/Transparent_OP01_M.tga
+:100644 100644 27174c86c5f57344664f0b63ff005c77b1b83452 9281b8acd454e5a0c076060ccc4c2cd56bcbf8ca M	Assets/ExternalAssets/Items/N0018/FN0018OP01/Transparent_OP01_O.tga
+:100644 100644 4721f8b8d6df0f33cc32506735b2e7820d8318e3 67db9a1158cc29e50836fd1b11d7dae440cd75b6 M	Assets/ExternalAssets/Items/N0018/FN0018OP02/Transparent_OP02_M.tga
+:100644 100644 ad9cbead5a67cc2a8e7f75cc74669885b2569212 c9c8eacf1a7ed86ccdcbc281b44d2fa9f48aae27 M	Assets/ExternalAssets/Items/N0018/FN0018OP02/Transparent_OP02_O.tga
+:000000 100644 0000000000000000000000000000000000000000 ba4152c05608acf629232acc041ba1a2bb320c20 A	Assets/ExternalAssets/Items/N0018/FN0018TP01/Low2ndOpaque_TP01_M.tga
+:000000 100644 0000000000000000000000000000000000000000 00ca20612862db3fd0b43f064c43f6459eccc201 A	Assets/ExternalAssets/Items/N0018/FN0018TP01/Low2ndOpaque_TP01_M.tga.meta
+:100644 100644 967bc878f1c2a61a136890036fcc2ea599d30019 0e16d5640749c992175bb552f844844b6d70c8d3 M	Assets/ExternalAssets/Items/N0018/FN0018TP01/MatLow_2ndOpaque_TP01.mat
+commit 2261de144af01a39c422ace294193a0b09df58b7
+tree aa61e1c6789d7eb58d71e167cd0f8c27141b1d8e
+parent a42f23de4b5889cd522aa7c94314a7755be81917
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-15 19:18:16 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-03-15 19:18:16 +0900
+
+    fix fbx import setting ( PG0020TR01 )
+
+
+:100644 100644 b3eb99962924db7c71a96a7d61d2d5a2aac7cb8e 194725236f25ab51424f7f76587ac16243993bcc M	Assets/ExternalAssets/Items/G0020/PG0020TR01/PG0020TR01.fbx.meta
+commit a42f23de4b5889cd522aa7c94314a7755be81917
+tree 629301f950d98cf315540ae8a1ec2494073bbcd1
+parent e53e475887e7907f873645a0fe1b2b47acd96d48
+author TokitaMio <tokita_mio@cocone.co.jp> 2022-03-15 18:02:30 +0900
+committer TokitaMio <tokita_mio@cocone.co.jp> 2022-03-15 18:02:30 +0900
+
+    PG0025SI01　UVスクロールアニメーション　修正
+
+
+:100644 100644 dd732c29e5a35e8ff79028318d2052366fe814b1 73010e9fbb871d741e9734dfe053b7542423a8ea M	Assets/ExternalAssets/Items/G0025/PG0025SI01/Mat_UVTransparent_SI01LR.mat
+:100644 100644 c5f7a58c74e48645cdd1104d9f9a8d7c6ced9cab 4327f3ab085706534003739b8a540b3927963c44 M	Assets/ExternalAssets/Items/G0025/PG0025SI01/PG0025SI01.fbx
+:000000 100644 0000000000000000000000000000000000000000 ed10c187773b88ed6995ec34484a7a0671653109 A	Assets/ExternalAssets/Items/G0025/PG0025SI01/UVTransparent_SI01LR_B.tga
+:000000 100644 0000000000000000000000000000000000000000 34e6889144db1e0dd065132e40e26e1163ad4eec A	Assets/ExternalAssets/Items/G0025/PG0025SI01/UVTransparent_SI01LR_B.tga.meta

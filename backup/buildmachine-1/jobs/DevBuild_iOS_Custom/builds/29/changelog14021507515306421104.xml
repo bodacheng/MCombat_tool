@@ -1,0 +1,35 @@
+commit a7fafffeceb85746128369f85de72c48ad3a49f6
+tree 05876ee5c9cafd4dd38330a3e69028cb9cbbefef
+parent d8305cb71cf4582f59810852fcaf425db9fcc4ea
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 02:27:31 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 02:27:31 +0900
+
+    本番系ビルドには失敗時にアラート絵文字を追加
+
+
+:100644 100644 136ac8d9e2b5dedba5c6dc0f59edd651f2424643 a697bf0fac1f84ef8601a5f3ba70c57ffb985855 M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy
+:100644 100644 2074078fad01529dbeb6debac4be44ef00c74fd8 e315a516fdf70cab6d0a7803d8c6177cc001aa3f M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 f453470d3584b0649ae6349544c37f27420871cb 778de7b72614ce0e4046561b36c142d24b174877 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit d8305cb71cf4582f59810852fcaf425db9fcc4ea
+tree 9a1afe85126854a689d513a3943363549ef10a5f
+parent ff89a5bd6a51bd50fe231f6517356c45cd9fd107
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 02:21:40 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 02:21:40 +0900
+
+    ビルド時間通知対応
+
+
+:100644 100644 c288b78e7177ece339c9518d9ec1b2004dbfc310 088171733b9ba1ad08fca4e32f831d212a18edb9 M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 3c0eb774304a2958d057ff7cea0ae28c56d2b78c 663e80ddfadf0f953d3a7a99fcfe5e915b29c154 M	pipeline_script/Design/build_asset_upload_custom_server.groovy
+:100644 100644 b424abfb7e87d80ea10954a6779d127d1e6fe2bb 136ac8d9e2b5dedba5c6dc0f59edd651f2424643 M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy
+:100644 100644 b4751b6098e5ed1321ab64a9e16ffdf366d75aee 4210a97a8f2e5519aa78401f2ad87d8e6daeeb01 M	pipeline_script/utils/notify/slackUtility.groovy
+commit ff89a5bd6a51bd50fe231f6517356c45cd9fd107
+tree 0ae35d52a0c9d5d825c4231e04effc490ffd2cc6
+parent e2bda3a5c6af0b30bd97ec89618ff13ffe98756a
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:54:01 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:54:01 +0900
+
+    リリースノートの追加
+
+
+:100644 100644 acd6d6143fda48a46f07184dae499de984e15def b4751b6098e5ed1321ab64a9e16ffdf366d75aee M	pipeline_script/utils/notify/slackUtility.groovy

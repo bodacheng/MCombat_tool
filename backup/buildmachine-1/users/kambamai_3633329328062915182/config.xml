@@ -1,0 +1,73 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<user>
+  <version>10</version>
+  <id>kamba_mai</id>
+  <fullName>上場 舞</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
+    </jenkins.security.ApiTokenProperty>
+    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.83">
+      <triggers/>
+    </hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.5">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <jenkins.plugins.slack.user.SlackUserProperty plugin="slack@2.48">
+      <disableNotifications>false</disableNotifications>
+    </jenkins.plugins.slack.user.SlackUserProperty>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>48ab7d35e5f9baf6</seed>
+    </jenkins.security.seed.UserSeedProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>all</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.model.TimeZoneProperty/>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>true</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.5">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.34">
+      <emailAddress>kamba_mai@cocone.co.jp</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>STAFFALL</string>
+        <string>COCONE-JP-Design</string>
+        <string>COCONE-JP-Design-Contents</string>
+        <string>ESR-IMS-AddItem</string>
+        <string>ET-Regular</string>
+        <string>Title-PartLeader</string>
+        <string>Title-Designer</string>
+        <string>COCONE-JP-JP-Design-Product-5</string>
+        <string>ESR-Zendesk-Pokecolo</string>
+        <string>COCONE-JP-Project-D</string>
+        <string>ESR-SVN-ProjS</string>
+        <string>ESR-KPI-HSD</string>
+        <string>COCONE-Tokyo</string>
+        <string>ESR-Portal-HSD</string>
+        <string>ESR-AWS-CVPN</string>
+        <string>ESR-KPI-MLD-INTGR</string>
+        <string>ESR-GitLab-Users</string>
+        <string>ESR-SVN-Poketria</string>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1629167323158</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+  </properties>
+</user>

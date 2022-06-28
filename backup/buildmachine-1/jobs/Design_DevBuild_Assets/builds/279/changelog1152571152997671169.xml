@@ -1,0 +1,1329 @@
+commit c826f3e938ab1a079f40817e0aecc168dd263f84
+tree 27ddaa8e891d968d1692ab1f6960880eb0ceb0bd
+parent 1160dec9fa5fa0911fc7c59232f87dd754ac83a6
+author maeda_takumi <maeda_takumi@cocone.co.jp> 2022-06-07 00:43:02 +0900
+committer maeda_takumi <maeda_takumi@cocone.co.jp> 2022-06-07 00:43:02 +0900
+
+    FG0013SH01 靴下部分のマスク修正
+
+
+:100644 100644 86d595e06cfca94d5de994e4f0928bee554d4c73 fa5593ba3e65b3c89103f2ff84793eb9053e70d2 M	Assets/ExternalAssets/Items/G0013/FG0013SH01/Body_SK30_M.tga
+commit 1160dec9fa5fa0911fc7c59232f87dd754ac83a6
+tree c7e9bcc5591addc4c24e377bd63d2fc0d9a169b2
+parent 7b370b1db320df7aabc78830aeecd4c1d3e1d3a1
+author maeda_takumi <maeda_takumi@cocone.co.jp> 2022-06-06 23:43:06 +0900
+committer maeda_takumi <maeda_takumi@cocone.co.jp> 2022-06-06 23:43:06 +0900
+
+    既存靴アイテム修正　JIRA TRIA-4197
+
+
+:100644 100644 a25ff18e0bf34fe2a87dfbbe9104b0303323e41a f86185c52cfe6c23d958dee84f16ba84fc3cd4ac M	Assets/AddressableAssetsData/AssetGroups/FG0001SH01.asset
+:100644 100644 67e73bd5ca17adc944aba12f537ef96b37f6f1ce 6d531a8ec9d05d1208920e3cb985408cc4520f06 M	Assets/AddressableAssetsData/AssetGroups/FG0001SH02.asset
+:100644 100644 cb30129a8b1fa353020b1dad3d2d50a5fde3338e 8a3492d979ede2750ed129d4a7b48c003b1fe770 M	Assets/AddressableAssetsData/AssetGroups/FG0010SH01.asset
+:100644 100644 f6687242f02a8d992b4d166e4fa457af36963264 42b8508591c4640f4230a152c6baa2170ca5e94a M	Assets/AddressableAssetsData/AssetGroups/FG0010SH02.asset
+:100644 100644 b7bd389759d39df3ad2655a54a5157f37a089dcc 392a34f871258bca7674195ed21769203793d3d7 M	Assets/AddressableAssetsData/AssetGroups/FG0015SH01.asset
+:100644 100644 f385a13052bd4cac43afea374fce95ad5626032c 5ea6b5901af9a8c85dc046e66d057853e3f007fb M	Assets/ExternalAssets/Items/G0001/FG0001SH01/FG0001SH01.fbx
+:100644 100644 653bc9871f76679772df21556438a0b8fce280e7 145d878c7aa01301dc7ee0228e8103b2beb2617e M	Assets/ExternalAssets/Items/G0001/FG0001SH01/FG0001SH01.prefab
+:100644 100644 a3dbb22ab141115f77c55fe2ba1376474af7d368 b6b994eee9bc27eca65fc871f8fa4c36749f6d3b M	Assets/ExternalAssets/Items/G0001/FG0001SH02/FG0001SH02.fbx
+:100644 100644 c665ca91ffe8d4ca6e037922017a4fb0c1f4fd91 3b9d391c159b5241484d773692484b4413196b2d M	Assets/ExternalAssets/Items/G0001/FG0001SH02/FG0001SH02.prefab
+:100644 100644 a56a385bccc5f17bf21fe43526acc85f2bd8a945 54f4b1a774a89d66c82f47c614529ff5f8f27f5a M	Assets/ExternalAssets/Items/G0008/FG0008SH01/FG0008SH01.fbx
+:100644 100644 0bb46b03723bf1d420066a0e0cb3e5e6f6ba4b9e c93540c04c0ea88364d5c15e8725f0acbda61b9c M	Assets/ExternalAssets/Items/G0008/FG0008SH01/FG0008SH01.prefab
+:100644 100644 c5552dea4d9c2aefe78d4dcac10b62f4fa8abff8 fa945820d57d99c84b704b76f6f133f439bd150a M	Assets/ExternalAssets/Items/G0010/FG0010SH01/FG0010SH01.fbx
+:100644 100644 b9d4bcf0a4a656ceabbdd0f02ac5130a24e7ea87 b65cd26493e34e79386b654d5f347f44813c578d M	Assets/ExternalAssets/Items/G0010/FG0010SH01/FG0010SH01.prefab
+:100644 100644 f2db835cc7f478a249348afdb6fbd836b606aad1 e615b0eee4bc08b7b56a41ea61de6f70c41c75d1 M	Assets/ExternalAssets/Items/G0010/FG0010SH02/FG0010SH02.fbx
+:100644 100644 c4e8097b1fb7c4f74a888b27f2b419cf888460da 84e9c2a1e14fc0ae213b1fa0622051ae49dab2cb M	Assets/ExternalAssets/Items/G0010/FG0010SH02/FG0010SH02.prefab
+:100644 100644 5b7d03782b4f5dfc1b6f05bfac22fc8fd87a0e18 8441ad5c9310a8939b20cb4a3a2c112ddcdf4e72 M	Assets/ExternalAssets/Items/G0015/FG0015SH01/FG0015SH01.fbx
+:100644 100644 dccd5742f7b411261216aa9a7a4320aafc190ede 44518a496eb40293971c74b5170d74fcefdd2496 M	Assets/ExternalAssets/Items/G0015/FG0015SH01/FG0015SH01.prefab
+:100644 100644 841ad2a5875c624df6273560223ae65d40af7379 1ae8d8d84ff73f7c7ebebf653338390383ae9913 M	Assets/ExternalAssets/Items/G0015/FG0015SH01/FG0015SH01.prefab.meta
+commit 7b370b1db320df7aabc78830aeecd4c1d3e1d3a1
+tree a3d81b6b2d6321030a68682d8397eed5c0f0a184
+parent d59c94aa77329b35b0e8f0a77ccbc418487d137b
+author matsuzawa_tokuhiro <matsuzawa_tokuhiro@cocone.co.jp> 2022-06-06 22:51:08 +0900
+committer matsuzawa_tokuhiro <matsuzawa_tokuhiro@cocone.co.jp> 2022-06-06 22:51:08 +0900
+
+    FG0009IW01 FG0039IW01 IW02　MipMap調整
+
+
+:100644 100644 504c66f312404ef09d01367bf227f48cb5f82a77 017f048544f144537c53a50335e39f02228695a4 M	Assets/ExternalAssets/Items/G0009/FG0009IW01/Body_SK10_M.tga.meta
+:100644 100644 0ccea7d11628649e75be8fb8305a7d4b9110167d 43cb5a9dabd2cff811adfeffb202cc91813d5041 M	Assets/ExternalAssets/Items/G0039/FG0039IW01/Body_SK30_B2.tga
+:100644 100644 156f279471210ce1a7bb6a81d324083dd70b4866 8029c983e4459dde92d73c710bd9140128eba520 M	Assets/ExternalAssets/Items/G0039/FG0039IW01/Body_SK30_B2.tga.meta
+:100644 100644 c010cce1c3350aeb98b66530eed3eecdb18747fc 46f75b896f9278a1cb12a4afaf503aef228d06d4 M	Assets/ExternalAssets/Items/G0039/FG0039IW01/Body_SK30_M.tga
+:100644 100644 f3a6a79c0fab26e8ae304849744069d5b44865fa a020d850b4be89629a21b071fe6b9874772f9b7b M	Assets/ExternalAssets/Items/G0039/FG0039IW02/Body_SK20_B2.tga.meta
+:100644 100644 11c1d363bbdcfac17b318242573975f012ca3615 f3d8f8b6679712b319259114aa840d04328082b8 M	Assets/ExternalAssets/Items/G0039/FG0039IW02/Body_SK20_M.tga
+commit f2ececb5cee3f2ea75e536a4ae215dd8c7fec2be
+tree 25b53d0f1ff069ea970be13afc53ab8dfb762705
+parent 44ff877ca12067df5895d13c56a3e60fe6a5f727
+author matsuzawa_tokuhiro <matsuzawa_tokuhiro@cocone.co.jp> 2022-06-06 22:26:12 +0900
+committer matsuzawa_tokuhiro <matsuzawa_tokuhiro@cocone.co.jp> 2022-06-06 22:26:12 +0900
+
+    FG0012SH02 肌部分のUV修正
+
+
+:100644 100644 a8bd4726e458d38cd014be6cd4dd2ebee6694dad ab6ad5f3eca5ffb7803ee489b92e62a394662ecd M	Assets/ExternalAssets/Items/G0012/FG0012SH02/FG0012SH02.fbx
+:100644 100644 ac3ab9e234c835d76d179c33c416c92944e1ccb5 28041286fb4e88d82ed2a1c71fd947efcb751ee7 M	Assets/ExternalAssets/Items/G0012/FG0012SH02/FG0012SH02.prefab
+commit 6e8ca0f07b3416557e4a74ee084f053325ce601d
+tree 4d1a13aaf1696903220f192f22ec35039a5c0c08
+parent 311218901aad4554d190121c3b1037bda91c227b
+author Yukinori <fukatsu_yukinori@cocone.co.jp> 2022-06-06 20:46:15 +0900
+committer Yukinori <fukatsu_yukinori@cocone.co.jp> 2022-06-06 20:48:09 +0900
+
+    なかよしハート
+    
+    なかよしハート
+    コロニー
+    JIRA対応
+
+
+:100644 100644 58445a92789e36a65a239a5adf56ab8785e48e9b 5aca624133f96bffad6980332bafe4a54622669e M	Assets/AddressableAssetsData/AssetGroups/PN0040SI01.asset
+:100644 100644 028beb6ead0c6790a0a576c267ca24de58e955c1 66e07c48e7c45aca53de0c0016c0366061e1d040 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_pink.mat
+:100644 100644 6ac4d3bd32ea40e45b2973525ffae72a69455bf9 1b462621f04df0f84c19072df1d7d218d3b53ed0 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_pink.png
+:100644 100644 89138d2417f6ca96a60fab56b032cf3ecb1af6bd bc9c7babc49aa607eb49167e45ba4065e426fbc6 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_pink.prefab
+:100644 100644 31acdbaccd96c176800ae2b7e0f39794c984ca2f 5bb0740d43b4e20d69197a39a045990794004b34 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_red.mat
+:100644 100644 d21e42dc0b4196c860dc2c94b16570d0bf2c682c 93a247e5620abb379650340b2bfa849a2924db80 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_red.png
+:100644 100644 22db92c10761f853cea5e62e20f36850b3901896 3a3586e57f77ed40efee76ebb172afea00f7b3c7 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_red.prefab
+:100644 100644 5f0db19a153eac93d9d9d8c52c5c4a89aaf8d2a2 473be9bbef0f68604bbb66f7ff350391a1422cb0 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_white.mat
+:100644 100644 b378de15834319d9953ee84e731304bdb7755560 7a9359e19840afd38aeeaa5f0cbe0581c4d3eef0 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_white.png
+:100644 100644 2a0f96a50bc1204e1caec18bc05905b44985ddb9 6c902926f63729bec6bd693e2aa60adf65ea8a4c M	Assets/ExternalAssets/Items/N0040/PN0040SI01/PN0040SI01.fbx
+:100644 100644 105ccfea706852d02776691502cd4450672ed50d 290d5354b9f5a1bb3b305a6b75c669cc1363e125 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/PN0040SI01.prefab
+:100644 100644 0a76eeb963ffcd7936feede93420a17efa7edb92 63e48642e331a3df2d9abd94f7269acfb56dc100 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/PN0040SI01.prefab.meta
+:100644 100644 5830a1a7682759bdb5764fd6636e1aacd1ad1f93 3cfc2bb39daba674b97405e67e237b279d204375 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/PN0040SI01_Fx.prefab
+:100644 100644 652880ee5b7b1a3917cd60b75e6afd4cf59fb6ed ceadc548777b404e843f0d4e63c37ba90ecf3fb0 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/thumb_l.png
+:100644 100644 c12f319379a771645961858024c7ce6c578cd576 21974102819743ff9e5b55fa440ed47a5afa0455 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/thumb_s.png
+commit 1fc05aaa9044bb1821837a9e0f28bf76373050e0
+tree db15c7925b1f99e2f89cf953dceb1ba72e151e78
+parent 44ff877ca12067df5895d13c56a3e60fe6a5f727
+author Yukinori <fukatsu_yukinori@cocone.co.jp> 2022-06-06 20:46:15 +0900
+committer Yukinori <fukatsu_yukinori@cocone.co.jp> 2022-06-06 20:46:15 +0900
+
+    なかよしハート
+    
+    なかよしハート
+    コロニー
+    JIRA対応
+
+
+:100644 100644 f560bdfe63ec391a3780dc20e66ec5ac892ab446 a6f8b763a8fce8ad89e0d30fe391bcc802dfb46c M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+:100644 100644 58445a92789e36a65a239a5adf56ab8785e48e9b 5aca624133f96bffad6980332bafe4a54622669e M	Assets/AddressableAssetsData/AssetGroups/PN0040SI01.asset
+:100644 100644 028beb6ead0c6790a0a576c267ca24de58e955c1 66e07c48e7c45aca53de0c0016c0366061e1d040 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_pink.mat
+:100644 100644 6ac4d3bd32ea40e45b2973525ffae72a69455bf9 1b462621f04df0f84c19072df1d7d218d3b53ed0 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_pink.png
+:100644 100644 89138d2417f6ca96a60fab56b032cf3ecb1af6bd bc9c7babc49aa607eb49167e45ba4065e426fbc6 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_pink.prefab
+:100644 100644 31acdbaccd96c176800ae2b7e0f39794c984ca2f 5bb0740d43b4e20d69197a39a045990794004b34 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_red.mat
+:100644 100644 d21e42dc0b4196c860dc2c94b16570d0bf2c682c 93a247e5620abb379650340b2bfa849a2924db80 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_red.png
+:100644 100644 22db92c10761f853cea5e62e20f36850b3901896 3a3586e57f77ed40efee76ebb172afea00f7b3c7 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_red.prefab
+:100644 100644 5f0db19a153eac93d9d9d8c52c5c4a89aaf8d2a2 473be9bbef0f68604bbb66f7ff350391a1422cb0 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_white.mat
+:100644 100644 b378de15834319d9953ee84e731304bdb7755560 7a9359e19840afd38aeeaa5f0cbe0581c4d3eef0 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/Fx_heart_white.png
+:100644 100644 2a0f96a50bc1204e1caec18bc05905b44985ddb9 6c902926f63729bec6bd693e2aa60adf65ea8a4c M	Assets/ExternalAssets/Items/N0040/PN0040SI01/PN0040SI01.fbx
+:100644 100644 105ccfea706852d02776691502cd4450672ed50d 290d5354b9f5a1bb3b305a6b75c669cc1363e125 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/PN0040SI01.prefab
+:100644 100644 0a76eeb963ffcd7936feede93420a17efa7edb92 63e48642e331a3df2d9abd94f7269acfb56dc100 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/PN0040SI01.prefab.meta
+:100644 100644 5830a1a7682759bdb5764fd6636e1aacd1ad1f93 3cfc2bb39daba674b97405e67e237b279d204375 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/PN0040SI01_Fx.prefab
+:100644 100644 652880ee5b7b1a3917cd60b75e6afd4cf59fb6ed ceadc548777b404e843f0d4e63c37ba90ecf3fb0 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/thumb_l.png
+:100644 100644 c12f319379a771645961858024c7ce6c578cd576 21974102819743ff9e5b55fa440ed47a5afa0455 M	Assets/ExternalAssets/Items/N0040/PN0040SI01/thumb_s.png
+commit c978ec0dd7c8fa0f07a6c41f18a7ea905b253c20
+tree 10d832b97e6f980be4023866398acdd5b4cf8e3a
+parent 44ff877ca12067df5895d13c56a3e60fe6a5f727
+author chang_huichen <chang_huichen@cocone.co.jp> 2022-06-06 20:30:28 +0900
+committer chang_huichen <chang_huichen@cocone.co.jp> 2022-06-06 20:30:28 +0900
+
+    FG0019
+    
+    FG0019　不具合修正
+
+
+:100644 100644 f560bdfe63ec391a3780dc20e66ec5ac892ab446 e005264a7d0e2ab26ada008ccd56df369af8885a M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+:100644 100644 32228f15909e14404a0527f5e7ca28c7fdb2f47b 8b55879d3cdc79a30f4f9394dbdca0dd62e9683d M	Assets/ExternalAssets/Items/G0019/FG0019SH01/FG0019SH01.fbx
+:100644 100644 edfdded6d58431cff6ee19add6c0afbefdea0c33 3b3150c29359c593592042460cefd465928d60ba M	Assets/ExternalAssets/Items/G0019/FG0019SH01/FG0019SH01.prefab
+commit 2d7f66d73e97f5c319b6ed5efd1d7fa1e1ba7524
+tree c1e1be2357fce614d1182095415bee3e447dc490
+parent cc57ddcba654e5893aab8621fed23e03ce1fac4d
+author yagi_arisa <yagi_arisa@cocone.co.jp> 2022-06-06 19:25:03 +0900
+committer yagi_arisa <yagi_arisa@cocone.co.jp> 2022-06-06 19:25:03 +0900
+
+    FG0033 FA01 修正
+
+
+:100644 100644 140ca4bfa7195bd08d13e957dbbd464135702591 f560bdfe63ec391a3780dc20e66ec5ac892ab446 M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+:100644 100644 17b86f060f507d47f63ac4e5158fab5bace3655f 323a6760da05db11ac84a58a0d8454d3b21699f5 M	Assets/AddressableAssetsData/AssetGroups/FG0033FA01.asset
+:100644 100644 10253bcb330c17d1343cb3d365f5e671d41dfd39 32a2534ec8721fb5fcda6ed2328e5ae67bb75bcf M	Assets/ExternalAssets/Items/G0033/FG0033FA01/FG0033FA01.controller
+commit cc57ddcba654e5893aab8621fed23e03ce1fac4d
+tree bb8c72a1f4e7a663009cb08bf86c5113085f8dd6
+parent b1992903a1e1c521147427a52deb0f44fe5c718d
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-06 18:29:17 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:40:03 +0900
+
+    fixes
+
+
+:100644 100644 3080d95cf97341bf8fc90a61d306d497532a3c10 91bb0501ec9522927a7c612dab6a713b1b628cd0 M	Assets/App/Editor/ThumbnailView.cs
+:100644 100644 89ba34fdd86ad7596bc95947491b5fa8d01360f8 4a8e7fed6c1a544413b18af9f19418b1db8010cf M	Assets/App/Scripts/View/Thumbnail/ThumbnailDirector.cs
+commit b1992903a1e1c521147427a52deb0f44fe5c718d
+tree 44a019e491b5d7e6af9ca22366efdabd3efe3b7a
+parent ee56053b30513774011621fc083017cb2653e157
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-06 18:18:45 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:40:01 +0900
+
+    1. zoom ロジック修正
+    2. サムネイルシーンでアイテム選択ロジック修正
+    3. 個別ウィドウで解像度指定機能復活
+
+
+:100644 100644 4d893323c036923d41d50085b1baa0abc093e8a2 3080d95cf97341bf8fc90a61d306d497532a3c10 M	Assets/App/Editor/ThumbnailView.cs
+:100644 100644 1b05856a1b30b5c62a20db423540f6eb54261007 96dfaeb1a689a3beb40b2b651d616c08487b2082 M	Assets/App/Editor/View/ThumbnailExporter/ThumbnailExporter.cs
+:100644 100644 eefa7a4e925121cd66aff3a9cea0b3bb7f0464fb 49570eee5b7ad0777d16829c21430cbdd16a2111 M	Assets/App/Scripts/View/Thumbnail/DedicatedCameraConnector.cs
+commit ee56053b30513774011621fc083017cb2653e157
+tree 72911fc3ef22f44264897b02e4230b1addaf8401
+parent 782c78de18f11d010c7a3145ad24d9f9fe73477b
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-31 18:44:45 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:40:00 +0900
+
+    絞り込み機能
+
+
+:100644 100644 ff8ef012dfc948a9882ae53971696bfe10ef88b0 1b05856a1b30b5c62a20db423540f6eb54261007 M	Assets/App/Editor/View/ThumbnailExporter/ThumbnailExporter.cs
+commit 782c78de18f11d010c7a3145ad24d9f9fe73477b
+tree fbd335a3d8a69bf183863cdbda4d24ac7184f98a
+parent 104582abb1dd12fdd3e78ff8df8fa5c798efb068
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-31 17:26:22 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:39:59 +0900
+
+    fixes
+
+
+:100644 100644 0160a8a3e175e665b2f1bda6c5ba9c0c09ebc7d3 ff8ef012dfc948a9882ae53971696bfe10ef88b0 M	Assets/App/Editor/View/ThumbnailExporter/ThumbnailExporter.cs
+commit 104582abb1dd12fdd3e78ff8df8fa5c798efb068
+tree 1cecbc7e8cf14cdbd726e47e15ef4f4d7d1496bc
+parent 9e4b77e2310f203324cb128f4e0acdb810081f00
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-31 17:12:57 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:39:37 +0900
+
+    固定の初期サイズでGenerate出来るモード；シリーズ順にアイテムを表示
+    
+    # Conflicts:
+    #	Assets/App/Scripts/View/Thumbnail/ThumbnailDirector.Lite.cs
+    #	Assets/App/Scripts/View/Thumbnail/ThumbnailDirector.cs
+
+
+:100644 100644 f9b3d337e42cc180ed0c00e01fabb5ee2324af3a 52e27acfd9e9d8b3067e1769576f66ca1cacc297 M	Assets/App/Editor/View/ThumbnailExporter/ThumbnailExporter.Generate.cs
+:100644 100644 b5e19ce389f701849077cf5d797d70779caf8c71 0160a8a3e175e665b2f1bda6c5ba9c0c09ebc7d3 M	Assets/App/Editor/View/ThumbnailExporter/ThumbnailExporter.cs
+:100644 100644 3a299430dd4923141b20829d88825995dcc19792 64a5505e8ae17b90a174dac8db18419a417c7441 M	Assets/App/Scripts/Contents/Title/TitleLayer.cs
+:100644 100644 6078152ff66bd817d177b30bedb05bae6ecdf5dc 0193a24e0092ccc7e6d7bc96e2ae1ec9319aa929 M	Assets/App/Scripts/ItemDetail/ItemDetailLayer.cs
+:100644 100644 a9866931c3463e1569f3954708dc385548d879d0 eefa7a4e925121cd66aff3a9cea0b3bb7f0464fb M	Assets/App/Scripts/View/Thumbnail/DedicatedCameraConnector.cs
+:100644 100644 3712b533a7aacc3d3a1b4ca917aaf0136a21b6ff 9954db370815d05b4662e5b048458bbc9712df94 M	Assets/App/Scripts/View/Thumbnail/ThumbnailDirector.Lite.cs
+:100644 100644 68173be08541d7214fbb4ff88f257a5ce3b20559 89ba34fdd86ad7596bc95947491b5fa8d01360f8 M	Assets/App/Scripts/View/Thumbnail/ThumbnailDirector.cs
+commit 9e4b77e2310f203324cb128f4e0acdb810081f00
+tree ec17a593a2316f39bc4976d5330cf82792035a39
+parent 03f8f7b6245e04f178e620524a6173b3cb8c0dfa
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-31 15:14:01 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:36:22 +0900
+
+    search feature
+
+
+:100644 100644 3d03c37e185888668056c0c3a86f5941706b7956 b5e19ce389f701849077cf5d797d70779caf8c71 M	Assets/App/Editor/View/ThumbnailExporter/ThumbnailExporter.cs
+commit 03f8f7b6245e04f178e620524a6173b3cb8c0dfa
+tree e294695360c0df6bc2232795cf7d5510614f2f29
+parent 1e12b21271492180ecddda0efd2e511b8337d1fa
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-31 12:20:56 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:36:21 +0900
+
+    HR（髪全体）を生成する場合、初期位置修正
+
+
+:100644 100644 89f0acd0f507ffc7e1b6600d4129b73a2df6d917 aaf35de2e4720b2b716153af29211459c1e940a6 M	Assets/App/Scripts/View/Thumbnail/FashionItemThumbnailService/FashionItemThumbnailService.cs
+commit 1e12b21271492180ecddda0efd2e511b8337d1fa
+tree 2cc124a3759f1aa4c5c8fb8898c4ee0f2ed38543
+parent 6a98eb6a3c0555c93f71c0e6ea82c930a5e8907d
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-31 12:01:58 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:36:20 +0900
+
+    revert useless try, and fix front hair back hair thumbnail show
+
+
+:100644 100644 47f17fc5b6ff1c8162a18011b21aa250b267ebb0 89f0acd0f507ffc7e1b6600d4129b73a2df6d917 M	Assets/App/Scripts/View/Thumbnail/FashionItemThumbnailService/FashionItemThumbnailService.cs
+commit 6a98eb6a3c0555c93f71c0e6ea82c930a5e8907d
+tree 8fc5c306cd0ebd844e0cf3b6e02b015f77365a80
+parent 31286cf8a44f5693ff51b0f0700ab5d74e61a2ca
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-30 17:59:25 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:36:19 +0900
+
+    temp logic :  サムネイルツール　前髪と後髪表示問題
+
+
+:100644 100644 730cdff61d8f7e69df44f8556f01cf48537e4062 47f17fc5b6ff1c8162a18011b21aa250b267ebb0 M	Assets/App/Scripts/View/Thumbnail/FashionItemThumbnailService/FashionItemThumbnailService.cs
+commit 31286cf8a44f5693ff51b0f0700ab5d74e61a2ca
+tree 10b7fa8c6bd8f31fc82a196cae23c9389c6bbc29
+parent 77736f8ed7a1268f126aaf9c88ea5ec04b71ace9
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-30 17:58:16 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:36:17 +0900
+
+    fix : ExportThumbanailツールのアイテム名右側の『edit』で開くウィンドウ内の『Export』が現状機能しておりません。
+
+
+:100644 100644 f136e55a6cf4585e2d7bc860598df156cd2b6a3a 3d03c37e185888668056c0c3a86f5941706b7956 M	Assets/App/Editor/View/ThumbnailExporter/ThumbnailExporter.cs
+commit 77736f8ed7a1268f126aaf9c88ea5ec04b71ace9
+tree 0d57d83e6677af2c8be7682959706183a76d5b47
+parent 3446dd10ad2605b795e353b30e756d8fc1f87082
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-05-26 11:56:30 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 18:34:49 +0900
+
+    サムネイル撮影する時、アイテムのポジション調整
+
+
+:100644 100644 551b8ec5824e8900593c25455af38ada25bf3f6c 9758650e8e5a6cc8e009d7957e4da7c60934f8c1 M	Assets/App/Scenes/ThumbnailScene.unity
+:100644 100644 4f70816939b31dee0c7d241fc003f7baba5ef720 3712b533a7aacc3d3a1b4ca917aaf0136a21b6ff M	Assets/App/Scripts/View/Thumbnail/ThumbnailDirector.Lite.cs
+:100644 100644 30a57a5e0b3da67750fc70fa3b212082f0efcf78 68173be08541d7214fbb4ff88f257a5ce3b20559 M	Assets/App/Scripts/View/Thumbnail/ThumbnailDirector.cs
+commit 861b06d842c20738cab270d4b32d506cc23df98d
+tree c59b9e6c1953a9ff8ba644f78a4edbf032817ba9
+parent 2cc8592d55458de59b18697b832b664ee0f4f770
+author chang_huichen <chang_huichen@cocone.co.jp> 2022-06-06 18:20:13 +0900
+committer chang_huichen <chang_huichen@cocone.co.jp> 2022-06-06 18:20:13 +0900
+
+    FG0019
+    
+    FG0019 Lowmap 修正対応
+
+
+:100644 100644 90c220ba3b7c7d60edc739c8bdf1fdef71e75d9d ea8a1fe8ebd26e2b65c39f1006855926f19ef96c M	Assets/ExternalAssets/Items/G0019/FG0019FA01/MatLow_Transparent_FA01.mat
+commit 39974a2c132826a744417890d95c3f05e27b3bee
+tree 9504fd92eb124519f9e606398e123faced0cef85
+parent ef02521d39d9c124f78d352edef49cde548f3c17
+author yanagita_hinako <yanagita_hinako@cocone.co.jp> 2022-06-06 18:10:19 +0900
+committer yanagita_hinako <yanagita_hinako@cocone.co.jp> 2022-06-06 18:10:19 +0900
+
+    サムネイル調整
+
+
+:100644 100644 42c442f0e98e65d936b1e5c024fc8dc1d5d96443 ed1235e46531641c11bb788c6bbbccd505230695 M	Assets/ExternalAssets/Items/N0022/FN0022BH01/FN0022BH01.fbx
+:100644 100644 9790a7bb9c1e07d0a9a8acb2b52ac66cee4a0955 55fdf00ec15e977052e09e4d9942a41b87c937fe M	Assets/ExternalAssets/Items/N0022/FN0022BH01/FN0022BH01.prefab
+:100644 100644 9a14ea1c755d862676d691a25ec7b7821425ba8f 190c7c75cf0d9ef770a4f8de50421746eab60dbb M	Assets/ExternalAssets/Items/N0022/FN0022BH01/FN0022BH01.prefab.meta
+:100644 100644 d139594bf64a16c8b79089c892145431f2aa2aa9 5941897b1a006b8113454b47949bbd9807135cc3 M	Assets/ExternalAssets/Items/N0022/FN0022BH01/Mat_Hair_BH01.mat
+:100644 100644 f1dcdc34a792794abaf6601df3c176a8a0ff3b56 3288eac8c26954a854cc2e3a7d9d7689ae031af2 M	Assets/ExternalAssets/Items/N0022/FN0022BH01/thumb_l.png
+:100644 100644 0e6145aa3c57f031e11c8f429f33b5098d39e31c e472ff26d65efc6f27c73bc325f0abd21a1d4138 M	Assets/ExternalAssets/Items/N0022/FN0022BH01/thumb_s.png
+:100644 100644 4e1425a53c0062e10249b681f2c62d90dcfac686 e384ba5b9cfad20bdf217d52eef2e388baa15f7c M	Assets/ExternalAssets/Items/N0022/FN0022BH02/FN0022BH02.fbx
+:100644 100644 ec55cc5b655abcc2767d85af7ddadb9e7dea44b4 bdc062c87b5cae6608d8e341de3f5488ab285dcd M	Assets/ExternalAssets/Items/N0022/FN0022BH02/FN0022BH02.prefab
+:100644 100644 0207fc81dcd2cde02258cd112a296ee5028134c8 cfe5947100669d9ea965e46eab39c89736692ca1 M	Assets/ExternalAssets/Items/N0022/FN0022BH02/FN0022BH02.prefab.meta
+:100644 100644 38cc07ad4fdb348023b89ea46f3b999784bc8221 493a42413bf36e78fb001ae3569c67e1c5937a6c M	Assets/ExternalAssets/Items/N0022/FN0022BH02/Mat_Hair_BH02.mat
+:100644 100644 0a50307347aebfe8d57f3181e14f7dab5cfb8d43 5b81deb00f30f85919606b52e2ae5c1474bd1613 M	Assets/ExternalAssets/Items/N0022/FN0022BH02/thumb_l.png
+:100644 100644 1f2e19b50f569b40d7a77bbe5b71bcfe10ec2fe7 7e7e82035fc59846159b69a2f3c0cd43b3ff993e M	Assets/ExternalAssets/Items/N0022/FN0022BH02/thumb_s.png
+:100644 100644 9cd6a73540435389a185e34802828a638a7f18b2 3cf9bfbec47fa591a542785d57a9fd0cb359b582 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/FN0022BT01.fbx
+:100644 100644 49f0c37dee6eca5ecb35fe537ef16e2564aac158 1cf504d30a1808cd338e52d6898e209ba9914658 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/FN0022BT01.prefab
+:100644 100644 50d92ce599845b630beb89415891099a39dea548 0ecc48ac29c8e1f13869fc0cd26a2ad85b1af49f M	Assets/ExternalAssets/Items/N0022/FN0022BT01/FN0022BT01.prefab.meta
+:100644 100644 de209113f6dd077306be435b1f4efbbf9af3f6c0 c4658205bf7cced854a7eee36202e17fa28efba9 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/MatLow_Opaque_BT01.mat
+:100644 100644 49b204bb512384b7eae48a7bdc73dd2fda661a57 01f7245f81305224ba217f1fa40792e4f9bbac1d M	Assets/ExternalAssets/Items/N0022/FN0022BT01/Mat_Opaque_BT01.mat
+:100644 100644 9648046ee8ac018090a283001204dc4a279e26fc f8c3c57740abe8bca42164e9101a3e8c1dd7b623 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/Opaque_BT01_M.tga.meta
+:100644 100644 adfec14932241726570482be8cadf7a3cf1f0f44 3a818c749c7cccb3bc4bda4ff53e6a35632df836 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/thumb_l.png
+:100644 100644 9d933e7cc2dcf5a0284f4bf5071b785117860688 439296d6f1f7db2fd6d6d723ad06aa36324f06d7 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/thumb_s.png
+:100644 100644 b98abf5a8e365b0c8b8f58caf898f91e976f6e0b 43010cef8cc2f17657b604e2aeb17b280d598679 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/FN0022BT02.fbx
+:100644 100644 df605aa1cf83355328b8cf20320ea57bb120db5d 667496377a50c5df35a0b14de6ab806b6e85c6fb M	Assets/ExternalAssets/Items/N0022/FN0022BT02/FN0022BT02.prefab
+:100644 100644 2b0005dee5406f1570dd3ca6ba75f2a514012613 99d0ba2bfab06fadbc8681e2951fb28eb0357b6a M	Assets/ExternalAssets/Items/N0022/FN0022BT02/FN0022BT02.prefab.meta
+:100644 100644 de84f91ac9a7ce4b020fadcadf29358011a70a82 ccf6491dfb2b143589601303caacdfe51b39e345 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/MatLow_Opaque_BT02.mat
+:100644 100644 1fcc8fe84fcc2028e06a7d8801af88a79ac1d0b6 b3db87c3403276f1352b18aac5d9bb766d19c8b4 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/Mat_Opaque_BT02.mat
+:100644 100644 41129486835533e66683d7efbfb5e5465d8e1b32 ee99d9c4abb8f180c16c6d268f9f57cf8a7d80c8 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/Opaque_BT02_M.tga.meta
+:100644 100644 00408f7fd860a7461e002a063ccceaf7fe00f46d c412b58607e04a521ab125f2081c0b8e21530aaf M	Assets/ExternalAssets/Items/N0022/FN0022BT02/thumb_l.png
+:100644 100644 cf293d7a15f8ae41df566eb01055f8af3ec3ba50 61373a3d16aec236480cdf0a9242635f3cbda33a M	Assets/ExternalAssets/Items/N0022/FN0022BT02/thumb_s.png
+:100644 100644 9c37b440a07c0920581e94159770eca5b0a03b81 255a0deadfaec71477cf3c5d644d9a0ed0d2b7b5 M	Assets/ExternalAssets/Items/N0022/FN0022FH01/FN0022FH01.fbx
+:100644 100644 12d646f630a4ac241eb9f2caa886e26969bad8e2 4872b12f83e13f111728abaedbc1126557fa7f87 M	Assets/ExternalAssets/Items/N0022/FN0022FH01/FN0022FH01.prefab
+:100644 100644 b21a9401910fb9124ceb7c250f27266a57b208fd d12f74c6844392273d1d1cd88e55045c8eb2857a M	Assets/ExternalAssets/Items/N0022/FN0022FH01/FN0022FH01.prefab.meta
+:100644 100644 ec2cbdbdcb500c96de5a1b967261946ef165161a ac16cf46d111b5ce76874c5e7d84bd0ef3a8c0fd M	Assets/ExternalAssets/Items/N0022/FN0022FH01/MatLow_Hair_FH01.mat
+:100644 100644 3b4da48c5fa57b2ce57dd2c6beeff5adf96746f3 6572a451ad6369158194573412c19136c43c6f06 M	Assets/ExternalAssets/Items/N0022/FN0022FH01/Mat_Hair_FH01.mat
+:100644 100644 d95948679360559a76a0c83df7a4f6e35018906c c4692577d0540c23bc9862f5c33f59bc995daf6c M	Assets/ExternalAssets/Items/N0022/FN0022FH01/thumb_l.png
+:100644 100644 5b28348cfed6c27d331ceb049096ed7b86169091 228a51e118d40b37eb34925724ec5a813f704147 M	Assets/ExternalAssets/Items/N0022/FN0022FH01/thumb_s.png
+:100644 100644 2828ebf4b20631bd6a0ec065bcbab498203588a0 86aabcb523265cf8f2695c6dc98cab2f0df30861 M	Assets/ExternalAssets/Items/N0022/FN0022FH02/FN0022FH02.fbx
+:100644 100644 4135af93e65458a331a3382c9f61831f26bf44f9 7a4363ee26ede604e5c9e94f83a168d7cbe5a01a M	Assets/ExternalAssets/Items/N0022/FN0022FH02/FN0022FH02.prefab
+:100644 100644 0b4fbdc4e676f5c404f8f18d001bf641b05132af 4657fb548b04bc6ad4e874dcf79a74731fbda40a M	Assets/ExternalAssets/Items/N0022/FN0022FH02/FN0022FH02.prefab.meta
+:100644 100644 22e7124c3dee28e4fc3eb4d47fe795dd25f31348 3515e197e221f6af329cccfeadefc296d4305536 M	Assets/ExternalAssets/Items/N0022/FN0022FH02/Hair_FH02_M.tga.meta
+:100644 100644 dbff0084ea5c44157e3b3860094bf25c17464ed1 4f61c44ea058c82f3ebfb5b84ab0e973d735863b M	Assets/ExternalAssets/Items/N0022/FN0022FH02/MatLow_Hair_FH02.mat
+:100644 100644 623e154944bf78e83235482c253b95eafc161107 c60c57babcecba4f11647d284b1038c4c97cb3ac M	Assets/ExternalAssets/Items/N0022/FN0022FH02/Mat_Hair_FH02.mat
+:100644 100644 a22a3d3a8b81493977ff551d673af80c02bef77b f430f6960c0fc82b9fab9c3892970f9630dda6aa M	Assets/ExternalAssets/Items/N0022/FN0022FH02/thumb_l.png
+:100644 100644 01ff5bb013f84e82778cfa1bc0ecdfa78e45753c 01e438386dc9b57e9322f0290975d351b1b3236a M	Assets/ExternalAssets/Items/N0022/FN0022FH02/thumb_s.png
+:100644 100644 bfed4a6f805ca40d63e5838d07119de1ad5252cf 60489c5a2de785ff7bb7037a249f0b29ab50f258 M	Assets/ExternalAssets/Items/N0022/FN0022HR01/thumb_l.png
+:100644 100644 66fa2a806869e2111b25de9d55772931e28e147c ae95ec391407f21a0c2791b215750b950364b143 M	Assets/ExternalAssets/Items/N0022/FN0022HR01/thumb_s.png
+:100644 100644 22ec9cc9398c0c77b21fb2467a68bee3ac3105b1 152286bdfc7376bddacc91c09af5707ce73cac47 M	Assets/ExternalAssets/Items/N0022/FN0022HR02/thumb_l.png
+:100644 100644 c9b960387778cbf5035d3fa6e815b55296b9ed9a 6acfb97be4df6a237f7d8c09335499c1b7778a5b M	Assets/ExternalAssets/Items/N0022/FN0022TP01/FN0022TP01.fbx
+:100644 100644 4e403f62d391034334bfd7046fb563f4881cabd4 0cb1cf4232e0c25f1093dd123c157260e32acfc7 M	Assets/ExternalAssets/Items/N0022/FN0022TP01/FN0022TP01.prefab
+:100644 100644 398894498b6e813889895b32ca5acd4c8654898f b8e38a457b1bb1c224c60116fd59c47ef1291c84 M	Assets/ExternalAssets/Items/N0022/FN0022TP01/FN0022TP01.prefab.meta
+:100644 100644 1bb5ad6dd0647768102d42935edc5494c25ca9f1 cbb9ed3dacddb8d5945e7490e169451c5e63d59f M	Assets/ExternalAssets/Items/N0022/FN0022TP01/thumb_l.png
+:100644 100644 3879f05938d9c16d51091257c3e44ff95181db5a e5e2e5321f99203b0c73ad1bc99be6a6effd0f94 M	Assets/ExternalAssets/Items/N0022/FN0022TP01/thumb_s.png
+:100644 100644 5d10a644932d88c8c6e8259d1185b5d42236ee85 e1a6e0b74f6bc7084aa65862476f9b32c9f86bc8 M	Assets/ExternalAssets/Items/N0022/FN0022TP02/FN0022TP02.fbx
+:100644 100644 ebe11b02163b3ccdc2d6ef2b798ee750e0af70ea febe88a2a825a3e7f0f559095b1ab1c9f23510a4 M	Assets/ExternalAssets/Items/N0022/FN0022TP02/FN0022TP02.prefab
+:100644 100644 875aaae3e89b6ce2e8691a905962f807a206ec3e 1562418245ef8647c54f53cd4553a093a75794d6 M	Assets/ExternalAssets/Items/N0022/FN0022TP02/FN0022TP02.prefab.meta
+:100644 100644 0f1802437278df094c2a1c9bbdf0b34fec4c47c5 4909bde2f10d3840a9856f23b63e15acc24fd5c7 M	Assets/ExternalAssets/Items/N0022/FN0022TP02/thumb_l.png
+:100644 100644 299d4dd6f8dcbccf9563f2f69bf4abe8a3566515 1f72755ca09b65c5e4a76f1d47b5af283a2b6144 M	Assets/ExternalAssets/Items/N0022/FN0022TP02/thumb_s.png
+commit b0e2434fe8c6febeff26a5a479821cbefdd327f8
+tree b8b126b1bdd6cbce401070b58824cff422e6eee0
+parent 1e339a2b6ed9ec20c6b84dc5ded8272716d53043
+author Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 18:07:06 +0900
+committer Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 18:07:06 +0900
+
+    PG0009 JIRA:階段及びフロア修正
+
+
+:100644 100644 b8801cf4cefd853cc06d8c71852e701df7bd6700 8e56d2a0a2da1658ada80a508c735ea0a074bf54 M	Assets/ExternalAssets/Items/G0009/PG0009ST01/PG0009ST01.fbx
+:100644 100644 0ab41344c6747edbc95b9d5ad5d95d1ebf526b54 23aed6495f3507497da6402d41adb64e0f9922b7 M	Assets/ExternalAssets/Items/G0009/PG0009ST01/PG0009ST01.prefab
+:100644 100644 8fb74f08569d7110ea598a1e7bc8c87943b8b106 ef8e3989071b62a013fbbb5db1c0d6f431d70294 M	Assets/ExternalAssets/Items/G0009/PG0009UF01/thumb_l.png
+:100644 100644 4abd978359b5a6e4dd05e48b6f44a044ed93b7ac 3195e5e769ff1663e0304a1cb14461a07038530d M	Assets/ExternalAssets/Items/G0009/PG0009UF01/thumb_s.png
+commit f2ce52ce1559c5693f02511f7a271f2f58dbeadd
+tree 622994018353c0ec8097d5509e53ea00a77d4079
+parent 3978572938e020f7f06fd0d06970b87818abecd8
+author yagi_arisa <yagi_arisa@cocone.co.jp> 2022-06-06 15:26:54 +0900
+committer matsuzawa_tokuhiro <matsuzawa_tokuhiro@cocone.co.jp> 2022-06-06 17:59:10 +0900
+
+    FG0033 JIRA修正 ロケーター修正
+
+
+:100644 100644 ae8519e9654a9e7d30fad49c789f0a9648275683 8bf43aabe112cf474869acd6353ffde01b30af1f M	Assets/AddressableAssetsData/AssetGroups/FG0033BH01.asset
+:100644 100644 91a2a76428f790b797e3c88d07058079244d125b 75fa0dc436a7cc9db737444c52560e6e50fa71f9 M	Assets/AddressableAssetsData/AssetGroups/FG0033BT01.asset
+:100644 100644 cc6202c8bcc00bcac463c3b726d5bb1594afce71 e3cb1abc04d571155110cea3973088f93734fcc3 M	Assets/AddressableAssetsData/AssetGroups/FG0033BT02.asset
+:100644 100644 679fcbb784348656c5b07cb94e96e50d7944cdf8 17b86f060f507d47f63ac4e5158fab5bace3655f M	Assets/AddressableAssetsData/AssetGroups/FG0033FA01.asset
+:100644 100644 4b1b966737f43f079a22eaf006f11f89a1cf7beb f0eb293831ca045974ff85e62c3bb59bce3cdfb1 M	Assets/AddressableAssetsData/AssetGroups/FG0033FH01.asset
+:100644 100644 419b1a1e768bbeef79083bb0df198b821984157b 3061240a8affc0a6df14432ffaf364d7b98e426d M	Assets/AddressableAssetsData/AssetGroups/FG0033OT01.asset
+:100644 100644 95cb048fabe090b6b38669d0dc52521bb08d7ed0 69face697f4754b4ef7dae4c7ab758579413d4e5 M	Assets/AddressableAssetsData/AssetGroups/FG0033OT02.asset
+:100644 100644 ce20f2b2c96ecf7feea19e78ea67244cc259d8ca 6b73b2a03124fe36e8fb0143d77f2704ea79f271 M	Assets/AddressableAssetsData/AssetGroups/FG0033SH01.asset
+:100644 100644 b1ad3413af8c0a3473aa09a1bd17395cbf7db7a8 c6b430960bec434cf12100a4a25a181f87c680ce M	Assets/AddressableAssetsData/AssetGroups/FG0033TP01.asset
+:100644 100644 900d7968bbd5be95ac2e1275f2b32a98db5d59d7 0328c22a21b5ab5c067c59dcdccce779b2773698 M	Assets/AddressableAssetsData/AssetGroups/FG0033TP02.asset
+:100644 100644 6be76b250e097ab2f42014b89dc9f5f38202444b 0a71713bb4ab95cab7556b772e5a3a2431c5ef32 M	Assets/ExternalAssets/Items/G0033/FG0033BH01/FG0033BH01.fbx
+:100644 100644 0fb93c0d0b5dc39f6f88995e38670bcc9eb98d1f d4c42abd45c652169ea07c50e798646616d81e0c M	Assets/ExternalAssets/Items/G0033/FG0033BH01/FG0033BH01.prefab
+:100644 100644 6ecc0994a745467530093c03575516399c1cabb7 6de2c8ebf6fe4e88f3c6e4855f736f615711f7d2 M	Assets/ExternalAssets/Items/G0033/FG0033BH01/MatLow_Hair_BH01.mat
+:100644 100644 6973bdc7e33be9947b538a0706b25a41e81075fc 69f1365ac068860ec615a70ed3d0df2006e8caf4 M	Assets/ExternalAssets/Items/G0033/FG0033BT01/2ndOpaque_BT01_M.tga
+:100644 100644 1d9eb47236fe8884c82b28de08691e289c8410de 4ef2a358bc4d9ad3d4ec6d5af8e01bd3f37deeef M	Assets/ExternalAssets/Items/G0033/FG0033BT01/FG0033BT01.fbx
+:100644 100644 391ecbdd145d5004b48709cd4dda0c664c86306f 35a7a36784e202612644dcd134197a16412c02ef M	Assets/ExternalAssets/Items/G0033/FG0033BT01/FG0033BT01.prefab
+:100644 100644 b38500073895ad36c7c4fc2fa4f957eb38ae1062 5ea6cb059428f6df352239054d750659cd80a9bc M	Assets/ExternalAssets/Items/G0033/FG0033BT01/MatExLow_2ndOpaque_BT01.mat
+:100644 100644 6973bdc7e33be9947b538a0706b25a41e81075fc 69f1365ac068860ec615a70ed3d0df2006e8caf4 M	Assets/ExternalAssets/Items/G0033/FG0033BT02/2ndOpaque_BT02_M.tga
+:100644 100644 2c7271bfb2507229544c80e180fafa5e4142e899 0fb3ad82041449cb57f081b5a62dbe566d14cd4c M	Assets/ExternalAssets/Items/G0033/FG0033BT02/FG0033BT02.fbx
+:100644 100644 8b553aebe266c0a4caa0d78c3f8526b0aca88f03 2327c9ac727626adadcb33927577ef01c834f211 M	Assets/ExternalAssets/Items/G0033/FG0033BT02/FG0033BT02.prefab
+:100644 100644 1caca9b9a09901eef4d4a5dee361862abf38ef3f df205a17c907664096849d2a32061fd6f1321de8 M	Assets/ExternalAssets/Items/G0033/FG0033BT02/MatExLow_2ndOpaque_BT02.mat
+:100644 100644 8cf20d0520ba3d886a84d559192be7be3af5558a 10253bcb330c17d1343cb3d365f5e671d41dfd39 M	Assets/ExternalAssets/Items/G0033/FG0033FA01/FG0033FA01.controller
+:100644 100644 ec6cec37f11113ca147361e3762b38f73524806d fc4435c55bdc9e6773a6ce3b59ca78a403caa6dd M	Assets/ExternalAssets/Items/G0033/FG0033FA01/FG0033FA01.fbx
+:100644 100644 f473bd128fd566438ff5ee45831df21daa96cde9 cc2a938b1b970e3ad0731c83b4ce0b21e52c1977 M	Assets/ExternalAssets/Items/G0033/FG0033FA01/FG0033FA01.fbx.meta
+:100644 100644 a8b2ce7ba820a14c9a441156c81414688f0fadd0 2d90d93c40b9843a59bf6f450574f494959deed6 M	Assets/ExternalAssets/Items/G0033/FG0033FA01/FG0033FA01.prefab
+:100644 100644 1093c30d4009377df9e9419f18bc49b0816b6ed9 8720f8fcbb7f9b2f3fb4046db41d0c6a6dd5a16c M	Assets/ExternalAssets/Items/G0033/FG0033FA01/FG0033_FA01@IdleLoop.anim
+:100644 100644 eaa17351feac4817d75e31474a2c276838b6e869 995b797c1ec2dab8600197f23839a39f99ecc98f M	Assets/ExternalAssets/Items/G0033/FG0033FA01/FG0033_FA01@IdleLoop.anim.meta
+:000000 100644 0000000000000000000000000000000000000000 faaf1abddc25487f54f1b8d00896745a4e01820c A	Assets/ExternalAssets/Items/G0033/FG0033FA01/MatLow_Transparent_FA01.mat
+:000000 100644 0000000000000000000000000000000000000000 cf73df36e09e7a3ab500a55a680c98f9bb44a570 A	Assets/ExternalAssets/Items/G0033/FG0033FA01/MatLow_Transparent_FA01.mat.meta
+:100644 100644 cca8f6a8f6e587d50c54603f84503c0b298b4749 73f86d9af4c6dfda5310185c56e04b06e20f1f25 M	Assets/ExternalAssets/Items/G0033/FG0033FA01/Mat_Cutout_FA01.mat
+:000000 100644 0000000000000000000000000000000000000000 9d2c63527b9aa3e02269d38cc1d1fcc20e89d78f A	Assets/ExternalAssets/Items/G0033/FG0033FA01/Mat_Transparent_FA01.mat
+:000000 100644 0000000000000000000000000000000000000000 51d410ef34b4af86b898724615bae985080dce85 A	Assets/ExternalAssets/Items/G0033/FG0033FA01/Mat_Transparent_FA01.mat.meta
+:000000 100644 0000000000000000000000000000000000000000 5068fa521f27416c77f7a31feaafedf30b53f1e8 A	Assets/ExternalAssets/Items/G0033/FG0033FA01/Transparent_FA01_B.tga
+:000000 100644 0000000000000000000000000000000000000000 d6641b838984411c7569053fee9dea8bd1dc1abe A	Assets/ExternalAssets/Items/G0033/FG0033FA01/Transparent_FA01_B.tga.meta
+:100644 100644 fb20ba78c01ad7a80a9d629bcb660eae46f7c3d5 7836b5bc77285cfa5362d91548f9c9b8192adf93 M	Assets/ExternalAssets/Items/G0033/FG0033FH01/FG0033FH01.fbx
+:100644 100644 7ae7afbb19655849dbbabcd029b45ea44534272d d8f76aec1e1ca058696a4ed8054b39af45900311 M	Assets/ExternalAssets/Items/G0033/FG0033FH01/FG0033FH01.prefab
+:100644 100644 c30d55528d13e9d5db906f005934d7e340648bde 2508af627f83f91a5daf0feb5946fdb24ecd542f M	Assets/ExternalAssets/Items/G0033/FG0033FH01/MatLow_Hair_FH01.mat
+:100644 100644 e2ee922384053bb4b4ed0c20ee3c7230234086e5 453df00bc6734de970564a5dc3682bed47abacda M	Assets/ExternalAssets/Items/G0033/FG0033OT01/FG0033OT01.fbx
+:100644 100644 938ad45f6703665ba4ddd55ad294b5526e7a4d1b 544d88fc8ec1a867a9b5dcc2641a32f885b29687 M	Assets/ExternalAssets/Items/G0033/FG0033OT01/FG0033OT01.prefab
+:100644 100644 fe4d707e5e07a218dd2715f05f4d4264780b5d1d 65bec8d6fb405d156608e9d619750c59383209cb M	Assets/ExternalAssets/Items/G0033/FG0033OT02/FG0033OT02.fbx
+:100644 100644 6ec610f3b352f51bafc82476046e33af0e6b9a0d 1c11c7d1520a1be671045fa3a8037592eef73094 M	Assets/ExternalAssets/Items/G0033/FG0033OT02/FG0033OT02.prefab
+:100644 100644 624431b53827366835ae3c93aa635a71a870fbc4 bda447d4db1144517cf4c6525947f19e6e5c832f M	Assets/ExternalAssets/Items/G0033/FG0033SH01/FG0033SH01.fbx
+:100644 100644 59486d87b18f3cc5880a8417eabc5d3e2b56e442 f6c938815cd0f744105734e376f00986aaca61cd M	Assets/ExternalAssets/Items/G0033/FG0033SH01/FG0033SH01.prefab
+:100644 100644 9be115d6de3a97a32a476523150b79f8bf128a19 a79717ec1c75dd7cb387b42c4bc52286bba664b4 M	Assets/ExternalAssets/Items/G0033/FG0033TP01/FG0033TP01.fbx
+:100644 100644 3ff6effffc186b5ea048ddd8876d974d3ce1dc20 a0bb069d401d0f0847e44a0973acf1012b23512a M	Assets/ExternalAssets/Items/G0033/FG0033TP01/FG0033TP01.prefab
+:100644 100644 c61ccf6b77273bda9898b1ec4aea69c92fae2c04 3ec415e5a7f9ff77ccb4759035724333c379d3dd M	Assets/ExternalAssets/Items/G0033/FG0033TP02/FG0033TP02.fbx
+:100644 100644 993143381811191d6c0f137b481f7d73cde9e5ad 8ef2a23db7ea48cc14295e2188e667beff9cff91 M	Assets/ExternalAssets/Items/G0033/FG0033TP02/FG0033TP02.prefab
+commit 63969748d975825edf5cce2eb4a5e599af13b58f
+tree 16fac53c8ee6407e01766f98c15bbee75f5f92cb
+parent 774a143d8eabd7fd861727bf9ead46f196c74639
+author maeda_takumi <maeda_takumi@cocone.co.jp> 2022-06-06 17:25:09 +0900
+committer maeda_takumi <maeda_takumi@cocone.co.jp> 2022-06-06 17:25:09 +0900
+
+    Addressable登録　FN0009ロケータ修正
+
+
+:100644 100644 28c060987ee8a3832d51205748a2e153a4884733 c4c0ac4d845231896f904d015b4e80ede11fc778 M	Assets/AddressableAssetsData/AssetGroups/FG0001FH01.asset
+:100644 100644 b1e9136e9df3d09b282ba3fb746433ea180ed3fb db5e951fa785892e19906bd8bc89746d0716619d M	Assets/AddressableAssetsData/AssetGroups/FG0003BH01.asset
+:100644 100644 6ca6cc56d6f22c67c3e541fa43be32b475dd7d49 da7d00f948e2f2701693608023240df407587001 M	Assets/AddressableAssetsData/AssetGroups/FG0003FH01.asset
+:100644 100644 5b09cd947643824a8b81af69183e258f5e0ed4a6 92198dbc8332d91c313bd3ce5a60e7b85d389265 M	Assets/AddressableAssetsData/AssetGroups/FG0005FH01.asset
+:100644 100644 11aeb59c17cf440d36b82e79e6eaaa5d441ca661 293741918cddf7b3dcd5d53868fa1b7da5a7b9c3 M	Assets/AddressableAssetsData/AssetGroups/FG0006BH01.asset
+:100644 100644 6d6efd435ed3a582bd376b8c09d6782b6a620ef2 1753c9b4a61f276c169aea9b6031eedc631ff2bf M	Assets/AddressableAssetsData/AssetGroups/FG0006FH01.asset
+:100644 100644 fff3db9ed3d7a5f94657984aacde223d152a0e59 86ecb6e0bdab2ab92348764fc7642244d9cf19c7 M	Assets/AddressableAssetsData/AssetGroups/FG0008BH01.asset
+:100644 100644 b37e4ff52ed6035220740ca023e4c30a97a887c3 1d56a77bd6b44a40c97026a0ffda0da2f3464d44 M	Assets/AddressableAssetsData/AssetGroups/FG0008FH01.asset
+:100644 100644 ec201637ca54e7dbce7b4a93de85f19cd4b03b05 8f5b6135c60949b224d61e92ffc9bd30850cb8ff M	Assets/AddressableAssetsData/AssetGroups/FG0008FH02.asset
+:100644 100644 5a0404311e851f225e33d5a7b3735b1edd1bd1c0 cbbfe0e7161df0ff924d2c4d31920749e72de058 M	Assets/AddressableAssetsData/AssetGroups/FG0016BH01.asset
+:100644 100644 0a3763279d40488d281a5dc141a64175c371a4b8 674b56f53d116483876e2e4d4543e7bfac61fcf1 M	Assets/AddressableAssetsData/AssetGroups/FG0016FH01.asset
+:100644 100644 d5558b40c7850e1d1dea0e131f9f2ef71c1e1cda edeb4dd88b2c389b30a74f94a3fad2f5680c9593 M	Assets/AddressableAssetsData/AssetGroups/FG0016HA01.asset
+:100644 100644 fafa7ba516b8e346f3a73cd7bf1b2c6f53058ec6 7801b83da255a4dd2a98d0f0c4a1702e87b294a1 M	Assets/AddressableAssetsData/AssetGroups/FG0020BH01.asset
+:100644 100644 367c3b5a1f811419069b60a668172261838a63e6 c6ba77027c14e427d1fbdc6134102f4bc1d69c38 M	Assets/AddressableAssetsData/AssetGroups/FG0020FH01.asset
+:100644 100644 f053298c8e884c751f6169ea91e6f72df5352626 3a7ab114babb5a6db272cdc439951bb7f91999de M	Assets/AddressableAssetsData/AssetGroups/FG0022BH01.asset
+:100644 100644 cd9f5e138ced0c088f51b938ceb0dc679a71534a 5fc549fee458bb4f2b848e49053d1df766f0a137 M	Assets/AddressableAssetsData/AssetGroups/FG0022FH01.asset
+:100644 100644 019c2a04c280a078e14808e12d2ca426817afdcb 83855d754dd32f8f8f2bba3aaf6d75ef6005fa4c M	Assets/AddressableAssetsData/AssetGroups/FG0025BH01.asset
+:100644 100644 85379039282b6d34905b4388e7a2016cfd1dc71b ee0cb86637ec308a421403f7f271e028ab31f37d M	Assets/AddressableAssetsData/AssetGroups/FG0025BH02.asset
+:100644 100644 caa45f350282af79cde9d047ee627a6c5b981bb6 a8fc93fc8bf66119fe3d99785a1cc0629445114d M	Assets/AddressableAssetsData/AssetGroups/FG0025FH01.asset
+:100644 100644 17b66a16ddc26184343a674fb3a7c3d158f5aabd f3fd8b8b80c61fafba4affde3e26fce0a772537c M	Assets/AddressableAssetsData/AssetGroups/FG0025FH02.asset
+:100644 100644 ead26b5fec2a95670b70a3d9f6bbb5abb11cae10 cd7fbc793813460366b8cebeab4f52d0bf90d507 M	Assets/AddressableAssetsData/AssetGroups/FG0025HA01.asset
+:100644 100644 7e36c6a084f9b5e3931aaceddcd84678635628fb 5345ecabb98f7cab055e3647c3e576439e596615 M	Assets/AddressableAssetsData/AssetGroups/FG0025HA02.asset
+:100644 100644 b12094ddebe46218efebd50ba2c68a060487ec3a b303f9224c7c150e15144676f0b377647158bd67 M	Assets/AddressableAssetsData/AssetGroups/FG0025HA03.asset
+:100644 100644 dd0430f0e156f31ab23f26f39121144b9bce8db2 9f2e69afff5436d53347378862cef480bf37cd3e M	Assets/AddressableAssetsData/AssetGroups/FG0027BH01.asset
+:100644 100644 45bba1e8636756b31e1e4fd1ec1e9f64e3c0b2ed 5c6fa133715d6c3b1948133bca759e8d0ef45124 M	Assets/AddressableAssetsData/AssetGroups/FG0027FH01.asset
+:100644 100644 cb07ff9bbf2bedb37877a16d1d6343edf792e874 b4ba386e6a008e051b5cf0b7d6b1244083dc3d99 M	Assets/AddressableAssetsData/AssetGroups/FG0029BH01.asset
+:100644 100644 c36a0f23444e027d06c53591d5f7062288e9cbf1 ac2c2c4c0099455a4c0d87615b5dc0969d292fca M	Assets/AddressableAssetsData/AssetGroups/FG0029FH01.asset
+:100644 100644 ce7986c7f8aef66f871d7e82ed7bcdef7bd7f843 46e8f47004ba520a80030310ca869523e51296fb M	Assets/AddressableAssetsData/AssetGroups/FN0008BH01.asset
+:100644 100644 4545cdca2b8afcfce3c281bb0f250ed9c624170c 76cd93e17be7c46cc52dbcea3d4bbb5619ddb3d1 M	Assets/AddressableAssetsData/AssetGroups/FN0008BH02.asset
+:100644 100644 bfc642c4a03fd436daaf2a3642507f22b9fff976 da5ba138f59a622db0b29bd139121cf6be8d26c7 M	Assets/AddressableAssetsData/AssetGroups/FN0008FH01.asset
+:100644 100644 39201cd13d6425d791a58f03ac6995e8d4337803 334e5b610430be369b738806cdc03974408b94b3 M	Assets/AddressableAssetsData/AssetGroups/FN0008FH02.asset
+:100644 100644 b971cb98444679a5738605de6f51332940a3388e 20bc09fd301f1fe84bd7f41c9dac996ecd9281f3 M	Assets/AddressableAssetsData/AssetGroups/FN0008HA01.asset
+:100644 100644 7dacf173254e87c4a644954e1ae17ce14ecb8a2c abb4b54c8738355ff89898944faa6ba9140c899f M	Assets/AddressableAssetsData/AssetGroups/FN0009BH01.asset
+:100644 100644 9e74968b507dffd9778ebcec9b79742e4d699cc9 6f686ec04af4c32f328738b71632809b9230787d M	Assets/AddressableAssetsData/AssetGroups/FN0009FH01.asset
+:100644 100644 a6245fcaadec48ce99c40cc47fd5c948682bf470 2a2a45c2f2e188ab17307d44f673034a049b0f9f M	Assets/AddressableAssetsData/AssetGroups/FN0009HA01.asset
+:100644 100644 eedb146c138514380a2210a02028f2e0b0a1565a f603e22a4522f2ae82274076020cfaa00ab1e8ec M	Assets/AddressableAssetsData/AssetGroups/FN0009HA02.asset
+:100644 100644 7ecf8f1d02a85e35ed4324a3d2fbac31575136ec c3016c8f7e7610ed5427110e48923d08e2e95b07 M	Assets/AddressableAssetsData/AssetGroups/FN0018BH01.asset
+:100644 100644 64844acb81684476840da65fec0c2e356bd4ce4e 2786801ee5978b217b6d19e0516b59202dd85453 M	Assets/AddressableAssetsData/AssetGroups/FN0018FH01.asset
+:100644 100644 e0bb8f4b26dae236a4eee3f6dc5810fa3e1551cd bb908c0f656c781aa4c845cedbd2ee9f165020df M	Assets/AddressableAssetsData/AssetGroups/FN0018HA01.asset
+:100644 100644 3d3e43d5206701a48eeaf503aeab844b317f87ab 5e9b1cd7e603b5604918029903ef4d6be370ebf1 M	Assets/AddressableAssetsData/AssetGroups/FN0018HA02.asset
+:100644 100644 2b9b8f1024bbcba8392b76e3c06ccfcf007f7d76 76a84e408c351d581d90207c7f63f6de4f4aa2f8 M	Assets/ExternalAssets/Items/N0009/FN0009BH01/FN0009BH01.fbx
+:100644 100644 7ec9c82b8578ff6b012cb845e545821cacf1e35d 26e1f6010f71fda271d2b4c53deea8eeed776b5e M	Assets/ExternalAssets/Items/N0009/FN0009BH01/FN0009BH01.prefab
+:100644 100644 a6d231b61749bdb678f6318e8ad6669d43709ebc 28e0c4bea0443e94b6496e72ab410209fbc96e60 M	Assets/ExternalAssets/Items/N0009/FN0009HA01/FN0009HA01.fbx
+:100644 100644 d9578a00c711d353ce0ae674508890868a93f319 1914e4093c52626b2d35db6bb2195823a2235661 M	Assets/ExternalAssets/Items/N0009/FN0009HA01/FN0009HA01.prefab
+:100644 100644 94287ce1f23086b7bdd182c95455e83f637374e5 5ed1aba3c875b55b3c157e6bb01d186ee8b8edd2 M	Assets/ExternalAssets/Items/N0009/FN0009HA02/FN0009HA02.fbx
+:100644 100644 2457148548c9e5b03337fc708e3d7fe316a3e530 276bf25015afb39b4b8934f0ba49064e5ee2be00 M	Assets/ExternalAssets/Items/N0009/FN0009HA02/FN0009HA02.prefab
+commit ba6fb898ddd755029a12b00bb0ecf72eab83ca81
+tree b6414df1710d4904ebb115e71d99578555b2e4eb
+parent 65d00e11a2814e70430cf487081d84c73b592c6d
+author Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 17:21:06 +0900
+committer Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 17:21:06 +0900
+
+    Revert "PG0033CH02 Shadowテクスチャ修正"
+    
+    This reverts commit c6370a6a101f0e1c6af24aa831d177ce87640a05.
+
+
+:100644 000000 f23559aec30aeeefcfd79ecff1f86f6a671d5633 0000000000000000000000000000000000000000 D	Assets/ExternalAssets/Items/G0033/PG0033CH02/Shadow_CH02_S.png
+:100644 000000 65c31c1aac625684a053958b0b615ce83381ff9b 0000000000000000000000000000000000000000 D	Assets/ExternalAssets/Items/G0033/PG0033CH02/Shadow_CH02_S.png.meta
+commit 65d00e11a2814e70430cf487081d84c73b592c6d
+tree 0007a28999b6831ca59ef1c0cb3707e29f514ce5
+parent 579773d38d78d8e10205f21216a6acae5e950330
+author Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 17:16:33 +0900
+committer Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 17:16:33 +0900
+
+    FG0019FH02 HR02 JIRA:サムネイル修正
+
+
+:100644 100644 dcd78ca7b25b4b9da6b31c3d37590ebb6501455f 7790ddc476d45f242eba64d26e3112e2e129fa73 M	Assets/ExternalAssets/Items/G0019/FG0019FH02/thumb_l.png
+:100644 100644 2265b1aaffa89a6b330c268fac7580d5f337ba88 42f95d98ff0583e76e07a59ac6c8902c4bea4969 M	Assets/ExternalAssets/Items/G0019/FG0019FH02/thumb_s.png
+:100644 100644 37f7b2582c875e68489692a62527c08a67b2853e 0a850e5c3a98538b67ac9d587a6cd48e3cfd9182 M	Assets/ExternalAssets/Items/G0019/FG0019HR02/thumb_l.png
+:100644 100644 6d7366cb7af510aacdcb2bfaff1915de63828794 cf4afe989175d9c3a049df8fcabd048d7edf13d1 M	Assets/ExternalAssets/Items/G0019/FG0019HR02/thumb_s.png
+commit 774a143d8eabd7fd861727bf9ead46f196c74639
+tree 5f55d68232da19f439400cf11d709b6c89d8cdaa
+parent ca03dda87377456fab0d5cfa85a60168382c5e01
+author maeda_takumi <maeda_takumi@cocone.co.jp> 2022-06-06 16:46:12 +0900
+committer maeda_takumi <maeda_takumi@cocone.co.jp> 2022-06-06 16:46:12 +0900
+
+    アタッチロケータ修正
+
+
+:100644 100644 3f0dda3b6520e37ed40420f005f90037ffde0483 28c060987ee8a3832d51205748a2e153a4884733 M	Assets/AddressableAssetsData/AssetGroups/FG0001FH01.asset
+:100644 100644 a7d9140a17e8617230591e951aa807342b805fe7 b1e9136e9df3d09b282ba3fb746433ea180ed3fb M	Assets/AddressableAssetsData/AssetGroups/FG0003BH01.asset
+:100644 100644 15c11c1d2abd6e5e2d6cf722fdad25097ef4b642 6ca6cc56d6f22c67c3e541fa43be32b475dd7d49 M	Assets/AddressableAssetsData/AssetGroups/FG0003FH01.asset
+:100644 100644 1413faf209197c3369ae10897492c642b4c26625 5b09cd947643824a8b81af69183e258f5e0ed4a6 M	Assets/AddressableAssetsData/AssetGroups/FG0005FH01.asset
+:100644 100644 21e73f0dbcc041484c048c32005a50938e114ea9 11aeb59c17cf440d36b82e79e6eaaa5d441ca661 M	Assets/AddressableAssetsData/AssetGroups/FG0006BH01.asset
+:100644 100644 2166af17f095e6a39db0dc68ba7cb83ab6c657ac 6d6efd435ed3a582bd376b8c09d6782b6a620ef2 M	Assets/AddressableAssetsData/AssetGroups/FG0006FH01.asset
+:100644 100644 2c73faea33cb547724a663b7928fe2d92ef05206 fff3db9ed3d7a5f94657984aacde223d152a0e59 M	Assets/AddressableAssetsData/AssetGroups/FG0008BH01.asset
+:100644 100644 1adc0bba4b616fee4e3555e444049f4dccbd6202 b37e4ff52ed6035220740ca023e4c30a97a887c3 M	Assets/AddressableAssetsData/AssetGroups/FG0008FH01.asset
+:100644 100644 159d09257e48fdd51892d287c3f77f8969918391 ec201637ca54e7dbce7b4a93de85f19cd4b03b05 M	Assets/AddressableAssetsData/AssetGroups/FG0008FH02.asset
+:100644 100644 12a4436eaa666a01327d9c0c2a1cb3af822f0000 5a0404311e851f225e33d5a7b3735b1edd1bd1c0 M	Assets/AddressableAssetsData/AssetGroups/FG0016BH01.asset
+:100644 100644 3d6a369b20e85c6312753edcc76951cf351a1f8b 0a3763279d40488d281a5dc141a64175c371a4b8 M	Assets/AddressableAssetsData/AssetGroups/FG0016FH01.asset
+:100644 100644 ed7b005b70d1a4fb4469b2287c24e06e1d73a173 d5558b40c7850e1d1dea0e131f9f2ef71c1e1cda M	Assets/AddressableAssetsData/AssetGroups/FG0016HA01.asset
+:100644 100644 a6236304c516fdaef44b3ce1a4a70f3549cd7d73 fafa7ba516b8e346f3a73cd7bf1b2c6f53058ec6 M	Assets/AddressableAssetsData/AssetGroups/FG0020BH01.asset
+:100644 100644 44eecee609d529921f4928db4621084044c96bc6 367c3b5a1f811419069b60a668172261838a63e6 M	Assets/AddressableAssetsData/AssetGroups/FG0020FH01.asset
+:100644 100644 85c5e90f78cce98e909e7fcdb995cd2c3876a9c5 f053298c8e884c751f6169ea91e6f72df5352626 M	Assets/AddressableAssetsData/AssetGroups/FG0022BH01.asset
+:100644 100644 29d09add8b409b2ada16a5677d87623587f35ff4 cd9f5e138ced0c088f51b938ceb0dc679a71534a M	Assets/AddressableAssetsData/AssetGroups/FG0022FH01.asset
+:100644 100644 17f1850d695a0a998fb25d11745e1e320174c124 019c2a04c280a078e14808e12d2ca426817afdcb M	Assets/AddressableAssetsData/AssetGroups/FG0025BH01.asset
+:100644 100644 dd7672b2231c655b5fd08fddab394e7d1ef95437 85379039282b6d34905b4388e7a2016cfd1dc71b M	Assets/AddressableAssetsData/AssetGroups/FG0025BH02.asset
+:100644 100644 34728928a3a15693f4a68e05cceda97e255e7dbb caa45f350282af79cde9d047ee627a6c5b981bb6 M	Assets/AddressableAssetsData/AssetGroups/FG0025FH01.asset
+:100644 100644 ecff914cbce699d800125266ab7d0573d2e14dbd 17b66a16ddc26184343a674fb3a7c3d158f5aabd M	Assets/AddressableAssetsData/AssetGroups/FG0025FH02.asset
+:100644 100644 5f2fbbe99a59e10684ce4a869f22c8ffa5abbbfc ead26b5fec2a95670b70a3d9f6bbb5abb11cae10 M	Assets/AddressableAssetsData/AssetGroups/FG0025HA01.asset
+:100644 100644 101ca58b6da85c16d8493701a93097123964d1ac 7e36c6a084f9b5e3931aaceddcd84678635628fb M	Assets/AddressableAssetsData/AssetGroups/FG0025HA02.asset
+:100644 100644 6f61ebd0157afeb4fc2833a03423bb5faaa79908 b12094ddebe46218efebd50ba2c68a060487ec3a M	Assets/AddressableAssetsData/AssetGroups/FG0025HA03.asset
+:100644 100644 064b72062e4c008a6fcae448b51995d0b79519b5 dd0430f0e156f31ab23f26f39121144b9bce8db2 M	Assets/AddressableAssetsData/AssetGroups/FG0027BH01.asset
+:100644 100644 8dc3d148f357f0cf4e6f4a57ae634a2b4e0b95e9 45bba1e8636756b31e1e4fd1ec1e9f64e3c0b2ed M	Assets/AddressableAssetsData/AssetGroups/FG0027FH01.asset
+:100644 100644 8a47771453a055ff7b5aab318635541f55ae58f2 cb07ff9bbf2bedb37877a16d1d6343edf792e874 M	Assets/AddressableAssetsData/AssetGroups/FG0029BH01.asset
+:100644 100644 b26d5f289420a9e07127d41de17b26e4fd4a2fd2 c36a0f23444e027d06c53591d5f7062288e9cbf1 M	Assets/AddressableAssetsData/AssetGroups/FG0029FH01.asset
+:100644 100644 89ca9920b51135d2eb5f1681d1d8596fea094dfd ce7986c7f8aef66f871d7e82ed7bcdef7bd7f843 M	Assets/AddressableAssetsData/AssetGroups/FN0008BH01.asset
+:100644 100644 5594f947573c2d5afda84787a1c957f4f9fcfb17 4545cdca2b8afcfce3c281bb0f250ed9c624170c M	Assets/AddressableAssetsData/AssetGroups/FN0008BH02.asset
+:100644 100644 2d0a9c4358f52c35e6334f5041c9c5036151af9a bfc642c4a03fd436daaf2a3642507f22b9fff976 M	Assets/AddressableAssetsData/AssetGroups/FN0008FH01.asset
+:100644 100644 9f605eed0fb8d22dc6299b6ad8db923a5cb31121 39201cd13d6425d791a58f03ac6995e8d4337803 M	Assets/AddressableAssetsData/AssetGroups/FN0008FH02.asset
+:100644 100644 e3cdeb23378a56a95b3d8594429745071fa3f6fc b971cb98444679a5738605de6f51332940a3388e M	Assets/AddressableAssetsData/AssetGroups/FN0008HA01.asset
+:100644 100644 eb5c0bc012dcdf0fb5f915520415c077a9ffc1b5 7dacf173254e87c4a644954e1ae17ce14ecb8a2c M	Assets/AddressableAssetsData/AssetGroups/FN0009BH01.asset
+:100644 100644 cfb3009afef10d3ace9282dbb154452937d9a903 9e74968b507dffd9778ebcec9b79742e4d699cc9 M	Assets/AddressableAssetsData/AssetGroups/FN0009FH01.asset
+:100644 100644 9941eeb90aa703e824bd20c018e1a7911da9d144 7ecf8f1d02a85e35ed4324a3d2fbac31575136ec M	Assets/AddressableAssetsData/AssetGroups/FN0018BH01.asset
+:100644 100644 e6929d6b9dfdfebf4d3bfb9a6f89d20b60ef0f34 64844acb81684476840da65fec0c2e356bd4ce4e M	Assets/AddressableAssetsData/AssetGroups/FN0018FH01.asset
+:100644 100644 7ae2f9eefc316b6f69a0069b1de8c3bdf6c273b2 e0bb8f4b26dae236a4eee3f6dc5810fa3e1551cd M	Assets/AddressableAssetsData/AssetGroups/FN0018HA01.asset
+:100644 100644 9031abac7dbcd4172852f7f668c71891359842cd 3d3e43d5206701a48eeaf503aeab844b317f87ab M	Assets/AddressableAssetsData/AssetGroups/FN0018HA02.asset
+:100644 100644 f368ee78cb31ec697fad57b35e7bd1304158b5a1 54279e9d00cdc528250ff082d519647e0d59cd4b M	Assets/ExternalAssets/Items/G0001/FG0001FH01/FG0001FH01.fbx
+:100644 100644 cc743b8d352018ad4e50fb5f62c001f07e3dc2b3 2786b07339bec482a2656ca63d1fda20afc97dba M	Assets/ExternalAssets/Items/G0001/FG0001FH01/FG0001FH01.prefab
+:100644 100644 1d3383ed1969be9d877adc900316d3a47ee29a8c 72cbf63e07364ff7675f799175f0d196016d8bd2 M	Assets/ExternalAssets/Items/G0003/FG0003BH01/FG0003BH01.fbx
+:100644 100644 ab6d48f2972a945bbc5d06a44d5d0a17f36213ed 2671d4d573287d4e8892222b647b40bd58b4f521 M	Assets/ExternalAssets/Items/G0003/FG0003BH01/FG0003BH01.prefab
+:100644 100644 5edc0620bf89e892fcb564fb22bcb46f8ebec2b2 3be350db6e06702a54a724207574e34aa1117a30 M	Assets/ExternalAssets/Items/G0003/FG0003FH01/FG0003FH01.fbx
+:100644 100644 32cb84a909e84c158c9218893872ec00505128bb a13c9f8b2a7aaf3010050fca00922d3b8617a983 M	Assets/ExternalAssets/Items/G0003/FG0003FH01/FG0003FH01.prefab
+:100644 100644 7f24d032d6c3fbe1b3f75862eeb7028ff1291039 8ae1f3017b7f16c0c3abd6da543dc8715d670f42 M	Assets/ExternalAssets/Items/G0005/FG0005FH01/FG0005FH01.fbx
+:100644 100644 4ce7a03458c83b3a22b5b883b3d06c317a2dd276 bab6710425fafae80da99d352602d53b4d3a2d1d M	Assets/ExternalAssets/Items/G0005/FG0005FH01/FG0005FH01.prefab
+:100644 100644 da6c7cd500ff5e30ecfa43675c7b798fb5c9ad50 2650d0ef1f3a4888db19b1fdbfe30bef1cfd0a49 M	Assets/ExternalAssets/Items/G0006/FG0006BH01/FG0006BH01.fbx
+:100644 100644 d19f6c521eee14470f01ced5597a5c4c4b1ece36 19d3e4f015c7cff094be8cac255b36a3eb848903 M	Assets/ExternalAssets/Items/G0006/FG0006BH01/FG0006BH01.prefab
+:100644 100644 e2b0104915fb5b68db27e5189d32e545929f8bc8 8fb59a022675ff47f81c3aa6fecc2e4e77b9c517 M	Assets/ExternalAssets/Items/G0006/FG0006FH01/FG0006FH01.fbx
+:100644 100644 41b6abf3a49e0b323fab4cfcdd3378cbd6414cf1 0e1b189e12ff9e666e6de3e3bd6afb17e9400836 M	Assets/ExternalAssets/Items/G0006/FG0006FH01/FG0006FH01.prefab
+:100644 100644 c99afe971de4f7b34feab2f3a45a2b108e742a45 f7460eb846492645e4cf862d37390c6161551e70 M	Assets/ExternalAssets/Items/G0008/FG0008BH01/FG0008BH01.fbx
+:100644 100644 8cd908b4221f1f1b3d28f100cef87fe5fa8eba94 af79a32d18788320bb926deb631443ef69677535 M	Assets/ExternalAssets/Items/G0008/FG0008BH01/FG0008BH01.prefab
+:100644 100644 197ed0e577ce03a826ac808366ebcd6a53898225 3ba262e82716f26ae878e8be394ea5688a00ebb2 M	Assets/ExternalAssets/Items/G0008/FG0008FH01/FG0008FH01.fbx
+:100644 100644 24c3cde29930eb96123b2b0abd162fa04b660fb9 8ffcf924d85a37100a245c67c567362416d64ec1 M	Assets/ExternalAssets/Items/G0008/FG0008FH01/FG0008FH01.prefab
+:100644 100644 5bf50d34978941df5d57e130222581af480803ac 1c05df7aab81e59f927b0e01318fbbe7cb370dc6 M	Assets/ExternalAssets/Items/G0008/FG0008FH02/FG0008FH02.fbx
+:100644 100644 0361e2db1d49b5922bfc4619fc0809da4f37bf1b a42e069264cbffb0318882f24f78ff5a7ab600d6 M	Assets/ExternalAssets/Items/G0008/FG0008FH02/FG0008FH02.prefab
+:100644 100644 9e494c13c9da72a73b53dc3100eaa8df79b0d541 3d65199aa263ba3823ec67c6c51ac24021a0540a M	Assets/ExternalAssets/Items/G0016/FG0016BH01/FG0016BH01.fbx
+:100644 100644 718310dab34384a6f9651e7b6fce68c2efcf4ad2 252cc52a0676d50cad44d3cce705d493654b709d M	Assets/ExternalAssets/Items/G0016/FG0016BH01/FG0016BH01.prefab
+:100644 100644 5fb9a7049d3e7fd66fa0050f273dc825afd8e5d1 342470a2a714c218854edecfbebc29023147dc31 M	Assets/ExternalAssets/Items/G0016/FG0016FH01/FG0016FH01.fbx
+:100644 100644 2a044c8b3f5c532a80dcdf8ee9d48831bfe73b0e b98151ff1a467986216753b0a3722803c634ca1c M	Assets/ExternalAssets/Items/G0016/FG0016FH01/FG0016FH01.prefab
+:100644 100644 d3cfd29c97208b1134c5e58533733ca596a4b980 8ba8616c7d9373f846e22a6108c0f7ec5d756edb M	Assets/ExternalAssets/Items/G0016/FG0016HA01/FG0016HA01.fbx
+:100644 100644 7e4152c4affc8414a3b56271adc73bce4b7dc51e ac4dd34160828f63fd5bdffd208c80cf093cdda4 M	Assets/ExternalAssets/Items/G0016/FG0016HA01/FG0016HA01.prefab
+:100644 100644 f634892ed69e51bec3c1d315209791192399c85e 5fb50a943f7e42569bf3656b82f7462a593ee973 M	Assets/ExternalAssets/Items/G0020/FG0020BH01/FG0020BH01.fbx
+:100644 100644 4c40c5d10b07602213811abd8c577d4bcc455693 005e262a08450087e544bd43f53824eb4c825486 M	Assets/ExternalAssets/Items/G0020/FG0020BH01/FG0020BH01.prefab
+:100644 100644 3670e68b8b8a9541f8383938590b8fb394634771 1ed99f90f5786417c1114d4f51d863e2eaa85bdb M	Assets/ExternalAssets/Items/G0020/FG0020FH01/FG0020FH01.fbx
+:100644 100644 e3d07b966d286288e025fbf13ebb5ba283ac5a61 1641f489316506125b14cadc220b32f71d8b28f6 M	Assets/ExternalAssets/Items/G0020/FG0020FH01/FG0020FH01.prefab
+:100644 100644 3dd9ceb146a4c51ab8cf14c58cde31daa5cdf9b4 839a2a4c75eba7011b687677786dc1de879a2508 M	Assets/ExternalAssets/Items/G0022/FG0022BH01/FG0022BH01.fbx
+:100644 100644 c0c45083f42c77171fae1ca85ae2d44f91f69791 216cb155e467fdc2e794f1040e67f6ce3031765e M	Assets/ExternalAssets/Items/G0022/FG0022BH01/FG0022BH01.prefab
+:100644 100644 6ed82ff82dd0bdd10156b446091759ba0d67898f be74adb169019032db6fc168f612090a5721368a M	Assets/ExternalAssets/Items/G0022/FG0022FH01/FG0022FH01.fbx
+:100644 100644 456fd5a41755fb3e0d5a32d3485650469cf8d9b1 59d53f701f29d08fb134e8e3e606480a0a21c32a M	Assets/ExternalAssets/Items/G0022/FG0022FH01/FG0022FH01.prefab
+:100644 100644 278cba9a3f4e73099c0dc34696ccf40222af4449 394ad850fc8804927ccfc40160164373ecf17d07 M	Assets/ExternalAssets/Items/G0025/FG0025BH01/FG0025BH01.fbx
+:100644 100644 a6ff5867f5882e7aebf32443719848757dfa9f3f 3f56c2bd1329bbd9807d05fe29ab9866f4441cf4 M	Assets/ExternalAssets/Items/G0025/FG0025BH01/FG0025BH01.prefab
+:100644 100644 c022583c22a6eaf4e1a15f12b3b7dee005670a06 cd426ffa38912947072c2bb602aa1d29f3da17d6 M	Assets/ExternalAssets/Items/G0025/FG0025BH02/FG0025BH02.fbx
+:100644 100644 39d867620a4b76e2642291172dc6be5cba0f980f 7367b48577d4cce754330f1d6bd37da5bf54bcbf M	Assets/ExternalAssets/Items/G0025/FG0025BH02/FG0025BH02.prefab
+:100644 100644 4861eeec765da1070cfc242ed9ac2b0b94fd0a5e e8dd1e2b3ee7d1baa97a7bcb323e85c688d29437 M	Assets/ExternalAssets/Items/G0025/FG0025FH01/FG0025FH01.fbx
+:100644 100644 81af1f61baa4ee26f9ded0ca12897b3a789b407d b575ae02ede7612fb1d11c82b9e6d075e3110cd8 M	Assets/ExternalAssets/Items/G0025/FG0025FH01/FG0025FH01.prefab
+:100644 100644 6de8ed4e5d24c599481bcf2b2296bcb6468c98d6 2e7262578eb04bd32ddeb155688f5ccca5731376 M	Assets/ExternalAssets/Items/G0025/FG0025FH02/FG0025FH02.fbx
+:100644 100644 8f3ecd048f5077ea093f13fc5b06104347e277d1 615eb401deec44af97bdf8f3b27d39e0c7047108 M	Assets/ExternalAssets/Items/G0025/FG0025FH02/FG0025FH02.prefab
+:100644 100644 73aca1a36abf200e837bbb5a24c53b3b90267037 2fa0005f4dbbd48bb52c56c0e24c9853d2a06b47 M	Assets/ExternalAssets/Items/G0025/FG0025HA01/FG0025HA01.fbx
+:100644 100644 0fdf02207fb56172f8e8c2e0af64a83fd503dfaa b3f0b89e1a92d0c15465e943f48496b6ad24dd12 M	Assets/ExternalAssets/Items/G0025/FG0025HA01/FG0025HA01.prefab
+:100644 100644 5f09044c8bcba141642b6a22056718d64a6b5cb5 571f603f32a0a2f2ac057b0559784b51eb7d937e M	Assets/ExternalAssets/Items/G0025/FG0025HA02/FG0025HA02.fbx
+:100644 100644 7bdbb96b578217704c55361dfa84c4190c7eedea 789a6671f67d258579829123430055dbbc95800d M	Assets/ExternalAssets/Items/G0025/FG0025HA02/FG0025HA02.prefab
+:100644 100644 6d9162d300f585faed40813749be1ba664059155 93cb25c4326ff7ae1e1a1e0e4461573351ba63f2 M	Assets/ExternalAssets/Items/G0025/FG0025HA03/FG0025HA03.fbx
+:100644 100644 22bf134ccf3823d0105ac748e3ad8287eb406a61 3dc430a63fb366f3ac117bc0b796da98bdc2aa69 M	Assets/ExternalAssets/Items/G0025/FG0025HA03/FG0025HA03.prefab
+:100644 100644 af4f7783bc51fc9f87f63b9bd556e14e76b1f471 a9c61234eae9bef58f9ad42b00a16627e395fcc9 M	Assets/ExternalAssets/Items/G0027/FG0027BH01/FG0027BH01.fbx
+:100644 100644 aab30bc9a602e27787bc9bd7e3088c1f79c89410 72db76a406927cf5163f8035fee562f1b375bf72 M	Assets/ExternalAssets/Items/G0027/FG0027BH01/FG0027BH01.prefab
+:100644 100644 786f8a097c3a7c32e957894826569fbcb9cf6446 7c9bfe147e34e67b3e204bbe5b937958d4f7fb22 M	Assets/ExternalAssets/Items/G0027/FG0027FH01/FG0027FH01.fbx
+:100644 100644 3f48641ba9e6b456224d54782eca45bc731a89af 9056cf4c74cda49a70070924424ffb1368d3c9de M	Assets/ExternalAssets/Items/G0027/FG0027FH01/FG0027FH01.prefab
+:100644 100644 ca1d0af64eb91d221d6edb42082cc75a8c9e7a49 d60c75847ab8aa31fd1b1b3d2170ac0ca1ea9979 M	Assets/ExternalAssets/Items/G0029/FG0029BH01/FG0029BH01.fbx
+:100644 100644 ec4287fc137e89a3397d53537deccc2150cbd3a0 dbf37af82c4bd29ee773958ca6147ce78ec839fd M	Assets/ExternalAssets/Items/G0029/FG0029BH01/FG0029BH01.prefab
+:100644 100644 4ce6564a7ea1e53333f4f3ed04458600e8bff822 ce945dba091bf8cfafd0e0a1a299c6a8bb57098d M	Assets/ExternalAssets/Items/G0029/FG0029FH01/FG0029FH01.fbx
+:100644 100644 4cbfdea94f56e0c9147abc0aab16a1f011f1634e 665db677c1a9f437597432e52e071971d754f7fa M	Assets/ExternalAssets/Items/G0029/FG0029FH01/FG0029FH01.prefab
+:100644 100644 39df72a91a50da6464569e2ba3bb781d20864435 b2443709a781235cea558a1b78518bab9e16a9ff M	Assets/ExternalAssets/Items/N0008/FN0008BH01/FN0008BH01.fbx
+:100644 100644 6ff496637b685df209eec5f5f27d115833b7ab07 c6d38e6a35b136dc937d21596718316497eb970c M	Assets/ExternalAssets/Items/N0008/FN0008BH01/FN0008BH01.prefab
+:100644 100644 0b2e88e50259d6c9902a65848ca46195bf390df1 ed4ff3e28f6ffaa2a9b299ddfeaa6b610b4c7970 M	Assets/ExternalAssets/Items/N0008/FN0008BH02/FN0008BH02.fbx
+:100644 100644 3114f11b2ffce446c65c072c19213f19ea721b24 35f53ca49d63fe6f554916fda1cc4c4d49fee36e M	Assets/ExternalAssets/Items/N0008/FN0008BH02/FN0008BH02.prefab
+:100644 100644 80ff683367efdc454ba2b04e77eab9597ef5d803 489ab00450690a4fcb794e26b760943250df2ab1 M	Assets/ExternalAssets/Items/N0008/FN0008FH01/FN0008FH01.fbx
+:100644 100644 b195e3e64be920eb4b9386cc8c449893a82c3751 bbc3e245d1003742d4e2cf9d0e42ac26ddc645ba M	Assets/ExternalAssets/Items/N0008/FN0008FH01/FN0008FH01.prefab
+:100644 100644 5919ee49d34397fedc71b2eb0048cef2098d4d41 e67933a5976f53d29fadc1a5aad849d71623407f M	Assets/ExternalAssets/Items/N0008/FN0008FH02/FN0008FH02.fbx
+:100644 100644 b0ddd072f0dc1c1cfea00c7757e4be0a74d3f31e ef47a54054b8a52be2f5c0fbba0594ca44269437 M	Assets/ExternalAssets/Items/N0008/FN0008FH02/FN0008FH02.prefab
+:100644 100644 a2b4ba8dbae94e5f1232d8dc1c0aa5ef10a9c714 d6dfb27b826dcfcb116d1146e28d90a72fd5f303 M	Assets/ExternalAssets/Items/N0008/FN0008HA01/FN0008HA01.fbx
+:100644 100644 8f1d05e1b08919103d8a336f8538c3a1a8061114 620576768302ad13815f5ee409c559fd284e47a8 M	Assets/ExternalAssets/Items/N0008/FN0008HA01/FN0008HA01.prefab
+:100644 100644 58852e32f229eaefe278183cc3dd69b277951530 2b9b8f1024bbcba8392b76e3c06ccfcf007f7d76 M	Assets/ExternalAssets/Items/N0009/FN0009BH01/FN0009BH01.fbx
+:100644 100644 ca3ca8ea418102ad75ca1857cf7bb8d340967fbd 7ec9c82b8578ff6b012cb845e545821cacf1e35d M	Assets/ExternalAssets/Items/N0009/FN0009BH01/FN0009BH01.prefab
+:100644 100644 5e071f3262421977bbf3f3eda5c6035999bfa65c 4f0da7818d787416cfd1121df087a4c133dfd5a8 M	Assets/ExternalAssets/Items/N0009/FN0009FH01/FN0009FH01.fbx
+:100644 100644 fe58a8568ab8943f5b8f0a77e4e770233878019d e3fd713bffd09654bbd43940108432cab723db1d M	Assets/ExternalAssets/Items/N0009/FN0009FH01/FN0009FH01.prefab
+:100644 100644 70eb24468bb9d114308f4e6a8f85ed4c1f04aa04 b6f767e622795ecec5cff4c52fc10f18979ed32a M	Assets/ExternalAssets/Items/N0018/FN0018BH01/FN0018BH01.fbx
+:100644 100644 035ad9e3a025f526338992c922927cabd7f360f0 5f5a5c47976c1bde4055b88a95340681397f6142 M	Assets/ExternalAssets/Items/N0018/FN0018BH01/FN0018BH01.prefab
+:100644 100644 c0384c9d037fb4f15be2bb5ca2d3739077373500 7309e33ec0754fb3215920a1f3025686ffe73ff0 M	Assets/ExternalAssets/Items/N0018/FN0018FH01/FN0018FH01.fbx
+:100644 100644 301318299726bdecd414870dd7c3f5162358f06b 3e9932ed0e1c0d99ce05865241ba5b78361d4fd2 M	Assets/ExternalAssets/Items/N0018/FN0018FH01/FN0018FH01.prefab
+:100644 100644 220d880dd25034cb71d54b79993bfd8d97deb1cb d25c988752f6f92f1dbad0fadbca028b9b8976a8 M	Assets/ExternalAssets/Items/N0018/FN0018HA01/FN0018HA01.fbx
+:100644 100644 650c56176d7eaf483adddcdcfb67d7fb687a8677 f8ca0e5e81c45a42f43f950189d6d22580ccd6ac M	Assets/ExternalAssets/Items/N0018/FN0018HA01/FN0018HA01.prefab
+:100644 100644 14bab895bafecb0b7d08b9af445cda6ab15840d6 32364d909a212aac08f733e54439748c4c4915ab M	Assets/ExternalAssets/Items/N0018/FN0018HA02/FN0018HA02.fbx
+:100644 100644 96227fc0b78e38211ebd455d9b0f71e935f58806 74a918e517facfb006e9b95de977f60c2543ec32 M	Assets/ExternalAssets/Items/N0018/FN0018HA02/FN0018HA02.prefab
+commit a28af914317dd5f815c1b4e4c28004db1e9271d1
+tree 425624cfff06b5a5226f97c4c6119cde69c8effe
+parent 71fa28914d1c6158e0ed1361220634cff3cedffd
+author tanaka rina <tanaka_rina@cocone.co.jp> 2022-06-06 16:17:16 +0900
+committer tanaka rina <tanaka_rina@cocone.co.jp> 2022-06-06 16:17:16 +0900
+
+    LEYLA vol.3 OP,IW透明度差し替え
+    
+    サムネ再修正
+
+
+:100644 100644 d1a0bf88e598f4d1b33068c827498f422dba365d c4ada4e80e33b094e53b15504126d3a629fd80da M	Assets/ExternalAssets/Items/N0026/FN0026IW01/thumb_l.png
+:100644 100644 301a3bb07e46713c926447bdf982aca3dfbc64a4 03156c27b9ba7fafa3581a07d1283ce7fb392625 M	Assets/ExternalAssets/Items/N0026/FN0026IW01/thumb_s.png
+:100644 100644 af92671a7780536e546ea161d8c37290aa3b219e f6355f889cddf660329c186828e045d7964d8ff2 M	Assets/ExternalAssets/Items/N0026/FN0026OP01/thumb_l.png
+:100644 100644 4afd8bbacb6bf8b2ea2df005c61e4c1f65ed9189 3e2dbcc332074ff6935c9bff1bcdd8ab7406fb2b M	Assets/ExternalAssets/Items/N0026/FN0026OP01/thumb_s.png
+commit 579773d38d78d8e10205f21216a6acae5e950330
+tree bfb10353dd49a1de09cd3265496b38c5afb7229c
+parent c6370a6a101f0e1c6af24aa831d177ce87640a05
+author Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 15:49:20 +0900
+committer Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 15:49:20 +0900
+
+    FG0019GA01 JIRA:プレビュー角度調節
+
+
+:100644 100644 0cc9631b7896eb89d93330a4c67300c84f602f8c 252c308d946f7174e4a83cd502c0416bd7625f63 M	Assets/ExternalAssets/Items/G0019/FG0019GA01/FG0019GA01.prefab
+commit 9c13c0ae8594b2badc3e6aaf4fb7c7943354d6b5
+tree 88638fe071e7eba137192b006b32ec72374c35f6
+parent d651cb250bd36463907be862d60580c257040548
+author sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 15:39:19 +0900
+committer sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 15:39:19 +0900
+
+    FG0021　OP　OT　SH　BT ロケータ修正
+
+
+:100644 100644 5a7b81640a370936c1813aa2acee9f88334306f3 50227ca87b34bdd5c54ebe2c27513386ed2a4058 M	Assets/AddressableAssetsData/AssetGroups/FG0021BT01.asset
+:100644 100644 bfd145f4ab7c9025b85fa4e968944ad0a9cc01ce 921ef416f6af6f56e11b0e977d2426b8c7ccba2a M	Assets/AddressableAssetsData/AssetGroups/FG0021OP01.asset
+:100644 100644 02dc927e8981571b8fd6fa2b2ffa6505fd8949b1 8962b4623db9ec52b84eda625c9236b0018a2cae M	Assets/AddressableAssetsData/AssetGroups/FG0021OP02.asset
+:100644 100644 4723bef51a58535d423390625efdabac025c7cf9 b8c8b112319876ae9f9184d2dded54be2113619a M	Assets/AddressableAssetsData/AssetGroups/FG0021SH01.asset
+:100644 100644 cc7c4f399f45c9a3f1c282a9d43acddf8ed51a74 78005375678b66087bec971b5febb0a332ad647b M	Assets/AddressableAssetsData/AssetGroups/FG0021SH02.asset
+:100644 100644 d2aa46fcab5e2f56630e16cd6c6043fcaa6c9605 2bb421e1cf74c485121710c0185dab41e7552d99 M	Assets/AddressableAssetsData/AssetGroups/FG0021TP01.asset
+:100644 100644 1d1ff89fe2dbc4f018808316f2862641ea523231 fcf6b63dbc118674153524cc6a1687954496c0a6 M	Assets/ExternalAssets/Items/G0021/FG0021BT01/FG0021BT01.fbx
+:100644 100644 c4e649f58f808939cdaf0998979c7d98780b321f 4ba9ce62b39d1ae3947499431cfda40b2daa3b2d M	Assets/ExternalAssets/Items/G0021/FG0021BT01/FG0021BT01.prefab
+:100644 100644 bbc302bf657329cde360dbc54d4696a30567e80f d0dbad093a476a6b44e81d9d5c01aa0130363c8b M	Assets/ExternalAssets/Items/G0021/FG0021BT01/FG0021BT01.prefab.meta
+:100644 100644 3dda7b0c352f80578241afeaf00e5e8a51358d32 7369f25a5487c415b4074c96331dd5b7763fba34 M	Assets/ExternalAssets/Items/G0021/FG0021OP01/FG0021OP01.fbx
+:100644 100644 c1bd38fd09bc80161938d2245333d1a352f196ef 5d953336107b172f83788a689b43cf5f3fc30ae4 M	Assets/ExternalAssets/Items/G0021/FG0021OP01/FG0021OP01.prefab
+:100644 100644 d9a6d01adbd24eb99004292072dbec29bad1aaa7 ccea682e57ef47a52f43e5719cb92ba0b6f91a8e M	Assets/ExternalAssets/Items/G0021/FG0021OP01/FG0021OP01.prefab.meta
+:100644 100644 91e92633f81c12e06ac36b7e3cda871b29ad0742 0278ad0f11e5c5c4c65c12c0d4966c6d1d294bd0 M	Assets/ExternalAssets/Items/G0021/FG0021OP01/MatLow_Opaque_OP01.mat
+:100644 100644 69947485b1087fe6deba24e072d558d847707cb1 9ab0e6cfc2d577b02d3d0f010724155814d79e16 M	Assets/ExternalAssets/Items/G0021/FG0021OP02/FG0021OP02.fbx
+:100644 100644 a78960620ed38f5061cd9f39e4ed28cb7ec32c90 24515269900a835c99b84b9134d2588ac900ba61 M	Assets/ExternalAssets/Items/G0021/FG0021OP02/FG0021OP02.prefab
+:100644 100644 522d8200bd37723ba72c49445b9510e2a23c1055 81f3bd5f83a117bd0450aa72344fda443c25d44a M	Assets/ExternalAssets/Items/G0021/FG0021OP02/FG0021OP02.prefab.meta
+:100644 100644 165e723d6d875d91109b14e1b771e075768d3169 f05a18a05743a152a105e405d8450246b6c187ab M	Assets/ExternalAssets/Items/G0021/FG0021SH01/FG0021SH01.fbx
+:100644 100644 e94d4f2573bda7697767dc75e12fae358c1fbdb4 f43c8ea43c0c3968c15dc97d090528d393d16e39 M	Assets/ExternalAssets/Items/G0021/FG0021SH01/FG0021SH01.prefab
+:100644 100644 afce1ed8d45e9b0adce44e3b5a55edb11d110c50 82b04de1fd973b7e2f01956f3e08e72c17c2c3b9 M	Assets/ExternalAssets/Items/G0021/FG0021SH01/FG0021SH01.prefab.meta
+:100644 100644 39a4595b52fe620f99423fc1d78c0fcc8ad63906 85bef875ab2e3034daf98bb8cb00e54b590fb9ba M	Assets/ExternalAssets/Items/G0021/FG0021SH02/FG0021SH02.fbx
+:100644 100644 26214a03d3cd5281b018a35d6d9a38e33d8446d5 1a9ed15767bcae0aca51f8b992b1dee7fc48851a M	Assets/ExternalAssets/Items/G0021/FG0021SH02/FG0021SH02.prefab
+:100644 100644 84ee0be679c846545f74e36b7829dd60c4d80efb ea90f2f6fa71b76917c1732309249e220568b935 M	Assets/ExternalAssets/Items/G0021/FG0021SH02/FG0021SH02.prefab.meta
+:100644 100644 4b2c356bff83a916488be5a3fee74d394164d38e 2eecad669c1348688ddcd96932b63caf31fb28d8 M	Assets/ExternalAssets/Items/G0021/FG0021TP01/FG0021TP01.fbx
+:100644 100644 28d9b95fd228daaff2db5e608278192f25e4bd84 3860c751f6666bd9cbf4cc4ddab03497b71938ea M	Assets/ExternalAssets/Items/G0021/FG0021TP01/FG0021TP01.prefab
+:100644 100644 c23efa7cac5aa4815cdc5494339e8e05708d0803 9e95ab35e3dea44ce9e1f10a2943582e5b7c9a57 M	Assets/ExternalAssets/Items/G0021/FG0021TP01/FG0021TP01.prefab.meta
+commit ef02521d39d9c124f78d352edef49cde548f3c17
+tree 03dffd6b8a2954e6b2bfe4b15da8fde05415c94b
+parent ceab5ed7545b3517b73553edb6622ae95138e078
+author yanagita_hinako <yanagita_hinako@cocone.co.jp> 2022-06-06 14:39:28 +0900
+committer yanagita_hinako <yanagita_hinako@cocone.co.jp> 2022-06-06 14:39:28 +0900
+
+    BH,FH,BT,TP　ロケーター調整、Unity実装
+
+
+:100644 100644 c502e7995997744876918c83f87982ba0899e83f de2710cb74f347856f9f6412179ff937d2e08d0c M	Assets/AddressableAssetsData/AssetGroups/FN0022BH01.asset
+:100644 100644 ae8d0000594a0f98323cf58f1cc9dc5a9c38b604 22b15237c7b1affb6e3c6c46d8ec4015589c4bd5 M	Assets/AddressableAssetsData/AssetGroups/FN0022BH02.asset
+:100644 100644 ba6025de2edea77fd003d5078850b78417331bb0 a846fd4835bc07e48e9c4daf6731395c547f6a0f M	Assets/AddressableAssetsData/AssetGroups/FN0022BT01.asset
+:100644 100644 815178b2547561027ee4b76647512a1acbcb2aa2 aacf23d4596a01ba44745bea8f6c545572d096e2 M	Assets/AddressableAssetsData/AssetGroups/FN0022FH01.asset
+:100644 100644 a306d6348801d39bf70c3544cb4dcaaeb583a81d 34e2fc89fa6424768849bfe3ce82124c3cd7c8fc M	Assets/AddressableAssetsData/AssetGroups/FN0022FH02.asset
+:100644 100644 19516e7d4f9fe7b405c57c6069c5504be993ca1e 421e69836d792bd268fe0657d88b5c1c433534b5 M	Assets/AddressableAssetsData/AssetGroups/FN0022TP01.asset
+:100644 100644 ef33b621101a1a491687edc0f7a246a871f1e646 8c66c3cb4786ce0918712d23f1a8ed09126ca20d M	Assets/AddressableAssetsData/AssetGroups/FN0022TP02.asset
+:100644 100644 ed1235e46531641c11bb788c6bbbccd505230695 42c442f0e98e65d936b1e5c024fc8dc1d5d96443 M	Assets/ExternalAssets/Items/N0022/FN0022BH01/FN0022BH01.fbx
+:100644 100644 55fdf00ec15e977052e09e4d9942a41b87c937fe 9790a7bb9c1e07d0a9a8acb2b52ac66cee4a0955 M	Assets/ExternalAssets/Items/N0022/FN0022BH01/FN0022BH01.prefab
+:100644 100644 190c7c75cf0d9ef770a4f8de50421746eab60dbb 9a14ea1c755d862676d691a25ec7b7821425ba8f M	Assets/ExternalAssets/Items/N0022/FN0022BH01/FN0022BH01.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 595a2f4006824054d52bac2f2490ec1300373f43 A	Assets/ExternalAssets/Items/N0022/FN0022BH01/Hair_BH01_O.tga
+:000000 100644 0000000000000000000000000000000000000000 4696827024c5d18f4bb0b2e35c8af60799bb206b A	Assets/ExternalAssets/Items/N0022/FN0022BH01/Hair_BH01_O.tga.meta
+:100644 100644 5941897b1a006b8113454b47949bbd9807135cc3 d139594bf64a16c8b79089c892145431f2aa2aa9 M	Assets/ExternalAssets/Items/N0022/FN0022BH01/Mat_Hair_BH01.mat
+:100644 100644 3288eac8c26954a854cc2e3a7d9d7689ae031af2 f1dcdc34a792794abaf6601df3c176a8a0ff3b56 M	Assets/ExternalAssets/Items/N0022/FN0022BH01/thumb_l.png
+:100644 100644 e472ff26d65efc6f27c73bc325f0abd21a1d4138 0e6145aa3c57f031e11c8f429f33b5098d39e31c M	Assets/ExternalAssets/Items/N0022/FN0022BH01/thumb_s.png
+:100644 100644 e384ba5b9cfad20bdf217d52eef2e388baa15f7c 4e1425a53c0062e10249b681f2c62d90dcfac686 M	Assets/ExternalAssets/Items/N0022/FN0022BH02/FN0022BH02.fbx
+:100644 100644 bdc062c87b5cae6608d8e341de3f5488ab285dcd ec55cc5b655abcc2767d85af7ddadb9e7dea44b4 M	Assets/ExternalAssets/Items/N0022/FN0022BH02/FN0022BH02.prefab
+:100644 100644 cfe5947100669d9ea965e46eab39c89736692ca1 0207fc81dcd2cde02258cd112a296ee5028134c8 M	Assets/ExternalAssets/Items/N0022/FN0022BH02/FN0022BH02.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 c8dc7f5a8de63e04657ab7ada769b733d4695af0 A	Assets/ExternalAssets/Items/N0022/FN0022BH02/Hair_BH02_O.tga
+:000000 100644 0000000000000000000000000000000000000000 e1c10227368ca6257522b52e38420a1500201d76 A	Assets/ExternalAssets/Items/N0022/FN0022BH02/Hair_BH02_O.tga.meta
+:100644 100644 493a42413bf36e78fb001ae3569c67e1c5937a6c 38cc07ad4fdb348023b89ea46f3b999784bc8221 M	Assets/ExternalAssets/Items/N0022/FN0022BH02/Mat_Hair_BH02.mat
+:100644 100644 5b81deb00f30f85919606b52e2ae5c1474bd1613 0a50307347aebfe8d57f3181e14f7dab5cfb8d43 M	Assets/ExternalAssets/Items/N0022/FN0022BH02/thumb_l.png
+:100644 100644 7e7e82035fc59846159b69a2f3c0cd43b3ff993e 1f2e19b50f569b40d7a77bbe5b71bcfe10ec2fe7 M	Assets/ExternalAssets/Items/N0022/FN0022BH02/thumb_s.png
+:100644 100644 3cf9bfbec47fa591a542785d57a9fd0cb359b582 9cd6a73540435389a185e34802828a638a7f18b2 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/FN0022BT01.fbx
+:100644 100644 1cf504d30a1808cd338e52d6898e209ba9914658 49f0c37dee6eca5ecb35fe537ef16e2564aac158 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/FN0022BT01.prefab
+:100644 100644 0ecc48ac29c8e1f13869fc0cd26a2ad85b1af49f 50d92ce599845b630beb89415891099a39dea548 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/FN0022BT01.prefab.meta
+:100644 100644 c4658205bf7cced854a7eee36202e17fa28efba9 de209113f6dd077306be435b1f4efbbf9af3f6c0 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/MatLow_Opaque_BT01.mat
+:100644 100644 01f7245f81305224ba217f1fa40792e4f9bbac1d 49b204bb512384b7eae48a7bdc73dd2fda661a57 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/Mat_Opaque_BT01.mat
+:100644 100644 f8c3c57740abe8bca42164e9101a3e8c1dd7b623 9648046ee8ac018090a283001204dc4a279e26fc M	Assets/ExternalAssets/Items/N0022/FN0022BT01/Opaque_BT01_M.tga.meta
+:100644 100644 3a818c749c7cccb3bc4bda4ff53e6a35632df836 adfec14932241726570482be8cadf7a3cf1f0f44 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/thumb_l.png
+:100644 100644 439296d6f1f7db2fd6d6d723ad06aa36324f06d7 9d933e7cc2dcf5a0284f4bf5071b785117860688 M	Assets/ExternalAssets/Items/N0022/FN0022BT01/thumb_s.png
+:100644 100644 43010cef8cc2f17657b604e2aeb17b280d598679 b98abf5a8e365b0c8b8f58caf898f91e976f6e0b M	Assets/ExternalAssets/Items/N0022/FN0022BT02/FN0022BT02.fbx
+:100644 100644 667496377a50c5df35a0b14de6ab806b6e85c6fb df605aa1cf83355328b8cf20320ea57bb120db5d M	Assets/ExternalAssets/Items/N0022/FN0022BT02/FN0022BT02.prefab
+:100644 100644 ca720735bc4cbf4122366d458eea34d5d5c74021 2b0005dee5406f1570dd3ca6ba75f2a514012613 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/FN0022BT02.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 d91b49f612161646b1f30eb936cec14481eed274 A	Assets/ExternalAssets/Items/N0022/FN0022BT02/FN0022BT02_old.prefab
+:000000 100644 0000000000000000000000000000000000000000 ca720735bc4cbf4122366d458eea34d5d5c74021 A	Assets/ExternalAssets/Items/N0022/FN0022BT02/FN0022BT02_old.prefab.meta
+:100644 100644 ccf6491dfb2b143589601303caacdfe51b39e345 de84f91ac9a7ce4b020fadcadf29358011a70a82 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/MatLow_Opaque_BT02.mat
+:100644 100644 b3db87c3403276f1352b18aac5d9bb766d19c8b4 1fcc8fe84fcc2028e06a7d8801af88a79ac1d0b6 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/Mat_Opaque_BT02.mat
+:100644 100644 ee99d9c4abb8f180c16c6d268f9f57cf8a7d80c8 41129486835533e66683d7efbfb5e5465d8e1b32 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/Opaque_BT02_M.tga.meta
+:100644 100644 c412b58607e04a521ab125f2081c0b8e21530aaf 00408f7fd860a7461e002a063ccceaf7fe00f46d M	Assets/ExternalAssets/Items/N0022/FN0022BT02/thumb_l.png
+:100644 100644 61373a3d16aec236480cdf0a9242635f3cbda33a cf293d7a15f8ae41df566eb01055f8af3ec3ba50 M	Assets/ExternalAssets/Items/N0022/FN0022BT02/thumb_s.png
+:100644 100644 255a0deadfaec71477cf3c5d644d9a0ed0d2b7b5 9c37b440a07c0920581e94159770eca5b0a03b81 M	Assets/ExternalAssets/Items/N0022/FN0022FH01/FN0022FH01.fbx
+:100644 100644 4872b12f83e13f111728abaedbc1126557fa7f87 12d646f630a4ac241eb9f2caa886e26969bad8e2 M	Assets/ExternalAssets/Items/N0022/FN0022FH01/FN0022FH01.prefab
+:100644 100644 d12f74c6844392273d1d1cd88e55045c8eb2857a b21a9401910fb9124ceb7c250f27266a57b208fd M	Assets/ExternalAssets/Items/N0022/FN0022FH01/FN0022FH01.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 645731f51546e991c1fe2ca47cd567afce2d2d1f A	Assets/ExternalAssets/Items/N0022/FN0022FH01/Hair_FH02_M.tga
+:000000 100644 0000000000000000000000000000000000000000 66f38d518d9949425d4dd8217b10a955fb6135b0 A	Assets/ExternalAssets/Items/N0022/FN0022FH01/Hair_FH02_M.tga.meta
+:100644 100644 a2394f3742fcf964c46abed2bf98588962063e86 ec2cbdbdcb500c96de5a1b967261946ef165161a M	Assets/ExternalAssets/Items/N0022/FN0022FH01/MatLow_Hair_FH01.mat
+:100644 100644 2b571befaf3e6feb434b2b363935b3c0376b2860 3b4da48c5fa57b2ce57dd2c6beeff5adf96746f3 M	Assets/ExternalAssets/Items/N0022/FN0022FH01/Mat_Hair_FH01.mat
+:100644 100644 391568aa2c00dd152564972662a25687aed74ccb d95948679360559a76a0c83df7a4f6e35018906c M	Assets/ExternalAssets/Items/N0022/FN0022FH01/thumb_l.png
+:100644 100644 ccb289b5445536efdea8302162ee4ec6e4a66224 5b28348cfed6c27d331ceb049096ed7b86169091 M	Assets/ExternalAssets/Items/N0022/FN0022FH01/thumb_s.png
+:100644 100644 86aabcb523265cf8f2695c6dc98cab2f0df30861 2828ebf4b20631bd6a0ec065bcbab498203588a0 M	Assets/ExternalAssets/Items/N0022/FN0022FH02/FN0022FH02.fbx
+:100644 100644 7a4363ee26ede604e5c9e94f83a168d7cbe5a01a 4135af93e65458a331a3382c9f61831f26bf44f9 M	Assets/ExternalAssets/Items/N0022/FN0022FH02/FN0022FH02.prefab
+:100644 100644 4657fb548b04bc6ad4e874dcf79a74731fbda40a 0b4fbdc4e676f5c404f8f18d001bf641b05132af M	Assets/ExternalAssets/Items/N0022/FN0022FH02/FN0022FH02.prefab.meta
+:100644 100644 3515e197e221f6af329cccfeadefc296d4305536 22e7124c3dee28e4fc3eb4d47fe795dd25f31348 M	Assets/ExternalAssets/Items/N0022/FN0022FH02/Hair_FH02_M.tga.meta
+:100644 100644 4f61c44ea058c82f3ebfb5b84ab0e973d735863b dbff0084ea5c44157e3b3860094bf25c17464ed1 M	Assets/ExternalAssets/Items/N0022/FN0022FH02/MatLow_Hair_FH02.mat
+:100644 100644 c60c57babcecba4f11647d284b1038c4c97cb3ac 623e154944bf78e83235482c253b95eafc161107 M	Assets/ExternalAssets/Items/N0022/FN0022FH02/Mat_Hair_FH02.mat
+:100644 100644 f430f6960c0fc82b9fab9c3892970f9630dda6aa a22a3d3a8b81493977ff551d673af80c02bef77b M	Assets/ExternalAssets/Items/N0022/FN0022FH02/thumb_l.png
+:100644 100644 01e438386dc9b57e9322f0290975d351b1b3236a 01ff5bb013f84e82778cfa1bc0ecdfa78e45753c M	Assets/ExternalAssets/Items/N0022/FN0022FH02/thumb_s.png
+:100644 100644 707de424f14b2ef79d5020b420eaf399a2b402e2 bfed4a6f805ca40d63e5838d07119de1ad5252cf M	Assets/ExternalAssets/Items/N0022/FN0022HR01/thumb_l.png
+:100644 100644 152286bdfc7376bddacc91c09af5707ce73cac47 22ec9cc9398c0c77b21fb2467a68bee3ac3105b1 M	Assets/ExternalAssets/Items/N0022/FN0022HR02/thumb_l.png
+:100644 100644 6acfb97be4df6a237f7d8c09335499c1b7778a5b c9b960387778cbf5035d3fa6e815b55296b9ed9a M	Assets/ExternalAssets/Items/N0022/FN0022TP01/FN0022TP01.fbx
+:100644 100644 0cb1cf4232e0c25f1093dd123c157260e32acfc7 4e403f62d391034334bfd7046fb563f4881cabd4 M	Assets/ExternalAssets/Items/N0022/FN0022TP01/FN0022TP01.prefab
+:100644 100644 b8e38a457b1bb1c224c60116fd59c47ef1291c84 398894498b6e813889895b32ca5acd4c8654898f M	Assets/ExternalAssets/Items/N0022/FN0022TP01/FN0022TP01.prefab.meta
+:100644 100644 cbb9ed3dacddb8d5945e7490e169451c5e63d59f 1bb5ad6dd0647768102d42935edc5494c25ca9f1 M	Assets/ExternalAssets/Items/N0022/FN0022TP01/thumb_l.png
+:100644 100644 e5e2e5321f99203b0c73ad1bc99be6a6effd0f94 3879f05938d9c16d51091257c3e44ff95181db5a M	Assets/ExternalAssets/Items/N0022/FN0022TP01/thumb_s.png
+:100644 100644 e1a6e0b74f6bc7084aa65862476f9b32c9f86bc8 5d10a644932d88c8c6e8259d1185b5d42236ee85 M	Assets/ExternalAssets/Items/N0022/FN0022TP02/FN0022TP02.fbx
+:100644 100644 febe88a2a825a3e7f0f559095b1ab1c9f23510a4 ebe11b02163b3ccdc2d6ef2b798ee750e0af70ea M	Assets/ExternalAssets/Items/N0022/FN0022TP02/FN0022TP02.prefab
+:100644 100644 1562418245ef8647c54f53cd4553a093a75794d6 875aaae3e89b6ce2e8691a905962f807a206ec3e M	Assets/ExternalAssets/Items/N0022/FN0022TP02/FN0022TP02.prefab.meta
+:100644 100644 4909bde2f10d3840a9856f23b63e15acc24fd5c7 0f1802437278df094c2a1c9bbdf0b34fec4c47c5 M	Assets/ExternalAssets/Items/N0022/FN0022TP02/thumb_l.png
+:100644 100644 1f72755ca09b65c5e4a76f1d47b5af283a2b6144 299d4dd6f8dcbccf9563f2f69bf4abe8a3566515 M	Assets/ExternalAssets/Items/N0022/FN0022TP02/thumb_s.png
+commit 6f62b940700483237200d5665dc154fd633a6747
+tree fac1067eace99737e624e09c7af60b6f555af053
+parent d651cb250bd36463907be862d60580c257040548
+author Yukinori <fukatsu_yukinori@cocone.co.jp> 2022-06-06 14:35:48 +0900
+committer Yukinori <fukatsu_yukinori@cocone.co.jp> 2022-06-06 14:35:48 +0900
+
+    オーロラプリズムマーメイド
+    
+    オーロラプリズムマーメイド
+    コロニー
+    スカイデコ・ローテクスチャ追加
+
+
+:100644 100644 a5335af1e3f2ae60be2666947106a32717ca6dc4 140ca4bfa7195bd08d13e957dbbd464135702591 M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+:000000 100644 0000000000000000000000000000000000000000 204913d18f7b30a93a4e776533215d3ece5b8123 A	Assets/AddressableAssetsData/AssetGroups/PG0041SD02.asset
+:000000 100644 0000000000000000000000000000000000000000 90a27933db9c6dffb867e93c952fe54afc9009a0 A	Assets/AddressableAssetsData/AssetGroups/PG0041SD02.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 ad6941fca9f4c32d4c98768b9a597af9b06cb771 A	Assets/AddressableAssetsData/AssetGroups/Schemas/PG0041SD02_BundledAssetGroupSchema.asset
+:000000 100644 0000000000000000000000000000000000000000 10c05703efeee17fdd477335321063fc7696bcd9 A	Assets/AddressableAssetsData/AssetGroups/Schemas/PG0041SD02_BundledAssetGroupSchema.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 bfa155ffe1e895dc413d7c86bd38705c3bbe80c2 A	Assets/AddressableAssetsData/AssetGroups/Schemas/PG0041SD02_ContentUpdateGroupSchema.asset
+:000000 100644 0000000000000000000000000000000000000000 d0efd6ddab3ee25135e46e53f3c657dc1628a418 A	Assets/AddressableAssetsData/AssetGroups/Schemas/PG0041SD02_ContentUpdateGroupSchema.asset.meta
+:100644 100644 397ce30781896843b114f6b149fc2822f391f38d c0a4d24e4ab2f44bfde976b7a45bbb1eca1f7a83 M	Assets/ExternalAssets/Items/G0041/PG0041CH01/MatLow_Opaque_CH01.mat
+:000000 100644 0000000000000000000000000000000000000000 a1e7bebbbeddb5a9aa9b47eab12e21fc74c3c668 A	Assets/ExternalAssets/Items/G0041/PG0041CH01/Opaque_CH01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 a39ebf0cd360d5a87375265fad4c8ddd102fd23c A	Assets/ExternalAssets/Items/G0041/PG0041CH01/Opaque_CH01_M_Low.tga.meta
+:100644 100644 b05f1f498d3585b928726763d8ae0756343c6352 53c8befb7756d4a75038861af03a718dadbe3c3c M	Assets/ExternalAssets/Items/G0041/PG0041DF01/MatLow_Opaque_DF01.mat
+:000000 100644 0000000000000000000000000000000000000000 3b4f285d1b4b5729ba3596e89a64e0ed46b2080b A	Assets/ExternalAssets/Items/G0041/PG0041DF01/Opaque_DF01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 6b6c4b9383abf0852b482d19e468f30684787e70 A	Assets/ExternalAssets/Items/G0041/PG0041DF01/Opaque_DF01_M_Low.tga.meta
+:100644 100644 9c211261638b4cf3075de0b864704f082c186fba ad4e1fe57ddd65080716b83971caa310fe64ac6e M	Assets/ExternalAssets/Items/G0041/PG0041FL01/MatLow_Transparent_FL01.mat
+:000000 100644 0000000000000000000000000000000000000000 fb832aa34a5f9d2e4c8b5c541f7b7e135d692ab7 A	Assets/ExternalAssets/Items/G0041/PG0041FL01/Transparent_FL01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 256a2eea4e7f07fca725c1eeae472c522d60104e A	Assets/ExternalAssets/Items/G0041/PG0041FL01/Transparent_FL01_M_Low.tga.meta
+:100644 100644 59305d4a6eb615e90db27c74a0f08e11506b993f face234c862f0c391670922fed74841d873a2e09 M	Assets/ExternalAssets/Items/G0041/PG0041LI01/MatLow_SpectrumOpaque_LI01.mat
+:000000 100644 0000000000000000000000000000000000000000 a8d7e192e3958954219e5725f07d7690fbac962c A	Assets/ExternalAssets/Items/G0041/PG0041LI01/Opaque_LI01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 d2a346edef91289ed87a62929bf5bdd675f6b746 A	Assets/ExternalAssets/Items/G0041/PG0041LI01/Opaque_LI01_M_Low.tga.meta
+:100644 100644 b7fe0479df9fef813597c1ac5b2a93847361a69a e4f768a1183522f9f1a7c89c25014a4c38ce0855 M	Assets/ExternalAssets/Items/G0041/PG0041LI02/MatLow_Glass_LI02.mat
+:100644 100644 7c12b8bf933adcef56ddc871e3a3b6a90e37174a 8a50a9f9b13479f579c534df21fe51ec953a7200 M	Assets/ExternalAssets/Items/G0041/PG0041LI02/MatLow_Opaque_LI02.mat
+:100644 100644 48d9f22da0d0dafe8e5c03c2ed54ac8629e85059 29183d9f0d3ec532b6649f29f67d51b0702c112c M	Assets/ExternalAssets/Items/G0041/PG0041LI02/Mat_Glass_LI02.mat
+:100644 100644 c8929f57a9f9a59c1eeeea4ab8fc2255a4cdc3d3 f24ce7ac074b54adf1656d94237a446ce1c3e49a M	Assets/ExternalAssets/Items/G0041/PG0041LI02/Mat_Glass_LI02.mat.meta
+:100644 100644 ae4d5ab01bf7c93a7865cfe7c746d586fb840e7c 95e4afa0c9ff0f811620e4cdc16f8fa02a233ca4 M	Assets/ExternalAssets/Items/G0041/PG0041LI02/PG0041LI02.prefab
+:000000 100644 0000000000000000000000000000000000000000 4bfcbcc1da24cca6e496da90038e279a062ce408 A	Assets/ExternalAssets/Items/G0041/PG0041LI02/Transparent_LI02_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 0bef920dcb15e353d4cd21319a8f20debb296742 A	Assets/ExternalAssets/Items/G0041/PG0041LI02/Transparent_LI02_M_Low.tga.meta
+:100644 100644 4dcc5deb5b0fea3a99cfaf997c2d18d0c2fc8fe3 f81a33009de4aa61e3366f13e14be105e4954797 M	Assets/ExternalAssets/Items/G0041/PG0041LI03/MatLow_SpectrumOpaque_LI03.mat
+:000000 100644 0000000000000000000000000000000000000000 85b51e39ef60d3a56b52ca88a929b5b83849c345 A	Assets/ExternalAssets/Items/G0041/PG0041LI03/Opaque_LI03_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 d7a318b15478f5eddea5fe00d1016082f7535213 A	Assets/ExternalAssets/Items/G0041/PG0041LI03/Opaque_LI03_M_Low.tga.meta
+:100644 100644 9e11c3f24ab2b7aebb747e136c8cc4971756f80f 7124632e449baf75047ab6fa5162906aedd113f7 M	Assets/ExternalAssets/Items/G0041/PG0041RG01/MatLow_Opaque_RG01.mat
+:000000 100644 0000000000000000000000000000000000000000 660c6c668f0c419b19035cddc04f94602d3798b3 A	Assets/ExternalAssets/Items/G0041/PG0041RG01/Opaque_RG01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 c1fed6e1846e96947e5f1e890d4768f81f9afe5c A	Assets/ExternalAssets/Items/G0041/PG0041RG01/Opaque_RG01_M_Low.tga.meta
+:100644 100644 f41d895ba44012f2d32fbf7c020f7065cc11a7fd bc3a38a5639a9866fee0fb3bfed2af5e06ed54de M	Assets/ExternalAssets/Items/G0041/PG0041SD01/MatLow_VtxWaveMorphBubble_SD01.mat
+:100644 100644 eed06e6ea567ad913da9d2dd9b0b1685b5ec48f9 0d015d5fcd160d3809752abc1f3c7d39d9fcd970 M	Assets/ExternalAssets/Items/G0041/PG0041SD01/Mat_VtxWaveMorphBubble_SD01.mat
+:100644 100644 7644be609663df595601e8b6c5a63670fb7989c4 2ac75bfdbe5cad765405c097b76528019aac00aa M	Assets/ExternalAssets/Items/G0041/PG0041SD01/Opaque_SD01_B.png.meta
+:000000 100644 0000000000000000000000000000000000000000 6c19d62929a927b498205f26ac41feac6a6f0271 A	Assets/ExternalAssets/Items/G0041/PG0041SD01/Opaque_SD01_B_Low.png
+:000000 100644 0000000000000000000000000000000000000000 04e9a3bb6a7278ceb03cc714842eafddfc8e79ce A	Assets/ExternalAssets/Items/G0041/PG0041SD01/Opaque_SD01_B_Low.png.meta
+:000000 100644 0000000000000000000000000000000000000000 bb2777f39a00baa9d29eebc00d46c01d5ecc96c3 A	Assets/ExternalAssets/Items/G0041/PG0041SD02.meta
+:000000 100644 0000000000000000000000000000000000000000 93bdadb5a13cc96e41aacdaa4369732d4adcaa97 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/Mat_VtxWavemorphBubble_SD02A.mat
+:000000 100644 0000000000000000000000000000000000000000 5c406252498ea50c32eab265147efef5efeefb22 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/Mat_VtxWavemorphBubble_SD02A.mat.meta
+:000000 100644 0000000000000000000000000000000000000000 ed30493485dec58b14a37d659271a8f04087ebc4 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/Mat_VtxWavemorphBubble_SD02B.mat
+:000000 100644 0000000000000000000000000000000000000000 139bbe6c4f0daf0e599599155888d0f88e836240 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/Mat_VtxWavemorphBubble_SD02B.mat.meta
+:000000 100644 0000000000000000000000000000000000000000 e892e7c53d3599698d3252b4afd7798a74a18856 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/Mesh_SD02Bubble.fbx
+:000000 100644 0000000000000000000000000000000000000000 dd94d6c04ccf75a9d7e35133a38dbd9970224c0f A	Assets/ExternalAssets/Items/G0041/PG0041SD02/Mesh_SD02Bubble.fbx.meta
+:000000 100644 0000000000000000000000000000000000000000 d9278d1e8c9d702c38a99371e943d51ffccfc5bb A	Assets/ExternalAssets/Items/G0041/PG0041SD02/Mesh_SD02Bubble.prefab
+:000000 100644 0000000000000000000000000000000000000000 a5b7b5c67d45c272df49a2294a3c46c1aa5b2c72 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/Mesh_SD02Bubble.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 837a8fc7429727423a0ae6071134e93731657d38 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/PG0041SD02.fbx
+:000000 100644 0000000000000000000000000000000000000000 7188f3aa2a5d39916522d15971a144794ef9ebb9 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/PG0041SD02.fbx.meta
+:000000 100644 0000000000000000000000000000000000000000 4ff8301693c7de21eda9443070ee3f1551afe9df A	Assets/ExternalAssets/Items/G0041/PG0041SD02/PG0041SD02.prefab
+:000000 100644 0000000000000000000000000000000000000000 55ce2674fc625f1c8e13ff670800d4e491a5cdb4 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/PG0041SD02.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 5efa7dbe9382f40b359e363c1f1450e21bd82aaf A	Assets/ExternalAssets/Items/G0041/PG0041SD02/VtxWavemorphBubble_SD02A_B.png
+:000000 100644 0000000000000000000000000000000000000000 7895b81978da7740f9ec4f99b4d4233fcc39834e A	Assets/ExternalAssets/Items/G0041/PG0041SD02/VtxWavemorphBubble_SD02A_B.png.meta
+:000000 100644 0000000000000000000000000000000000000000 8bcb2aa40ef5add82a9a60158b9b207185948fe4 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/VtxWavemorphBubble_SD02B_B.png
+:000000 100644 0000000000000000000000000000000000000000 4f14ca0a9a3d4124340e792f980d1d60e2bf848d A	Assets/ExternalAssets/Items/G0041/PG0041SD02/VtxWavemorphBubble_SD02B_B.png.meta
+:000000 100644 0000000000000000000000000000000000000000 2edf42120a390878d4f1350f991d96be245f99f9 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/thumb_l.png
+:000000 100644 0000000000000000000000000000000000000000 07b5b089d61c2fbe4d8981d4c90656bb0f4f2521 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/thumb_l.png.meta
+:000000 100644 0000000000000000000000000000000000000000 436516740d4f4a20ef1d68389382255314eeebe8 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/thumb_s.png
+:000000 100644 0000000000000000000000000000000000000000 8494cde76ab52396dc731f15e018b67529afd272 A	Assets/ExternalAssets/Items/G0041/PG0041SD02/thumb_s.png.meta
+:100644 100644 47a9191b515a7cf8c5677a8f4aecd74ee91725a1 641982fa0fe1b8dddd24bf463d7232f2e05889c9 M	Assets/ExternalAssets/Items/G0041/PG0041SI01/MatLow_Opaque_SI01.mat
+:000000 100644 0000000000000000000000000000000000000000 107a148869ad7932bee5c42452efab7344b7f941 A	Assets/ExternalAssets/Items/G0041/PG0041SI01/Opaque_SI01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 b0195b50ae2a073b49de81e47c002efdcedd5e14 A	Assets/ExternalAssets/Items/G0041/PG0041SI01/Opaque_SI01_M_Low.tga.meta
+:100644 100644 96e7b0825c83409bb42cc393ea8eda8b6540c8c0 e41df4a4a34a402f7fe0282b527916b89edb10bb M	Assets/ExternalAssets/Items/G0041/PG0041SI02/MatLow_Opaque_SI02.mat
+:000000 100644 0000000000000000000000000000000000000000 5e89f9e3c87f5a58987b9e47045d85d6e5a534cd A	Assets/ExternalAssets/Items/G0041/PG0041SI02/Opaque_SI02_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 7cbdaa3d49de06e2acf5059fa0027984fb537708 A	Assets/ExternalAssets/Items/G0041/PG0041SI02/Opaque_SI02_M_Low.tga.meta
+:100644 100644 34c1134a296e078036e1e55e4ffc89817045f932 b3f5062816b18f854cf319a1a98004234edd14a2 M	Assets/ExternalAssets/Items/G0041/PG0041SI03/MatLow_Opaque_SI03.mat
+:000000 100644 0000000000000000000000000000000000000000 d0822fda706e3720966940acd3f14edf04c351b4 A	Assets/ExternalAssets/Items/G0041/PG0041SI03/Opaque_SI03_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 90d8525a113f532308baa9823370d6c52ee4a48f A	Assets/ExternalAssets/Items/G0041/PG0041SI03/Opaque_SI03_M_Low.tga.meta
+:100644 100644 5b389b8a35e7a154465f5fd328d4b59424015bad 0d1bafce66c72fd670aa47fde4a694a666ffbeea M	Assets/ExternalAssets/Items/G0041/PG0041SI04/MatLow_Opaque_SI04.mat
+:000000 100644 0000000000000000000000000000000000000000 d0822fda706e3720966940acd3f14edf04c351b4 A	Assets/ExternalAssets/Items/G0041/PG0041SI04/Opaque_SI04_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 837f4b7ab8c6bbc9dad16768b7a45a36fe68ede5 A	Assets/ExternalAssets/Items/G0041/PG0041SI04/Opaque_SI04_M_Low.tga.meta
+:100644 100644 c75701452b9072745cdd924de43fb673f0a4fc8d 92a43303ecff94e58ad42b22d3ea6d5f17ce1061 M	Assets/ExternalAssets/Items/G0041/PG0041SI05/MatLow_Opaque_SI05.mat
+:000000 100644 0000000000000000000000000000000000000000 d0822fda706e3720966940acd3f14edf04c351b4 A	Assets/ExternalAssets/Items/G0041/PG0041SI05/Opaque_SI05_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 bb33b56aed8a89811c496db325780eb5cd917d94 A	Assets/ExternalAssets/Items/G0041/PG0041SI05/Opaque_SI05_M_Low.tga.meta
+:100644 100644 968e59c37798747fa0c87fa4778f763450b4b4b4 cfd4bbb92bcf44f1c4962dc06c8c34ca28dc098d M	Assets/ExternalAssets/Items/G0041/PG0041SK01/MatLow_Opaque_SK01.mat
+:000000 100644 0000000000000000000000000000000000000000 7d927484af382ebb4f4bf05e27c071d2a0882402 A	Assets/ExternalAssets/Items/G0041/PG0041SK01/Opaque_SK01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 55fd55c189e81107b74c3ab6db17ade691004c88 A	Assets/ExternalAssets/Items/G0041/PG0041SK01/Opaque_SK01_M_Low.tga.meta
+:100644 100644 1012cbe17ba3cc12461bcf3e9a55675ef27a102a cacb2d6b606e0869dd67d29df096ea8c2a495ea8 M	Assets/ExternalAssets/Items/G0041/PG0041ST01/MatLow_Transparent_ST01.mat
+:000000 100644 0000000000000000000000000000000000000000 b32105d4a1126727fbd8bd2f37f94c105240eb89 A	Assets/ExternalAssets/Items/G0041/PG0041ST01/Transparent_ST01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 f1324d1fdb3ce3f901249689e6a1290fa7043c94 A	Assets/ExternalAssets/Items/G0041/PG0041ST01/Transparent_ST01_M_Low.tga.meta
+:100644 100644 bdd8094af679ae8b630ef96db81fad186d56cc22 369363a6ebcc5043af983dcce7aa7f25b475cf3d M	Assets/ExternalAssets/Items/G0041/PG0041TB01/MatLow_Opaque_TB01.mat
+:000000 100644 0000000000000000000000000000000000000000 5ec8640338adb386177f6dd32521cd2969cfe48e A	Assets/ExternalAssets/Items/G0041/PG0041TB01/Opaque_TB01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 e3730badde95ed00af83b5f6f0ac877d3567c12a A	Assets/ExternalAssets/Items/G0041/PG0041TB01/Opaque_TB01_M_Low.tga.meta
+:100644 100644 e3315a0390a0fbdeace45d9416c597943ffcfa1c f27fbadd91d747876fb5fbae6f1391042ef2bc16 M	Assets/ExternalAssets/Items/G0041/PG0041TR01/MatLow_Opaque_TR01Fish.mat
+:100644 100644 098396efe79d623e26f41c97b84b0b661cc3e846 ba9d7e13a3c6a736761bf8d6748cba42fd7e8975 M	Assets/ExternalAssets/Items/G0041/PG0041TR01/MatLow_SpectrumOpaque_TR01A.mat
+:100644 100644 92a8075102c802326d7be972a02ccf5050eb3063 c1b835b630a72fa534a30b3d019db4a5668b35bf M	Assets/ExternalAssets/Items/G0041/PG0041TR01/MatLow_SpectrumOpaque_TR01B.mat
+:000000 100644 0000000000000000000000000000000000000000 10382d5dce2efd91399158cc38c7fe622ac591d0 A	Assets/ExternalAssets/Items/G0041/PG0041TR01/Opaque_TR01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 c61498a07a4f72507f99759fcc008152486d0813 A	Assets/ExternalAssets/Items/G0041/PG0041TR01/Opaque_TR01_M_Low.tga.meta
+:100644 100644 2234b280112087eb6a1bbc1f9b9741baabb36ee8 354896460c50af89bc1ddc2e01e9461356dd96a5 M	Assets/ExternalAssets/Items/G0041/PG0041UF01/MatExLow_Opaque_UF01.mat
+:100644 100644 ba18b049ceb27509dd20ae57e59c0e9872a430d0 c4afebb591a3f4f5eac04f8e905bc530fba65179 M	Assets/ExternalAssets/Items/G0041/PG0041UF01/MatLow_Transparent_UF01.mat
+:000000 100644 0000000000000000000000000000000000000000 9ae629d1e5534fdad5a53611de335040da481f2c A	Assets/ExternalAssets/Items/G0041/PG0041UF01/Transparent_UF01_M_Low.tga
+:000000 100644 0000000000000000000000000000000000000000 4a54b46dd279bcd53196043b57efced83c229565 A	Assets/ExternalAssets/Items/G0041/PG0041UF01/Transparent_UF01_M_Low.tga.meta
+commit ee39a63b5b687ec8cd2f5588ebdfe67d706ba43b
+tree b54641af34029d1fc8d02762f63a6294ea064f11
+parent 7dde5b2be4fdaeb7966ab3608ea8c0b16c8e65d0
+author sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 14:16:51 +0900
+committer sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 14:16:51 +0900
+
+    JIRA対応　TRIA-4019
+
+
+:100644 100644 258bfeac10c132683c149b05dd12d7bc1ac57bf2 4ce34e51190d8e2c209c2ca670814f317a9ae5c9 M	Assets/ExternalAssets/Items/G0009/FG0009HA01/thumb_s.png
+commit 7dde5b2be4fdaeb7966ab3608ea8c0b16c8e65d0
+tree b5344018fb602215c46c5cf3378b73afedd25f0f
+parent 7f2ce75e8b24eccc7b7a5274544960e9ca82e142
+author sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 14:11:45 +0900
+committer sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 14:11:45 +0900
+
+    JIRA対応　テクスチャ調整　TRIA-4107　TRIA-4160　TRIA-4105]
+
+
+:100644 100644 b8c14d1a786ceec2c87a863c2bf7d5c697c9e5f0 4d55853c407dd48337cf714bd310d98bba9a90ba M	Assets/ExternalAssets/Items/G0009/FG0009BH01/Hair_BH01_M.tga
+:100644 100644 fdd513b395335c2bdaf19b61c2f81ae9530313af 94041a8541676e2748e33a97b6d3a246fdf11035 M	Assets/ExternalAssets/Items/G0009/FG0009BH02/Hair_BH02_M.tga
+:100644 100644 f639746e915e824a9cd5e863283516b42169f143 bc5aa480db7a529e62ff41da29d6f6cc01b6b245 M	Assets/ExternalAssets/Items/G0009/FG0009FP01/FG0009FP01.tga
+commit d13db039d7f34a176f594546783ab0b27ff8ab2b
+tree b6a9e2b21a9e2dd4bbf787800eb0bf51b0938a19
+parent ca03dda87377456fab0d5cfa85a60168382c5e01
+author fujihara_hanako <fujihara_hanako@cocone.co.jp> 2022-06-06 13:49:27 +0900
+committer fujihara_hanako <fujihara_hanako@cocone.co.jp> 2022-06-06 13:49:27 +0900
+
+    FN0026 「Leyla vol.3」
+    フェイスパーツ(FN0026EY01)データ化
+
+
+:100644 100644 ba7c62ad9d6a4df17cec8df167477a922444cab5 a5335af1e3f2ae60be2666947106a32717ca6dc4 M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+:000000 100644 0000000000000000000000000000000000000000 63a3ea8955ec52f511edbed2ae8985c9f9dc4486 A	Assets/AddressableAssetsData/AssetGroups/FN0026EY01.asset
+:000000 100644 0000000000000000000000000000000000000000 502f4ca93b029d504e3290196c55c2ee59387ca2 A	Assets/AddressableAssetsData/AssetGroups/FN0026EY01.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 ac9d3614c4d7946b24a6d0c3b3f04f1227d6833d A	Assets/AddressableAssetsData/AssetGroups/Schemas/FN0026EY01_BundledAssetGroupSchema.asset
+:000000 100644 0000000000000000000000000000000000000000 6f0be5efff31e5fc6554eaa658bedd62ddc43472 A	Assets/AddressableAssetsData/AssetGroups/Schemas/FN0026EY01_BundledAssetGroupSchema.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 33f511634f3d801b49df29560b9cb4cb979a761e A	Assets/AddressableAssetsData/AssetGroups/Schemas/FN0026EY01_ContentUpdateGroupSchema.asset
+:000000 100644 0000000000000000000000000000000000000000 2bc6ed9d3a6b346ac696de8dd689663cb2421446 A	Assets/AddressableAssetsData/AssetGroups/Schemas/FN0026EY01_ContentUpdateGroupSchema.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 1a792dab4b47b6d390620da46f0136bd17e403b4 A	Assets/ExternalAssets/Items/N0026/FN0026EY01.meta
+:000000 100644 0000000000000000000000000000000000000000 2845d0dcabcc777462ab5ab8a9706f00f868f458 A	Assets/ExternalAssets/Items/N0026/FN0026EY01/FN0026EY01.asset
+:000000 100644 0000000000000000000000000000000000000000 7d058c98fe1f3880b38cc0f3989f5a51155385a2 A	Assets/ExternalAssets/Items/N0026/FN0026EY01/FN0026EY01.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 4b24b4287831ae27107cfe9215224758e29f49f0 A	Assets/ExternalAssets/Items/N0026/FN0026EY01/FN0026EY01L.tga
+:000000 100644 0000000000000000000000000000000000000000 724619ee422a0e90928269631e1a307c0272f3ef A	Assets/ExternalAssets/Items/N0026/FN0026EY01/FN0026EY01L.tga.meta
+:000000 100644 0000000000000000000000000000000000000000 7b8b2f370136d9b73e1831687cbaa7d7230a99fc A	Assets/ExternalAssets/Items/N0026/FN0026EY01/FN0026EY01R.tga
+:000000 100644 0000000000000000000000000000000000000000 4eb762cef4de2f7b25732dcf09a4e35d88057acd A	Assets/ExternalAssets/Items/N0026/FN0026EY01/FN0026EY01R.tga.meta
+:000000 100644 0000000000000000000000000000000000000000 7412d2b5a6a8367f4be632df5829853ecaba5af2 A	Assets/ExternalAssets/Items/N0026/FN0026EY01/thumb_l.png
+:000000 100644 0000000000000000000000000000000000000000 5d919102d67511ceabe70703e6df6c952ed52a5a A	Assets/ExternalAssets/Items/N0026/FN0026EY01/thumb_l.png.meta
+:000000 100644 0000000000000000000000000000000000000000 c9701ae75af9e96f1dc16225cb3d58bdbdc8a4d2 A	Assets/ExternalAssets/Items/N0026/FN0026EY01/thumb_s.png
+:000000 100644 0000000000000000000000000000000000000000 592f28b761b38a19c28a3dd666a40a7219538854 A	Assets/ExternalAssets/Items/N0026/FN0026EY01/thumb_s.png.meta
+commit 0acef979e29862d9421a4dffe3aabfdfe0f45ad5
+tree c832b1547028ffa72aa0ba99aa9ff10ad2b0cc24
+parent e0a4d25e4d0414830f5f36df0d235f2971bb5fcd
+author sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 13:48:26 +0900
+committer sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 13:48:26 +0900
+
+    テクスチャ変更
+
+
+:100644 100644 f29f5b468959060a309e533efe426dc05c8e8e1f b27b2c22f0e01f4962eca23cd471986587f3022a M	Assets/ExternalAssets/Items/N0019/FN0019FH01/Hair_FH01_M.tga
+commit e0a4d25e4d0414830f5f36df0d235f2971bb5fcd
+tree c133434ea7b294f97968a526458350520711e36b
+parent ca03dda87377456fab0d5cfa85a60168382c5e01
+author sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 12:23:17 +0900
+committer sakurai_asuka <sakurai_asuka@cocone.co.jp> 2022-06-06 12:23:17 +0900
+
+    FN0019　OP　SH　ロケータ調整
+
+
+:100644 100644 ef6718594e4d6b65e738a94c103ae145ea4f2ed6 d6cd235ff0ac2ff01e233ff580f2f88f4280703c M	Assets/AddressableAssetsData/AssetGroups/FN0019OP01.asset
+:100644 100644 521091a241314db3d23f606f4d5652b60fe1a346 a62d6db580b1132fafe8061dc903a4943f9193b6 M	Assets/AddressableAssetsData/AssetGroups/FN0019SH01.asset
+:100644 100644 b13373f8ab0d22dc10a7aa22f0bd34322aa5cb2e 893a7f81a2fb487aef4e400dc2c2e67f07138787 M	Assets/ExternalAssets/Items/N0019/FN0019OP01/FN0019OP01.fbx
+:100644 100644 7db190b68079a8ed02b076d5790b036329fecabe ec6bfd19426a5d98c62c77222ec4f095d585fa3a M	Assets/ExternalAssets/Items/N0019/FN0019OP01/FN0019OP01.prefab
+:100644 100644 a5e46930efb6372d3a4daa56b1d0c11bcc00b12d be8bcc0c073e8a5d9592efb27d48a7b3c375bb72 M	Assets/ExternalAssets/Items/N0019/FN0019OP01/FN0019OP01.prefab.meta
+:100644 100644 f2163ff69f6e66833c693274b3f762b541006884 e624df3469c1b75bfa9e103f0cd7b5574c1d6cbc M	Assets/ExternalAssets/Items/N0019/FN0019SH01/FN0019SH01.fbx
+:100644 100644 a8d368bc79f7b9a5c64f08c5b7a1ea6d03e8f751 815497a35de1cddd87f17db49dd78cdfae02512a M	Assets/ExternalAssets/Items/N0019/FN0019SH01/FN0019SH01.prefab
+:100644 100644 34ad6b66a711424f33454ab7c754f44be533b442 bfdff94d89fe1c93b310fbb5063fe2ddaf7af9d1 M	Assets/ExternalAssets/Items/N0019/FN0019SH01/FN0019SH01.prefab.meta
+commit 5aaf658605e34c1ac89bac3b827dc36f547fc5de
+tree 628ce33bf29bee3eec3b29a4c7f966cbb94e6f1b
+parent 271a520f5840a6a5a63f471cf3485bbaf6ee65d9
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-06 12:13:19 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-06 12:13:19 +0900
+
+    add addressable asset
+
+
+:100644 100644 59275fb87cb8ddb5d660d83a512d95f51fddc7bd 246eb0d3eabfa4073c064b02dfc6ab6df1bd0d43 M	Assets/AddressableAssetsData/AssetGroups/Motion0013.asset
+:100644 100644 7a3b73fea919f99061f29fa17b7c00bae63f162f 815fb8e544e37446a673205e588ea90e51fefcff M	Assets/AddressableAssetsData/AssetGroups/Pose0012.asset
+commit c6370a6a101f0e1c6af24aa831d177ce87640a05
+tree 580998838a36d2afb244eea4bfbf6ec017361795
+parent ca03dda87377456fab0d5cfa85a60168382c5e01
+author Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 12:05:50 +0900
+committer Naoya Haga <haga_naoya@cocone.co.jp> 2022-06-06 12:05:50 +0900
+
+    PG0033CH02 Shadowテクスチャ修正
+
+
+:000000 100644 0000000000000000000000000000000000000000 f23559aec30aeeefcfd79ecff1f86f6a671d5633 A	Assets/ExternalAssets/Items/G0033/PG0033CH02/Shadow_CH02_S.png
+:000000 100644 0000000000000000000000000000000000000000 65c31c1aac625684a053958b0b615ce83381ff9b A	Assets/ExternalAssets/Items/G0033/PG0033CH02/Shadow_CH02_S.png.meta
+commit 271a520f5840a6a5a63f471cf3485bbaf6ee65d9
+tree a983cc94a61809bafae60f15e97da4c81839c692
+parent 7ad3da0b1fcd5c0bb5a4af0e3febc6454fe9f33d
+author tanno_kaoru <tanno_kaoru@cocone.co.jp> 2022-06-03 19:38:25 +0900
+committer tanno_kaoru <tanno_kaoru@cocone.co.jp> 2022-06-03 19:38:25 +0900
+
+    [1.7.0]既存モーション改修
+    └TRIA-3959_4069 : Motion0013　 左腕のねじれ修正
+    └TRIA-4102 : Pose0012 左腕のねじれ修正
+
+
+:100644 100644 82b83c276a1af75d0f10ea6178f876010e781b8f dc9f3e521dcc3e0981eec0ca57bc5e4594bd91cd M	Assets/ExternalAssets/Motions/Pose/N0000@Motion0013.fbx
+:100644 100644 42b3f4fcd82361fc8da91ad1bc78acabdafdee35 7abdd9b77e4b9510955710c896daaa0d9b06b68e M	Assets/ExternalAssets/Motions/Pose/N0000@Pose0012.fbx
+:100644 100644 1c963a06a4dcbc17525f466c49d9b0d017f322c6 0f4974c57c4d057f502173329d4e75c5e8499336 M	Assets/ExternalAssets/PoseItems/Motion0013/Motion0013.anim
+:100644 100644 a8115d63fe8bb15084a6de64e1de69b456dda251 36a47c24c96708f16cce89186ad38874afd7e5ac M	Assets/ExternalAssets/PoseItems/Motion0013/Motion0013.anim.meta
+:100644 100644 30d6b86bb8c3847184a031d067c8e62f53efeba1 90623570bc217d0f82e1359169dd06084f0792ba M	Assets/ExternalAssets/PoseItems/Pose0012/Pose0012.anim
+:100644 100644 6ee64d8709e0a256efa539309a5ce79c76e1df72 cb2c000d7090d26cbf98ec2bd1a08884f1938e59 M	Assets/ExternalAssets/PoseItems/Pose0012/Pose0012.anim.meta
+commit 7ad3da0b1fcd5c0bb5a4af0e3febc6454fe9f33d
+tree 14e8831e1b3e2747acbfdf7dbec0a4a5278b6be0
+parent 438e40d1b353e73e52e30c01d84d71482bf3410a
+author yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-03 19:04:30 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-03 19:04:30 +0900
+
+    リアクションモーダルが閉じるまでに他のボタンを押せなくする
+
+
+:100644 100644 c1fb8397bedfdffbeb8fb489e08bc8ee7bf56747 ae9f8a46955a1fb67770aa6b7eaca8c7d40543de M	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionHandler.cs
+:100644 100644 0e33da28d466e66cbfd72dc60b61f4ff943935e9 14dc8454140fda5c4fa4370a7b400995b325230c M	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionListItem.cs
+:100644 100644 4f81ed7ff987041f26beff094752e238d32df125 6eb5097b976260d7d5060a819ad194b02d035b39 M	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionModal.cs
+:100644 100644 3df76d1b65933acc6136ec868a4ecdc9dfe6efc4 f0453df628b07e164c686a9b9afa386ef00017e7 M	Assets/Resources/UI/Party/UI/Reaction/PartyReactionModal.prefab
+commit 4c6f0667bd188b6e7b3ea92c7ae46f06c2bc3b78
+tree 374db2848e104010a0cc57c5665a49b4f47ad583
+parent c0362c964c6570a9d90c8aa42bb2ae78fe6f48ad
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-03 15:17:33 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-03 15:17:33 +0900
+
+    defaultでDisableがOnになっていたので修正
+
+
+:100644 100644 6aaa6ca6ef6e76bcca4de5fda4560882cb4745c1 865ebfdf13083eb5a95629c4f775b37bceb3603e M	Assets/App/UIAnimation/Common/CmnSubBtn/CmnSubBtn.controller
+commit 3b085f63bca1c3359de7511230abd80173a10b54
+tree af65f7c1fd8bbcdd0094f4b7ac613df63ea32769
+parent c0362c964c6570a9d90c8aa42bb2ae78fe6f48ad
+author yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-03 14:34:20 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-03 14:42:48 +0900
+
+    リアクションの後で数秒待機後モーダルを閉じる
+
+
+:100644 100644 8e2b8a6f79c1aa6bf18a8a90a23e681d289876e4 c1fb8397bedfdffbeb8fb489e08bc8ee7bf56747 M	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionHandler.cs
+commit c0362c964c6570a9d90c8aa42bb2ae78fe6f48ad
+tree 12d75f5e72093cad3ff331cfe2d6f34fd1195610
+parent 98b339a411b57148bbf455e2de5432bff97a7245
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-03 13:32:17 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-03 13:32:17 +0900
+
+    update coordinate sidebar
+
+
+:100644 100644 e61ee3d7a91437dedaf2ff6b1a3999253693c29c b9f55a48c0dd5c08422b477ee6eae711a2995f93 M	Assets/App/Scripts/Contents/Coordinate/CoordinateSidebar.cs
+:100644 100644 7f23c8e56e7151a460f229af613afc16bd0b3367 65346cfdcae590ba5eaa9fa21f542932390447eb M	Assets/Resources/UI/Coordinate/CoordinateSidebar.prefab
+commit 98b339a411b57148bbf455e2de5432bff97a7245
+tree dc6e0c573f6035e08c6c549f7be6948395e41be2
+parent 208d996b79ce4b9543ad0a9db349fef6e1ab1c37
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-03 13:03:23 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-03 13:03:38 +0900
+
+    FIX: TRIA-4140 【もようがえ】初期化ボタンがグレーアウトし､タップしても反応しない
+
+
+:100644 100644 89fe77f30f57d2453f8cd8bee08e44fa897bb525 7f23c8e56e7151a460f229af613afc16bd0b3367 M	Assets/Resources/UI/Coordinate/CoordinateSidebar.prefab
+commit 372d7e1c489468567f5f6b27e1845554c30be4cf
+tree a0b5386b88c66f7ddda5df244737155f83720511
+parent 9231a0e830af44cff8c47fb54f5fe9649a94be81
+author Izumi Atsuko <izumi_atsuko@cocone.co.jp> 2022-06-03 11:53:02 +0900
+committer Izumi Atsuko <izumi_atsuko@cocone.co.jp> 2022-06-03 11:53:02 +0900
+
+    TRIA-4156修正
+    
+    お出かけモーション風船角度修正
+
+
+:100644 100644 9f28b9e64373df048d9dbe9de09aba3ac55f0a14 2e70c56d0f5673dd91fc9c3abe157461595f452d M	Assets/Resources/Motions/Basic/VisitLoop.anim
+commit 9231a0e830af44cff8c47fb54f5fe9649a94be81
+tree 66305a166451a008d78005cb93d9b25942898eda
+parent 253bb385054deb125ee7a09b3b44127d4da73fa4
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-03 10:49:57 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-03 10:49:57 +0900
+
+    FIX: TRIA-4148【パーティTOP改修】パーティTOPに遷移する瞬間にお知らせバナーが一瞬ずれている
+
+
+:100644 100644 c0a6c4052c1dc66ca19db1330c89f5a9c2691517 b03e95a165f3a17f87d1ff8d3d6c7a30ec0c7005 M	Assets/Resources/UI/Party/Top/PartyTopLayer.prefab
+commit 253bb385054deb125ee7a09b3b44127d4da73fa4
+tree f0221e99197d25acd1dbbdd85d0e9d4f2ad2dffb
+parent d86d1ccdff94f938d289379f8704fdbd5f8ca7d6
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-02 20:39:37 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-02 20:39:37 +0900
+
+    FIX: TRIA-4092【6月イベント】アイテム獲得演出が再生されない
+
+
+:100644 100644 0d0525ed625b3fed08f263189bebfc45b8232aec a059bf7fe95c53137047df110d8545d618a114a0 M	Assets/App/Scripts/View/World/WorldController.Action.cs
+commit d86d1ccdff94f938d289379f8704fdbd5f8ca7d6
+tree 4280fcc7ebb4579ccd0a803eb04d0cf8b0d9ea5c
+parent e7a9972866e5b4df207d742bd3ffcde0ef1ab02b
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-02 20:39:05 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-02 20:39:05 +0900
+
+    水やり演出確認デバッグ機能でレベルアップしないように修正
+
+
+:100644 100644 4370f9547052bc56901ea69f617cb8db9005556f c278b435c82a1332ac75de728af4edb9170bb6ef M	Assets/App/Scripts/Scenes/WorldScene.Debug.cs
+commit c3f4a26b1f86aa53d2fac8a7dd9d47cf41a3c62a
+tree 36dd6d7dd15dc20f0a91eb80abd8724067a0f04c
+parent a1e59106cc4aec0184decde816e45b2f0a813377
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-02 20:10:01 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-02 20:10:01 +0900
+
+    TRIA-4153対応＿TIPS内の画像を新UIに差し替え
+
+
+:100644 100644 cb5be7490aad8c95ee2c17c9f6d039330d75a725 e6cd5dce38faa4d10f953315654e04b8da1f995a M	Assets/App/Textures/UI/ScreenShot/TutorialPartyImage02.png
+:100644 100644 2ac3dff9beeed5a15bf715c65d932c8a300ae485 c6e1d1c6e851bf8dc994d914911339a61ec87c54 M	Assets/App/Textures/UI/ScreenShot/TutorialPartyImage03.png
+:100644 100644 c9f44013f641959e39aeb799670a69f95d052ed7 d976aa725913fbca34f61188d1fab87b1114bea8 M	Assets/App/Textures/UI/ScreenShot/TutorialPartyImage04.png
+:100644 100644 b8435a2ad7ae3de3c06f09213083c3dfeb038856 21c4f13c3ed6fd46eb76b9f8d187f2ddd96d4dda M	Assets/App/Textures/UI/ScreenShot/TutorialPartyImage05.png
+:100644 100644 3a5abaa7797b53c8c547a5319aae469daf0d1a54 22a90f3a44ab13ae1eb83d8d71a490aa2dd354aa M	Assets/App/Textures/UI/ScreenShot/TutorialPartyImage06.png
+commit 0ce1e1d8bf01b21835ebfa60cf2e47984df6eca0
+tree b4d3ef0b87f1817f2d6c60bd22fac50ed5d100ef
+parent a3b7d9a4e45d357b08381fec0dab8b11f32f5cfa
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-02 18:13:59 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-02 18:13:59 +0900
+
+    TRIA-4138パーティチュートリアルのガイドがずれている件修正
+
+
+:100644 100644 14265bfa1661c56f2344752195371a2a29e53e3d e6ad9bbea4a3fd085bd183bef352e4eaea25a066 M	Assets/Resources/UI/Tutorial/TutorialGuidePartyTop.prefab
+commit 709dc4366bdfde484ced8535dcac35fdc2aed029
+tree cd0b5828d9c1f3776ac5a847a4fe55e19221396e
+parent beb571e7bbb646c5f5746e0133bedd6e7d3220c0
+author yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-02 17:41:05 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-02 17:41:05 +0900
+
+    proto更新
+
+
+:160000 160000 4c93410b14a192829a603aed20e4dfa30a859c1e 4b74d546f584616ca0cd762dc5aaa194dcc2e27c M	ExtProject/p3-proto
+commit e66ba6258c3ce191895648afb0fa4fcfad09bfd5
+tree 164c3903166b05d228bfd2c893c2e7fb95ac299a
+parent 23b1bbaf6402eb8b94f9869e187b2de64fb4d3e4
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-02 17:28:48 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-02 17:28:48 +0900
+
+    fix TRIA-4088
+
+
+:100644 100644 f9b597bd74bd6297156089e8b1406c26ac3a775a 9a43686d49f81e6f865b1a79b8b0f639c4030e18 M	Assets/App/Scripts/UI/Party/ChatCell.cs
+:100644 100644 6cda9d4748880e37a8b968e6cda67e68a4617501 846258a6631593a372642c844863f2881ef794b2 M	Assets/Resources/UI/Party/UI/ChatLogRoot.prefab
+:100644 100644 46a1a6c040cf754de6c743979104838cfd346e88 cd039404ec8a67fa2a95e8cefe1898af4f520cef M	Assets/Resources/UI/Party/UI/ChatLogUserIc.prefab
+commit beb571e7bbb646c5f5746e0133bedd6e7d3220c0
+tree 9f118fe02aa8cfca41bf1696f5569f0d03784a59
+parent 23b1bbaf6402eb8b94f9869e187b2de64fb4d3e4
+author yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-02 17:21:04 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-02 17:21:04 +0900
+
+    リアクションメッセージのリストア対応
+
+
+:100644 100644 85b34b8f972d539940268005d35a5141647478c2 bc87ab4c8ce4fc63189807f91445d1afe907221b M	Assets/App/Scripts/Contents/Party/PartyHandler.cs
+:100644 100644 51ec91ccb551a722c7c32e012e2ae46c3fa6469a c8af6c55d989293fb18911acda098fc04658f854 M	Assets/App/Scripts/p3-proto/party/Party.cs
+:160000 160000 7263b0646ca6e54af99669fdae2cb4147c58eaac 4c93410b14a192829a603aed20e4dfa30a859c1e M	ExtProject/p3-proto
+commit 6e26a40564048e3996e24bb87fc202d0e0ac291a
+tree 1cb6b78e3e39f75bfef2536afe69c195e55de6a6
+parent 9007f4a24cfd8d4bf4cd24b240abfe682daf4caa
+author yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-02 14:51:44 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-02 14:51:44 +0900
+
+    リスナー時はリアクションを表示しない
+
+
+:100644 100644 f1cc1c09ea472e261250f7bb744e26bb532458d7 83d5b8a343ae51e5a8fc951213cb484bec112f3b M	Assets/App/Scripts/Scenes/WorldScene.Party.cs
+commit 24b85edc49dc84683e3d1d1eb631dc2706ef95bb
+tree e9035fe726c8b44a4055194ad791583d66605bdc
+parent 9007f4a24cfd8d4bf4cd24b240abfe682daf4caa
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-02 12:05:21 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-02 12:05:21 +0900
+
+    パーティサムネイルにローディングアイコン追加
+
+
+:100644 100644 6810f4477312a2a0e4389b696a44b18cea683382 524b3528b90d1a83728c72fd23dec49a82674ea2 M	Assets/App/Scripts/Contents/Party/PartyItemCell.cs
+:100644 100644 e9da4e28b7fc4075d14d0ae47b01f67198f0e470 ba44d0c4385d2d9c4e39ff99cc0a809b147190c0 M	Assets/Resources/UI/Party/Top/PartyItemCell.prefab
+commit ddc30731638811f0b2fb7b4ed13c084810cdb279
+tree 60d40242262b386037e7e8b5f3e28fb28dd854d4
+parent ab28cff767f7f6ece10513b2e7ee5d5b49a16114
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-01 13:56:04 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-01 13:56:04 +0900
+
+    パーティTOPローディングアニメーション追加・タブの文言が見切れていたのを修正
+
+
+:000000 100644 0000000000000000000000000000000000000000 dcd6b5a3a8c839ae87ea1d6373af026101fa8dee A	Assets/App/Materials/Effects/unique/FxPartyTopLoading_Alpha.mat
+:000000 100644 0000000000000000000000000000000000000000 d1b54e488178e62ae86a6ffbd8badd4bd6c57036 A	Assets/App/Materials/Effects/unique/FxPartyTopLoading_Alpha.mat.meta
+:000000 100644 0000000000000000000000000000000000000000 0441b43742fd24a5f6f3539935d6c69847dfc737 A	Assets/App/Textures/Effects/Unique/FxPartyTopLoading.png
+:000000 100644 0000000000000000000000000000000000000000 fbfe7360a6e791d5ba18dc0669359054c2e56d55 A	Assets/App/Textures/Effects/Unique/FxPartyTopLoading.png.meta
+:100644 100644 85da0d246e84ef69e9ac8a80a67f5624d9c019dd a933d263182ca37b0c191816c443b6ecdd61b005 M	Assets/Resources/UI/Party/Top/PartyGroupTagItem.prefab
+:100644 100644 71b8fbfe14ea64ea3574cf9b3cd1bf8a2a8241ce e9da4e28b7fc4075d14d0ae47b01f67198f0e470 M	Assets/Resources/UI/Party/Top/PartyItemCell.prefab
+:100644 100644 6a66333a6108a6aef5e824b42239f2eeefc8975a c0a6c4052c1dc66ca19db1330c89f5a9c2691517 M	Assets/Resources/UI/Party/Top/PartyTopLayer.prefab
+commit ab28cff767f7f6ece10513b2e7ee5d5b49a16114
+tree 04b2d8a5927730935464ac3ea0b3e16b7282d569
+parent 8118a7d460be8054abc7e8dfc5d3a0c8ac27ed25
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-01 12:59:26 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-01 12:59:26 +0900
+
+    laycast追加、TutorialのProgress表示修正
+
+
+:100644 100644 3637ab1a4f95cc771c6d5ff067cd68f4dd4e6185 cfea8283ed99999ae141aa9ee03fabd811a16e48 M	Assets/App/Scripts/Scenes/Tutorial/TutorialWorldScene.cs
+:100644 100644 969b6908024b162071d53282e3456eb5685641d7 353587d9de02e8541e34658e3568be6ceee7745c M	Assets/Resources/UI/System/ProgressLayer.prefab
+commit 93f77db3b037800a413d4b470187f39bca6e6acd
+tree 0803e276559a607a4404bccd70b9416d74ceb340
+parent 96374bb092b78ec102f7b1751e6620acb5ee3093
+author yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-01 12:53:09 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-01 12:53:09 +0900
+
+    不要なusingを削除
+
+
+:100644 100644 fc06afc8ae4c9718b662c371374ac9ec59d52c31 6610deb43270d99fe961f5d81b6bb5d103162f20 M	Assets/App/Scripts/Contents/Party/PartyMainLayer.cs
+commit 96374bb092b78ec102f7b1751e6620acb5ee3093
+tree 63cb969830aa9f2a231ebb0a8ee121e5a94e1499
+parent 5966a55d3fa90b4dfcb5f96aafca0856bbf485a2
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-05-31 17:32:09 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-01 12:14:23 +0900
+
+    リアクション機能実装
+
+
+:100644 100644 3707da102b403921e001ae729e3eb82e83c7b880 0e33da28d466e66cbfd72dc60b61f4ff943935e9 M	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionListItem.cs
+:100644 100644 1b6306e281efad152100f0c809b22bbb94f6307e ed360a3e6fb58a628b7102f1e99a58029d702b2a M	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionListLayout.cs
+:100644 000000 a100bfce401243b03d96850a38392f8ff0b459bf 0000000000000000000000000000000000000000 D	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionMaster.cs
+:100644 000000 fe6c5c606644e4a8fe44538fed9cb5fd128635f9 0000000000000000000000000000000000000000 D	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionMaster.cs.meta
+:100644 100644 5b7001f665982ef933d2ca8e99c54ee298d5e260 4f81ed7ff987041f26beff094752e238d32df125 M	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionModal.cs
+:100644 100644 16ec2a93a72d8ebaf0bcb41c64ae2c3fe5429a39 b13c87e55803693e35bb3042cdf08593902b9e7e M	Assets/App/Scripts/UI/WorldCanvas/ChatBalloonManager.cs
+:100644 100644 acb732164df48517b74e198dd51cbfdf6eecbbc8 3444956c36b5ebfc5b5e107701adb110d6e546a6 M	Assets/App/UIAnimation/Party/ReactionModal/CategoryOFF.anim
+:100644 100644 f8460056b6675a9621b1cd3b6bcc2cb4f7c245f9 db77f2a6f2f21208a5b20c17f58f4f7acd61a8dc M	Assets/App/UIAnimation/Party/ReactionModal/CategoryON.anim
+:100644 100644 f4e0b7ced8b2a39298ddd5b54625fc5cbc56b5b0 6cda9d4748880e37a8b968e6cda67e68a4617501 M	Assets/Resources/UI/Party/UI/ChatLogRoot.prefab
+:100644 000000 06329d739302ed2d7984cb30fa61d354a7dba179 0000000000000000000000000000000000000000 D	Assets/Resources/UI/Party/UI/Reaction/PartyReactionMaster.asset
+:100644 000000 561261d30147e0149071c95dee6cfb85c7827355 0000000000000000000000000000000000000000 D	Assets/Resources/UI/Party/UI/Reaction/PartyReactionMaster.asset.meta
+:100644 100644 dddbff0b0fcca1423971fe6726ddec58cb5c6619 3df76d1b65933acc6136ec868a4ecdc9dfe6efc4 M	Assets/Resources/UI/Party/UI/Reaction/PartyReactionModal.prefab
+:100644 100644 644d6773d181f1c49783bc19174c548c4c1bf66a 8c2daf3f35acf0a96223b2d00a69901b4dcd5d9d M	Assets/Resources/UI/Party/UI/Reaction/ReactionBalloon.prefab
+:100644 100644 f0c51eb39c8e4d9c5a4fb3f77e3e199e982b24f7 eefb5917969952137703ddf90612f1a6c08e7cfb M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0001.png
+:100644 100644 422d488761baee65e74537e48f3d51143050b46b 6da80d2b659c9865dbfa96589e9a56dc0979d20e M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0001.png.meta
+:100644 100644 49a331b25a77b3a066f8882d4dfcea3a542030a5 262f0e55682a4851d5be37cb77e70b26547bc4aa M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0002.png
+:100644 100644 5784ad340fe3f6877d7b953c8be3cfa1beda1166 b0d0c90102abce962cc940faf6f0ea49208851cf M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0002.png.meta
+:100644 100644 b55db2484893a51a5cae25b2980530c21895a13d a7a78b1678ba873ea0915404dd687164ca747399 M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0003.png
+:100644 100644 080ea504f9eb7dc1178446a632f6bd8ada930d00 24bb36ba0b5fabdf3b1abff799f3e6762f75fe1b M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0003.png.meta
+:100644 100644 7debd26f022080d3c167396dcde415993d767af4 64cdab3f103963522f5535a8ae8909cce9fbf2df M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0004.png
+:100644 100644 6113b1a309535e837a3d184e6633f31e0b468306 ca2cbe7c3ccfb6a847fdbaf4288a53ab31d49b15 M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0004.png.meta
+:100644 100644 814da60aea6055c26987361ea780a113505b9525 4fafc1d9ed69b912ca6e421709f109fbd67bd49b M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0005.png
+:100644 100644 4cf75bb428a7312711dac7f4fd733e540401f5f7 43df2f50e3cfc6f01abf25e1995d7b3ebdb61be8 M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0005.png.meta
+:100644 100644 bff375b8e41aa427dd19dc2f218b64cb22f4b153 ed1f51af4600a3717d93c3e5bb2e47dce3420689 M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0006.png
+:100644 100644 ba52ae486b414e9cfc53ea83c2a60614048e9c35 74d0901530a1c3dbe4a0d760e769b9da98c81a94 M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0006.png.meta
+:100644 100644 16e854f41f1e96ba35a0cd563b13cf584a3ac877 f2ee2fa5c89f6097141c669b1a352120f6eaad52 M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0007.png
+:100644 100644 b8b418ab1d8a94a722bc7ca000d45209cfe3300f 040f3c5961a832e0b624e5b797e9524b612f90ee M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0008.png
+:100644 100644 888de3f00094d3adf1220bf46f0ef3d84315bc49 2ceb716a1817a956b4e9fb5f9cd9c1416a168cf7 M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0009.png
+:100644 100644 edb09404c2ba3a3f2227ea82003f7394665ea30e 7e2a128c1fd14b49f0827a5bca886bd712f4a51b M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0010.png
+:100644 100644 460a8c3d90128e15627a588dae330346fe1eb957 d488a5be3ff2ad8927fe2494199285a3e363163a M	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0011.png
+commit 5966a55d3fa90b4dfcb5f96aafca0856bbf485a2
+tree 9dc8e7ff02abc2e8de68edfcfa5d30863bb6531c
+parent 8118a7d460be8054abc7e8dfc5d3a0c8ac27ed25
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-05-12 17:16:19 +0900
+committer yoshisue_katsunori <yoshisue_katsunori@cocone.co.jp> 2022-06-01 12:14:22 +0900
+
+    パーティ中リアクション機能追加デザイン対応
+
+
+:100644 100644 aac0e1f943a73f838c4f8b5df0aaccd397b188ef 6a01c8954e6f98a481cc32b978fb993b96da64a3 M	Assets/App/Scenes/WorldScene.unity
+:100644 100644 0b68638c4ebff5f96dd8bda4ca93cec188d054cd 0b42e79fdfd69afd2cf302e70f29a9021473ea1d M	Assets/App/Scripts/Application/Layer/LayerType.cs
+:100644 100644 7377a8718aa34e2d36bd1adbe0b65e6490255dac 85b34b8f972d539940268005d35a5141647478c2 M	Assets/App/Scripts/Contents/Party/PartyHandler.cs
+:100644 100644 aaaaa5aa8a712f73cd9153a110ed75102d179574 fc06afc8ae4c9718b662c371374ac9ec59d52c31 M	Assets/App/Scripts/Contents/Party/PartyMainLayer.cs
+:100644 100644 e104d1057b08e124a9ae47ea39714b0f973d6194 c323335ac6203cc41de8cdae3834736e29944643 M	Assets/App/Scripts/Contents/Party/PartyModel.cs
+:000000 100644 0000000000000000000000000000000000000000 3655ee8579e3d0c73bd5cf04956d1f401c12d001 A	Assets/App/Scripts/Contents/Party/Reaction.meta
+:000000 100644 0000000000000000000000000000000000000000 bada6a736788b1b2f7e4929f8a88412854a5d539 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionCategoryCell.cs
+:000000 100644 0000000000000000000000000000000000000000 4cc56bbfa7b7c9ba36c55b4e0ea63d34b7dfc2f6 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionCategoryCell.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 833e74a6ff45f9bcac42afefef851bb1b0f9c339 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionCategoryTab.cs
+:000000 100644 0000000000000000000000000000000000000000 4cf2874b2601323e4690137fcac8af5aa899b2b6 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionCategoryTab.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 0a3b19555fe9fc50f1ec1dfbd440aa1ea4d26861 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionData.cs
+:000000 100644 0000000000000000000000000000000000000000 fdcc1195ddf8a4cfa6d115f2b54a8e0a66cae36b A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionData.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 8e2b8a6f79c1aa6bf18a8a90a23e681d289876e4 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionHandler.cs
+:000000 100644 0000000000000000000000000000000000000000 f229d2f23c54540327e816776de04002839d196e A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionHandler.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 3707da102b403921e001ae729e3eb82e83c7b880 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionListItem.cs
+:000000 100644 0000000000000000000000000000000000000000 02f0c91ad7dea722323a8de34d0bf01101293f20 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionListItem.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 1b6306e281efad152100f0c809b22bbb94f6307e A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionListLayout.cs
+:000000 100644 0000000000000000000000000000000000000000 db00c7244e936c152188c0ca3cbb9abcfab02ea5 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionListLayout.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 a100bfce401243b03d96850a38392f8ff0b459bf A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionMaster.cs
+:000000 100644 0000000000000000000000000000000000000000 fe6c5c606644e4a8fe44538fed9cb5fd128635f9 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionMaster.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 5b7001f665982ef933d2ca8e99c54ee298d5e260 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionModal.cs
+:000000 100644 0000000000000000000000000000000000000000 d38366f20f780529748453f03d9a7db000f942b9 A	Assets/App/Scripts/Contents/Party/Reaction/PartyReactionModal.cs.meta
+:100644 100644 9da79bc06bda0dc6842f33a2dedac795a8529bc3 f1cc1c09ea472e261250f7bb744e26bb532458d7 M	Assets/App/Scripts/Scenes/WorldScene.Party.cs
+:100644 100644 ba2be376a8877d631c0041f4c7ac4c4e6ce72d63 f9b597bd74bd6297156089e8b1406c26ac3a775a M	Assets/App/Scripts/UI/Party/ChatCell.cs
+:100644 100644 0798dde7cfeb54d6967504dd7453be90babe7894 2a48cf0b03cc95d559fe5ba40bd7047a0713f04d M	Assets/App/Scripts/UI/Party/ChatCellRoot.cs
+:100644 100644 b43c73bedd81b38b256bca689e9638bd1bc1c64a 16ec2a93a72d8ebaf0bcb41c64ae2c3fe5429a39 M	Assets/App/Scripts/UI/WorldCanvas/ChatBalloonManager.cs
+:100644 100644 4afee83ed20fa07ffd1ab0f8e08e00551cb9a70a 56bbe3509cad7ae7e07d455a4b070058fb1fea0a M	Assets/App/Scripts/p3-proto/enum/PartyEnum.cs
+:100644 100644 d26a73b5ac4604245db3d59aecb0ca3d254a128c 51ec91ccb551a722c7c32e012e2ae46c3fa6469a M	Assets/App/Scripts/p3-proto/party/Party.cs
+:100644 100644 1a14732392d83661eb526bec04c66725d16867ce 19d68bbba23d4dceae978260471360cdf84b3c71 M	Assets/App/Textures/UI/ItemList.spriteatlas
+:000000 100644 0000000000000000000000000000000000000000 68f82acd4adfa597641bba270a19131eddfb5d38 A	Assets/App/Textures/UI/ItemList/ItemListBtnBase04.png
+:000000 100644 0000000000000000000000000000000000000000 9ad3d4ca73ab9dba0c2245e401fd17e6daaa1a7d A	Assets/App/Textures/UI/ItemList/ItemListBtnBase04.png.meta
+:000000 100644 0000000000000000000000000000000000000000 3ecdd34bf847cd22bac9bce09c9e3cade27bb500 A	Assets/App/Textures/UI/ItemList/ItemListBtnBase05.png
+:000000 100644 0000000000000000000000000000000000000000 653d65949d2543368f74819f0d16dc4347b2b48a A	Assets/App/Textures/UI/ItemList/ItemListBtnBase05.png.meta
+:100644 100644 e78a92803755f5c001b7610a42c397991140121e bc282ec245ea0624173c5a6dc1921fbc2dd0b494 M	Assets/App/Textures/UI/Party.spriteatlas
+:000000 100644 0000000000000000000000000000000000000000 6a7e5fac508125739eff9ba102616ab396e27fd9 A	Assets/App/Textures/UI/Party/PartyChatInputArea.png
+:000000 100644 0000000000000000000000000000000000000000 e9ec4e2665d0cbf40d634f9f620cdd75781e0f67 A	Assets/App/Textures/UI/Party/PartyChatInputArea.png.meta
+:000000 100644 0000000000000000000000000000000000000000 706096a9301ee31ea1fabe1c692dafd6d568b756 A	Assets/App/Textures/UI/Party/PartyIcReaction.png
+:000000 100644 0000000000000000000000000000000000000000 73a3f840efed1c727f674f03e6a23469262d3c26 A	Assets/App/Textures/UI/Party/PartyIcReaction.png.meta
+:000000 100644 0000000000000000000000000000000000000000 3db66d3fd123278a8811923a68c844b273b9ea72 A	Assets/App/Textures/UI/Party/PartyIcStampHistory.png
+:000000 100644 0000000000000000000000000000000000000000 4d815adad7b3350f6c8a2f0d25159f05c5e55c9e A	Assets/App/Textures/UI/Party/PartyIcStampHistory.png.meta
+:100644 100644 d14241871c5f9d8dc60b9b1e781f973e6656b9a2 1124866d2d706c2aa62ca3c961ce6732d7c2eca4 M	Assets/App/Textures/UI/Party/PartySubMenuBtnIcGift.png
+:100644 100644 63d513798444bca3149ec274d47370a99a76b77b 6c201e0d5e029524a4e0bc7db559c832d371b800 M	Assets/App/Textures/UI/Party/PartySubMenuBtnIcHeart.png
+:000000 100644 0000000000000000000000000000000000000000 49553aeb81a31adf430db69d7c9360801ec753e2 A	Assets/App/Textures/UI/Party/PartyTemplateTextBase01.png
+:000000 100644 0000000000000000000000000000000000000000 13c8fe95a497d97906772e4313b9697d77415c77 A	Assets/App/Textures/UI/Party/PartyTemplateTextBase01.png.meta
+:100644 100644 b0523e3d6a074b53d42116ab786d20bdd19d18a0 00ebc0f3d359efec7e639a6e5e3b38f1085c171b M	Assets/App/UIAnimation/Party/ChatBottom.anim
+:100644 100644 465854771f4bf82d5e5ce834255c95d2cbc7c5d0 1cf0c476364b917f928e33f3b5b43159e50e124d M	Assets/App/UIAnimation/Party/ChatTop.anim
+:000000 100644 0000000000000000000000000000000000000000 bc2ce6ff2f03e84b1857c413d5a0100591ee913b A	Assets/App/UIAnimation/Party/ReactionModal.meta
+:000000 100644 0000000000000000000000000000000000000000 acb732164df48517b74e198dd51cbfdf6eecbbc8 A	Assets/App/UIAnimation/Party/ReactionModal/CategoryOFF.anim
+:000000 100644 0000000000000000000000000000000000000000 726789c8811befa8b2d98458011253685dfedae0 A	Assets/App/UIAnimation/Party/ReactionModal/CategoryOFF.anim.meta
+:000000 100644 0000000000000000000000000000000000000000 f8460056b6675a9621b1cd3b6bcc2cb4f7c245f9 A	Assets/App/UIAnimation/Party/ReactionModal/CategoryON.anim
+:000000 100644 0000000000000000000000000000000000000000 246bc23117121032d059e604667f57e898ec4b27 A	Assets/App/UIAnimation/Party/ReactionModal/CategoryON.anim.meta
+:000000 100644 0000000000000000000000000000000000000000 4b8f5a63b50b93b34396179df03f4ba8a0e84999 A	Assets/App/UIAnimation/Party/ReactionModal/ReactionTab.controller
+:000000 100644 0000000000000000000000000000000000000000 aefa03e3c2dc2150950c4b904b9624f908233d53 A	Assets/App/UIAnimation/Party/ReactionModal/ReactionTab.controller.meta
+:100644 100644 eb180a2ec8b1b3888bb34b22da46c462dade0dfe 8a693884b4d8612a3eb17e09b37cc0c571f43786 M	Assets/Resources/DOTweenSettings.asset
+:100644 100644 90376163a92895879d13f20b40ec590fd3467df1 f4e0b7ced8b2a39298ddd5b54625fc5cbc56b5b0 M	Assets/Resources/UI/Party/UI/ChatLogRoot.prefab
+:100644 100644 183f5ba52954f88f826a813d56727f8b7419a59e 9a2c0358bd2004f2e1490f4f33109d9191ff5b41 M	Assets/Resources/UI/Party/UI/PartyMainLayer.prefab
+:000000 100644 0000000000000000000000000000000000000000 63f5bec57e447d5dccd13cc768fd3dcef515a3fc A	Assets/Resources/UI/Party/UI/Reaction.meta
+:000000 100644 0000000000000000000000000000000000000000 06329d739302ed2d7984cb30fa61d354a7dba179 A	Assets/Resources/UI/Party/UI/Reaction/PartyReactionMaster.asset
+:000000 100644 0000000000000000000000000000000000000000 561261d30147e0149071c95dee6cfb85c7827355 A	Assets/Resources/UI/Party/UI/Reaction/PartyReactionMaster.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 dddbff0b0fcca1423971fe6726ddec58cb5c6619 A	Assets/Resources/UI/Party/UI/Reaction/PartyReactionModal.prefab
+:000000 100644 0000000000000000000000000000000000000000 346d321265aa4fdeae2f6f144f1cf296ec76fdd2 A	Assets/Resources/UI/Party/UI/Reaction/PartyReactionModal.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 644d6773d181f1c49783bc19174c548c4c1bf66a A	Assets/Resources/UI/Party/UI/Reaction/ReactionBalloon.prefab
+:000000 100644 0000000000000000000000000000000000000000 f7f8a3745e1bda8d31426b4da59442259a8e22c5 A	Assets/Resources/UI/Party/UI/Reaction/ReactionBalloon.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 c9ec15976cea08ec9ca6f998be072670257eae37 A	Assets/Resources/UI/Party/UI/Reaction/Texture.meta
+:000000 100644 0000000000000000000000000000000000000000 f0c51eb39c8e4d9c5a4fb3f77e3e199e982b24f7 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0001.png
+:000000 100644 0000000000000000000000000000000000000000 422d488761baee65e74537e48f3d51143050b46b A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0001.png.meta
+:000000 100644 0000000000000000000000000000000000000000 49a331b25a77b3a066f8882d4dfcea3a542030a5 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0002.png
+:000000 100644 0000000000000000000000000000000000000000 5784ad340fe3f6877d7b953c8be3cfa1beda1166 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0002.png.meta
+:000000 100644 0000000000000000000000000000000000000000 b55db2484893a51a5cae25b2980530c21895a13d A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0003.png
+:000000 100644 0000000000000000000000000000000000000000 080ea504f9eb7dc1178446a632f6bd8ada930d00 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0003.png.meta
+:000000 100644 0000000000000000000000000000000000000000 7debd26f022080d3c167396dcde415993d767af4 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0004.png
+:000000 100644 0000000000000000000000000000000000000000 6113b1a309535e837a3d184e6633f31e0b468306 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0004.png.meta
+:000000 100644 0000000000000000000000000000000000000000 814da60aea6055c26987361ea780a113505b9525 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0005.png
+:000000 100644 0000000000000000000000000000000000000000 4cf75bb428a7312711dac7f4fd733e540401f5f7 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0005.png.meta
+:000000 100644 0000000000000000000000000000000000000000 bff375b8e41aa427dd19dc2f218b64cb22f4b153 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0006.png
+:000000 100644 0000000000000000000000000000000000000000 ba52ae486b414e9cfc53ea83c2a60614048e9c35 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0006.png.meta
+:000000 100644 0000000000000000000000000000000000000000 16e854f41f1e96ba35a0cd563b13cf584a3ac877 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0007.png
+:000000 100644 0000000000000000000000000000000000000000 e1816824f37e4ef0f5a4b34c7083e72cc9840079 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0007.png.meta
+:000000 100644 0000000000000000000000000000000000000000 b8b418ab1d8a94a722bc7ca000d45209cfe3300f A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0008.png
+:000000 100644 0000000000000000000000000000000000000000 0c7870637161b22689cac096ccfa6269b4031376 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0008.png.meta
+:000000 100644 0000000000000000000000000000000000000000 888de3f00094d3adf1220bf46f0ef3d84315bc49 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0009.png
+:000000 100644 0000000000000000000000000000000000000000 59c7e17b164c7d49c5dc42bed0e8487a150199ba A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0009.png.meta
+:000000 100644 0000000000000000000000000000000000000000 edb09404c2ba3a3f2227ea82003f7394665ea30e A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0010.png
+:000000 100644 0000000000000000000000000000000000000000 e02af76d5eb3374bd5bafe8a12c8b98b98f64a52 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0010.png.meta
+:000000 100644 0000000000000000000000000000000000000000 460a8c3d90128e15627a588dae330346fe1eb957 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0011.png
+:000000 100644 0000000000000000000000000000000000000000 623dfdbdcf2e39f1a766307fe35b9ffe1a5a2fa7 A	Assets/Resources/UI/Party/UI/Reaction/Texture/RI0011.png.meta
+:100644 100644 e4ab37b17cabae89435897751280ce6057535b4d b70b73c04b4acd5761eefd64927dd9281f1ae3b9 M	Assets/Resources/UI/Tutorial/TutorialGuideParty.prefab
+:160000 160000 71d798e88a89dacb81651f5c80bc0df3084658d5 7263b0646ca6e54af99669fdae2cb4147c58eaac M	ExtProject/p3-proto

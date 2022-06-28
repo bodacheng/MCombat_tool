@@ -1,0 +1,18 @@
+commit 3ef0d2b8152988407987be886e8d4b4b15b04b12
+tree 5d07a7f8d82eb96190024c8681854e446800847a
+parent b03c04b8819013c165ca438d61afff64c4eb3660
+author Yukinori <fukatsu_yukinori@cocone.co.jp> 2022-06-23 10:55:48 +0900
+committer Yukinori <fukatsu_yukinori@cocone.co.jp> 2022-06-23 10:55:48 +0900
+
+    オーロラプリズムマーメイド
+    
+    オーロラプリズムマーメイド
+    コロニー
+    スプライト用画像が表示されない不具合を修正
+
+
+:100644 100644 2b13993427773fe114fdfe6bd10f410576ff8328 ec8608139fb190c02d0c8a00171f347cfbb7ab7f M	Assets/ExternalAssets/Items/G0041/PG0041FR01/VtxWavemorphBubble_FR01_B.png.meta
+:100644 100644 0addfbd26abe2f0eba68cd93e7680cc8ca1ba9cd 481de28a30450f0aeedb04b1ce3dd095e6251860 M	Assets/ExternalAssets/Items/G0041/PG0041FR01/VtxWavemorphBubble_FR02_B.png.meta
+:100644 100644 b679d7846e166976a71361899e53fdd8cbb26363 dee58bf94d7362b05df20b86653b1531f91ae064 M	Assets/ExternalAssets/Items/G0041/PG0041FR01/VtxWavemorphBubble_FR03_B.png.meta
+:100644 100644 955e7c10f76becb2fc5d91d185f18251415ee250 d00a7776fe098f6ed38ac37fbcfd1ff44138912b M	Assets/ExternalAssets/Items/G0041/PG0041FR01/VtxWavemorphBubble_FR04_B.png.meta
+:100644 100644 84994645ed5b973175b84be17a89b300130ecd13 be126d31dbd8623a80402c5f45e3b611791cc760 M	Assets/ExternalAssets/Items/G0041/PG0041FR01/VtxWavemorphBubble_FR05_B.png.meta

@@ -1,0 +1,10 @@
+commit 7143f0f6e4508bcecd148787605005405c3b1c79
+tree ee009f36e4a7cd691cd59912d814139d11566e5e
+parent cb8e5ce012c2bdb4f8e3619dc136fc9dc940bd24
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:59:44 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:59:44 +0900
+
+    不要変数の削除
+
+
+:100644 100644 e60665941ac9c4235a84d4e043aada7031e35d90 d101ebfd099007dbd0159d2097651bba5e9152d6 M	pipeline_script/TestScripts/get_git_clone.groovy

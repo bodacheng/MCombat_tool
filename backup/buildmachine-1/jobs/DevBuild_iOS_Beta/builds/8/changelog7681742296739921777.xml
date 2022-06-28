@@ -1,0 +1,34 @@
+commit 3cae4d611f5c4ebef80257a7dd21e32f473db8ed
+tree d0c472a4f6e0bbb6171e6f98641675af8162765c
+parent 06a8f9bf93cf8b136440d5932987a5770f7ca77d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 13:20:03 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 13:20:03 +0900
+
+    Job名変更およびstageを整理
+
+
+:100644 100644 f3ddb547625093c3c7bc0ea944a7cb7b8c10be9b 87cdcc6d5d8f2ce3eed9b7c554d65341a68b4c28 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 651f3bac863fd4c9f3f9b268680f243fdec611d5 8b7ddf2ebbb981e5d48f99b9246df831f27e5e6e M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 b69fe8fb870c3d5dff54bff50a0755ce4830105d faf6035120e40fc23222e1ac55c9bcb8cae4714a M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 dfd6390d9a7bfe700ca48e01848d6707d57840a8 4785e476d9f2ad4c539b07cc0da33aaf656e61d4 M	pipeline_script/DevBuild/ios/build_beta.groovy
+commit 06a8f9bf93cf8b136440d5932987a5770f7ca77d
+tree 740eb83be5f777c25cff51ca7f193bbbffbf39af
+parent a27d763db89ae7b93a5d55918a203ad94184549c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 12:52:29 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 12:52:29 +0900
+
+    [ios]アウトプットPathをミスったので修正
+
+
+:100644 100644 543d9eefd9bf48d5494590ef652adbad15edd090 b69fe8fb870c3d5dff54bff50a0755ce4830105d M	pipeline_script/DevBuild/ios/build.groovy
+commit a27d763db89ae7b93a5d55918a203ad94184549c
+tree 8575a2eb3ba631f7693a7b95abd20445f5f8b52c
+parent d3235b249e36e40dcc872f2879953114e0cda9ba
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 12:24:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 12:24:49 +0900
+
+    [ios]ファイル名と出力先ディレクトリの指定を修正
+
+
+:100644 100644 0e4c9939e93678363d7bd192ec7db405f982917c f3ddb547625093c3c7bc0ea944a7cb7b8c10be9b M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 52d7679467f8426cf0691e0810c34a994936007b 543d9eefd9bf48d5494590ef652adbad15edd090 M	pipeline_script/DevBuild/ios/build.groovy

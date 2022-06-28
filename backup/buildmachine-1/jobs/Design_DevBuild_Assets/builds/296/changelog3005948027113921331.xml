@@ -1,0 +1,10 @@
+commit a86c6cf831b9d3bf858a57aceb44d2905f96cd0b
+tree 4f9da45f70d58b62639ddf10697b3503a52cb766
+parent 40b206d16bdc5b4b80b09ebf4c61f742e7da57d5
+author TokitaMio <tokita_mio@cocone.co.jp> 2022-06-17 21:31:55 +0900
+committer TokitaMio <tokita_mio@cocone.co.jp> 2022-06-17 21:31:55 +0900
+
+    PG0030ST01 【TRIA-4354】AddressableAsset登録
+
+
+:100644 100644 2644bf2b1b077339f9312b05e8ee50926c476a5a f53211c723a95a36f33ae67cf73a900853fb3963 M	Assets/AddressableAssetsData/AssetGroups/PG0030ST01.asset

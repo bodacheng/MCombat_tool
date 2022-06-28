@@ -1,0 +1,47 @@
+commit aed4a1ead5d2081cb00baa22ed2b0c8b61b43d31
+tree a7b3f43d5af63f7f06a829779fa3cf213383ad3f
+parent 52cbdaedc68cfde4f97cb43be8b9eb9590ce1dee
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-20 19:57:10 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-20 19:57:10 +0900
+
+    fixes
+
+
+:100644 100644 588ef535645479917c2669d5ecadc045a1cd4d7f 6275ff52ea52d70e6dc7571fd4260117f56318e9 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 e429ecd3beb504e89627bb1e4cf1ceda4d80c513 151f3d2934b81da0f52a4315087866b8d00418f6 M	Assets/App/Scripts/Contents/Exchange/ExchangeStep.cs
+:100644 100644 01285e76fdac644e8d70e13410c6e4e1b7e6a96e 76a24a67a58498060e8f396dcfa24285d858d1e8 M	Assets/App/Scripts/Contents/Gift/GiftDialog.cs
+:100644 100644 a6a45593f579f7d5aec486c2501bf354f1a02a62 83918782ace90f78557ef49c3fe2bddea5510107 M	Assets/Resources/UI/Exchange/ExchangeStep.prefab
+:100644 100644 26b966cfe9d383982266b36ef28efec11409e8a9 9ee0cb774af488a32079adb88b1a4660943982f1 M	Assets/Resources/UI/Gift/GiftDialog.prefab
+commit 1d97c39aba45c469e04da083bed8f5fc88065640
+tree ac852a149f9f7225a8fb8b95bc24a465c81946ee
+parent 11b95f99d4f0c330826bca0947aecc2f8312688d
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-20 18:37:08 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-20 18:37:08 +0900
+
+    送った後のリスト更新処理修正
+
+
+:100644 100644 b5649a71e45230f0106197005a3af263f1a0e170 164434f917f3d5e15ea0c6e61d02cb56e3018b60 M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentListItem.cs
+:100644 100644 ec67b7d915e0d50b2b3841e43cd0ade6f81b959e e2ec7f188b3ec2463aac951022ba670c5e48a1ec M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+commit 11b95f99d4f0c330826bca0947aecc2f8312688d
+tree da4a7609d7a68ccef10922a90930df1f32bc414c
+parent 8f9a892fd99dadebba4daa62f213197fd9ee8868
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-20 18:27:23 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-20 18:27:23 +0900
+
+    FIX: TRIA-4307【ピアプレゼント】【仕様確認】受け取り､履歴のフレンドに表示される内容について
+
+
+:100644 100644 616474233dcd7559d3c0696368934784ee471d3b f8ebbcd4af27ab6abed5e19f6e5d661e40596cd1 M	Assets/App/Scripts/Contents/Friend/FriendListLayoutItem.cs
+:100644 100644 b7bac34844b6a4d9082c2b650499ff4c4b8b6717 f7c4f1801c27297701a640de342fccdbf15ea306 M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+commit 8f9a892fd99dadebba4daa62f213197fd9ee8868
+tree 5d4b65a18f5a21f4db68c55b21e51ecea9440ee6
+parent 52cbdaedc68cfde4f97cb43be8b9eb9590ce1dee
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-20 18:26:53 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-20 18:26:53 +0900
+
+    おすすめリストの木の情報表示
+
+
+:100644 100644 dacb7486fd3befaaca0b776a7f114f575e2730d0 0446605d0bdee13a424f9d8d57bfb6dcaa7977d7 M	Assets/App/Scripts/Contents/Relation/RecommendListItem.cs
+:100644 100644 3f15486372894a876176525b2f50572d2abc89f5 43a49b8bd47e501d7cce9845482eb1656520da4f M	Assets/Resources/UI/Relation/Item/RecommendListItem.prefab

@@ -1,0 +1,10 @@
+commit 310d158bbcb5d7f69862a648f8452f1887620e66
+tree 6a517a5dd12bcd895a2d8ab182ea7fac44254f18
+parent 7fce66f15e54722f94c31ca2bb1b0849976b4795
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:17:46 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:17:46 +0900
+
+    [utility]スラック通知用の便利メソッドを追加してみる
+
+
+:000000 100644 0000000000000000000000000000000000000000 2091e8d936905145fabcbdd72c6bfda13be7aa83 A	pipeline_script/utils/notify/slackUtility.groovy

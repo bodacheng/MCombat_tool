@@ -1,0 +1,10 @@
+commit 43e591c7eb69c7385ed2f233c59bdbcb27a35329
+tree 3cf74270a7e0b29b630bfb3f335ac2f1a4ee0580
+parent 5ad6c618c0ce84765aa2b5d6e7593bd0490fc80b
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-16 10:51:13 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-16 10:51:13 +0900
+
+    fix build error
+
+
+:100644 100644 4262bb5da96f23a83115ca22b91865b349e6caae acdd8667f0376ff53b7e568a917dd97b24652e66 M	Assets/App/Scripts/Scenes/WorldScene.Tutorial.cs

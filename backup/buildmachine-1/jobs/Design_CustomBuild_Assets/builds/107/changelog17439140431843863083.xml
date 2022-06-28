@@ -1,0 +1,10 @@
+commit 45309170e17e6a41b99f0ef327d14aef95b38369
+tree fb9b801f7f298cdff46a8107b3b4b8b48c62152a
+parent 8c707a59c697be067d504aee43d4afd970b17377
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:44:45 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:44:45 +0900
+
+    [android]ジョブ実行時の説明を入れる
+
+
+:100644 100644 76de652274b4e743e9bdfe6cf94d4394ebacbd6e 18962d63e94b255fdc91294504b8a45451341466 M	pipeline_script/DevBuild/android/build_custom.groovy

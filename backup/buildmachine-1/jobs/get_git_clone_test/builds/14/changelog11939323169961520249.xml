@@ -1,0 +1,10 @@
+commit b5e942c251abcf64b828755cffe4271be4759d93
+tree 461aa941c2249e88555ba330d3aac359eeed5e7a
+parent a924daf4b0c9471cbb0f0352ac93be26aea5cf89
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 22:09:10 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 22:09:10 +0900
+
+    masterで動かすgit cloneテスト
+
+
+:000000 100644 0000000000000000000000000000000000000000 1dd75f0fdccb0cf5ea1016194bffbb5673b0fc59 A	pipeline_script/TestScripts/get_git_clone_on_master.groovy

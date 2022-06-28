@@ -1,0 +1,20 @@
+commit 6aca768cdc74d8838d7368c1b3c5ae5076e2bbbf
+tree 4dc9fb6d6978665489258ef14aacdbe25215ed63
+parent ce0d21e346a333896b0bdb7d0b98f20a2ad074d3
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-29 18:15:24 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-03-29 18:15:24 +0900
+
+    sort assets
+
+
+:100644 100644 4f2273ee82572e136d695ccf491fbb9dce2e7617 57161eec96e27b03053e73a087082c27dc067671 M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+commit ce0d21e346a333896b0bdb7d0b98f20a2ad074d3
+tree d1839bf36ce83ee7f5a6055dda755f0c7999e576
+parent 56206e75ad9f8c35f1e29ee3bcbb995b0c5532f4
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-29 18:10:40 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-03-29 18:10:40 +0900
+
+    add G0007
+
+
+:100644 100644 84f483f24fff1ab340cb528482c81305d1de66ae aa38c0a8bd3f429c394037d4c0804bc60a5029ca M	Assets/ExternalAssets/ReleaseTheme.yaml

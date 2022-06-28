@@ -1,0 +1,10 @@
+commit 048980babc801f18cfdedb9c450269179e633f5c
+tree 6c753f9c1d2c2b86cbe9b344f85e2b57b41ce606
+parent 88908e75834ddafe8d9b504080114192ab4801e1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 12:27:38 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 12:27:38 +0900
+
+    [asset]本番アセットビルドは、アセット種別の引数はないので固定
+
+
+:100644 100644 9ba87950cc187518d929f40c8c893becdcfe3830 d587de4f2446e8c4e41167212aa09cf7e37f4c5a M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy

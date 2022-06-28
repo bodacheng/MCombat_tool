@@ -1,0 +1,21 @@
+commit a9e438403fcb811fe0014765fe44ccfdb997bb4a
+tree b88b55cb304c6f37fd03dd49eebc3f6a727a2c58
+parent 8e394dd1bd97720701c7995001cb56026b8d8637
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 19:19:45 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 19:19:45 +0900
+
+    set remote default asset group
+
+
+:100644 100644 cd98c0e28c50d9ffdd0c7781c9da668ba55ed838 0b3e5b0c5ac4d6ed75fd16b6add1642517e6f727 M	Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset
+commit 8e394dd1bd97720701c7995001cb56026b8d8637
+tree 3c57b4298cf8a04825bb1232088e0c1642de4c9e
+parent 7381a77d8fb289b2f3a7a824eb63640739f6e6fc
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 19:17:13 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 19:17:13 +0900
+
+    show profile name on testlogin
+
+
+:100644 100644 00fa9495ee603e413518eb6e5d6fc5f48e3238d8 ce6b5315698b7882094c20adbb850fb0307b19b4 M	Assets/App/Scenes/Test/TestLoginScene.unity
+:100644 100644 2cd72093dbd5829c7ae7b4265c9651dc3377cc7e 363e448cdd88158988a7d2cfbef52c794e1f3ac5 M	Assets/App/Scripts/Scenes/Test/TestLoginScene.cs

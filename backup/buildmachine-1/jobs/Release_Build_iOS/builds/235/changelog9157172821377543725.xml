@@ -1,0 +1,20 @@
+commit b099a43d51414feac507d85c2883c55c6bf12fd9
+tree bd15314405b0421481420f102743c36e0a060a16
+parent 1ab397d79e315842f58bb33e0fc4c0352486b38e
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 13:03:09 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 13:03:09 +0900
+
+    [ios]本番ビルド時にキーチェーンのアンロックできるように対処
+
+
+:100644 100644 e7478a67a2d0945209086d2d4d6c921d9689e083 af3702cd7384833e2250ac71b15e5fde0840fee4 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 1ab397d79e315842f58bb33e0fc4c0352486b38e
+tree cc5e4dda13e925c120488e4c41c1bbe6e7c6b144
+parent 048980babc801f18cfdedb9c450269179e633f5c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 12:45:30 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 12:45:30 +0900
+
+    本番ビルドでのslack通知ユーザーの修正と、releaseNoteについての記載を修正
+
+
+:100644 100644 d587de4f2446e8c4e41167212aa09cf7e37f4c5a ad9e29d51b1125241098f2e248986e12c4278865 M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy

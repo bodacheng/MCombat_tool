@@ -1,0 +1,12 @@
+commit 99a5c7c1ab988e3006c3125456658b30b7ccfb9e
+tree 95a25490d9ab395f23b2235e9933420d8919a8e8
+parent 776177565ac2e85ecfe2493fd241a5c87397964c
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-09 17:51:10 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-09 17:51:10 +0900
+
+    fix addressable
+
+
+:100644 100644 51714ca8fa34c51449c9dac6a429a80358e92063 b5fc3a25a66ae2fb45a065b155dfe212dddd2928 M	Assets/AddressableAssetsData/AssetGroups/FG0019OP01.asset
+:100644 100644 b6165c92afca416caad0eb0bda2ba5bc2a8283a2 ddce724d8ed10a8d107243e4c6bf3db5eb5bbd80 M	Assets/AddressableAssetsData/AssetGroups/FG0019OP02.asset
+:100644 100644 58445a92789e36a65a239a5adf56ab8785e48e9b 0fe8b9578c5c1f73feb479749c51805ea26aea6f M	Assets/AddressableAssetsData/AssetGroups/PN0040SI01.asset

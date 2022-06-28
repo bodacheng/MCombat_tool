@@ -1,0 +1,33 @@
+commit 9c7f93a40567117c766422c11c923a416c24f520
+tree 78f9f76d4cca149a29df95c492de190c4b133701
+parent 8b968495d573670f1968ffda46a82807593b846a
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 12:04:44 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 14:22:37 +0900
+
+    change profile id
+
+
+:100644 100644 1facdf7695193dc33d29ad00b5db2b561894c199 8949a7426bec7025f3c59d2f9ea06db3fdb93eae M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+commit 8b968495d573670f1968ffda46a82807593b846a
+tree ba2993b88e25ba2df8e2c6cf00787e0f50af762b
+parent 8b6757e32a733303b1d55848f1a093fe8b7f2ad6
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 11:39:09 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 14:22:37 +0900
+
+    change local assets setting
+
+
+:100644 100644 6f7582c2636021384f627b9c5de0a0bdbbbb9911 87e79f9d957c1f8f929f8a7499913f9068b9a682 M	Assets/AddressableAssetsData/Android/addressables_content_state.bin
+:100644 100644 a2d2ad647b4d13498bf74c28750dfc513d3becc8 0a14440d079170ceab7a208031b7763c2e4fb2c9 M	Assets/AddressableAssetsData/AssetGroupTemplates/Packed Local Assets.asset
+:100644 100644 0b3e5b0c5ac4d6ed75fd16b6add1642517e6f727 aae16767cafc71ff7469a83f966fe389ed34063c M	Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset
+:100644 100644 c68247141ecfc0eff853512388b8cfdb9f169fab 384f3bace3b6dc4747a2b9f6cb56790303f55a61 M	Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset
+commit 8b6757e32a733303b1d55848f1a093fe8b7f2ad6
+tree 72d8186d8e1c06fb9ab09244a6a57d2f2416cae7
+parent 2b9a91b434a134879a218eaebd1c66c1b69709f7
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 14:22:12 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 14:22:12 +0900
+
+    fix profile setting
+
+
+:100644 100644 92cec51df21d8235c6d24eed292c0bbed9b04905 1cee230a4ce25550841fdda123dff33fff4ea048 M	Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml

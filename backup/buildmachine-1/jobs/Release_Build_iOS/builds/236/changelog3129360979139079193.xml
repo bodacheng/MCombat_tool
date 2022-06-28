@@ -1,0 +1,11 @@
+commit 6f57b79dc73ac3199dd27a28fb8ea15d8e78318b
+tree f259bbd83a86b19f58a8101a77fbd95625a37434
+parent b099a43d51414feac507d85c2883c55c6bf12fd9
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 13:26:37 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 13:26:37 +0900
+
+    通知ユーザー名の修正
+
+
+:100644 100644 b12f17195cc6687767205d0267786aa1d5ad889f 66a6092a9ddab6d78e59fc8ed73033ba629d14cd M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 af3702cd7384833e2250ac71b15e5fde0840fee4 2bf2636cefb041439c7706963dc3f58b6316160c M	pipeline_script/DevBuild/ios/release_build.groovy

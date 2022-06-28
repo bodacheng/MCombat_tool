@@ -1,0 +1,12 @@
+commit af388fe83212c5d09182f8a3dc34fe10c640294b
+tree 9fad18817319886b8191edd473228187412c4269
+parent 52de73d3b6d54083357972e3c41b02f23fc2e762
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-14 16:03:59 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-14 16:03:59 +0900
+
+    tokenのミスを修正/ジョブ説明を修正
+
+
+:100644 100644 aa952256ef7981419e2bbe2ae1f8e314d81a3bc1 5666787a4ca69367700a03c305411f50550925a3 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 d1fa9e5fe8b1f89919506aaa227b8289bad29237 ea8aab4c7fb9bbc66421af777f9056439e569ea6 M	pipeline_script/DevBuild/ios/build_custom.groovy
+:100644 100644 6327567ab21da9b9832f62578b6e65a5d184f876 156a5b899073f92337aebb74762e55798f09d7f5 M	pipeline_script/utils/appcenterUtility.groovy

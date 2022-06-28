@@ -1,0 +1,10 @@
+commit 416ca4d8ec14ba87be25f87e1b85db5c54f858ee
+tree f8f9b0090cdf5130b002c559b10bf2575018fcf8
+parent aac01a5c9b97a417bc78b245f1de5f0ee9b6d18e
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 13:41:22 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 13:41:22 +0900
+
+    fix code
+
+
+:100644 100644 fcb56c381e4c4e8b8f86e40ed8761f56f0a6de87 c0ec76a53a13dbd67fa08a891131d103ad104cb1 M	pipeline_script/Design/build_asset_upload_custom_server.groovy

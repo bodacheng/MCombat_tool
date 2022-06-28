@@ -1,0 +1,335 @@
+commit 75287814757b21aff29e6047b65394493535a215
+tree c8f9404be8c04c120baf517bab3470b15aca3695
+parent 9043eb3029bb708cc79e63c8f31d4482390751a6
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:09:23 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:09:23 +0900
+
+    sound asset setting update
+
+
+:100644 100644 2fdc7a030ed04bd0a458322736e2398706039253 a607b2e619a026ea7fc7691df0bb4021fc688bd9 M	Assets/AddressableAssetsData/AssetGroups/Schemas/bgm_BundledAssetGroupSchema.asset
+:100644 100644 47a11d001c8cb183cca21718fd19a8b8bc9cf94d 4528a76876f369c8024dd4f566b5fc3eddbc18ad M	Assets/AddressableAssetsData/AssetGroups/Schemas/bgm_ContentUpdateGroupSchema.asset
+:100644 100644 5e2661601e668c67a6dc521cdcc834cb2717b876 df7eb9e1024d7af0b949165405e6e4b176f09585 M	Assets/AddressableAssetsData/AssetGroups/Schemas/se_BundledAssetGroupSchema.asset
+:100644 100644 f0a49712414fabd05b16fd974afe3eb038fb3a63 7017bac7cf71400abcf1469f86754225afe192fc M	Assets/AddressableAssetsData/AssetGroups/Schemas/se_ContentUpdateGroupSchema.asset
+:100644 100644 cb526223fa4f949722ce1d58065d20c405f946f2 04906c80d368a4793cbbe3cf7e972e8e3cd4a680 M	Assets/AddressableAssetsData/AssetGroups/Schemas/voice_BundledAssetGroupSchema.asset
+:100644 100644 5902d10535ba33ba5895d0396d8ec51b350122d3 fb21f89e2b63b875827a9955764d5e4baba02756 M	Assets/AddressableAssetsData/AssetGroups/Schemas/voice_ContentUpdateGroupSchema.asset
+commit 9043eb3029bb708cc79e63c8f31d4482390751a6
+tree e0331aeebe0dc6504bcb30a82e3465adc044ba39
+parent 46ad7d9d69d57c677877cc3a5e61fa57ab419334
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-31 21:56:59 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:56 +0900
+
+    fix error
+
+
+:100644 100644 35935a4101a8367af55831cf5ed1f7eca2bcca93 81fa05d1e6eefaedce1a2b0551cb654b18c2eaa3 M	Assets/App/Editor/AssetBundle/BuildAddressableAssets.cs
+commit 46ad7d9d69d57c677877cc3a5e61fa57ab419334
+tree 6708709ec62811bd765dc61754f0762ffc415263
+parent 703acef35d90424d6667b449834374e00e1ab914
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-31 21:55:41 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:55 +0900
+
+    ignore asset version
+
+
+:100644 100644 024493d49b2f22bc5f40eddbb69f423a134e882c 35935a4101a8367af55831cf5ed1f7eca2bcca93 M	Assets/App/Editor/AssetBundle/BuildAddressableAssets.cs
+commit 703acef35d90424d6667b449834374e00e1ab914
+tree cdbd4cca13ef68b49a6a9660fd8622bd5100d2e2
+parent 72ef9e3fa11b2fe0d386b532f3d12d4c7340ac7b
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-31 21:51:49 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:55 +0900
+
+    update sound asset
+
+
+:100644 100644 f2d9df01f807f9faebf6cab558a2aaba2f933df9 c7550ce854d15cde4f645ea04ead3798cde4a5f3 M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+:100644 000000 d681109aaf609010344d1f16283934e9cd846adc 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Include.asset
+:100644 000000 f2270ed36d76591fa7ffdcd10a82d3db47a612ff 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Include.asset.meta
+:100644 000000 13f92b6b6956258342accee9875c6e6800abb9c8 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Schemas/Include_BundledAssetGroupSchema.asset
+:100644 000000 fa13e8572e5d68ca18e3fccafca56989d8228a8c 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Schemas/Include_BundledAssetGroupSchema.asset.meta
+:100644 000000 7065dbb8cb4c70dda44ede7ac0104a2114302456 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Schemas/Include_ContentUpdateGroupSchema.asset
+:100644 000000 6543016f8bb608d0c3a7949d5b677d0d596f0fd2 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Schemas/Include_ContentUpdateGroupSchema.asset.meta
+:100644 100644 f7c6c170942130135a4a2038589dde763be01b5a 2fdc7a030ed04bd0a458322736e2398706039253 M	Assets/AddressableAssetsData/AssetGroups/Schemas/bgm_BundledAssetGroupSchema.asset
+:100644 100644 4528a76876f369c8024dd4f566b5fc3eddbc18ad 47a11d001c8cb183cca21718fd19a8b8bc9cf94d M	Assets/AddressableAssetsData/AssetGroups/Schemas/bgm_ContentUpdateGroupSchema.asset
+:100644 000000 cfe9925b2e87253045367010e32cd7a023efcc89 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Schemas/localse_BundledAssetGroupSchema.asset
+:100644 000000 8c0c7bcff07753b1a2b16bb5c7fc7d56ea6fa666 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Schemas/localse_BundledAssetGroupSchema.asset.meta
+:100644 000000 cd2642b7f36149b6095727bf87b74dbd24ac695d 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Schemas/localse_ContentUpdateGroupSchema.asset
+:100644 000000 c65a9c312e36a96b6424de4a1f382aef09dbe945 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/Schemas/localse_ContentUpdateGroupSchema.asset.meta
+:100644 100644 12a637eaa73d8d2b5082cea8a9919551cc180876 5e2661601e668c67a6dc521cdcc834cb2717b876 M	Assets/AddressableAssetsData/AssetGroups/Schemas/se_BundledAssetGroupSchema.asset
+:100644 100644 7017bac7cf71400abcf1469f86754225afe192fc f0a49712414fabd05b16fd974afe3eb038fb3a63 M	Assets/AddressableAssetsData/AssetGroups/Schemas/se_ContentUpdateGroupSchema.asset
+:100644 100644 986807d5686d13e9ba01630d11ea02b8cd2dde1c cb526223fa4f949722ce1d58065d20c405f946f2 M	Assets/AddressableAssetsData/AssetGroups/Schemas/voice_BundledAssetGroupSchema.asset
+:100644 100644 fb21f89e2b63b875827a9955764d5e4baba02756 5902d10535ba33ba5895d0396d8ec51b350122d3 M	Assets/AddressableAssetsData/AssetGroups/Schemas/voice_ContentUpdateGroupSchema.asset
+:100644 100644 38bac638b343641fbe0bc9e34c204d8e5f4eebd7 dcf0196d396bbb737d9b9a2c71d42a5a6776c65e M	Assets/AddressableAssetsData/AssetGroups/bgm.asset
+:100644 000000 54b39f3d6ac2a2102beebf67954ed80f5e817318 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/localse.asset
+:100644 000000 d29329f70fc5433ed12883f9744be2f2bc736a7a 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/localse.asset.meta
+:100644 100644 e2cd70e5158e3a065e3308741843242a488d301b 7de89745a3b1b3f431654ab3ec366989937e6032 M	Assets/AddressableAssetsData/AssetGroups/se.asset
+:100644 100644 82a5baf9093babda7e63a3805d0b95979f5239eb 83d1a8c351d5fa3a3fd05d85bc12fbb4b969e6e3 M	Assets/AddressableAssetsData/AssetGroups/voice.asset
+:100644 100644 8b2a978ad9763edc204d3004d7d20d28cec74b7d aa5f2680e776fc82bed2c9624281518e82c97d0f M	Assets/AddressableAssetsData/iOS/addressables_content_state.bin
+:100644 100644 153c733a7b0fb6b6033bc392943b72ef754df036 816e8a7489fedc79c402780a12440e5f7e0b7763 M	Assets/App/Scripts/Application/ApplicationOperator.cs
+:100644 100644 08ab48d3f73d0d5d4465964f092c0c3ae10ea1b0 f80e76d5945a06e2377c61faa07a463e378f8c4e M	Assets/App/Scripts/Common/Layers/ProgressLayer/ProgressAnimation.cs
+:100644 100644 6e9d726f6559bbc174d9001e9416c3e7c36728f6 0b99cbea96e70787408ce46d6fdc0abeb38e65fd M	Assets/App/Scripts/Sound/AnimationSoundEvent.cs
+:100644 100644 9d010eec483b4f740f664c339c1234a748ae5ec0 b1629d49609b2610e4e874c27535f0e64543749f M	Assets/App/Scripts/Sound/SoundHandler.cs
+:100644 100644 e6ff2f78faf3ed4e900c3c86e65fbb8f5c176d6e e6ff2f78faf3ed4e900c3c86e65fbb8f5c176d6e R100	Assets/ExternalLocalAssets/Sound/localse/se_dialog.wav	Assets/ExternalAssets/Sound/se/se_dialog.wav
+:100644 100644 2677356b676eacc2499ff098d252dba917378097 2677356b676eacc2499ff098d252dba917378097 R100	Assets/ExternalLocalAssets/Sound/localse/se_dialog.wav.meta	Assets/ExternalAssets/Sound/se/se_dialog.wav.meta
+:100644 100644 5f25b555599b901de607d605377f0472d18b80c3 5f25b555599b901de607d605377f0472d18b80c3 R100	Assets/ExternalLocalAssets/Sound/localse/se_modal_close.wav	Assets/ExternalAssets/Sound/se/se_modal_close.wav
+:100644 100644 bd93b69c393ed1891469a441bfa2c5a3a5da454b bd93b69c393ed1891469a441bfa2c5a3a5da454b R100	Assets/ExternalLocalAssets/Sound/localse/se_modal_close.wav.meta	Assets/ExternalAssets/Sound/se/se_modal_close.wav.meta
+:100644 100644 9a28cd607f9d82bc3bb9729a7a6d22836e4d148e 9a28cd607f9d82bc3bb9729a7a6d22836e4d148e R100	Assets/ExternalLocalAssets/Sound/localse/se_modal_open.wav	Assets/ExternalAssets/Sound/se/se_modal_open.wav
+:100644 100644 49f130b5121ac3c9ec9b0e0f2c63ca1ef25e824d 49f130b5121ac3c9ec9b0e0f2c63ca1ef25e824d R100	Assets/ExternalLocalAssets/Sound/localse/se_modal_open.wav.meta	Assets/ExternalAssets/Sound/se/se_modal_open.wav.meta
+:100644 100644 e0ca1c5c0ec9cad458ccd527270e72368abebd6d e0ca1c5c0ec9cad458ccd527270e72368abebd6d R100	Assets/ExternalLocalAssets/Sound/localse/se_reward.wav	Assets/ExternalAssets/Sound/se/se_reward.wav
+:100644 100644 cd851edbdcb0eb9b4e2420248bc851155ed5a39f cd851edbdcb0eb9b4e2420248bc851155ed5a39f R100	Assets/ExternalLocalAssets/Sound/localse/se_reward.wav.meta	Assets/ExternalAssets/Sound/se/se_reward.wav.meta
+:100644 100644 f61a17ff3daaf133f8b5336f3e25a5f332ac1100 f61a17ff3daaf133f8b5336f3e25a5f332ac1100 R100	Assets/ExternalLocalAssets/Sound/localse/se_tap.wav	Assets/ExternalAssets/Sound/se/se_tap.wav
+:100644 100644 1acfe471195f25e4a32cefa0f2c0942511d2a855 1acfe471195f25e4a32cefa0f2c0942511d2a855 R100	Assets/ExternalLocalAssets/Sound/localse/se_tap.wav.meta	Assets/ExternalAssets/Sound/se/se_tap.wav.meta
+:100644 100644 91acb78f4d97d2e9f6e3876d26134716cccf850b 91acb78f4d97d2e9f6e3876d26134716cccf850b R100	Assets/ExternalLocalAssets/Sound/Include/voice_download_0.wav	Assets/ExternalAssets/Sound/voice/voice_download_0.wav
+:100644 100644 7e294890346ac167536e531e31cd0592a284c296 7e294890346ac167536e531e31cd0592a284c296 R100	Assets/ExternalLocalAssets/Sound/Include/voice_download_0.wav.meta	Assets/ExternalAssets/Sound/voice/voice_download_0.wav.meta
+:100644 100644 fd57f680e8d0cef6b8b95ef4250f9cd39809d08f fd57f680e8d0cef6b8b95ef4250f9cd39809d08f R100	Assets/ExternalLocalAssets/Sound/Include/voice_download_1.wav	Assets/ExternalAssets/Sound/voice/voice_download_1.wav
+:100644 100644 f916d3970a2173ad1950d7764aa8d00bbd6c098a f916d3970a2173ad1950d7764aa8d00bbd6c098a R100	Assets/ExternalLocalAssets/Sound/Include/voice_download_1.wav.meta	Assets/ExternalAssets/Sound/voice/voice_download_1.wav.meta
+:100644 100644 c07317f96c5f749a0ec76721da2e7ec3ba38b8c0 c07317f96c5f749a0ec76721da2e7ec3ba38b8c0 R100	Assets/ExternalLocalAssets/Sound/Include/voice_download_2.wav	Assets/ExternalAssets/Sound/voice/voice_download_2.wav
+:100644 100644 e63dc8108361fd399223c0dab9440a02746de65f e63dc8108361fd399223c0dab9440a02746de65f R100	Assets/ExternalLocalAssets/Sound/Include/voice_download_2.wav.meta	Assets/ExternalAssets/Sound/voice/voice_download_2.wav.meta
+:100644 000000 8ed181df2e09ada2445bb60630b79c7d199581f2 0000000000000000000000000000000000000000 D	Assets/ExternalLocalAssets.meta
+:100644 000000 496b9b5df57c10d87eb27564391f34d95bb55bba 0000000000000000000000000000000000000000 D	Assets/ExternalLocalAssets/Sound.meta
+:100644 000000 2524cfc2d63845eebf699df9f77394473ce91e86 0000000000000000000000000000000000000000 D	Assets/ExternalLocalAssets/Sound/Include.meta
+:100644 000000 e9cef074cee96f66ec4d687cfaa6c2123151d2b8 0000000000000000000000000000000000000000 D	Assets/ExternalLocalAssets/Sound/localse.meta
+commit 72ef9e3fa11b2fe0d386b532f3d12d4c7340ac7b
+tree f0702188c601aa9b1e1a6f3d6d06d1d158c8cedb
+parent 0c2aab73a14235f1f75193afa5ddafd9e4754907
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-31 18:31:34 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:54 +0900
+
+    add shader asset for 1.3.0
+
+
+:100644 100644 370f6f57070dcf39ff068f0c77253d681e4d46b7 f2d9df01f807f9faebf6cab558a2aaba2f933df9 M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+:000000 100644 0000000000000000000000000000000000000000 683b94171413ada634e5cd93e21db05f9bc68d97 A	Assets/AddressableAssetsData/AssetGroups/AdditionalShader_v1.3.0.asset
+:000000 100644 0000000000000000000000000000000000000000 e20b9e7eb1aed9ea5dcacb6ac36be38422cefb44 A	Assets/AddressableAssetsData/AssetGroups/AdditionalShader_v1.3.0.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 d57f6d3111fd66532a4bb769683ab02521146948 A	Assets/AddressableAssetsData/AssetGroups/Schemas/AdditionalShader_v1.3.0_BundledAssetGroupSchema.asset
+:000000 100644 0000000000000000000000000000000000000000 74b84a56127535a61cad7badf0d1a53cedf52b66 A	Assets/AddressableAssetsData/AssetGroups/Schemas/AdditionalShader_v1.3.0_BundledAssetGroupSchema.asset.meta
+:000000 100644 0000000000000000000000000000000000000000 d727140ebd60691c8f64345a695bc16633f0ee07 A	Assets/AddressableAssetsData/AssetGroups/Schemas/AdditionalShader_v1.3.0_ContentUpdateGroupSchema.asset
+:000000 100644 0000000000000000000000000000000000000000 ebd7fa665b38864f04af5b26dfbaffda6de81625 A	Assets/AddressableAssetsData/AssetGroups/Schemas/AdditionalShader_v1.3.0_ContentUpdateGroupSchema.asset.meta
+:100644 100644 65a3865c290dd3702f4c5d1902b88da8e862821e f92115b62f31eb09f9743c81e8d79bd4c8d4ae5e M	Assets/App/Materials/Effects/common/FxAfterglow01_F_Add.mat
+:100644 100644 0ec0147f2ec352d666da62631e0f85dfe61cae10 f80304a1b929e38e1de8c235734e315d63882b48 M	Assets/App/Materials/Effects/common/FxAfterglow01_F_Alpha.mat
+:100644 100644 557270d287ce22da6b0090bf266b6fd4e876723f 1501537badb2bb0fe72776687c530354b16401ec M	Assets/App/Materials/Effects/common/FxFlare01_F_Add.mat
+:100755 100644 6263be0f06472a06744bcc5a067f7c4dce53488a 6263be0f06472a06744bcc5a067f7c4dce53488a M	Assets/App/Materials/Effects/common/FxFlare02_F_Add.mat
+:100755 100644 739e63e8b9fcd566e4d8538861c8c59def9970af 6475454438aa004c37d9c7e51db4035834cb7af4 M	Assets/App/Materials/Effects/common/FxKira01_F_Add.mat
+:100644 100644 dd86c18d9b3296502da44305ba7464375dbf112c 4ba1bf86b3b6081cc76d661cac2014d3026dd959 M	Assets/App/Materials/Effects/common/FxKira02_F_Add.mat
+:100644 100644 41d4cf6b1606a899802b02256159e93ee358312d 41d4cf6b1606a899802b02256159e93ee358312d R100	Assets/App/Materials/Shaders/Standard/CustomLighting.hlsl	Assets/App/Materials/Shaders/CustomLighting.hlsl
+:100644 100644 95907ca8bb614dcf222027469bbf47e25d5f5195 95907ca8bb614dcf222027469bbf47e25d5f5195 R100	Assets/App/Materials/Shaders/Standard/CustomLighting.hlsl.meta	Assets/App/Materials/Shaders/CustomLighting.hlsl.meta
+:100644 100644 ceaedd3b7421ec7a65ce8cd279842b32e77acacc ceaedd3b7421ec7a65ce8cd279842b32e77acacc R100	Assets/App/Materials/Shaders/Extra/AnimParallax.shadergraph	Assets/App/Materials/Shaders/TestShader/AnimParallax.shadergraph
+:100644 100644 b978db81f4ded67b75bc1f5f30d04c899a99f2b6 b978db81f4ded67b75bc1f5f30d04c899a99f2b6 R100	Assets/App/Materials/Shaders/Extra/AnimParallax.shadergraph.meta	Assets/App/Materials/Shaders/TestShader/AnimParallax.shadergraph.meta
+:100644 100644 6d55aec9ffe2674df91ccaab30c30800595588d4 6d55aec9ffe2674df91ccaab30c30800595588d4 R100	Assets/App/Materials/Shaders/Extra/AnimScroll.shadergraph	Assets/App/Materials/Shaders/TestShader/AnimScroll.shadergraph
+:100644 100644 f07537538657e50e8d9f8ee30e41aee773ae153a f07537538657e50e8d9f8ee30e41aee773ae153a R100	Assets/App/Materials/Shaders/Extra/AnimScroll.shadergraph.meta	Assets/App/Materials/Shaders/TestShader/AnimScroll.shadergraph.meta
+:100644 100644 840a1f09649ac7dfef6521d2f9959071e932b419 840a1f09649ac7dfef6521d2f9959071e932b419 R100	Assets/App/Materials/Shaders/Extra/Fur.hlsl	Assets/App/Materials/Shaders/TestShader/Fur.hlsl
+:100644 100644 2b8b9d6675d61a16478e690275b439a9a6490f5a 2b8b9d6675d61a16478e690275b439a9a6490f5a R100	Assets/App/Materials/Shaders/Extra/Fur.hlsl.meta	Assets/App/Materials/Shaders/TestShader/Fur.hlsl.meta
+:100644 100644 347b776bcd885c11aad63247e57bda860bb1164b 347b776bcd885c11aad63247e57bda860bb1164b R100	Assets/App/Materials/Shaders/Extra/FurShader.shader	Assets/App/Materials/Shaders/TestShader/FurShader.shader
+:100644 100644 b129ec6ead37bec44131c1c3ae33ee7e6ebf4dea b129ec6ead37bec44131c1c3ae33ee7e6ebf4dea R100	Assets/App/Materials/Shaders/Extra/FurShader.shader.meta	Assets/App/Materials/Shaders/TestShader/FurShader.shader.meta
+commit 0c2aab73a14235f1f75193afa5ddafd9e4754907
+tree a428e3f8ec48281ff241a14127057b062ebbef7e
+parent 4f29bb16522d0e15db2e52f7cf763c761ca10e10
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-31 17:29:16 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:53 +0900
+
+    set version v2
+
+
+:100644 100644 57161eec96e27b03053e73a087082c27dc067671 370f6f57070dcf39ff068f0c77253d681e4d46b7 M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+commit 4f29bb16522d0e15db2e52f7cf763c761ca10e10
+tree 5bb6ea417a897260f9e0e084283552df77256a43
+parent 087422128d90182c9e6f90f7285d6c15d655f691
+author Takumi Maeda <maeda_takumi@cocone.co.jp> 2022-03-25 17:49:54 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:53 +0900
+
+    BlinkShaderの修正、LayerScrollShaderの追加
+
+
+:100644 100644 9e16d591cf7484ff40049f56a867aed64a2c68e7 81ded482d4703e6e31398bb4b8a8071c60a3981f M	Assets/App/Materials/Shaders/Extra/BlinkOpaque.shadergraph
+:100644 100644 86e5b6abe63842a0cd022880200b6a2d0cea7687 1e99401632d1a7ba4e5fa8943e5243523ba095b4 M	Assets/App/Materials/Shaders/Extra/BlinkTransparent.shadergraph
+:100644 100644 43f3aee39559a22ac28f5651f3b62b34fa8e9988 2d7c708de0b8bb5e74655943508f5a46f82f17bc M	Assets/App/Materials/Shaders/Extra/BlinkTransparent.shadergraph.meta
+:000000 100644 0000000000000000000000000000000000000000 f8d329d6b3f6d9a399c6051a580801ceb2ddee41 A	Assets/App/Materials/Shaders/Extra/LayerScrollXAxis.shadergraph
+:000000 100644 0000000000000000000000000000000000000000 edf37f94363c3339fe755e28a8a28416fb282964 A	Assets/App/Materials/Shaders/Extra/LayerScrollXAxis.shadergraph.meta
+commit 087422128d90182c9e6f90f7285d6c15d655f691
+tree 4d518bec9f2c7381fa4e6ea5d793384b37532966
+parent 95747c9cd5917f9c1f3d5ffa588b4c74c5535d18
+author maeda_takumi <maeda_takumi@cocone.co.jp> 2022-03-09 15:14:35 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:52 +0900
+
+    LowHairシェーダー修正
+
+
+:100644 100644 5801ed7ca5f99ac3875b5477e1bb26940f0c453f 6fe24f8e8d70f71647f784c7194b13594497f8bb M	Assets/App/Materials/Shaders/Low/LowHair.shadergraph
+commit 95747c9cd5917f9c1f3d5ffa588b4c74c5535d18
+tree 9f9d34bbb09429022f47c81836fe2f6a7300f38f
+parent 0077f4466ed5abc67946fa9621bfdc3a574ddcf5
+author maeda_takumi <maeda_takumi@cocone.co.jp> 2022-03-28 16:59:55 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:52 +0900
+
+    LowOpaque,LowTransparent Maskマップの接続を修正
+
+
+:100644 100644 c75076604902e83a9845d1b660bf6521d0d983d4 509c9b182e92d5ff20bfe897c0c69fa76a8876c3 M	Assets/App/Materials/Shaders/Low/LowOpaque.shadergraph
+:100644 100644 714c8a2a63f0cd70da8bca928fa131fb1dee9ccf 47eabec81935c7b110446a43fcc53fd63b7d71ab M	Assets/App/Materials/Shaders/Low/LowTransparent.shadergraph
+commit 0077f4466ed5abc67946fa9621bfdc3a574ddcf5
+tree 4b1d58c4d139628262fd27281b1279a1f2603d58
+parent acc5f77d4fd8439c7f51b00de1563e3758b4ccc8
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-22 19:52:04 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-01 13:03:52 +0900
+
+    fix low face eye shader
+
+
+:100644 100644 9015cabfe74ace3e97094d3c26244ad8e748bb6b ff09baf5c58d4440124efb503627bd4bdcc9842f M	Assets/App/Materials/Shaders/Low/LowFaceEye.shadergraph
+commit f70797a8b4d7c41e6da85d0e13bfff03993c4cc7
+tree eedfd0c50330665f381a8426b3454468b424f61e
+parent 9cdc30ecb369dd45cdf43827966c924ba0fa27d0
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 12:15:12 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 12:15:12 +0900
+
+    fix
+
+
+:100644 100644 8e7ad571327af0e6d0fc68f0d2e49f69e4383ae7 eb558987e6cc4dd578b96009b3fb620c83a6be2b M	Assets/App/Scripts/Common/Layers/CmnItemCell.cs
+commit 9cdc30ecb369dd45cdf43827966c924ba0fa27d0
+tree 8afe29f28e08b2f485f756d80218f36f336c1588
+parent 07c78aa0f57d98cb9aae8c072bfa21e83611e718
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 12:06:59 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 12:06:59 +0900
+
+    レビュー対応
+
+
+:100644 100644 7b57dc7d6652a9ea72bb8f99d9255b8aaeb3c2bb 8e7ad571327af0e6d0fc68f0d2e49f69e4383ae7 M	Assets/App/Scripts/Common/Layers/CmnItemCell.cs
+:100644 100644 0505fe9ccee3b2a0f2c4cd82c10a8abbb6df62c6 3b42be89c2534fbc156fd26dbe94696111c748df M	Assets/App/Scripts/Contents/Coordinate/CoordinateListItem.cs
+:100644 100644 46f32b2af2510a36d1fde4c26d0360b9e60471bd 7351c19febceaa872fc57ce4cfb4b47fcd7f7b90 M	Assets/App/Scripts/Contents/Coordinate/CurrentCoordinate/CurrentCoordinateItem.cs
+:100644 100644 21174c419efc441eb6b1566eeb3db3beb95555e7 3dccd472d7a117ce92be64c772937f8fe1df10ee M	Assets/App/Scripts/Contents/Gacha/GachaDetail/GachaDetailItem.cs
+:100644 100644 09b75741e377e67bb858a44c6b0f1360d76d328e 216d83f0ae94af5db1922e03577ca0f686b3dbd0 M	Assets/App/Scripts/Contents/Inventory/InventoryListItem.cs
+:100644 100644 928e2cf1b33d9121cbc85b5d109ffa790cf9fbc3 b0058d2f5c7ea5b210050a357ed94cb3d9f5051f R052	Assets/App/Scripts/Contents/Item/CommonPropertyListItem.cs	Assets/App/Scripts/Contents/Item/ItemCellListItem.cs
+:100644 100644 a3363829d1db07de3dcf71f811814bcada6771b7 a3363829d1db07de3dcf71f811814bcada6771b7 R100	Assets/App/Scripts/Contents/Item/CommonPropertyListItem.cs.meta	Assets/App/Scripts/Contents/Item/ItemCellListItem.cs.meta
+:100644 100644 51483bde656785efc1083f76a576d2758975528a 9d7b73e91891e62b68ffb05cabccc1db7836fea0 M	Assets/App/Scripts/Contents/Shop/AbstractShopCoordinateListItem.cs
+:100644 100644 3a424f25785e3c391dd9bf6598635dfaf35e3ee8 ae35dc71e5860044569e42fa929e910a9959a9ac M	Assets/App/Scripts/Contents/Sns/AppendedItemCell.cs
+:100644 100644 077bfb5083b03e178ccad0aa863ee525a55e4357 55e17c9e3f1de6421bac4b9dff946152cc595a43 M	Assets/Resources/UI/Sns/SnsPostCell.prefab
+commit 07c78aa0f57d98cb9aae8c072bfa21e83611e718
+tree 3db7fd02f5e5774a5cf33df8f2b77a8d02232773
+parent ba5c501a1206f2361bb6f796402d35070ed28f01
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-03-31 12:03:47 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 11:06:03 +0900
+
+    fix inventoryLayer
+
+
+:100644 100644 d6ce64d0cf1a3207c41ca67272213d19227b240a ac77fbb90bfb4b16da1289ccd1a8fe2c67d83cf2 M	Assets/Resources/UI/Inventory/InventoryLayer.prefab
+commit ba5c501a1206f2361bb6f796402d35070ed28f01
+tree 011ed001995193e131b29ef112f403f0734a7a98
+parent 087bcbb25e8c32d99d825d37d3f94265a51afa6a
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-03-30 19:11:05 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 11:06:02 +0900
+
+    fix SNS Item Cell
+
+
+:100644 100644 6acafed2f818760f8edcd5201b3e021922b45db9 46f32b2af2510a36d1fde4c26d0360b9e60471bd M	Assets/App/Scripts/Contents/Coordinate/CurrentCoordinate/CurrentCoordinateItem.cs
+:100644 100644 97203dd11a7de628db1bb83333ff24d7039d432e 21174c419efc441eb6b1566eeb3db3beb95555e7 M	Assets/App/Scripts/Contents/Gacha/GachaDetail/GachaDetailItem.cs
+:100644 100644 ebbad77cd1102844abfaba79f1e6a8988fe126ba 83505b2c5cd0ad06697360c4d9264de0ec1cbbbd M	Assets/App/Scripts/Contents/Shop/ShopCoordinateListItem.cs
+:100644 100644 f3364f06f24a2a460a7c9ac4c90f3179d19d3396 3a424f25785e3c391dd9bf6598635dfaf35e3ee8 M	Assets/App/Scripts/Contents/Sns/AppendedItemCell.cs
+:100644 100644 9df86930010cd0c8c8386a6f718b5a34cc0fbbf6 6cd3c2df04b0dd56ff64bbd40ef71c1673571a73 M	Assets/Resources/UI/Sns/AppendedItem.prefab
+:100644 100644 9957f9c22809c9a1462f951f15997843afcedbce 077bfb5083b03e178ccad0aa863ee525a55e4357 M	Assets/Resources/UI/Sns/SnsPostCell.prefab
+commit 087bcbb25e8c32d99d825d37d3f94265a51afa6a
+tree d6af2067629f21fb6e3e5507040451092f7859bb
+parent 5c8ed4ebe985c1b0b615c2e78de26066f5d64ee3
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-03-30 18:31:26 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 11:06:00 +0900
+
+    CommonPropertyListItem
+
+
+:100644 100644 32f41ec943117b1f6412711b29fa80198baf61b4 7b57dc7d6652a9ea72bb8f99d9255b8aaeb3c2bb M	Assets/App/Scripts/Common/Layers/CmnItemCell.cs
+:100644 100644 b0cf44f7ec043f376bc581cf8e271605fd2e02da 0505fe9ccee3b2a0f2c4cd82c10a8abbb6df62c6 M	Assets/App/Scripts/Contents/Coordinate/CoordinateListItem.cs
+:100644 100644 6d3bee0caeceb7392760323155583c5e078ecb35 6acafed2f818760f8edcd5201b3e021922b45db9 M	Assets/App/Scripts/Contents/Coordinate/CurrentCoordinate/CurrentCoordinateItem.cs
+:100644 100644 5ab53253c6fc7e587e37eb9771e07c3c79b76842 ce2e5c78bf2c7660a75306b66654d4f869b849f0 M	Assets/App/Scripts/Contents/Gacha/GachaCoordinateListItem.cs
+:100644 100644 3cd2737d4f651bdbbf3555d93a6e8b82ee8c3b86 0145c277f365a9432acb0323493c2ba2e26ab6b5 M	Assets/App/Scripts/Contents/Gift/GiftItemSelector.cs
+:100644 100644 2ce2c332469fcdc84eda89b06c9589cd251969d1 09b75741e377e67bb858a44c6b0f1360d76d328e M	Assets/App/Scripts/Contents/Inventory/InventoryListItem.cs
+:000000 100644 0000000000000000000000000000000000000000 e077eff79070b8d42282285cbf6c644cefb956ba A	Assets/App/Scripts/Contents/Item.meta
+:000000 100644 0000000000000000000000000000000000000000 928e2cf1b33d9121cbc85b5d109ffa790cf9fbc3 A	Assets/App/Scripts/Contents/Item/CommonPropertyListItem.cs
+:000000 100644 0000000000000000000000000000000000000000 a3363829d1db07de3dcf71f811814bcada6771b7 A	Assets/App/Scripts/Contents/Item/CommonPropertyListItem.cs.meta
+:100644 100644 30692d3ec7bfd74d5b056c06957dff19ae47837d 51483bde656785efc1083f76a576d2758975528a M	Assets/App/Scripts/Contents/Shop/AbstractShopCoordinateListItem.cs
+:100644 100644 7e090202aa5724e4a0379fedea1d5e41f2a6b1dd ebbad77cd1102844abfaba79f1e6a8988fe126ba M	Assets/App/Scripts/Contents/Shop/ShopCoordinateListItem.cs
+:100644 100644 2b6ab18d9ae8438cbaff28178569b9ba4eb96603 f3364f06f24a2a460a7c9ac4c90f3179d19d3396 M	Assets/App/Scripts/Contents/Sns/AppendedItemCell.cs
+:100644 100644 116451b93716ca1159008e0a59761735f45085a6 1c1c91ff711aed3bc75927e0c0b6778a3f4f8399 M	Assets/Resources/UI/Gacha/GachaShopLayer.prefab
+:100644 100644 0c56652729ccae39c87432da0fd3425cf45072ee d482f4272c5185055af1f17261e552561ddb1baa M	Assets/Resources/UI/Gift/Selector.prefab
+:100644 100644 5b0edeed8f8c9bb4a3cb30076b42b0a2f11a85e5 d6ce64d0cf1a3207c41ca67272213d19227b240a M	Assets/Resources/UI/Inventory/InventoryLayer.prefab
+:100644 100644 26e69e51e58d541396c9b0bd4725a54f909ef96f aae1739b0b8768a5954b00f6880cfaf680359255 M	Assets/Resources/UI/Shop/ShopCoordinateListItem.prefab
+commit 5c8ed4ebe985c1b0b615c2e78de26066f5d64ee3
+tree c109ff149c2c1afbad4b44c2b2cf665fb846c588
+parent 18c00078ea12bffffff09976d87e9d27d97d3e0b
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-03-30 16:46:19 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 11:05:59 +0900
+
+    SNS( AppendedItem )  SNSトップ画面にはまだサイズ問題残っている
+
+
+:100644 100644 79e7bd216770762ace3a151dbd7e9898b3c8b3d6 2b6ab18d9ae8438cbaff28178569b9ba4eb96603 M	Assets/App/Scripts/Contents/Sns/AppendedItemCell.cs
+:100644 100644 c6f41d4647f06bef443ae92cbddf581fce064560 9df86930010cd0c8c8386a6f718b5a34cc0fbbf6 M	Assets/Resources/UI/Sns/AppendedItem.prefab
+commit 18c00078ea12bffffff09976d87e9d27d97d3e0b
+tree e0262d1762a34d1ea2d223ba2d6d207c61ec47f3
+parent a2470fa82c7063bdd8d883a8b1a88ec640a7e4f9
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-03-30 16:16:10 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-04-01 11:05:57 +0900
+
+    ガチャ、ショップ、フラット
+
+
+:100644 100644 10019e55576d1f445994eb16e0ed88ebe4acc235 40daa363fbc4579dadeedf08694443a4b837fb51 M	Assets/App/Scripts/Common/Layers/ItemIconGroup.cs
+:100644 100644 c5855ba2d2562d7002d9eb25c75bedd27d7bcd79 30692d3ec7bfd74d5b056c06957dff19ae47837d M	Assets/App/Scripts/Contents/Shop/AbstractShopCoordinateListItem.cs
+:100644 100644 78453a3d54a8ced3553f0c38b0a9ae864eb65dd8 7e090202aa5724e4a0379fedea1d5e41f2a6b1dd M	Assets/App/Scripts/Contents/Shop/ShopCoordinateListItem.cs
+:100644 100644 6bd6700f01fc8f6a7fe73c924455decaf0f34cf4 116451b93716ca1159008e0a59761735f45085a6 M	Assets/Resources/UI/Gacha/GachaShopLayer.prefab
+:100644 100644 5d09ee0c1a90553c42484d3ed5e126461a73e62c 954c76a2351bcd5118ef0b44b24c11acc98faf26 M	Assets/Resources/UI/Shop/ItemCell.prefab
+:100644 100644 3ed77fee814fa000f29d4e31e5775a90953c600a 26e69e51e58d541396c9b0bd4725a54f909ef96f M	Assets/Resources/UI/Shop/ShopCoordinateListItem.prefab
+commit a2470fa82c7063bdd8d883a8b1a88ec640a7e4f9
+tree 0fec5b832c8095a2fbf3372ad2a8b61243671155
+parent 5d5bb58b56b70f9de0c4a389a8c4cebf83e5d3bc
+author ito.midori <ito_midori@cocone.co.jp> 2022-03-31 20:57:36 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-03-31 20:57:36 +0900
+
+    InitWorldが他人の星だった時の考慮
+
+
+:100644 100644 161d6671f06fe55c629e1fae4cd7fa3dc0f3f8a7 76dc6ad05d02c268fcf8ae942c65f116cd1084c6 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 471190d40b96ae0cf81e8691aa97abd16636d228 f1b67a47d313013fc3669969a54d19a6a977cef6 M	Assets/App/Scripts/Scenes/WorldScene.cs
+:100644 100644 3f9306c3db984bc76553b6d7c309e6f9a74b62d8 44722b5791a3dd9f328f271baa2fa8c377c7783e M	Assets/App/Scripts/View/World/WorldController.cs
+commit 69d0fc55593b70e32ca0fc9260d9021d0f9d361c
+tree 48dd8257be0c85a3bc2dba3164257afebb91dab8
+parent 9db5ab2c019ba0f27e23fd9038e2a7df6755eb5b
+author ito.midori <ito_midori@cocone.co.jp> 2022-03-31 19:52:53 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-03-31 19:52:53 +0900
+
+    不要な変数削除
+
+
+:100644 100644 be23b6731360f6435ab8adda96b7f2813fbcc866 09f4dc6375a5e01918b01303b0ddd278769255f0 M	Assets/App/Scripts/UI/Components/P3Image.cs
+commit 33f7ed9a805538d8c2d4cb153a66939482153c70
+tree 0b662d41ea7eada04168f47ee400a7d589b8e1bf
+parent 49591f765e99f48f82e12952bdbabb52cd40b8fe
+author 伊藤 みどり <ito_midori@cocone.co.jp> 2022-03-31 19:27:49 +0900
+committer 伊藤 みどり <ito_midori@cocone.co.jp> 2022-03-31 19:27:49 +0900
+
+    SocialConnectViewの表示調整
+
+
+:100644 100644 8ce6ec0cb58252b3a6956a44295827a01c082601 a83bc43a28770ad1787380df7797f202cc09002f M	Assets/Plugins/iOS/IOSNativeSocialShare.mm
+commit 49591f765e99f48f82e12952bdbabb52cd40b8fe
+tree 9eb49a5055292e97d1e8316c57ba98c7ba5afa32
+parent 1ba0137b19ed7524864d5ba9a768a5f530098f5a
+author ito.midori <ito_midori@cocone.co.jp> 2022-03-31 18:01:26 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-03-31 18:01:26 +0900
+
+    参照URL修正
+
+
+:100644 100644 61bec47dfe77165303f22179e13706e748a51be9 9ff95c0e323353a26f10c529f7b7ef16cce9ee8b M	Assets/App/Scripts/Contents/Inventory/SettingMasterRepository.cs
+commit 9db5ab2c019ba0f27e23fd9038e2a7df6755eb5b
+tree 3acd54392813c97bb627245c805eb05586612616
+parent 1ba0137b19ed7524864d5ba9a768a5f530098f5a
+author ito.midori <ito_midori@cocone.co.jp> 2022-03-31 17:32:31 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-03-31 17:32:31 +0900
+
+    addressableのイメージをロードする時にダウンロードが必要な時はspriteをリセットする
+
+
+:100644 100644 f0606e59769b2dd0a004dad9f7e9d64ad741ce86 be23b6731360f6435ab8adda96b7f2813fbcc866 M	Assets/App/Scripts/UI/Components/P3Image.cs

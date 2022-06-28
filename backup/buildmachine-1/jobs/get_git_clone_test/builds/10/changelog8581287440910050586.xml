@@ -1,0 +1,42 @@
+commit a924daf4b0c9471cbb0f0352ac93be26aea5cf89
+tree c887ff24e8dac1bfaaa2b4805d57b03efb9a5af9
+parent 92c3f5009ccc071c71e59354bc467f87d1709611
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 18:05:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 18:05:49 +0900
+
+    本番ビルドのブランチ名などの調整
+
+
+:100644 100644 6a72438ee9a3c5695e504f5b648d7bbf42f9cc70 b12f17195cc6687767205d0267786aa1d5ad889f M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 f34d6aacb601188f7ebad44a8ad036665cb8f5ea e49581f5e06f0883bf94e19d761343383b6cbdf1 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 92c3f5009ccc071c71e59354bc467f87d1709611
+tree a285ec85f597937b891e29fdcd88d06298ed40aa
+parent 63b1a691f7f52f5b670564dc421fb77746700515
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 18:03:22 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 18:03:22 +0900
+
+    本番ビルドのジョブを調整
+
+
+:100644 100644 b804307c7d807988121efd29888ddd54eee2dfa3 6a72438ee9a3c5695e504f5b648d7bbf42f9cc70 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 b2b00638ab88ab375b23a6e88a7b08c907855bc4 f34d6aacb601188f7ebad44a8ad036665cb8f5ea M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 63b1a691f7f52f5b670564dc421fb77746700515
+tree be2619a63282ba5ecf8b31a6011af5a06934e09b
+parent 57c23874b2902aa094a89b2e60f7d636668a9053
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 17:58:35 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 17:58:35 +0900
+
+    現在のビルドの説明欄に追記
+
+
+:100644 100644 90ff83f6d0df586dca7523a0128b2f04db349ae6 8ee0e33edf4281469dd1968f14906eb06bec0dab M	pipeline_script/DevBuild/android/build.groovy
+commit 57c23874b2902aa094a89b2e60f7d636668a9053
+tree 6ce73bf158594cfd205ac524b18b231e4b60607a
+parent 7143f0f6e4508bcecd148787605005405c3b1c79
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 17:41:10 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 17:41:10 +0900
+
+    ワークスペースのクリーンのフラグを削除
+
+
+:100644 100644 d101ebfd099007dbd0159d2097651bba5e9152d6 e5dcb2991b47b8be8ae8e3176f4e45404f691679 M	pipeline_script/TestScripts/get_git_clone.groovy

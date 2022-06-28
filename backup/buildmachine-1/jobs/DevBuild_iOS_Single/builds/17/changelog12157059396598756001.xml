@@ -1,0 +1,28 @@
+commit c36edf139be8b7322bde1fbe956f9f23e9481b8b
+tree fa535beb48a1c4ab8e7458b3c3e0404e03e50650
+parent 2752769e07e0963db8fac023d06a09119bc4caf3
+author 松本 りか <matsumoto_rika@cocone.co.jp> 2022-06-17 16:02:21 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-20 10:34:56 +0900
+
+    [build]新ビルド種別対応
+    
+    # Conflicts:
+    #	ExtProject/p3-proto
+
+
+:100644 100644 511bdef7ce89017c1be76984e86bc2e631a332af 5a5cf43f2f31211a6fe2d88ef9142a839bc571d2 M	Assets/App/Editor/Build/BuildClient.cs
+:100644 100644 702bb4f05ac0597649d5eda074de4d902c17f691 87becd248d7092ba96e3212a9580e5790d83474c M	Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml
+:100644 100644 e93b1689eb2d1c9213fea52e47af83df652224f7 dc5dababd3b19b159c8bb5d3fe63c3c9a90634b9 R066	Assets/App/Editor/Build/Configs/AlphaBuildSettings.yaml	Assets/App/Editor/Build/Configs/DevBuildSettings.yaml
+:100644 100644 3efacfed518e975e3c07f142a72dc939b9d41cb2 3efacfed518e975e3c07f142a72dc939b9d41cb2 R100	Assets/App/Editor/Build/Configs/AlphaBuildSettings.yaml.meta	Assets/App/Editor/Build/Configs/DevBuildSettings.yaml.meta
+:000000 100644 0000000000000000000000000000000000000000 45fcbe9011d5dc2d50611255880fc34a4ce5f9eb A	Assets/App/Editor/Build/Configs/QABuildSettings.yaml
+:000000 100644 0000000000000000000000000000000000000000 a304ae244706acdadb90bc35294d407c376c7b4e A	Assets/App/Editor/Build/Configs/QABuildSettings.yaml.meta
+:100644 100644 20a4707ebc2e3fb1c01220161b05a275834c2582 20a4707ebc2e3fb1c01220161b05a275834c2582 R100	Assets/App/Editor/Build/Configs/OfficialReleaseBuildSettings.yaml	Assets/App/Editor/Build/Configs/ReleaseBuildSettings.yaml
+:100644 100644 05d03aec5ec56107ce610dcab81948dd46a80cb3 05d03aec5ec56107ce610dcab81948dd46a80cb3 R100	Assets/App/Editor/Build/Configs/OfficialReleaseBuildSettings.yaml.meta	Assets/App/Editor/Build/Configs/ReleaseBuildSettings.yaml.meta
+:100644 100644 5ccac8e5e0c693a5e4774d38be0c3b85ce47d1bc 5ccac8e5e0c693a5e4774d38be0c3b85ce47d1bc R100	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Alpha.plist	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Dev.plist
+:100644 100644 a1e30e6cdfdae64467e9b4117027ccaa84d73175 a1e30e6cdfdae64467e9b4117027ccaa84d73175 R100	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Alpha.plist.meta	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Dev.plist.meta
+:000000 100644 0000000000000000000000000000000000000000 5ccac8e5e0c693a5e4774d38be0c3b85ce47d1bc A	Assets/App/Editor/Build/Configs/iOS/ExportOptions_QA.plist
+:000000 100644 0000000000000000000000000000000000000000 73837e92affaa497f6959527e1dd1cc1fc440f04 A	Assets/App/Editor/Build/Configs/iOS/ExportOptions_QA.plist.meta
+:100644 100644 9b5ce2ccd2efa7108e44b4beb2d97d679fbf5384 9b5ce2ccd2efa7108e44b4beb2d97d679fbf5384 R100	Assets/App/Editor/Build/Configs/iOS/ExportOptions_OfficialRelease.plist	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Release.plist
+:100644 100644 80b4094ea5806c6c5f975180677e15bfb264c7bd 80b4094ea5806c6c5f975180677e15bfb264c7bd R100	Assets/App/Editor/Build/Configs/iOS/ExportOptions_OfficialRelease.plist.meta	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Release.plist.meta
+:100644 100644 20e05ec057536cf4320fdca9810fd5fbabce7b3e 126fae5eba9362c9d7ec8af63c0dc821fa5ec575 M	Assets/Plugins/Android/launcherTemplate.gradle
+:160000 160000 4b74d546f584616ca0cd762dc5aaa194dcc2e27c 30db31ad9a994c13e44b9f9ad65ef49904111547 M	ExtProject/p3-proto

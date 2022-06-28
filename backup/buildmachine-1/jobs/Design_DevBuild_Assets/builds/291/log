@@ -1,0 +1,243 @@
+[2022-06-17T07:31:59.071Z] ユーザー[8mha:////4LAsCf+yNaGualwe+w+h0oXLipvOzCAlF/qSxVFw7pM+AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYR/dLi1CL93MSS4tLc/JL8+KLM7EQAEAZ4XckAAAA=[0m松本 りかが実行
+[2022-06-17T07:31:59.918Z] Obtained pipeline_script/Design/build_asset_upload_alpha_sever.groovy from git https://git-1.cocone.jp/projectp3/p3-tools
+[2022-06-17T07:31:59.919Z] Resume disabled by user, switching to high-performance, low-durability mode.
+[2022-06-17T07:32:00.450Z] [8mha:////4KMIoPpwa9sqFTq42EQVBR294OIQWarrBsGrNE9xKOf2AAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[2022-06-17T07:32:00.556Z] [8mha:////4FnV1wKzJzbE5eiW3vtJTiY2f3yh3IW3VcMqO16BkGUKAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+[2022-06-17T07:32:00.557Z] Running on [8mha:////4AViz2XmnOszVvmgDa6a2aUZrxswNe/5snQjGhcUtMFwAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy+EgZp/eT83ILSktQifZfU4sz0PFVTN6/8JD+gm/UB+U9wZ9AAAAA=[0mDesign_JobNode in /Users/p3_dev/.jenkins/Design_JobNode/workspace/Design_DevBuild_Assets
+[2022-06-17T07:32:00.558Z] [8mha:////4HOTXN9Zqq6YtU8Xf00ogNUH01uCT4WfFLxOFYF0AIJpAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[2022-06-17T07:32:00.562Z] [8mha:////4EvDMKRrIcxQ2ernxv9jvyTZb9OhRErwIGj6VXJU/saLAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[2022-06-17T07:32:00.563Z] [8mha:////4B33koANQuMIUmMUK9xzj5SiyB7Rh+K4hFAMBvvbzdLPAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[2022-06-17T07:32:00.564Z] [8mha:////4HK6/oUpKnF/7AUBoNi1mpUML6DSgI0ZgXaQh0duBwY3AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+[2022-06-17T07:32:00.565Z] The recommended git tool is: git
+[2022-06-17T07:32:00.568Z] using credential 1f53a4c2-f053-4789-9846-eb486d44a572
+[2022-06-17T07:32:00.616Z] Fetching changes from the remote Git repository
+[2022-06-17T07:32:00.593Z]  > git rev-parse --resolve-git-dir /Users/p3_dev/.jenkins/Design_JobNode/workspace/Design_DevBuild_Assets/.git # timeout=10
+[2022-06-17T07:32:00.617Z]  > git config remote.origin.url https://git-1.cocone.jp/projectp3/p3-tools # timeout=10
+[2022-06-17T07:32:00.626Z] Fetching upstream changes from https://git-1.cocone.jp/projectp3/p3-tools
+[2022-06-17T07:32:00.626Z]  > git --version # timeout=10
+[2022-06-17T07:32:00.633Z]  > git --version # 'git version 2.30.1 (Apple Git-130)'
+[2022-06-17T07:32:00.633Z] using GIT_ASKPASS to set credentials for Gitlab
+[2022-06-17T07:32:00.634Z]  > git fetch --tags --force --progress -- https://git-1.cocone.jp/projectp3/p3-tools +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2022-06-17T07:32:28.809Z] Checking out Revision f1df5b5676cc81c8c3fa6c786cead91f9c13a214 (refs/remotes/origin/master)
+[2022-06-17T07:32:28.800Z]  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+[2022-06-17T07:32:28.810Z]  > git config core.sparsecheckout # timeout=10
+[2022-06-17T07:32:28.816Z]  > git checkout -f f1df5b5676cc81c8c3fa6c786cead91f9c13a214 # timeout=10
+[2022-06-17T07:32:38.854Z] Commit message: "Merge branch 'features/fix_new_build_kind' into 'master'"
+[2022-06-17T07:32:38.855Z]  > git rev-list --no-walk dafb50d269b9b3cd6f78491a51117fcd6015e2d6 # timeout=10
+[2022-06-17T07:32:38.891Z] [8mha:////4MVFna0y9Im/TvViCkZuZbioQO3w5NXcCa+F9sl9BpG9AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[2022-06-17T07:32:38.891Z] [8mha:////4GPtPtcZjwJPcdrxOw/zXuSmgB8AbcZ0f3D9VUBgO22DAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[2022-06-17T07:32:38.893Z] [8mha:////4P0ZnC9lNv+j+PkFwxNHyJcL58QrGZxLQ3q16tk9/zkCAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[2022-06-17T07:32:38.893Z] [8mha:////4LiLXA2SBNyF0JY9MlcFy/tF5aYwbgtDprM0EeOTPSw8AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[2022-06-17T07:32:38.897Z] [8mha:////4KgdtN3CIBC1UsmewXn1LWlwcKDuuVkmmGRYR4qZvCfHAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] withEnv
+[2022-06-17T07:32:38.897Z] [8mha:////4ASwsmXRF2l1qO6w9lNWoQZ/mP/2yOO1FvoZEsNNN1/IAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] {
+[2022-06-17T07:32:38.901Z] [8mha:////4MEVdM+fQ9SW7tbpwI4qTJCviy9EdDelju2HZNqeZmqqAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUCDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAbNWnxXCAAAA[0m[Pipeline] stage
+[2022-06-17T07:32:38.901Z] [8mha:////4E7EwJRYwvcvIYZl+dFj5PiHrI2G1jAwMpE2D9ct7LuhAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUSDAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD5WQ+PfCAAAA[0m[Pipeline] { (groovy準備)
+[2022-06-17T07:32:38.907Z] [8mha:////4EuwkUYaMLtEiQn05jwYvk6Pql077Ot8nzbs2VQM8iyxAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUDLAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/s94rDCAAAA[0m[Pipeline] script
+[2022-06-17T07:32:38.908Z] [8mha:////4CuXfajudQQ2gDW0So7AiSmM0jlxi/82GqahpeA5Dcm9AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohULDAgpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD1+IXOLCAAAA[0m[Pipeline] {
+[2022-06-17T07:32:38.910Z] [8mha:////4FIksf+aHIA00yHGGmRF8sdaqGl4in2cNSz0a1nwCmriAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKpAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHNxXfVKy+AAAA[0m[Pipeline] checkout
+[2022-06-17T07:32:38.911Z] The recommended git tool is: git
+[2022-06-17T07:32:38.912Z] using credential 1f53a4c2-f053-4789-9846-eb486d44a572
+[2022-06-17T07:32:38.958Z] Fetching changes from the remote Git repository
+[2022-06-17T07:32:39.778Z] Checking out Revision f1df5b5676cc81c8c3fa6c786cead91f9c13a214 (refs/remotes/origin/master)
+[2022-06-17T07:32:38.949Z]  > git rev-parse --resolve-git-dir /Users/p3_dev/.jenkins/Design_JobNode/workspace/Design_DevBuild_Assets/.git # timeout=10
+[2022-06-17T07:32:38.959Z]  > git config remote.origin.url https://git-1.cocone.jp/projectp3/p3-tools # timeout=10
+[2022-06-17T07:32:38.967Z] Fetching upstream changes from https://git-1.cocone.jp/projectp3/p3-tools
+[2022-06-17T07:32:38.967Z]  > git --version # timeout=10
+[2022-06-17T07:32:38.974Z]  > git --version # 'git version 2.30.1 (Apple Git-130)'
+[2022-06-17T07:32:38.974Z] using GIT_ASKPASS to set credentials for Gitlab
+[2022-06-17T07:32:38.975Z]  > git fetch --tags --force --progress -- https://git-1.cocone.jp/projectp3/p3-tools +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2022-06-17T07:32:39.763Z]  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+[2022-06-17T07:32:39.779Z]  > git config core.sparsecheckout # timeout=10
+[2022-06-17T07:32:39.787Z]  > git checkout -f f1df5b5676cc81c8c3fa6c786cead91f9c13a214 # timeout=10
+[2022-06-17T07:32:40.403Z] Commit message: "Merge branch 'features/fix_new_build_kind' into 'master'"
+[2022-06-17T07:32:40.405Z] [8mha:////4CorgmHXEPs3F9XOG5RmrGicMLbDby68T3w/AH7GIjmVAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKoQQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN1TuT7W+AAAA[0m[Pipeline] sh
+[2022-06-17T07:32:40.818Z] + ls -lhrt
+[2022-06-17T07:32:40.818Z] total 4912
+[2022-06-17T07:32:40.818Z] drwxr-xr-x    3 p3_dev  staff    96B  1 31 14:36 UserSettings
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    12K  1 31 14:39 Design_DevBuild_Assets.sln
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    66K  1 31 14:39 UniRx.Async.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    74K  1 31 14:39 MagicaCloth.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    60K  1 31 14:39 LeTai.TranslucentImage.Demo.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    79K  1 31 14:39 UniRx.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    61K  1 31 14:39 WaterSystem.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    61K  1 31 14:39 LeTai.TranslucentImage.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    49K  1 31 14:39 NavMeshComponentsTestsPlaymode.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    64K  1 31 14:39 Flour.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    62K  1 31 14:39 Unity.Collections.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    60K  1 31 14:39 NavMeshComponentsExamples.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    60K  1 31 14:39 LeTai.TranslucentImage.UniversalRP.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    49K  1 31 14:39 UniRx.Examples.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    59K  1 31 14:39 Coffee.UIParticle.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    60K  1 31 14:39 UniWebView-CSharp.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    59K  1 31 14:39 Coffee.UnmaskForUGUI.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    59K  1 31 14:39 NavMeshComponents.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    59K  1 31 14:39 Sirenix.OdinInspector.CompatibilityLayer.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    82K  1 31 14:39 Assembly-CSharp-Editor-firstpass.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    54K  1 31 14:39 Unity.Collections.Tests.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    61K  1 31 14:39 WaterSystem.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    64K  1 31 14:39 MagicaCloth.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    61K  1 31 14:39 Flour.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    61K  1 31 14:39 LeTai.TranslucentImage.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    60K  1 31 14:39 Coffee.UnmaskForUGUI.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    61K  1 31 14:39 Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    60K  1 31 14:39 UniRx.Async.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    51K  1 31 14:39 NavMeshComponentsTestsEditmode.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    50K  1 31 14:39 Coffee.UIParticle.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    50K  1 31 14:39 Flour.Test.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    61K  1 31 14:39 NavMeshComponentsEditor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    61K  1 31 14:39 Sirenix.OdinInspector.Modules.UnityMathematics.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    60K  1 31 14:39 UniWebView-CSharp.Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    60K  1 31 14:39 NavMeshComponentsExamplesEditor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff    80K  2 28 03:52 Assembly-CSharp-Editor.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff   124K  5 10 03:52 Assembly-CSharp-firstpass.csproj
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff   148K  6 14 03:52 Assembly-CSharp.csproj
+[2022-06-17T07:32:40.818Z] drwxr-xr-x    3 p3_dev  staff    96B  6 17 03:56 ServerData
+[2022-06-17T07:32:40.818Z] drwxr-xr-x  323 p3_dev  staff    10K  6 17 03:57 Logs
+[2022-06-17T07:32:40.818Z] drwxr-xr-x   33 p3_dev  staff   1.0K  6 17 04:00 Library
+[2022-06-17T07:32:40.818Z] drwxr-xr-x    6 p3_dev  staff   192B  6 17 16:32 Assets
+[2022-06-17T07:32:40.818Z] -rw-r--r--    1 p3_dev  staff   1.4K  6 17 16:32 README.md
+[2022-06-17T07:32:40.818Z] drwxr-xr-x    3 p3_dev  staff    96B  6 17 16:32 backup
+[2022-06-17T07:32:40.818Z] drwxr-xr-x    6 p3_dev  staff   192B  6 17 16:32 pipeline_script
+[2022-06-17T07:32:40.826Z] [8mha:////4HN4PYNHY5j/4kL/eHaPN39wX2zGkL1Bn//zoK+adgqcAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUWBhQJ9aoCycITQhJo/9LkpJOnIircQcClZjwYNmWrPd8QRU8NOQ1swp7g6EzbHCjzokl8v3FUWKWzqwjDOQUa1VqSarjXFuKCmYVJSw4LBV2joJBHWHFrbiL2gnU9Sn6vB04lEbe4AEFz+QofPyWycP6OspA+OP8BcA0RCi3+2y7zedZvQG6fT8PwgAAAA==[0m[Pipeline] load
+[2022-06-17T07:32:40.916Z] [8mha:////4D53vZFl4fDyJ/VMFXgVa9pPMaDSOZHbJ2ENbp9ZQx5MAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUWBFT1ygLJwhNCGmj/8tPSjtxIq7GHWipxIQHy7ZkvdcbishwInaisdh6jLUXXejdlMRA3F4DDaKhi6gJIwUrlB0UGVstVVGysCjLYSVhbbEOFD26BBvZ6Icug0ZXnhNP21FC7s0dnpDJiZw0p28ZGba33kTCH+cvAMYuQX7Yzbafn8UHbGnGmsIAAAA=[0m[Pipeline] { (pipeline_script/utils/gitUtility.groovy)
+[2022-06-17T07:32:40.917Z] [8mha:////4IJh8zvA8W343xtaQ4vV4/rNz9cQi/97+ZSInPHWugWtAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIi0iIqWisNLzCJMXasO8d2cCpexNf4A4FIVGyx2tlmni9YxwBHDhqtot5QbA16N+p5YebQXx1ntHzBlimyU9io3HCnTgs2nBQsKUpYCdgoah1HQzrBVlh5l5WTpKtzCvN3EFCaboAHFGI2JxnSF6YAu9vYRaaf568AJu8TlHX9qf0ben/gNr4AAAA=[0m[Pipeline] }
+[2022-06-17T07:32:40.918Z] [8mha:////4JS3wVkmOcVCEzFBMNQpa6Q1dXlUIJTnw0Rwgsizc+LsAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCoERUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFkKHf7T23fSZy7ir4AAAA=[0m[Pipeline] // load
+[2022-06-17T07:32:40.920Z] [8mha:////4MlCPvyTVSytpTfEwno2YOr13uKDpGezcCQKD7d4LlULAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUICQG1Ik16sIJQhNC0uj/kqSkEyfiatyBQCUmPFi2Jes9X1AFDw15zazC3mDoDBvcqHNiiXx/cZSYpTPrCAM5xVqVWpLqONeWooJZRQkLDkuFnaNgUEdYcSvuonYCdX2KPm8HDqWRN3hAwTM5Ch+/ZfKwvo4yEP44fwEwDRHKzT7bdvd5Vm+sP66UwgAAAA==[0m[Pipeline] load
+[2022-06-17T07:32:40.928Z] [8mha:////4CJ6lodL41vmKSzcdBLeBM0jKFsGD5K6uqLpLRxc3PK+AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQjAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/hYjrHCAAAA[0m[Pipeline] { (pipeline_script/utils/notify/SlackNotify.groovy)
+[2022-06-17T07:32:40.929Z] [8mha:////4MY1DtOUYbntojdbYonz5K32tL3EVRSo7KZSOf3AVPGaAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIUGDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQF1+RyqvgAAAA==[0m[Pipeline] }
+[2022-06-17T07:32:40.930Z] [8mha:////4G0IoEqBJDRzoKE5R3NjQ2/bCiIV0gulTPUQofs9noFmAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISQKRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyu//U7g1GGkcWvgAAAA==[0m[Pipeline] // load
+[2022-06-17T07:32:40.934Z] [8mha:////4MMo4fMXwcJnffKEmV/fvycanbaIGjqPQWnQiX/3TBmXAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUsICEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK52WXb7j/P6g3X/2zjwgAAAA==[0m[Pipeline] load
+[2022-06-17T07:32:40.984Z] [8mha:////4E0coOrCGRRMXCUqpzSOaaZd82ZegVRfjBiWDECCv5+7AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUYgIhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0QKVszCAAAA[0m[Pipeline] { (pipeline_script/utils/notify/slackUtility.groovy)
+[2022-06-17T07:32:40.985Z] [8mha:////4Nr1/Zu9afqH4ul0ElZfoPdFqs5rIebI7+juJMxtk2p2AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCoEIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AH3XYTTvgAAAA==[0m[Pipeline] }
+[2022-06-17T07:32:40.986Z] [8mha:////4FB4iZSs0gUAPfMwg3qNMTAZpTxdPUGTxCi+wAO7fpJ+AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioEFCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDut7l2hw/Evt9vvgAAAA==[0m[Pipeline] // load
+[2022-06-17T07:32:40.987Z] [8mha:////4D/w/Fjhuu5ivrmnQDlD4m0x/KMkF6gdF+NgZNYVl4UNAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIioKBAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDud7m2hw84gtlSvgAAAA==[0m[Pipeline] }
+[2022-06-17T07:32:40.988Z] [8mha:////4HqDbjfP3vKULp/8q7knvVVForznL6Dc97Dkr9ywlZIeAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIRikSDqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZ17n2hw8LYYLuvgAAAA==[0m[Pipeline] // script
+[2022-06-17T07:32:40.989Z] [8mha:////4DDw0LeCPgVBUe5GS/y6nqpAJHo8MvDQ3iEisAQkr0Q+AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrdPtf28AEJAI5qvgAAAA==[0m[Pipeline] }
+[2022-06-17T07:32:40.990Z] [8mha:////4FITcWHUVT+9mKYSIrzeR3IOnfOkqJ9R7dB1tJBk0lsQAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcrdIdd2/wE649XWvgAAAA==[0m[Pipeline] // stage
+[2022-06-17T07:32:40.991Z] [8mha:////4H0e3UEWvGgjX9JmnBE0cCnKNWd+lyfDTXgkvdIUQJHeAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUqBILYuoaZeEEIQkhbfR/SVLaiRNxNe5AoBITHizbkvWeL6higCMFyzqDvcOoHBv8aHNiE4X+4mliHZ2ZIozkDRNmEqRNu1RBycCiooQVh7VB5Sk6tAk2vJN3WXuJtj6lkLcDh9LpGzyg4JmcZEjfMgfYXkcdCX+cvwCYhwTlrsnW7D/P6g2R5sjPwgAAAA==[0m[Pipeline] stage
+[2022-06-17T07:32:40.991Z] [8mha:////4A5YIBb7dm0ABf/xgWdZRl7u0HNtgV8OxQdYqr7+dljTAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QIIBMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfADpB/iZwgAAAA==[0m[Pipeline] { (Git)
+[2022-06-17T07:32:40.993Z] [8mha:////4M6u9EujcToc/r1Zc2zc6DALNkStzpSlc0rCo7r0H+kEAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YAAJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAD8aiCpwgAAAA==[0m[Pipeline] timeout
+[2022-06-17T07:32:40.993Z] Timeout set to expire in 2 時間 0 分
+[2022-06-17T07:32:40.993Z] [8mha:////4Jbl0DXDRINnKm5I6XUQTS+3/ChKZQbS5aeGa0I1K0PNAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YAEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD59NhPHCAAAA[0m[Pipeline] {
+[2022-06-17T07:32:40.996Z] [8mha:////4AJ4QRXzrRfKxwrk1Vpz1ENNpS3FvoNa46H98Lu5klB8AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUCRaEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WfbbT7P6g0Z/aLSwgAAAA==[0m[Pipeline] script
+[2022-06-17T07:32:40.997Z] [8mha:////4PGfLh7zoUzL+7EHMheXwLNereGEBsjeo0ZL6mxs8Y4xAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUJDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAbb5KxbCAAAA[0m[Pipeline] {
+[2022-06-17T07:32:40.998Z] [8mha:////4FyoV/3V1N3X9z340ANOP0uuM8aVbbEej2Yt7wYdoePKAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUIDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAdhUMVHCAAAA[0m[Pipeline] wrap
+[2022-06-17T07:32:41.170Z] [8mha:////4Ai/oWevACg40ornUw2sGvi2YbGgAuL2cqXyU7LYLJEcAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAXzhjwPCAAAA[0m[Pipeline] {
+[2022-06-17T07:32:41.177Z] [8mha:////4KeflPj4hG29i1SwIbwbEYdts61kPCGx+U3Ow3ymiwrPAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSkA5R0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMHmfoKzrT+3f9289O74AAAA=[0m[Pipeline] }
+[2022-06-17T07:32:41.181Z] [8mha:////4DOxs+FOdNIK+yeSROHW4vmqEL/TXgTwCitfPwslZqaZAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrd/lPbN8SMZoe+AAAA[0m[Pipeline] // wrap
+[2022-06-17T07:32:41.186Z] [8mha:////4BidHIwwlbhG1hjSuZ0dR6c86ig1ivrgumLL5GMGqXzSAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJESDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK3/dQ+vAEuCywfvgAAAA==[0m[Pipeline] echo
+[2022-06-17T07:32:41.186Z] --------------------
+[2022-06-17T07:32:41.187Z] [8mha:////4JQnXPuJLEiVqpfP3O3DEmFFNHUVDuznahEOyp2nGRgNAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJCQKRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpS77af24Q1vOjcGvgAAAA==[0m[Pipeline] echo
+[2022-06-17T07:32:41.187Z] branch_name = design
+[2022-06-17T07:32:41.187Z] [8mha:////4Fo1QRZJmDDGgfmsP3856/JEvzTsZ1PBWmhBAO4hGLQfAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJAokRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpS77af24Q2gJq+BvgAAAA==[0m[Pipeline] echo
+[2022-06-17T07:32:41.187Z] --------------------
+[2022-06-17T07:32:41.188Z] [8mha:////4Cmz1fYmgvaJ4b2/VLB4sU2iXO8TipQs0N/CTMT3b6mJAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUSCwIMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLk+91sh/lZfAAbpPY7wgAAAA==[0m[Pipeline] dir
+[2022-06-17T07:32:41.188Z] Running in /Users/p3_dev/.jenkins/Design_JobNode/workspace/Design_DevBuild_Assets/ServerData
+[2022-06-17T07:32:41.188Z] [8mha:////4GaTI+wAKkJuzooog0yYI7Lw54t2q87UgiUQrYBvC9EPAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUAQaEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WfbbT7P6g0iH00AwgAAAA==[0m[Pipeline] {
+[2022-06-17T07:32:41.191Z] [8mha:////4GztpBxvj4tnUH4jbMi5e2eLDc9GSEImelO8lJLv++fbAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICBRWiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyv32U7vwBvT8cju+AAAA[0m[Pipeline] echo
+[2022-06-17T07:32:41.192Z] delete ServerData
+[2022-06-17T07:32:41.192Z] [8mha:////4PaWIEtU7HdgxupwN8swDrayH4WM6LIvCGcQJKWBGTxwAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCkKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFNzevXxC+AAAA[0m[Pipeline] deleteDir
+[2022-06-17T07:32:41.621Z] [8mha:////4FDmReCR8r9AqWDf8VuBko9VaWh08R/dqvnDe2uigjFOAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKChKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcr97lPbNwA0XQC+AAAA[0m[Pipeline] }
+[2022-06-17T07:32:41.622Z] [8mha:////4KJTr8tRHnIWfDCku9MGP55UZSEoTlo+XcOJcQK7h8MFAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLShAIhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3da768AFdjZ99vgAAAA==[0m[Pipeline] // dir
+[2022-06-17T07:32:41.624Z] [8mha:////4GDRdjTivvU+uwGYSAEpj97J/K1PUtRZWKw/Alk0wtVWAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJFIhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+QXnY56pr/wHaMsM1vgAAAA==[0m[Pipeline] checkout
+[2022-06-17T07:32:41.625Z] The recommended git tool is: NONE
+[2022-06-17T07:32:41.627Z] using credential 1f53a4c2-f053-4789-9846-eb486d44a572
+[2022-06-17T07:32:41.688Z] Fetching changes from the remote Git repository
+[2022-06-17T07:32:41.679Z]  > git rev-parse --resolve-git-dir /Users/p3_dev/.jenkins/Design_JobNode/workspace/Design_DevBuild_Assets/.git # timeout=10
+[2022-06-17T07:32:41.689Z]  > git config remote.origin.url https://git-1.cocone.jp/projectp3/p3-client # timeout=10
+[2022-06-17T07:32:41.698Z] Fetching upstream changes from https://git-1.cocone.jp/projectp3/p3-client
+[2022-06-17T07:32:41.698Z]  > git --version # timeout=10
+[2022-06-17T07:32:41.704Z]  > git --version # 'git version 2.30.1 (Apple Git-130)'
+[2022-06-17T07:32:41.704Z] using GIT_ASKPASS to set credentials for Gitlab
+[2022-06-17T07:32:41.705Z]  > git fetch --tags --force --progress -- https://git-1.cocone.jp/projectp3/p3-client +refs/heads/*:refs/remotes/origin/* # timeout=60
+[2022-06-17T07:32:43.730Z] Checking out Revision 25f639ac67ab3187c4152417713591d03cb388cd (origin/design)
+[2022-06-17T07:32:43.730Z] Enabling Git LFS pull
+[2022-06-17T07:32:43.722Z]  > git rev-parse origin/design^{commit} # timeout=10
+[2022-06-17T07:32:43.731Z]  > git config core.sparsecheckout # timeout=10
+[2022-06-17T07:32:43.737Z]  > git checkout -f 25f639ac67ab3187c4152417713591d03cb388cd # timeout=60
+[2022-06-17T07:33:13.265Z]  > git config --get remote.origin.url # timeout=10
+[2022-06-17T07:33:13.279Z] using GIT_ASKPASS to set credentials for Gitlab
+[2022-06-17T07:33:13.279Z]  > git lfs pull origin # timeout=60
+[2022-06-17T07:34:24.461Z] Commit message: "Merge branch 'design_feature/220617_PG0041_JIRA' into 'design'"
+[2022-06-17T07:34:24.462Z]  > git rev-list --no-walk 509c74e5ea283f1cf0606743444ea9d50e26a146 # timeout=10
+[2022-06-17T07:34:24.514Z] [8mha:////4HD/579fMoVZE0rfh/CipzbqlWXbxMLszlu3qMH8YfcdAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJKBBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrnb5tofhg8ZYe4evgAAAA==[0m[Pipeline] sh
+[2022-06-17T07:34:24.927Z] + git log origin/design --pretty=short -1
+[2022-06-17T07:34:24.937Z] [8mha:////4G2oh3aFbJvb7Fyl8HNJFcjAwkyMFbg0cl5KpIrtv58wAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJBAFSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdNtf+MHwAWFD1B74AAAA=[0m[Pipeline] echo
+[2022-06-17T07:34:24.938Z] *** git revision番号の取得 ***
+[2022-06-17T07:34:24.941Z] [8mha:////4KMzwk/5UyvRUsG6r+hYy9VkvoMMqkxyXiVoNwqkUinuAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJJCQUCpayw0vMIkxTqy7YDs4FS/ia/wBi0hUbLHa2WZeb1gGDzV7g52m3lJoLA5uNHlhYt9fHSfs+IINU2CnUeokudWnGSVHDXOKEhYCVpoax8GSibAWnXqoyiky1Tn6/B0FlLa9wxMKkc1R+fiFycPmNraB6ef5K4BpiFDutrn2h+EDl0xtgL4AAAA=[0m[Pipeline] sh
+[2022-06-17T07:34:25.307Z] + git rev-parse HEAD
+[2022-06-17T07:34:25.315Z] [8mha:////4NOXw9Jk5Zb6jtRFy+3QtFrwTYytJ0Fj36RlYU96jWppAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJCgQSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdNtf+MHwA1n12mb4AAAA=[0m[Pipeline] echo
+[2022-06-17T07:34:25.315Z] Git Full Revision Number = 25f639ac67ab3187c4152417713591d03cb388cd
+[2022-06-17T07:34:25.315Z] 
+[2022-06-17T07:34:25.316Z] [8mha:////4B1fbLrTTmzYWe3uxra23luQ6H5/HvbHzyUnzdWq5Y2+AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICEqJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAetrn2uw/kXT3ZvgAAAA==[0m[Pipeline] }
+[2022-06-17T07:34:25.323Z] [8mha:////4GnfLfsw6cuYUiNgZZKYBQ7OwNy1D4U4KmIWbA9Q8iCcAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICEqJBqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFAedrn22w/XvmZlvgAAAA==[0m[Pipeline] // script
+[2022-06-17T07:34:25.329Z] [8mha:////4Ozb4/AtqwzT9x8hOeU+R01PtSWf6qD1xHwvzNWRQg2kAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigYSEUCpayw0vMIkxTqy7YDs4FS/ia/wBi0hUbLHa2WZeb1gGDzV7g52m3lJoLA5uNHlhYt9fHSfs+IINU2CnUeokudWnGSVHDXOKEhYCVpoax8GSibAWnXqoyiky1Tn6/B0FlLa9wxMKkc1R+fiFycPmNraB6ef5K4BpGCKU+22u3eEDGuJv1b4AAAA=[0m[Pipeline] }
+[2022-06-17T07:34:25.334Z] [8mha:////4Ca66JzsgAQ5RQyDFihspbkKvLLvQNz9164i8P4hXbxUAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSREJIiCqtlYYXmNgYJ9adsR2SihfxNf6ARSQqtljtbDOvN6xjgBMHg72mwVLsLHo3mrxw4jBcHU/Y8wU7pshOY6unlpVuFmw5aVhSlLASsNHUOY6WTIKt6OVDVk6Sqc4p5O8ooLTqDk8oRDYnGdIX5gC726gi08/zVwCz9wnKfZ2rPnwAKQE0ab4AAAA=[0m[Pipeline] // timeout
+[2022-06-17T07:34:25.338Z] [8mha:////4LEFoCBYOjYmSMt+K4vnXwor0P5MTVB0UkQykvD/ae9eAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgKBAqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDud7m2hw8ALI7kvgAAAA==[0m[Pipeline] }
+[2022-06-17T07:34:25.341Z] [8mha:////4K8lFxF/e6L9QqP48bSAgtUHWgJexkweDKAYX9qlNOWrAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSINIgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyjrQ659/QEzz9VYvgAAAA==[0m[Pipeline] // stage
+[2022-06-17T07:34:25.346Z] [8mha:////4PtEaLOmHPQF25+Nmp6N/N9rclonfJUWon/nninx7yJyAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUCKkLYuoaZeEEIQkhbfR/SVLaiRNxNe5AoBITHizbkvWeL6higCMFyzqDvcOoHBv8aHNiE4X+4mliHZ2ZIozkDRNmEqRNu1RBycCiooQVh7VB5Sk6tAk2vJN3WXuJtj6lkLcDh9LpGzyg4JmcZEjfMgfYXkcdCX+cvwCYhwTlbp+taT7P6g02yfCdwgAAAA==[0m[Pipeline] stage
+[2022-06-17T07:34:25.347Z] [8mha:////4DSfLjv7ftp3goGqYoIYVM1tKvyGp29894CK7Pjuye5hAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0KwNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPXl9jU8IAAAA=[0m[Pipeline] { (yaml情報の取得)
+[2022-06-17T07:34:25.355Z] [8mha:////4OXfznR3D35jkxoZBdbX0BwZ7h1Sy8uY9VyWTDpgkN5SAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0AyTE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAUsyu2PCAAAA[0m[Pipeline] script
+[2022-06-17T07:34:25.356Z] [8mha:////4IpYyU+PSo+fkY4AwV9U8+lAc0HzGs37CGP51VpMXIJKAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QyDE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxASgVHzvCAAAA[0m[Pipeline] {
+[2022-06-17T07:34:25.361Z] [8mha:////4PQK84tYViQwt1OGdCcf+DKljQXJHi4EItyzWb28+AIzAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCBUIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDREKHeHXPvt8AHrW/o6vgAAAA==[0m[Pipeline] sh
+[2022-06-17T07:34:25.777Z] + eval 'cat Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml | grep -o '\''ProfileDev: .*$'\'' | sed -e '\''s/ProfileDev: '\'''\''//'\'''
+[2022-06-17T07:34:25.778Z] ++ cat Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml
+[2022-06-17T07:34:25.778Z] ++ grep -o 'ProfileDev: .*$'
+[2022-06-17T07:34:25.778Z] ++ sed -e 's/ProfileDev: //'
+[2022-06-17T07:34:25.799Z] [8mha:////4B0HmQW9aJDqX84UXvNFoSJwPZLxsYuyxaHZufvI6AFHAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiGhBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw+qauEjvgAAAA==[0m[Pipeline] echo
+[2022-06-17T07:34:25.799Z] ASSET_PROFILE:
+[2022-06-17T07:34:25.803Z] [8mha:////4GIpNZPlYwZ5WJfBk0PqhobjwB1HkJLOxlv8b7NazlNXAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiUYAQSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wAaTnMCL4AAAA=[0m[Pipeline] sh
+[2022-06-17T07:34:26.204Z] + eval 'cat Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml | grep -o '\''UploadDev: .*$'\'' | sed -e '\''s/UploadDev: '\'''\''//'\'''
+[2022-06-17T07:34:26.204Z] ++ cat Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml
+[2022-06-17T07:34:26.204Z] ++ grep -o 'UploadDev: .*$'
+[2022-06-17T07:34:26.204Z] ++ sed -e 's/UploadDev: //'
+[2022-06-17T07:34:26.214Z] [8mha:////4Lcr1wM8e5agGQCv++RlTACWc4jxL8cAl1zSj2MXl01EAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSIIEQSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANEcrdIdd+O3wAKAjXEb4AAAA=[0m[Pipeline] echo
+[2022-06-17T07:34:26.215Z] UPLOAD_S3_ADDRESS:
+[2022-06-17T07:34:26.220Z] [8mha:////4AuZIT6ggbOsrIV0qTiTrM8oUs5ujxuCfYpOllJDC+ASAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSIBBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKYhQrk75Npvhw/vnpZevgAAAA==[0m[Pipeline] sh
+[2022-06-17T07:34:26.644Z] + eval 'cat Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml | grep -o '\''BuildDev: .*$'\'' | sed -e '\''s/BuildDev: '\'''\''//'\'''
+[2022-06-17T07:34:26.644Z] ++ cat Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml
+[2022-06-17T07:34:26.644Z] ++ grep -o 'BuildDev: .*$'
+[2022-06-17T07:34:26.644Z] ++ sed -e 's/BuildDev: //'
+[2022-06-17T07:34:26.652Z] [8mha:////4GdDySRC94otjBDbNSzlk/QnmLD45vIqb656CWnbnQFlAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSAUIoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDREKHeHXPvt8AGur41HvgAAAA==[0m[Pipeline] echo
+[2022-06-17T07:34:26.652Z] ASSET_BUILDPATH:
+[2022-06-17T07:34:26.655Z] [8mha:////4HiuDqp4tKtMLL7G7e+cIHeiwJceU0JwVY3As+iHM/naAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSBSFEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BOW+zlUfPv1f/pW+AAAA[0m[Pipeline] }
+[2022-06-17T07:34:26.661Z] [8mha:////4MSSX7/E2l6W0xXUdTczUKYRBzVjE4izKduzgZRVZcFGAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMLpCBKiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BGVd59ofPs68pSm+AAAA[0m[Pipeline] // script
+[2022-06-17T07:34:26.665Z] [8mha:////4PurG8yiRQTx4zhxBOnGmGWbOyzJ+6BE2pZoCEwuugv8AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMLpCBKiSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BGV9yLWvP4oTTEi+AAAA[0m[Pipeline] }
+[2022-06-17T07:34:26.669Z] [8mha:////4EzpLyJuEI8GbGCtQEYNdOA/cLzns3A0QVvo6+0B9N8/AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSBSFEldZKwwtMbIwT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYPBXtNgKXYWvRtNXjhxGK6OJ+z5gh1TZKex1VPLSjcLtpw0LClKWAnYaOocR0smwVb08iErJ8lU5xTydxRQWnWHJxQim5MM6QtzgN1tVJHp5/krgNn7BOX+kKuuP7nwF/S+AAAA[0m[Pipeline] // stage
+[2022-06-17T07:34:26.674Z] [8mha:////4DVNzGJ0E7PW/v7IZEJ0jVOGG2Wg4PAfm2xUNfU3QqlTAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUxIKEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WXbbz7P6g12UZYbwgAAAA==[0m[Pipeline] stage
+[2022-06-17T07:34:26.674Z] [8mha:////4DYR+/OBMeSTw1RD5oRwy5GSMsH6rYgIfzS63KuWu15cAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUNiTE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAUPegdTCAAAA[0m[Pipeline] { (Deploy iOS Asset)
+[2022-06-17T07:34:26.716Z] [8mha:////4OWfTrAoj7t3ibGAEEbUi0inMp+oeMz9DfBXEYjSHboBAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUMCEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LDy1zm5PCAAAA[0m[Pipeline] script
+[2022-06-17T07:34:26.717Z] [8mha:////4NwFbBae5x8ZmSBPdYA4lNnShIq9NnVNmlnLUU+8KJcmAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUggUJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLkh91s+/lZfACJxiXBwgAAAA==[0m[Pipeline] {
+[2022-06-17T07:34:26.722Z] [8mha:////4JDuFODo3BZUOzDsxvv1ByHf05h7p+5f6JtRcUTG0s3SAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSQIGEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK//dQuvAGulDDkvgAAAA==[0m[Pipeline] sh
+[2022-06-17T07:34:27.131Z] + /Applications/Unity/Hub/Editor/2020.3.21f1/Unity.app/Contents/MacOS/Unity -projectPath /Users/p3_dev/.jenkins/Design_JobNode/workspace/Design_DevBuild_Assets -quit -batchmode -executeMethod Cocone.ProjectP3.BuildAddressableAssets.BatchBuild -logFile /Users/p3_dev/.jenkins/Design_JobNode/workspace/Design_DevBuild_Assets/Logs/build_iOS_291_log.txt -buildTarget iOS -assetProfile
+[2022-06-17T07:37:21.121Z] 
+[2022-06-17T07:37:21.121Z] Aborting batchmode due to failure:
+[2022-06-17T07:37:21.121Z] executeMethod method Cocone.ProjectP3.BuildAddressableAssets.BatchBuild threw exception.
+[2022-06-17T07:37:21.121Z] 
+[2022-06-17T07:37:21.130Z] [8mha:////4LVkjN7QzDXi9g3Q5PvlIXpjgkJLrP4npcW2WdP7EsSeAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSICQkRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyv/vU9g0qmXSbvgAAAA==[0m[Pipeline] }
+[2022-06-17T07:37:21.138Z] [8mha:////4HbcTUDn0SQmIwdHCbjWKaMAC058u4HvVai8Kf7WYQ6FAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiUSAkRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyv/vU9g0S2+dqvgAAAA==[0m[Pipeline] // script
+[2022-06-17T07:37:21.162Z] [8mha:////4HEDHqsYYXipqwvpQUgXm9VeT7MGxNqUhPx8pby5sJg2AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKpAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcr97lPbNw1Zsji+AAAA[0m[Pipeline] }
+[2022-06-17T07:37:21.166Z] [8mha:////4JEsH+4TJ3MTN24m2fZ8NKYM6yB3syYH7liQRN/SSAnDAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCGQlR0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMHmfoKzrT+3fTtvjvr4AAAA=[0m[Pipeline] // stage
+[2022-06-17T07:37:21.171Z] [8mha:////4BeV8AtHLOE8XJl9n/JlUTQxc8J+xpMHd8tCBNQ05lgTAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUiAWEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK52Wbb7T/P6g2+AJk8wgAAAA==[0m[Pipeline] stage
+[2022-06-17T07:37:21.171Z] [8mha:////4L/W5WFJ4QfbWiGp0x29IyEXHQKnuLUTdNGdxmjyV+IKAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUkQoxdY2ycIKQhJA2+r8kKe3EibgadyBQiQkPlm3Jes8XVDHAkYJlncHeYVSODX60ObGJQn/xNLGOzkwRRvKGCTMJ0qZdqqBkYFFRworD2qDyFB3aBBveybusvURbn1LI24FD6fQNHlDwTE4ypG+ZA2yvo46EP85fAMxDgnLfZGt2n2f1Btc458LCAAAA[0m[Pipeline] { (Deploy Android Asset)
+[2022-06-17T07:37:21.177Z] Stage "Deploy Android Asset" skipped due to earlier failure(s)
+[2022-06-17T07:37:21.177Z] [8mha:////4G6bknja7JhcULZFPzISkZKx5yAhBq8ykl/wC2QzSSXHAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICJUJUaS03vMDExjix7oztkFS8iK/xBwKRqNhitbPNPF+wTBGOHC22hjpHqXEYfG+nhQPH7uJ5wJbP2DAl9galGSRrU88oORuYU5SwELAy1HhOjmyGtWjVXVVeka1OOU7fQUDp9A0eUIjJnFXMXxgjbK69Tkw/z18BjCFkKPe7T23fc7CAJr4AAAA=[0m[Pipeline] }
+[2022-06-17T07:37:21.180Z] [8mha:////4F0TrAxfzTVVRTlSZV3j3fMqiH/6xzYyF2i99e68B8TgAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiUREhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyjrfa5D/QE4S9PAvgAAAA==[0m[Pipeline] // stage
+[2022-06-17T07:37:21.185Z] [8mha:////4FbZjTXXGpn7fzWcDyzBXpxdtrxk2SG2oTf4UsKiKEbRAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUqBNCTF2jLJwgJCGkjf4vSUo7cSKuxh0IVGLCg2Vbst7zBVUMcKRgWWewdxiVY4MfbU5sotBfPE2sozNThJG8YcJMgrRplyooGVhUlLDisDaoPEWHNsGGd/Iuay/R1qcU8nbgUDp9gwcUPJOTDOlb5gDb66gj4Y/zFwDzkKDcNdn2zedZvQFsKHU7wgAAAA==[0m[Pipeline] stage
+[2022-06-17T07:37:21.186Z] [8mha:////4L+jBZz1H3wmUnYAvzWePG7j11s9Y6d81HA/ztj9PCJzAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0gAUhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LDypufCDCAAAA[0m[Pipeline] { (Declarative: Post Actions)
+[2022-06-17T07:37:21.193Z] [8mha:////4HbyUkrQljnasdk5DNkhBsAmvatdkFz/1ZlJ/cREy5vqAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSQIEQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFN8jx5PW+AAAA[0m[Pipeline] archiveArtifacts
+[2022-06-17T07:37:21.194Z] 成果物を保存中
+[2022-06-17T07:37:21.206Z] ファイル指紋の記録
+[2022-06-17T07:37:21.260Z] [8mha:////4NAXRCzc0L9ke1l2RuIfXkoffdt3umfJj4T6YUs7kXa2AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSICSEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK//dQuvAELosnevgAAAA==[0m[Pipeline] slackSend
+[2022-06-17T07:37:21.261Z] Slack Send Pipeline step running, values are - baseUrl: <empty>, teamDomain: cocone, channel: p3_jenkins, color: danger, botUser: false, tokenCredentialId: slack-token, notifyCommitters: false, iconEmoji: <empty>, username: Notify Slack By jenkins bot, timestamp: <empty>
+[2022-06-17T07:37:21.498Z] [8mha:////4MdfAvd3FPYpIG81EGb30ePB3TPgOqyRfnl9vHbD9wFkAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSICGEqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFDud5/avgF3l7T3vgAAAA==[0m[Pipeline] }
+[2022-06-17T07:37:21.507Z] [8mha:////4PxYZxB+mJoj20bzbny6swE91u5+236qGzNYT6OEv1wXAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJS0IAQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcr97lPbNwGwhpi+AAAA[0m[Pipeline] // stage
+[2022-06-17T07:37:21.513Z] [8mha:////4ApL0morB+ZH+dJE004LPFWUY0KEhhY6UNEqGi2agk7qAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiRBUhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyjrOtf+8AGs6QObvgAAAA==[0m[Pipeline] }
+[2022-06-17T07:37:21.519Z] [8mha:////4ALF4afxx7HbHcAZ1EnjWL5wlI8ocsRgFaBWdWZrDFLVAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxHA1rGizdB4gpjEGMjsYrIIlSfyat5BRmas/NV/r3mvN2xShBNFJzqLvcekvRjC6JYnJor9NdAkOroITZgoWNHaqSVjmxVbYgvrshwKCVuLOlDy6Bh2slMPVQaFrjxzXNxRQu7NHZ6QyaXMKvIX5gj722gS4a/zNwDzMDAUdVUx5PXhA7fnobK/AAAA[0m[Pipeline] // withEnv
+[2022-06-17T07:37:21.524Z] [8mha:////4M8x/+Q6eo2BR/nUk7NemVP5MwV3Yx7Q89ozfHc818WSAAAAox+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxFM7VjZZmg8QUxiDGR2IVmEyhN5Ne8gIzNW/uq/17zXGzY5wYmSF63DLmA2QfRx9MsTE6XuFmkSLV2FIcwUnWjc1JB15xUbYgfrihIqBVuHJlIO6Bl2qtUPXUeNvr5wWtxRQRnsAE8o1FJmnfgLc4L9fbSZ8Nf5G4C57xkqeZAMpZQfqGX04L8AAAA=[0m[Pipeline] }
+[2022-06-17T07:37:21.528Z] [8mha:////4PEKPQBG+qb9RFzy/L/c2VfkAhN415y4BSsaXQ3eSHXnAAAApB+LCAAAAAAAAP9tjTESgjAQRRcYC1tLDxHA1rGizdB4gpjEGMjsYrIIlSfyat5BRmas/NV/r3mvN2xShBNFJzqLvcekvRjC6JYnJor9NdAkOroITZgoWNHaqSVjmxVbYgvrshwKCVuLOlDy6Bh2slMPVQaFrjxzXNxRQu7NHZ6QyaXMKvIX5gj722gS4a/zNwDzMDAUdXVgyOvqA5AnZxG/AAAA[0m[Pipeline] // withEnv
+[2022-06-17T07:37:21.532Z] [8mha:////4LyI1nXYZsNSgvXkgxc/XT/A/b1CW3BLAOdRdaTovbeEAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYQDgg5R0VppeIFxjHFi3QX7glPxIr7GH4iIRMVWO9PM6w2LFOFI0cnWYucxGS/7MLjpyUyxuwbKsqWLNISJgpW1zTU19jRjTWxhniigVLC0aAIlj45hpVr90FXQ6Kozx8kdFBS+ucMThJrKrCN/YYywvg1NIvx1/gZg7HuGcrvZMYj9BzEyYQ++AAAA[0m[Pipeline] }
+[2022-06-17T07:37:21.537Z] [8mha:////4IMkx9E9hp9R0vaG7a8gVuAH3D9CZ4QWfrV9ymyQMiM9AAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYQDgg5R0VppeIFxjHFi3QX7glPxIr7GH4iIRMVWO9PM6w2LFOFI0cnWYucxGS/7MLjpyUyxuwbKsqWLNISJgpW1zTU19jRjTWxhniigVLC0aAIlj45hpVr90FXQ6Kozx8kdFBS+ucMThJrKrCN/YYywvg1NIvx1/gZg7HuGcrvZM4jdB4J7JSO+AAAA[0m[Pipeline] // node
+[2022-06-17T07:37:21.541Z] [8mha:////4FJ+HI7k4U2qe6nxvA3jIMOW5VEKDDXw84Qo2APVP4suAAAApB+LCAAAAAAAAP9tjTEOwjAQBM+JKGgpeYQDSFSIitZKwwuMY4wT6y7YF5yKF/E1/kBEJCq22plmXm9YpAhHik62FjuPyXjZh8FNT2aK3TVQli1dpCFMFKysba6psacZa2IL80QBpYKlRRMoeXQMK9Xqh66CRledOU7uoKDwzR2eINRUZh35C2OE9W1oEuGv8zcAY98zlNvNnkHsPqRiQmm+AAAA[0m[Pipeline] End of Pipeline
+[2022-06-17T07:37:21.552Z] ERROR: script returned exit code 1
+[2022-06-17T07:37:21.657Z] Finished: FAILURE

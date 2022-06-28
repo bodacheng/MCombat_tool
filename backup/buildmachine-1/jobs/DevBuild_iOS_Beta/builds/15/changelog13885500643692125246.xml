@@ -1,0 +1,124 @@
+commit 289a0d95e06d268658d76e4d13ec0a89705f0423
+tree 04cc7974b6c619bf6647cbc56f33159fecdce2fe
+parent a61a97892d5c59c14b2d53806ad4c79697fed10d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 20:29:40 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 20:29:40 +0900
+
+    buildUserが空白になることがあるので、env.BUILD_USER_IDを付与
+
+
+:100644 100644 69c3bc5a8715f57ec70602c79b8b7e1731ececcd e0a6ecbf6e6c42e5db80a2d864b148564dab9036 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 27fd08aeedddaeca3f74ffb0f3132534a9a9427b dc15ac55446a9304fde67494d9d8915b8ae13bc4 M	pipeline_script/DevBuild/ios/build.groovy
+commit a61a97892d5c59c14b2d53806ad4c79697fed10d
+tree ed3d5798f03cac6d7d91d0eff898c5a459d4a3c4
+parent dc2abc403ece9d3a22e7e75d11c09c2767a91574
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 18:07:40 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 18:07:40 +0900
+
+    [android]GitLogの取得タイミングミスったので修正
+
+
+:100644 100644 d9486a3ca4b1c253f0e3b086241a508bb373c9eb 69c3bc5a8715f57ec70602c79b8b7e1731ececcd M	pipeline_script/DevBuild/android/build.groovy
+commit dc2abc403ece9d3a22e7e75d11c09c2767a91574
+tree b187191adcc138659cca3af1dfc1656f47333be4
+parent bda1751ad927e1cb266279179c2b091fb5f5467d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 17:33:35 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 17:33:35 +0900
+
+    [build][android]groovyファイル名が変更になったので対応
+
+
+:100644 100644 56bc8c87c86f8803a144bc75dc98117f437f0ead e82f18af2a5f0da7307ffb4de200c09570406e39 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit bda1751ad927e1cb266279179c2b091fb5f5467d
+tree 9a9a0483bb88b2c37d9d6d6e8b3c98a1f51dafc7
+parent a1414648f766073208327c494233689f3e3168aa
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 17:30:36 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 17:30:36 +0900
+
+    [build][iandroid]スラック通知を少し修正
+
+
+:100644 100644 4e2893f9de22dd2e0946ef3d8fb5f424735b87eb d9486a3ca4b1c253f0e3b086241a508bb373c9eb M	pipeline_script/DevBuild/android/build.groovy
+commit a1414648f766073208327c494233689f3e3168aa
+tree 33b0b623ffbcee791b7b9b063eab7f1c453a5683
+parent 78c0e12c82d5616e7aac0c61348d87bf7a34f33c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:59:44 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:59:44 +0900
+
+    [ios]リリースノートの文字列生成でコケてそうなので全部くっつけておく
+
+
+:100644 100644 3fb26f0bd2d14fd8b88a78c64dffaec456e2789e 27fd08aeedddaeca3f74ffb0f3132534a9a9427b M	pipeline_script/DevBuild/ios/build.groovy
+commit 78c0e12c82d5616e7aac0c61348d87bf7a34f33c
+tree edc9ad54f86963b3bc85069909909fd358a04ad9
+parent 6393f068ecb2c9a6807e69264c8a99a6e3a51da1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:27:12 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:27:12 +0900
+
+    [ios]def宣言ミスを修正
+
+
+:100644 100644 a5682bdbf112a3c4ca9b34b3f063835f3824cdeb 3fb26f0bd2d14fd8b88a78c64dffaec456e2789e M	pipeline_script/DevBuild/ios/build.groovy
+commit 6393f068ecb2c9a6807e69264c8a99a6e3a51da1
+tree 24554b9a504c8e147f3bba50a1ede28b445f5c36
+parent 628f2d2288c48c0baca001e930f564a8fcb11d26
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:21:46 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:21:46 +0900
+
+    [ios]チェックアウト終わったタイミングでgit log取得
+
+
+:100644 100644 96c0d78c24fc5ad760992988837b3ec48137fd98 a5682bdbf112a3c4ca9b34b3f063835f3824cdeb M	pipeline_script/DevBuild/ios/build.groovy
+commit 628f2d2288c48c0baca001e930f564a8fcb11d26
+tree e43a589339f4287f73ed61158608d22deb46eab8
+parent 81bb427e43beb5f5b869c1f6f350738a597d88cf
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:56:58 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:56:58 +0900
+
+    [utils]gitutilityの調整
+
+
+:100644 100644 4eb21cc3326cee60da3038153bdec51999dc960a 96c0d78c24fc5ad760992988837b3ec48137fd98 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 1174e1ebd8dcda569e972109e0af96d27e093896 b368a02e74ddd68b42525030fc3580286bac3187 M	pipeline_script/utils/gitUtility.groovy
+commit 81bb427e43beb5f5b869c1f6f350738a597d88cf
+tree db14c2a52344afece3cad487688e2abf0dabedf1
+parent 757d04f13fb5353c7796274f1745f68ca55f2ca3
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:48:56 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:48:56 +0900
+
+    [ios]メッセージの変更
+
+
+:100644 100644 1961ed1cacd922420955ab1e8bd5767222b20d8a 4eb21cc3326cee60da3038153bdec51999dc960a M	pipeline_script/DevBuild/ios/build.groovy
+commit 757d04f13fb5353c7796274f1745f68ca55f2ca3
+tree c541f2a4c3288fe5a1d879ed740dce91c6388a4c
+parent 858bc89f8123a5230b122087210743c7b7b12578
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:04:03 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:04:03 +0900
+
+    通知設定の調整
+
+
+:100644 100644 c1b3048c83a2ea9ad006c8b3c04ce0a5497592e2 1961ed1cacd922420955ab1e8bd5767222b20d8a M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 eb9f137279c03871ca33c25d80cc5ced702477a9 e61e470b9333086dc7cb5c16a34a6f9816172f73 M	pipeline_script/utils/notify/SlackNotify.groovy
+:100644 100644 29ebb4cb3941ec1e77719f6b2c62baebf4b8b83f d4d84c7df9eac54411f566be692bf7fbff9bf991 M	pipeline_script/utils/notify/slackUtility.groovy
+commit 858bc89f8123a5230b122087210743c7b7b12578
+tree 59031aaf3e964bae67369940613325202cd8086e
+parent 0384177824b8572ec8ba8db7d695d93988d2810c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 18:27:34 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 18:27:34 +0900
+
+    [utils]コマンドの誤記を修正
+
+
+:100644 100644 8ee0dfc60c3ef29b0843679864596878355bd794 886f5571380600d8042ef4b053d18e7dfda69e8f M	pipeline_script/utils/appcenterUtility.groovy
+commit 0384177824b8572ec8ba8db7d695d93988d2810c
+tree 63e5cff6b9f7115ec5c0672181fa9c0ca7aed3c0
+parent 084241804571acc5ce05ff9285bd0ffa2445f388
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 17:43:23 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 17:43:23 +0900
+
+    [ios]重複があったので削除
+
+
+:100644 100644 2d00f5297a1b3c4148b423c74794a430f650fc81 c1b3048c83a2ea9ad006c8b3c04ce0a5497592e2 M	pipeline_script/DevBuild/ios/build.groovy

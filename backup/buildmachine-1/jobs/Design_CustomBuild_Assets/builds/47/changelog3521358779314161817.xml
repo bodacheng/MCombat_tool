@@ -1,0 +1,10 @@
+commit b188748c74be7413cd4b55c988cc54e455c4240f
+tree cf1128788e4ca7eeed286cef30471c7053bb4fb6
+parent 835b7ac9f8b5e162fdd60207f1f9670d9fb4ea51
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-15 09:44:08 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-15 09:44:08 +0900
+
+    update design custom build
+
+
+:100644 100644 a9f6a93f871ef8abc3cfb8039112647d7c9f34d1 4ad3bdefd56c76ce474b9eb56bf644bbe200a967 M	pipeline_script/Design/build_asset_upload_custom_server.groovy

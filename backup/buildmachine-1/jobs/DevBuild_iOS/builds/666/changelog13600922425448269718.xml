@@ -1,0 +1,29 @@
+commit 1ea94344de4c62c43f6161403bf5a7e213003add
+tree d2b6bdee74c8d98339d317ad4e901f0f74e094bf
+parent b0d829a352ed12679f0d5333155232608e186bea
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 23:16:31 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 23:16:31 +0900
+
+    add friend count space
+
+
+:100644 100644 d88eb12dba62855f4ed009d56fc7c3ff77f2694c dab1e483e75a7607899fcd61d63577017d6555a9 M	Assets/Resources/UI/Friend/FriendListModal.prefab
+commit b0d829a352ed12679f0d5333155232608e186bea
+tree 8d25ae4e4340ed8761efe8198ae179090bb0c431
+parent 2ff72a223981f128464a3ec245f701ba50567fd8
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 23:08:22 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-06 23:08:22 +0900
+
+    update friend filter
+
+
+:100644 100644 5ec246672b49f98a176dab36a732c14137b6d4eb c84662907eb1c4798101ffc75be3ef2587b37cb0 M	Assets/App/Scripts/Contents/Friend/FriendFilter.cs
+:100644 100644 4be48213b198756a95260e55fb5130f0c6b5dcca 04d2fca6530325c70e4876f87fb0b0ab712dc634 M	Assets/App/Scripts/Contents/Friend/FriendFilterSelectItem.cs
+:100644 100644 a6009c96a83d15eec384d407b2aa383c0ef5d4cb 0f13f96eb9d940b0f6379608bc7615c677fb08e9 M	Assets/App/Scripts/Contents/Friend/FriendFilterSelectModal.cs
+:100644 100644 529719c2942bc7540e0af78f0a944481b6d18296 7a92e2af92af1dfb95c078e7c1f1145b4ac92419 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 bc917ab4e0b96f9c149b3085136e9663b7f4efb5 5376229199abfab7e12039b159ebb4f7d9b6ec05 M	Assets/App/Scripts/Contents/Friend/FriendListModal.cs
+:100644 100644 f556e0117235e2f8cd5d53d4c9536d0d63076686 6966711a3b33a1179cafb1b4638fe164d6095d9d M	Assets/App/Scripts/Contents/Friend/FriendModel.cs
+:100644 100644 24c5fc039480c8ba2b1b218ef4a35619c42f58a3 623917082d6d943b5551b2d67240bc8b4d6f939c M	Assets/App/Scripts/Contents/Friend/FriendOrderSelectItem.cs
+:100644 100644 79acae82c3260db3cfc1211593992ed1f4f952c2 89169d87e3c51f1018d8f78e143345d9ffbc115c M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 f9c7b052727c17bf3d81315caf0aab73f24a9dca d96b219756905bcd9dc912d9963644ba05ee4278 M	Assets/Resources/UI/Friend/FriendFilterSelectModal.prefab
+:100644 100644 37925b4c109da10c7197fbb333b4670d4ebde251 d88eb12dba62855f4ed009d56fc7c3ff77f2694c M	Assets/Resources/UI/Friend/FriendListModal.prefab

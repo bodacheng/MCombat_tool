@@ -1,0 +1,94 @@
+commit b256c473417abd2fe9fad3ce2a2f176c87d52232
+tree a97bfe12edebab3698ef336b91f92686a1c9b057
+parent f1cb4e9ec17161049fae8a0e39708fc2cd1efc96
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 17:27:19 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 17:27:19 +0900
+
+    フレンドリストの木の情報修正抜け対応
+
+
+:100644 100644 c9362d60373cb886e886111e7c210f8dcdb7598c de809c3c2f21e34ed5e636aeb92dc1081695f247 M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+:100644 100644 19e0928d2082ae17501b87afe2b9ba5f49480892 a0bf5440ec2c56b59007ca05fa3872f0f8c8959b M	Assets/Resources/UI/Friend/FriendListItemAccepting.prefab
+:100644 100644 6e813292ce4e0d0407847a10d969d28b92284c0f a8a09855f6588a7dfcff86014e603b0932a337b3 M	Assets/Resources/UI/Friend/FriendListItemApplying.prefab
+:100644 100644 2c78c7c25b9f2d377778b7fe17eb09f5f8e4e861 44aba2b712b1349b105f2b3795607149b1820c53 M	Assets/Resources/UI/Friend/FriendListItemUser.prefab
+commit f1cb4e9ec17161049fae8a0e39708fc2cd1efc96
+tree 844f9ab3792d3d9775758de41ae74ef898d921f6
+parent 45684cc625ae58ecfd19a98da56e114c874d5ee0
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 17:13:50 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 17:14:22 +0900
+
+    プロフィールのフレンドアイコン修正
+
+
+:100644 100644 d72ee53f173b47ecf455cade799b78fc00b056da a1e33fa2b4aaf67b1c9f7089000af58d169d4646 M	Assets/App/Scripts/Contents/Profile/ProfileLayer.cs
+:100644 100644 1f1e66136bf981f3324de177ed54d9d53e8af8c7 832d5c5d5eba2eab93063c5bf23ef97011859639 M	Assets/Resources/UI/Profile/ProfileLayer.prefab
+commit 45684cc625ae58ecfd19a98da56e114c874d5ee0
+tree c6ad2b24fa46813cc84c4f60e809ec013c317f28
+parent 36acd4f6374724ba865ce9cfc72d9b54ebbf59d2
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 16:23:46 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 16:23:46 +0900
+
+    日付を跨いで他人の星に行った時のピア送信ステータス更新
+
+
+:100644 100644 b1480ba6a9eee1ce23c7ffbf6f6b7d93de42a7c2 51baeb3d37dde45c85c81a079ef53eb2c441bf1f M	Assets/App/Scripts/Application/DataKey.cs
+:100644 100644 3e9397d1c04174a26a5665131637eac6bbca078d c9362d60373cb886e886111e7c210f8dcdb7598c M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+:100644 100644 24815df8e40b5bf5878725f53731047d9c7b285e 5d2878cd226a640c4294ff99d59841a4ea6c8079 M	Assets/App/Scripts/Scenes/WorldScene.Effect.cs
+:100644 100644 6841039fed2d95d844ab5d101a1b0b4260731358 ebacb316be1bff9c8e4ae63c74edfc4ef2df670c M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 188da1beb2ed19f2657a543314867df8da2dfcaf dfd41b5d75859feb0c531af171441b622b6c9f96 M	Assets/App/Scripts/Scenes/WorldScene.cs
+commit 36acd4f6374724ba865ce9cfc72d9b54ebbf59d2
+tree 146aec6303922dc99fda9a57254603527c3f23f1
+parent cabc504d58edc57864566258391f982c3a4f24a7
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 15:12:12 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 15:12:12 +0900
+
+    ピア送信後のUI更新修正
+
+
+:100644 100644 99b4a75b1f70c35aacadbcb3bd9b500ca3206f90 72e15723dd440f37e76addd42b5b7dc4b3b4c4e0 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 250dd67eb7fe07737f71c43256cee484d6697b55 058a6d840b08c4487eb24f1a013d9d33b5fcb7d3 M	Assets/App/Scripts/Contents/Friend/FriendService.cs
+:100644 100644 0e27ef72a00274d6b414f7849c3fce34bef481ba fc4716c30e856f06d777fe453dd4ab1e774fb2fa M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 089c5cbc6270fccb16aa8146c523ad7f1d767d7a 6841039fed2d95d844ab5d101a1b0b4260731358 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit 181a8818aac838252dd9d2c33d19120a4145d56f
+tree 286bc6ce8e9bf6331cd0830e218fd7580cf6e3b7
+parent bac7663fe373c457c2e6566c87057a3e91f9846b
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-21 14:40:04 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-21 14:40:04 +0900
+
+    ProfileLayer.prefab
+
+
+:100644 100644 b503f8e6205198132ce8740b1d501e300960039c 1f1e66136bf981f3324de177ed54d9d53e8af8c7 M	Assets/Resources/UI/Profile/ProfileLayer.prefab
+commit bac7663fe373c457c2e6566c87057a3e91f9846b
+tree b0878ca50113aed05869bc193e3eeb40fc3aaab7
+parent 26b3ce3781bca25ceafc5970f7a23847f5c4cc10
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-21 14:09:24 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-21 14:13:05 +0900
+
+    交換リクエスト、プロフィール導線
+
+
+:100644 100644 6275ff52ea52d70e6dc7571fd4260117f56318e9 ad2927e090e59253e22017cf93ec7d3e24306a36 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 96d3ccf14298f7ab15c2aa9f8f5f0c59bba02cc3 0e27ef72a00274d6b414f7849c3fce34bef481ba M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 f2c4ee277f4aaf44f9e154e3a04c42547abdbd3e d72ee53f173b47ecf455cade799b78fc00b056da M	Assets/App/Scripts/Contents/Profile/ProfileLayer.cs
+:100644 100644 7fc87b2eca3481a36f0af5f36d16346b7b29d2c1 089c5cbc6270fccb16aa8146c523ad7f1d767d7a M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit 60680fea37daf49d9eb0dd436176b457b993d1b0
+tree e18f1223b076e50de8beb30b9e72a66e84675b72
+parent 26b3ce3781bca25ceafc5970f7a23847f5c4cc10
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 14:12:39 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 14:12:39 +0900
+
+    ピアプレゼントを閉じるタイミングで通知を更新する
+
+
+:100644 100644 052780ad9dc7394b3be6abd0fb17a8e7b2993a4a 3e9397d1c04174a26a5665131637eac6bbca078d M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+commit 26b3ce3781bca25ceafc5970f7a23847f5c4cc10
+tree c3c0f3f6053aff17b863bd28bf788a29d3316932
+parent d84cfa4d067e8c770b3df09137a0f4bb8ee7a260
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 14:05:25 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 14:05:25 +0900
+
+    プロフィールの全画面表示復活
+
+
+:100644 100644 af83df998c60ad86dd67315e822447d22f20e535 f2c4ee277f4aaf44f9e154e3a04c42547abdbd3e M	Assets/App/Scripts/Contents/Profile/ProfileLayer.cs

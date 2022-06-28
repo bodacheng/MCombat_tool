@@ -1,0 +1,317 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1145.v7f2433caa07f">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>matsumoto_rika</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <hudson.plugins.jobConfigHistory.JobConfigBadgeAction plugin="jobConfigHistory@2.28.1">
+      <configDates>
+        <string>2022-06-17_21-18-43</string>
+        <string>2022-06-17_21-13-01</string>
+      </configDates>
+    </hudson.plugins.jobConfigHistory.JobConfigBadgeAction>
+    <org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction plugin="buildtriggerbadge@251.vdf6ef853f3f5">
+      <cause class="hudson.model.Cause$UserIdCause" reference="../../hudson.model.CauseAction/causeBag/entry/hudson.model.Cause_-UserIdCause"/>
+    </org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.19">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@1.8.5">
+      <stagesUUID>1c0b162d-f97e-4c44-9f43-60a43946dfbf</stagesUUID>
+      <pipelineDefs>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@1.8.5">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>customビルド</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">build job: &apos;DevBuild_Android_Custom&apos;,
+                    parameters: [
+                    listGitBranches(name: &apos;BRANCH&apos;, value: &apos;master&apos;),
+                    extendedChoice(name: &apos;BUILD_KIND&apos;, value: &apos;QA&apos;),
+                    extendedChoice(name: &apos;AssetKind&apos;, value: &apos;QA&apos;),
+                    text(name: &apos;RELEASENOTE&apos;, value: &apos;&apos;), extendedChoice(name: &apos;UNITY_VERSION&apos;, value: &apos;2020.3.21f1&apos;),
+                    booleanParam(name: &apos;CLEAR_CACHE&apos;, value: false),
+                    booleanParam(name: &apos;needCleanWorkspace&apos;, value: false)]</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>1c0b162d-f97e-4c44-9f43-60a43946dfbf</uuid>
+          </stages>
+          <postBuild>
+            <conditions>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>failure</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                      <name>script</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>scriptBlock</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">def message = &quot;&quot;&quot;${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull:
+                \n${BUILD_URL}
+                \n定期ビルド
+                \nbranch : master
+                &quot;&quot;&quot;
+                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+                    teamDomain: env.SLACK_DOMAIN,
+                    color: &quot;danger&quot;,
+                    message: message</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>aborted</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                      <name>script</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>scriptBlock</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">def message = &quot;&quot;&quot;${NOTIFY_EMOJI} :construction:*ビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:
+                \n$BUILD_URL
+                \n定期ビルド
+                \nbranch : master
+                &quot;&quot;&quot;
+                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+                    teamDomain: env.SLACK_DOMAIN,
+                    color: &quot;warning&quot;,
+                    message: message</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+            </conditions>
+          </postBuild>
+          <environment>
+            <variables class="linked-hash-map">
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>NOTIFY_EMOJI</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">:droid:</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+            </variables>
+          </environment>
+          <agent>
+            <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+              <value class="string">PeriodBuild_JobNode</value>
+            </variables>
+            <agentType>
+              <key>label</key>
+            </agentType>
+          </agent>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+      </pipelineDefs>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder plugin="credentials@1087.1089.v2f1b_9a_b_040e4">
+      <boundCredentials class="concurrent-hash-map"/>
+    </com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder>
+    <hudson.plugins.git.util.BuildData plugin="git@4.11.3">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.11.0">
+              <sha1>e2bda3a5c6af0b30bd97ec89618ff13ffe98756a</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>3</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://git-1.cocone.jp/projectp3/p3-tools</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.13">
+      <revisionStates>
+        <entry>
+          <string>git https://git-1.cocone.jp/projectp3/p3-tools</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.32"/>
+    <org.jenkinsci.plugins.pipelineConfigHistory.view.BadgeAction plugin="pipeline-config-history@1.6">
+      <url>pipeline-config-history/showAllDiffs?timestamp1=2022-06-17_21-25-46&amp;timestamp2=2022-06-17_21-42-01&amp;anyDiffExists=true</url>
+    </org.jenkinsci.plugins.pipelineConfigHistory.view.BadgeAction>
+  </actions>
+  <queueId>8720</queueId>
+  <timestamp>1655468792790</timestamp>
+  <startTime>1655468792817</startTime>
+  <result>SUCCESS</result>
+  <duration>928630</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>pipeline {
+    agent {
+        label &quot;PeriodBuild_JobNode&quot;
+    }
+
+    environment {
+        NOTIFY_EMOJI = &apos;:droid:&apos;
+    }
+
+    stages {
+        stage(&apos;customビルド&apos;) {
+            steps {
+                script {
+                    build job: &apos;DevBuild_Android_Custom&apos;,
+                    parameters: [
+                    listGitBranches(name: &apos;BRANCH&apos;, value: &apos;master&apos;),
+                    extendedChoice(name: &apos;BUILD_KIND&apos;, value: &apos;QA&apos;),
+                    extendedChoice(name: &apos;AssetKind&apos;, value: &apos;QA&apos;),
+                    text(name: &apos;RELEASENOTE&apos;, value: &apos;&apos;), extendedChoice(name: &apos;UNITY_VERSION&apos;, value: &apos;2020.3.21f1&apos;),
+                    booleanParam(name: &apos;CLEAR_CACHE&apos;, value: false),
+                    booleanParam(name: &apos;needCleanWorkspace&apos;, value: false)]
+                }
+            }
+        }
+    }
+
+    post {
+        failure {
+            script {
+                def message = &quot;&quot;&quot;${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull:
+                \n${BUILD_URL}
+                \n定期ビルド
+                \nbranch : master
+                &quot;&quot;&quot;
+                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+                    teamDomain: env.SLACK_DOMAIN,
+                    color: &quot;danger&quot;,
+                    message: message
+            }
+        }
+        aborted {
+            script {
+                def message = &quot;&quot;&quot;${NOTIFY_EMOJI} :construction:*ビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:
+                \n$BUILD_URL
+                \n定期ビルド
+                \nbranch : master
+                &quot;&quot;&quot;
+                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+                    teamDomain: env.SLACK_DOMAIN,
+                    color: &quot;warning&quot;,
+                    message: message
+            }
+        }
+    }
+}
+</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>1115395664</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>67208263</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>2332959699</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>21734917</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>606605541</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>29</iota>
+    <head>1:29</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@4.11.3">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://git-1.cocone.jp/projectp3/p3-tools</url>
+            <credentialsId>1f53a4c2-f053-4789-9846-eb486d44a572</credentialsId>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions/>
+      </scm>
+      <node>PeriodBuild_JobNode</node>
+      <workspace>/Users/p3_dev/JenkinsJobs/PeriodBuild_JobNode/workspace/DevBuild_Android_Period</workspace>
+      <changelogFile>/Users/p3_dev/.jenkins/jobs/DevBuild_Android_Period/builds/3/changelog11254994885438188575.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

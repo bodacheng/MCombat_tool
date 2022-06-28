@@ -1,0 +1,163 @@
+commit aba7b7cfa5a1e366000452da4d0b4011045b4797
+tree cfac10b6550d535ac210d8d45a72fdf80042e380
+parent 32325b9b15b57ffcf18a820cc802d60fddbcfd46
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 21:38:10 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 21:38:10 +0900
+
+    フォローリスト、エラーで止まらないように修正
+
+
+:100644 100644 9d736abd22d50e25ae5acda597167104a5513792 8dbb85a44e839084f24d6be1cae2e103ff1f2b54 M	Assets/App/Scripts/Contents/Relation/RelationDefines.cs
+:100644 100644 79097542904d02c465685a6dffe2a5651ee8cafd d069ff48c30f1d3003d5bcb6fde3eefea77d7d78 M	Assets/App/Scripts/Contents/Relation/RelationListItem.cs
+:100644 100644 9d3035339caa087cf421b069c9abfec769ad2173 0ce234c082a3a3ca90254d402c55604efb868042 M	Assets/Resources/UI/Relation/Item/RelationListItem.prefab
+:100644 100644 95df0f694b78ffa81c03746265a5f427493c3df3 427367355a594c7fa5b55e083262045c0f54da8d M	Assets/Resources/UI/Relation/RelationListLayer.prefab
+commit 32325b9b15b57ffcf18a820cc802d60fddbcfd46
+tree c785dfe6cd86ac40898f596bd36bebc4185071a4
+parent 920a4f4b4810462a6baf4aebc7daa201704c0279
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 20:20:46 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 20:20:46 +0900
+
+    UserInfoItemレイアウト調整
+
+
+:100644 100644 bb9e561c643d1e676471a9f1579e94c9789fb40f a8e58a59801ee415e6b645c92570098e094e2a53 M	Assets/Resources/UI/Common/UserDetail/UserInfoItem.prefab
+commit 93046226781fc1f20b882846d35782d2805b1472
+tree 1abc846caf6738e0d418871733d91e51085de840
+parent 75a5adde312a04a86dd66fb120916702045f7a30
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 17:47:08 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 17:47:08 +0900
+
+    UserInfoItemレイアウト調整
+
+
+:100644 100644 f656c88a1a4f92c44ac0451ea246a5bc35c92e7e b7bac34844b6a4d9082c2b650499ff4c4b8b6717 M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+:100644 100644 c0c279d6bd1525410094ae49de2a3924c857aa99 bb9e561c643d1e676471a9f1579e94c9789fb40f M	Assets/Resources/UI/Common/UserDetail/UserInfoItem.prefab
+commit b959b024d46ff1bfc6cd8b7e9a8ecfa31518c75e
+tree 2c6e4bb4da8bd31d6cd3ac243e3e05a09b1425ad
+parent 36e6809103488dde3b8c1015125d5253317fb01b
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 17:29:19 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 17:29:19 +0900
+
+    TMPにハートの文字２種類を追加
+
+
+:100644 100644 4d49a740e537ae25eb04ea6a9394bfc6742fb42a 2851feb88c40b8dda04c5e2adfc5914ab485a8fd M	Assets/TextMesh Pro/Addressables/Fonts/FOT-UDMarugo_LargePr6N-DB SDF.asset
+commit f62c61edad08dbaf3b712e023f6ee9248c1f348f
+tree 1bb8e219eabb72ed4db8642592d7d84590cd3789
+parent 99b921bd451f936171c7f0ed870883701cb3f713
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 17:08:35 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 17:08:35 +0900
+
+    文言の調整
+
+
+:100644 100644 0a77f681095ff7ca90a6b5d82e74bb20aba914fd bff38c9286b116d2c5e04e4453c5557feb091948 M	Assets/Resources/UI/Relation/Item/VisitorListItem.prefab
+commit 36e6809103488dde3b8c1015125d5253317fb01b
+tree 9cb709210ded994d9e5567b4b0e990284a2faa1f
+parent 4734f74d444e50a2c7cb1120f0b3a5db8d37146f
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:59:40 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:59:40 +0900
+
+    web view の長押し保存機能を無効にする
+
+
+:100644 100644 8e08831e04dbc2f5378e718df5963322e1805764 87436cb32dba84e22e2cde21bd5f1d1a6f2a1950 M	Assets/App/Scripts/Contents/Announce/Dialog/AnnounceWebViewDialog.cs
+:100644 100644 17f1bc736748070f4fd8d58a8617c4372f8aa3f7 5d59089db2114ca76dfe075b74177cb84485350b M	Assets/App/Scripts/Contents/Web/WebViewStretchLayer.cs
+commit 99b921bd451f936171c7f0ed870883701cb3f713
+tree 5ec26c780f2d1e4517516b170a80de432c6cbf19
+parent 1d64a0744a9888ac0a93971c6bf127a7b8457851
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 16:57:51 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 16:57:51 +0900
+
+    ビジターリストをUserInfoItemを使う形式に変更
+
+
+:100644 000000 fac464f3ef9977f11217bd0b1b48f027ccd3d427 0000000000000000000000000000000000000000 D	Assets/Resources/UI/Common/UserDetail/UserVisitorInfoItem.prefab
+:100644 000000 30de0899f618afbad062561d661deebcaa1ab29b 0000000000000000000000000000000000000000 D	Assets/Resources/UI/Common/UserDetail/UserVisitorInfoItem.prefab.meta
+:100644 100644 c035d89b832b1f0061f9767b18c6bcdf197fcacb 0a77f681095ff7ca90a6b5d82e74bb20aba914fd M	Assets/Resources/UI/Relation/Item/VisitorListItem.prefab
+commit 4734f74d444e50a2c7cb1120f0b3a5db8d37146f
+tree c40e32be99536a9989a74b2db8b9aa090aa05cb9
+parent 5fd9e73e36192fe78901053f78f4a3b03fc3e6f7
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:49:30 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:49:43 +0900
+
+    チュートリアル文言修正
+
+
+:100644 100644 b3402267ec80b3ffac02f24bf605a6bfaa81ee5b d63089f222e00304f8b01ff8564ee22791ac9563 M	Assets/App/Scripts/Common/Defines/TutorialDefines.cs
+:100644 100644 c0e4692f8eb991dc7f0b499ce0d2930b2d0cb6c9 2e841784b1a70036d9728435a8c98aee8a2847ec M	Assets/App/Scripts/Scenes/Tutorial/Actions/Tutorial53MyExanpleHandler.cs
+commit 8285c234eff17be05dc7a5ea2b90e6626f53e25e
+tree 06edd3b146bd11373a88cd29d4b2ddb68cadb66d
+parent 83eaa4146ccc670c604d87464c4228e113dde869
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 16:15:19 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 16:15:19 +0900
+
+    UserInfoItemで表示非表示処理を修正
+
+
+:100644 100644 fdfe1f4fc0e3305f18788f4a14511b9ace0668b3 426394c4fd156d283b67bd18be996ab7cd2c139a M	Assets/App/Scripts/Contents/Friend/FriendListLayoutItem.cs
+:100644 100644 6e84c94191f79889c04b60f82cd8207b175d3ac4 0a1587ace7f59984451d22c9f149a644a120b1ef M	Assets/App/Scripts/Contents/Main/MainNameplateLayer.cs
+:100644 100644 87d93b974e9c4954cac766042d559d648155e1ee 6bf1108369ade856cb6c88117925675e27f86e12 M	Assets/App/Scripts/Contents/Party/UserRankingItem.cs
+:100644 100644 a4cb07dac612bbc3a35492d5789025e475488d2e d26d21c704680fc0fa70ec2dddc5f6ff93e721e3 M	Assets/App/Scripts/Contents/PartyTop/GiftHistoryCell.cs
+:100644 100644 c81223782b94c83193c4a9d3f7c561ef6f98cace f656c88a1a4f92c44ac0451ea246a5bc35c92e7e M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+:100644 100644 677878c0ffce74fa12d7e2499c8072313fdf90ef 75399f82e7e5eccde1eab0805e33713961c60c10 M	Assets/App/Scripts/Contents/Relation/UserListLayoutItem.cs
+:100644 100644 57906e8702249875612d5648e1b5fbd26324bbd9 c0840c27d913e55ed7dc02d6c1de55a85fc7f771 M	Assets/App/Scripts/Contents/Sns/SnsCommentCell.cs
+:100644 100644 543b3ebcbe5ab5cf3d6f8cc9578c0cc3e99232ca c0c279d6bd1525410094ae49de2a3924c857aa99 M	Assets/Resources/UI/Common/UserDetail/UserInfoItem.prefab
+:100644 100644 40f4a404dce974ea0f6d52bd446fa3c553ce66a2 ed1170b3f7c3aaa4340b61e2d0f58682ac7a3a8f M	Assets/Resources/UI/Main/MainNameplate.prefab
+:100644 100644 54d8e6083d7a23d7ea3c18c3cc009f8e0af8cb42 749006107b923b98af435ea711425c9a9aabb864 M	Assets/Resources/UI/Party/Top/GiftHistoryCell.prefab
+:100644 100644 2d8683de7cd0dc36eb24c6089a77a026a3be3d84 94449cd21a5bcddbe6e068fc5f46ffd1a4a63f1b M	Assets/Resources/UI/Party/UI/PartyGiftPointRankingModal.prefab
+:100644 100644 e3c71767ebc4258661eb7e0e26ae0c10bec5b26b c73be50bd6523ff449cce5e071fb66cbb13f5b4b M	Assets/Resources/UI/Sns/SnsCommentCell.prefab
+commit 4d42e803b38902cce6d68c2efafed7306cea1f3e
+tree 834dde596bd0c154343eb4f6e4bd594da3acf7e0
+parent 83eaa4146ccc670c604d87464c4228e113dde869
+author egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-16 16:11:36 +0900
+committer egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-16 16:11:36 +0900
+
+    タブの木の実の名称を修正しました
+
+
+:100644 100644 55526de683677402b5a377289564696a19742c9a 581b4c0acbe5cda4a8aa90bf7f34d7bc67a9ad1a M	Assets/Resources/UI/Quest/QuestModal.prefab
+commit 1d64a0744a9888ac0a93971c6bf127a7b8457851
+tree cc09494eb4f3fa1e8ffc1ea20ca9d15f6a63b2b2
+parent 88c6cb0296d4be8f94e78782b7d753b85984f117
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 16:03:16 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 16:03:16 +0900
+
+    オブジェクト名修正・コミット漏れ
+
+
+:100644 100644 71294eaab0579da6005d19fe040c86c050abe0f8 2cc5061774ac54f7699787fa36c2a55a90bb8f43 M	Assets/Resources/UI/Relation/Item/RecommendListItem.prefab
+:100644 100644 9b0585319577ebf1ff8f50d9911f2444a6fde987 9d3035339caa087cf421b069c9abfec769ad2173 M	Assets/Resources/UI/Relation/Item/RelationListItem.prefab
+:100644 100644 bc829eaa814ff78df04284037e2f10b5e1befce6 95df0f694b78ffa81c03746265a5f427493c3df3 M	Assets/Resources/UI/Relation/RelationListLayer.prefab
+commit 88c6cb0296d4be8f94e78782b7d753b85984f117
+tree 0bc546cf7029de88fa36775e081c2575c6dbf2d8
+parent 83eaa4146ccc670c604d87464c4228e113dde869
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 15:57:34 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 15:57:34 +0900
+
+    つながりリスト・ビジターリストのレイアウト調整
+
+
+:000000 100644 0000000000000000000000000000000000000000 fac464f3ef9977f11217bd0b1b48f027ccd3d427 A	Assets/Resources/UI/Common/UserDetail/UserVisitorInfoItem.prefab
+:000000 100644 0000000000000000000000000000000000000000 30de0899f618afbad062561d661deebcaa1ab29b A	Assets/Resources/UI/Common/UserDetail/UserVisitorInfoItem.prefab.meta
+:100644 100644 7bf84c98e7eed98b63fc4519bd213ab4373e757e 71294eaab0579da6005d19fe040c86c050abe0f8 M	Assets/Resources/UI/Relation/Item/RecommendListItem.prefab
+:100644 100644 2582d3b86c3364666a9a3c52957cf11929eadb56 9b0585319577ebf1ff8f50d9911f2444a6fde987 M	Assets/Resources/UI/Relation/Item/RelationListItem.prefab
+:100644 100644 8225eb8acbd09e95571362882d452f36c6b33415 c035d89b832b1f0061f9767b18c6bcdf197fcacb M	Assets/Resources/UI/Relation/Item/VisitorListItem.prefab
+commit 83eaa4146ccc670c604d87464c4228e113dde869
+tree f22f40f2bdf093dbbba1833cec1d6f3f82469d36
+parent c13f8d06827f029ca4a53dda5b8435065ffacf14
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 15:41:27 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-16 15:41:27 +0900
+
+    フレンドのヘッダの数字更新処理、送信済み判定の修正
+
+
+:100644 100644 c7aa4114da8bb353593a9380ca62df0f262e27cc 13eacddc82996c889a4af65d0132290fb6384c82 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 6ae20a7aee2f38845f83193b0864e3590125aa29 641268788372aa3b850ba18a628078d4615801be M	Assets/App/Scripts/Contents/Friend/FriendListModal.cs
+:100644 100644 88ed2555f512b2f3d74c0b6d7804b6c306bfcf81 71fefa79e98edcec407ab74604d2d340d70f47ec M	Assets/App/Scripts/Contents/Friend/FriendModel.cs
+:100644 100644 644e08cc8a3e77306f78f0839cfe901d6c880a87 815959954860d04ea586d5de6e482aacb8e0bca0 M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentModal.cs
+:100644 100644 7a9c0fe746f6fbe74ef84d570e9c1d752be65fa1 69d8f2d58172bfbd186c0b22631bb6829806c21d M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentModel.cs
+:100644 100644 59989b08e08f4b1d2c9836bda03b2afa0a9044da 6c44c5559f7d21c41996f9a3dfcfb952eb2accd0 M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+:100644 100644 18e8dda8810c13498c09229b015c33eeafc9295d b47fc25d0be314a7e4a8c0c53cf7c61217ef77fb M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 9465918bb5f4956bb36156db8696a5768d4492e9 250cc472b7f04ed4c09efa0fd54e629314526cf7 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 2a985b65493e7d9767e4c0152af2232be82865af ba37e7cc9dc19f3167ae9cd481b1d05976926e2e M	Assets/Resources/UI/Friend/FriendListModal.prefab

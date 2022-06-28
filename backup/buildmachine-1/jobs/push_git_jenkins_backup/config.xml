@@ -1,0 +1,157 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?><flow-definition plugin="workflow-job@2.41">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@1.8.5"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@1.8.5">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description>＃ジェンキンスファイルをthinbackup を使ってバックアップしています。&#13;
+で、それを定期的にバックアップしてgitに残しておくためのものです。&#13;
+日曜１９時に動かします。&#13;
+</description>
+  <displayName>[定期][GIT]jenkinsバックアップ</displayName>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.20">
+      <gitLabConnection>GitLab Integration</gitLabConnection>
+      <jobCredentialId/>
+      <useAlternativeCredential>false</useAlternativeCredential>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.32">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.plugins.throttleconcurrents.ThrottleJobProperty plugin="throttle-concurrents@2.2">
+      <maxConcurrentPerNode>0</maxConcurrentPerNode>
+      <maxConcurrentTotal>0</maxConcurrentTotal>
+      <categories class="java.util.concurrent.CopyOnWriteArrayList"/>
+      <throttleEnabled>false</throttleEnabled>
+      <throttleOption>project</throttleOption>
+      <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
+      <paramsToUseForLimit/>
+    </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
+    
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>failed_notify_channels</name>
+          <description>失敗時に通知するチャンネル</description>
+          <defaultValue>p3_jenkins</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers>
+        <hudson.triggers.TimerTrigger>
+          <spec>H 19 * * 0</spec>
+        </hudson.triggers.TimerTrigger>
+      </triggers>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.92">
+    <script>pipeline {
+    agent any // どこで実行するか等の情報(どのノードか、どういうdocker imageかとかを指定する)
+    stages {  // Stageを列挙する
+        stage('cleanup workspace') {
+            steps {
+                cleanWs()    
+            }
+        }
+        stage('ブランチ') {
+            steps {
+                // credentionaIdは、jenkinsで設定しているcredentialのid
+                git branch: 'master', url: 'https://git-1.cocone.jp/projectp3/p3-tools.git', credentialsId: 'pokepia_buildmachine-1'
+            }
+        }
+        
+        stage('バックアップディレクトリ走査') { 
+            steps {
+                script {
+                    def command = '''
+                    find ''' + JENKINS_BACKUP_DIR + 
+                    ''' -name FULL-* -maxdepth 1 -type d | awk -F_ '{print $(NF-1),$NF,$0}' | sort -r | sed -r 's/^([^ ]* ){2}//' | head -n 1
+                    '''
+                    
+                    def list = sh(script:"${command}", returnStdout:true)
+                    println '==================================================='
+                    println 'latest directory:'
+                    println list
+                    println 'workspace =' + env.WORKSPACE
+                    println '==================================================='
+                    // なぜか改行はいってる気配　抜く
+                    list = list.replaceAll("\n", "")
+                    def workspace_backup_path = env.WORKSPACE + "/backup/buildmachine-1/"
+                    println 'workspace_backup_path =' + workspace_backup_path
+                    // ディレクトを作成
+                    if(!fileExists(workspace_backup_path)) {
+                        sh """mkdir -p $workspace_backup_path"""
+                    }
+
+                    sh """rsync -ar ${list}/ ${workspace_backup_path}
+                    """
+                }
+            }
+        }
+        stage('gitへのコミット') {
+            steps {
+                script {
+                    try {
+                        def comment = "[chore][jenkins]定期バックアップ jenkins by buildmachine-1"
+                            sh """
+                            echo 'git add -A'
+                            git add -A .
+                            echo 'git commit -m $comment'
+                            git commit -m "$comment"
+                            git status
+                            """
+                    }
+                    catch (Exception e) {
+                        // NOTE: do nothing. 差分がない場合場合、コミットせずpushに失敗する??のでここの例外はみない
+                    }
+                }
+            }
+        }
+        
+        stage('git push') {
+            steps {
+                script {
+                    sshagent(['pokepia_buildmachine-1']) {
+                        sh "git push -u origin master"
+                    }
+                }
+            }
+        }
+    }
+    post {
+        failure {
+            script {
+                // Job失敗時
+                def emoji = ':alert:'
+                def notify_message = '[FAILED]buildmachine-1:' + env.JOB_NAME + 'に失敗しました。' + '@here ' + emoji + '\n' + env.BUILD_URL
+                def needNotify = params.failed_notify_channels != ''
+                if (needNotify) {
+                    slackSend channel: params.failed_notify_channels,
+                    message: notify_message,
+                    color: "danger"
+                }
+            }
+        }
+    }
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

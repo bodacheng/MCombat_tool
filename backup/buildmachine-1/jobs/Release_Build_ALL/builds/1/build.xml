@@ -1,0 +1,63 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1145.v7f2433caa07f">
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.syhuang.hudson.plugins.listgitbranchesparameter.ListGitBranchesParameterValue plugin="list-git-branches-parameter@0.0.9">
+          <name>BRANCH</name>
+          <value>refs/heads/release</value>
+        </com.syhuang.hudson.plugins.listgitbranchesparameter.ListGitBranchesParameterValue>
+        <hudson.model.TextParameterValue>
+          <name>RELEASENOTE</name>
+          <description>ビルド内容がわかるリリースノートを記入してください</description>
+          <value>本番全部ビルドのテスト</value>
+        </hudson.model.TextParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@0.82">
+          <name>UNITY_VERSION</name>
+          <value>2020.3.21f1</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <hudson.model.BooleanParameterValue>
+          <name>FORCE_TEST_LOGIN</name>
+          <description>TestLoginSceneを強制的に追加</description>
+          <value>false</value>
+        </hudson.model.BooleanParameterValue>
+        <hudson.model.BooleanParameterValue>
+          <name>CLEAR_CACHE</name>
+          <description>Libraryフォルダーを削除してビルド（注意：ビルド時間が１時間ほど増えます。）</description>
+          <value>false</value>
+        </hudson.model.BooleanParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>BRANCH</string>
+        <string>RELEASENOTE</string>
+        <string>UNITY_VERSION</string>
+        <string>FORCE_TEST_LOGIN</string>
+        <string>CLEAR_CACHE</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>matsumoto_rika</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction plugin="buildtriggerbadge@251.vdf6ef853f3f5">
+      <cause class="hudson.model.Cause$UserIdCause" reference="../../hudson.model.CauseAction/causeBag/entry/hudson.model.Cause_-UserIdCause"/>
+    </org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.32"/>
+  </actions>
+  <queueId>9052</queueId>
+  <timestamp>1655719737674</timestamp>
+  <startTime>1655719737699</startTime>
+  <result>FAILURE</result>
+  <duration>1212</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

@@ -1,0 +1,123 @@
+commit 48778a8d2aea266abf2424ba5e1d4050bb6297ea
+tree 1deee1bd5282b74ea92896b53fd6ce9131b3ee3c
+parent 211dc8c6c0f9ab3212cba79579420351d868ea13
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:20:08 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:20:08 +0900
+
+    [TEST]構文修正
+
+
+:100644 100644 3cdd6f45542bf068c76742b82f574fdb334496d2 bd42f023b8e04f9d357baa0e6cb217db85b9ec70 M	pipeline_script/TestScripts/agent_test.groovy
+commit 211dc8c6c0f9ab3212cba79579420351d868ea13
+tree 3c69a42665a6fee12442118c17ca21c0ea9411f1
+parent 14b90d36a9691a09fadc5608b0dbe04b4729f55c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:14:25 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:14:25 +0900
+
+    構文ミスを修正
+
+
+:100644 100644 f9db6889c237add562d6d3d0bcb7df27dc29cd93 3cdd6f45542bf068c76742b82f574fdb334496d2 M	pipeline_script/TestScripts/agent_test.groovy
+commit 14b90d36a9691a09fadc5608b0dbe04b4729f55c
+tree 0d590b9d5f98e1a8bd62fe6b8465ed9ae5761b66
+parent 5d98c09940e19e8c75d40d83d80fb0674620b6da
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:13:30 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:13:30 +0900
+
+    labelの書き方テスト
+
+
+:100644 100644 bc67668cc230d69e4bbfcc96f4f78be3f0385efa f9db6889c237add562d6d3d0bcb7df27dc29cd93 M	pipeline_script/TestScripts/agent_test.groovy
+commit 5d98c09940e19e8c75d40d83d80fb0674620b6da
+tree d1e79fad8fa504d8afa209e3e6cfddd0b782c46b
+parent d958c2787e3b4a387787a3e01176bab9bcb59f78
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:06:53 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:06:53 +0900
+
+    AppCenterリリースノートの調整/テストノードテスト
+
+
+:100644 100644 d6c804ee7fcbd0588e626e38ff732af5a70e61d7 f8f108930883da3a6fef2c98642a85274e09b94d M	pipeline_script/DevBuild/ios/release_build.groovy
+:000000 100644 0000000000000000000000000000000000000000 bc67668cc230d69e4bbfcc96f4f78be3f0385efa A	pipeline_script/TestScripts/agent_test.groovy
+commit d958c2787e3b4a387787a3e01176bab9bcb59f78
+tree 996ac2ab377d9d19678d1835c0e48e4e4d922c7d
+parent 1499853e680c56e1f9194a9d4cce18f7a08a328b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 15:13:51 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 15:13:51 +0900
+
+    [ios]本番ビルドのIpaのdディレクトリ出力先の変更
+
+
+:100644 100644 37965f5fe5202eb923f43753b0b17568b0ba91d0 d6c804ee7fcbd0588e626e38ff732af5a70e61d7 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 1499853e680c56e1f9194a9d4cce18f7a08a328b
+tree a1ccc885a42d0e282da8db1481d7be6a96aead7f
+parent a73548d3214bd200f512493e7ce003b3764248c7
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:38:41 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:38:41 +0900
+
+    [ios]Exportディレクトリのパスミスを修正
+
+
+:100644 100644 0a58d399507606261e29f722bd69bc6133231b55 37965f5fe5202eb923f43753b0b17568b0ba91d0 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit a73548d3214bd200f512493e7ce003b3764248c7
+tree 7f1ff8ebb7a6994a6326cd38e96e6b1ff09b70c4
+parent 9e64e6cef7ec87ef7fa27aa7f6223a6c9fb2d4f1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:24:39 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:24:39 +0900
+
+    構文ミスの修正
+
+
+:100644 100644 0d6078a8781b1a58df3430401472e4ff1a33a590 90ab567dd4bfa75b83974c7c8a3d475746e8ba8e M	pipeline_script/DevBuild/android/release_build.groovy
+commit 9e64e6cef7ec87ef7fa27aa7f6223a6c9fb2d4f1
+tree 9237b3a6f747416ba0092cd2f159e7c94d133ced
+parent 6f57b79dc73ac3199dd27a28fb8ea15d8e78318b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:22:32 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:22:32 +0900
+
+    本番ビルド構文修正、リリースノート修正
+
+
+:100644 100644 66a6092a9ddab6d78e59fc8ed73033ba629d14cd 0d6078a8781b1a58df3430401472e4ff1a33a590 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 2bf2636cefb041439c7706963dc3f58b6316160c 0a58d399507606261e29f722bd69bc6133231b55 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 6f57b79dc73ac3199dd27a28fb8ea15d8e78318b
+tree f259bbd83a86b19f58a8101a77fbd95625a37434
+parent b099a43d51414feac507d85c2883c55c6bf12fd9
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 13:26:37 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 13:26:37 +0900
+
+    通知ユーザー名の修正
+
+
+:100644 100644 b12f17195cc6687767205d0267786aa1d5ad889f 66a6092a9ddab6d78e59fc8ed73033ba629d14cd M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 af3702cd7384833e2250ac71b15e5fde0840fee4 2bf2636cefb041439c7706963dc3f58b6316160c M	pipeline_script/DevBuild/ios/release_build.groovy
+commit b099a43d51414feac507d85c2883c55c6bf12fd9
+tree bd15314405b0421481420f102743c36e0a060a16
+parent 1ab397d79e315842f58bb33e0fc4c0352486b38e
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 13:03:09 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 13:03:09 +0900
+
+    [ios]本番ビルド時にキーチェーンのアンロックできるように対処
+
+
+:100644 100644 e7478a67a2d0945209086d2d4d6c921d9689e083 af3702cd7384833e2250ac71b15e5fde0840fee4 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 1ab397d79e315842f58bb33e0fc4c0352486b38e
+tree cc5e4dda13e925c120488e4c41c1bbe6e7c6b144
+parent 048980babc801f18cfdedb9c450269179e633f5c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 12:45:30 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 12:45:30 +0900
+
+    本番ビルドでのslack通知ユーザーの修正と、releaseNoteについての記載を修正
+
+
+:100644 100644 d587de4f2446e8c4e41167212aa09cf7e37f4c5a ad9e29d51b1125241098f2e248986e12c4278865 M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy
+commit 048980babc801f18cfdedb9c450269179e633f5c
+tree 6c753f9c1d2c2b86cbe9b344f85e2b57b41ce606
+parent 88908e75834ddafe8d9b504080114192ab4801e1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 12:27:38 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 12:27:38 +0900
+
+    [asset]本番アセットビルドは、アセット種別の引数はないので固定
+
+
+:100644 100644 9ba87950cc187518d929f40c8c893becdcfe3830 d587de4f2446e8c4e41167212aa09cf7e37f4c5a M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy

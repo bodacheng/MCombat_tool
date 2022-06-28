@@ -1,0 +1,11 @@
+commit fc6c134752ac8738ef112a4e69ed52791b9b1842
+tree 1b25399be336a14fb04b7720224a616850e43123
+parent 64e5d494fe023c5dea3c2d49c72db9ec8bf989f8
+author ito.midori <ito_midori@cocone.co.jp> 2022-04-13 17:08:46 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-04-13 17:08:46 +0900
+
+    細かい修正
+
+
+:100644 100644 52faff5ef0dffdad5ceab1631cac0440f765ca5b f038dc4c6d95727c80162123c3b255ba44d4e58f M	Assets/App/Scripts/Asset/AddressableHandler.cs
+:100644 100644 d4e82535b3d4b77dcb0eb0a5bca302e5b99532ae a4d6e9ccd909abd8a45937608da3165305764397 M	Assets/App/Scripts/View/World/WorldController.Shop.cs

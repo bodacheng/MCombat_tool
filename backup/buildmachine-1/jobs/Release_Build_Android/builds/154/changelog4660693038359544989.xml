@@ -1,0 +1,71 @@
+commit 9c403203d573338caeb067053937254a085eb71b
+tree ba0e55b7f71506be5084a70efa10496949fd95e9
+parent b8afcff18ca0ccd73e1ac3524cc7ce1ec47ff468
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 19:07:23 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 19:07:23 +0900
+
+    ファイルのリネーム
+
+
+:100644 100644 89419f2d813b12939d2efcbf51c2e3aa543a56b2 89419f2d813b12939d2efcbf51c2e3aa543a56b2 R100	pipeline_script/DevBuild/all/build_release_all.groovy	pipeline_script/DevBuild/all/release_build_all.groovy
+commit b8afcff18ca0ccd73e1ac3524cc7ce1ec47ff468
+tree dafaf4a602e796ae94114f0063bc92883b356b05
+parent 5c696d4f1d1eaa43c816a65f4f8d6832a707481c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 19:04:40 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 19:04:40 +0900
+
+    [all]本番ビルドALLジョブを作成
+
+
+:000000 100644 0000000000000000000000000000000000000000 89419f2d813b12939d2efcbf51c2e3aa543a56b2 A	pipeline_script/DevBuild/all/build_release_all.groovy
+commit 5c696d4f1d1eaa43c816a65f4f8d6832a707481c
+tree f16b91a398a5b72bda4e12036e3e485f9402cb80
+parent 49a6315b4249b72eceb85c375aeecae6042bda45
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 18:41:16 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 18:41:16 +0900
+
+    並列テストビルド手直し
+
+
+:100644 100644 52488ad1b8b3d8b4cf03ab1b48564aa89c3827df af7fd2be54508a95546819d2c3d256cf39e872dd M	pipeline_script/TestScripts/agent_test_parallel.groovy
+commit 49a6315b4249b72eceb85c375aeecae6042bda45
+tree c02bc70d50b78e2425f1b8a7133fd947f047dfd7
+parent f896d95287509c85fc4bcdcc35e03b5f82ddf56f
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 18:13:31 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 18:13:31 +0900
+
+    テストの手直し
+
+
+:100644 100644 87c2bcf450520d84d8a72ae3052d8c760b1a18e4 52488ad1b8b3d8b4cf03ab1b48564aa89c3827df M	pipeline_script/TestScripts/agent_test_parallel.groovy
+commit f896d95287509c85fc4bcdcc35e03b5f82ddf56f
+tree f236f1e6d954f7471d19230afdc32b4dde8345b9
+parent e7ae72104b465757edb8977911742de300444d7d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 18:09:07 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 18:09:07 +0900
+
+    パラレル実験
+
+
+:100644 100644 1aae10f11e7a29b77324d841e453ebeb33f95d0a 87c2bcf450520d84d8a72ae3052d8c760b1a18e4 M	pipeline_script/TestScripts/agent_test_parallel.groovy
+commit e7ae72104b465757edb8977911742de300444d7d
+tree 5aa8972221a1f6db1db0622ebec737ae058eba5e
+parent 60895bf3df0f62aa17f8b625f6cadc7375093ad1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 18:06:26 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 18:06:26 +0900
+
+    並列ジョブテスト
+
+
+:000000 100644 0000000000000000000000000000000000000000 1aae10f11e7a29b77324d841e453ebeb33f95d0a A	pipeline_script/TestScripts/agent_test_parallel.groovy
+commit 60895bf3df0f62aa17f8b625f6cadc7375093ad1
+tree b3e87d63ec3ed1a1b77f6809cf483729a27cb888
+parent 6bf30bbbb4ff64d0dc39ad8027922932a3604323
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 17:49:11 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 17:49:11 +0900
+
+    GIT_LOGの改行ややこしいので消す
+
+
+:100644 100644 b9c6217bf069de40537b42414db1cb57eede59cc 9513c5eebe3f0cd4d608e6a279325269249bcae8 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 f8f108930883da3a6fef2c98642a85274e09b94d a25dfe5cb8b5526feaccd09d8714a829d5442690 M	pipeline_script/DevBuild/ios/release_build.groovy

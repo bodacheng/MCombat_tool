@@ -1,0 +1,24 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<io.jenkins.plugins.logintheme.LoginTheme plugin="login-theme@1.1">
+  <head></head>
+  <header>&lt;script&gt;
+document.getElementsByTagName(&apos;h1&apos;)[0].textContent = &apos;ぽけびあビルドにようこそ！&apos;
+&lt;/script&gt;
+&lt;style&gt;
+.simple-page .logo {
+        //background-image: url(&apos;http://pokepia-buildmachine-1.cocone.jp:8080/userContent/TitleColony.png&apos;);
+        //background-image: url(&apos;https://www.jenkins.io/images/logos/snow/snow.png&apos;);
+        background-image: url(&apos;https://www.pokepia.jp/sns/ogp.png&apos;);
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        height: 180px;
+        background-size: contain;
+    }
+    .simple-page form {
+        width: unset;
+        max-width: unset;
+    }
+&lt;/style&gt;</header>
+  <footer></footer>
+  <useDefaultTheme>true</useDefaultTheme>
+</io.jenkins.plugins.logintheme.LoginTheme>

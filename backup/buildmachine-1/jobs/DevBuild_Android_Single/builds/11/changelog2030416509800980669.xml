@@ -1,0 +1,125 @@
+commit b5e942c251abcf64b828755cffe4271be4759d93
+tree 461aa941c2249e88555ba330d3aac359eeed5e7a
+parent a924daf4b0c9471cbb0f0352ac93be26aea5cf89
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 22:09:10 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 22:09:10 +0900
+
+    masterで動かすgit cloneテスト
+
+
+:000000 100644 0000000000000000000000000000000000000000 1dd75f0fdccb0cf5ea1016194bffbb5673b0fc59 A	pipeline_script/TestScripts/get_git_clone_on_master.groovy
+commit a924daf4b0c9471cbb0f0352ac93be26aea5cf89
+tree c887ff24e8dac1bfaaa2b4805d57b03efb9a5af9
+parent 92c3f5009ccc071c71e59354bc467f87d1709611
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 18:05:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 18:05:49 +0900
+
+    本番ビルドのブランチ名などの調整
+
+
+:100644 100644 6a72438ee9a3c5695e504f5b648d7bbf42f9cc70 b12f17195cc6687767205d0267786aa1d5ad889f M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 f34d6aacb601188f7ebad44a8ad036665cb8f5ea e49581f5e06f0883bf94e19d761343383b6cbdf1 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 92c3f5009ccc071c71e59354bc467f87d1709611
+tree a285ec85f597937b891e29fdcd88d06298ed40aa
+parent 63b1a691f7f52f5b670564dc421fb77746700515
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 18:03:22 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 18:03:22 +0900
+
+    本番ビルドのジョブを調整
+
+
+:100644 100644 b804307c7d807988121efd29888ddd54eee2dfa3 6a72438ee9a3c5695e504f5b648d7bbf42f9cc70 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 b2b00638ab88ab375b23a6e88a7b08c907855bc4 f34d6aacb601188f7ebad44a8ad036665cb8f5ea M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 63b1a691f7f52f5b670564dc421fb77746700515
+tree be2619a63282ba5ecf8b31a6011af5a06934e09b
+parent 57c23874b2902aa094a89b2e60f7d636668a9053
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 17:58:35 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 17:58:35 +0900
+
+    現在のビルドの説明欄に追記
+
+
+:100644 100644 90ff83f6d0df586dca7523a0128b2f04db349ae6 8ee0e33edf4281469dd1968f14906eb06bec0dab M	pipeline_script/DevBuild/android/build.groovy
+commit 57c23874b2902aa094a89b2e60f7d636668a9053
+tree 6ce73bf158594cfd205ac524b18b231e4b60607a
+parent 7143f0f6e4508bcecd148787605005405c3b1c79
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 17:41:10 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 17:41:10 +0900
+
+    ワークスペースのクリーンのフラグを削除
+
+
+:100644 100644 d101ebfd099007dbd0159d2097651bba5e9152d6 e5dcb2991b47b8be8ae8e3176f4e45404f691679 M	pipeline_script/TestScripts/get_git_clone.groovy
+commit 7143f0f6e4508bcecd148787605005405c3b1c79
+tree ee009f36e4a7cd691cd59912d814139d11566e5e
+parent cb8e5ce012c2bdb4f8e3619dc136fc9dc940bd24
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:59:44 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:59:44 +0900
+
+    不要変数の削除
+
+
+:100644 100644 e60665941ac9c4235a84d4e043aada7031e35d90 d101ebfd099007dbd0159d2097651bba5e9152d6 M	pipeline_script/TestScripts/get_git_clone.groovy
+commit cb8e5ce012c2bdb4f8e3619dc136fc9dc940bd24
+tree d28ea1bda93737abda42ed8ee38fed982f6b0a72
+parent 9e3aef159ebff4309fcdd8dd8d7669b7b09c3455
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:37:25 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:37:25 +0900
+
+    コメントアウト位置の調整
+
+
+:100644 100644 953c28d20404a648115f87a6a03e66aad11a0952 e60665941ac9c4235a84d4e043aada7031e35d90 M	pipeline_script/TestScripts/get_git_clone.groovy
+commit 9e3aef159ebff4309fcdd8dd8d7669b7b09c3455
+tree 3edb6275af74136e2cd2c7445c8c1b29f213b34b
+parent 4874fc1c4556ff331c5d3d0aa2cede4af229f468
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:36:38 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:36:38 +0900
+
+    ビルド時間入力場所を変更
+
+
+:100644 100644 d92d1b4a27d610f47bd3b30a8798d842345ec624 953c28d20404a648115f87a6a03e66aad11a0952 M	pipeline_script/TestScripts/get_git_clone.groovy
+commit 4874fc1c4556ff331c5d3d0aa2cede4af229f468
+tree 272eb246cc6d07237cd87bb2d19db51949db38f9
+parent 1e25a866d06226fe5fe89b7678c7f511bdc78755
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:35:21 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:35:21 +0900
+
+    コメントアウトミスを修正
+
+
+:100644 100644 a6677411aa81a0774e32d4769f164edf378e4506 d92d1b4a27d610f47bd3b30a8798d842345ec624 M	pipeline_script/TestScripts/get_git_clone.groovy
+commit 1e25a866d06226fe5fe89b7678c7f511bdc78755
+tree 78656b218613d61985def40e1efc9e80b2318b30
+parent 215d607fbb95e67165259fe2d73446ff26bf49a5
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:34:22 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:34:22 +0900
+
+    コメントアウトミスの修正
+
+
+:100644 100644 f4926c42305393879857d2458057d71971f4bdcc a6677411aa81a0774e32d4769f164edf378e4506 M	pipeline_script/TestScripts/get_git_clone.groovy
+commit 215d607fbb95e67165259fe2d73446ff26bf49a5
+tree a275b06c849f5907d44b50087537e7cf1cddfd74
+parent 0394efe095ccc5ad5e3f58240e47b73637350d92
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:29:24 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:29:24 +0900
+
+    ビルド時間の追記漏れの修正とgit取得テスト
+
+
+:100644 100644 e315a516fdf70cab6d0a7803d8c6177cc001aa3f b804307c7d807988121efd29888ddd54eee2dfa3 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 778de7b72614ce0e4046561b36c142d24b174877 b2b00638ab88ab375b23a6e88a7b08c907855bc4 M	pipeline_script/DevBuild/ios/release_build.groovy
+:000000 100644 0000000000000000000000000000000000000000 f4926c42305393879857d2458057d71971f4bdcc A	pipeline_script/TestScripts/get_git_clone.groovy
+commit 0394efe095ccc5ad5e3f58240e47b73637350d92
+tree 5087fb1bbb5213832775d5b9acb40d4c47c9ffe8
+parent a7fafffeceb85746128369f85de72c48ad3a49f6
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:15:47 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-18 14:15:47 +0900
+
+    定期ビルドであることをリリースノートに追記
+
+
+:100644 100644 b9ab107ff74f9af9c65cf91c639aa8a3cdea972d 24dd9a2600a0ec0302158371ec03358086638714 M	pipeline_script/DevBuild/android/build_period.groovy
+:100644 100644 b073128d3fb668e4ba4b083d19f40e24ee29c677 908483511e90e2612e84af7d76ac83b456e2a872 M	pipeline_script/DevBuild/ios/build_period.groovy

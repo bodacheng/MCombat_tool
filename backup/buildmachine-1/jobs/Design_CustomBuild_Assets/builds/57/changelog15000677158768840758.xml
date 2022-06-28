@@ -1,0 +1,530 @@
+commit 310d158bbcb5d7f69862a648f8452f1887620e66
+tree 6a517a5dd12bcd895a2d8ab182ea7fac44254f18
+parent 7fce66f15e54722f94c31ca2bb1b0849976b4795
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:17:46 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:17:46 +0900
+
+    [utility]スラック通知用の便利メソッドを追加してみる
+
+
+:000000 100644 0000000000000000000000000000000000000000 2091e8d936905145fabcbdd72c6bfda13be7aa83 A	pipeline_script/utils/notify/slackUtility.groovy
+commit 713fe56a0da652cd50748ba4efbb810013c7d639
+tree 7b6ccc217e3db981b759617c3f1badbb3701325c
+parent ea65f385353db69970f0cb6e523f03671fbdf4d5
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 13:55:55 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 17:13:48 +0900
+
+    betaビルド対応
+
+
+:000000 100644 0000000000000000000000000000000000000000 87cdcc6d5d8f2ce3eed9b7c554d65341a68b4c28 A	pipeline_script/DevBuild/android/build.groovy
+:000000 100644 0000000000000000000000000000000000000000 111d818670493ba8343b45465a579128070c2d1f A	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 b71125bf2511c2ab14d446a53b292e10fd04e3ab 3c0e16203c2aea6c5054f3a5ac90538a34d8862f M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 7770e8e33ce8b640a2d9cc8f93ad7eb46c5a78a5 9236d110c997a08d1dbc2f0619d888cacdac0ee3 M	pipeline_script/DevBuild/android/qa_build.groovy
+:100644 100644 365f7c7f797450cba150a8253de7d88f81f0a6f1 53e5f759de820f9691d40d1e3d5cce14ce529453 M	pipeline_script/DevBuild/android/release_build.groovy
+:000000 100644 0000000000000000000000000000000000000000 faf6035120e40fc23222e1ac55c9bcb8cae4714a A	pipeline_script/DevBuild/ios/build.groovy
+:000000 100644 0000000000000000000000000000000000000000 2dfb0381b4206164c5bee7f6bc47415e7e6a658c A	pipeline_script/DevBuild/ios/build_beta.groovy
+:100644 100644 b58224f8aa8d968fbb22e70d5dba915b9fe3ba64 26b5351964f32facd3e5295053450c0b0d2da07e M	pipeline_script/DevBuild/ios/devbuild.groovy
+:100644 100644 6ce17ce473ef5d4f9855e3e97d8fb4f51d7a6a85 4ff6dcca91b146bcc7386decc04b009af46d5065 M	pipeline_script/DevBuild/ios/qa_build.groovy
+:100644 100644 fba9612e664a94fff05d5d93a5cb64bbca814d9f a9bb276132a9888e5fe8d5870217e9a25841c038 M	pipeline_script/DevBuild/ios/release_build.groovy
+:000000 100644 0000000000000000000000000000000000000000 2aff28b23235eb963a4537ad24d48b72eae4be09 A	pipeline_script/utils/authUtility.groovy
+:000000 100644 0000000000000000000000000000000000000000 1174e1ebd8dcda569e972109e0af96d27e093896 A	pipeline_script/utils/gitUtility.groovy
+:000000 100644 0000000000000000000000000000000000000000 5623c22ed45fb7ca57a75250b16ed34a8b7ca593 A	pipeline_script/utils/upload/uploadAppCenter.groovy
+commit 12ca5fc3fe2557ee6dd16103335009292964c056
+tree 7b6ccc217e3db981b759617c3f1badbb3701325c
+parent 3cae4d611f5c4ebef80257a7dd21e32f473db8ed
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 14:00:38 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 14:00:38 +0900
+
+    ジョブ名変更し忘れたので対応
+
+
+:100644 100644 8b7ddf2ebbb981e5d48f99b9246df831f27e5e6e 111d818670493ba8343b45465a579128070c2d1f M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 4785e476d9f2ad4c539b07cc0da33aaf656e61d4 2dfb0381b4206164c5bee7f6bc47415e7e6a658c M	pipeline_script/DevBuild/ios/build_beta.groovy
+commit 3cae4d611f5c4ebef80257a7dd21e32f473db8ed
+tree d0c472a4f6e0bbb6171e6f98641675af8162765c
+parent 06a8f9bf93cf8b136440d5932987a5770f7ca77d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 13:20:03 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 13:20:03 +0900
+
+    Job名変更およびstageを整理
+
+
+:100644 100644 f3ddb547625093c3c7bc0ea944a7cb7b8c10be9b 87cdcc6d5d8f2ce3eed9b7c554d65341a68b4c28 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 651f3bac863fd4c9f3f9b268680f243fdec611d5 8b7ddf2ebbb981e5d48f99b9246df831f27e5e6e M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 b69fe8fb870c3d5dff54bff50a0755ce4830105d faf6035120e40fc23222e1ac55c9bcb8cae4714a M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 dfd6390d9a7bfe700ca48e01848d6707d57840a8 4785e476d9f2ad4c539b07cc0da33aaf656e61d4 M	pipeline_script/DevBuild/ios/build_beta.groovy
+commit 06a8f9bf93cf8b136440d5932987a5770f7ca77d
+tree 740eb83be5f777c25cff51ca7f193bbbffbf39af
+parent a27d763db89ae7b93a5d55918a203ad94184549c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 12:52:29 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 12:52:29 +0900
+
+    [ios]アウトプットPathをミスったので修正
+
+
+:100644 100644 543d9eefd9bf48d5494590ef652adbad15edd090 b69fe8fb870c3d5dff54bff50a0755ce4830105d M	pipeline_script/DevBuild/ios/build.groovy
+commit a27d763db89ae7b93a5d55918a203ad94184549c
+tree 8575a2eb3ba631f7693a7b95abd20445f5f8b52c
+parent d3235b249e36e40dcc872f2879953114e0cda9ba
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 12:24:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-18 12:24:49 +0900
+
+    [ios]ファイル名と出力先ディレクトリの指定を修正
+
+
+:100644 100644 0e4c9939e93678363d7bd192ec7db405f982917c f3ddb547625093c3c7bc0ea944a7cb7b8c10be9b M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 52d7679467f8426cf0691e0810c34a994936007b 543d9eefd9bf48d5494590ef652adbad15edd090 M	pipeline_script/DevBuild/ios/build.groovy
+commit d3235b249e36e40dcc872f2879953114e0cda9ba
+tree f2c3754d8305af9fb230ed0937a3130f47579a36
+parent 51dbbffd41563dab6b7d3328bbb800bfac3f52fe
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 21:14:12 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 21:14:12 +0900
+
+    P3_OUTSIDEは対象から抜くようにとせじんさんからあったので対応
+
+
+:100644 100644 38ba7c162313bdfcb4cf08f1cfd2ac6886d77f62 3c0e16203c2aea6c5054f3a5ac90538a34d8862f M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 66e7b28c5dc6d305bece281ea3d6bf0c60f4e710 26b5351964f32facd3e5295053450c0b0d2da07e M	pipeline_script/DevBuild/ios/devbuild.groovy
+commit 51dbbffd41563dab6b7d3328bbb800bfac3f52fe
+tree 6247399229f6b7cc5cb837bc3cd8ebad96a89b14
+parent 136a4c05a25b61a3aa518d3707145fd09e53cfe0
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 21:12:59 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 21:12:59 +0900
+
+    通知の絵文字変更及び配布グループの整理
+
+
+:100644 100644 00b900f2e7e69656664d586863199a1f84b665a4 651f3bac863fd4c9f3f9b268680f243fdec611d5 M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 24e2d46017f7fe02214ed7837c811ecdf5b181f4 dfd6390d9a7bfe700ca48e01848d6707d57840a8 M	pipeline_script/DevBuild/ios/build_beta.groovy
+:100644 100644 18da3a9ba3e0a2ca4dba347f27e9147a9f2c6a76 2aff28b23235eb963a4537ad24d48b72eae4be09 M	pipeline_script/utils/authUtility.groovy
+commit 136a4c05a25b61a3aa518d3707145fd09e53cfe0
+tree d78e846e3979b87549c934ab2ca1a397dc6c9360
+parent e36a5114f302ed2665781ddbd72b8488ca5882fa
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 16:44:02 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 16:44:02 +0900
+
+    一旦git log情報を抜いて通知
+
+
+:100644 100644 03476ce8101dce1288d82881c61e7ecfd59a94b5 00b900f2e7e69656664d586863199a1f84b665a4 M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 09b66f0c3f602acef7532190434b6b208edda57e 24e2d46017f7fe02214ed7837c811ecdf5b181f4 M	pipeline_script/DevBuild/ios/build_beta.groovy
+commit e36a5114f302ed2665781ddbd72b8488ca5882fa
+tree 8d883320137e140bcd471eea3c7349f3679952de
+parent 594db6c912f850be1cfdae534350cc06b67d142d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 15:07:32 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 15:07:32 +0900
+
+    [android]userIDの情報を表示
+
+
+:100644 100644 6028aee2a80574fda230b16a0952d8555b7aa514 03476ce8101dce1288d82881c61e7ecfd59a94b5 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 594db6c912f850be1cfdae534350cc06b67d142d
+tree 394dabf405d280e71384d05486760ae59572df83
+parent 15cfdf122a57132c9782d59a280dc0be5c59be33
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:39:39 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:39:39 +0900
+
+    scriptでくくってなかったので修正
+
+
+:100644 100644 4a2417f1da9d08969503f411cd51d9306bc6912a 52d7679467f8426cf0691e0810c34a994936007b M	pipeline_script/DevBuild/ios/build.groovy
+commit 15cfdf122a57132c9782d59a280dc0be5c59be33
+tree 18b5b25ebdd9c1a9ae4b6aea81ade0ce90b98c3f
+parent ffe83b56da0a6d18f5faa24008012f0217c77507
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:35:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:35:49 +0900
+
+    ブランチ名の指定方法変更漏れ修正
+
+
+:100644 100644 4d7dd449d6437768430c4e959e94616cff677236 0e4c9939e93678363d7bd192ec7db405f982917c M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 b09413b9d6a5573d6c202aa54e18fad81a2220e8 4a2417f1da9d08969503f411cd51d9306bc6912a M	pipeline_script/DevBuild/ios/build.groovy
+commit ffe83b56da0a6d18f5faa24008012f0217c77507
+tree 60722a2db70789a85cbc017ad9c31f18768e533e
+parent c1ee5418fc0a05a2265e101a84ded5b9e5e773c0
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:26:20 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:26:20 +0900
+
+    [ios]ブランチ名の指定方法変更
+
+
+:100644 100644 6907c2a6adb5a350418d75d05b18583b48e28335 b09413b9d6a5573d6c202aa54e18fad81a2220e8 M	pipeline_script/DevBuild/ios/build.groovy
+commit c1ee5418fc0a05a2265e101a84ded5b9e5e773c0
+tree 6d2fb40367ad2ff6aa0943ebd20fb116c7656d12
+parent bf5807fa350a3e62089dffef3cd7566f97b2b59e
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:07:27 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:07:27 +0900
+
+    userIDの呼び方を修正
+
+
+:100644 100644 65e8cb34edad12ec8c75af96b3fd58385ac919c9 6028aee2a80574fda230b16a0952d8555b7aa514 M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 d7bd162ca19e30bd3d6ff5cf3d01ecefa969275c 09b66f0c3f602acef7532190434b6b208edda57e M	pipeline_script/DevBuild/ios/build_beta.groovy
+commit bf5807fa350a3e62089dffef3cd7566f97b2b59e
+tree e9636c36d461b459274aa4bbd013de36ee822bbc
+parent 68c5fe0446495abdc5ae658b2f00800b17c3dd23
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 12:27:35 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 12:27:35 +0900
+
+    [utils]念の為配布グループを括っておく
+
+
+:100644 100644 2dbfa14c5404ce1100f44516d0d7c89439c30c5b 5623c22ed45fb7ca57a75250b16ed34a8b7ca593 M	pipeline_script/utils/upload/uploadAppCenter.groovy
+commit 68c5fe0446495abdc5ae658b2f00800b17c3dd23
+tree a14c2ff2fd5bb38c2c5b7f45bebe60838687fa6a
+parent f9468929e6f3d091c6f3049472eff76e18024051
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 12:24:28 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 12:24:28 +0900
+
+    appcenterのグループ配布修正・リリースノートの引数追加　
+
+
+:100644 100644 8d329cedc79c22dd557ca2cab3b7d3a04160d8ab 4d7dd449d6437768430c4e959e94616cff677236 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 3a104c22096d36acd3aefdbc27d09f60c87fd41b 65e8cb34edad12ec8c75af96b3fd58385ac919c9 M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 610033838c36f98e7c20577654c68814d410a5e8 38ba7c162313bdfcb4cf08f1cfd2ac6886d77f62 M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 3cd7725847cfff679df337cb156013b96ed148d6 9236d110c997a08d1dbc2f0619d888cacdac0ee3 M	pipeline_script/DevBuild/android/qa_build.groovy
+:100644 100644 ca8294ea122c07801f9e1ef95346017cc1564dc6 53e5f759de820f9691d40d1e3d5cce14ce529453 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 9db41ebf664d666edb557759c47b55236fc1868f 6907c2a6adb5a350418d75d05b18583b48e28335 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 520fff72051d119cfdeec78a808785af4ff440db d7bd162ca19e30bd3d6ff5cf3d01ecefa969275c M	pipeline_script/DevBuild/ios/build_beta.groovy
+:100644 100644 ccf439f7b1cc915b010ac5432944d23323190ed0 66e7b28c5dc6d305bece281ea3d6bf0c60f4e710 M	pipeline_script/DevBuild/ios/devbuild.groovy
+:100644 100644 ef204a1e9a2f4d02d72d57a613fc9c5af19effc3 4ff6dcca91b146bcc7386decc04b009af46d5065 M	pipeline_script/DevBuild/ios/qa_build.groovy
+:100644 100644 bb399a70ddbb9b8e0d7fad65df9343b63b440122 a9bb276132a9888e5fe8d5870217e9a25841c038 M	pipeline_script/DevBuild/ios/release_build.groovy
+:100644 100644 e941ccedb45240c4e8e35520d2983f5fb5490def 18da3a9ba3e0a2ca4dba347f27e9147a9f2c6a76 M	pipeline_script/utils/authUtility.groovy
+commit f9468929e6f3d091c6f3049472eff76e18024051
+tree 4fb70fb29711346216681a7f771323222a3ac35b
+parent 41e96aa8a6dcef7d656ab1b748dbb36ba4fabbe7
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 11:52:23 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 11:52:23 +0900
+
+    [utils]配布グループのミスを修正
+
+
+:100644 100644 408832830ec1c2741dd9cf7447bdae1bbb6b905f e941ccedb45240c4e8e35520d2983f5fb5490def M	pipeline_script/utils/authUtility.groovy
+commit 41e96aa8a6dcef7d656ab1b748dbb36ba4fabbe7
+tree fc86347b57ca6f4aed1f3f8037667830d5e615ef
+parent 7eed38564625b840bd7a495dea91c80c325f96b2
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 11:45:34 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 11:45:34 +0900
+
+    appcenterの配布グループについて取得するメソッド追加
+
+
+:100644 100644 e7ec98ebc9a1921ece93299f822b718c0f1f950d 8d329cedc79c22dd557ca2cab3b7d3a04160d8ab M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 38ba7c162313bdfcb4cf08f1cfd2ac6886d77f62 610033838c36f98e7c20577654c68814d410a5e8 M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 9236d110c997a08d1dbc2f0619d888cacdac0ee3 3cd7725847cfff679df337cb156013b96ed148d6 M	pipeline_script/DevBuild/android/qa_build.groovy
+:100644 100644 53e5f759de820f9691d40d1e3d5cce14ce529453 ca8294ea122c07801f9e1ef95346017cc1564dc6 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 ec522748962230c9eba0adfb671cd4322bf82b5f 9db41ebf664d666edb557759c47b55236fc1868f M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 66e7b28c5dc6d305bece281ea3d6bf0c60f4e710 ccf439f7b1cc915b010ac5432944d23323190ed0 M	pipeline_script/DevBuild/ios/devbuild.groovy
+:100644 100644 4ff6dcca91b146bcc7386decc04b009af46d5065 ef204a1e9a2f4d02d72d57a613fc9c5af19effc3 M	pipeline_script/DevBuild/ios/qa_build.groovy
+:100644 100644 a9bb276132a9888e5fe8d5870217e9a25841c038 bb399a70ddbb9b8e0d7fad65df9343b63b440122 M	pipeline_script/DevBuild/ios/release_build.groovy
+:100644 100644 3c592aeac06f9922ff4d5b8fc17cf723fc177e0d 408832830ec1c2741dd9cf7447bdae1bbb6b905f M	pipeline_script/utils/authUtility.groovy
+:100644 100644 a894222642384b483a680b2e775bb2fcfe9bde6a 2dbfa14c5404ce1100f44516d0d7c89439c30c5b M	pipeline_script/utils/upload/uploadAppCenter.groovy
+commit 7eed38564625b840bd7a495dea91c80c325f96b2
+tree 360b4807a435c1ca3c2bbef387b1bb2e392f6d0e
+parent ba3f56045057a71c3eac6ae5ada3450b410d0cac
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 11:16:18 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 11:16:18 +0900
+
+    [utils]使ってないので削除
+
+
+:100644 100644 30855c6d89c736b56fa37b5a9ed6f9ea7a8efbf8 a894222642384b483a680b2e775bb2fcfe9bde6a M	pipeline_script/utils/upload/uploadAppCenter.groovy
+commit ba3f56045057a71c3eac6ae5ada3450b410d0cac
+tree 04617be65c003888c3dd03516a67f62095f3d251
+parent 6084ca1007b7b9ccc89075c138654a62a79302d4
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 11:08:13 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 11:08:13 +0900
+
+    [ios]ios向けスクリプトアップロード
+
+
+:100644 100644 6ddae6bd10016ab1bd2f5817fe64ff37974028d1 ec522748962230c9eba0adfb671cd4322bf82b5f M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 a4fb8f374362bcc91e3e3e52145d7117f8b7be65 520fff72051d119cfdeec78a808785af4ff440db M	pipeline_script/DevBuild/ios/build_beta.groovy
+commit 6084ca1007b7b9ccc89075c138654a62a79302d4
+tree 258b34a6e1215a3a84b130257bd26b62b20472a1
+parent db6d0d2d112fcdc9ad30a422b5674608e73016c8
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 10:27:56 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 10:27:56 +0900
+
+    [android]upstream user 情報が入ってなかったので追加
+
+
+:100644 100644 4e345f72544132ea63123ec3ea967599712208be e7ec98ebc9a1921ece93299f822b718c0f1f950d M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 c10d125205136783b66b5eef4f3f80a9a41a8887 3a104c22096d36acd3aefdbc27d09f60c87fd41b M	pipeline_script/DevBuild/android/build_beta.groovy
+commit db6d0d2d112fcdc9ad30a422b5674608e73016c8
+tree b09306351d73028ec7d44ab6d05fcc5a95fa3621
+parent 6ade78a401d601455397054f4615b0e72488471f
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 00:25:47 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 00:25:47 +0900
+
+    [android]toString()しておく
+
+
+:100644 100644 6cff6a0699f8c022c7859a919fba6a24c95339c0 4e345f72544132ea63123ec3ea967599712208be M	pipeline_script/DevBuild/android/build.groovy
+commit 6ade78a401d601455397054f4615b0e72488471f
+tree 2133d715c1a0968b0e22dfe8e11f9f6f5bd84de3
+parent 9cf37313ad9db3cc4e3006cbb3c19081dc5896a3
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 21:14:16 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 21:14:16 +0900
+
+    [ios]iOS向けのβビルドスクリプト上げとく
+
+
+:000000 100644 0000000000000000000000000000000000000000 6ddae6bd10016ab1bd2f5817fe64ff37974028d1 A	pipeline_script/DevBuild/ios/build.groovy
+:000000 100644 0000000000000000000000000000000000000000 a4fb8f374362bcc91e3e3e52145d7117f8b7be65 A	pipeline_script/DevBuild/ios/build_beta.groovy
+commit 9cf37313ad9db3cc4e3006cbb3c19081dc5896a3
+tree b312af9d5d0cfe2390be2a1f2ca469da2fb0b236
+parent a8a091f66594672753642a2af1808741d7af2126
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 20:51:37 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 20:51:37 +0900
+
+    DevBuild_JobNodeでbeta以外は動くように設定。及びAppCenterJOBの引数指定の変更
+
+
+:100644 100644 1232c6b0d08602806f11713b73158d0d497609cd 6cff6a0699f8c022c7859a919fba6a24c95339c0 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 b71125bf2511c2ab14d446a53b292e10fd04e3ab 38ba7c162313bdfcb4cf08f1cfd2ac6886d77f62 M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 7770e8e33ce8b640a2d9cc8f93ad7eb46c5a78a5 9236d110c997a08d1dbc2f0619d888cacdac0ee3 M	pipeline_script/DevBuild/android/qa_build.groovy
+:100644 100644 365f7c7f797450cba150a8253de7d88f81f0a6f1 53e5f759de820f9691d40d1e3d5cce14ce529453 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 b58224f8aa8d968fbb22e70d5dba915b9fe3ba64 66e7b28c5dc6d305bece281ea3d6bf0c60f4e710 M	pipeline_script/DevBuild/ios/devbuild.groovy
+:100644 100644 6ce17ce473ef5d4f9855e3e97d8fb4f51d7a6a85 4ff6dcca91b146bcc7386decc04b009af46d5065 M	pipeline_script/DevBuild/ios/qa_build.groovy
+:100644 100644 fba9612e664a94fff05d5d93a5cb64bbca814d9f a9bb276132a9888e5fe8d5870217e9a25841c038 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit a8a091f66594672753642a2af1808741d7af2126
+tree 1e708bf8a9b74f13a6de703a434e06611b896957
+parent 3dcf56130e34d3e6e78ae83106a4f6116ac33451
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 20:16:03 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 20:16:03 +0900
+
+    [android]カンマの入れ忘れを追加
+
+
+:100644 100644 b33584e047b5fa1a8a996f63eced27b92058fc3c c10d125205136783b66b5eef4f3f80a9a41a8887 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 3dcf56130e34d3e6e78ae83106a4f6116ac33451
+tree 886aa474b5a7138fbabb074cdc0e67a193eca7e6
+parent f0264b71ebab7cc28b9bfd1800683e49b33c3736
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 20:14:08 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 20:14:08 +0900
+
+    [android]トークン指定を追加
+
+
+:100644 100644 03b36f40d3581c27f761e4660d90831ce8a12da9 1232c6b0d08602806f11713b73158d0d497609cd M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 e48ae82b4a7c8afc4c38489b782f75243575400e b33584e047b5fa1a8a996f63eced27b92058fc3c M	pipeline_script/DevBuild/android/build_beta.groovy
+commit f0264b71ebab7cc28b9bfd1800683e49b33c3736
+tree dd77fe4e8ee74f2ac4c3881007b92a71bc9a6695
+parent 7cd8340a05e2a0356c1da5e7b98cb4bdf9855ab4
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 20:08:07 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 20:08:07 +0900
+
+    [android]architecturesのくくり方を変更
+
+
+:100644 100644 0386458dad5e2ccb7bfeae19ecc11e177683c51f 03b36f40d3581c27f761e4660d90831ce8a12da9 M	pipeline_script/DevBuild/android/build.groovy
+commit 7cd8340a05e2a0356c1da5e7b98cb4bdf9855ab4
+tree 4c4aad432dcc2ea9e0201061f1d88fc5f94d6844
+parent bde9954fbd8d977ec25b06ef3e7dab82d928d395
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 19:46:51 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 19:46:51 +0900
+
+    [android]アーキテクチャの指定でログだし
+
+
+:100644 100644 bbff4f518fd5a42ff73ee6a96c50d90593de1d63 0386458dad5e2ccb7bfeae19ecc11e177683c51f M	pipeline_script/DevBuild/android/build.groovy
+commit bde9954fbd8d977ec25b06ef3e7dab82d928d395
+tree b6a029523c6c6dbc2445e41feed1ab51a37d2d3d
+parent e31a66cdf3d5aa0006087a5b39f5b506b3c14aa7
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 18:27:39 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 18:27:39 +0900
+
+    [android]architecturesが弾かれるのでくくり方を変えてみる
+
+
+:100644 100644 461f47fe3677c1f04f5a090e49b3e9a69edeada9 bbff4f518fd5a42ff73ee6a96c50d90593de1d63 M	pipeline_script/DevBuild/android/build.groovy
+commit e31a66cdf3d5aa0006087a5b39f5b506b3c14aa7
+tree 74ff607aa46734578860aeaa910342b8359813c3
+parent 461acb7d937baca6d298c2d0aebbf93c957c2ef0
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 18:01:18 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 18:01:18 +0900
+
+    凡ミスを修正（引数忘れ）
+
+
+:100644 100644 4e779843f6c713f9468cbfa6e8df45b7962e8f0f e48ae82b4a7c8afc4c38489b782f75243575400e M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 461acb7d937baca6d298c2d0aebbf93c957c2ef0
+tree 19bf4acebc66dd122490bf7680ca83899d0d3345
+parent 47795b850d3e4f6d2559fe3740a0a6cc93bab297
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 16:40:42 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 16:40:42 +0900
+
+    slack通知にメンション及びリリースノートを追加
+
+
+:100644 100644 6e5421bd78dcc2870c0a288f3d6cb857f2d83810 4e779843f6c713f9468cbfa6e8df45b7962e8f0f M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 47795b850d3e4f6d2559fe3740a0a6cc93bab297
+tree 9ac23a33653be8419601f1c17d016ebbdf6b99b9
+parent 52ed66f4004db9a77328c8b2e73463239daf7f69
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 15:49:13 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 15:49:13 +0900
+
+    うっかりミスした誤記を修正
+
+
+:100644 100644 afc1887bb0a82f1de766a2e7eb3ac3807884adb4 6e5421bd78dcc2870c0a288f3d6cb857f2d83810 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 52ed66f4004db9a77328c8b2e73463239daf7f69
+tree ebf072a07d8b0e6e00a37b53a9634826e001d4fa
+parent ad0348966c08ea008acddfa095c5f2f9b2e334e7
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 15:40:37 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-16 15:40:37 +0900
+
+    BRANCH_NAME取得場所を変更
+
+
+:100644 100644 e8001a3f21a398ca10cc8cda353c32cbb34ebc13 afc1887bb0a82f1de766a2e7eb3ac3807884adb4 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit c80325cb8df8286cb80e6b05611c4af39eab7980
+tree 482748790b25bb5a8cbb83c54a4e551d6af09ae0
+parent ea65f385353db69970f0cb6e523f03671fbdf4d5
+author shin donggun <shin_donggun@cocone.co.jp> 2022-03-16 14:44:08 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-03-16 14:44:08 +0900
+
+    upload catalog after assets done
+
+
+:100644 100644 ce907ad84aec67ae55bcf6d9b5046fd70be48040 2c27b4dd7fd61ae5c8265fb11d9d88f8ce9fbf50 M	pipeline_script/Design/build_asset_upload_custom_server.groovy
+:100644 100644 a33b3c01cd41c92e7f8263d639f24e4761222f82 fb7e8e7d2525fda59d796103ca15292bbe1b2b94 M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy
+commit ad0348966c08ea008acddfa095c5f2f9b2e334e7
+tree 0ed0656848020ab83ea369ed9a93c17919251079
+parent 0a466001fa0e7d56a29f71c3e491b745507e2f59
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 21:17:01 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 21:17:01 +0900
+
+    [android]外部のgroovyファイルのロードし忘れなど諸々追加
+
+
+:100644 100644 f4cf3c29ec7065beadda67cd8d31700306e5f4bf e8001a3f21a398ca10cc8cda353c32cbb34ebc13 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 0a466001fa0e7d56a29f71c3e491b745507e2f59
+tree 17416df0578fb42c86cec033636dfbbb8b03d484
+parent 65d3620a2043232cbac99cc98a2a8549dcc992ae
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 20:59:37 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 20:59:37 +0900
+
+    [android]UserNameの取得方法を失敗した
+
+
+:100644 100644 59dd119af6a7a493847d09f737ba5961a974967d f4cf3c29ec7065beadda67cd8d31700306e5f4bf M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 65d3620a2043232cbac99cc98a2a8549dcc992ae
+tree 1c1c82107741ca4f3318dea4ee4a9cc45babf4b4
+parent 33cc253c866c3f311d36643f1696dd44ea0f2b88
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 20:54:39 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 20:54:39 +0900
+
+    [android]ユーザー情報の取得しわすれていたので追加
+
+
+:100644 100644 a51aedd5f190b9b9494fc196e699498697add05c 59dd119af6a7a493847d09f737ba5961a974967d M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 33cc253c866c3f311d36643f1696dd44ea0f2b88
+tree e8ba6c7ba32553a7dbb3c42695985bf7c31395f7
+parent da88e199625aa02d39cf88d6d226fff7b299c02e
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 20:39:54 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 20:39:54 +0900
+
+    文法ミスを修正
+
+
+:100644 100644 63e6a539509ad1dc6f81a20e9e0d01678afe5a5a 3c592aeac06f9922ff4d5b8fc17cf723fc177e0d M	pipeline_script/utils/authUtility.groovy
+commit da88e199625aa02d39cf88d6d226fff7b299c02e
+tree b96c0b43ac392303f9c21d2a104449dc056ca9bb
+parent cae70dd6298b582a5a03f103744418792eb72bf7
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 20:34:35 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 20:34:35 +0900
+
+    [android][ios]AppCenterのAPPNAMEを取得するutilityを追加、それを使うように修正
+
+
+:100644 100644 bbb9413375d6d86b09afb4a6b13a17eab3c03fbf 461f47fe3677c1f04f5a090e49b3e9a69edeada9 M	pipeline_script/DevBuild/android/build.groovy
+:000000 100644 0000000000000000000000000000000000000000 63e6a539509ad1dc6f81a20e9e0d01678afe5a5a A	pipeline_script/utils/authUtility.groovy
+:100644 100644 925bdfa2858cc9a5f94fe560233f3b9a756a7767 30855c6d89c736b56fa37b5a9ed6f9ea7a8efbf8 M	pipeline_script/utils/upload/uploadAppCenter.groovy
+commit cae70dd6298b582a5a03f103744418792eb72bf7
+tree a0a762fc4f1e9a2b0c0868adb61c097a6f968ea5
+parent 94a098ee8de88c7f5dfca760edcff4e117a0d1ed
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 19:55:21 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 19:55:21 +0900
+
+    [android]Slack通知の設定を環境変数に逃がす
+
+
+:100644 100644 fdc3d1d7ffa9408083e0dc47cb905a1888638b95 a51aedd5f190b9b9494fc196e699498697add05c M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 94a098ee8de88c7f5dfca760edcff4e117a0d1ed
+tree 683067e9f08bc29b32e13db0e4fdca0eab4f225c
+parent 2ca494ee676cb19847e8c1a06d717fab047a2e99
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 19:40:58 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 19:40:58 +0900
+
+    [Android]ジョブ指定ミスを修正
+
+
+:100644 100644 db840d5c69ece7739e10d77be2ebcf928603dc6e fdc3d1d7ffa9408083e0dc47cb905a1888638b95 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 2ca494ee676cb19847e8c1a06d717fab047a2e99
+tree d6118418d096b09ada992c0c71e2f7893d9deb66
+parent 726c4e131505f44170bc715118a0c3af64d51db2
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 19:32:29 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 19:32:29 +0900
+
+    [android]betaビルドの構成を追加
+
+
+:100644 100644 51356b339fcde2b1fec915183c4e9f84e7fc0249 bbb9413375d6d86b09afb4a6b13a17eab3c03fbf M	pipeline_script/DevBuild/android/build.groovy
+:000000 100644 0000000000000000000000000000000000000000 db840d5c69ece7739e10d77be2ebcf928603dc6e A	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 8eaecb7abd1e6e7c13f505b2383eab9692638731 1174e1ebd8dcda569e972109e0af96d27e093896 M	pipeline_script/utils/gitUtility.groovy
+commit 726c4e131505f44170bc715118a0c3af64d51db2
+tree de8436c2503da2aff87944eec1c6e787535d5c11
+parent 34220fc8bb71fbb7e8f9527d90125585c82c5ec9
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 14:24:01 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-15 14:24:01 +0900
+
+    [android]apitokenをParamに変更、android archsを引数指定に変更
+
+
+:100644 100644 50490845c94213353381b68edbca66460092d355 51356b339fcde2b1fec915183c4e9f84e7fc0249 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 277269e0333cc6176f82985314bcc2f18eb003ba 925bdfa2858cc9a5f94fe560233f3b9a756a7767 M	pipeline_script/utils/upload/uploadAppCenter.groovy
+commit 34220fc8bb71fbb7e8f9527d90125585c82c5ec9
+tree 87b57fa6dca4cf7546f45a1765e43ff8bc023b1c
+parent d247a98483bffc8b8f8082b846ed2fda7db435dc
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 16:53:44 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 16:53:44 +0900
+
+    [android]scriptでくくり漏れを修正
+
+
+:100644 100644 f87ca87c85f7854f5abec11542ca98174eb718e5 50490845c94213353381b68edbca66460092d355 M	pipeline_script/DevBuild/android/build.groovy
+commit d247a98483bffc8b8f8082b846ed2fda7db435dc
+tree eb7045b4502bc394bbb0e52e880c5707a5ba2143
+parent 6221dcee51e9a4eb5f9e90da2df52cb68d682639
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 16:51:13 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 16:51:13 +0900
+
+    [android]stepsでくくり忘れたので追加
+
+
+:100644 100644 0f4481c5953b7dce883d7eeef83f65c8f88f5270 f87ca87c85f7854f5abec11542ca98174eb718e5 M	pipeline_script/DevBuild/android/build.groovy
+commit 6221dcee51e9a4eb5f9e90da2df52cb68d682639
+tree 58fa112b5ffc3066ef16a4cfb5d9f07e350dbe8c
+parent 1cb7c99f6df853f72fb87edb36888c39f31a0b75
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 16:48:34 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 16:48:34 +0900
+
+    [android]appcenterのアップロードとビルドに分ける
+
+
+:100644 100644 b71125bf2511c2ab14d446a53b292e10fd04e3ab 0f4481c5953b7dce883d7eeef83f65c8f88f5270 M	pipeline_script/DevBuild/android/build.groovy
+:000000 100644 0000000000000000000000000000000000000000 8eaecb7abd1e6e7c13f505b2383eab9692638731 A	pipeline_script/utils/gitUtility.groovy
+:000000 100644 0000000000000000000000000000000000000000 277269e0333cc6176f82985314bcc2f18eb003ba A	pipeline_script/utils/upload/uploadAppCenter.groovy
+commit 1cb7c99f6df853f72fb87edb36888c39f31a0b75
+tree a5b1774a57c56db3a3d5c20abaca2024e30e4f32
+parent ea65f385353db69970f0cb6e523f03671fbdf4d5
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 13:55:55 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-14 13:55:55 +0900
+
+    [build][android]一旦ビルド用のフィアルを追加
+
+
+:000000 100644 0000000000000000000000000000000000000000 b71125bf2511c2ab14d446a53b292e10fd04e3ab A	pipeline_script/DevBuild/android/build.groovy

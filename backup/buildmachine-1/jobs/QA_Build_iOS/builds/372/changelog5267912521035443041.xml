@@ -1,0 +1,222 @@
+commit 9bdf9bedafb682072fb11f03e80927eb4996b7cd
+tree c4af8c20f649eccd6fa2df4a8c88c501de719c1b
+parent 6992aec834573036044150e2555a998682763f45
+author egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-14 19:25:57 +0900
+committer egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-14 19:25:57 +0900
+
+    木の実クエストリストを調整しました。
+
+
+:100644 100644 6a52d00b260b2f5bfbd7c886a07642d399e5b287 4fcd7a0bfd9176a34e81f7a243adf05ab5a2c183 M	Assets/Resources/UI/Quest/QuestFruitListItem.prefab
+:100644 100644 fdeab836d7c419c7342fc708485b2ffc7f0237e8 55526de683677402b5a377289564696a19742c9a M	Assets/Resources/UI/Quest/QuestModal.prefab
+commit 0d90b8d92306516f909bcdc01f850f2fdfd9e393
+tree da55c2583a20ec64ffaec610ef2ced829141150a
+parent cd2480d951cc661e9ec4636020afcd1bbd6f04cd
+author itaba_mitsuharu <itaba_mitsuharu@cocone.co.jp> 2022-06-14 18:15:42 +0900
+committer itaba_mitsuharu <itaba_mitsuharu@cocone.co.jp> 2022-06-14 18:15:42 +0900
+
+    コンポーネントの設定修正
+
+
+:100644 100644 543a70bc0fab249697cee0ae5460ceb92e56d450 f3ca3f4e3a57790c0103b4c3de58f895bf768b5f M	Assets/Resources/UI/Tutorial/TutorialGuideGoOut.prefab
+commit cd2480d951cc661e9ec4636020afcd1bbd6f04cd
+tree e4c21ef058084ccfa95214adf2445d725e591692
+parent 6992aec834573036044150e2555a998682763f45
+author itaba_mitsuharu <itaba_mitsuharu@cocone.co.jp> 2022-06-14 18:10:10 +0900
+committer itaba_mitsuharu <itaba_mitsuharu@cocone.co.jp> 2022-06-14 18:10:10 +0900
+
+    チュートリアル中におでかけ時に出るフレンド申請ボタンの説明ガイドを追加
+
+
+:000000 100644 0000000000000000000000000000000000000000 543a70bc0fab249697cee0ae5460ceb92e56d450 A	Assets/Resources/UI/Tutorial/TutorialGuideGoOut.prefab
+:000000 100644 0000000000000000000000000000000000000000 86a64968a3b1b58adb5e18ce77083a33dd543e1e A	Assets/Resources/UI/Tutorial/TutorialGuideGoOut.prefab.meta
+commit 310fbbf9cdbe198361bdfe4d84652c625c01efc7
+tree 4a203ea14bf83c4f19d38ca5ff1d24d7363cc60f
+parent ea4a0ad3842e0d17e8e601e6183461dc040d7984
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-14 17:58:10 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 17:58:10 +0900
+
+    SendStatusを渡すように変更
+
+
+:100644 100644 824564402c2b5f6366be0080df2a8bbbc57e98b7 9564ab3d2759bd432b666c6ceb6fae8516ff6562 M	Assets/App/Scripts/Contents/Main/MainNameplateLayer.cs
+:100644 100644 f78281df565687ac4928fb50b0b9b828d05b06c6 59989b08e08f4b1d2c9836bda03b2afa0a9044da M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+:100644 100644 fcf412a0e2d7bb083050375070f2716c9c0d0423 be551f16e33be0d6686732279275513258e5b89f M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 f5b47a7539b87009c2cda13781ff259298b43d4c eec82d898bd622098129d34b835dba1859d73b21 M	Assets/App/Scripts/Contents/Profile/ProfileLayer.cs
+:100644 100644 0da79946fbec6c25e67b044b1eb48c6802393172 7fb3b5f35b447e77e6d7f3c968a6b8941a9971b5 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit ea4a0ad3842e0d17e8e601e6183461dc040d7984
+tree 90f941ee4d4858460b4aae6246ba1e455970acd3
+parent 1d67a2cf2fff482a3e2219a207b10dad10eed77e
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-14 17:35:39 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 17:35:39 +0900
+
+    送信ステータスの取得
+
+
+:100644 100644 f7c351c18f25c919f476d3b87cdbb4b359a2eaf0 d62f78592469939f803b33e383b27f64aca9215d M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentModel.cs
+:100644 100644 7a371cb093c8e144bf23b9c3d9280f958ee4e274 f78281df565687ac4928fb50b0b9b828d05b06c6 M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+:100644 100644 08b1ba81c36c23d655d5f65bab4b427f0a7e08a8 188da1beb2ed19f2657a543314867df8da2dfcaf M	Assets/App/Scripts/Scenes/WorldScene.cs
+:100644 100644 6a70560a39d4f6e50b7ce5d257ea1dd91236d9fe faa208b1da78e0222e531cff984e5f5c04df2783 M	Assets/App/Scripts/p3-proto/pia_present/PiaPresent.cs
+:100644 100644 898e8d65f187b3d22f7077b970a7ce0ae075b210 5e2191939bfaddf5812419f07708d2259c3de79e M	Assets/App/Scripts/p3-proto/pia_present/PiaPresentGrpc.cs
+commit 1d67a2cf2fff482a3e2219a207b10dad10eed77e
+tree 1c8106055f85dc480a3d220af52f916a96691c88
+parent da2ac862ca827bd4a61452d56479db85eaf038af
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-14 17:04:32 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 17:04:32 +0900
+
+    fruit quest deeplink 実装
+
+
+:100644 100644 143f38851fad76ffcd0a1ddc0841dbab78e3426c d7a731be2b73083214de0ef3c44f636ad454989a M	Assets/App/Scripts/Contents/Quest/QuestHandler.cs
+:100644 100644 693b18787604e167818bb84d719198e1906d7cf1 0da79946fbec6c25e67b044b1eb48c6802393172 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit 4ed765f900b15f19379eda4b90c597236b4cf499
+tree 5d8b8e614ecbc15ada32dff43d76d2bb03db803b
+parent 353c61dc78929b6d268347d61e21a67c6d4b8471
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-14 16:38:40 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 16:38:40 +0900
+
+    コメント削除
+
+
+:100644 100644 33347b6da5c452a95327081a36f541842bb974c2 85a7d5d461c7675da277d21e52875f5f893abb8b M	Assets/App/Scripts/Contents/Quest/QuestModel.cs
+commit 353c61dc78929b6d268347d61e21a67c6d4b8471
+tree 60247a6bc02af6de8d781396ec4cd5b20c62d2b2
+parent fca9b0fefbb487ddd9c8da3531de9275c82f982b
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-14 16:37:12 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 16:37:12 +0900
+
+    using整理
+
+
+:100644 100644 c0dc832c500ec126259bf948198b6c3a841a8a5b c5aeda794dc663b3861647cda62b8e5865d4c3c9 M	Assets/App/Scripts/Contents/Quest/QuestData.cs
+:100644 100644 b73beac4e2581f5be8d5f6040b6b37a17ffc16a3 4e653551a13ea201e4a43f67fb64a52d5e19f358 M	Assets/App/Scripts/Contents/Quest/QuestHistoryModal.cs
+:100644 100644 c24129bb0f0a089ee2ad20dd2dedca7bf0dd1b23 16d8bed167fddcceb6bfb598a5ac8d11572f0e86 M	Assets/App/Scripts/Contents/Quest/QuestListItem.cs
+:100644 100644 d1522d622777f373d73c72b020cc1fdbb88ec3f2 1dc73c523c4949826c99e4734637d041f47b0352 M	Assets/App/Scripts/Contents/Quest/QuestModal.cs
+commit fca9b0fefbb487ddd9c8da3531de9275c82f982b
+tree 5c13d5f2a7a0c4f4f4df7ff15561ebb6b049453d
+parent eb1178866798264332a21aa3d5b5043a13d421ad
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-14 15:55:40 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 15:55:40 +0900
+
+    定数の追加
+
+
+:100644 100644 9e2f638ad0cbb712b46c006263db73c57b6d6790 d0fca4adf627d76f0a85111e8d8abe09333a771b M	Assets/Resources/UI/Main/NotificationAreaLayer.prefab
+commit abbff53439e4dceff2e07367952a3bdabbb25008
+tree 8aa7e506a602c8d6b6b828d71403115027e8b239
+parent 1a7528b33fdb622c1796ec3f3763c1493ec78baa
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-14 14:13:07 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-14 14:13:07 +0900
+
+    FIX: TRIA-4280【木の実収穫改修】チュートリアル中の水やりで進行不能となる
+
+
+:100644 100644 f184cae054d8618e06af7e639cae96c915e32531 9876aa362f0304a926126ac16898ca5ed60f8b6a M	Assets/App/Scripts/UI/WorldCanvas/TreeCare.cs
+commit eb1178866798264332a21aa3d5b5043a13d421ad
+tree 7f0bfb28ed10f3775b683f13562a467163eb40d9
+parent 40624b358b91c57a68147b017e22a978150aea11
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:58:20 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:58:20 +0900
+
+    serialize修正
+
+
+:100644 100644 1d86e0f4198e95e2b1d3408a8a63a505e6700ebe c24129bb0f0a089ee2ad20dd2dedca7bf0dd1b23 M	Assets/App/Scripts/Contents/Quest/QuestListItem.cs
+:100644 100644 5a1ee40b2362b720daf3fb6a0b6da8a5be93ad3d 6a52d00b260b2f5bfbd7c886a07642d399e5b287 M	Assets/Resources/UI/Quest/QuestFruitListItem.prefab
+commit 40624b358b91c57a68147b017e22a978150aea11
+tree 403e77fa7a3bee5ff8b699920858d719c419c74c
+parent aa21326397c53821fb934df6fcdaf5b84c794aa9
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:41:45 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:43:20 +0900
+
+    日付処理の実装
+
+
+:100644 100644 54614ac64b7b9dd8d2dcb28f3324653eaa6e8808 1d86e0f4198e95e2b1d3408a8a63a505e6700ebe M	Assets/App/Scripts/Contents/Quest/QuestListItem.cs
+:100644 100644 4f59a8fe51f32eb4cc1ff1d28389053f022cb306 5a1ee40b2362b720daf3fb6a0b6da8a5be93ad3d M	Assets/Resources/UI/Quest/QuestFruitListItem.prefab
+:100644 100644 fb0d664895f866081f0d0370249544cfb7e59b92 fdeab836d7c419c7342fc708485b2ffc7f0237e8 M	Assets/Resources/UI/Quest/QuestModal.prefab
+commit aa21326397c53821fb934df6fcdaf5b84c794aa9
+tree 2711350ce2281692d0490ae1f34613150d0187ee
+parent a54d1fb09a664f6fb0f11c2752658bf9ed8ce6f3
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-13 19:10:00 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:43:18 +0900
+
+    タブ切り替え処理の修正
+
+
+:100644 100644 bb452aa87e2c5da6661c882c2f1dc11d35ab0a9a 1ad3ba8b50c78fee0c8c57418767014dec0b9747 M	Assets/App/Scripts/Common/UI/CommonListLayout.cs
+:100644 100644 1bf5636ab5acd1cec148ccfdd7a3ba7450ad5072 143f38851fad76ffcd0a1ddc0841dbab78e3426c M	Assets/App/Scripts/Contents/Quest/QuestHandler.cs
+:100644 100644 8927081ab8c4a0e3c3d48100c34f3ef693878ca1 54614ac64b7b9dd8d2dcb28f3324653eaa6e8808 M	Assets/App/Scripts/Contents/Quest/QuestListItem.cs
+:100644 100644 e8bbf0c3853d669c1f9b0b2e965cec54178591ba d1522d622777f373d73c72b020cc1fdbb88ec3f2 M	Assets/App/Scripts/Contents/Quest/QuestModal.cs
+:100644 100644 7eb8ff861ea52cd85270a69caff7e31229d83313 4f59a8fe51f32eb4cc1ff1d28389053f022cb306 M	Assets/Resources/UI/Quest/QuestFruitListItem.prefab
+:100644 100644 16e647b5891fe673933cacba404cf6976437d943 fb0d664895f866081f0d0370249544cfb7e59b92 M	Assets/Resources/UI/Quest/QuestModal.prefab
+commit a54d1fb09a664f6fb0f11c2752658bf9ed8ce6f3
+tree 27150b08726937ac3aa4e8b219587512dc005fa8
+parent 08f522e46657681a55cd48a811788194bad27e46
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-13 19:09:45 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:43:15 +0900
+
+    フォルダ移動
+
+
+:100644 100644 23f5a74f5fde81ad6cfc805a64d9dd44db731957 23f5a74f5fde81ad6cfc805a64d9dd44db731957 R100	Assets/Resources/UI/Quest/QuestImage.meta	Assets/App/Textures/UI/QuestImage.meta
+:100644 100644 3c0e0e0406256f556d5ab452d41c345d73ff7b38 3c0e0e0406256f556d5ab452d41c345d73ff7b38 R100	Assets/Resources/UI/Quest/QuestImage/QuestFruitBg.png	Assets/App/Textures/UI/QuestImage/QuestFruitBg.png
+:100644 100644 8764a86a54cd244b9aded189cba9621ed5185883 df33e6c3a95cc82ed53282864217ed2765e7650b R097	Assets/Resources/UI/Quest/QuestImage/QuestFruitBg.png.meta	Assets/App/Textures/UI/QuestImage/QuestFruitBg.png.meta
+commit 08f522e46657681a55cd48a811788194bad27e46
+tree df35a1e6915c3fb6b6472a1503a0ab0999f6c45e
+parent 6f16b747d02361eba33cac333ffb614505f21be4
+author egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-10 17:43:32 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:43:13 +0900
+
+    木の実クエスト画面のプレハブ調整と通知アイコンを追加しました
+
+
+:000000 100644 0000000000000000000000000000000000000000 45c2b097dff03e063988c3e4346b1cc0d5d2c186 A	Assets/App/Textures/UI/Header/HeaderNotiIFruit.png
+:000000 100644 0000000000000000000000000000000000000000 dea6fa97153425b1abd584c565ef6cd6378b9892 A	Assets/App/Textures/UI/Header/HeaderNotiIFruit.png.meta
+:100644 100644 8ae1551d86c8c92c4fcb005157c7d5169c50ed24 9e2f638ad0cbb712b46c006263db73c57b6d6790 M	Assets/Resources/UI/Main/NotificationAreaLayer.prefab
+:100644 100644 0e4a87e4bee616bfa6ae1c35c1bb3433df57a646 7eb8ff861ea52cd85270a69caff7e31229d83313 M	Assets/Resources/UI/Quest/QuestFruitListItem.prefab
+:100644 100644 e9a5b65619d04e5c524aafffcfcd15b8d0c02bc0 6c7f5a0de7fcf97cf8cea9b077a6be863bd8c872 M	Assets/Resources/UI/Quest/QuestHistoryModal.prefab
+:000000 100644 0000000000000000000000000000000000000000 23f5a74f5fde81ad6cfc805a64d9dd44db731957 A	Assets/Resources/UI/Quest/QuestImage.meta
+:000000 100644 0000000000000000000000000000000000000000 3c0e0e0406256f556d5ab452d41c345d73ff7b38 A	Assets/Resources/UI/Quest/QuestImage/QuestFruitBg.png
+:000000 100644 0000000000000000000000000000000000000000 8764a86a54cd244b9aded189cba9621ed5185883 A	Assets/Resources/UI/Quest/QuestImage/QuestFruitBg.png.meta
+:100644 100644 4c447e745906502b641c77752fe1a1bf2ef24096 2165ab0d37db53f20e8c9701d6d03d61d67df379 M	Assets/Resources/UI/Quest/QuestListItem.prefab
+:100644 100644 2dac6a6498ce5b6dc21f54a1baabcd9d8899bd55 16e647b5891fe673933cacba404cf6976437d943 M	Assets/Resources/UI/Quest/QuestModal.prefab
+commit 6f16b747d02361eba33cac333ffb614505f21be4
+tree d9ef62b7bc78e696d9026cfe9eb98ecf050dc9ec
+parent b3933ae21850494094094071d1211093fd6ffeda
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-09 20:07:26 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:43:10 +0900
+
+    木の実クエストの追加
+
+
+:100644 100644 45adc29e9abf1de8419077bad5bf36be2c323b94 d716eaa9e495eee1e55c912a9ea2b4a76c2fad34 M	Assets/App/Scripts/Application/Layer/LayerType.cs
+:100644 100644 1ad3ba8b50c78fee0c8c57418767014dec0b9747 bb452aa87e2c5da6661c882c2f1dc11d35ab0a9a M	Assets/App/Scripts/Common/UI/CommonListLayout.cs
+:100644 100644 bec6b2460aec614f5656e5bdf261b5ef5beaf63a c0dc832c500ec126259bf948198b6c3a841a8a5b M	Assets/App/Scripts/Contents/Quest/QuestData.cs
+:100644 100644 822777396cedbb3f3150f49258304c355c67d20c 1bf5636ab5acd1cec148ccfdd7a3ba7450ad5072 M	Assets/App/Scripts/Contents/Quest/QuestHandler.cs
+:000000 100644 0000000000000000000000000000000000000000 b73beac4e2581f5be8d5f6040b6b37a17ffc16a3 A	Assets/App/Scripts/Contents/Quest/QuestHistoryModal.cs
+:000000 100644 0000000000000000000000000000000000000000 1fa186ad2341bca837dd9a9541c8625edee0b397 A	Assets/App/Scripts/Contents/Quest/QuestHistoryModal.cs.meta
+:100644 100644 10f6e3957877cd2db67653d21fcee126b6842f9b 8927081ab8c4a0e3c3d48100c34f3ef693878ca1 M	Assets/App/Scripts/Contents/Quest/QuestListItem.cs
+:100644 100644 03833219839388f807fc40223b17adf80b12dceb e8bbf0c3853d669c1f9b0b2e965cec54178591ba M	Assets/App/Scripts/Contents/Quest/QuestModal.cs
+:100644 100644 45f0e0495a472f2471ee7e0aba3fca3a300ead1b 33347b6da5c452a95327081a36f541842bb974c2 M	Assets/App/Scripts/Contents/Quest/QuestModel.cs
+:000000 100644 0000000000000000000000000000000000000000 0e4a87e4bee616bfa6ae1c35c1bb3433df57a646 A	Assets/Resources/UI/Quest/QuestFruitListItem.prefab
+:000000 100644 0000000000000000000000000000000000000000 27db58fac54834edfd0015e930ba20d4a0a765d3 A	Assets/Resources/UI/Quest/QuestFruitListItem.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 e9a5b65619d04e5c524aafffcfcd15b8d0c02bc0 A	Assets/Resources/UI/Quest/QuestHistoryModal.prefab
+:000000 100644 0000000000000000000000000000000000000000 02f9d837271de709b58ae5057f9bb2a6baeefa3a A	Assets/Resources/UI/Quest/QuestHistoryModal.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 4c447e745906502b641c77752fe1a1bf2ef24096 A	Assets/Resources/UI/Quest/QuestListItem.prefab
+:000000 100644 0000000000000000000000000000000000000000 e7fb1ee109231bfd47cd4c61d90b91702b779f69 A	Assets/Resources/UI/Quest/QuestListItem.prefab.meta
+:100644 100644 c3f32abcba04915080f9185b1d34200014755de8 2dac6a6498ce5b6dc21f54a1baabcd9d8899bd55 M	Assets/Resources/UI/Quest/QuestModal.prefab
+commit b3933ae21850494094094071d1211093fd6ffeda
+tree 55891e9064b5a1f3d7c948589756490e6f445595
+parent 1a7528b33fdb622c1796ec3f3763c1493ec78baa
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-09 20:07:07 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-14 13:43:08 +0900
+
+    add proto
+
+
+:100644 100644 767b7930a1c3ec9482fb9d2be7d6cdbf5f109e31 386164286c7722eec3eabab23491265bf8139b7a M	Assets/App/Scripts/p3-proto/enum/QuestEnum.cs
+:000000 100644 0000000000000000000000000000000000000000 6a3476718751750c2742e5df9dd0ec946b27575c A	Assets/App/Scripts/p3-proto/exchange.meta
+:100644 100644 dedf0797501b3c4ee7be44ed0ec43b6a45a86a4e 1942fc77810d1bd12a978b14cc822cd6e0d74ac4 M	Assets/App/Scripts/p3-proto/master/QuestMaster.cs
+:100644 100644 91200ff93801ae6929e74dbed50a4ca6b887db0e 13a32dbdc139f864fddb49523881878f5c0e8f5d M	Assets/App/Scripts/p3-proto/quest/Quest.cs
+:100644 100644 3c66a3d14f57c0197452e0e5a554afe830068911 2fd1885d0105b27351a306472b9c4605ab8df063 M	Assets/App/Scripts/p3-proto/quest/QuestGrpc.cs

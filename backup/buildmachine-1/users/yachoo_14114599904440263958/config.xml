@@ -1,0 +1,110 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<user>
+  <version>10</version>
+  <id>yachoo</id>
+  <fullName>李 世珍</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
+    </jenkins.security.ApiTokenProperty>
+    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.83">
+      <triggers/>
+    </hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.5">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <jenkins.plugins.slack.user.SlackUserProperty plugin="slack@2.48">
+      <disableNotifications>false</disableNotifications>
+    </jenkins.plugins.slack.user.SlackUserProperty>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>e9c19e9bd6922964</seed>
+    </jenkins.security.seed.UserSeedProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>all</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.model.TimeZoneProperty/>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>true</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.6.2">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.34">
+      <emailAddress>yachoo@cocone.co.jp</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>STAFFALL</string>
+        <string>COCONE-JP-Development-Dev</string>
+        <string>ESR-SVN-Bigcache-RW</string>
+        <string>COCONE-JP-Development</string>
+        <string>COCONE-JP-Development-DevGlobal</string>
+        <string>ESR-Portal-Cocone</string>
+        <string>ESR-Zendesk-MiniMe</string>
+        <string>ESR-Zendesk-THMiniMe</string>
+        <string>ESR-Zendesk-VNMiniMe</string>
+        <string>ESR-Zendesk-KRMiniMe</string>
+        <string>ET-Regular</string>
+        <string>Title-TeamLeader</string>
+        <string>COCONE-JP-Global-Dev</string>
+        <string>ESR-JIRA-Admin</string>
+        <string>ESR-Zendesk-TWMiniMe</string>
+        <string>ESR-SSLVPN</string>
+        <string>Title-Developer</string>
+        <string>ESR-Zendesk-Pokecolo</string>
+        <string>ESR-BIGBROTHER-MINIME</string>
+        <string>ESR-BIGBROTHER-COLONY</string>
+        <string>ESR-SVN-ProC-Images-RW</string>
+        <string>ESR-SVN-Vitamin-App-RW</string>
+        <string>COCONE-JP-Vitamin</string>
+        <string>ESR-CMS-Sensil-Alpha</string>
+        <string>ESR-KPI-HSD</string>
+        <string>ESR-AZKABAN-Sensil-Admin</string>
+        <string>ESR-WP-Vita</string>
+        <string>COCONE-Tokyo</string>
+        <string>ESR-CMS-ALPHATANE-CONTENTS1</string>
+        <string>ESR-CMS-TANE-CONTENTS1</string>
+        <string>ESR-SVN-Project-b-RW</string>
+        <string>ESR-KPI-COLORS</string>
+        <string>ESR-KPI-ROOMAGE</string>
+        <string>ESR-SVN-Vitamin-Images-Global-RW</string>
+        <string>ESR-SVN-Palette-App</string>
+        <string>ESR-SVN-Palette-Design</string>
+        <string>ESR-CMS-Billing-Palette</string>
+        <string>ESR-KPI-CAP</string>
+        <string>ESR-KPI-MCN</string>
+        <string>ESR-KPI-P2</string>
+        <string>ESR-GC-BI-TOKYO</string>
+        <string>ESR-KPI-HR</string>
+        <string>Portal-JP-CX-RealOnly</string>
+        <string>ESR-KPI-PURENISTA</string>
+        <string>ESR-AWS-CVPN</string>
+        <string>ESR-KPI-MLD-INTGR</string>
+        <string>ESR-KPI-P1</string>
+        <string>ESR-KPI-POKEMINI</string>
+        <string>ESR-KPI-STICHY</string>
+        <string>ESR-SVN-Poketria</string>
+        <string>ESR-KPI-LIVLY</string>
+        <string>ESR-KPI-BOARD</string>
+        <string>ESR-KPI-VITA</string>
+        <string>ESR-KPI-BIBLIA</string>
+        <string>ESR-KPI-P3</string>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1641997474531</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+  </properties>
+</user>

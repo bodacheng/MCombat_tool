@@ -1,0 +1,115 @@
+commit 5ad6c618c0ce84765aa2b5d6e7593bd0490fc80b
+tree 6dddd3373eeb60aa52d09eee8bd97c91b2d5a467
+parent 0f4f8ecdb84b7edae59d5e51945c056f64eb4a1a
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-15 17:42:23 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-15 17:42:23 +0900
+
+    update sprite atlas
+
+
+:100644 100644 dca3b9e6e03b403e7ab6712093a30f72e8d8cdeb 828f83e6a8aaf18d97057fe169b00ce648ba96ad M	Assets/App/Textures/UI/Header.spriteatlas
+commit 0f4f8ecdb84b7edae59d5e51945c056f64eb4a1a
+tree ed896630cced6d1df8e46c75967f7af77c031ada
+parent fe8b13dc352450dee4ea65609e492a314f80d3a8
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-15 17:37:30 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-15 17:37:30 +0900
+
+    フレンドリストの色々修正
+
+
+:100644 100644 58e4e7f060ef8cd6baa2ad5087c1c8909f7a2b5c eba32e8a6d516bf44fa653cbd807294f1d9dca51 M	Assets/App/Scripts/Contents/Friend/FriendListLayout.cs
+:100644 100644 6d40ed9767c3a760e8aa639e76aa73fda183c7af fdfe1f4fc0e3305f18788f4a14511b9ace0668b3 M	Assets/App/Scripts/Contents/Friend/FriendListLayoutItem.cs
+:100644 100644 6cbfb035b91c93494b65da12fd2315f007a38e31 6ae20a7aee2f38845f83193b0864e3590125aa29 M	Assets/App/Scripts/Contents/Friend/FriendListModal.cs
+:100644 100644 bbe8ed23656b0d2297439fd03d53a496a82a909b 88ed2555f512b2f3d74c0b6d7804b6c306bfcf81 M	Assets/App/Scripts/Contents/Friend/FriendModel.cs
+:100644 100644 b049b228d770d8033a732962a37fc22eeca1a4b3 12b14c46cea6ffdd6469ac0e3141e1c0a60f4c14 M	Assets/Resources/UI/Friend/FriendListItemAccepting.prefab
+:100644 100644 dbf34c11a247925021c94919396d296a02021aef 6528946487ca2febff163e2d570b72a1ea56f1c9 M	Assets/Resources/UI/Friend/FriendListItemApplying.prefab
+:100644 100644 43f1bcf350d3e3c114f28937f6a6ae86d1bb60e2 f59fa634a8200fc919fdc53c5ca2c4a3e394f9db M	Assets/Resources/UI/Friend/FriendListItemFriend.prefab
+:100644 100644 21e843c3616bb186459cca3602982ad2bb1626d7 91c816632721e79d3ee163d915dfbac2d1c3a441 M	Assets/Resources/UI/Friend/FriendListItemUser.prefab
+commit fe8b13dc352450dee4ea65609e492a314f80d3a8
+tree 61945f80e2045aa48c44f8f952193ab65e78a7ff
+parent 2547303811df0d5da30df66bc3911e611b854769
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-15 16:23:33 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-15 16:23:33 +0900
+
+    add friend service
+
+
+:100644 100644 8936c28da6ead2caae670fd03f7b887fff288029 43110217b897ffa6f3e94ece0ad80f51eeb73453 M	Assets/App/Scripts/Application/ApplicationService.cs
+:100644 100644 e3fefad22b2fb9998520dc145ce0d2b5ca1cfac9 c7aa4114da8bb353593a9380ca62df0f262e27cc M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 d0503decf6b07ec41d6baf760209bbfd9a569bf2 bbe8ed23656b0d2297439fd03d53a496a82a909b M	Assets/App/Scripts/Contents/Friend/FriendModel.cs
+:000000 100644 0000000000000000000000000000000000000000 8d604cf510caff0181baa9e4f6ffe8ba3d5e0c2f A	Assets/App/Scripts/Contents/Friend/FriendService.cs
+:000000 100644 0000000000000000000000000000000000000000 a9a0fe68be258976e9d5c7e1bbee4708bf139431 A	Assets/App/Scripts/Contents/Friend/FriendService.cs.meta
+:100644 100644 be551f16e33be0d6686732279275513258e5b89f 18e8dda8810c13498c09229b015c33eeafc9295d M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 0082a04cca1e1c9dba73a36d39334a60c5a868f2 9465918bb5f4956bb36156db8696a5768d4492e9 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit 2547303811df0d5da30df66bc3911e611b854769
+tree 3ca898199890d69bc0188f186ecb06c89b27e555
+parent 5eb0fa533dd608b1bb9086a946f4d4b56d438908
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-15 13:58:00 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-15 13:58:11 +0900
+
+    チュートリアルにフレンド要素追加、項目の削除
+
+
+:100644 100644 d716eaa9e495eee1e55c912a9ea2b4a76c2fad34 1726ca9ac21bf099be72a29a079aaa137ce2b721 M	Assets/App/Scripts/Application/Layer/LayerType.cs
+:100644 100644 eeb10fc32951f73a8dbed016c67c627e0c54c737 b3402267ec80b3ffac02f24bf605a6bfaa81ee5b M	Assets/App/Scripts/Common/Defines/TutorialDefines.cs
+:100644 100644 9564ab3d2759bd432b666c6ceb6fae8516ff6562 6e84c94191f79889c04b60f82cd8207b175d3ac4 M	Assets/App/Scripts/Contents/Main/MainNameplateLayer.cs
+:100644 100644 23a3c293124bc7b7d4163be16361ecd2bcae8a38 c81223782b94c83193c4a9d3f7c561ef6f98cace M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+:100644 100644 219b74409be90e857c0d817907fc768e16d8e3fd 1c69a20a8e0c2aafd3843113fdd57167eec169fd M	Assets/App/Scripts/Scenes/Tutorial/Actions/Tutorial13ExplainHandler.cs
+:100644 100644 463e5e8057e882479e3b03bb95d71bfc93fde4e4 ab13e9eb62d1ba754ebacbbaca7aaa0196a54a1f M	Assets/App/Scripts/Scenes/Tutorial/Actions/Tutorial41OtherWaterHandler.cs
+:100644 100644 716ec6eeef5e852821c5da818bd4665fef973396 a6853bf00008fce2e37084d1b568e15ef654437c M	Assets/App/Scripts/Scenes/Tutorial/Actions/Tutorial42ExplainHandler.cs
+:100644 100644 b2ca76e437166321373d987e248dfc8f32e2ce30 70100e1a16e8b7eb880aced23d3a4110312b9f31 M	Assets/App/Scripts/Scenes/Tutorial/TutorialWorldScene.UI.cs
+:100644 100644 acdd8667f0376ff53b7e568a917dd97b24652e66 4262bb5da96f23a83115ca22b91865b349e6caae M	Assets/App/Scripts/Scenes/WorldScene.Tutorial.cs
+commit 5eb0fa533dd608b1bb9086a946f4d4b56d438908
+tree e8ffc391220ac71fb6ee0769794ad1cfd3b2bb8a
+parent f5f5d19945dec21c627289d3ffbacc46ce5e63a2
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-15 12:35:24 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-15 12:35:24 +0900
+
+    UserLayoutのフレンドアイコン対応
+
+
+:100644 100644 cf4b2a098930ea5d0edd36aac5a8727878ba66ed 60c3d40ac9148d6e6d3bcad582a95c017cfe14d2 M	Assets/App/Scripts/Common/UI/UserLayout.cs
+:100644 100644 294885a09cfe2c475e7237030709bc921e7116ec 515ccf8b894e7ae8632aa1884d41dbf86509d76c M	Assets/Resources/UI/Common/UserDetail/UserLayout.prefab
+commit f5f5d19945dec21c627289d3ffbacc46ce5e63a2
+tree f5c4a623768f724cd7b3222595312d15d6a4bae5
+parent cf906eeae5eb77631f3ecafb31b9a90d0b33e8cd
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-15 12:13:22 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-15 12:15:55 +0900
+
+    フレンドメニュー修正
+
+
+:100644 100644 7fb3b5f35b447e77e6d7f3c968a6b8941a9971b5 0082a04cca1e1c9dba73a36d39334a60c5a868f2 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit cf906eeae5eb77631f3ecafb31b9a90d0b33e8cd
+tree 9ebf4d398215b96a1f071a30e7a28a626cf614ab
+parent 0e317d5a576930d3943a258790252716d60d1a4c
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-15 12:11:40 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-15 12:15:54 +0900
+
+    フレンドメニュー実装
+
+
+:100644 100644 4797bd2ce124816ab5bdc80d43181d0e67317599 5f5731ea99f077dcd227e6ce0c239702103880e4 M	Assets/App/Scripts/Contents/Main/MainMenuHandler.cs
+:100644 100644 eb3dbbe8295baa380f9c48c17b514503597273ce 0c695930faa29a048385327bc7a851547b014f90 M	Assets/App/Scripts/Contents/OtherMenu/OtherMenuLayer.cs
+:100644 100644 3a4f0df129b94d6d21f003059073ab1553bb8d97 143462f9d000357e84350b0d9e93e5e91615424f M	Assets/Resources/UI/OtherMenu/OtherMenuLayer.prefab
+commit 0e317d5a576930d3943a258790252716d60d1a4c
+tree 213e999a065f716e0dc050a2bda6c8d5f53df59a
+parent 35302f8889fe65f5617de627fea91c562f5f3fbc
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-15 12:11:10 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-15 12:11:10 +0900
+
+    UserInfoItemのフレンドアイコン対応
+
+
+:100644 100644 51feb973f05abf7e2df4a39a3cba41117dc6edb1 23a3c293124bc7b7d4163be16361ecd2bcae8a38 M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+:100644 100644 6779940d838724b2e9e0545b901ed59172bfc001 543b3ebcbe5ab5cf3d6f8cc9578c0cc3e99232ca M	Assets/Resources/UI/Common/UserDetail/UserInfoItem.prefab
+commit 6adac736aaa890f21d5d5a7f750a88812567f2ef
+tree 8efceb68eac9386a8bb739b58e26b68426795783
+parent 871df22da23ac98b2cd2af580496a3e8954f30a3
+author egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-15 11:54:15 +0900
+committer egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-15 11:54:15 +0900
+
+    つながりボタンをフレンドポタンに差し替えました
+
+
+:100644 100644 b5f84d700f5cf16e02d5d215354e74061ec11c95 3a4f0df129b94d6d21f003059073ab1553bb8d97 M	Assets/Resources/UI/OtherMenu/OtherMenuLayer.prefab

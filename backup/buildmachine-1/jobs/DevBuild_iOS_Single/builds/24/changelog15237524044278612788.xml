@@ -1,0 +1,47 @@
+commit d84cfa4d067e8c770b3df09137a0f4bb8ee7a260
+tree 5ef0c7eabaf5af8ac1ddb6328b914a0ca21b2a29
+parent 416eeece352e8a04ba20cabbc385614477ea859f
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 13:41:10 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 13:41:10 +0900
+
+    自分のプロフィール修正
+
+
+:100644 100644 0236e35fe072ac191686e1df79c9ee5576e47432 af83df998c60ad86dd67315e822447d22f20e535 M	Assets/App/Scripts/Contents/Profile/ProfileLayer.cs
+:100644 100644 d35c45b91b10aaaf1a4b42aac0391ca5f3511565 b503f8e6205198132ce8740b1d501e300960039c M	Assets/Resources/UI/Profile/ProfileLayer.prefab
+commit 416eeece352e8a04ba20cabbc385614477ea859f
+tree 56bd19377909adcdc6b1d5002c37d38776169244
+parent 25b53f8b60c9d9aefbae093e88ea9a4b748d78e1
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 11:42:20 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 11:42:30 +0900
+
+    クエストのアイテムクリック処理の修正
+
+
+:100644 100644 d7a731be2b73083214de0ef3c44f636ad454989a f4fcd04299d546a140eaae7f32336fea27a9f88e M	Assets/App/Scripts/Contents/Quest/QuestHandler.cs
+:100644 100644 16d8bed167fddcceb6bfb598a5ac8d11572f0e86 f31df3cbe38c9945d20787e0bdf78effd22abf73 M	Assets/App/Scripts/Contents/Quest/QuestListItem.cs
+commit 25b53f8b60c9d9aefbae093e88ea9a4b748d78e1
+tree 3686f9fa9a6b01f87df2b74753c51c67401ce550
+parent ee29510ee3ac8e9a2fcb4fa1a3d2fcfb9ba02c8b
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-21 11:27:22 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-21 11:27:22 +0900
+
+    UserInfoの最終ログインタグ、フォロータグが表示されない不具合修正
+
+
+:100644 100644 f7c4f1801c27297701a640de342fccdbf15ea306 826439e2d69ba7f620225ee6314e51587cdaf0ee M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+commit 784a638678af59d9eaea4651f8637301f7812b78
+tree ddc5c7c1429d2ed34fe7ce8e585972f423df0525
+parent 6f9e67c6a81723bea8b9d9db5acc8697188f8e79
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-20 22:12:25 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-20 22:12:25 +0900
+
+    FriendServiceのtask化
+
+
+:100644 100644 b607038d2248160b583524c4a431a8a67f70c602 99b4a75b1f70c35aacadbcb3bd9b500ca3206f90 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 efbe561c70e4d844023c42d69badb4d3cbadeaaa 250dd67eb7fe07737f71c43256cee484d6697b55 M	Assets/App/Scripts/Contents/Friend/FriendService.cs
+:100644 100644 0a1587ace7f59984451d22c9f149a644a120b1ef c88099e4b48c1588d0b3c97aafb3d9d0dd208c12 M	Assets/App/Scripts/Contents/Main/MainNameplateLayer.cs
+:100644 100644 e2ec7f188b3ec2463aac951022ba670c5e48a1ec 052780ad9dc7394b3be6abd0fb17a8e7b2993a4a M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+:100644 100644 f89bc355d04256f9b8a2681e789ee68ae4a69842 96d3ccf14298f7ab15c2aa9f8f5f0c59bba02cc3 M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 1958956769a86a943d2f96ffa944722de28a717f 7fc87b2eca3481a36f0af5f36d16346b7b29d2c1 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs

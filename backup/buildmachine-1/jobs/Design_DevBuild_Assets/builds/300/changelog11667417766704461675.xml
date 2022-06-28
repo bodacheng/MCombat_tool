@@ -1,0 +1,30 @@
+commit ac41a00585b31c6288af7bfd1fa4816da2fd4d11
+tree 53a522922c4928e012618cfda57d3a1626431f48
+parent d58e666d4fdd44b5a3e3a4d1a4a6a8e1d1aa84f6
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-21 18:33:04 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-21 18:33:04 +0900
+
+    MRのためのREADME修正
+
+
+:100644 100644 f252d31f0706f6cb76281d17083eb377ed903b91 85960166c9f148ea4aef2d2dbb63d7b0deeb40fd M	README.md
+commit abb5905a750b707ee321b376a50c13fc1b5eb268
+tree 1d3300da5b75ebeccdde77199ddb54b145ce1544
+parent 7c5817f2ed393a492212c3e502d47efb2d60e2e4
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-21 18:25:29 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-21 18:25:29 +0900
+
+    mr通知テストのためのコミット
+
+
+:100644 100644 f80bad4ed71cf4bb1451c12c021d881b57cda383 f252d31f0706f6cb76281d17083eb377ed903b91 M	README.md
+commit f0d57e812cbca946673331bf86af3395633c7600
+tree 74c337df896beaf475b871e1fc4bb0a4419d6e68
+parent 9c403203d573338caeb067053937254a085eb71b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-21 18:16:08 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-21 18:16:08 +0900
+
+    SlackのMR通知検証のためにreadme.mdを更新
+
+
+:100644 100644 6aad70e6fd50ad8e544bc690b7ec13cc86c3dc56 f80bad4ed71cf4bb1451c12c021d881b57cda383 M	README.md

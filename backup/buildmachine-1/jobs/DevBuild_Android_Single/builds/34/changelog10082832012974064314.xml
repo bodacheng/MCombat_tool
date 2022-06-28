@@ -1,0 +1,11 @@
+commit c73a2ef968e15c644859d23ecfc27b6dd7813cf6
+tree 711891613e6688f3933e3949f4ad042679a10596
+parent 312282ff8a9c0f0cdc4588cf24bf07ad435b73c2
+author Nagasawa Takehito <nagasawa_takehito@cocone.co.jp> 2022-06-24 12:08:37 +0900
+committer Nagasawa Takehito <nagasawa_takehito@cocone.co.jp> 2022-06-24 12:08:37 +0900
+
+    Android 検証用コードの調整
+
+
+:100644 100644 b426e077fc147c91722e85dda669b16d3b080d37 a9f20fb5b24ed05363295238bb5ff917551c6247 M	Assets/App/Scripts/Contents/Photo/PhotoHandler.cs
+:100644 100644 7c9d48ec32f6ddae70821ab8b75da36a01af15d6 21fc2f60178c2e4f92384affb21087bc1c169ed5 M	Assets/App/Scripts/Contents/Photo/PhotoTop/PhotoTopModel.cs

@@ -1,0 +1,19 @@
+commit 3309f84e42f6d67e8bfc4e6320c91467d4afa7b5
+tree e30a0fff7fc0599f2049356f88b25a8470aefb6b
+parent c36edf139be8b7322bde1fbe956f9f23e9481b8b
+author 長沢 岳仁 <nagasawa_takehito@cocone.co.jp> 2022-06-20 17:05:33 +0900
+committer 辛 東根 <shin_donggun@cocone.co.jp> 2022-06-20 17:05:33 +0900
+
+    [1.7.2] ガチャ演出のレイヤーモーション対応
+
+
+:100644 100644 26ac7221d8c34e96b6b8f2d219e1717bc2c5e2f9 b9268a418dfbcbe4af4bf35b11284e2518502945 M	Assets/App/Prefabs/Gacha/Avatar/GachaModelController.controller
+:100644 100644 037e656b2d5af886fc7cdbaf2ce86641c4684760 33093a5ddc7637785b8d5b29579633699ed413b9 M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineChain7_R.playable
+:100644 100644 05c626f95558b9e6a0fe54aa6b423c5f91324480 6e619d8b022d29e62481f6ba8db073e42221eb3c M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineChain7_SR.playable
+:100644 100644 21b705c614fcd08c659fbf66b84b4c6de8862d8b 14e7c95796f98574ac817280c00231f95f693398 M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineSingle_N.playable
+:100644 100644 eaa125895636ae5acd156c84f3ffbf5ed278f028 439b6a40e211fc4f11467daa785a0f532dea3174 M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineSingle_R.playable
+:100644 100644 1b24a4b0602afd193346475d67e0156d462455aa f8b5fc5feeb6d0a7a8dcd877efd319b5aadf4e50 M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineSingle_SR.playable
+:100644 100644 f65e57a38e32515cd5f3253be526cf425f99dc1d 42891622166ce50c0aaccad2889518fb7ee1e2b0 M	Assets/App/Scripts/View/Avatar/ActionController.cs
+:100644 100644 7647f668409886f0a56bcb4ca3a578d0a8108d91 69e8a4b03e179f0d0b8713bd1878e772ec560c15 M	Assets/App/Scripts/View/Avatar/CoordinateController.cs
+:100644 100644 7eb098313e0a72b36c69bc0783d132c6e732003e 8715862fa6192606733e3a65b0d4ad91458aa17a M	Assets/App/Scripts/View/Gacha/GachaSceneController.cs
+:100644 100644 cca3afc866c4356e06dabac183d7d60c6e1715e0 c490a6e871f7b0f1fd2a029784814c69f10ae7ad M	Assets/ExternalAssets/Items/G0041/FG0041OP01/FG0041OP01.prefab

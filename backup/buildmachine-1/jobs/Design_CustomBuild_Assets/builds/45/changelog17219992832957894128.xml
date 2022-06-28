@@ -1,0 +1,11 @@
+commit 56918a7e01fecd56409dd179d63f609a2174d37c
+tree 16e92c19e46e27f296145fec86e48a0d231112f3
+parent a9e438403fcb811fe0014765fe44ccfdb997bb4a
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 19:52:13 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 19:52:13 +0900
+
+    revert testlogin scene
+
+
+:100644 100644 ce6b5315698b7882094c20adbb850fb0307b19b4 00fa9495ee603e413518eb6e5d6fc5f48e3238d8 M	Assets/App/Scenes/Test/TestLoginScene.unity
+:100644 100644 363e448cdd88158988a7d2cfbef52c794e1f3ac5 2cd72093dbd5829c7ae7b4265c9651dc3377cc7e M	Assets/App/Scripts/Scenes/Test/TestLoginScene.cs

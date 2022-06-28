@@ -1,0 +1,22 @@
+commit 88908e75834ddafe8d9b504080114192ab4801e1
+tree 9825813fc0f9a1c3fc1dfc78fb61de181d564a35
+parent 33cb9c654b4a21b14bc743eaef90d9610b40586e
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 11:02:14 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 11:02:14 +0900
+
+    ios本番ビルドエラー直し/AppCenter通知の変更
+
+
+:100644 100644 e49581f5e06f0883bf94e19d761343383b6cbdf1 e7478a67a2d0945209086d2d4d6c921d9689e083 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit ff8bdfdfb78649123b4440d288787de397e08ae3
+tree 795c8d9035893ac90f87af2b924587f44b63e4a4
+parent b5e942c251abcf64b828755cffe4271be4759d93
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 10:18:59 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 10:18:59 +0900
+
+    アセットビルドのgit Credentialsの変更とSlack通知の絵文字調整
+
+
+:100644 100644 088171733b9ba1ad08fca4e32f831d212a18edb9 0b071f0da1af0685041c93354af2e0900d9d44ef M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 663e80ddfadf0f953d3a7a99fcfe5e915b29c154 4085b7198bca90e3af6e98559bcdcd7a05d20686 M	pipeline_script/Design/build_asset_upload_custom_server.groovy
+:100644 100644 a697bf0fac1f84ef8601a5f3ba70c57ffb985855 9ba87950cc187518d929f40c8c893becdcfe3830 M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy

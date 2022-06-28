@@ -1,0 +1,12 @@
+commit 36e22205f49a18e5033e4b0ec7076d90d859f5a7
+tree 6eb3521588a6544ddbe5d1e19edd19cd743bbbc8
+parent 9c7f93a40567117c766422c11c923a416c24f520
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 15:33:15 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 15:33:15 +0900
+
+    update local asset setting
+
+
+:100644 100644 87e79f9d957c1f8f929f8a7499913f9068b9a682 d74397e4b222577b3ab623df6b744f4e4bfad108 M	Assets/AddressableAssetsData/Android/addressables_content_state.bin
+:100644 100644 0a14440d079170ceab7a208031b7763c2e4fb2c9 b3b99121997800dfe8726ae3cd688d2727e6eb32 M	Assets/AddressableAssetsData/AssetGroupTemplates/Packed Local Assets.asset
+:100644 100644 aae16767cafc71ff7469a83f966fe389ed34063c cd98c0e28c50d9ffdd0c7781c9da668ba55ed838 M	Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset

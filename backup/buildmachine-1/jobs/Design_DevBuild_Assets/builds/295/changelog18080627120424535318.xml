@@ -1,0 +1,43 @@
+commit 9d00589ea760ca05f328fdde5d0fa33b55f7de90
+tree 4f244509fa449e2ce63399dd7b2a174c85d56c71
+parent 13a7982756582468446d7ddbbc38009096c303de
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:24:26 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:24:26 +0900
+
+    引数ミスを修正
+
+
+:100644 100644 9d328c30533f80b04c8f99ef3c477e3998f957c7 c288b78e7177ece339c9518d9ec1b2004dbfc310 M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 b15f078a890e8ed94f35c58b6ce41161e2dc8fce acd6d6143fda48a46f07184dae499de984e15def M	pipeline_script/utils/notify/slackUtility.groovy
+commit 13a7982756582468446d7ddbbc38009096c303de
+tree 5ec3ec126a6322395ad24cb696538dad5577e9ab
+parent 3ee9af564e5cd29a86bd077e9c871a109996bdd7
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:18:21 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:18:21 +0900
+
+    リネームミスを修正
+
+
+:100644 100644 6e95bed9958444eec607cc4bc2139614f187821a 6e95bed9958444eec607cc4bc2139614f187821a R100	pipeline_script/DevBuild/android/uild_period.groovy	pipeline_script/DevBuild/android/build_period.groovy
+commit 3ee9af564e5cd29a86bd077e9c871a109996bdd7
+tree 66cfed1b884ce7194478c899e4662c2eaa82d063
+parent 3337b46571fff30d0cd290f556e05e3a2f8b13f1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:06:47 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:06:47 +0900
+
+    リネーム
+
+
+:100644 100644 6e95bed9958444eec607cc4bc2139614f187821a 6e95bed9958444eec607cc4bc2139614f187821a R100	pipeline_script/DevBuild/android/period_build.groovy	pipeline_script/DevBuild/android/uild_period.groovy
+:100644 100644 3664b9a592e3b8721a1560ae723146fea034b613 3664b9a592e3b8721a1560ae723146fea034b613 R100	pipeline_script/DevBuild/ios/period_build.groovy	pipeline_script/DevBuild/ios/build_period.groovy
+commit 3337b46571fff30d0cd290f556e05e3a2f8b13f1
+tree 93c12e916e2631a4b0634888ba260a9d5fad885f
+parent 08ca99a3ca4d7f5475a7bbc76b54637be35cb3bc
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:04:06 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:04:06 +0900
+
+    定期ビルドジョブ追加
+
+
+:000000 100644 0000000000000000000000000000000000000000 6e95bed9958444eec607cc4bc2139614f187821a A	pipeline_script/DevBuild/android/period_build.groovy
+:000000 100644 0000000000000000000000000000000000000000 3664b9a592e3b8721a1560ae723146fea034b613 A	pipeline_script/DevBuild/ios/period_build.groovy

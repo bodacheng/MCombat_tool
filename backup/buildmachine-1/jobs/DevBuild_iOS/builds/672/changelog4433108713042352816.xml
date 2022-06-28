@@ -1,0 +1,519 @@
+commit 3cab6823c0d8daf8a19dcda9e3bd226b960507ed
+tree fdd4abcde2630ea0bc8455f317bebf9311bfa6f7
+parent adb96b98472cf0f24b2fbc7724668a1b4a880855
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 12:06:24 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 12:06:24 +0900
+
+    fixes
+
+
+:100644 100644 f2cac5586026dac92de6632609163870752fcd59 aebefd557c209f5d126244d0c63fa69c2c8e5397 M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 3f47e6cc05f0e1b9e4b4c26a844d4969f99dc452 eb4acbc0cb309b152b94ac30af6c2960094621c3 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 b8eea432879c2a90fcdb8cee750cf9cee16d81c2 cf6d9b340f93bba99c32ecf71d68e238ed156c9d M	Assets/App/Scripts/Contents/Exchange/ExchangeListItem.cs
+:100644 100644 267520182c9d72a54867c25305b8dbe681821d01 10e0b054c7ae2b27e45c38cfe89cec00fecd2b79 M	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:100644 100644 0f5d1ee0c8e3d06acbbe1603af9a9d4c8ed0861e 09f120a68d91232287ac7b3e4cd0964509472ec5 M	Assets/App/Scripts/Contents/Gift/GiftItemSelector.cs
+:100644 100644 2a57535bb861d88e91055263fdfcad45c7c5677f 6b13476387fb9a8f9fad2c368485a680e798e148 M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 790dfdf0d8afd30300a7472186a64e45ea2805df fae47ebd39c2c259210818139f7c7a1449da3271 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 ae11da2f821d0c9d8bb227ca93aabc2a10db8501 9853aa5d9d15b69aece8f4e6c085842b82b44ef1 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 d6f697e79786b7e8f86329fe94ff64d243daef79 3b8d14527114cb0f371ccc1faf64cf0625268169 M	Assets/Resources/UI/Present/PresentModal.prefab
+commit adb96b98472cf0f24b2fbc7724668a1b4a880855
+tree 7cb3b7e4273b29933004cee3cade3397cb3e4538
+parent da2efed2c96142e8c19e7062a32ab02d393e9737
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-16 20:52:28 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:37 +0900
+
+    fixes
+
+
+:100644 100644 07894bdd513072928202bacd5650565254cb144c f2cac5586026dac92de6632609163870752fcd59 M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 cffd2695c1e7708dd30c232b8bde96ba73876962 3f47e6cc05f0e1b9e4b4c26a844d4969f99dc452 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 a020b1973cc2cb9656f5d3af40e97b87306d86aa b8eea432879c2a90fcdb8cee750cf9cee16d81c2 M	Assets/App/Scripts/Contents/Exchange/ExchangeListItem.cs
+:100644 100644 8d90ba2478eabed3027bd84857b46fc0d8bcd944 267520182c9d72a54867c25305b8dbe681821d01 M	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:100644 100644 cb2fc72b174c53528c9caa94f1d864578abbd363 9b7fbd585ef7d14b3e81371d9765d45ccc58b63a M	Assets/App/Scripts/Contents/Exchange/ExchangeStep.cs
+:100644 100644 223eb7b43bc48f28d7018a86efb7dea522afa9cb b7bb6032570c3b93448d58aefa233ea91881c4b5 M	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:100644 100644 9400ffff31572d3139ca2e1b2cbcfe3f6380a180 2a57535bb861d88e91055263fdfcad45c7c5677f M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 038029a59b1d2d4af5630d2aef1df7e2bc441a22 9657bc5389e329421b4c95a3f12a4af6c96b912a M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+:100644 100644 062153dc8c55786a105084674ea08194ed0665e1 790dfdf0d8afd30300a7472186a64e45ea2805df M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 e601dbd08a40da9e3f70ab900bd739f6a14a249b a39d1c2c78e9df23172b87d654f7a79cb8dd899e M	Assets/App/Scripts/p3-proto/enum/PresentEnum.cs
+:100644 100644 f8faacfd808da870eefb98fcafb8023501731cea d6f697e79786b7e8f86329fe94ff64d243daef79 M	Assets/Resources/UI/Present/PresentModal.prefab
+commit da2efed2c96142e8c19e7062a32ab02d393e9737
+tree 6331af4d1c1fea6c1088a6cef8f959205fd4b33e
+parent 95ac10acca54061930227d7e5ff2ab792e8d3145
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-16 15:06:38 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:36 +0900
+
+    v1
+
+
+:100644 100644 8444929ac86b8aea84813ac1b9416b0a5c4537c8 07894bdd513072928202bacd5650565254cb144c M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 8365fba760710e526913419ab4ef3e5ddb2ef30c cffd2695c1e7708dd30c232b8bde96ba73876962 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 97e007cc5161cde0108c966dfeccc45675aa064c 223eb7b43bc48f28d7018a86efb7dea522afa9cb M	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:100644 100644 ce22a1caf447270b02102fcc47dbc8f790f1dae5 9400ffff31572d3139ca2e1b2cbcfe3f6380a180 M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 56452351e9774cbe5e3fc89cb0d998e1e6e7b803 038029a59b1d2d4af5630d2aef1df7e2bc441a22 M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+:100644 100644 2a02eb770d702025632fe5037ead4dda04888b3b 062153dc8c55786a105084674ea08194ed0665e1 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 972d2c0149ef335575989fdd9a96b95c2c393001 ae11da2f821d0c9d8bb227ca93aabc2a10db8501 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 8dc9d6b6378371b25a7171cd90cb7ae82d07fc7a f8faacfd808da870eefb98fcafb8023501731cea M	Assets/Resources/UI/Present/PresentModal.prefab
+commit 95ac10acca54061930227d7e5ff2ab792e8d3145
+tree 9c9b789cb858af5bf999ac0ef81b8174a72ad3b3
+parent e0c73347521985a86b0c22045e865ade5734363e
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-15 22:30:45 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:36 +0900
+
+    exchange feature temp 10 ( UI refresh after executions )
+
+
+:100644 100644 6c17ed409fa1a07eaad486e986a27f4972553497 8444929ac86b8aea84813ac1b9416b0a5c4537c8 M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 1fdce6067ba4a0e5e861d100eb5baf11f6764d57 8365fba760710e526913419ab4ef3e5ddb2ef30c M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 d1e64ed8e405bb44d7dfc835df3679f4c0f7c7f1 8d90ba2478eabed3027bd84857b46fc0d8bcd944 M	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:100644 100644 189c28b56cd71c1ad01778ec2673068b481bc4ce ef5e58d2d9b672f335c6057d47b8796ef43a0b2a M	Assets/App/Scripts/Contents/Exchange/ExchangeRequestLayer.cs
+:100644 100644 f2f600c1be2d17d6df89502bd74973b32cb8ec0a 01285e76fdac644e8d70e13410c6e4e1b7e6a96e M	Assets/App/Scripts/Contents/Gift/GiftDialog.cs
+:100644 100644 7d45dc98a737a79f7f9a7f2179d2dfd747a938ba e4a2fb7fb0263f950165f57968c4a425875847a5 M	Assets/App/Scripts/Contents/Gift/GiftHandler.cs
+:100644 100644 fb24139ee8939ae080a8033d8704d711d32ad33a 2a02eb770d702025632fe5037ead4dda04888b3b M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 034af9c6406cce54a914afee3ce830e5e0b91e36 972d2c0149ef335575989fdd9a96b95c2c393001 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 e8b52be5df6e4a7245e9fe5e4b06b53b270af8e1 26b966cfe9d383982266b36ef28efec11409e8a9 M	Assets/Resources/UI/Gift/GiftDialog.prefab
+:100644 100644 2d0fe020ab14f661909ce0da54d5280c74968e81 1b7cbc3c7c7bdcdc51060e6ba66c860c1865a479 M	Assets/Resources/UI/Gift/GiftOpponentsLayer.prefab
+commit e0c73347521985a86b0c22045e865ade5734363e
+tree 3deb5a19741e5865317a2cb3ead5e042923803b8
+parent e6858e38326d998169f1a082e6f0a0731dbc5206
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-15 20:13:07 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:35 +0900
+
+    temp fix ui
+
+
+:100644 100644 7b259e5336feb0ee2be8474c385045c3cf67ee08 6f3999adbb66ccda81a3ca4d46f7b5a5fc8907c2 M	Assets/Resources/UI/Friend/SearchAndFilter.prefab
+commit e6858e38326d998169f1a082e6f0a0731dbc5206
+tree 6d6b01c6b22a5817fe2962547b1477bc3c918c26
+parent 98b1284a6dbde2cb8a93349b2d5349c51870dfee
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-15 13:28:03 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:35 +0900
+
+    exchange feature temp 9 (next : goto post, test all pattern of tradition, Notification, indicate how many times can cancel, close count down when not neccesary)
+
+
+:100644 100644 d590936b596add225bb306fcb8211800fe4ed41f 6c17ed409fa1a07eaad486e986a27f4972553497 M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 e2b10107b36d80e80e1bbbe0afa0ecf3b5929674 1fdce6067ba4a0e5e861d100eb5baf11f6764d57 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 4eb83b3faf2b6eee873479fc00186240efc446d2 d1e64ed8e405bb44d7dfc835df3679f4c0f7c7f1 M	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:100644 100644 38597bd14dbb3ef142d8feb8bad2c0851b10abea 97e007cc5161cde0108c966dfeccc45675aa064c M	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:100644 100644 5170cf0c7401457ecd50afb6a8eff24c9eca8e4b ce22a1caf447270b02102fcc47dbc8f790f1dae5 M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 0683862779dd2f33ea4ef55ba79060d5466be438 19593ed33fa91b523200c22317bc7e7ef566d727 M	Assets/App/Scripts/Contents/Relation/GiftOpponentsHandler.cs
+:100644 100644 77187cce1accada479e56e82d15d4cff0f760e72 27b1aa5f8ec94f70f4dff6290cbc97c1ece34ff7 M	Assets/App/Scripts/Contents/Relation/GiftOpponentsLayer.cs
+:100644 100644 635a4098176c5f2e26ccfebcb1ee6933d587b3e7 fb24139ee8939ae080a8033d8704d711d32ad33a M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:000000 100644 0000000000000000000000000000000000000000 7b259e5336feb0ee2be8474c385045c3cf67ee08 A	Assets/Resources/UI/Friend/SearchAndFilter.prefab
+:000000 100644 0000000000000000000000000000000000000000 c3e2417924a4c9ed8f78a5be34ba8c48490ab06f A	Assets/Resources/UI/Friend/SearchAndFilter.prefab.meta
+:100644 100644 b14e94dcf7de294f343f33b47c4ee22c17a94bf7 2d0fe020ab14f661909ce0da54d5280c74968e81 M	Assets/Resources/UI/Gift/GiftOpponentsLayer.prefab
+commit 98b1284a6dbde2cb8a93349b2d5349c51870dfee
+tree 1283c2a846f712e7477f1f554a0b7070ffd8f5f6
+parent 6b6cc75b7c57081dd23c6aa29171b2d3e3fd92f4
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-14 21:01:56 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:34 +0900
+
+    exchange feature temp 8 (next : exchange progress action,  exchange price, other ui)
+
+
+:100644 100644 87b2f7c9204a4d8e2ecb7661097d1f5442a95d79 d590936b596add225bb306fcb8211800fe4ed41f M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 48deef460496bfcc2c9e941630e3e02a03fee3fb e2b10107b36d80e80e1bbbe0afa0ecf3b5929674 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 3c87c048581a9ce0b2ba3b1e105cc49df15a3df9 a020b1973cc2cb9656f5d3af40e97b87306d86aa M	Assets/App/Scripts/Contents/Exchange/ExchangeListItem.cs
+:100644 100644 171b3ce6c591bdfa6b1534e7eace9912e0435c73 4eb83b3faf2b6eee873479fc00186240efc446d2 M	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:100644 100644 ac71fd68b0403268540239a653b7ca57340ad971 189c28b56cd71c1ad01778ec2673068b481bc4ce M	Assets/App/Scripts/Contents/Exchange/ExchangeRequestLayer.cs
+:100644 100644 0d3c8cb648527e327aff90e9c5cb21ed6bb87848 cb2fc72b174c53528c9caa94f1d864578abbd363 M	Assets/App/Scripts/Contents/Exchange/ExchangeStep.cs
+:100644 100644 0145c277f365a9432acb0323493c2ba2e26ab6b5 0f5d1ee0c8e3d06acbbe1603af9a9d4c8ed0861e M	Assets/App/Scripts/Contents/Gift/GiftItemSelector.cs
+:100644 100644 72f2ddaa22b2cdf1fd250882be936b472e4fa0ee 38597bd14dbb3ef142d8feb8bad2c0851b10abea M	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:100644 100644 1937ac9f18d79e191fbebd66d8939f0e71ff793e 5170cf0c7401457ecd50afb6a8eff24c9eca8e4b M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 cca52501bed7991123a9ca4b528b49737c9b1d6f 56452351e9774cbe5e3fc89cb0d998e1e6e7b803 M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+:100644 100644 467f173584ee1d0aac4405d7871e044dd1c370af e601dbd08a40da9e3f70ab900bd739f6a14a249b M	Assets/App/Scripts/p3-proto/enum/PresentEnum.cs
+:100644 100644 1b3db76efbf1fb782a920f26fe4e504dc980db3c 034af9c6406cce54a914afee3ce830e5e0b91e36 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 d72cc3b488f0307665806a7ae33004a91abd0b8b 8dc9d6b6378371b25a7171cd90cb7ae82d07fc7a M	Assets/Resources/UI/Present/PresentModal.prefab
+commit 6b6cc75b7c57081dd23c6aa29171b2d3e3fd92f4
+tree 00092bdbf560dc675647d75de79cc4ecf3fc9480
+parent 966388cf66a1c1e7dd9d620afd0b1f9f3f6f89d3
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-13 20:36:11 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:34 +0900
+
+    exchange feature temp 7
+
+
+:100644 100644 dd97b458ddb0e21ef536439d7aaf0bb051d2009f 87b2f7c9204a4d8e2ecb7661097d1f5442a95d79 M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 e8db52944056a8321e5ff531f98333a73c556afa 3c87c048581a9ce0b2ba3b1e105cc49df15a3df9 M	Assets/App/Scripts/Contents/Exchange/ExchangeListItem.cs
+:100644 100644 739b350815abefd85d80629e5636879e679f8c67 ac71fd68b0403268540239a653b7ca57340ad971 M	Assets/App/Scripts/Contents/Exchange/ExchangeRequestLayer.cs
+:100644 100644 8b5b7c89f015c285c43a7b5181a47860f903983c 0d3c8cb648527e327aff90e9c5cb21ed6bb87848 M	Assets/App/Scripts/Contents/Exchange/ExchangeStep.cs
+:100644 100644 6484bb68a0a5be45874342b7249ac6adbde630f2 b7bac34844b6a4d9082c2b650499ff4c4b8b6717 M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+:100644 100644 25400facd2dcd4cb87cdfa218588e8507466a51a 72f2ddaa22b2cdf1fd250882be936b472e4fa0ee M	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:100644 100644 232d189cc0bbe63474f4e581a00aa8a7be545f91 cca52501bed7991123a9ca4b528b49737c9b1d6f M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+:100644 100644 18b915f4a43af73515cfebb76baf96b1e8bcde13 dcadae7b76f57510a030f996cd695e86d0517558 M	Assets/App/Scripts/p3-proto/enum/ExchangeEnum.cs
+:100644 100644 8d5e9448f6bc91d19836db3c081b2e57c2f4430c 1b3db76efbf1fb782a920f26fe4e504dc980db3c M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 6dd4614927dd5d523d9e2e5b1643215fbc180a6b fce07032dcc9aa2d960184a6e97e53fc763ed309 M	Assets/Resources/UI/Exchange/ExchangeRequestLayer.prefab
+:000000 100644 0000000000000000000000000000000000000000 0be96c73c6c1ec1dbea2a84d6376d7ca9046d11b A	Assets/Resources/UI/Exchange/ExchangeStep.prefab
+:000000 100644 0000000000000000000000000000000000000000 7c2c6173aa7b2f071a19b266db145aeec109bc86 A	Assets/Resources/UI/Exchange/ExchangeStep.prefab.meta
+:100644 100644 abee005f59b861017adbdc93d5b1aa6c1a9c5c13 d72cc3b488f0307665806a7ae33004a91abd0b8b M	Assets/Resources/UI/Present/PresentModal.prefab
+commit 966388cf66a1c1e7dd9d620afd0b1f9f3f6f89d3
+tree a96a727a2f92ade479ae1d7bd0c7cb30111ef288
+parent 1bd1ae1bb1b869a33da9b5ba81d78b0e9f2b295b
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-13 17:43:27 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:33 +0900
+
+    exchange feature temp6 (post layer basic)
+
+
+:100644 100644 f6f91a720608313f4795663e42cd3b0a66859832 48deef460496bfcc2c9e941630e3e02a03fee3fb M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 1d1acebf6c82cca880fd5b9bacfc4ef76a148ea0 e8db52944056a8321e5ff531f98333a73c556afa M	Assets/App/Scripts/Contents/Exchange/ExchangeListItem.cs
+:100644 100644 1271ef19ac7ad8e68873b233191658d8e51ff5cf 171b3ce6c591bdfa6b1534e7eace9912e0435c73 M	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:100644 100644 8da080a0a320166cbb9e1c1f8245f05c36b1d390 739b350815abefd85d80629e5636879e679f8c67 M	Assets/App/Scripts/Contents/Exchange/ExchangeRequestLayer.cs
+:100644 100644 eba32e8a6d516bf44fa653cbd807294f1d9dca51 d391e5a7a7263e2db97b7fb9d424192c7224208b M	Assets/App/Scripts/Contents/Friend/FriendListLayout.cs
+:100644 100644 426394c4fd156d283b67bd18be996ab7cd2c139a ac40fa03b2d0cbee41fde86c257bdbf8cee13e12 M	Assets/App/Scripts/Contents/Friend/FriendListLayoutItem.cs
+:100644 100644 38e968a8a094d43834eac86f13480a1d7f86671d f2f600c1be2d17d6df89502bd74973b32cb8ec0a M	Assets/App/Scripts/Contents/Gift/GiftDialog.cs
+:100644 100644 b7bac34844b6a4d9082c2b650499ff4c4b8b6717 6484bb68a0a5be45874342b7249ac6adbde630f2 M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+:100644 100644 2e192ddd6c355c982f0e33e6575d0563f25f49e6 25400facd2dcd4cb87cdfa218588e8507466a51a M	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:100644 100644 13f899c57add9a16295dca75b069143d0b171053 1937ac9f18d79e191fbebd66d8939f0e71ff793e M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 ffde6eade9f0efc42fc62b7cff45ee01c1cbd306 232d189cc0bbe63474f4e581a00aa8a7be545f91 M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+:100644 100644 287a451f69a59159976925fdf689dbf0698bc140 d93188650217dce4b5ee4f84b8bae6f4b07d45c4 M	Assets/App/Scripts/Contents/Relation/GiftOpponentListItem.cs
+:100644 100644 c58af1c9786e83ef645132282430f0cb3986b733 0683862779dd2f33ea4ef55ba79060d5466be438 M	Assets/App/Scripts/Contents/Relation/GiftOpponentsHandler.cs
+:100644 100644 f5cd3b700242c6e3b0e1fca372ed4be8ce4d8d5d 77187cce1accada479e56e82d15d4cff0f760e72 M	Assets/App/Scripts/Contents/Relation/GiftOpponentsLayer.cs
+:100644 100644 ce8568b2060e15b66797d22064e3fd3b44e342e8 635a4098176c5f2e26ccfebcb1ee6933d587b3e7 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 5ff1fd519956168d743d30bf50812d4bd8e8494b 18b915f4a43af73515cfebb76baf96b1e8bcde13 M	Assets/App/Scripts/p3-proto/enum/ExchangeEnum.cs
+:100644 100644 c18563cf61f1537217e0d7d77927ebcb148cfb11 00978e6f66c3c1fd40d47aec13b6b1422bd5989b M	Assets/App/Scripts/p3-proto/exchange/Exchange.cs
+:100644 100644 4792d99c2ea390f06fa46a377718bed46e26fe14 4ba4d37e19a8dd842730c7a7f2ab8373f54814da M	Assets/App/Scripts/p3-proto/exchange/ExchangeGrpc.cs
+:100644 100644 556f404d7d0e5f5ed639e79431b7d1c444c355ec e8b52be5df6e4a7245e9fe5e4b06b53b270af8e1 M	Assets/Resources/UI/Gift/GiftDialog.prefab
+:100644 100644 c2754b6cedb4e49370a943cee251147c8d036895 b14e94dcf7de294f343f33b47c4ee22c17a94bf7 M	Assets/Resources/UI/Gift/GiftOpponentsLayer.prefab
+:100644 100644 95233d5ae1b681014ba1e6ae6813878ab0a330ef abee005f59b861017adbdc93d5b1aa6c1a9c5c13 M	Assets/Resources/UI/Present/PresentModal.prefab
+commit 1bd1ae1bb1b869a33da9b5ba81d78b0e9f2b295b
+tree 59968b2661aded46e2ed98fc86418d9a5ebb1063
+parent 7894f1b7e1ea15d6d4f8aed29352d18c7cbb4b54
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-10 18:50:54 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:33 +0900
+
+    exchange feature temp6 (player bodacheng5 made friends with bodacheng7, ExchangeHandler.GiftOpponentsHandler is null )
+
+
+:100644 100644 499d7d942b0af024fb220b507c107498a080de9e f6f91a720608313f4795663e42cd3b0a66859832 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 ecbe52de41086e2c518c8e091977ecff1532d0f4 8da080a0a320166cbb9e1c1f8245f05c36b1d390 M	Assets/App/Scripts/Contents/Exchange/ExchangeRequestLayer.cs
+:100644 100644 30a7a7f55441ddb0e3519f1e96d800800cf808eb ce8568b2060e15b66797d22064e3fd3b44e342e8 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 18e6f10b79bf609b97de7552919654f419c14896 6dd4614927dd5d523d9e2e5b1643215fbc180a6b M	Assets/Resources/UI/Exchange/ExchangeRequestLayer.prefab
+:100644 100644 4ed422aff911e918311acfcf63e44f450e6d96fa c2754b6cedb4e49370a943cee251147c8d036895 M	Assets/Resources/UI/Gift/GiftOpponentsLayer.prefab
+commit 7894f1b7e1ea15d6d4f8aed29352d18c7cbb4b54
+tree 2151aeb2b74b746b10cce69acd24ce3ed8371dbd
+parent 10a84912c19024bda874639193ecb41192044c0e
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-10 16:15:29 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:32 +0900
+
+    exchange feature temp5
+
+
+:100644 100644 7fe2d5757e86bd0f1da3126106ed2b63ab8fa9b0 4a19239d2d48b8256858fdb617b80505fef03226 M	Assets/App/Scripts/Application/Layer/LayerType.cs
+:100644 100644 1b66183af8dca733fe70453d4032d89571274b24 dd97b458ddb0e21ef536439d7aaf0bb051d2009f M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 61bf29c62eb31b8ea37537f69e23751b45f0c6f9 499d7d942b0af024fb220b507c107498a080de9e M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:000000 100644 0000000000000000000000000000000000000000 305ceec2a1f7e72969ac984aeca06185b2167c9c A	Assets/App/Scripts/Contents/Exchange/GiftExchangeSelectLayer.cs
+:000000 100644 0000000000000000000000000000000000000000 1942e7d42b085570cc5bdab4ad85de49d5b2c31e A	Assets/App/Scripts/Contents/Exchange/GiftExchangeSelectLayer.cs.meta
+:100644 100644 13eacddc82996c889a4af65d0132290fb6384c82 23236865cd162667f9bb26856e4c75a09df3b09d M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 314d37ad6cbed7584b989027403d5812279d2ac4 7d45dc98a737a79f7f9a7f2179d2dfd747a938ba M	Assets/App/Scripts/Contents/Gift/GiftHandler.cs
+:100644 100644 51ad33e4939000563442039d0438afafd7ce4b7e c58af1c9786e83ef645132282430f0cb3986b733 M	Assets/App/Scripts/Contents/Relation/GiftOpponentsHandler.cs
+:100644 100644 b0375dda9dcb2195d09d753d0f5e9bf427fe142a f5cd3b700242c6e3b0e1fca372ed4be8ce4d8d5d M	Assets/App/Scripts/Contents/Relation/GiftOpponentsLayer.cs
+:100644 100644 8dbb85a44e839084f24d6be1cae2e103ff1f2b54 05ccd6f4cbf4dd7518415f070384ef4648b4beea M	Assets/App/Scripts/Contents/Relation/RelationDefines.cs
+:100644 100644 e9cffe77c2d49c0fca471fe2f4795e957d93eff6 30a7a7f55441ddb0e3519f1e96d800800cf808eb M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 c2e52642c193dae8b5e93c12aa267926c5728e2b 2a052e50c97349deeae3406b16596b01de7ffd55 R084	Assets/Resources/UI/Exchange/PresentExchangeSelectLayer.prefab	Assets/Resources/UI/Exchange/GiftExchangeSelectLayer.prefab
+:100644 100644 e1ab21fec2ee5f77aa0720bc443bf0f29772e9bb e1ab21fec2ee5f77aa0720bc443bf0f29772e9bb R100	Assets/Resources/UI/Exchange/PresentExchangeSelectLayer.prefab.meta	Assets/Resources/UI/Exchange/GiftExchangeSelectLayer.prefab.meta
+commit 10a84912c19024bda874639193ecb41192044c0e
+tree 80cb8ad6ab7d1a4907e86bce2725be2abbc2f201
+parent 00afc0242c5ae2552f1877329d1375b01b6f75f2
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-09 20:20:20 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:32 +0900
+
+    exchange feature temp4
+
+
+:100644 100644 ed8be179f7d997f8b19770c067fa74b2804e58bf 1b66183af8dca733fe70453d4032d89571274b24 M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 49d387fec72404ce918e77fd04e11ad62230577e ecbe52de41086e2c518c8e091977ecff1532d0f4 M	Assets/App/Scripts/Contents/Exchange/ExchangeRequestLayer.cs
+:100644 100644 0da35fb3b9af826af19f4e84d7877e8e4ecf9ddc 8b5b7c89f015c285c43a7b5181a47860f903983c M	Assets/App/Scripts/Contents/Exchange/ExchangeStep.cs
+:100644 100644 700ec359bd3425a242749139e3a34a2560022d2c 8d5e9448f6bc91d19836db3c081b2e57c2f4430c M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+commit 00afc0242c5ae2552f1877329d1375b01b6f75f2
+tree 6d5d4571282ed5b3e3c7770a27ffdc22e13a3c1c
+parent d1b34918bac138fa5c398f63a3ac228ac4ecece9
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-07 19:32:55 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:31 +0900
+
+    exchange feature temp3
+
+
+:100644 100644 35b551370294db5f82e98faf8182f32e84bf339b 1d1acebf6c82cca880fd5b9bacfc4ef76a148ea0 M	Assets/App/Scripts/Contents/Exchange/ExchangeListItem.cs
+:100644 100644 4b981d726683b2dbb772ab10b55ef23d3a810df7 2e192ddd6c355c982f0e33e6575d0563f25f49e6 M	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:100644 100644 441fce26bc550b010958b2b3dfe1c521766303e4 13f899c57add9a16295dca75b069143d0b171053 M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 486152ebb588ceaaeb251530f57a83cc9b78dcaf ffde6eade9f0efc42fc62b7cff45ee01c1cbd306 M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+commit d1b34918bac138fa5c398f63a3ac228ac4ecece9
+tree 62090659583e7078b1c98ebe22062e7abd1480e0
+parent 854bbafaf58ffbf6b269da451f6f19769fb8dc54
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-07 17:59:24 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:31 +0900
+
+    adjust PresentModal.prefab
+
+
+:100644 100644 a88784a526907aaef4aa4cd0d38ff6c3e5f85665 95233d5ae1b681014ba1e6ae6813878ab0a330ef M	Assets/Resources/UI/Present/PresentModal.prefab
+commit 854bbafaf58ffbf6b269da451f6f19769fb8dc54
+tree fecafe72b6e7b8a57b7b40cf7b2c47ea9646d738
+parent a0af88ed092a44f8cf23f82a935238840482d512
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-07 17:52:27 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:30 +0900
+
+    exchange feature temp2
+
+
+:100644 100644 b68a105ae586cd153aedda596d6a8c170b7508c4 61bf29c62eb31b8ea37537f69e23751b45f0c6f9 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:000000 100644 0000000000000000000000000000000000000000 35b551370294db5f82e98faf8182f32e84bf339b A	Assets/App/Scripts/Contents/Exchange/ExchangeListItem.cs
+:000000 100644 0000000000000000000000000000000000000000 376a839d6d39a9927b44696bf67ddc2e1a317756 A	Assets/App/Scripts/Contents/Exchange/ExchangeListItem.cs.meta
+:100644 100644 b74864df0d6015c1eb9475a9b191d4f20b0636c6 1271ef19ac7ad8e68873b233191658d8e51ff5cf M	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:000000 100644 0000000000000000000000000000000000000000 4b981d726683b2dbb772ab10b55ef23d3a810df7 A	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:000000 100644 0000000000000000000000000000000000000000 4482ed78c041679a5b54b270ecfc275e52f4f7c2 A	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs.meta
+:100644 100644 ae50e31217d87197dc462bc6739537c777942f2a 441fce26bc550b010958b2b3dfe1c521766303e4 M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 cef2874e8a53ce5574b98f2a49c52c5eb5a674e0 486152ebb588ceaaeb251530f57a83cc9b78dcaf M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+:100644 100644 250cc472b7f04ed4c09efa0fd54e629314526cf7 e9cffe77c2d49c0fca471fe2f4795e957d93eff6 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 7011fe9259eb53eea77cc46587a9579ef5f5df16 c18563cf61f1537217e0d7d77927ebcb148cfb11 M	Assets/App/Scripts/p3-proto/exchange/Exchange.cs
+:100644 100644 c5a2b2331f781e8c1f34996ca88bba37f1420dfd 4792d99c2ea390f06fa46a377718bed46e26fe14 M	Assets/App/Scripts/p3-proto/exchange/ExchangeGrpc.cs
+commit a0af88ed092a44f8cf23f82a935238840482d512
+tree 9396fc8db91aac456356b156f77f42eb10c913a0
+parent 472dda643b4a5c05808cb72981314e7cc594c18e
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-07 11:08:00 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:30 +0900
+
+    reset PresentModal.prefab
+
+
+:100644 100644 d34e47c34ad6d34712d10cad93e79ec27b185a3b a88784a526907aaef4aa4cd0d38ff6c3e5f85665 M	Assets/Resources/UI/Present/PresentModal.prefab
+commit 472dda643b4a5c05808cb72981314e7cc594c18e
+tree f1f9483c51979e1eaa132a1c23da6da4b8bb62b1
+parent 4dd9a41bb75d4707da022e2af6d8b8ce167f500f
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-06 20:44:04 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:29 +0900
+
+    exchange feature temp1
+
+
+:100644 100644 1726ca9ac21bf099be72a29a079aaa137ce2b721 7fe2d5757e86bd0f1da3126106ed2b63ab8fa9b0 M	Assets/App/Scripts/Application/Layer/LayerType.cs
+:100644 100644 82d41ff5609ef4f1eee4149b5235ed97d057ba4d 675203dab3bdc8052810f8c80eba47befd41a72c M	Assets/App/Scripts/Common/Defines/ItemDefines.cs
+:000000 100644 0000000000000000000000000000000000000000 6523c546cad3a6172c017643dbdba2c36b828c92 A	Assets/App/Scripts/Contents/Exchange.meta
+:000000 100644 0000000000000000000000000000000000000000 ed8be179f7d997f8b19770c067fa74b2804e58bf A	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:000000 100644 0000000000000000000000000000000000000000 b12f18576445292f7f417a5794e559894a29613c A	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 b68a105ae586cd153aedda596d6a8c170b7508c4 A	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:000000 100644 0000000000000000000000000000000000000000 1d18c6cea912c3c95274c18ecdb5f4587248646f A	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 b74864df0d6015c1eb9475a9b191d4f20b0636c6 A	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:000000 100644 0000000000000000000000000000000000000000 7f299cd87e39a00150c4a82705fc72f1ec0187ad A	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 49d387fec72404ce918e77fd04e11ad62230577e A	Assets/App/Scripts/Contents/Exchange/ExchangeRequestLayer.cs
+:000000 100644 0000000000000000000000000000000000000000 a6c965d422f19f3d9d19f421d7956ecc1dff084a A	Assets/App/Scripts/Contents/Exchange/ExchangeRequestLayer.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 0da35fb3b9af826af19f4e84d7877e8e4ecf9ddc A	Assets/App/Scripts/Contents/Exchange/ExchangeStep.cs
+:000000 100644 0000000000000000000000000000000000000000 884e1188c83b5c263ad1b3ffcfbd222ea0f34a67 A	Assets/App/Scripts/Contents/Exchange/ExchangeStep.cs.meta
+:100644 100644 39569cbd89ebd776b6415da5fa86e357e2e004ef ae50e31217d87197dc462bc6739537c777942f2a M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 0b966018a5e9b1225715c3613fcc055b6a0502d9 cef2874e8a53ce5574b98f2a49c52c5eb5a674e0 M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+:000000 100644 0000000000000000000000000000000000000000 5ff1fd519956168d743d30bf50812d4bd8e8494b A	Assets/App/Scripts/p3-proto/enum/ExchangeEnum.cs
+:000000 100644 0000000000000000000000000000000000000000 4290f627ff2fc0e552e15d6b88f1e5801ce2828d A	Assets/App/Scripts/p3-proto/enum/ExchangeEnum.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 7011fe9259eb53eea77cc46587a9579ef5f5df16 A	Assets/App/Scripts/p3-proto/exchange/Exchange.cs
+:000000 100644 0000000000000000000000000000000000000000 f7bb50304bbdd5d8607bdb3e42f5bf8aff9a2074 A	Assets/App/Scripts/p3-proto/exchange/Exchange.cs.meta
+:000000 100644 0000000000000000000000000000000000000000 c5a2b2331f781e8c1f34996ca88bba37f1420dfd A	Assets/App/Scripts/p3-proto/exchange/ExchangeGrpc.cs
+:000000 100644 0000000000000000000000000000000000000000 72b042eefe8375e4c0233f923156715ed2fbcd19 A	Assets/App/Scripts/p3-proto/exchange/ExchangeGrpc.cs.meta
+:100644 100644 7c860fdbe8430252a1a2dfd1fa94c97ce95215e5 700ec359bd3425a242749139e3a34a2560022d2c M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 af15aad023bb7324bb449119e9445e28df8aae44 18e6f10b79bf609b97de7552919654f419c14896 M	Assets/Resources/UI/Exchange/ExchangeRequestLayer.prefab
+:100644 100644 a88784a526907aaef4aa4cd0d38ff6c3e5f85665 d34e47c34ad6d34712d10cad93e79ec27b185a3b M	Assets/Resources/UI/Present/PresentModal.prefab
+commit 4dd9a41bb75d4707da022e2af6d8b8ce167f500f
+tree 6635264afce53bf06cd7b436c12d7d5868ac7c86
+parent 2036f248d0a1046303d1fc32b84df294f5edda74
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-06 19:43:48 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:29 +0900
+
+    交換申請後のキャンセル対応
+
+
+:100644 100644 ad1cf60582c0b97db002cfd0a0914db092b976de 7c860fdbe8430252a1a2dfd1fa94c97ce95215e5 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+commit 2036f248d0a1046303d1fc32b84df294f5edda74
+tree 0819c915a3f8885debf751337b7a84d965c4db52
+parent a3a2ba55918d296a7bd9cef5070b2c86f781ca18
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-06 14:22:00 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:28 +0900
+
+    ポスト画面修正
+
+
+:100644 100644 cb6f43ba2f3da0626e6d702612737ed5185de66f a88784a526907aaef4aa4cd0d38ff6c3e5f85665 M	Assets/Resources/UI/Present/PresentModal.prefab
+commit a3a2ba55918d296a7bd9cef5070b2c86f781ca18
+tree 127e90ab5610203986aab6295583fdad571be4e3
+parent aba7b7cfa5a1e366000452da4d0b4011045b4797
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-06 12:59:27 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-17 09:53:28 +0900
+
+    1.8.0交換機能追加デザイン対応
+
+
+:100644 100644 aec02d8699be7e4fbee585d02a87c99b643136b5 010000f9d77ae12fd9fe15dc75c2ddc2279466a7 M	Assets/App/Textures/UI/Header/HeaderGaugeBase02.png
+:100644 100644 d640a04733e50ab9d67ac39d8b58432ae500b32c 4936de8cac2b11c0bae4b12eff745151fc9c641e M	Assets/App/Textures/UI/Header/HeaderGaugeBase03.png
+:000000 100644 0000000000000000000000000000000000000000 2af310d53c694453a2150fcb88605bc902c5b560 A	Assets/App/Textures/UI/Header/HeaderGaugeBase04.png
+:000000 100644 0000000000000000000000000000000000000000 93ee426b762c5071e20ca18586b43bc722b35d73 A	Assets/App/Textures/UI/Header/HeaderGaugeBase04.png.meta
+:000000 100644 0000000000000000000000000000000000000000 463aff5f622e794a25663a36e0e007794b651074 A	Assets/Resources/UI/Exchange.meta
+:000000 100644 0000000000000000000000000000000000000000 ad1cf60582c0b97db002cfd0a0914db092b976de A	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:000000 100644 0000000000000000000000000000000000000000 378a6c6e59c91261ca4de93d5807fbb65dc621a6 A	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 af15aad023bb7324bb449119e9445e28df8aae44 A	Assets/Resources/UI/Exchange/ExchangeRequestLayer.prefab
+:000000 100644 0000000000000000000000000000000000000000 684b4f2f1f6eb90bc8f6a5e0a5b593483c9a0f8d A	Assets/Resources/UI/Exchange/ExchangeRequestLayer.prefab.meta
+:000000 100644 0000000000000000000000000000000000000000 c2e52642c193dae8b5e93c12aa267926c5728e2b A	Assets/Resources/UI/Exchange/PresentExchangeSelectLayer.prefab
+:000000 100644 0000000000000000000000000000000000000000 e1ab21fec2ee5f77aa0720bc443bf0f29772e9bb A	Assets/Resources/UI/Exchange/PresentExchangeSelectLayer.prefab.meta
+:100644 100644 8ba8f0a2a068f7589ae7e1aa3228f41380246bf3 cb6f43ba2f3da0626e6d702612737ed5185de66f M	Assets/Resources/UI/Present/PresentModal.prefab
+:000000 100644 0000000000000000000000000000000000000000 e7218df3fc40b50c08fb397a4d045e3cd5d623b4 A	Assets/TextMesh Pro/Resources/Fonts/FOT-UDMarugo_LargePr6N-DB_CautionBold.mat
+:000000 100644 0000000000000000000000000000000000000000 9d6ba5cfaad0625d92c3491e11ae93072b8c089a A	Assets/TextMesh Pro/Resources/Fonts/FOT-UDMarugo_LargePr6N-DB_CautionBold.mat.meta
+commit aba7b7cfa5a1e366000452da4d0b4011045b4797
+tree cfac10b6550d535ac210d8d45a72fdf80042e380
+parent 32325b9b15b57ffcf18a820cc802d60fddbcfd46
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 21:38:10 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 21:38:10 +0900
+
+    フォローリスト、エラーで止まらないように修正
+
+
+:100644 100644 9d736abd22d50e25ae5acda597167104a5513792 8dbb85a44e839084f24d6be1cae2e103ff1f2b54 M	Assets/App/Scripts/Contents/Relation/RelationDefines.cs
+:100644 100644 79097542904d02c465685a6dffe2a5651ee8cafd d069ff48c30f1d3003d5bcb6fde3eefea77d7d78 M	Assets/App/Scripts/Contents/Relation/RelationListItem.cs
+:100644 100644 9d3035339caa087cf421b069c9abfec769ad2173 0ce234c082a3a3ca90254d402c55604efb868042 M	Assets/Resources/UI/Relation/Item/RelationListItem.prefab
+:100644 100644 95df0f694b78ffa81c03746265a5f427493c3df3 427367355a594c7fa5b55e083262045c0f54da8d M	Assets/Resources/UI/Relation/RelationListLayer.prefab
+commit 32325b9b15b57ffcf18a820cc802d60fddbcfd46
+tree c785dfe6cd86ac40898f596bd36bebc4185071a4
+parent 920a4f4b4810462a6baf4aebc7daa201704c0279
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 20:20:46 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 20:20:46 +0900
+
+    UserInfoItemレイアウト調整
+
+
+:100644 100644 bb9e561c643d1e676471a9f1579e94c9789fb40f a8e58a59801ee415e6b645c92570098e094e2a53 M	Assets/Resources/UI/Common/UserDetail/UserInfoItem.prefab
+commit 93046226781fc1f20b882846d35782d2805b1472
+tree 1abc846caf6738e0d418871733d91e51085de840
+parent 75a5adde312a04a86dd66fb120916702045f7a30
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 17:47:08 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 17:47:08 +0900
+
+    UserInfoItemレイアウト調整
+
+
+:100644 100644 f656c88a1a4f92c44ac0451ea246a5bc35c92e7e b7bac34844b6a4d9082c2b650499ff4c4b8b6717 M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+:100644 100644 c0c279d6bd1525410094ae49de2a3924c857aa99 bb9e561c643d1e676471a9f1579e94c9789fb40f M	Assets/Resources/UI/Common/UserDetail/UserInfoItem.prefab
+commit b959b024d46ff1bfc6cd8b7e9a8ecfa31518c75e
+tree 2c6e4bb4da8bd31d6cd3ac243e3e05a09b1425ad
+parent 36e6809103488dde3b8c1015125d5253317fb01b
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 17:29:19 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 17:29:19 +0900
+
+    TMPにハートの文字２種類を追加
+
+
+:100644 100644 4d49a740e537ae25eb04ea6a9394bfc6742fb42a 2851feb88c40b8dda04c5e2adfc5914ab485a8fd M	Assets/TextMesh Pro/Addressables/Fonts/FOT-UDMarugo_LargePr6N-DB SDF.asset
+commit f62c61edad08dbaf3b712e023f6ee9248c1f348f
+tree 1bb8e219eabb72ed4db8642592d7d84590cd3789
+parent 99b921bd451f936171c7f0ed870883701cb3f713
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 17:08:35 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 17:08:35 +0900
+
+    文言の調整
+
+
+:100644 100644 0a77f681095ff7ca90a6b5d82e74bb20aba914fd bff38c9286b116d2c5e04e4453c5557feb091948 M	Assets/Resources/UI/Relation/Item/VisitorListItem.prefab
+commit 36e6809103488dde3b8c1015125d5253317fb01b
+tree 9cb709210ded994d9e5567b4b0e990284a2faa1f
+parent 4734f74d444e50a2c7cb1120f0b3a5db8d37146f
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:59:40 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:59:40 +0900
+
+    web view の長押し保存機能を無効にする
+
+
+:100644 100644 8e08831e04dbc2f5378e718df5963322e1805764 87436cb32dba84e22e2cde21bd5f1d1a6f2a1950 M	Assets/App/Scripts/Contents/Announce/Dialog/AnnounceWebViewDialog.cs
+:100644 100644 17f1bc736748070f4fd8d58a8617c4372f8aa3f7 5d59089db2114ca76dfe075b74177cb84485350b M	Assets/App/Scripts/Contents/Web/WebViewStretchLayer.cs
+commit 99b921bd451f936171c7f0ed870883701cb3f713
+tree 5ec26c780f2d1e4517516b170a80de432c6cbf19
+parent 1d64a0744a9888ac0a93971c6bf127a7b8457851
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 16:57:51 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 16:57:51 +0900
+
+    ビジターリストをUserInfoItemを使う形式に変更
+
+
+:100644 000000 fac464f3ef9977f11217bd0b1b48f027ccd3d427 0000000000000000000000000000000000000000 D	Assets/Resources/UI/Common/UserDetail/UserVisitorInfoItem.prefab
+:100644 000000 30de0899f618afbad062561d661deebcaa1ab29b 0000000000000000000000000000000000000000 D	Assets/Resources/UI/Common/UserDetail/UserVisitorInfoItem.prefab.meta
+:100644 100644 c035d89b832b1f0061f9767b18c6bcdf197fcacb 0a77f681095ff7ca90a6b5d82e74bb20aba914fd M	Assets/Resources/UI/Relation/Item/VisitorListItem.prefab
+commit 4734f74d444e50a2c7cb1120f0b3a5db8d37146f
+tree c40e32be99536a9989a74b2db8b9aa090aa05cb9
+parent 5fd9e73e36192fe78901053f78f4a3b03fc3e6f7
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:49:30 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:49:43 +0900
+
+    チュートリアル文言修正
+
+
+:100644 100644 b3402267ec80b3ffac02f24bf605a6bfaa81ee5b d63089f222e00304f8b01ff8564ee22791ac9563 M	Assets/App/Scripts/Common/Defines/TutorialDefines.cs
+:100644 100644 c0e4692f8eb991dc7f0b499ce0d2930b2d0cb6c9 2e841784b1a70036d9728435a8c98aee8a2847ec M	Assets/App/Scripts/Scenes/Tutorial/Actions/Tutorial53MyExanpleHandler.cs
+commit 8285c234eff17be05dc7a5ea2b90e6626f53e25e
+tree 06edd3b146bd11373a88cd29d4b2ddb68cadb66d
+parent 83eaa4146ccc670c604d87464c4228e113dde869
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 16:15:19 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-16 16:15:19 +0900
+
+    UserInfoItemで表示非表示処理を修正
+
+
+:100644 100644 fdfe1f4fc0e3305f18788f4a14511b9ace0668b3 426394c4fd156d283b67bd18be996ab7cd2c139a M	Assets/App/Scripts/Contents/Friend/FriendListLayoutItem.cs
+:100644 100644 6e84c94191f79889c04b60f82cd8207b175d3ac4 0a1587ace7f59984451d22c9f149a644a120b1ef M	Assets/App/Scripts/Contents/Main/MainNameplateLayer.cs
+:100644 100644 87d93b974e9c4954cac766042d559d648155e1ee 6bf1108369ade856cb6c88117925675e27f86e12 M	Assets/App/Scripts/Contents/Party/UserRankingItem.cs
+:100644 100644 a4cb07dac612bbc3a35492d5789025e475488d2e d26d21c704680fc0fa70ec2dddc5f6ff93e721e3 M	Assets/App/Scripts/Contents/PartyTop/GiftHistoryCell.cs
+:100644 100644 c81223782b94c83193c4a9d3f7c561ef6f98cace f656c88a1a4f92c44ac0451ea246a5bc35c92e7e M	Assets/App/Scripts/Contents/PartyTop/UserInfoItem.cs
+:100644 100644 677878c0ffce74fa12d7e2499c8072313fdf90ef 75399f82e7e5eccde1eab0805e33713961c60c10 M	Assets/App/Scripts/Contents/Relation/UserListLayoutItem.cs
+:100644 100644 57906e8702249875612d5648e1b5fbd26324bbd9 c0840c27d913e55ed7dc02d6c1de55a85fc7f771 M	Assets/App/Scripts/Contents/Sns/SnsCommentCell.cs
+:100644 100644 543b3ebcbe5ab5cf3d6f8cc9578c0cc3e99232ca c0c279d6bd1525410094ae49de2a3924c857aa99 M	Assets/Resources/UI/Common/UserDetail/UserInfoItem.prefab
+:100644 100644 40f4a404dce974ea0f6d52bd446fa3c553ce66a2 ed1170b3f7c3aaa4340b61e2d0f58682ac7a3a8f M	Assets/Resources/UI/Main/MainNameplate.prefab
+:100644 100644 54d8e6083d7a23d7ea3c18c3cc009f8e0af8cb42 749006107b923b98af435ea711425c9a9aabb864 M	Assets/Resources/UI/Party/Top/GiftHistoryCell.prefab
+:100644 100644 2d8683de7cd0dc36eb24c6089a77a026a3be3d84 94449cd21a5bcddbe6e068fc5f46ffd1a4a63f1b M	Assets/Resources/UI/Party/UI/PartyGiftPointRankingModal.prefab
+:100644 100644 e3c71767ebc4258661eb7e0e26ae0c10bec5b26b c73be50bd6523ff449cce5e071fb66cbb13f5b4b M	Assets/Resources/UI/Sns/SnsCommentCell.prefab
+commit 4d42e803b38902cce6d68c2efafed7306cea1f3e
+tree 834dde596bd0c154343eb4f6e4bd594da3acf7e0
+parent 83eaa4146ccc670c604d87464c4228e113dde869
+author egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-16 16:11:36 +0900
+committer egawa_momoko <egawa_momoko@cocone.co.jp> 2022-06-16 16:11:36 +0900
+
+    タブの木の実の名称を修正しました
+
+
+:100644 100644 55526de683677402b5a377289564696a19742c9a 581b4c0acbe5cda4a8aa90bf7f34d7bc67a9ad1a M	Assets/Resources/UI/Quest/QuestModal.prefab
+commit 1d64a0744a9888ac0a93971c6bf127a7b8457851
+tree cc09494eb4f3fa1e8ffc1ea20ca9d15f6a63b2b2
+parent 88c6cb0296d4be8f94e78782b7d753b85984f117
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 16:03:16 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 16:03:16 +0900
+
+    オブジェクト名修正・コミット漏れ
+
+
+:100644 100644 71294eaab0579da6005d19fe040c86c050abe0f8 2cc5061774ac54f7699787fa36c2a55a90bb8f43 M	Assets/Resources/UI/Relation/Item/RecommendListItem.prefab
+:100644 100644 9b0585319577ebf1ff8f50d9911f2444a6fde987 9d3035339caa087cf421b069c9abfec769ad2173 M	Assets/Resources/UI/Relation/Item/RelationListItem.prefab
+:100644 100644 bc829eaa814ff78df04284037e2f10b5e1befce6 95df0f694b78ffa81c03746265a5f427493c3df3 M	Assets/Resources/UI/Relation/RelationListLayer.prefab
+commit 88c6cb0296d4be8f94e78782b7d753b85984f117
+tree 0bc546cf7029de88fa36775e081c2575c6dbf2d8
+parent 83eaa4146ccc670c604d87464c4228e113dde869
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 15:57:34 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-16 15:57:34 +0900
+
+    つながりリスト・ビジターリストのレイアウト調整
+
+
+:000000 100644 0000000000000000000000000000000000000000 fac464f3ef9977f11217bd0b1b48f027ccd3d427 A	Assets/Resources/UI/Common/UserDetail/UserVisitorInfoItem.prefab
+:000000 100644 0000000000000000000000000000000000000000 30de0899f618afbad062561d661deebcaa1ab29b A	Assets/Resources/UI/Common/UserDetail/UserVisitorInfoItem.prefab.meta
+:100644 100644 7bf84c98e7eed98b63fc4519bd213ab4373e757e 71294eaab0579da6005d19fe040c86c050abe0f8 M	Assets/Resources/UI/Relation/Item/RecommendListItem.prefab
+:100644 100644 2582d3b86c3364666a9a3c52957cf11929eadb56 9b0585319577ebf1ff8f50d9911f2444a6fde987 M	Assets/Resources/UI/Relation/Item/RelationListItem.prefab
+:100644 100644 8225eb8acbd09e95571362882d452f36c6b33415 c035d89b832b1f0061f9767b18c6bcdf197fcacb M	Assets/Resources/UI/Relation/Item/VisitorListItem.prefab
+commit 83eaa4146ccc670c604d87464c4228e113dde869
+tree f22f40f2bdf093dbbba1833cec1d6f3f82469d36
+parent c13f8d06827f029ca4a53dda5b8435065ffacf14
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 15:41:27 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-16 15:41:27 +0900
+
+    フレンドのヘッダの数字更新処理、送信済み判定の修正
+
+
+:100644 100644 c7aa4114da8bb353593a9380ca62df0f262e27cc 13eacddc82996c889a4af65d0132290fb6384c82 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 6ae20a7aee2f38845f83193b0864e3590125aa29 641268788372aa3b850ba18a628078d4615801be M	Assets/App/Scripts/Contents/Friend/FriendListModal.cs
+:100644 100644 88ed2555f512b2f3d74c0b6d7804b6c306bfcf81 71fefa79e98edcec407ab74604d2d340d70f47ec M	Assets/App/Scripts/Contents/Friend/FriendModel.cs
+:100644 100644 644e08cc8a3e77306f78f0839cfe901d6c880a87 815959954860d04ea586d5de6e482aacb8e0bca0 M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentModal.cs
+:100644 100644 7a9c0fe746f6fbe74ef84d570e9c1d752be65fa1 69d8f2d58172bfbd186c0b22631bb6829806c21d M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentModel.cs
+:100644 100644 59989b08e08f4b1d2c9836bda03b2afa0a9044da 6c44c5559f7d21c41996f9a3dfcfb952eb2accd0 M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentService.cs
+:100644 100644 18e8dda8810c13498c09229b015c33eeafc9295d b47fc25d0be314a7e4a8c0c53cf7c61217ef77fb M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 9465918bb5f4956bb36156db8696a5768d4492e9 250cc472b7f04ed4c09efa0fd54e629314526cf7 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 2a985b65493e7d9767e4c0152af2232be82865af ba37e7cc9dc19f3167ae9cd481b1d05976926e2e M	Assets/Resources/UI/Friend/FriendListModal.prefab

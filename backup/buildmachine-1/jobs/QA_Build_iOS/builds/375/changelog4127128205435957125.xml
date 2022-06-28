@@ -1,0 +1,20 @@
+commit c13f8d06827f029ca4a53dda5b8435065ffacf14
+tree 77f71e11696d062dcaae56fefe1404d54cc05051
+parent 63ecf0bfde8599a70ed39359bfe27728c77a543c
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 11:52:29 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-16 11:52:29 +0900
+
+    履歴に受け取り前のものを表示しない
+
+
+:100644 100644 d62f78592469939f803b33e383b27f64aca9215d 7a9c0fe746f6fbe74ef84d570e9c1d752be65fa1 M	Assets/App/Scripts/Contents/PiaPresent/PiaPresentModel.cs
+commit 63ecf0bfde8599a70ed39359bfe27728c77a543c
+tree 84ac085e770e8ebd8ed38799926ea4a5d36a51a8
+parent 43e591c7eb69c7385ed2f233c59bdbcb27a35329
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 11:37:18 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-16 11:37:26 +0900
+
+    タブ文言を「受け取り」に変更
+
+
+:100644 100644 f51ecda9737346d6641b7a41dfe93f7d5d87fac9 47c8828b459767295b030b1e5106f69cd97f4a9c M	Assets/Resources/UI/PiaPresent/PiaPresentModal.prefab

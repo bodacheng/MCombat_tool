@@ -1,0 +1,13 @@
+commit dafb50d269b9b3cd6f78491a51117fcd6015e2d6
+tree 0fca7d73ca1629e74e147b27651347fa16ee8e9a
+parent 83e6e96924896710c22bc9da2a1654964736f78a
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-14 18:05:24 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-14 18:05:24 +0900
+
+    assetKindについての情報もSlackで通知できるように対応
+
+
+:100644 100644 6d0adff02b184594ada3af62b98b32253cf97151 2f6eb66b187ad8bbffc78cd5ec054e754422740a M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 cde769f2c45b6df5cffc82d406f2864efd75aedc e7f4f37dc54f69661c7aa580aaa6d1918d621da9 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 f4d10c86d7ee4655088d1e443539b88a5b323ecc f8746ab44227e24617736814e7acfc328821d932 M	pipeline_script/utils/notify/SlackNotify.groovy
+:100644 100644 c9f3cf0e2ab2fbc14141af9e2017ecca7ca97b07 645b2757048270063b2016f2bae7d7cdaefec4c7 M	pipeline_script/utils/notify/slackUtility.groovy

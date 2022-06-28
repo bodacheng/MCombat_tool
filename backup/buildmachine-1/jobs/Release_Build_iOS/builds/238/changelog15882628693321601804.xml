@@ -1,0 +1,31 @@
+commit 1499853e680c56e1f9194a9d4cce18f7a08a328b
+tree a1ccc885a42d0e282da8db1481d7be6a96aead7f
+parent a73548d3214bd200f512493e7ce003b3764248c7
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:38:41 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:38:41 +0900
+
+    [ios]Exportディレクトリのパスミスを修正
+
+
+:100644 100644 0a58d399507606261e29f722bd69bc6133231b55 37965f5fe5202eb923f43753b0b17568b0ba91d0 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit a73548d3214bd200f512493e7ce003b3764248c7
+tree 7f1ff8ebb7a6994a6326cd38e96e6b1ff09b70c4
+parent 9e64e6cef7ec87ef7fa27aa7f6223a6c9fb2d4f1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:24:39 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:24:39 +0900
+
+    構文ミスの修正
+
+
+:100644 100644 0d6078a8781b1a58df3430401472e4ff1a33a590 90ab567dd4bfa75b83974c7c8a3d475746e8ba8e M	pipeline_script/DevBuild/android/release_build.groovy
+commit 9e64e6cef7ec87ef7fa27aa7f6223a6c9fb2d4f1
+tree 9237b3a6f747416ba0092cd2f159e7c94d133ced
+parent 6f57b79dc73ac3199dd27a28fb8ea15d8e78318b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:22:32 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 14:22:32 +0900
+
+    本番ビルド構文修正、リリースノート修正
+
+
+:100644 100644 66a6092a9ddab6d78e59fc8ed73033ba629d14cd 0d6078a8781b1a58df3430401472e4ff1a33a590 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 2bf2636cefb041439c7706963dc3f58b6316160c 0a58d399507606261e29f722bd69bc6133231b55 M	pipeline_script/DevBuild/ios/release_build.groovy

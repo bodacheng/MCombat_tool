@@ -1,0 +1,775 @@
+[2022-06-12T10:50:44.646Z] 定期的に実行
+[2022-06-12T10:50:46.020Z] Obtained pipeline_script/utils/backup_jenkins_configurations.groovy from git https://git-1.cocone.jp/projectp3/p3-tools
+[2022-06-12T10:50:46.241Z] [8mha:////4KMIoPpwa9sqFTq42EQVBR294OIQWarrBsGrNE9xKOf2AAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[2022-06-12T10:50:46.527Z] [8mha:////4FnV1wKzJzbE5eiW3vtJTiY2f3yh3IW3VcMqO16BkGUKAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+[2022-06-12T10:50:46.567Z] Running on [8mha:////4F7iT+VqWwlyNWgyOEIUcW9t4LozJQcAXEp3F2vSXMLTAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup
+[2022-06-12T10:50:46.638Z] [8mha:////4HOTXN9Zqq6YtU8Xf00ogNUH01uCT4WfFLxOFYF0AIJpAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[2022-06-12T10:50:46.730Z] [8mha:////4EvDMKRrIcxQ2ernxv9jvyTZb9OhRErwIGj6VXJU/saLAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[2022-06-12T10:50:46.753Z] [8mha:////4B33koANQuMIUmMUK9xzj5SiyB7Rh+K4hFAMBvvbzdLPAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[2022-06-12T10:50:46.886Z] [8mha:////4HK6/oUpKnF/7AUBoNi1mpUML6DSgI0ZgXaQh0duBwY3AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+[2022-06-12T10:50:46.910Z] The recommended git tool is: git
+[2022-06-12T10:50:46.911Z] using credential jenkins_gitlab
+[2022-06-12T10:50:46.935Z]  > git rev-parse --resolve-git-dir /Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup/.git # timeout=10
+[2022-06-12T10:50:46.966Z] Fetching changes from the remote Git repository
+[2022-06-12T10:50:46.966Z]  > git config remote.origin.url https://git-1.cocone.jp/projectp3/p3-tools # timeout=10
+[2022-06-12T10:50:46.987Z] Fetching upstream changes from https://git-1.cocone.jp/projectp3/p3-tools
+[2022-06-12T10:50:46.988Z]  > git --version # timeout=10
+[2022-06-12T10:50:47.001Z]  > git --version # 'git version 2.30.1 (Apple Git-130)'
+[2022-06-12T10:50:47.001Z] using GIT_ASKPASS to set credentials JenkinsからGitLabへのアクセス用アカウント
+[2022-06-12T10:50:47.001Z]  > git fetch --tags --force --progress -- https://git-1.cocone.jp/projectp3/p3-tools +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2022-06-12T10:50:48.012Z]  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+[2022-06-12T10:50:48.025Z] Checking out Revision 90a1ae7b924b231254935314e7a1af195c6cb54d (refs/remotes/origin/master)
+[2022-06-12T10:50:48.025Z]  > git config core.sparsecheckout # timeout=10
+[2022-06-12T10:50:48.035Z]  > git checkout -f 90a1ae7b924b231254935314e7a1af195c6cb54d # timeout=10
+[2022-06-12T10:50:48.066Z] Commit message: "[android]ビルド所要時間を通知"
+[2022-06-12T10:50:48.066Z]  > git rev-list --no-walk cfd21078fd0aa599bc28aeca0a5d445a7171be76 # timeout=10
+[2022-06-12T10:50:50.744Z] [8mha:////4MVFna0y9Im/TvViCkZuZbioQO3w5NXcCa+F9sl9BpG9AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[2022-06-12T10:50:50.835Z] [8mha:////4GPtPtcZjwJPcdrxOw/zXuSmgB8AbcZ0f3D9VUBgO22DAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[2022-06-12T10:50:50.923Z] [8mha:////4P0ZnC9lNv+j+PkFwxNHyJcL58QrGZxLQ3q16tk9/zkCAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[2022-06-12T10:50:50.945Z] [8mha:////4LiLXA2SBNyF0JY9MlcFy/tF5aYwbgtDprM0EeOTPSw8AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[2022-06-12T10:50:51.080Z] [8mha:////4KgdtN3CIBC1UsmewXn1LWlwcKDuuVkmmGRYR4qZvCfHAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[2022-06-12T10:50:51.102Z] [8mha:////4ASwsmXRF2l1qO6w9lNWoQZ/mP/2yOO1FvoZEsNNN1/IAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (cleanup workspace)
+[2022-06-12T10:50:51.237Z] [8mha:////4KxJxBngLJhDZQPetGJQblErjCCvtCVStfOUnBJqUaEmAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] cleanWs
+[2022-06-12T10:50:51.258Z] [WS-CLEANUP] Deleting project workspace...
+[2022-06-12T10:50:51.258Z] [WS-CLEANUP] Deferred wipeout is used...
+[2022-06-12T10:50:51.282Z] [WS-CLEANUP] done
+[2022-06-12T10:50:51.347Z] [8mha:////4K8NdBRiZtYosJ56MEbZKAisfEPixFaHaRkSL/VMo9rsAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N7BnLt++AAAA[0m[Pipeline] }
+[2022-06-12T10:50:51.454Z] [8mha:////4GMzt/BDP+7i/MhCpuJl8T0z6L9XWwNTrJbPNc21BBKWAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKGgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N4glvS6+AAAA[0m[Pipeline] // stage
+[2022-06-12T10:50:51.549Z] [8mha:////4ONGALoIoOtcOjvKgjNsAMVj6WnZCtb7+u7b+5DyBC1/AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUnRgQE2uUhROEJoSk0f9tkpJOnIircQdaKjHhwbItWe/1hioGOFEwzGnsLMbWst6PZk4sU+hunjJzdGUtYSSvmdBZkNLntQpKGlYVJWw4bDW2nqJFk2DHnXzI2ks09SWFeTtyKK0a4AkFn8lJhvQtU4D9fVSR8Mf5C4CpT1A2zWKH5Vl9ANydZ8vCAAAA[0m[Pipeline] stage
+[2022-06-12T10:50:51.573Z] [8mha:////4JBg5EcOKIq5V+NSNQEo+hvgL92At+gwXMu44hpxvH10AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUTCAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0rlhNLCAAAA[0m[Pipeline] { (ブランチ)
+[2022-06-12T10:50:51.698Z] [8mha:////4EksSh2oTmoWkNfRNEVivnVlzO6YlTPiWiDg4V0POALbAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiOhCiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBr2eB0O+AAAA[0m[Pipeline] git
+[2022-06-12T10:50:51.726Z] The recommended git tool is: git
+[2022-06-12T10:50:51.728Z] Warning: CredentialId "pokepia_buildmachine-1" could not be found.
+[2022-06-12T10:50:51.729Z] Cloning the remote Git repository
+[2022-06-12T10:50:51.729Z] Cloning repository https://git-1.cocone.jp/projectp3/p3-tools.git
+[2022-06-12T10:50:51.729Z]  > git init /Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup # timeout=10
+[2022-06-12T10:50:51.802Z] Fetching upstream changes from https://git-1.cocone.jp/projectp3/p3-tools.git
+[2022-06-12T10:50:51.802Z]  > git --version # timeout=10
+[2022-06-12T10:50:51.821Z]  > git --version # 'git version 2.30.1 (Apple Git-130)'
+[2022-06-12T10:50:51.821Z]  > git fetch --tags --force --progress -- https://git-1.cocone.jp/projectp3/p3-tools.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2022-06-12T10:51:05.209Z]  > git config remote.origin.url https://git-1.cocone.jp/projectp3/p3-tools.git # timeout=10
+[2022-06-12T10:51:05.217Z]  > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2022-06-12T10:51:05.224Z] Avoid second fetch
+[2022-06-12T10:51:05.224Z]  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+[2022-06-12T10:51:05.235Z] Checking out Revision 90a1ae7b924b231254935314e7a1af195c6cb54d (refs/remotes/origin/master)
+[2022-06-12T10:51:05.235Z]  > git config core.sparsecheckout # timeout=10
+[2022-06-12T10:51:05.242Z]  > git checkout -f 90a1ae7b924b231254935314e7a1af195c6cb54d # timeout=10
+[2022-06-12T10:51:09.287Z]  > git branch -a -v --no-abbrev # timeout=10
+[2022-06-12T10:51:09.300Z]  > git checkout -b master 90a1ae7b924b231254935314e7a1af195c6cb54d # timeout=10
+[2022-06-12T10:51:09.382Z] Commit message: "[android]ビルド所要時間を通知"
+[2022-06-12T10:51:09.432Z] [8mha:////4MEmljz+tidiqDFph+ttwce2RRfy5bNwBdZZjDFYJM6iAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICVEgoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AEWNdkpvgAAAA==[0m[Pipeline] }
+[2022-06-12T10:51:09.525Z] [8mha:////4PJrYsi/wsYaFwgMjYUdaP6E6mI3EB2XH8e2tRMVU27kAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKi0FAgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3da768AEi+zpyvgAAAA==[0m[Pipeline] // stage
+[2022-06-12T10:51:09.611Z] [8mha:////4HAb0+EbgitRCqbewj2OSZ+Vba6CTkIHkyf644IyRQpqAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohU7YqYWKMunCCkISSN/m+TlHbiRFyNOxCoxIQHy7ZkvecLyhjgSMFwp7G3GJXlg59MTnym0F89zdzRhSvCSF7zVs8tdfq01paShlUFg42ArUblKVo0CXbCybusvERTnVPI20EAs90IDyhEJicZ0rcsAfa3qYuEP85fACxDAlbX2Zrm8yzf8hZCqsIAAAA=[0m[Pipeline] stage
+[2022-06-12T10:51:09.632Z] [8mha:////4OxM3uHjR2vgcTP59PRzkn4FLSjxwA+bDhSM3pgl84jPAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUKiNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPpnFij8IAAAA=[0m[Pipeline] { (バックアップディレクトリ走査)
+[2022-06-12T10:51:09.747Z] [8mha:////4D1q9xAI0UViUNwmFHwNwcoZygB8MonzKIiFYiE9LQx0AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAd6e6VPCAAAA[0m[Pipeline] script
+[2022-06-12T10:51:09.778Z] [8mha:////4CJ6lodL41vmKSzcdBLeBM0jKFsGD5K6uqLpLRxc3PK+AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQjAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/hYjrHCAAAA[0m[Pipeline] {
+[2022-06-12T10:51:09.914Z] [8mha:////4OaU3vZNtapMThgH01SjnPU5fhgavuWPYhyEae8SvpaFAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIUGDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAEIWoEpvgAAAA==[0m[Pipeline] sh
+[2022-06-12T10:51:10.259Z] + find /Users/p3_dev/backup_jenkins -name 'FULL-*' -maxdepth 1 -type d -print
+[2022-06-12T10:51:10.259Z] + sort
+[2022-06-12T10:51:10.259Z] + tail -n 1
+[2022-06-12T10:51:10.343Z] [8mha:////4EBUMCEPA+RsuQtKXIDgOM6rCkDAQASvIG8MSkfun/OhAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISEKRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpTb3af24Q1Ja5owvgAAAA==[0m[Pipeline] echo
+[2022-06-12T10:51:10.365Z] ===================================================
+[2022-06-12T10:51:10.407Z] [8mha:////4GwH/BQgF4xp5f61G1w99to0qN4kPCWzXvtGANqaYZcMAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISEhIaq0lhteYGJjnFh3xnZIKl7E1/gDgUhUbLHa2WaeL1imCEeOFltDnaPUOAy+t9PCgWN38Txgy2dsmBJ7g9IMkrWpZ5ScDcwpSlgIWBlqPCdHNsNatOquKq/IVqccp+8goHT6Bg8oxGTOKuYvjBE2114npp/nrwDGkKHc7j61D2+GdwK3vgAAAA==[0m[Pipeline] echo
+[2022-06-12T10:51:10.430Z] latest directory:/Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00
+[2022-06-12T10:51:10.477Z] [8mha:////4PCqpYN0qHPAglTNWCLqwFce1ZjcUqMVw/0VXC8qbEm8AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIVEgRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpTb3af24Q3HRhmuvgAAAA==[0m[Pipeline] echo
+[2022-06-12T10:51:10.499Z] workspace =/Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup
+[2022-06-12T10:51:10.544Z] [8mha:////4D1eBBeFKqL9GL28knwiGV5asnVOw1PlsbfFb6cHbmpcAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCQFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDREKHeHXPvt8AG5lxl+vgAAAA==[0m[Pipeline] echo
+[2022-06-12T10:51:10.565Z] ===================================================
+[2022-06-12T10:51:10.610Z] [8mha:////4P6Hut6DNkRyWz9LZl3lmG97Cx9zX0FsnvkQQs2S19LaAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDREKHeHXPvt8AH4pgJnvgAAAA==[0m[Pipeline] echo
+[2022-06-12T10:51:10.632Z] workspace_backup_path =/Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup/backup/buildmachine-1/
+[2022-06-12T10:51:10.678Z] [8mha:////4Mvl86wLrdF5Hv/Bh23BslODqX8Zc+QzcEZTMMwOPLRKAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBVEhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+QVkfcu1r/wE79S9MvgAAAA==[0m[Pipeline] fileExists
+[2022-06-12T10:51:10.774Z] [8mha:////4ETxVi8Vxyf67q+61Z+yNK/pmn+SBBtG+DTWyTMGFIlkAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRiKgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAcw+Qbk/5Kpr/wF6xDRVvgAAAA==[0m[Pipeline] sh
+[2022-06-12T10:51:11.113Z] + rsync -au --delete /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/buildtriggerbadge.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/com.chikli.hudson.plugin.naginator.NaginatorPublisher.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/com.dabsquared.gitlabjenkins.GitLabPushTrigger.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/com.dabsquared.gitlabjenkins.connection.GitLabConnectionConfig.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/com.sonyericsson.rebuild.RebuildDescriptor.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/config.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/credentials-configuration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/credentials.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/github-plugin-configuration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.model.UpdateCenter.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.copyartifact.CopyArtifactConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.copyartifact.TriggeredBuildSelector.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.emailext.ExtendedEmailPublisher.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.git.GitSCM.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.git.GitTool.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.gradle.Gradle.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.throttleconcurrents.ThrottleJobProperty.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.plugins.timestamper.TimestamperConfig.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.tasks.Ant.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.tasks.Mailer.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.tasks.Maven.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.tasks.Shell.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/hudson.triggers.SCMTrigger.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/installedPlugins.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/io.jenkins.plugins.junit.storage.JunitTestResultStorageConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/io.jenkins.plugins.logintheme.LoginTheme.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.fingerprints.GlobalFingerprintConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.model.ArtifactManagerConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.model.GlobalBuildDiscarderConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.model.JenkinsLocationConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.mvn.GlobalMavenConfig.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.plugins.slack.SlackNotifier.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.security.QueueItemAuthenticatorConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.security.ResourceDomainConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.security.UpdateSiteWarningsConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.tasks.filters.EnvVarsFilterGlobalConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jenkins.telemetry.Correlator.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jobConfigHistory.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/jobs /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/nodeMonitors.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/nodes /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.codefirst.SimpleThemeDecorator.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.builduser.BuildUserVarsConfig.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.gitclient.JGitApacheTool.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.gitclient.JGitTool.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.github_branch_source.GitHubConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.pipelineConfigHistory.model.PipelineConfigHistoryGlobalConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.resourcedisposer.AsyncResourceDisposer.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.unity3d.Unity3dBuilder.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.workflow.flow.FlowExecutionList.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/queue.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/scriptApproval.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/thinBackup.xml /Users/p3_dev/backup_jenkins/FULL-2022-06-12_12-00/users /Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup/backup/buildmachine-1/
+[2022-06-12T10:51:15.125Z] [8mha:////4CrLQF/4Ka0qIWHYAb5lCrCpTQLnkfv5c2D98QO2y+2VAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGIj8alQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw/KU6NBvgAAAA==[0m[Pipeline] }
+[2022-06-12T10:51:15.254Z] [8mha:////4GzP23MkAkZO9pf+jNvPMKAHYWGv2Ioo9oUSmpy9JqNIAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGIj8alQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuDrm2+w/5sPj9vgAAAA==[0m[Pipeline] // script
+[2022-06-12T10:51:15.302Z] [8mha:////4JB+amsfMfM53nYiDaAqAsSXMwoMYMjXDbNZOeiDTgpkAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRiESDqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZH3Lt6w/0VwjlvgAAAA==[0m[Pipeline] }
+[2022-06-12T10:51:15.425Z] [8mha:////4IWuG+8M1No4Cj9SiBjG8i120j8Q/FZaZIyPq/whFRSSAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihYICUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkG5P+Sq6w/HtFNZvgAAAA==[0m[Pipeline] // stage
+[2022-06-12T10:51:15.518Z] [8mha:////4D3TyWtQZ2f9A0N8iFMs3m5IISLnYxOsZn4f23eVQwUpAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUFQsSYuoadeEEoQkhafR/SVLSiRNxNe5AoBITHizbkvWeL6iChyN5zazCwWDoDRvdpHNiifxwcZSYpTPrCQM5xTqVOpKqXWpHUcGiooQVh7XC3lEwqCNsuBV3UTuBuj5Fn7cDh9LIGzyg4JkchY/fMnvYXicZCH+cvwCYxwhl02Tb7T/P6g0gPq6twgAAAA==[0m[Pipeline] stage
+[2022-06-12T10:51:15.541Z] [8mha:////4Jbl0DXDRINnKm5I6XUQTS+3/ChKZQbS5aeGa0I1K0PNAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YAEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD59NhPHCAAAA[0m[Pipeline] { (gitへのコミット)
+[2022-06-12T10:51:15.662Z] [8mha:////4AJ4QRXzrRfKxwrk1Vpz1ENNpS3FvoNa46H98Lu5klB8AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUCRaEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WfbbT7P6g0Z/aLSwgAAAA==[0m[Pipeline] script
+[2022-06-12T10:51:15.686Z] [8mha:////4PGfLh7zoUzL+7EHMheXwLNereGEBsjeo0ZL6mxs8Y4xAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUJDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAbb5KxbCAAAA[0m[Pipeline] {
+[2022-06-12T10:51:15.801Z] [8mha:////4GCWwFcsepplke/B41jmxzkDtSkR3GuMRg0EIflRzGlmAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyv32U7vwBirOQHu+AAAA[0m[Pipeline] sh
+[2022-06-12T10:51:16.113Z] + echo 'git add -A'
+[2022-06-12T10:51:16.113Z] git add -A
+[2022-06-12T10:51:16.113Z] + git add -A .
+[2022-06-12T10:51:19.937Z] + echo 'git commit -m [chore][jenkins]定期バックアップ jenkins by buildmachine-1'
+[2022-06-12T10:51:19.937Z] git commit -m [chore][jenkins]定期バックアップ jenkins by buildmachine-1
+[2022-06-12T10:51:19.937Z] + git commit -m '[chore][jenkins]定期バックアップ jenkins by buildmachine-1'
+[2022-06-12T10:51:24.693Z] [master 83e6e96] [chore][jenkins]定期バックアップ jenkins by buildmachine-1
+[2022-06-12T10:51:24.693Z]  634 files changed, 2647209 insertions(+), 2231765 deletions(-)
+[2022-06-12T10:51:24.693Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/90/build.xml
+[2022-06-12T10:51:24.693Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/90/changelog5018535051262239226.xml
+[2022-06-12T10:51:24.693Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/90/changelog9379198850736735489.xml
+[2022-06-12T10:51:24.693Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/90/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/90/log-index
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/91/build.xml
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{Design_DevBuild_Assets/builds/247/changelog1331857758694598447.xml => Design_CustomBuild_Assets/builds/91/changelog2050731346400828229.xml} (100%)
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{Design_DevBuild_Assets/builds/248/changelog15534550813488810349.xml => Design_CustomBuild_Assets/builds/91/changelog3454440749949711592.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/91/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/91/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{Design_DevBuild_Assets/builds/252 => Design_CustomBuild_Assets/builds/92}/build.xml (76%)
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{Design_DevBuild_Assets/builds/249/changelog35891650672349803.xml => Design_CustomBuild_Assets/builds/92/changelog12161170539303304927.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/92/changelog17895748683516394347.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/92/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/92/log-index
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/93/build.xml
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{Design_DevBuild_Assets/builds/250/changelog10006547234149243658.xml => Design_CustomBuild_Assets/builds/93/changelog1852438813622042131.xml} (100%)
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{Design_DevBuild_Assets/builds/251/changelog889753556232662202.xml => Design_CustomBuild_Assets/builds/93/changelog946068572858890377.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/93/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_CustomBuild_Assets/builds/93/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/247/changelog18364929543709759813.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/247/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/247/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/248/build.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/248/changelog10503433168379721461.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/248/changelog12738788804389575334.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/248/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/248/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/249/changelog10105020720652000918.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/249/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/249/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/250/changelog3236437608941007380.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/250/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/250/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/251/changelog173376103139368592.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/251/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/251/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/252/changelog6471749943762977139.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/252/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/252/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/253/changelog9854898574435095654.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/253/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/253/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/254/changelog11486026413732161128.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/254/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/254/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{254 => 277}/build.xml (94%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/277/changelog14843279687450809713.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/277/changelog16617858238221963772.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/277/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/277/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{247 => 278}/build.xml (93%)
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{252/changelog3449003748220326602.xml => 278/changelog14288445864955061579.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/278/changelog9329302827318914624.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/278/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/278/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{249 => 279}/build.xml (92%)
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{253/changelog5339205914671008719.xml => 279/changelog11237815472016620504.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/279/changelog1152571152997671169.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/279/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/279/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{250 => 280}/build.xml (91%)
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{254/changelog10431996506669108581.xml => 280/changelog17834805380811099183.xml} (100%)
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{DevBuild_Android_Beta/builds/34/changelog5131900331428767680.xml => Design_DevBuild_Assets/builds/280/changelog9045611637677122743.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/280/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/280/log-index
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/281/build.xml
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{DevBuild_Android_Single_Test/builds/14/changelog7902936696305619642.xml => Design_DevBuild_Assets/builds/281/changelog15485541403069472450.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/281/changelog2304245129600672754.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/281/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/281/log-index
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/282/build.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/282/changelog10500361287779474862.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/282/changelog3476820730403048537.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/282/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/282/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{253 => 283}/build.xml (93%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/283/changelog38513606077717790.xml
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{DevBuild_Android_Single_Test/builds/19/changelog2654207034087699520.xml => Design_DevBuild_Assets/builds/283/changelog8731373602969691165.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/283/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/283/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{251 => 284}/build.xml (92%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/284/changelog4069227920169014174.xml
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/{DevBuild_Android_Single_Test/builds/19/changelog3257983270117780424.xml => Design_DevBuild_Assets/builds/284/changelog6585164650273381359.xml} (100%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/284/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/284/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/51/changelog14470899434847851193.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/51/changelog6436714796023355546.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/51/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/51/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/{51 => 60}/build.xml (97%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/60/changelog11620688629793237738.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/60/changelog13257741612271108550.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/60/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/60/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Beta/builds/34/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Beta/builds/34/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Beta/builds/{34 => 54}/build.xml (84%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Beta/builds/54/changelog4732810703702191839.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Beta/builds/54/log
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Beta/builds/54/log-index
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/11/changelog12484222782844145514.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/11/changelog14722817084787244441.xml
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/11/log
+[2022-06-12T10:51:24.694Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/11/log-index
+[2022-06-12T10:51:24.694Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/{11 => 21}/build.xml (96%)
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/21/changelog6112241188115873114.xml
+[2022-06-12T10:51:24.694Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/21/changelog6830385755514344223.xml
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/21/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single/builds/21/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/14/build.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/14/changelog14639500221848843169.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/14/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/14/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/15/build.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/15/changelog11533653330520797147.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/15/changelog3933787856790080488.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/15/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/15/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/16/build.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/16/changelog13138833303974940179.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/16/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/16/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/17/changelog11209924552569222736.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/17/changelog15985751237515137714.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/17/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/17/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/18/build.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/18/changelog14546777037661617616.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/18/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/19/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/19/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/20/changelog10404831520123215404.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/20/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/20/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/21/changelog17748827896757666175.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/21/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/21/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/22/build.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/22/changelog10853141250888969422.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/22/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/22/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/23/build.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/23/log
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/23/log-index
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/30/build.xml
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/{20/changelog8896580080714868350.xml => 30/changelog13196628404218827011.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/{21/changelog8498404791928346667.xml => 30/changelog5204987397710754437.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/30/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/30/log-index
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/31/build.xml
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/{22/changelog4771711288960040027.xml => 31/changelog2736785724962174647.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/{23/changelog4952710506631842740.xml => 31/changelog9397626428029525973.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/31/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/31/log-index
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/32/build.xml
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS/builds/655/changelog10992370568790637607.xml => DevBuild_Android_Single_Test/builds/32/changelog4576699245543443996.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS/builds/656/changelog15241406743000400158.xml => DevBuild_Android_Single_Test/builds/32/changelog5816924824949574585.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/32/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/32/log-index
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/33/build.xml
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS/builds/657/changelog16526562844936307785.xml => DevBuild_Android_Single_Test/builds/33/changelog363302773527220735.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS/builds/657/changelog2098527252686004024.xml => DevBuild_Android_Single_Test/builds/33/changelog743309942124707219.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/33/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/33/log-index
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/34/build.xml
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS/builds/658/changelog8815957183200772405.xml => DevBuild_Android_Single_Test/builds/34/changelog10673520186950380875.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS/builds/659/changelog15234054280452281821.xml => DevBuild_Android_Single_Test/builds/34/changelog7404214613441527254.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/34/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/34/log-index
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/35/build.xml
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS/builds/659/changelog15426191379265113787.xml => DevBuild_Android_Single_Test/builds/35/changelog14742888196201087864.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single/builds/22/changelog8847706718418867707.xml => DevBuild_Android_Single_Test/builds/35/changelog17117469807189069896.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/35/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/35/log-index
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/{17 => 36}/build.xml (95%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/45/changelog18427104886046630431.xml => DevBuild_Android_Single_Test/builds/36/changelog13336616377141355615.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/46/changelog6046835642217047788.xml => DevBuild_Android_Single_Test/builds/36/changelog17290910399421611950.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/36/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/36/log-index
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/{19 => 37}/build.xml (96%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/47/changelog14681546440641673751.xml => DevBuild_Android_Single_Test/builds/37/changelog12920953478131189202.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/47/changelog15125008716332559039.xml => DevBuild_Android_Single_Test/builds/37/changelog4420907656810218708.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/37/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/37/log-index
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/{21 => 38}/build.xml (97%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/48/changelog2686230241314308595.xml => DevBuild_Android_Single_Test/builds/38/changelog5177325601759509696.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/48/changelog762749114298757364.xml => DevBuild_Android_Single_Test/builds/38/changelog8584713367815259197.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/38/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/38/log-index
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/{20 => 39}/build.xml (97%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/49/changelog18073671296856733149.xml => DevBuild_Android_Single_Test/builds/39/changelog14016438605706538195.xml} (100%)
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/49/changelog2424193377103431573.xml => DevBuild_Android_Single_Test/builds/39/changelog220473020063491493.xml} (100%)
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/39/log
+[2022-06-12T10:51:24.695Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_Android_Single_Test/builds/39/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/655/build.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/655/changelog2301069295644000700.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/655/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/656/changelog7003658432256580848.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/656/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/657/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/658/changelog12187090110442079552.xml
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/658/log-index
+[2022-06-12T10:51:24.695Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/659/log-index
+[2022-06-12T10:51:24.695Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{659 => 665}/build.xml (92%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/665/changelog10604672768851682047.xml
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/50/changelog12291934995258860333.xml => DevBuild_iOS/builds/665/changelog8902857680289602516.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{658 => 665}/log (81%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/665/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{658 => 666}/build.xml (91%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/666/changelog13600922425448269718.xml
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/50/changelog15335269181385277207.xml => DevBuild_iOS/builds/666/changelog15812259063159270140.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{659 => 666}/log (81%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/666/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{657 => 667}/build.xml (91%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/51/changelog12956284041089218451.xml => DevBuild_iOS/builds/667/changelog4219529053140385524.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/51/changelog14916223827237393414.xml => DevBuild_iOS/builds/667/changelog6993463306256025255.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{657 => 667}/log (81%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/667/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{656 => 668}/build.xml (90%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/52/changelog8026634753685523625.xml => DevBuild_iOS/builds/668/changelog13769835132037234816.xml} (100%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/668/changelog906604615381138193.xml
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{655 => 668}/log (81%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/668/log-index
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/669/build.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/669/changelog14597636072180552400.xml
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/53/changelog12603898612458034361.xml => DevBuild_iOS/builds/669/changelog5046858659182707316.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS/builds/{656 => 669}/log (80%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS/builds/669/log-index
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/31/build.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/31/changelog14177891137212856045.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/31/log
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/31/log-index
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/32/build.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/32/changelog17520801369676354474.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/32/log
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/32/log-index
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/33/build.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/33/changelog1527641812690455549.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/33/log
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Beta/builds/33/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/21/changelog16610192037976441797.xml
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/21/changelog487150664400168155.xml
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/21/log
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/21/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/22/changelog7545437582480583712.xml
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/22/log
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/22/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/23/changelog11618185619248472952.xml
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/23/changelog4823624272574795423.xml
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/23/log
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/23/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/{23 => 31}/build.xml (97%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/31/changelog2309217267642876412.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/31/changelog6614244402622663454.xml
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/31/log
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/31/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/{22 => 32}/build.xml (96%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/32/changelog2622598760645185379.xml
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/53/changelog4491976690155694714.xml => DevBuild_iOS_Single/builds/32/changelog8080925354836057043.xml} (100%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/32/log
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/32/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/{21 => 33}/build.xml (95%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/33/changelog14744224513300303912.xml
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_iOS_Single_Test/builds/54/changelog116287076825464772.xml => DevBuild_iOS_Single/builds/33/changelog1629302761612893960.xml} (100%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/33/log
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single/builds/33/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/45/log
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/45/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/46/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/47/log
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/47/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/48/log
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/48/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/49/log
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/49/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/50/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/51/build.xml
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/51/log
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/51/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/52/changelog6983918484874945830.xml
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/52/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/53/log-index
+[2022-06-12T10:51:24.696Z]  delete mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/54/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{45 => 64}/build.xml (97%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{54/changelog7575400864360324088.xml => 64/changelog11344413880851268168.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{DevBuild_Android_Single_Test/builds/18 => DevBuild_iOS_Single_Test/builds/64}/log (52%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/64/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{46 => 65}/build.xml (98%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/320/changelog15394841415019500158.xml => DevBuild_iOS_Single_Test/builds/65/changelog9926315987473155853.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{46 => 65}/log (67%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/65/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{52 => 66}/build.xml (98%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/320/changelog9966261658286126041.xml => DevBuild_iOS_Single_Test/builds/66/changelog10828416430199351655.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/321/changelog4846247690481277563.xml => DevBuild_iOS_Single_Test/builds/66/changelog13767902704351027519.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{53 => 66}/log (86%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/66/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{53 => 67}/build.xml (98%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/322/changelog6392317011058071249.xml => DevBuild_iOS_Single_Test/builds/67/changelog14546218705988059182.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/323/changelog1135413112208156705.xml => DevBuild_iOS_Single_Test/builds/67/changelog3450620014772527980.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{52 => 67}/log (67%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/67/log-index
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{49 => 68}/build.xml (97%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/323/changelog5844129864420864881.xml => DevBuild_iOS_Single_Test/builds/68/changelog10106488898302651680.xml} (100%)
+[2022-06-12T10:51:24.696Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/324/changelog17053630804909030713.xml => DevBuild_iOS_Single_Test/builds/68/changelog10200184598192624073.xml} (100%)
+[2022-06-12T10:51:24.696Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/68/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/68/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{54 => 69}/build.xml (98%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/325/changelog17098842530035247425.xml => DevBuild_iOS_Single_Test/builds/69/changelog13425434664764829256.xml} (100%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/326/changelog10325882909246170531.xml => DevBuild_iOS_Single_Test/builds/69/changelog4241185741974438501.xml} (100%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{54 => 69}/log (96%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/69/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{50 => 70}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/327/changelog9399123504398564365.xml => DevBuild_iOS_Single_Test/builds/70/changelog1432630513588973875.xml} (100%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/328/changelog13552607230343290250.xml => DevBuild_iOS_Single_Test/builds/70/changelog2214345316186964619.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/70/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/70/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{48 => 71}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/329/changelog15833470507204478116.xml => DevBuild_iOS_Single_Test/builds/71/changelog1176876280323212451.xml} (100%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/329/changelog5319658263237012747.xml => DevBuild_iOS_Single_Test/builds/71/changelog8238558259876515751.xml} (100%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{50 => 71}/log (54%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/71/log-index
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/72/build.xml
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/342/changelog12872320337037484648.xml => DevBuild_iOS_Single_Test/builds/72/changelog11725861971126283803.xml} (100%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/343/changelog4459034455756311631.xml => DevBuild_iOS_Single_Test/builds/72/changelog9374781993122346729.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/72/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/72/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/{47 => 73}/build.xml (96%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/344/changelog12790631970053376341.xml => DevBuild_iOS_Single_Test/builds/73/changelog13792138868155947199.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/73/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/DevBuild_iOS_Single_Test/builds/73/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/320/build.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/320/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/320/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/321/changelog6380024981613995146.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/321/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/321/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/322/changelog8847449466659893904.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/322/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/322/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/323/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/323/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/324/changelog7990136780529998965.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/324/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/324/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/325/changelog3151947880248868408.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/325/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/325/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/326/changelog1642005931120644094.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/326/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/326/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/327/changelog6607165643216140769.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/327/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/327/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/328/changelog3060639405846748593.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/328/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/328/log-index
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/329/build.xml
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/329/log
+[2022-06-12T10:51:24.697Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/329/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{327 => 333}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/345/changelog6129032457171263016.xml => QA_Build_Android/builds/333/changelog16668845319134886104.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/333/changelog4707075015961668978.xml
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/333/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/333/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{325 => 334}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/334/changelog4694164052519419120.xml
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/345/changelog8263404866246108127.xml => QA_Build_Android/builds/334/changelog7792710068431281045.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/334/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/334/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{328 => 335}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/335/changelog11338145255644339184.xml
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/335/changelog11405098828276969273.xml
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/335/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/335/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{326 => 336}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/346/changelog9262975443180207456.xml => QA_Build_Android/builds/336/changelog3463731550046636599.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/336/changelog6356210828572687455.xml
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/336/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/336/log-index
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/337/build.xml
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/347/changelog8917526050588734393.xml => QA_Build_Android/builds/337/changelog10979205088352072809.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/337/changelog18019636112666112860.xml
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/337/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/337/log-index
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/338/build.xml
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/348/changelog9781105179999535068.xml => QA_Build_Android/builds/338/changelog11880870970331373971.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/338/changelog14763287452659671796.xml
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/338/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/338/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{324 => 339}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/339/changelog11044714905034526973.xml
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/349/changelog5396332556015766535.xml => QA_Build_Android/builds/339/changelog11462821808905355407.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/339/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/339/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{322 => 340}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/350/changelog2723104585384689095.xml => QA_Build_Android/builds/340/changelog10843603470819317130.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/340/changelog13157333431151189559.xml
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/340/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/340/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{323 => 341}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/351/changelog13867350526029208612.xml => QA_Build_Android/builds/341/changelog11089418766566574796.xml} (100%)
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/341/changelog7244398256923111339.xml
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/341/log
+[2022-06-12T10:51:24.697Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/341/log-index
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{321 => 342}/build.xml (97%)
+[2022-06-12T10:51:24.697Z]  rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/351/changelog2694375572351021040.xml => QA_Build_Android/builds/342/changelog12476656422416327389.xml} (100%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Release_Build_Android/builds/136/changelog12778288970641493099.xml => QA_Build_Android/builds/342/changelog3910944575757698242.xml} (100%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/342/log
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/342/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/342/build.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/342/changelog15965860772796895769.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/342/log
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/342/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/343/changelog8365082731358088512.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/343/log
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/343/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/344/changelog7123940042618109718.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/344/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/345/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/346/changelog5639140967084920629.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/346/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/347/changelog14480499986500564021.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/347/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/348/changelog9385465564721343553.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/348/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/349/changelog15389558714206134418.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/349/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/350/changelog9882083728563155133.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/350/log
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/350/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/351/build.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/351/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{349 => 355}/build.xml (97%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/355/changelog11052529133501087101.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Release_Build_Android/builds/136/changelog13665410721732447134.xml => QA_Build_iOS/builds/355/changelog5994950968311692832.xml} (100%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{351 => 355}/log (81%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/355/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{347 => 356}/build.xml (97%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Release_Build_iOS/builds/220/changelog9992771659115212575.xml => QA_Build_iOS/builds/356/changelog13729477179626797185.xml} (100%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/356/changelog4538541214363692208.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{345 => 356}/log (81%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/356/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{343 => 357}/build.xml (97%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/357/changelog3060164478732262982.xml
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/357/changelog5412748941903178083.xml
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/357/log
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/357/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{346 => 358}/build.xml (97%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Upload_AppCenter/builds/48/changelog10491623750518095353.xml => QA_Build_iOS/builds/358/changelog7824963026069819284.xml} (100%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/358/changelog9525484079551215808.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{349 => 358}/log (81%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/358/log-index
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/359/build.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Upload_AppCenter/builds/49/changelog4532844492069656448.xml => QA_Build_iOS/builds/359/changelog16368443946250533865.xml} (100%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/359/changelog18057722970316765191.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{346 => 359}/log (81%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/359/log-index
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/360/build.xml
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/360/changelog14361841084521279431.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Upload_AppCenter/builds/50/changelog4444099025528766321.xml => QA_Build_iOS/builds/360/changelog14669144487927395335.xml} (100%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{348 => 360}/log (81%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/360/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{348 => 361}/build.xml (97%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Upload_AppCenter/builds/51/changelog8720653654252588965.xml => QA_Build_iOS/builds/361/changelog2005868201802255361.xml} (100%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/361/changelog8388793659567526671.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{347 => 361}/log (81%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/361/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{344 => 362}/build.xml (97%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Upload_AppCenter/builds/52/changelog4076071855124896826.xml => QA_Build_iOS/builds/362/changelog1737487374862076239.xml} (100%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/362/changelog18098309339076738107.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{344 => 362}/log (81%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/362/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{350 => 363}/build.xml (97%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/363/changelog703698611346241631.xml
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Upload_AppCenter/builds/55/changelog12792350007682795349.xml => QA_Build_iOS/builds/363/changelog8355774527669522551.xml} (100%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/363/log
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/363/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{345 => 364}/build.xml (97%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Upload_AppCenter/builds/56/changelog5987813032607975286.xml => QA_Build_iOS/builds/364/changelog11516577353615060885.xml} (100%)
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/{Upload_AppCenter/builds/58/changelog8604626898400157071.xml => QA_Build_iOS/builds/364/changelog4640247833783254302.xml} (100%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/364/log
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/364/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/136/log
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/136/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/Release_Build_Android/builds/{136 => 146}/build.xml (95%)
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/146/changelog11275826769358359492.xml
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/146/changelog13816006488012168329.xml
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/146/log
+[2022-06-12T10:51:24.698Z]  create mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/146/log-index
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/220/changelog3392291860094677575.xml
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/220/log
+[2022-06-12T10:51:24.698Z]  delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/220/log-index
+[2022-06-12T10:51:24.698Z]  rename backup/buildmachine-1/jobs/Release_Build_iOS/builds/{220 => 230}/build.xml (95%)
+[2022-06-12T10:51:24.699Z]  create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/230/changelog2800687221754399220.xml
+[2022-06-12T10:51:24.699Z]  create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/230/changelog9238251053678039210.xml
+[2022-06-12T10:51:24.699Z]  create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/230/log
+[2022-06-12T10:51:24.699Z]  create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/230/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/48/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/48/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/48/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/49/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/49/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/49/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/50/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/50/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/50/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/51/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/51/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/51/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/52/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/52/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/52/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/53/changelog781365367867564505.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/53/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/53/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/54/changelog3915900649580671328.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/54/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/54/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/55/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/55/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/56/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/56/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/56/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/57/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/57/changelog3404138925895998807.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/57/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/58/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/58/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/59/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/60/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/60/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/60/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/61/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/62/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/62/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/63/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/63/log
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/63/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/64/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/64/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/65/build.xml
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/65/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/66/log-index
+[2022-06-12T10:51:24.699Z]  delete mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/67/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{53 => 78}/build.xml (92%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/78/changelog7576912480560351205.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{57 => 78}/log (57%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/78/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{54 => 79}/build.xml (92%)
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{59/changelog13103109900035275860.xml => 79/changelog1051391270986653230.xml} (100%)
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{59 => 79}/log (59%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/79/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{66 => 80}/build.xml (89%)
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{60/changelog5707621983038746089.xml => 80/changelog13337590403013885962.xml} (100%)
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{66 => 80}/log (53%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/80/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/81/build.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{61/changelog2521685180476097410.xml => 81/changelog10276761075564239184.xml} (100%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/81/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/81/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/82/build.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{62/changelog9601707365096153766.xml => 82/changelog15505817278483397710.xml} (100%)
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{61 => 82}/log (51%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/82/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/83/build.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{63/changelog11883890720724872620.xml => 83/changelog11382927192621687107.xml} (100%)
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{65 => 83}/log (63%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/83/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/84/build.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{64/changelog10783141415981616065.xml => 84/changelog7408441453035423108.xml} (100%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/84/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/84/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/85/build.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{65/changelog11443568552433497089.xml => 85/changelog21478998079138616.xml} (100%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/85/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/85/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{59 => 86}/build.xml (88%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/86/changelog2145701170618359381.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{58 => 86}/log (50%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/86/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{55 => 87}/build.xml (91%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/87/changelog18067290640983213928.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/87/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/87/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/88/build.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/88/changelog2863932473811532607.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/88/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/88/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/89/build.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{66/changelog8411187264695592546.xml => 89/changelog16118698432820868306.xml} (100%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/89/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/89/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/90/build.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{67/changelog16458123006383599339.xml => 90/changelog10146895626181211749.xml} (100%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/90/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/90/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/91/build.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/91/changelog1306423236539132756.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/91/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/91/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{61 => 92}/build.xml (85%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/92/changelog10473255020556459206.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/92/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/92/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/93/build.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/93/changelog445947510546206918.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/93/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/93/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/94/build.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/94/changelog17435096918643073271.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/94/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/94/log-index
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/95/build.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/95/changelog659900208436556611.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/95/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/95/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{62 => 96}/build.xml (91%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/96/changelog7727814528332477639.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{64 => 96}/log (65%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/96/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{67 => 97}/build.xml (91%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/97/changelog8065429259285689229.xml
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/Upload_AppCenter/builds/{67 => 97}/log (64%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/Upload_AppCenter/builds/97/log-index
+[2022-06-12T10:51:24.700Z]  delete mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/40/changelog16572433739632752724.xml
+[2022-06-12T10:51:24.700Z]  delete mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/40/log
+[2022-06-12T10:51:24.700Z]  delete mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/40/log-index
+[2022-06-12T10:51:24.700Z]  rename backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/{40 => 50}/build.xml (95%)
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/50/changelog1427962368173090562.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/50/log
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/50/log-index
+[2022-06-12T10:51:24.700Z]  delete mode 100644 backup/buildmachine-1/nodes/TestBuild_JobNode2/config.xml
+[2022-06-12T10:51:24.700Z]  create mode 100644 backup/buildmachine-1/users/kawashimahidea_61592675249714364/config.xml
+[2022-06-12T10:51:24.700Z] + git status
+[2022-06-12T10:51:24.700Z] On branch master
+[2022-06-12T10:51:24.700Z] nothing to commit, working tree clean
+[2022-06-12T10:51:24.759Z] [8mha:////4EE2d7BMFSBRqgV+IqX1FXdbKCjGSwM1exrasF5fK6vAAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nffWr7BmM+Nsi+AAAA[0m[Pipeline] }
+[2022-06-12T10:51:24.881Z] [8mha:////4Hm4TixMyyQek9JztA1aovDxLY5P0nJ8Xeu4TWLBqb3xAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCkQ5R0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMHmfoKzrT+3fTT40or4AAAA=[0m[Pipeline] // script
+[2022-06-12T10:51:24.926Z] [8mha:////4LYEbfE3gdjjOW6PS3rHK3UVo1+F8NVzuJOKtl8teZ0qAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSAAVCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw+Lw/VfvgAAAA==[0m[Pipeline] }
+[2022-06-12T10:51:25.049Z] [8mha:////4KzPCFj8AocwNwLHPkjpko/YN9BwvbEtRF0LFhHjgm0eAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgBASSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryt8+1PXwAs4Fmrr4AAAA=[0m[Pipeline] // stage
+[2022-06-12T10:51:25.143Z] [8mha:////4FG9OGP06XwsPLD5+/ugFKf9R0szYHDfCXJDotBAQozzAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUlZAYEFPXqAsnCE0ISaP/S5KSTpyIq3EHApWY8GDZlqz3fEEVPBzJa2YVDgZDb9joJp0TS+SHi6PELJ1ZTxjIKdap1JFU7VI7igoWFSWsOKwV9o6CQR1hw624i9oJ1PUp+rwdOJRG3uABBc/kKHz8ltnD9jrJQPjj/AXAPEYomybbbv95Vm97sl+ZwgAAAA==[0m[Pipeline] stage
+[2022-06-12T10:51:25.165Z] [8mha:////4Ip99qSTTyge7x5Ey+v2+Krzy4BCWF9GvhAE5symj9OXAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QQIJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAD9vR8YwgAAAA==[0m[Pipeline] { (git push)
+[2022-06-12T10:51:25.290Z] [8mha:////4O47aFpAyX1mpPsdf5yDtdJ4AnslJUYEGDz8E0hwVygsAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YQAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD56au0DCAAAA[0m[Pipeline] script
+[2022-06-12T10:51:25.316Z] [8mha:////4GaTI+wAKkJuzooog0yYI7Lw54t2q87UgiUQrYBvC9EPAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUAQaEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WfbbT7P6g0iH00AwgAAAA==[0m[Pipeline] {
+[2022-06-12T10:51:25.445Z] [8mha:////4FO3oOYu4MLwDAFFw9DV9fJ+tqyTiW4PV4W8VApWVNcCAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUBibE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAW2++SvCAAAA[0m[Pipeline] sshagent
+[2022-06-12T10:51:25.451Z] FATAL: [ssh-agent] Could not find specified credentials
+[2022-06-12T10:51:25.451Z] [ssh-agent] Looking for ssh-agent implementation...
+[2022-06-12T10:51:25.469Z] [ssh-agent]   Exec ssh-agent (binary ssh-agent on a remote machine)
+[2022-06-12T10:51:25.470Z] $ ssh-agent
+[2022-06-12T10:51:25.479Z] SSH_AUTH_SOCK=/var/folders/n2/xbp1wc7135s2nzzjwzzd94940000gp/T//ssh-WTaTW8QFtUvM/agent.28541
+[2022-06-12T10:51:25.479Z] SSH_AGENT_PID=28542
+[2022-06-12T10:51:25.479Z] [ssh-agent] Started.
+[2022-06-12T10:51:25.501Z] [8mha:////4INBc5n4h5xyH/Um4ym3chfDOYeamiXVfNi6b6wMssUfAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUIDEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LDwMT42zCAAAA[0m[Pipeline] {
+[2022-06-12T10:51:25.599Z] [8mha:////4CRfT3QTm+FFZ16Kjiw19eZ8ECRPuSxSFUyGdm3nyggYAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFN1+P256+AAAA[0m[Pipeline] sh
+[2022-06-12T10:51:25.931Z] + git push -u origin master
+[2022-06-12T10:51:45.339Z] To https://git-1.cocone.jp/projectp3/p3-tools.git
+[2022-06-12T10:51:45.339Z]    90a1ae7..83e6e96  master -> master
+[2022-06-12T10:51:45.339Z] Branch 'master' set up to track remote branch 'master' from 'origin'.
+[2022-06-12T10:51:45.401Z] [8mha:////4LG9PTDARufGFCG4JrMSJdakT2lPFY/9DBPy+dqsds+AAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcr97lPbN5RlVvO+AAAA[0m[Pipeline] }
+[2022-06-12T10:51:45.403Z] $ ssh-agent -k
+[2022-06-12T10:51:45.416Z] unset SSH_AUTH_SOCK;
+[2022-06-12T10:51:45.416Z] unset SSH_AGENT_PID;
+[2022-06-12T10:51:45.416Z] echo Agent pid 28542 killed;
+[2022-06-12T10:51:45.417Z] [ssh-agent] Stopped.
+[2022-06-12T10:51:45.527Z] [8mha:////4HtdIOkyl5sNLnZ1p1K3CeGPNLe++zkYeth3BYtxNPqhAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiilSIitZKwwtMYowd686xHZyKF/E1/kAgEhVbrHa2mecL1jHAkYNGq6g3FFuD3o16Xpg59FfHGS1fsGWK7BQ2KjfcqdOCDScFS4oSVgI2ilrH0ZBOsBVW3mXlJOnqnML8HQSUphvgAYWYzUmG9IUpwO42dpHp5/krgMn7BGVdf2r/BovnA6G+AAAA[0m[Pipeline] // sshagent
+[2022-06-12T10:51:45.574Z] [8mha:////4NpC2c6k+/efGaOXVdAHt0GX6o0Ke90qvwsNGi8/9sp2AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCAw2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7BrOlkFC+AAAA[0m[Pipeline] }
+[2022-06-12T10:51:45.698Z] [8mha:////4EW0rhucvsEYC9bZY8hhwZetDQdAe0bR4e9pHDTpuw8qAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgBBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw/z/wv7vgAAAA==[0m[Pipeline] // script
+[2022-06-12T10:51:45.745Z] [8mha:////4OZ1m+SLbTL/0Uu1Cc48xO0KjI6LUnAKwzLOUXFlHhnVAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgBQJUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkF5qHPt6w+wfVp9vgAAAA==[0m[Pipeline] }
+[2022-06-12T10:51:45.864Z] [8mha:////4GwkmGUh28q84Uurc7QZGDAxEhAz7T4pMN7Pa7eon2D3AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgBBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuDrm2+w+Es7kmvgAAAA==[0m[Pipeline] // stage
+[2022-06-12T10:51:45.920Z] [8mha:////4O4n2mgwonuhYLhR2V3zTfPsb+yDiW/tcmBK2zIF3krNAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIhDQ2iSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOVhn6uuP6GpSqS+AAAA[0m[Pipeline] }
+[2022-06-12T10:51:46.031Z] [8mha:////4Jmd25veMPM5oUEHT9JF96ta9g1uCjOt7TaDAK7nRQ5vAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIhDQ2iSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOWhzlXvP5JKERi+AAAA[0m[Pipeline] // withEnv
+[2022-06-12T10:51:46.076Z] [8mha:////4HgpqvtTDF22DzU+6eJ4QUPti98gYhMAteYFWpNp5mY0AAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKREKJBVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PutINt9AF1IgLW9AAAA[0m[Pipeline] }
+[2022-06-12T10:51:46.175Z] [8mha:////4NEFVUkSWYHQ+WfV0AE7aVG226mNM1BbVcsKzo6O+Wc5AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IMJC7GybVh8Qsq1Fpo3sP2IUx+kb/mP0gkcfJO95zlvN5Yp4gjR6daS52nVHvVh8HNT40cu2vgUbV8UTVT4mBVZceKG3tasGKxWJblWGlsLNWBkycn2OrWPEwRDLniLHF2B43cN3c8kem5LCbKF6aI3W1oEtOv8zeAqe8F+b4UZOUHTvSEFr0AAAA=[0m[Pipeline] // node
+[2022-06-12T10:51:46.217Z] [8mha:////4Iy4zaKPCCZvIPmLcnhUNYomngJ6t6oSEuUNevtnM1aKAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKREKJBVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PudINt+AMgYo9O9AAAA[0m[Pipeline] End of Pipeline
+[2022-06-12T10:51:46.351Z] Finished: SUCCESS

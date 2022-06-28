@@ -1,0 +1,11 @@
+commit dbe4ff60c38366d5b905bc75022d3fdff0132e36
+tree f32ac33962acd3765c10edb818588c8d00e8f472
+parent 7bd527f58ef2c9a764db868388b7bedfe6d8ba88
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-15 10:52:03 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-15 10:52:03 +0900
+
+    disable CRC check
+
+
+:100644 100644 f2c1727d317e468a49788c61c0b0e54eba8b974e 2450d249f7c9c84b9d3140a021c73deda2d3158e M	Assets/AddressableAssetsData/Android/addressables_content_state.bin
+:100644 100644 b3f3d831ad17580430ad10db296d105f503db658 ff5a816c9974eb5334b5e076a57c393d4a3355d5 M	Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset

@@ -1,0 +1,10 @@
+commit ffe83b56da0a6d18f5faa24008012f0217c77507
+tree 60722a2db70789a85cbc017ad9c31f18768e533e
+parent c1ee5418fc0a05a2265e101a84ded5b9e5e773c0
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:26:20 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:26:20 +0900
+
+    [ios]ブランチ名の指定方法変更
+
+
+:100644 100644 6907c2a6adb5a350418d75d05b18583b48e28335 b09413b9d6a5573d6c202aa54e18fad81a2220e8 M	pipeline_script/DevBuild/ios/build.groovy

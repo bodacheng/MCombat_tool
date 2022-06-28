@@ -1,0 +1,10 @@
+commit aac01a5c9b97a417bc78b245f1de5f0ee9b6d18e
+tree 6f2fd75cdefec208838d7b384522ca173b4d3147
+parent aa1350c9d9545f0dcc1db50d443dca0425e735bf
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 13:33:21 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 13:33:21 +0900
+
+    set build path from yaml
+
+
+:100644 100644 4b2a7864a50e829b9557dd2ae89b265cc75f200a fcb56c381e4c4e8b8f86e40ed8761f56f0a6de87 M	pipeline_script/Design/build_asset_upload_custom_server.groovy

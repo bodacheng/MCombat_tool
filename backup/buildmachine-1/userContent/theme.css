@@ -1,0 +1,18 @@
+#header{
+    background: steelblue;
+    position: relative;
+}
+
+/* サイトコンテンツ内部の調整（色とかフォントサイズとか） */
+.header-text{
+    font-size: 32px;
+    line-height: 0.3 em;
+    color: whitesmoke;
+    padding-left: 16px;
+}
+
+#jenkins-head-icon {
+    content:url('/userContent/favicon/ic_launcher.png');
+    height:54px;
+    background-size: contain;
+}

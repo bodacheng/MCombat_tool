@@ -1,0 +1,31 @@
+commit e36a5114f302ed2665781ddbd72b8488ca5882fa
+tree 8d883320137e140bcd471eea3c7349f3679952de
+parent 594db6c912f850be1cfdae534350cc06b67d142d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 15:07:32 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 15:07:32 +0900
+
+    [android]userIDの情報を表示
+
+
+:100644 100644 6028aee2a80574fda230b16a0952d8555b7aa514 03476ce8101dce1288d82881c61e7ecfd59a94b5 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit 594db6c912f850be1cfdae534350cc06b67d142d
+tree 394dabf405d280e71384d05486760ae59572df83
+parent 15cfdf122a57132c9782d59a280dc0be5c59be33
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:39:39 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:39:39 +0900
+
+    scriptでくくってなかったので修正
+
+
+:100644 100644 4a2417f1da9d08969503f411cd51d9306bc6912a 52d7679467f8426cf0691e0810c34a994936007b M	pipeline_script/DevBuild/ios/build.groovy
+commit 15cfdf122a57132c9782d59a280dc0be5c59be33
+tree 18b5b25ebdd9c1a9ae4b6aea81ade0ce90b98c3f
+parent ffe83b56da0a6d18f5faa24008012f0217c77507
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:35:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 13:35:49 +0900
+
+    ブランチ名の指定方法変更漏れ修正
+
+
+:100644 100644 4d7dd449d6437768430c4e959e94616cff677236 0e4c9939e93678363d7bd192ec7db405f982917c M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 b09413b9d6a5573d6c202aa54e18fad81a2220e8 4a2417f1da9d08969503f411cd51d9306bc6912a M	pipeline_script/DevBuild/ios/build.groovy

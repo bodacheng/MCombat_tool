@@ -1,0 +1,20 @@
+commit fb2993ba5ed29c6098fdd75733f66e02a8631b93
+tree 6bc56c45f0b7be18a8c7e4db2eec6a62ea15a2d9
+parent cdcc91d319ce0a544842882a950e8d5c66a7b6aa
+author ito.midori <ito_midori@cocone.co.jp> 2022-04-13 18:36:25 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-04-13 18:36:25 +0900
+
+    イベントアイテムも変更
+
+
+:100644 100644 268e8173c8dccdb8c5c4c429e8106069ad1598da 5635352cbd0834404f256fa3e7505f47d290085d M	Assets/App/Prefabs/Gacha/Material/Opaque_GachaTicket0024_B.mat
+commit cdcc91d319ce0a544842882a950e8d5c66a7b6aa
+tree 5ff72b6129be9609c8f67f6efa8cd8acc61482f5
+parent fc6c134752ac8738ef112a4e69ed52791b9b1842
+author ito.midori <ito_midori@cocone.co.jp> 2022-04-13 18:35:19 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-04-13 18:35:19 +0900
+
+    ガチャチケットオブジェのマテリアル変更
+
+
+:100644 100644 d2f1d6a66449e1a79e8a367a08f9429566aa26d5 637d5ebbcc7ffe8dd5cf6abd3bb5fb2f184714bf M	Assets/App/Prefabs/Gacha/Material/Opaque_GachaTicket_B.mat

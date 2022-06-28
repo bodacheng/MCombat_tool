@@ -1,0 +1,31 @@
+commit b85ff409c38334fda26e8183cb6bf659c029cad4
+tree f203dd4bff23e6e978e4a48c1b0439f18c620622
+parent 5d375f0befaabf596d54a2dccf87d145c52ba5c6
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-23 11:36:18 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-23 11:37:14 +0900
+
+    FIX: TRIA-4285 【7/1】「プリズムアンダーザシースペース」(PG0041SP01)の外見不具合
+
+
+:100644 100644 5110ed419a9e9f86efa2935d4c911378e94b2c00 3bb4f1f5c8a04d0d032adb145da48cde66e3851b M	Assets/App/Scripts/View/Planet/PlanetController.cs
+commit 68b652cb67c229a51bd11736ade6475b903d20ca
+tree ccad24e3d2c239a04320d0d43db41fb2e485f3e7
+parent 434b469f0817cc29cd5da503791201660780df56
+author 植松 里菜 <uematsu_rina@cocone.co.jp> 2022-06-23 11:27:36 +0900
+committer 辛 東根 <shin_donggun@cocone.co.jp> 2022-06-23 11:27:36 +0900
+
+    [1.8.0]チケットTRIA-4378,4374,4381,4387,4388対応・交換通知アイコン追加
+
+
+:100644 100644 828f83e6a8aaf18d97057fe169b00ce648ba96ad 4fd3001f9e891997ab2a6f00630f62224aebd1cc M	Assets/App/Textures/UI/Header.spriteatlas
+:000000 100644 0000000000000000000000000000000000000000 e968c79d565c2a49caa6893a18491eab13fd946f A	Assets/App/Textures/UI/Header/HeaderNotiIcExchange01.png
+:000000 100644 0000000000000000000000000000000000000000 7ceea395762f330106a5c32d4966222203a4490c A	Assets/App/Textures/UI/Header/HeaderNotiIcExchange01.png.meta
+:100644 100644 b68e85b9af5ffdc60c4d955de1d57303c93b7c8f 15f9bf65fe4caf3b44f2a4bd548dcd0708c83760 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 fce07032dcc9aa2d960184a6e97e53fc763ed309 9617d70fb460b2bbf942d6201557eba081c980e3 M	Assets/Resources/UI/Exchange/ExchangeRequestLayer.prefab
+:100644 100644 83918782ace90f78557ef49c3fe2bddea5510107 aaec3e6f39f4515f772a940cf6b11f40352e3cb2 M	Assets/Resources/UI/Exchange/ExchangeStep.prefab
+:100644 100644 2a052e50c97349deeae3406b16596b01de7ffd55 8c2b86f5c5e91f8f032acea23bc97d0aa08e98b5 M	Assets/Resources/UI/Exchange/GiftExchangeSelectLayer.prefab
+:100644 100644 9ee0cb774af488a32079adb88b1a4660943982f1 96e7ae49981cf07af9f53fbafc5fc0f311fa1ef5 M	Assets/Resources/UI/Gift/GiftDialog.prefab
+:100644 100644 1b7cbc3c7c7bdcdc51060e6ba66c860c1865a479 c4dd99804a47106b4202165a868e6ff11290a810 M	Assets/Resources/UI/Gift/GiftOpponentsLayer.prefab
+:100644 100644 23c2b49a5383bfc1e185ffaf84d109372e137056 eb895e3d63d1861a6187185ea32a971e66008f99 M	Assets/Resources/UI/Main/NotificationAreaLayer.prefab
+:100644 100644 a0884b58bd211f2a5aa6cf660f82aa00bc06bd6c a9b1b197d2da69fbcb6420d72581117f7781309d M	Assets/Resources/UI/Present/PresentModal.prefab
+:100644 100644 3fcff07624f6684a49f4bbe0b46cf57417c90943 04d3f7f853b85c11aec400a0b7e38483619bb9f6 M	Assets/Resources/UI/Relation/Item/GiftOpponentListItem.prefab

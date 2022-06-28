@@ -1,0 +1,34 @@
+commit 10a43ed893de94965f78ba936c60472ae406cccf
+tree 4f3015d31e8f4138898cbfa844ef5f7fb75b6e0e
+parent db7de2c503cc3031e9f82419f72d93d132fd896c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 19:04:18 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 19:04:18 +0900
+
+    若干調整
+
+
+:100644 100644 f8746ab44227e24617736814e7acfc328821d932 bdbec223de259cb1fa86c20b06925f5f41fae097 M	pipeline_script/utils/notify/SlackNotify.groovy
+:100644 100644 b30db338aa8ed198cddeb95ae9783b0ca117c276 0b0ac4d3977b12f57e1dd7de8b8d414ed55817b0 M	pipeline_script/utils/notify/slackUtility.groovy
+commit db7de2c503cc3031e9f82419f72d93d132fd896c
+tree d5d9c327158c1807ec394e91155a177f064a68e7
+parent c5e4c6bd739a72a9fd888f310a15a090333fa1f3
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 18:55:24 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 18:55:24 +0900
+
+    アセット通知Slackで、BuildKindではなく、AssetKindを指定するように修正
+
+
+:100644 100644 761779cc6cd2789c602185ba46001250121ecd84 695a61d658b9fbd6949e511522bd0c33e4e98da8 M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 6d9945d9619a3b3121d50ca5be0db94793cc002e 4e321200fe6142539d04fd66022b746f756b9ed1 M	pipeline_script/Design/build_asset_upload_custom_server.groovy
+:100644 100644 855fe0f0a8cba43b3a8b51b65390a279d98df08e b424abfb7e87d80ea10954a6779d127d1e6fe2bb M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy
+:100644 100644 c209f610838fb11f576cca4dc9836f1d849f289a b30db338aa8ed198cddeb95ae9783b0ca117c276 M	pipeline_script/utils/notify/slackUtility.groovy
+commit c5e4c6bd739a72a9fd888f310a15a090333fa1f3
+tree 44ec096bf1a67aa28f73f918484ace23d068d025
+parent f1df5b5676cc81c8c3fa6c786cead91f9c13a214
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 17:54:07 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 17:54:07 +0900
+
+    Betaアセットビルドの通知項目を追加
+
+
+:100644 100644 4f39b4a17df3c74955c05e60cc09b11bef2b2972 c209f610838fb11f576cca4dc9836f1d849f289a M	pipeline_script/utils/notify/slackUtility.groovy

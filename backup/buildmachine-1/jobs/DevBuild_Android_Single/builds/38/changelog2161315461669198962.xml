@@ -1,0 +1,19 @@
+commit 00c98d28ac4658cfec9ac224a6d8838403d42143
+tree 066946b666f29fae12aa37feb38e66a0c3c05fc7
+parent 253aad07b153cfa524301fccd14029ea0a2f9b07
+author 伯 大成 <bo_dacheng@cocone.co.jp> 2022-06-24 22:03:49 +0900
+committer 辛 東根 <shin_donggun@cocone.co.jp> 2022-06-24 22:03:49 +0900
+
+    [1.8.0]交換機能 QA対応
+
+
+:100644 100644 f881ad2496c193b5991730e6c1888f264f16c859 ae78d8ee8b904f2ef8102d37c7319808ba22f2ba M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 93fe6fdca78b944f2baf0f48d857b4acf37204c8 399f85aa064a870db04fb53e3257423581f87b6b M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 10e0b054c7ae2b27e45c38cfe89cec00fecd2b79 69785ea0778c81cd2b74928c8df14bce16b0e9af M	Assets/App/Scripts/Contents/Exchange/ExchangeModel.cs
+:100644 100644 2538c41d8dd140ffcd25c883889699f48997e897 1338e77a50340e28e7dda333a6c573719f25598c M	Assets/App/Scripts/Contents/Exchange/ExchangeStep.cs
+:100644 100644 90a7ee1f784b2f1d7507cdaa24584c630df3b063 48af04c3b9ce37bfff275f955f5c2f8b037d5f61 M	Assets/App/Scripts/Contents/Present/PresentReceiveDialog.cs
+:100644 100644 dcadae7b76f57510a030f996cd695e86d0517558 76f2ba56134d40b0e41e02886f335543fefffb90 M	Assets/App/Scripts/p3-proto/enum/ExchangeEnum.cs
+:100644 100644 a39d1c2c78e9df23172b87d654f7a79cb8dd899e 2750995c1f19be8f6970a1da04872413e238fd9c M	Assets/App/Scripts/p3-proto/enum/PresentEnum.cs
+:100644 100644 209d269dbcc9a319ef3d277b169a91498c9d2c92 ab7832458cbf3c6f6d3d4bd452dc6952cff16d13 M	Assets/App/Scripts/p3-proto/exchange/Exchange.cs
+:100644 100644 4ba4d37e19a8dd842730c7a7f2ab8373f54814da 07c672ae4a3da8b3cc27a5558039f4e93bb10903 M	Assets/App/Scripts/p3-proto/exchange/ExchangeGrpc.cs
+:100644 100644 3abda7d63933af331d71ad7aeca79eb1a4f1c519 fe53c530432d5669e62954f41ca07e0b3593ff63 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab

@@ -1,0 +1,80 @@
+commit 27a413097ded13e71d44e5797eca8c316ae5783d
+tree fe895687a2bd61bde533a7d94d1216228f272ef3
+parent 0016bc304ba5a16bca5699c4c309decc66da6361
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-16 11:53:47 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-16 11:53:47 +0900
+
+    タイムアウト設定を変更
+
+
+:100644 100644 21ede913a34c7e53175be1f279ef524628bc452c 2b78e3f9de3f854e506e08539eafa68f13e9f340 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 c9804eb27357c51acb668eb0f1624948e1ebb80a 3ef49bc9e70305c0dbf4a63e16ab36ebc72fd258 M	pipeline_script/DevBuild/ios/build.groovy
+commit 0016bc304ba5a16bca5699c4c309decc66da6361
+tree 74329533bb81f9339b8aafe9ddb0d1d059ede857
+parent 66a0339f2b2c211885a2c9804ab93778d52db5e5
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-16 11:24:21 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-16 11:24:21 +0900
+
+    jenkinsのcredentialsIDを変更（既存のID情報をリネームできないため）
+
+
+:100644 100644 4093dec81172b81340ce093396cd82c8822d9ff3 21ede913a34c7e53175be1f279ef524628bc452c M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 7d39674396d9c6188878f89a20a046cd0a59843f 3ec6fa1a9073f82cdb766bf11ccb30bbe8ed1939 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 a0b0f4074f1cbc3c3f7c0bc8e0da41f4df659d2b c9804eb27357c51acb668eb0f1624948e1ebb80a M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 d6bcde7a461f1b7c5fe1ac890cc68cbf98f4bbd8 f04783a1868f7490bfdbdb54f98684ccfb28f780 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 66a0339f2b2c211885a2c9804ab93778d52db5e5
+tree 27d1bedde19f7afdbec8697fea99129a611db69e
+parent 79ef2dc464799395d6be08374748996fa0283d76
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 23:11:05 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 23:11:05 +0900
+
+    [android]引数入れミスを修正
+
+
+:100644 100644 d2799eca71744655955bbc2009358a0c36bb9cd8 0b0be4799fb811836f048db1e38dc8f429460e8b M	pipeline_script/DevBuild/android/build_custom.groovy
+commit 79ef2dc464799395d6be08374748996fa0283d76
+tree 8a69cd2662053ef34f85f3686d725acf44586acc
+parent 4638e50b807c00dae54f51b57a601702005e3eb4
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 18:35:34 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 18:35:34 +0900
+
+    不要ファイルの削除
+
+
+:100644 000000 423e06dba8a582153f4881f5f1f93edc080b8351 0000000000000000000000000000000000000000 D	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 000000 487be8987e369fb19f81ba15c2d3a1edd9f938aa 0000000000000000000000000000000000000000 D	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 000000 60b569fe72b8d485d1b47b9be30df2f249434105 0000000000000000000000000000000000000000 D	pipeline_script/DevBuild/android/qa_build.groovy
+:100644 000000 fef5b1fb703e9a78afe3fc22037e0f3fef79fdc5 0000000000000000000000000000000000000000 D	pipeline_script/DevBuild/ios/build_beta.groovy
+:100644 000000 d27844f53e8393cb29d51ec4cea13027e1844aeb 0000000000000000000000000000000000000000 D	pipeline_script/DevBuild/ios/devbuild.groovy
+:100644 000000 7cf266d7ece9c252e378a94911c7d975d5f227ad 0000000000000000000000000000000000000000 D	pipeline_script/DevBuild/ios/qa_build.groovy
+commit 4638e50b807c00dae54f51b57a601702005e3eb4
+tree 8fd5013bcd0b7d2499c7e4a9d4e86db60be137af
+parent 5222b982b10ff39d484a3731438e7f451419cf3d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 18:32:45 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 18:32:45 +0900
+
+    [android]トークンミスを修正
+
+
+:100644 100644 3c3d863dbbaac91e8c85fd3178a57712d9a04a13 d2799eca71744655955bbc2009358a0c36bb9cd8 M	pipeline_script/DevBuild/android/build_custom.groovy
+commit 5222b982b10ff39d484a3731438e7f451419cf3d
+tree c05657d7ef39d469281d85005b8392e7ab879ae2
+parent 9626aa28e2874366721a1c2a97a1a0e174439798
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 12:51:11 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 12:51:11 +0900
+
+    [android]構文ミスの修正
+
+
+:100644 100644 f14e4c7420e5a77cf1f8075d28c7c2edc58988ea 3c3d863dbbaac91e8c85fd3178a57712d9a04a13 M	pipeline_script/DevBuild/android/build_custom.groovy
+commit 9626aa28e2874366721a1c2a97a1a0e174439798
+tree 02c34b8d69f727ddd1a7706fe66702b84ff84eb3
+parent 9821952030923f32ff14e867c012b8417e0759e5
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 12:26:08 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-15 12:26:08 +0900
+
+    [android]customビルド親ジョブ追加
+
+
+:100644 100644 6ca49869f3cc336521fb2eb0eaa5424f6a094bfe 4093dec81172b81340ce093396cd82c8822d9ff3 M	pipeline_script/DevBuild/android/build.groovy
+:000000 100644 0000000000000000000000000000000000000000 f14e4c7420e5a77cf1f8075d28c7c2edc58988ea A	pipeline_script/DevBuild/android/build_custom.groovy

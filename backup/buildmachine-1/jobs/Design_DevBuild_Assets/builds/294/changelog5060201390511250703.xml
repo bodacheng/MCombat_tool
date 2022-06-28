@@ -1,0 +1,41 @@
+commit 08ca99a3ca4d7f5475a7bbc76b54637be35cb3bc
+tree 05e780edecd8461e53bd6e50dd235469a806691f
+parent d6c05a577234f54c195c520a168eb8d0b11d66ce
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:52:45 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:52:45 +0900
+
+    Slackでの開始通知を変更
+
+
+:100644 100644 cc5814a3b741e7f53173af293159d78d942767a0 3c0eb774304a2958d057ff7cea0ae28c56d2b78c M	pipeline_script/Design/build_asset_upload_custom_server.groovy
+commit d6c05a577234f54c195c520a168eb8d0b11d66ce
+tree 2c43f40be4403fa1f0da70ba12dc80a24d1bca43
+parent 45309170e17e6a41b99f0ef327d14aef95b38369
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:49:16 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:49:16 +0900
+
+    Slack通知の調整
+
+
+:100644 100644 f760df6047e7dedd4363e0a761c31fc8af22a723 b15f078a890e8ed94f35c58b6ce41161e2dc8fce M	pipeline_script/utils/notify/slackUtility.groovy
+commit 45309170e17e6a41b99f0ef327d14aef95b38369
+tree fb9b801f7f298cdff46a8107b3b4b8b48c62152a
+parent 8c707a59c697be067d504aee43d4afd970b17377
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:44:45 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:44:45 +0900
+
+    [android]ジョブ実行時の説明を入れる
+
+
+:100644 100644 76de652274b4e743e9bdfe6cf94d4394ebacbd6e 18962d63e94b255fdc91294504b8a45451341466 M	pipeline_script/DevBuild/android/build_custom.groovy
+commit 8c707a59c697be067d504aee43d4afd970b17377
+tree 83242afb5b14f813e34322c969ff771b5af4b4c2
+parent efe3bd56a7531f8dc1e42199a50ee97889809045
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:28:36 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:28:36 +0900
+
+    awsの認証Profile名をDevからAlphaに変更する
+
+
+:100644 100644 8945ca55ed87ac554a8502e529ee11c6aaeff647 9d328c30533f80b04c8f99ef3c477e3998f957c7 M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 4e321200fe6142539d04fd66022b746f756b9ed1 cc5814a3b741e7f53173af293159d78d942767a0 M	pipeline_script/Design/build_asset_upload_custom_server.groovy

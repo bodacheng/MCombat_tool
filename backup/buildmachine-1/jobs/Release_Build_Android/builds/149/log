@@ -1,0 +1,63 @@
+[2022-06-20T05:23:12.058Z] ユーザー[8mha:////4LAsCf+yNaGualwe+w+h0oXLipvOzCAlF/qSxVFw7pM+AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYR/dLi1CL93MSS4tLc/JL8+KLM7EQAEAZ4XckAAAA=[0m松本 りかが実行
+[2022-06-20T05:23:13.042Z] Obtained pipeline_script/DevBuild/android/release_build.groovy from git https://git-1.cocone.jp/projectp3/p3-tools
+[2022-06-20T05:23:13.042Z] Resume disabled by user, switching to high-performance, low-durability mode.
+[2022-06-20T05:23:13.447Z] org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+[2022-06-20T05:23:13.447Z] WorkflowScript: 294: Expected a step @ line 294, column 13.
+[2022-06-20T05:23:13.447Z]                def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 295: Expected a step @ line 295, column 13.
+[2022-06-20T05:23:13.447Z]                def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 297: Expected a step @ line 297, column 13.
+[2022-06-20T05:23:13.447Z]                def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 299: Method calls on objects not allowed outside "script" blocks. @ line 299, column 13.
+[2022-06-20T05:23:13.447Z]                slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 300: Method calls on objects not allowed outside "script" blocks. @ line 300, column 13.
+[2022-06-20T05:23:13.447Z]                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 301: Method calls on objects not allowed outside "script" blocks. @ line 301, column 13.
+[2022-06-20T05:23:13.447Z]                slackNotify.SetReleaseNotes(releaseNote)
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 302: Method calls on objects not allowed outside "script" blocks. @ line 302, column 13.
+[2022-06-20T05:23:13.447Z]                slackNotify.SetBuildTime(currentBuild.durationString)
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 303: Method calls on objects not allowed outside "script" blocks. @ line 303, column 13.
+[2022-06-20T05:23:13.447Z]                slackUtility.notifySlackSendMessage(slackNotify)
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 293: Invalid condition "script" - valid conditions are [always, changed, fixed, regression, aborted, success, unsuccessful, unstable, failure, notBuilt, cleanup] @ line 293, column 9.
+[2022-06-20T05:23:13.447Z]            script {
+[2022-06-20T05:23:13.447Z]            ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] WorkflowScript: 299: Arguments to "error" must be explicitly named. @ line 299, column 13.
+[2022-06-20T05:23:13.447Z]                slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
+[2022-06-20T05:23:13.447Z]                ^
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] 10 errors
+[2022-06-20T05:23:13.447Z] 
+[2022-06-20T05:23:13.447Z] 	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:310)
+[2022-06-20T05:23:13.447Z] 	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1085)
+[2022-06-20T05:23:13.447Z] 	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:603)
+[2022-06-20T05:23:13.447Z] 	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:581)
+[2022-06-20T05:23:13.447Z] 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:558)
+[2022-06-20T05:23:13.447Z] 	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:298)
+[2022-06-20T05:23:13.447Z] 	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:268)
+[2022-06-20T05:23:13.447Z] 	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:688)
+[2022-06-20T05:23:13.447Z] 	at groovy.lang.GroovyShell.parse(GroovyShell.java:700)
+[2022-06-20T05:23:13.447Z] 	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:142)
+[2022-06-20T05:23:13.447Z] 	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:127)
+[2022-06-20T05:23:13.447Z] 	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:571)
+[2022-06-20T05:23:13.447Z] 	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:523)
+[2022-06-20T05:23:13.447Z] 	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:334)
+[2022-06-20T05:23:13.447Z] 	at hudson.model.ResourceController.execute(ResourceController.java:99)
+[2022-06-20T05:23:13.447Z] 	at hudson.model.Executor.run(Executor.java:432)
+[2022-06-20T05:23:13.510Z] Finished: FAILURE

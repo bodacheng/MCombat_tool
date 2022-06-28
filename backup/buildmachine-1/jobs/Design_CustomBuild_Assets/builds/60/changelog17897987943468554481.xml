@@ -1,0 +1,977 @@
+commit c771b95b2b11dc5be465da8b269bcaf8c6c93ab0
+tree 04cc7974b6c619bf6647cbc56f33159fecdce2fe
+parent 7fce66f15e54722f94c31ca2bb1b0849976b4795
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:17:46 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-31 14:08:47 +0900
+
+    [utility]スラック通知をカスタマイズする
+    
+    テスト用のジョブを追加（後で消すと思う）
+    
+    スクリプトの配置場所を間違えて記載したので修正
+    
+    文字列連結の方法を変更
+    
+    誤記を修正
+    
+    [utils]通知設定の調整
+    
+    [utils]void定義できるらしい
+    
+    [utils]エラーが出るので宣言の仕方変更
+    
+    [utils]bot user nameの調整
+    
+    [utils]リリースノート調整
+    
+    [utils]改行調整
+    
+    [utils]通知ようのクラスを作ってみる
+    
+    [utils]設定変更してみる　
+    
+    [utils]class loadの仕方を変更
+    
+    [utils]一旦コメントアウトして動作を見る
+    
+    [utils]loaderが反応してるかチェック
+    
+    [utils]コメントアウト解除
+    
+    [utils]return thisを追加
+    
+    [utils]newInstance調査
+    
+    [utils]readFileの呼び方のミスを修正
+    
+    [utils]呼び方を()くくりに変更
+    
+    [utils]クラスを諸々試行錯誤
+    
+    [utils]呼び出しクラス名間違えていた様子
+    
+    [utils]まだ間違いがある様子（どこだろ）
+    
+    [utils]readFileの呼び方変更
+    
+    [utils]なかなか呼び方が不明で難しい
+    
+    [utils]試行錯誤
+    
+    [utils]試行錯誤・・・
+    
+    [utils]エラー調査・・
+    
+    [utils]試行錯誤
+    
+    [utils]試行錯誤
+    
+    [utils]試行錯誤
+    
+    [utils]試行錯誤
+    
+    [utils]試行錯誤　
+    
+    [utils]試行錯誤
+    
+    [utils]綴りミス・・
+    
+    [utils]import整理
+    
+    [utils]readFile調査
+    
+    [utils]workspaceを指定してみる
+    
+    [utils]readFileの呼び方を変更
+    
+    [utils]試行錯誤
+    
+    [chore][utils]クラスの生成方法を変更してみる
+    
+    [chore][build]調整
+    
+    [chore][build]構文ミスを修正
+    
+    [chore][build]一応string形式で渡す
+    
+    調整
+    
+    調整
+    
+    調整
+    
+    調整
+    
+    調整
+    
+    調整
+    
+    調整
+    
+    utilityのloadし忘れ
+    
+    調整
+    
+    調整　
+    
+    綴りミス修正　
+    
+    ミス修正
+    
+    調整
+    
+    調整
+    
+    調整
+    
+    調整
+    
+    調整
+    
+    Stringへ変換する
+    
+    調整　
+    
+    [build][android]android版betaにお試しで通知設定を追加
+    
+    [android]引数ミスがあったので修正
+    
+    betaビルドでスラック通知のカスタマイズを反映
+    
+    [ios]重複があったので削除
+    
+    [utils]コマンドの誤記を修正
+    
+    通知設定の調整
+    
+    [ios]メッセージの変更
+    
+    [utils]gitutilityの調整
+    
+    [ios]チェックアウト終わったタイミングでgit log取得
+    
+    [ios]def宣言ミスを修正
+    
+    [ios]リリースノートの文字列生成でコケてそうなので全部くっつけておく
+    
+    [build][iandroid]スラック通知を少し修正
+    
+    [build][android]groovyファイル名が変更になったので対応
+    
+    [android]GitLogの取得タイミングミスったので修正
+    
+    buildUserが空白になることがあるので、env.BUILD_USER_IDを付与
+
+
+:100644 100644 87cdcc6d5d8f2ce3eed9b7c554d65341a68b4c28 e0a6ecbf6e6c42e5db80a2d864b148564dab9036 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 111d818670493ba8343b45465a579128070c2d1f e82f18af2a5f0da7307ffb4de200c09570406e39 M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 faf6035120e40fc23222e1ac55c9bcb8cae4714a dc15ac55446a9304fde67494d9d8915b8ae13bc4 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 2dfb0381b4206164c5bee7f6bc47415e7e6a658c 8f71a199b09edcba2fefb7d96f339fdd537e4c79 M	pipeline_script/DevBuild/ios/build_beta.groovy
+:000000 100644 0000000000000000000000000000000000000000 08938e4ea565967aa25090c1f92d11ba64912860 A	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 2aff28b23235eb963a4537ad24d48b72eae4be09 886f5571380600d8042ef4b053d18e7dfda69e8f R053	pipeline_script/utils/authUtility.groovy	pipeline_script/utils/appcenterUtility.groovy
+:100644 100644 1174e1ebd8dcda569e972109e0af96d27e093896 b368a02e74ddd68b42525030fc3580286bac3187 M	pipeline_script/utils/gitUtility.groovy
+:000000 100644 0000000000000000000000000000000000000000 e61e470b9333086dc7cb5c16a34a6f9816172f73 A	pipeline_script/utils/notify/SlackNotify.groovy
+:000000 100644 0000000000000000000000000000000000000000 d4d84c7df9eac54411f566be692bf7fbff9bf991 A	pipeline_script/utils/notify/slackUtility.groovy
+commit 289a0d95e06d268658d76e4d13ec0a89705f0423
+tree 04cc7974b6c619bf6647cbc56f33159fecdce2fe
+parent a61a97892d5c59c14b2d53806ad4c79697fed10d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 20:29:40 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 20:29:40 +0900
+
+    buildUserが空白になることがあるので、env.BUILD_USER_IDを付与
+
+
+:100644 100644 69c3bc5a8715f57ec70602c79b8b7e1731ececcd e0a6ecbf6e6c42e5db80a2d864b148564dab9036 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 27fd08aeedddaeca3f74ffb0f3132534a9a9427b dc15ac55446a9304fde67494d9d8915b8ae13bc4 M	pipeline_script/DevBuild/ios/build.groovy
+commit a61a97892d5c59c14b2d53806ad4c79697fed10d
+tree ed3d5798f03cac6d7d91d0eff898c5a459d4a3c4
+parent dc2abc403ece9d3a22e7e75d11c09c2767a91574
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 18:07:40 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 18:07:40 +0900
+
+    [android]GitLogの取得タイミングミスったので修正
+
+
+:100644 100644 d9486a3ca4b1c253f0e3b086241a508bb373c9eb 69c3bc5a8715f57ec70602c79b8b7e1731ececcd M	pipeline_script/DevBuild/android/build.groovy
+commit dc2abc403ece9d3a22e7e75d11c09c2767a91574
+tree b187191adcc138659cca3af1dfc1656f47333be4
+parent bda1751ad927e1cb266279179c2b091fb5f5467d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 17:33:35 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 17:33:35 +0900
+
+    [build][android]groovyファイル名が変更になったので対応
+
+
+:100644 100644 56bc8c87c86f8803a144bc75dc98117f437f0ead e82f18af2a5f0da7307ffb4de200c09570406e39 M	pipeline_script/DevBuild/android/build_beta.groovy
+commit bda1751ad927e1cb266279179c2b091fb5f5467d
+tree 9a9a0483bb88b2c37d9d6d6e8b3c98a1f51dafc7
+parent a1414648f766073208327c494233689f3e3168aa
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 17:30:36 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-30 17:30:36 +0900
+
+    [build][iandroid]スラック通知を少し修正
+
+
+:100644 100644 4e2893f9de22dd2e0946ef3d8fb5f424735b87eb d9486a3ca4b1c253f0e3b086241a508bb373c9eb M	pipeline_script/DevBuild/android/build.groovy
+commit a1414648f766073208327c494233689f3e3168aa
+tree 33b0b623ffbcee791b7b9b063eab7f1c453a5683
+parent 78c0e12c82d5616e7aac0c61348d87bf7a34f33c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:59:44 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:59:44 +0900
+
+    [ios]リリースノートの文字列生成でコケてそうなので全部くっつけておく
+
+
+:100644 100644 3fb26f0bd2d14fd8b88a78c64dffaec456e2789e 27fd08aeedddaeca3f74ffb0f3132534a9a9427b M	pipeline_script/DevBuild/ios/build.groovy
+commit 78c0e12c82d5616e7aac0c61348d87bf7a34f33c
+tree edc9ad54f86963b3bc85069909909fd358a04ad9
+parent 6393f068ecb2c9a6807e69264c8a99a6e3a51da1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:27:12 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:27:12 +0900
+
+    [ios]def宣言ミスを修正
+
+
+:100644 100644 a5682bdbf112a3c4ca9b34b3f063835f3824cdeb 3fb26f0bd2d14fd8b88a78c64dffaec456e2789e M	pipeline_script/DevBuild/ios/build.groovy
+commit 6393f068ecb2c9a6807e69264c8a99a6e3a51da1
+tree 24554b9a504c8e147f3bba50a1ede28b445f5c36
+parent 628f2d2288c48c0baca001e930f564a8fcb11d26
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:21:46 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 20:21:46 +0900
+
+    [ios]チェックアウト終わったタイミングでgit log取得
+
+
+:100644 100644 96c0d78c24fc5ad760992988837b3ec48137fd98 a5682bdbf112a3c4ca9b34b3f063835f3824cdeb M	pipeline_script/DevBuild/ios/build.groovy
+commit 628f2d2288c48c0baca001e930f564a8fcb11d26
+tree e43a589339f4287f73ed61158608d22deb46eab8
+parent 81bb427e43beb5f5b869c1f6f350738a597d88cf
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:56:58 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:56:58 +0900
+
+    [utils]gitutilityの調整
+
+
+:100644 100644 4eb21cc3326cee60da3038153bdec51999dc960a 96c0d78c24fc5ad760992988837b3ec48137fd98 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 1174e1ebd8dcda569e972109e0af96d27e093896 b368a02e74ddd68b42525030fc3580286bac3187 M	pipeline_script/utils/gitUtility.groovy
+commit 81bb427e43beb5f5b869c1f6f350738a597d88cf
+tree db14c2a52344afece3cad487688e2abf0dabedf1
+parent 757d04f13fb5353c7796274f1745f68ca55f2ca3
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:48:56 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:48:56 +0900
+
+    [ios]メッセージの変更
+
+
+:100644 100644 1961ed1cacd922420955ab1e8bd5767222b20d8a 4eb21cc3326cee60da3038153bdec51999dc960a M	pipeline_script/DevBuild/ios/build.groovy
+commit 757d04f13fb5353c7796274f1745f68ca55f2ca3
+tree c541f2a4c3288fe5a1d879ed740dce91c6388a4c
+parent 858bc89f8123a5230b122087210743c7b7b12578
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:04:03 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 19:04:03 +0900
+
+    通知設定の調整
+
+
+:100644 100644 c1b3048c83a2ea9ad006c8b3c04ce0a5497592e2 1961ed1cacd922420955ab1e8bd5767222b20d8a M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 eb9f137279c03871ca33c25d80cc5ced702477a9 e61e470b9333086dc7cb5c16a34a6f9816172f73 M	pipeline_script/utils/notify/SlackNotify.groovy
+:100644 100644 29ebb4cb3941ec1e77719f6b2c62baebf4b8b83f d4d84c7df9eac54411f566be692bf7fbff9bf991 M	pipeline_script/utils/notify/slackUtility.groovy
+commit 858bc89f8123a5230b122087210743c7b7b12578
+tree 59031aaf3e964bae67369940613325202cd8086e
+parent 0384177824b8572ec8ba8db7d695d93988d2810c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 18:27:34 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 18:27:34 +0900
+
+    [utils]コマンドの誤記を修正
+
+
+:100644 100644 8ee0dfc60c3ef29b0843679864596878355bd794 886f5571380600d8042ef4b053d18e7dfda69e8f M	pipeline_script/utils/appcenterUtility.groovy
+commit 0384177824b8572ec8ba8db7d695d93988d2810c
+tree 63e5cff6b9f7115ec5c0672181fa9c0ca7aed3c0
+parent 084241804571acc5ce05ff9285bd0ffa2445f388
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 17:43:23 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 17:43:23 +0900
+
+    [ios]重複があったので削除
+
+
+:100644 100644 2d00f5297a1b3c4148b423c74794a430f650fc81 c1b3048c83a2ea9ad006c8b3c04ce0a5497592e2 M	pipeline_script/DevBuild/ios/build.groovy
+commit 084241804571acc5ce05ff9285bd0ffa2445f388
+tree 66eed10a8d25dc9b621ffdbbf79ec060d1923376
+parent 5e16fe5ec1f7c19905702d32942734dad39b026c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 17:00:50 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-29 17:00:50 +0900
+
+    betaビルドでスラック通知のカスタマイズを反映
+
+
+:100644 100644 bf5e0906834978910ff5a98993663889d031f7ba 4e2893f9de22dd2e0946ef3d8fb5f424735b87eb M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 111d818670493ba8343b45465a579128070c2d1f 56bc8c87c86f8803a144bc75dc98117f437f0ead M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 faf6035120e40fc23222e1ac55c9bcb8cae4714a 2d00f5297a1b3c4148b423c74794a430f650fc81 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 2dfb0381b4206164c5bee7f6bc47415e7e6a658c 8f71a199b09edcba2fefb7d96f339fdd537e4c79 M	pipeline_script/DevBuild/ios/build_beta.groovy
+:100644 100644 2aff28b23235eb963a4537ad24d48b72eae4be09 8ee0dfc60c3ef29b0843679864596878355bd794 R053	pipeline_script/utils/authUtility.groovy	pipeline_script/utils/appcenterUtility.groovy
+commit 5e16fe5ec1f7c19905702d32942734dad39b026c
+tree fa30f0aaf9172fd60ee3c9d2e4a6e39119dce8d4
+parent 127a9bdc7da5ae5e2b43b26509a3cbbbf48ab468
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-28 19:42:44 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-28 19:42:44 +0900
+
+    [android]引数ミスがあったので修正
+
+
+:100644 100644 1978273ddd1b8894b91c2a8e34983f4ccc2f9a77 bf5e0906834978910ff5a98993663889d031f7ba M	pipeline_script/DevBuild/android/build.groovy
+commit 127a9bdc7da5ae5e2b43b26509a3cbbbf48ab468
+tree 3703c877922d23e6df3b60337166bcec477d31d0
+parent 782f90ae39e0e62e98f2d28b979d5f40eb4698f2
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:56:00 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:56:00 +0900
+
+    [build][android]android版betaにお試しで通知設定を追加
+
+
+:100644 100644 87cdcc6d5d8f2ce3eed9b7c554d65341a68b4c28 1978273ddd1b8894b91c2a8e34983f4ccc2f9a77 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 2326d5603801c85e6f7a23994313ed38f07b597d eb9f137279c03871ca33c25d80cc5ced702477a9 M	pipeline_script/utils/notify/SlackNotify.groovy
+:100644 100644 06971fbf7fb5e189375525ae15a5ffd20f9c2223 29ebb4cb3941ec1e77719f6b2c62baebf4b8b83f M	pipeline_script/utils/notify/slackUtility.groovy
+commit 782f90ae39e0e62e98f2d28b979d5f40eb4698f2
+tree ec310b37937cb69467605b7e62179fc76ea4f043
+parent 1317ac1d584d2b3f6a8db31ae470f705023730c8
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:30:57 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:30:57 +0900
+
+    調整　
+
+
+:100644 100644 21dba2941b2575269061786b1fa85676d4094196 2326d5603801c85e6f7a23994313ed38f07b597d M	pipeline_script/utils/notify/SlackNotify.groovy
+commit 1317ac1d584d2b3f6a8db31ae470f705023730c8
+tree 1e332e49c7a7e392b210bc1ba8cd402473b8b1bd
+parent e0e9da1de16fb803553df24ad8db869c9bd863c0
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:25:29 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:25:29 +0900
+
+    Stringへ変換する
+
+
+:100644 100644 088d1166993a0b67d835e0d6e5f2daff90b3aec1 08938e4ea565967aa25090c1f92d11ba64912860 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit e0e9da1de16fb803553df24ad8db869c9bd863c0
+tree 0fd71f816bde03124de5f29d8df230386d347571
+parent d78885382f79ca835b82f79dca5a36e8efe30b0b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:24:23 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:24:23 +0900
+
+    調整
+
+
+:100644 100644 0e068e07c396c8d0c9d43510907d1425ef43708b 088d1166993a0b67d835e0d6e5f2daff90b3aec1 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit d78885382f79ca835b82f79dca5a36e8efe30b0b
+tree 28d07ce51eec43d83b6e832437a9b54810f45f42
+parent ad96adf19b711687af6f6f0e06ee2a1f53c17ba1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:23:04 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:23:04 +0900
+
+    調整
+
+
+:100644 100644 844df9e7b0f4fe7d5fe91d18c24f70c8f7e7e1c2 06971fbf7fb5e189375525ae15a5ffd20f9c2223 M	pipeline_script/utils/notify/slackUtility.groovy
+commit ad96adf19b711687af6f6f0e06ee2a1f53c17ba1
+tree 69f21452b47431c64fa1333aad09b4030fbb9092
+parent bfbc51e3ffcbeea78ab67fdcc451d54650c3b559
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:21:01 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:21:01 +0900
+
+    調整
+
+
+:100644 100644 48fc7bada41326a3d6b1843e24a3627769f3016e 844df9e7b0f4fe7d5fe91d18c24f70c8f7e7e1c2 M	pipeline_script/utils/notify/slackUtility.groovy
+commit bfbc51e3ffcbeea78ab67fdcc451d54650c3b559
+tree 0b73dd8c115462a2718c692184290b0ce3033ee1
+parent 69ea2592383c189dff542ce172a36561bc7137aa
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:18:42 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:18:42 +0900
+
+    調整
+
+
+:100644 100644 06d8e81ace0b60d4a0c7cbd6a1c6eb445a1557b4 0e068e07c396c8d0c9d43510907d1425ef43708b M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 d9e00ff4a24677222b11de5ff4d935bcf8e05f03 48fc7bada41326a3d6b1843e24a3627769f3016e M	pipeline_script/utils/notify/slackUtility.groovy
+commit 69ea2592383c189dff542ce172a36561bc7137aa
+tree bed93641df7cc527352c5ab9d514e4b3a608fbeb
+parent b9efb9cda63cda3e08d892a2f10bd5800840569e
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:15:09 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:15:09 +0900
+
+    調整
+
+
+:100644 100644 a1bcaec39a2f3a0830496bb535b321bedef5b8a0 06d8e81ace0b60d4a0c7cbd6a1c6eb445a1557b4 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit b9efb9cda63cda3e08d892a2f10bd5800840569e
+tree 3170d4961850410c0b82fc698e694c6b9c67e38d
+parent 79d885f0329a543f7d6551a3642d60d49b4f9231
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:12:27 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:12:27 +0900
+
+    ミス修正
+
+
+:100644 100644 915f03e5c9ad8aa9dcc1c9f68f4e348e42a1c9ad d9e00ff4a24677222b11de5ff4d935bcf8e05f03 M	pipeline_script/utils/notify/slackUtility.groovy
+commit 79d885f0329a543f7d6551a3642d60d49b4f9231
+tree 108b3e031188ea1668add0ecbc16f29676011f05
+parent 1f270c43061d24507fb3bb76f8f77be7fdfafe56
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:10:15 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:10:15 +0900
+
+    綴りミス修正　
+
+
+:100644 100644 439eac13ccc63e52bde77067c8689e4349ebbc61 915f03e5c9ad8aa9dcc1c9f68f4e348e42a1c9ad M	pipeline_script/utils/notify/slackUtility.groovy
+commit 1f270c43061d24507fb3bb76f8f77be7fdfafe56
+tree 231ff99354e77758cdd52f2c7c149b1b2872915a
+parent 0f072f00f417221876d501cadf8abd34738128e0
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:08:59 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:08:59 +0900
+
+    調整　
+
+
+:100644 100644 26db7bed43bb74d30013bafebe744e78273ff9fc 439eac13ccc63e52bde77067c8689e4349ebbc61 M	pipeline_script/utils/notify/slackUtility.groovy
+commit 0f072f00f417221876d501cadf8abd34738128e0
+tree cbeddc933f9c74dc8c8ae0d1d1ab912aa705be0f
+parent 0f99552634ea975a23aebfd31982fecfb9ddf903
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:07:16 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:07:16 +0900
+
+    調整
+
+
+:100644 100644 f5166d427770a76ba5cb6da49184017d3f981d4c 26db7bed43bb74d30013bafebe744e78273ff9fc M	pipeline_script/utils/notify/slackUtility.groovy
+commit 0f99552634ea975a23aebfd31982fecfb9ddf903
+tree 7ab6f0bffa3a57e1c8c3a1e7fb4c2e0ab932b250
+parent 4684faa634257afffabea972bf0d276fb0885a28
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:02:07 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:02:07 +0900
+
+    utilityのloadし忘れ
+
+
+:100644 100644 f2f6bf24b57600e06f6ae5f7679ec8e51968e06b a1bcaec39a2f3a0830496bb535b321bedef5b8a0 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 4684faa634257afffabea972bf0d276fb0885a28
+tree 214f9a343fa8035caeadf71f96a70d52f3f1a3ec
+parent 28d88d178771c13a2fa1d5276d9c300fb345a5e3
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:00:31 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-27 00:00:31 +0900
+
+    調整
+
+
+:100644 100644 ccd0c77549a28c8b5c5ec03446e25884e6437e80 f2f6bf24b57600e06f6ae5f7679ec8e51968e06b M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 28d88d178771c13a2fa1d5276d9c300fb345a5e3
+tree 237322d091ecc915bd90acd83f812e5a8be61944
+parent 1612c0d1d4f7574771be2c7d2e76491c31bcf27b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:58:59 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:58:59 +0900
+
+    調整
+
+
+:100644 100644 d774f0e5f08973e24f135171ab6287e07775bf58 ccd0c77549a28c8b5c5ec03446e25884e6437e80 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 1612c0d1d4f7574771be2c7d2e76491c31bcf27b
+tree 8bee32761f4961252415470f545a3de75efd46bc
+parent 86618d4498a69647708157df92bd3b315ecaf43a
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:55:48 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:55:48 +0900
+
+    調整
+
+
+:100644 100644 177f5ae41e16249d0f5f06f449af741d6bc72bd7 f5166d427770a76ba5cb6da49184017d3f981d4c M	pipeline_script/utils/notify/slackUtility.groovy
+commit 86618d4498a69647708157df92bd3b315ecaf43a
+tree ca5f263ac1a322e32928e2d144efe1e3b2adab51
+parent 9086f17a2d7af5d4e8e580c5cda5368c2499472f
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:54:10 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:54:10 +0900
+
+    調整
+
+
+:100644 100644 5704d51e8bccb795e9bcfcae17f2bd8e8e9e3317 d774f0e5f08973e24f135171ab6287e07775bf58 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 9086f17a2d7af5d4e8e580c5cda5368c2499472f
+tree c1a363d27486485a9c4c5d01ef23b776eeba46a1
+parent 6609bfecf41af27c70009bc1962c8ca7fdbabb30
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:52:08 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:52:08 +0900
+
+    調整
+
+
+:100644 100644 5c40715a7b70e6060d9ef5f9b273c0aa2d45a35f 5704d51e8bccb795e9bcfcae17f2bd8e8e9e3317 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 6609bfecf41af27c70009bc1962c8ca7fdbabb30
+tree 8d68a7b8e04d377f28961aa6dbc18bdfdbe152a7
+parent e5484f0bc5ac50be556d34be79c28ee17e8b1374
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:49:31 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:49:31 +0900
+
+    調整
+
+
+:100644 100644 6473d5418a0aa9d8dc62d175e2302b6af34852ba 177f5ae41e16249d0f5f06f449af741d6bc72bd7 M	pipeline_script/utils/notify/slackUtility.groovy
+commit e5484f0bc5ac50be556d34be79c28ee17e8b1374
+tree 6a302c70b9585b673990d82a132b6fda306ac7e8
+parent 494382cef12cf5f43a7b1132c40902539e2acf05
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:00:37 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 23:00:37 +0900
+
+    調整
+
+
+:100644 100644 5704d51e8bccb795e9bcfcae17f2bd8e8e9e3317 5c40715a7b70e6060d9ef5f9b273c0aa2d45a35f M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 494382cef12cf5f43a7b1132c40902539e2acf05
+tree 412401340856028f04d4d15fd3a65561a376750d
+parent 11c9e69eba504535587af7fd87cec8305cd0062b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 22:51:45 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 22:51:45 +0900
+
+    [chore][build]一応string形式で渡す
+
+
+:100644 100644 c0d3d8661af8904c0f9e516e5cf61a97f478d9be 5704d51e8bccb795e9bcfcae17f2bd8e8e9e3317 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 11c9e69eba504535587af7fd87cec8305cd0062b
+tree 2478b7d7c90772e7292e6a29a12ff197838ae1a4
+parent 72767bb3dd7a32f23b8247450e3bc9afc41ff4d3
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 22:48:56 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 22:48:56 +0900
+
+    [chore][build]構文ミスを修正
+
+
+:100644 100644 7111427749aa76ed6e63af851462b289d7631bc4 c0d3d8661af8904c0f9e516e5cf61a97f478d9be M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 72767bb3dd7a32f23b8247450e3bc9afc41ff4d3
+tree 7fd79d67ab59bf5b1c4c61e774aca537a2da7092
+parent d16ff32fac167ec6d73eba6cf6134d7e9c70e5f1
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 22:45:45 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 22:45:45 +0900
+
+    [chore][build]調整
+
+
+:100644 100644 0d1044d5190870d45fb9fbce6ef663a3fb33e367 7111427749aa76ed6e63af851462b289d7631bc4 M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 46812daf321f8619b702c3750b84c5cb91d280ae 6473d5418a0aa9d8dc62d175e2302b6af34852ba M	pipeline_script/utils/notify/slackUtility.groovy
+commit d16ff32fac167ec6d73eba6cf6134d7e9c70e5f1
+tree 3b8bd18d7cfa6be23652e7f42af7fae45b61fcec
+parent 19123a34dc5b7cd086b3a7b627e4adac38fe140e
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 22:37:29 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-26 22:37:29 +0900
+
+    [chore][utils]クラスの生成方法を変更してみる
+
+
+:100644 100644 ba5ff8eb002f1b9061c030a72b421035d63d7253 0d1044d5190870d45fb9fbce6ef663a3fb33e367 M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 97cab6560d97dc15eef29b6aa382075be7baac6e 21dba2941b2575269061786b1fa85676d4094196 M	pipeline_script/utils/notify/SlackNotify.groovy
+commit 19123a34dc5b7cd086b3a7b627e4adac38fe140e
+tree ca5de4c007943da1ec326f2586dc318d6e9c530e
+parent 930c9e4f73d1e07583c91e823f5b80caa72ed749
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-23 00:13:44 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-23 00:13:44 +0900
+
+    [utils]試行錯誤
+
+
+:100644 100644 2f9b27cc193c95eeadf9557734a32117559bc4e3 ba5ff8eb002f1b9061c030a72b421035d63d7253 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 930c9e4f73d1e07583c91e823f5b80caa72ed749
+tree efa8eb1eb9f0b3e868805b72b46a8ddb9ca8608b
+parent a0dcc566a669242e811438775ef5f823291114e6
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-23 00:10:22 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-23 00:10:22 +0900
+
+    [utils]readFileの呼び方を変更
+
+
+:100644 100644 e35ef557beeeb832daf5f119719d3c32256b6539 2f9b27cc193c95eeadf9557734a32117559bc4e3 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit a0dcc566a669242e811438775ef5f823291114e6
+tree 3adb1d15dd9c5826720c5736772bddaa494f4dfc
+parent e91904ce3be7158a6c43f4be8a4b43f71509cc1f
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-23 00:08:10 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-23 00:08:10 +0900
+
+    [utils]workspaceを指定してみる
+
+
+:100644 100644 11186d1b19b434452b8096f62e09b78a769ec188 e35ef557beeeb832daf5f119719d3c32256b6539 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit e91904ce3be7158a6c43f4be8a4b43f71509cc1f
+tree 7c332cb22a0ea434caa5e780598df49c3694596f
+parent 4c2f0dfb43fc400ea6ef49874348cbe5579f2724
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-23 00:04:50 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-23 00:04:50 +0900
+
+    [utils]readFile調査
+
+
+:100644 100644 04849571e538e34bfad962ed5ddd936c682acc35 11186d1b19b434452b8096f62e09b78a769ec188 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 4c2f0dfb43fc400ea6ef49874348cbe5579f2724
+tree aa283df33aabdef2a26d9ae6790b0aad0e6da39e
+parent aac997df887dce91100dbd8fe8866a121913a57e
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 23:57:00 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 23:57:00 +0900
+
+    [utils]import整理
+
+
+:100644 100644 9f054b24960e03d525ed9330b1293e06f0f7eaeb 04849571e538e34bfad962ed5ddd936c682acc35 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit aac997df887dce91100dbd8fe8866a121913a57e
+tree 2fc0bf5dbf4b27a7d7ee66c937a56098430a889a
+parent 6a6c3bb288f042efc09c2d76c5dcddecab960bfe
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 23:21:56 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 23:21:56 +0900
+
+    [utils]綴りミス・・
+
+
+:100644 100644 ea4fb728b4ae18979bab6dbd2f3595ccca26329a 9f054b24960e03d525ed9330b1293e06f0f7eaeb M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 6a6c3bb288f042efc09c2d76c5dcddecab960bfe
+tree c2e788f31d8790c7c4b3fef8506fbb2bbb912535
+parent fd0d8b8211f94222f967d3b71b48a23774433b17
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 23:19:50 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 23:19:50 +0900
+
+    [utils]試行錯誤
+
+
+:100644 100644 1832a9ff9752bf1178783def0cbf6be9ab5be377 ea4fb728b4ae18979bab6dbd2f3595ccca26329a M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 eccf7e6c4ece503f9fd2b54dedca00c597c86421 97cab6560d97dc15eef29b6aa382075be7baac6e M	pipeline_script/utils/notify/SlackNotify.groovy
+commit fd0d8b8211f94222f967d3b71b48a23774433b17
+tree 98290a1f23b6f06b6e0aeee33eec0840413d6ebf
+parent 91dcc2854def041d609fd7b0242d89273b95c33d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:49:36 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:49:36 +0900
+
+    [utils]試行錯誤　
+
+
+:100644 100644 3e6c522e0cfb444c83ec78fa0fe93417ea195a86 1832a9ff9752bf1178783def0cbf6be9ab5be377 M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 a1c63e703d898daa0611f54ca37d5a729969e880 eccf7e6c4ece503f9fd2b54dedca00c597c86421 M	pipeline_script/utils/notify/SlackNotify.groovy
+commit 91dcc2854def041d609fd7b0242d89273b95c33d
+tree 45b0281d598913c828d15fdcf9df95a054be8c25
+parent 3557ef919a152aa9ea4706d6cf6c55b90370a502
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:47:22 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:47:22 +0900
+
+    [utils]試行錯誤
+
+
+:100644 100644 bfe0bf10cfc36223f679a5d6093b4bf4883647e1 3e6c522e0cfb444c83ec78fa0fe93417ea195a86 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 3557ef919a152aa9ea4706d6cf6c55b90370a502
+tree ae776ff6c00746a32b571aa89e7e29ca04c1c19d
+parent 1817ab1cf2ef1b995975b4163af7a3b64c827164
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:46:04 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:46:04 +0900
+
+    [utils]試行錯誤
+
+
+:100644 100644 236652b7605f58067eba307bcfcdecf5789eccde bfe0bf10cfc36223f679a5d6093b4bf4883647e1 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 1817ab1cf2ef1b995975b4163af7a3b64c827164
+tree c39060cc8f4788838602991bac9eccdc174e2dd2
+parent 646fb505392150ba83efeb8f39631fb8d89eca61
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:41:09 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:41:09 +0900
+
+    [utils]試行錯誤
+
+
+:100644 100644 8e77215298160de69d13dbcd940dfa0cf9178565 236652b7605f58067eba307bcfcdecf5789eccde M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 b53765b12ddd4b2fe48bcc22969ed47945bee53a a1c63e703d898daa0611f54ca37d5a729969e880 M	pipeline_script/utils/notify/SlackNotify.groovy
+commit 646fb505392150ba83efeb8f39631fb8d89eca61
+tree 95f91b44227479303d30878fb8f78455e7152841
+parent bf890cadc4d9533bc9e57f3f0c5205a50d390297
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:35:11 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:35:11 +0900
+
+    [utils]試行錯誤
+
+
+:100644 100644 ddceb616d9c92938f82f6700108cf3c10135eb78 8e77215298160de69d13dbcd940dfa0cf9178565 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit bf890cadc4d9533bc9e57f3f0c5205a50d390297
+tree 1e92e2b8f9d2eb7bae958661b7c81a69a1e7701f
+parent 40e4541a7690e15a39ad819162a83d71dec5df8d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:26:02 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:26:02 +0900
+
+    [utils]エラー調査・・
+
+
+:100644 100644 b8bab04fcdf5d13e6d8c076d0f33d9f15046a9e2 ddceb616d9c92938f82f6700108cf3c10135eb78 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 40e4541a7690e15a39ad819162a83d71dec5df8d
+tree 42dba91cbf7d5677143a6c9a3cebc202589d60c6
+parent 192fd007462b9612577e6a41661266ac9c2b4260
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:24:42 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:24:42 +0900
+
+    [utils]試行錯誤・・・
+
+
+:100644 100644 236652b7605f58067eba307bcfcdecf5789eccde b8bab04fcdf5d13e6d8c076d0f33d9f15046a9e2 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 192fd007462b9612577e6a41661266ac9c2b4260
+tree 7cd67b425759ba21c9d3da3e2e86a78ba25f3a52
+parent cf0a8fcf20fca8aa209be4268e626e471825d6ed
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:22:12 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:22:12 +0900
+
+    [utils]試行錯誤
+
+
+:100644 100644 98a09c87cad8764b1d22ad0b7d81004f83bb73b9 236652b7605f58067eba307bcfcdecf5789eccde M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit cf0a8fcf20fca8aa209be4268e626e471825d6ed
+tree 7b519f37be071a306beba8041e0d3504177883d7
+parent 8ea6e06c5a7ea6aa25f66920289c22525e1f6be6
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:17:22 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:17:22 +0900
+
+    [utils]なかなか呼び方が不明で難しい
+
+
+:100644 100644 236652b7605f58067eba307bcfcdecf5789eccde 98a09c87cad8764b1d22ad0b7d81004f83bb73b9 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 8ea6e06c5a7ea6aa25f66920289c22525e1f6be6
+tree 7cd67b425759ba21c9d3da3e2e86a78ba25f3a52
+parent e7aa29a3997fad2f922f2815514f8bf5ab361f52
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:14:14 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:14:14 +0900
+
+    [utils]readFileの呼び方変更
+
+
+:100644 100644 e5024ffeb9e9e5a8e1e39b364669fa063a04f576 236652b7605f58067eba307bcfcdecf5789eccde M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit e7aa29a3997fad2f922f2815514f8bf5ab361f52
+tree 665b431aded6a240ac0c5915e36d90bf67cb5d0d
+parent 82dde0a15c8276bfc1519552e734a9c2b990225c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:10:22 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:10:22 +0900
+
+    [utils]まだ間違いがある様子（どこだろ）
+
+
+:100644 100644 2242dd4a1d2c3596c46163d93da837ff2a5c0287 e5024ffeb9e9e5a8e1e39b364669fa063a04f576 M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 f475b272efc70d5b30b85d365bfe07fc36505ceb b53765b12ddd4b2fe48bcc22969ed47945bee53a M	pipeline_script/utils/notify/SlackNotify.groovy
+commit 82dde0a15c8276bfc1519552e734a9c2b990225c
+tree ec1b24b2f91221512dbb8a6476d796d7f9adf327
+parent e2213122994e37836367cc1b0dc4eae39e4b3f89
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:08:36 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:08:36 +0900
+
+    [utils]呼び出しクラス名間違えていた様子
+
+
+:100644 100644 d2c41670e5eccb46de0f429feb655199416aa7cf 2242dd4a1d2c3596c46163d93da837ff2a5c0287 M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 b53765b12ddd4b2fe48bcc22969ed47945bee53a f475b272efc70d5b30b85d365bfe07fc36505ceb M	pipeline_script/utils/notify/SlackNotify.groovy
+commit e2213122994e37836367cc1b0dc4eae39e4b3f89
+tree 4b2069547f0239d39ef71a8c631234349dd4dfab
+parent 4a4025988dfa4ba0dfb47d72415b316adf06d34b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:07:28 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 22:07:28 +0900
+
+    [utils]クラスを諸々試行錯誤
+
+
+:100644 100644 d8e3ccd1be2619cb1c6807d02a33819597ab1be8 d2c41670e5eccb46de0f429feb655199416aa7cf M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 96dc3cdcb92887005b30a8152fb271a9ae5dd159 b53765b12ddd4b2fe48bcc22969ed47945bee53a M	pipeline_script/utils/notify/SlackNotify.groovy
+commit 4a4025988dfa4ba0dfb47d72415b316adf06d34b
+tree f002f7c9a84c2b3c4d155347e212f5d349930483
+parent 8e76c9fbbd4deb647ced7df54aa537b695ebe719
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:57:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:57:49 +0900
+
+    [utils]呼び方を()くくりに変更
+
+
+:100644 100644 46b66329f3bc6b5a1eb023dba4449bc767319f6f d8e3ccd1be2619cb1c6807d02a33819597ab1be8 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 8e76c9fbbd4deb647ced7df54aa537b695ebe719
+tree 6b522f845d1d68358221005a550cd09cb96d760e
+parent 9571bfac4c8685cd9a881696d533f45626d30105
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:54:40 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:54:40 +0900
+
+    [utils]readFileの呼び方のミスを修正
+
+
+:100644 100644 52879764fa44a6267f599efd376ebbbbcd33096a 46b66329f3bc6b5a1eb023dba4449bc767319f6f M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 9571bfac4c8685cd9a881696d533f45626d30105
+tree a093e085bcbfe1536cf97bbfe23e95acc5dc1cc0
+parent be5017553d27f88be5ee92e589f1f866521fda44
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:51:58 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:51:58 +0900
+
+    [utils]newInstance調査
+
+
+:100644 100644 5f01f56eb53c8fe437e5dad26827b45139a1a5ea 52879764fa44a6267f599efd376ebbbbcd33096a M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 c6c25f5956c76fe4396583cabbe82ac6f58a3ea1 96dc3cdcb92887005b30a8152fb271a9ae5dd159 M	pipeline_script/utils/notify/SlackNotify.groovy
+commit be5017553d27f88be5ee92e589f1f866521fda44
+tree 748cf2969515024fb1a569102a018bdffd0737f6
+parent 45503caaeb9d964cc5db3d1f37d4a42dd622b34b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:48:56 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:48:56 +0900
+
+    [utils]return thisを追加
+
+
+:100644 100644 3de162ac3d29e931849b6956cfd451340a8590ab c6c25f5956c76fe4396583cabbe82ac6f58a3ea1 M	pipeline_script/utils/notify/SlackNotify.groovy
+commit 45503caaeb9d964cc5db3d1f37d4a42dd622b34b
+tree 97bb7fe445062b2612188f848b79de565c5279fa
+parent 623271b9c1af1b3cda9dee4d101f7fcf6a98106a
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:45:05 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:45:05 +0900
+
+    [utils]コメントアウト解除
+
+
+:100644 100644 c8e3907b13915fd4feef0658fba379137ab7d84e 5f01f56eb53c8fe437e5dad26827b45139a1a5ea M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 623271b9c1af1b3cda9dee4d101f7fcf6a98106a
+tree db3d5f0631edd8a9459679bccb85a2b48769c25b
+parent 792c9a6bc0bf085ec84177b2e18c213a96bfa991
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:42:10 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:42:10 +0900
+
+    [utils]loaderが反応してるかチェック
+
+
+:100644 100644 4a018480a953daa25d52b3fcacefcc667782e255 c8e3907b13915fd4feef0658fba379137ab7d84e M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 792c9a6bc0bf085ec84177b2e18c213a96bfa991
+tree 00696d76ed5ce5839c6ddd365c89ac1c4dd50bb8
+parent d5b976fb96cb017b7894b096e45ce658269fb9a7
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:40:01 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 21:40:01 +0900
+
+    [utils]一旦コメントアウトして動作を見る
+
+
+:100644 100644 5f01f56eb53c8fe437e5dad26827b45139a1a5ea 4a018480a953daa25d52b3fcacefcc667782e255 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit d5b976fb96cb017b7894b096e45ce658269fb9a7
+tree 97bb7fe445062b2612188f848b79de565c5279fa
+parent bc66a57c1f6ddfbdfb1154c001be31f163f3a85d
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 20:32:59 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 20:32:59 +0900
+
+    [utils]class loadの仕方を変更
+
+
+:100644 100644 585732697c5c2d12a33cc23cfcfcee9d7ff11fec 5f01f56eb53c8fe437e5dad26827b45139a1a5ea M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit bc66a57c1f6ddfbdfb1154c001be31f163f3a85d
+tree a0d93fd3b4d2d4eb1b6e52d6f3462ac39187957a
+parent 553e94e68b7a744f24bf2336f41321b33c115ddb
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 20:15:02 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 20:15:02 +0900
+
+    [utils]設定変更してみる　
+
+
+:100644 100644 700f48201f178f7536dea973b888696f49d34ce6 585732697c5c2d12a33cc23cfcfcee9d7ff11fec M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 553e94e68b7a744f24bf2336f41321b33c115ddb
+tree 7432c88cb535563c9f862c23fdc370742f1711a4
+parent 3d9bc741531691ed4e1e658969906562cbfceb46
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 20:12:57 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 20:12:57 +0900
+
+    [utils]通知ようのクラスを作ってみる
+
+
+:100644 100644 5c1fa4a06c867b9b94d70fa47656712fa82907d0 700f48201f178f7536dea973b888696f49d34ce6 M	pipeline_script/TestScripts/notify_slack_test.groovy
+:000000 100644 0000000000000000000000000000000000000000 3de162ac3d29e931849b6956cfd451340a8590ab A	pipeline_script/utils/notify/SlackNotify.groovy
+:100644 100644 e4cafccd4657a948aa11ae0637e045bb633fcbf2 46812daf321f8619b702c3750b84c5cb91d280ae M	pipeline_script/utils/notify/slackUtility.groovy
+commit 3d9bc741531691ed4e1e658969906562cbfceb46
+tree 49156d34f88e99d27ce190e00c11e72a684c5ca7
+parent 6a33e2dcbbb8d09ae13a42be6385087ab0cfa6a4
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:23:33 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:23:33 +0900
+
+    [utils]改行調整
+
+
+:100644 100644 1fc5ab6de6d4e50bacc679c5678600dcc600d7e7 5c1fa4a06c867b9b94d70fa47656712fa82907d0 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 6a33e2dcbbb8d09ae13a42be6385087ab0cfa6a4
+tree 9a923ddb0d759342a138abbb949c218a303db35a
+parent dd105351d8c2a33da3b8c0afee2f04cbc91b58b4
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:17:20 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:17:20 +0900
+
+    [utils]リリースノート調整
+
+
+:100644 100644 1488c043a23ed1f2cca7d8d9a1a742252bff7f97 1fc5ab6de6d4e50bacc679c5678600dcc600d7e7 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit dd105351d8c2a33da3b8c0afee2f04cbc91b58b4
+tree 16d86307e565b7153d1b12f003789a8f6e341a8c
+parent ba9eb99a1ee38739b9f154f6c2300a982e73dc19
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:12:33 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:12:33 +0900
+
+    [utils]bot user nameの調整
+
+
+:100644 100644 ef8e7dd1cccea1f5e7bf9a391ea1ca47a39c4ad8 1488c043a23ed1f2cca7d8d9a1a742252bff7f97 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit ba9eb99a1ee38739b9f154f6c2300a982e73dc19
+tree 2cb2185535a17638cd38dd13104c18b49b60dd3c
+parent 30b8459d721840644484c15c3ba7979664bb13a4
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:09:51 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:09:51 +0900
+
+    [utils]エラーが出るので宣言の仕方変更
+
+
+:100644 100644 33fc2232d51a0bb48ddfcde0d5c0446275d952c3 e4cafccd4657a948aa11ae0637e045bb633fcbf2 M	pipeline_script/utils/notify/slackUtility.groovy
+commit 30b8459d721840644484c15c3ba7979664bb13a4
+tree 06f7b06919327547f200a78089078782668858fd
+parent 3097bc1e96fc057744aa9f06fba6751195d54bbc
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:02:39 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:02:39 +0900
+
+    [utils]void定義できるらしい
+
+
+:100644 100644 83d37547c90de8fce20d63427eb484b5a647ffc8 33fc2232d51a0bb48ddfcde0d5c0446275d952c3 M	pipeline_script/utils/notify/slackUtility.groovy
+commit 3097bc1e96fc057744aa9f06fba6751195d54bbc
+tree 55bd0c5423971c20e0a06750cd919f2d9fc651f5
+parent c35efebc1feb36d6a32f0d8543e8fdf9b6bb9bad
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:00:54 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 19:00:54 +0900
+
+    [utils]通知設定の調整
+
+
+:100644 100644 1a2f5cd3382501e90bc914c6e53c6819c013aee9 ef8e7dd1cccea1f5e7bf9a391ea1ca47a39c4ad8 M	pipeline_script/TestScripts/notify_slack_test.groovy
+:100644 100644 b673d28490a64c0ada01eb68dbe7f7db085be7e1 83d37547c90de8fce20d63427eb484b5a647ffc8 M	pipeline_script/utils/notify/slackUtility.groovy
+commit c35efebc1feb36d6a32f0d8543e8fdf9b6bb9bad
+tree 28196a769ef694e09057b51fbf09cc44ad7cf49a
+parent 6a6ba59a6cfa4cda607a98913c043e803a97a43a
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:36:11 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:36:11 +0900
+
+    誤記を修正
+
+
+:100644 100644 ff1185b17649b0ba0d3639ba70d1b4726e4ca8ff b673d28490a64c0ada01eb68dbe7f7db085be7e1 M	pipeline_script/utils/notify/slackUtility.groovy
+commit 6a6ba59a6cfa4cda607a98913c043e803a97a43a
+tree 8c9720cd1c04433e1b3c2403baa8d53016598feb
+parent aac1ce5dc9ef6c98c5e8a3ef969ade7a5a583016
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:33:36 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:33:36 +0900
+
+    文字列連結の方法を変更
+
+
+:100644 100644 2091e8d936905145fabcbdd72c6bfda13be7aa83 ff1185b17649b0ba0d3639ba70d1b4726e4ca8ff M	pipeline_script/utils/notify/slackUtility.groovy
+commit aac1ce5dc9ef6c98c5e8a3ef969ade7a5a583016
+tree a4e871040f42dde4ea24171ee752bd66dcdef109
+parent 9603b5a1f0c246cd62f7fb3ec350f7564679f1ba
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:28:37 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:28:37 +0900
+
+    スクリプトの配置場所を間違えて記載したので修正
+
+
+:100644 100644 0991a0ed6b0bd0f95a918fd201e1ea2ae379e295 1a2f5cd3382501e90bc914c6e53c6819c013aee9 M	pipeline_script/TestScripts/notify_slack_test.groovy
+commit 9603b5a1f0c246cd62f7fb3ec350f7564679f1ba
+tree e5eadb6c1f5755fb70d3445a7e1eecc5efd48ce3
+parent 310d158bbcb5d7f69862a648f8452f1887620e66
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:25:20 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-22 15:25:20 +0900
+
+    テスト用のジョブを追加（後で消すと思う）
+
+
+:000000 100644 0000000000000000000000000000000000000000 0991a0ed6b0bd0f95a918fd201e1ea2ae379e295 A	pipeline_script/TestScripts/notify_slack_test.groovy

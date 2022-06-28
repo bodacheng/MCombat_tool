@@ -1,0 +1,27 @@
+[2022-06-20T07:13:40.925Z] ユーザー[8mha:////4LAsCf+yNaGualwe+w+h0oXLipvOzCAlF/qSxVFw7pM+AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYR/dLi1CL93MSS4tLc/JL8+KLM7EQAEAZ4XckAAAA=[0m松本 りかが実行
+[2022-06-20T07:13:40.925Z] Rebuilds build #[8mha:////4F+T6ZLXBo77AYWGn5bc6mAu6V0o0zVVPmDvikykb2bLAAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBin9rPwk/ZLU4pJ4ICM+MT01ryQ+D+hifUMAm3Q2dc8AAAA=[0m1
+[2022-06-20T07:13:42.110Z] Obtained pipeline_script/TestScripts/agent_test.groovy from git https://git-1.cocone.jp/projectp3/p3-tools
+[2022-06-20T07:13:42.147Z] org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+[2022-06-20T07:13:42.147Z] WorkflowScript: 10: Expected a step @ line 10, column 17.
+[2022-06-20T07:13:42.147Z]                    currentBuild.description = "ノード名：${env.NODE_NAME}"
+[2022-06-20T07:13:42.147Z]                    ^
+[2022-06-20T07:13:42.147Z] 
+[2022-06-20T07:13:42.147Z] 1 error
+[2022-06-20T07:13:42.147Z] 
+[2022-06-20T07:13:42.147Z] 	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:310)
+[2022-06-20T07:13:42.147Z] 	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1085)
+[2022-06-20T07:13:42.147Z] 	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:603)
+[2022-06-20T07:13:42.147Z] 	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:581)
+[2022-06-20T07:13:42.147Z] 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:558)
+[2022-06-20T07:13:42.147Z] 	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:298)
+[2022-06-20T07:13:42.147Z] 	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:268)
+[2022-06-20T07:13:42.147Z] 	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:688)
+[2022-06-20T07:13:42.147Z] 	at groovy.lang.GroovyShell.parse(GroovyShell.java:700)
+[2022-06-20T07:13:42.147Z] 	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:142)
+[2022-06-20T07:13:42.147Z] 	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:127)
+[2022-06-20T07:13:42.147Z] 	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:571)
+[2022-06-20T07:13:42.147Z] 	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:523)
+[2022-06-20T07:13:42.147Z] 	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:334)
+[2022-06-20T07:13:42.147Z] 	at hudson.model.ResourceController.execute(ResourceController.java:99)
+[2022-06-20T07:13:42.147Z] 	at hudson.model.Executor.run(Executor.java:432)
+[2022-06-20T07:13:42.231Z] Finished: FAILURE

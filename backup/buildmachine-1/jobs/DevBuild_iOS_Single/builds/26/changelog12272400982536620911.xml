@@ -1,0 +1,123 @@
+commit ffd0c90041c5797cb2166d6b2ca3997d0587f393
+tree d618c09f8f90ed69dec65082aa3aa7e871ab5899
+parent 1d12de65c4f20d1bf3c6ff9f3e3d4212951a9fdb
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-21 18:42:40 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-21 18:42:40 +0900
+
+    フレンドリストを閉じた後に通知を更新するようにする
+
+
+:100644 100644 72e15723dd440f37e76addd42b5b7dc4b3b4c4e0 2966d3afa0de7b056d55398b9cf91a522bad4e9b M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+commit aa705f14945aabe632509df0e2e8b00143b524de
+tree 726d62cd6a73bcf81dcf9de01c4ae68dc5fd1f24
+parent 1d12de65c4f20d1bf3c6ff9f3e3d4212951a9fdb
+author bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-21 18:35:38 +0900
+committer bo_dacheng <bo_dacheng@cocone.co.jp> 2022-06-21 18:36:00 +0900
+
+    Ready For Notification Feature
+
+
+:100644 100644 0024fd7f1af239891b059d9582bf7f5ba93459dd affe3136682b5859985fe832ed9c8f4d7b22bd99 M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 ad2927e090e59253e22017cf93ec7d3e24306a36 93fe6fdca78b944f2baf0f48d857b4acf37204c8 M	Assets/App/Scripts/Contents/Exchange/ExchangeHandler.cs
+:100644 100644 14c8b356f2dab0f9853c14d5f1063552e964e102 2b004d5060f961157b832e56569f25c849f73cff M	Assets/App/Scripts/Contents/Present/PresentHandler.cs
+:100644 100644 9657bc5389e329421b4c95a3f12a4af6c96b912a d3c91593c1b6f87b98837f21cfcd1a41e38e3bf9 M	Assets/App/Scripts/Contents/Present/PresentModal.cs
+:100644 100644 ebacb316be1bff9c8e4ae63c74edfc4ef2df670c 4e301eb8f34c8428497aec24ff32c2aa32e6422f M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit 7b6d5fecb101eda44e6089d05411f03377b90c10
+tree 0034a06fc6d526d8aeb45213532deae294286652
+parent dc404cb93d76565b3993eacbf7ca617dfe49ccb2
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-20 19:35:05 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-20 19:35:05 +0900
+
+    FIX: TRIA-4340【パーティー】終了画面を閉じる際にチャットボタンを押下すると進行不能になる
+
+
+:100644 100644 d7758727d84f6c07e426e8f04090adca0301f475 44d74c989be17347838ef414c6ea8a1826443a9d M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit 3309f84e42f6d67e8bfc4e6320c91467d4afa7b5
+tree e30a0fff7fc0599f2049356f88b25a8470aefb6b
+parent c36edf139be8b7322bde1fbe956f9f23e9481b8b
+author 長沢 岳仁 <nagasawa_takehito@cocone.co.jp> 2022-06-20 17:05:33 +0900
+committer 辛 東根 <shin_donggun@cocone.co.jp> 2022-06-20 17:05:33 +0900
+
+    [1.7.2] ガチャ演出のレイヤーモーション対応
+
+
+:100644 100644 26ac7221d8c34e96b6b8f2d219e1717bc2c5e2f9 b9268a418dfbcbe4af4bf35b11284e2518502945 M	Assets/App/Prefabs/Gacha/Avatar/GachaModelController.controller
+:100644 100644 037e656b2d5af886fc7cdbaf2ce86641c4684760 33093a5ddc7637785b8d5b29579633699ed413b9 M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineChain7_R.playable
+:100644 100644 05c626f95558b9e6a0fe54aa6b423c5f91324480 6e619d8b022d29e62481f6ba8db073e42221eb3c M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineChain7_SR.playable
+:100644 100644 21b705c614fcd08c659fbf66b84b4c6de8862d8b 14e7c95796f98574ac817280c00231f95f693398 M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineSingle_N.playable
+:100644 100644 eaa125895636ae5acd156c84f3ffbf5ed278f028 439b6a40e211fc4f11467daa785a0f532dea3174 M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineSingle_R.playable
+:100644 100644 1b24a4b0602afd193346475d67e0156d462455aa f8b5fc5feeb6d0a7a8dcd877efd319b5aadf4e50 M	Assets/App/Prefabs/Gacha/Scene/GachaTimelineSingle_SR.playable
+:100644 100644 f65e57a38e32515cd5f3253be526cf425f99dc1d 42891622166ce50c0aaccad2889518fb7ee1e2b0 M	Assets/App/Scripts/View/Avatar/ActionController.cs
+:100644 100644 7647f668409886f0a56bcb4ca3a578d0a8108d91 69e8a4b03e179f0d0b8713bd1878e772ec560c15 M	Assets/App/Scripts/View/Avatar/CoordinateController.cs
+:100644 100644 7eb098313e0a72b36c69bc0783d132c6e732003e 8715862fa6192606733e3a65b0d4ad91458aa17a M	Assets/App/Scripts/View/Gacha/GachaSceneController.cs
+:100644 100644 cca3afc866c4356e06dabac183d7d60c6e1715e0 c490a6e871f7b0f1fd2a029784814c69f10ae7ad M	Assets/ExternalAssets/Items/G0041/FG0041OP01/FG0041OP01.prefab
+commit c36edf139be8b7322bde1fbe956f9f23e9481b8b
+tree fa535beb48a1c4ab8e7458b3c3e0404e03e50650
+parent 2752769e07e0963db8fac023d06a09119bc4caf3
+author 松本 りか <matsumoto_rika@cocone.co.jp> 2022-06-17 16:02:21 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-20 10:34:56 +0900
+
+    [build]新ビルド種別対応
+    
+    # Conflicts:
+    #	ExtProject/p3-proto
+
+
+:100644 100644 511bdef7ce89017c1be76984e86bc2e631a332af 5a5cf43f2f31211a6fe2d88ef9142a839bc571d2 M	Assets/App/Editor/Build/BuildClient.cs
+:100644 100644 702bb4f05ac0597649d5eda074de4d902c17f691 87becd248d7092ba96e3212a9580e5790d83474c M	Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml
+:100644 100644 e93b1689eb2d1c9213fea52e47af83df652224f7 dc5dababd3b19b159c8bb5d3fe63c3c9a90634b9 R066	Assets/App/Editor/Build/Configs/AlphaBuildSettings.yaml	Assets/App/Editor/Build/Configs/DevBuildSettings.yaml
+:100644 100644 3efacfed518e975e3c07f142a72dc939b9d41cb2 3efacfed518e975e3c07f142a72dc939b9d41cb2 R100	Assets/App/Editor/Build/Configs/AlphaBuildSettings.yaml.meta	Assets/App/Editor/Build/Configs/DevBuildSettings.yaml.meta
+:000000 100644 0000000000000000000000000000000000000000 45fcbe9011d5dc2d50611255880fc34a4ce5f9eb A	Assets/App/Editor/Build/Configs/QABuildSettings.yaml
+:000000 100644 0000000000000000000000000000000000000000 a304ae244706acdadb90bc35294d407c376c7b4e A	Assets/App/Editor/Build/Configs/QABuildSettings.yaml.meta
+:100644 100644 20a4707ebc2e3fb1c01220161b05a275834c2582 20a4707ebc2e3fb1c01220161b05a275834c2582 R100	Assets/App/Editor/Build/Configs/OfficialReleaseBuildSettings.yaml	Assets/App/Editor/Build/Configs/ReleaseBuildSettings.yaml
+:100644 100644 05d03aec5ec56107ce610dcab81948dd46a80cb3 05d03aec5ec56107ce610dcab81948dd46a80cb3 R100	Assets/App/Editor/Build/Configs/OfficialReleaseBuildSettings.yaml.meta	Assets/App/Editor/Build/Configs/ReleaseBuildSettings.yaml.meta
+:100644 100644 5ccac8e5e0c693a5e4774d38be0c3b85ce47d1bc 5ccac8e5e0c693a5e4774d38be0c3b85ce47d1bc R100	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Alpha.plist	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Dev.plist
+:100644 100644 a1e30e6cdfdae64467e9b4117027ccaa84d73175 a1e30e6cdfdae64467e9b4117027ccaa84d73175 R100	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Alpha.plist.meta	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Dev.plist.meta
+:000000 100644 0000000000000000000000000000000000000000 5ccac8e5e0c693a5e4774d38be0c3b85ce47d1bc A	Assets/App/Editor/Build/Configs/iOS/ExportOptions_QA.plist
+:000000 100644 0000000000000000000000000000000000000000 73837e92affaa497f6959527e1dd1cc1fc440f04 A	Assets/App/Editor/Build/Configs/iOS/ExportOptions_QA.plist.meta
+:100644 100644 9b5ce2ccd2efa7108e44b4beb2d97d679fbf5384 9b5ce2ccd2efa7108e44b4beb2d97d679fbf5384 R100	Assets/App/Editor/Build/Configs/iOS/ExportOptions_OfficialRelease.plist	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Release.plist
+:100644 100644 80b4094ea5806c6c5f975180677e15bfb264c7bd 80b4094ea5806c6c5f975180677e15bfb264c7bd R100	Assets/App/Editor/Build/Configs/iOS/ExportOptions_OfficialRelease.plist.meta	Assets/App/Editor/Build/Configs/iOS/ExportOptions_Release.plist.meta
+:100644 100644 20e05ec057536cf4320fdca9810fd5fbabce7b3e 126fae5eba9362c9d7ec8af63c0dc821fa5ec575 M	Assets/Plugins/Android/launcherTemplate.gradle
+:160000 160000 4b74d546f584616ca0cd762dc5aaa194dcc2e27c 30db31ad9a994c13e44b9f9ad65ef49904111547 M	ExtProject/p3-proto
+commit 2752769e07e0963db8fac023d06a09119bc4caf3
+tree b6d9b8d558efa521623aa0e3a59d8ce8ef162d77
+parent 530f49cbad57253016dc6d3f3c88a66dfd7d6ff3
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-17 16:27:00 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-17 16:27:25 +0900
+
+    set version to 1.7.2
+
+
+:100644 100644 f49e28503df39b940d7ca0e3a606a7867c7121f2 4e7e0342f75bab982ed2eda4ecf220f8e71e7ca9 M	ProjectSettings/ProjectSettings.asset
+commit 530f49cbad57253016dc6d3f3c88a66dfd7d6ff3
+tree 649a9f0da3a481dcf9c715fe59d2b6e4b36671c0
+parent 00760d27d400da56e9317dd7e4b452054623ab5d
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-17 14:59:44 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-17 16:26:56 +0900
+
+    FIX: TRIA-4344【パーティ】パーティ中にギフトを贈った際の演出に「ビギナー」が表示されている
+
+
+:100644 100644 074cf764ce407132679399ece721c6c72d22739a 9687ddc69bb17f1204f9de9152e76a80167ae6a5 M	Assets/App/Scripts/Contents/Party/GiftLog.cs
+:100644 100644 2a71813152c74c0fc795cbad3ead7860e8c25dc3 6c2eabd0e7e2a7a76a660c11cdc5eb9d59e17233 M	Assets/Resources/UI/Party/UI/GiftLogLayer.prefab
+commit 00760d27d400da56e9317dd7e4b452054623ab5d
+tree 7ebdcdba638976720d5c43aa5b9acb60477de2d4
+parent 373590fa267fc76456d66e8dc8207404ae9a8518
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-17 12:24:18 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-17 16:26:48 +0900
+
+    FIX: TRIA-4340【パーティー】終了画面を閉じる際にチャットボタンを押下すると進行不能になる
+
+
+:100644 100644 cd92ed87810f0d199128bdd219d72585867c0228 a8ad8d04590e943eecf9335ae125a73bb5a46755 M	Assets/App/Scripts/Contents/Party/PartyHandler.cs
+commit 373590fa267fc76456d66e8dc8207404ae9a8518
+tree a74f5b287bbc130fe8ebc161773791705edc6162
+parent d545f28891d5bfdeff20fa528b4d73bd32a1b95b
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-16 16:59:40 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-17 16:24:40 +0900
+
+    web view の長押し保存機能を無効にする
+
+
+:100644 100644 8e08831e04dbc2f5378e718df5963322e1805764 87436cb32dba84e22e2cde21bd5f1d1a6f2a1950 M	Assets/App/Scripts/Contents/Announce/Dialog/AnnounceWebViewDialog.cs
+:100644 100644 17f1bc736748070f4fd8d58a8617c4372f8aa3f7 5d59089db2114ca76dfe075b74177cb84485350b M	Assets/App/Scripts/Contents/Web/WebViewStretchLayer.cs

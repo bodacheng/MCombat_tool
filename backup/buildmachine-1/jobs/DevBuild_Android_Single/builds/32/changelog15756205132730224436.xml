@@ -1,0 +1,99 @@
+commit 253aad07b153cfa524301fccd14029ea0a2f9b07
+tree 66a61e7acbbb1155f7e693ee2e3bd55ef46b5483
+parent 9785b2f7af9e4878c535bc78423e34a9c003ff4d
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-23 20:52:41 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-23 20:52:41 +0900
+
+    FIX: TRIA-4416【ビジターリスト・おでかけ改修】フォローリストのアイコンが仕様と相違している
+
+
+:100644 100644 82bd23eafee7a50ad0b98323bb949dafbe1cda16 7c67bac118e396acec7ee62fb6e0a828019a39b7 M	Assets/App/Scripts/Contents/Relation/RelationListItem.cs
+commit 9785b2f7af9e4878c535bc78423e34a9c003ff4d
+tree 83627ee9d0a601ad0b392e3d09eae6b6a35bdda3
+parent bf669057adbdc92007070d9d05de9ebd58b1fcf2
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-23 20:38:26 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-23 20:38:26 +0900
+
+    FIX: TRIA-4414【ビジターリスト・おでかけ改修】フォローリストの絞り込み項目が仕様と相違している
+
+
+:100644 100644 b9b1564ac36a946062323135e96eb0a6200dbcf5 1b97ebdd94b2f4d20cb10828b156d426f83e23bc M	Assets/App/Scripts/Contents/Relation/Model/RelationModel.cs
+:100644 100644 d642842bfff9b1557c422db918c6927a08ff3711 eb2d71d0bee5fb5df2b9cf0f4ce9828ec6eb7a74 M	Assets/App/Scripts/Contents/Relation/RelationDefines.cs
+commit bf669057adbdc92007070d9d05de9ebd58b1fcf2
+tree f3fa255f1bb3c4c605cc4b0ccc7e917e0a854ff8
+parent 07c1d6c6066ee1276aeccb6af1289cecb47772de
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-23 19:55:52 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-23 19:55:52 +0900
+
+    FIX: TRIA-4415【木の実収穫改修】フレンド申請ダイアログで申請を押下するとフレンド申請ダイアログが表示される
+
+
+:100644 100644 058a6d840b08c4487eb24f1a013d9d33b5fcb7d3 fdcaf06d91434acff5a3b5d5bb8f70a6b45c5db0 M	Assets/App/Scripts/Contents/Friend/FriendService.cs
+:100644 100644 4e301eb8f34c8428497aec24ff32c2aa32e6422f bdf1d68f6eb62e6a486f78b4fddf529e7ca6032f M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit 59388bf835edb0ce8084848934eeaf156c53c22d
+tree cc2d139cdaf43167c4bc94aa35970cd3896fd766
+parent b35e6d613b5dc8edb1aa6ed94b3ec766c1d93331
+author uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-23 18:45:54 +0900
+committer uematsu_rina <uematsu_rina@cocone.co.jp> 2022-06-23 18:45:54 +0900
+
+    TRIA-4443 , 4427対応＿交換確認モーダルでユーザー名十二文字の時に表示が崩れる
+
+
+:100644 100644 7e550e2f810f4d2bec864fb7103d837f22f17ab1 3abda7d63933af331d71ad7aeca79eb1a4f1c519 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 9617d70fb460b2bbf942d6201557eba081c980e3 f57271fb9b59d7fa2a4c467005f2ae87f3c485b6 M	Assets/Resources/UI/Exchange/ExchangeRequestLayer.prefab
+:100644 100644 8d4bf272e3e4559a350565521aca45606ec0055a 04e8c05692b5508d111ce749fbf09f2329d6bf47 M	Assets/Resources/UI/Gift/GiftLayer.prefab
+:100644 100644 a546989301882f565927cd3fba11fc3d00dbf6c8 3e3489fccaef83155fa8fec04c4173a6a07f8bf0 M	Assets/Resources/UI/Party/PartyMemberListModal.prefab
+:100644 100644 a6285924568baa8309dd4db5ac58b61d16b0b6a9 6eaa85cd864a711f881cb87b047c8f969b7e747c M	Assets/Resources/UI/Party/UI/PartyGiftPointRankingModal.prefab
+:100644 100644 a9b1b197d2da69fbcb6420d72581117f7781309d a0f6346a1cc2a8732fc3fb371d63a8d3faac80db M	Assets/Resources/UI/Present/PresentModal.prefab
+:100644 100644 43a49b8bd47e501d7cce9845482eb1656520da4f 731fda4b6efbad208be6a675879620ff05b1541d M	Assets/Resources/UI/Relation/Item/RecommendListItem.prefab
+:100644 100644 988be793c098cfca09c789c860ad07224e197f9f a1a9d8314df8e26eb77acdf875c6d21a5270e0b5 M	Assets/Resources/UI/Relation/Item/RelationListItem.prefab
+:100644 100644 57874ba9fc9003da8dc5ccc088cc081b56138e9c 88888342970344ca257f6ce8572a0895e05e541e M	Assets/Resources/UI/Relation/Item/VisitorListItem.prefab
+commit 41f3c6b261ee2c5eeb29cebfbf5dcb9b58b648d2
+tree d48d6323dd8a48af173f222fe30aa52d422ea9e3
+parent 8420c03664fe769a81afce5af84a29117b2b38d1
+author 伯 大成 <bo_dacheng@cocone.co.jp> 2022-06-23 18:05:19 +0900
+committer 辛 東根 <shin_donggun@cocone.co.jp> 2022-06-23 18:05:19 +0900
+
+    [1.8.0] 交換機能 QA対応
+
+
+:100644 100644 0f13f96eb9d940b0f6379608bc7615c677fb08e9 161f8bb3aa02780b8fa34c5d734a494b1ce4fa10 M	Assets/App/Scripts/Contents/Friend/FriendFilterSelectModal.cs
+:100644 100644 54f107d588184baa890bb071f04c7176496d7228 4f241424e2a95a59ef7b794130c04c510cb31698 M	Assets/App/Scripts/Contents/Main/NotificationAreaLayer.cs
+:100644 100644 245942febf4e27eeaf05890408d59fdc8f20997e 7900354ac509441d4da3b10a9e0089a64ffe48de M	Assets/App/Scripts/Contents/Present/PresentHandler.Exchange.cs
+:100644 100644 19593ed33fa91b523200c22317bc7e7ef566d727 7f54ded5e4c0197e67428460eef71afbffbfbd40 M	Assets/App/Scripts/Contents/Relation/GiftOpponentsHandler.cs
+:100644 100644 8f9cd9228960602eea1e5af5794a2e82fae1ec5e 7f09490cbe0c0c59edaed992a9e5124840761a4d M	Assets/App/Scripts/Contents/Relation/GiftOpponentsLayer.cs
+:100644 100644 e8d469635d5a8af33d9c9a54ef0134b3a76697e9 7bad616d76e3d189a54e0e7f149af2152cf4a229 M	Assets/Resources/UI/Friend/FriendFilterSelectModal.prefab
+:100644 100644 455ff4fc7364f02f1f051b976e0850ffb40be46e 04907117e60585764a44b258a956e617bc081395 M	Assets/Resources/UI/Main/NotificationAreaLayer.prefab
+commit 2933d1241ff1700da8bf874cd75d14c9f3af382d
+tree 98cdfc74b19bd3b83cd59059ba97758031a3ab9b
+parent 795581132ce448ed4747efffb76da8b732b65632
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-23 17:39:05 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-23 17:39:21 +0900
+
+    FIX: TRIA-4276 SH（靴）アイテム装着時のGround Heightプロパティ対応
+
+
+:100644 100644 69e8a4b03e179f0d0b8713bd1878e772ec560c15 73ffc19c62c2c8abd0e043d12475121cb4e7c855 M	Assets/App/Scripts/View/Avatar/CoordinateController.cs
+commit c0c7b9b439eeb91a4d1e6891eca5bdab0c7a5f5e
+tree 722cd7b709594d7c658519fed30e9897140aa4da
+parent 58847676bd50700e72cc9b53cbdd27b4d8eec644
+author itaba_mitsuharu <itaba_mitsuharu@cocone.co.jp> 2022-06-23 17:24:55 +0900
+committer itaba_mitsuharu <itaba_mitsuharu@cocone.co.jp> 2022-06-23 17:24:55 +0900
+
+    オブジェクトのサイズを調整して、スクロールビューの伸縮の座標が正しく行われるように
+
+
+:100644 100644 a7184f964b997022e436a6422ecc344406c78d63 d7a338bba4a89132a8063fcf78f6e1b2eff73059 M	Assets/Resources/UI/Friend/FriendListModal.prefab
+commit 22f4eb2fbfecd0c5f54441f80c9d13d460e94c6a
+tree 6ec76562b9c5b5d93b3a2b62258da0e6c2ac6850
+parent 28fd2368f739a2edfe4a2cfe6b05a67cb2eff854
+author 伯 大成 <bo_dacheng@cocone.co.jp> 2022-06-23 15:56:54 +0900
+committer 辛 東根 <shin_donggun@cocone.co.jp> 2022-06-23 15:56:54 +0900
+
+    [1.8.0]交換機能 ピア表示修正
+
+
+:100644 100644 61dc6ee64a88bb8c717fc35d13d2e410a45de79c f881ad2496c193b5991730e6c1888f264f16c859 M	Assets/App/Scripts/Contents/Exchange/ExchangeCheckLayer.cs
+:100644 100644 15f9bf65fe4caf3b44f2a4bd548dcd0708c83760 7e550e2f810f4d2bec864fb7103d837f22f17ab1 M	Assets/Resources/UI/Exchange/ExchangeCheckLayer.prefab
+:100644 100644 c4dd99804a47106b4202165a868e6ff11290a810 c3d6b7a45c24939fb7ec63f87b055ef610ed77ae M	Assets/Resources/UI/Gift/GiftOpponentsLayer.prefab
+:100644 100644 eb895e3d63d1861a6187185ea32a971e66008f99 455ff4fc7364f02f1f051b976e0850ffb40be46e M	Assets/Resources/UI/Main/NotificationAreaLayer.prefab

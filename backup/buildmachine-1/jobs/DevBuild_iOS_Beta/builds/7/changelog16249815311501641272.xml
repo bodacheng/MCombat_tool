@@ -1,0 +1,23 @@
+commit d3235b249e36e40dcc872f2879953114e0cda9ba
+tree f2c3754d8305af9fb230ed0937a3130f47579a36
+parent 51dbbffd41563dab6b7d3328bbb800bfac3f52fe
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 21:14:12 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 21:14:12 +0900
+
+    P3_OUTSIDEは対象から抜くようにとせじんさんからあったので対応
+
+
+:100644 100644 38ba7c162313bdfcb4cf08f1cfd2ac6886d77f62 3c0e16203c2aea6c5054f3a5ac90538a34d8862f M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 66e7b28c5dc6d305bece281ea3d6bf0c60f4e710 26b5351964f32facd3e5295053450c0b0d2da07e M	pipeline_script/DevBuild/ios/devbuild.groovy
+commit 51dbbffd41563dab6b7d3328bbb800bfac3f52fe
+tree 6247399229f6b7cc5cb837bc3cd8ebad96a89b14
+parent 136a4c05a25b61a3aa518d3707145fd09e53cfe0
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 21:12:59 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-03-17 21:12:59 +0900
+
+    通知の絵文字変更及び配布グループの整理
+
+
+:100644 100644 00b900f2e7e69656664d586863199a1f84b665a4 651f3bac863fd4c9f3f9b268680f243fdec611d5 M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 24e2d46017f7fe02214ed7837c811ecdf5b181f4 dfd6390d9a7bfe700ca48e01848d6707d57840a8 M	pipeline_script/DevBuild/ios/build_beta.groovy
+:100644 100644 18da3a9ba3e0a2ca4dba347f27e9147a9f2c6a76 2aff28b23235eb963a4537ad24d48b72eae4be09 M	pipeline_script/utils/authUtility.groovy

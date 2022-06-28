@@ -1,0 +1,20 @@
+commit d545f28891d5bfdeff20fa528b4d73bd32a1b95b
+tree 76390e087443f6d6d3010f01e3a23836dbfac81b
+parent 7f431c39b361aecbe1b0db12d4fc4365242e8086
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-13 16:05:50 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-13 16:05:50 +0900
+
+    revert HDR setting on photo
+
+
+:100644 100644 5b5450a5f05d0353e398db9be00699ffef3b99b7 ea0554428e2351cfd2d0c4325a554c430489976e M	Assets/App/Scripts/Contents/Photo/PhotoTop/PhotoTopModel.cs
+commit 7f431c39b361aecbe1b0db12d4fc4365242e8086
+tree 0822c9ea80f5c98cff773082f0e2e1c4d369d1a3
+parent efbab9b9380e07e725f5dcf8c4b3551e7a2c0635
+author shin donggun <shin_donggun@cocone.co.jp> 2022-06-13 15:23:31 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-06-13 15:23:31 +0900
+
+    add null check
+
+
+:100644 100644 9bd0a5e33494a986bf00865afd3a78ceeb55d2b7 74151743c52ade23227b3d8023da1536d19fe271 M	Assets/App/Scripts/View/Avatar/MannequinController.cs

@@ -1,0 +1,34 @@
+commit 4bb7c361a372395e8d3d45c00933d5c1e214ee4a
+tree fb7dcca760ab30e1aa62b50b07c929f60b84062d
+parent d9be52c79f89750a3d2811ae7c641a5fcae19d05
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-17 20:11:50 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-17 20:11:50 +0900
+
+    nullチェック
+
+
+:100644 100644 60c3d40ac9148d6e6d3bcad582a95c017cfe14d2 0adf2a543246aeb7f621784667f2bef340176480 M	Assets/App/Scripts/Common/UI/UserLayout.cs
+commit d9be52c79f89750a3d2811ae7c641a5fcae19d05
+tree 438b9766b07e7b42dd4459c26160e764ab7391a0
+parent 4ad9c7bde461c0f948d680042563171d2135012f
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-17 19:39:13 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-17 19:39:13 +0900
+
+    フレンド申請時にダイアログ表示
+
+
+:100644 100644 ed09ebfb6176fd1f5f87b806f2155bfb1c82e349 2243ebed64db09f8f717e19a4257144a1d0e3d14 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 06ecaecf5b84040e443bdd50521032edcb579bd3 efbe561c70e4d844023c42d69badb4d3cbadeaaa M	Assets/App/Scripts/Contents/Friend/FriendService.cs
+:100644 100644 bfbb2198373283207590e31cf7c0ed537a738929 014fe099d2290605d2021d461ff40e3303aa176e M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 e9daa9ec4cca14d313954815d4ea72f3f1a6ff7c 1958956769a86a943d2f96ffa944722de28a717f M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+commit 4ad9c7bde461c0f948d680042563171d2135012f
+tree 0c622f251008aa7293011119df5a847de7dfc7ce
+parent 032ca12ea2c783d407c97766823032040cf80409
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-17 19:20:58 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-17 19:20:58 +0900
+
+    検索情報リセット
+
+
+:100644 100644 9af1a052def4b9a144741dd8b6c25f5adf34d220 ed09ebfb6176fd1f5f87b806f2155bfb1c82e349 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 3f44f94264e9a502cde25c610ed802fd0d241853 afe167eb547f7c5fa03abc8eb88a5dd3c4ac4647 M	Assets/App/Scripts/Contents/Friend/FriendModel.cs

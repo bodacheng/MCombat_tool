@@ -1,0 +1,106 @@
+commit 6f580c121de9c6f814fc21fb5b47f7224ac0605f
+tree 170545a07060788bf39d047bc6454effa260c341
+parent e1ec5e507119e99ed935562dd609abeba1664e78
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 17:37:16 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 17:39:22 +0900
+
+    fix default material
+
+
+:100644 100644 0ac77aea895ff5c7913e4fe870219704b580b507 08860d66726d1c7cc5b9f72262ebf306e88ab482 M	Assets/App/Materials/BasicMaterials/Mat_FaceCheek.mat
+:100644 100644 0fd07401252bac4899ce58d2838c10c98f354e31 afdcbbe6f5bbdce9ee4d29f2e9d830018fdd264a M	Assets/App/Materials/BasicMaterials/Mat_FaceEye.mat
+:100644 100644 dba8636cd635aedf7aca587facdb5614f780149b 3a61df89c970a6d468f99a81cf4b72101007cc6b M	Assets/App/Materials/BasicMaterials/Mat_FaceEyeBrow.mat
+:100644 100644 e0fc3d50122e1de9b10cc3ed5eda334311bc54a9 20c01c6cc381097ca867fed43d6565d7415d112f M	Assets/App/Materials/BasicMaterials/Mat_FaceMouth.mat
+:100644 100644 28e98cc22d5416eaa3c63bba6d15a52bc52eeddd 4987b94ff3edf8e0782d529714af293b2a4e6dbe M	Assets/App/Materials/LowMaterials/MatLow_FaceCheek.mat
+:100644 100644 7eb5f5a4d4f4e7e3b93235c583c070a58a0ca3dd 8247e5826bdd7eafc654516013ab4e0130bc97f0 M	Assets/App/Materials/LowMaterials/MatLow_FaceEye.mat
+:100644 100644 f52b43b1c73a55787e7d11e36beb2adc6955b196 133475061b276bd42ffea401a2d1ef3681274746 M	Assets/App/Materials/LowMaterials/MatLow_FaceEyeBrow.mat
+:100644 100644 bd06b1ac1029a428a5b7044efc27fe9d7a372137 efd3923457a939c2c4cfd909a814615108ccb7b9 M	Assets/App/Materials/LowMaterials/MatLow_FaceMouth.mat
+commit e1ec5e507119e99ed935562dd609abeba1664e78
+tree e82b8f93d77f443c5dad40cc3ff901459acfa055
+parent 7260e7022898301a0fe9d4e08080e213b93436bd
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 17:27:06 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 17:39:22 +0900
+
+    update common addressables
+
+
+:100644 100644 8949a7426bec7025f3c59d2f9ea06db3fdb93eae ba70d4ddfc5927ea2096ffa540e717873a6f4328 M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+:000000 100644 0000000000000000000000000000000000000000 cdacd9577b20dd6525ae923802ca8325f9a5947c A	Assets/AddressableAssetsData/AssetGroups/CommonItemShaders.asset
+:100644 100644 c03917cd8f4633af201e8b55b78c4f9ccf3cbe5c f59f569750f0bae17b5b22e31c0a2725f7d56c8b R079	Assets/AddressableAssetsData/AssetGroups/Schemas/FG0021SH02_ContentUpdateGroupSchema.asset.meta	Assets/AddressableAssetsData/AssetGroups/CommonItemShaders.asset.meta
+:100644 100644 16e88dc7ecdb95c625c4cec25718f108119d09d5 966c1580a93191866f37acb87ae169dd1ccf5125 M	Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset
+:100644 000000 64f27d02b0ccf97913667d58c91c0c099ac527d3 0000000000000000000000000000000000000000 D	Assets/AddressableAssetsData/AssetGroups/FG0021SH02.asset
+:100644 100644 6401cd99f275ee5a34071aba5067ab6c03774c39 aea2d2b6d16dbc8b831993ab54b0960a7be66df0 R091	Assets/AddressableAssetsData/AssetGroups/Schemas/FG0021SH02_BundledAssetGroupSchema.asset	Assets/AddressableAssetsData/AssetGroups/Schemas/CommonItemShaders_BundledAssetGroupSchema.asset
+:100644 100644 05eff6737d380a10c7134041ef012ad69a2f407a 39d16a9d9d6a219ee4a99e4b09a51b8a4e4285f6 R079	Assets/AddressableAssetsData/AssetGroups/FG0021SH02.asset.meta	Assets/AddressableAssetsData/AssetGroups/Schemas/CommonItemShaders_BundledAssetGroupSchema.asset.meta
+:100644 100644 a36ba76c61f974a2b1850e933e5249ae6f85d8d8 178426919ae584f80d8b62f90f450c8d9b241948 R075	Assets/AddressableAssetsData/AssetGroups/Schemas/FG0021SH02_ContentUpdateGroupSchema.asset	Assets/AddressableAssetsData/AssetGroups/Schemas/CommonItemShaders_ContentUpdateGroupSchema.asset
+:100644 100644 7a44553499d60ad88b837d6d2542e534d06bd0b5 91812e78cff8dc550781e3758fedf4bb7cdbb9be R079	Assets/AddressableAssetsData/AssetGroups/Schemas/FG0021SH02_BundledAssetGroupSchema.asset.meta	Assets/AddressableAssetsData/AssetGroups/Schemas/CommonItemShaders_ContentUpdateGroupSchema.asset.meta
+commit 7260e7022898301a0fe9d4e08080e213b93436bd
+tree fe7590efd732097b1d05a09392da58ca3ded83c5
+parent 0296c33bfbe61156ca35e80f3bfba4b4bc9b8886
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 15:33:15 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 17:39:21 +0900
+
+    update local asset setting
+
+
+:100644 100644 87e79f9d957c1f8f929f8a7499913f9068b9a682 d74397e4b222577b3ab623df6b744f4e4bfad108 M	Assets/AddressableAssetsData/Android/addressables_content_state.bin
+:100644 100644 0a14440d079170ceab7a208031b7763c2e4fb2c9 b3b99121997800dfe8726ae3cd688d2727e6eb32 M	Assets/AddressableAssetsData/AssetGroupTemplates/Packed Local Assets.asset
+:100644 100644 aae16767cafc71ff7469a83f966fe389ed34063c cd98c0e28c50d9ffdd0c7781c9da668ba55ed838 M	Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset
+commit 0296c33bfbe61156ca35e80f3bfba4b4bc9b8886
+tree 026e410314d48e7213e68e128e6984feae21d529
+parent c455e98b9b66f23d845c7ae1b78983875033cae9
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 12:04:44 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 17:39:21 +0900
+
+    change profile id
+
+
+:100644 100644 1facdf7695193dc33d29ad00b5db2b561894c199 8949a7426bec7025f3c59d2f9ea06db3fdb93eae M	Assets/AddressableAssetsData/AddressableAssetSettings.asset
+commit c455e98b9b66f23d845c7ae1b78983875033cae9
+tree 4639fefedc53939ffdbdd387b97e5e1ab9d33bc8
+parent 779e6305fb23d221cf2f98a27fd7a2a248b596b4
+author shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 11:39:09 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-02-06 17:39:20 +0900
+
+    change local assets setting
+
+
+:100644 100644 6f7582c2636021384f627b9c5de0a0bdbbbb9911 87e79f9d957c1f8f929f8a7499913f9068b9a682 M	Assets/AddressableAssetsData/Android/addressables_content_state.bin
+:100644 100644 a2d2ad647b4d13498bf74c28750dfc513d3becc8 0a14440d079170ceab7a208031b7763c2e4fb2c9 M	Assets/AddressableAssetsData/AssetGroupTemplates/Packed Local Assets.asset
+:100644 100644 0b3e5b0c5ac4d6ed75fd16b6add1642517e6f727 aae16767cafc71ff7469a83f966fe389ed34063c M	Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_BundledAssetGroupSchema.asset
+:100644 100644 c68247141ecfc0eff853512388b8cfdb9f169fab 384f3bace3b6dc4747a2b9f6cb56790303f55a61 M	Assets/AddressableAssetsData/AssetGroups/Schemas/Default Local Group_ContentUpdateGroupSchema.asset
+commit 769300d894744bf29cd12d85e577b2832d32b72c
+tree cbe2ab987e8eadd2472c511b724c582acc04ef48
+parent 14ec3630c4b38c0a6c8fc22d2ba22420dee8dbe6
+author ito.midori <ito_midori@cocone.co.jp> 2022-02-06 16:27:39 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-02-06 16:27:39 +0900
+
+    未使用変数削除
+
+
+:100644 100644 0171dcba73273118d0211e5039db0ac9bfe7d245 6dd042669e1b02ff1a8c5ef669881006119a9d8a M	Assets/App/Scripts/Contents/Tutorial/TutorialSpeechBalloon.cs
+commit 8cb1e4e381c281d0468ab5b7766787b8c5635638
+tree c99a4668f530511c0e6c71b2659e3cbdb7c23b39
+parent 51c66b96fbd8fe277f7d11d140606f3897e31a85
+author Masato Takeuchi <takeuchi_masato@cocone.co.jp> 2022-02-06 16:25:38 +0900
+committer Masato Takeuchi <takeuchi_masato@cocone.co.jp> 2022-02-06 16:25:38 +0900
+
+    【もようがえ】お出かけから自分の星に戻ってすぐにコーデ保存を行うとサムネイル表示が崩れる
+
+
+:100644 100644 640f9d95ab126abcbb3624288bd54d94455f4fed 869a5048024e990520085e76fd880470f36bcf2f M	Assets/App/Scripts/Scenes/Tutorial/TutorialWorldScene.cs
+:100644 100644 e335a7a494d39d77e3cdb60e73616a405824daa4 120d53f28d11e4e3c82dafa52786e8a498e8de71 M	Assets/App/Scripts/Scenes/WorldScene.UI.cs
+:100644 100644 b8069d95b7731e7c6b86b7df1f28053b46adbb5d 466fbc34fce32b2582be15631de3cb27fdc35f6c M	Assets/App/Scripts/Scenes/WorldScene.cs
+:100644 100644 088ced5d0a75dcc6f42d092ce86b84f64f2eee8e 6bec076eb7506a1fbec1c546d1b4340205718480 M	Assets/App/Scripts/View/Thumbnail/PlanetThumbnailCreator.cs
+:100644 100644 b5d0470f5a5f1c91c04c2b37bba84269479b2823 9c2520d689ff2f52c95b39c8260d9e5b9cb8e1bf M	Assets/App/Scripts/View/World/IWorldSceneDelegator.cs
+:100644 100644 ae0e366575a82670fcb15ad5a05d8a7667d7541c 7d55169af47bd0b4bba7d5bdacee190f5a61a4dc M	Assets/App/Scripts/View/World/WorldController.Action.cs
+commit 14ec3630c4b38c0a6c8fc22d2ba22420dee8dbe6
+tree 4a83799530e4b04d95732967bfcb23266ade1167
+parent 8b6757e32a733303b1d55848f1a093fe8b7f2ad6
+author ito.midori <ito_midori@cocone.co.jp> 2022-02-06 15:05:53 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-02-06 15:05:53 +0900
+
+    チュートリアル名前入力の文字数上限修正
+
+
+:100644 100644 e61b084fa03d61388185512684c3784dc8e41ef7 5c1e6fdcb1612df78ec2356bbf5136f7744b378c M	Assets/App/Scripts/Contents/Tutorial/TutorialNameInputDialog.cs
+:100644 100644 45ac266d87ba7dd043f10f742c43b2c69afe67c4 40586ca5efa845d984308551a7592b656ef468e1 M	Assets/App/Scripts/Scenes/Tutorial/Actions/Tutorial33NameHandler.cs

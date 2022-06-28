@@ -1,0 +1,1984 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1145.v7f2433caa07f">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>DevBuild_Android_Custom</upstreamProject>
+            <upstreamUrl>job/DevBuild_Android_Custom/</upstreamUrl>
+            <upstreamBuild>43</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UpstreamCause>
+                <upstreamProject>DevBuild_Android_Period</upstreamProject>
+                <upstreamUrl>job/DevBuild_Android_Period/</upstreamUrl>
+                <upstreamBuild>14</upstreamBuild>
+                <upstreamCauses>
+                  <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+                </upstreamCauses>
+              </hudson.model.Cause_-UpstreamCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamNodeAction plugin="pipeline-build-step@2.13">
+      <upstreamNodeId>64</upstreamNodeId>
+      <upstreamRunId>DevBuild_Android_Custom#43</upstreamRunId>
+    </org.jenkinsci.plugins.workflow.support.steps.build.BuildUpstreamNodeAction>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <com.syhuang.hudson.plugins.listgitbranchesparameter.ListGitBranchesParameterValue plugin="list-git-branches-parameter@0.0.9">
+          <name>BRANCH</name>
+          <description></description>
+          <value>master</value>
+        </com.syhuang.hudson.plugins.listgitbranchesparameter.ListGitBranchesParameterValue>
+        <hudson.model.TextParameterValue>
+          <name>RELEASENOTE</name>
+          <description>リリースノートです（appcenterに表示します）</description>
+          <value>定期ビルド</value>
+        </hudson.model.TextParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@0.82">
+          <name>UNITY_VERSION</name>
+          <description>ビルドに利用するUnityのバージョンです</description>
+          <value>2020.3.21f1</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@0.82">
+          <name>BUILD_KIND</name>
+          <description>クライアントのビルド種別</description>
+          <value>QA</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@0.82">
+          <name>AssetKind</name>
+          <description>アセットの利用種別（Alpha,Test,Beta)</description>
+          <value>Dev</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <hudson.model.BooleanParameterValue>
+          <name>CLEAR_CACHE</name>
+          <description>Libraryフォルダーを削除してビルド（注意：ビルド時間が１時間ほど増えます。）</description>
+          <value>false</value>
+        </hudson.model.BooleanParameterValue>
+        <hudson.model.BooleanParameterValue>
+          <name>needCleanWorkspace</name>
+          <description>ワークスペースのクリーン</description>
+          <value>false</value>
+        </hudson.model.BooleanParameterValue>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue plugin="extended-choice-parameter@0.82">
+          <name>ANDROID_ARCHS</name>
+          <description>ARM64がデフォルト。 beta/本番は両方向け。</description>
+          <value>ARM64;ARMv7</value>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>APPCENTER_API_TOKEN</name>
+          <description>AppCenter API TOKENを指定します（伏せ字にできるならしたほうがよいかもしれないが、パラメーター指定でみれそうなので・・・どうだろ）</description>
+          <value>ef6bb95d43d77829b8b87f301288273fba6e5d40</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames>
+        <string>BRANCH</string>
+        <string>RELEASENOTE</string>
+        <string>UNITY_VERSION</string>
+        <string>BUILD_KIND</string>
+        <string>AssetKind</string>
+        <string>ANDROID_ARCHS</string>
+        <string>APPCENTER_API_TOKEN</string>
+        <string>CLEAR_CACHE</string>
+        <string>needCleanWorkspace</string>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction plugin="buildtriggerbadge@251.vdf6ef853f3f5">
+      <cause class="hudson.model.Cause$UpstreamCause" reference="../../hudson.model.CauseAction/causeBag/entry/hudson.model.Cause_-UpstreamCause"/>
+    </org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.19">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@1.8.5">
+      <stagesUUID>20c8679c-5083-428a-bbf7-ac5b33f18def</stagesUUID>
+      <pipelineDefs>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@1.8.5">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>ワークスペースのクリーン</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">if (params.needCleanWorkspace) {
+                        cleanWs()
+                    }</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>groovy準備</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">checkout scm
+
+                    // To know files are checked out or not
+                    sh &apos;&apos;&apos;
+                        ls -lhrt
+                    &apos;&apos;&apos;
+
+                    // load git utility
+                    def utilisPath = &quot;pipeline_script/utils&quot;
+                    gitUtility = load &quot;${utilisPath}/gitUtility.groovy&quot;
+                    appcenterUtility = load &quot;${utilisPath}/appcenterUtility.groovy&quot;
+
+                    def slackNotifyClass = load &quot;${utilisPath}/notify/SlackNotify.groovy&quot;
+                    slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, &quot;p3-notify-slack-token&quot;, params.BUILD_KIND, BUILD_TARGET, &quot;&quot;)
+                    slackUtility = load &quot;${utilisPath}/notify/slackUtility.groovy&quot;
+                    versionInfomationUtility = load &quot;${utilisPath}/getVersionInfomationUtility.groovy&quot;
+                    buildUtility = load &quot;${utilisPath}/buildUtility.groovy&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>Git</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">def cause = currentBuild.getBuildCauses(&apos;hudson.model.Cause$UserIdCause&apos;)
+                    USERNAME = cause.userName
+
+                    BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
+
+                    checkout([$class: &apos;GitSCM&apos;,
+                        branches: [[name: BRANCH_NAME]],
+                        extensions: [
+                            [$class: &apos;GitLFSPull&apos;],
+                            [$class: &apos;CloneOption&apos;, timeout: 60],
+                            [$class: &apos;CheckoutOption&apos;, timeout: 60]
+                        ],
+                        gitTool: &apos;Default&apos;,
+                        userRemoteConfigs: [[credentialsId: &quot;$GIT_CREDENTIAL&quot;, url: &quot;$GIT_URL&quot;]]
+                    ])
+
+                    // Git情報の取得
+                    GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
+                    GIT_HASH = gitUtility.getGitRevision()</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>yaml取得/初期化</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">def yamlFile = &quot;${BUILD_CONFIG_DIR}/${BUILD_KIND}BuildSettings.yaml&quot;
+                    def script = $/eval &quot;cat ${yamlFile} | grep -o &apos;productName: .*$&apos; | sed -e &apos;s/productName: &apos;&apos;//&apos;&quot;/$
+                    PRODUCT_NAME = sh(script:&quot;${script}&quot;, returnStdout:true)
+                    PRODUCT_NAME = PRODUCT_NAME.replaceAll(&quot;\n&quot;, &quot;&quot;)
+                    println &apos;-------- PRODUCT_NAME:&apos; + PRODUCT_NAME
+
+                    yamlFile = &quot;${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml&quot;
+                    script = $/eval &quot;cat ${yamlFile} | grep -o &apos;Profile${AssetKind}: .*$&apos; | sed -e &apos;s/Profile${params.AssetKind}: &apos;&apos;//&apos;&quot;/$
+                    ASSET_PROFILE = sh(script:&quot;${script}&quot;, returnStdout:true)
+                    ASSET_PROFILE = ASSET_PROFILE.replaceAll(&quot;\n&quot;, &quot;&quot;)
+                    println &apos;-------- ASSET_PROFILE:&apos; + ASSET_PROFILE
+
+                    // キャッシュ削除が必要な場合Libraryフォルダーを削除
+                    if (params.CLEAR_CACHE)
+                    {
+                        dir(env.LIBRARY_PATH) {
+                            deleteDir()
+                        }
+                    }
+
+                    // ビルド前に出力ディレクトリの削除
+                    dir(env.OUTPUT_PATH) {
+                        deleteDir()
+                    }
+
+                    // 現在のジョブについての説明
+                    currentBuild.description = &quot;ビルド種別：${params.BUILD_KIND}\nアセット種別：${params.AssetKind}\nブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <options>
+                  <options>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTOption>
+                      <name>timeout</name>
+                      <args>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                          <key>
+                            <key>time</key>
+                          </key>
+                          <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                            <value class="int">60</value>
+                          </value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                          <key>
+                            <key>unit</key>
+                          </key>
+                          <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                            <value class="string">MINUTES</value>
+                          </value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTOption>
+                  </options>
+                  <inStage>true</inStage>
+                </options>
+                <name>Assets</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">StringBuilder commandBuilder = new StringBuilder()
+                    commandBuilder.append &quot;$UNITY_PATH&quot;
+                    commandBuilder.append &quot; -projectPath $WORKSPACE&quot;
+                    commandBuilder.append &quot; -quit -batchmode&quot;
+                    commandBuilder.append &quot; -executeMethod $ADDRESSABLE_METHOD&quot;
+                    commandBuilder.append &quot; -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt&quot;
+                    commandBuilder.append &quot; -buildTarget $BUILD_TARGET&quot;
+                    commandBuilder.append &quot; -assetProfile $ASSET_PROFILE&quot;
+
+                    sh(script:commandBuilder.toString(), returnStdout:false)</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <options>
+                  <options>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTOption>
+                      <name>timeout</name>
+                      <args>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                          <key>
+                            <key>time</key>
+                          </key>
+                          <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                            <value class="int">45</value>
+                          </value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                          <key>
+                            <key>unit</key>
+                          </key>
+                          <value class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+                            <value class="string">MINUTES</value>
+                          </value>
+                        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKeyValueOrMethodCallPair>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTOption>
+                  </options>
+                  <inStage>true</inStage>
+                </options>
+                <name>Unity</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">println &quot;androidArchitecture:&quot; + params.ANDROID_ARCHS
+
+                    StringBuilder commandBuilder = new StringBuilder()
+                    commandBuilder.append &quot;$UNITY_PATH&quot;
+                    commandBuilder.append &quot; -projectPath $WORKSPACE&quot;
+                    commandBuilder.append &quot; -quit -batchmode&quot;
+                    commandBuilder.append &quot; -executeMethod $UNITY_METHOD&quot;
+                    commandBuilder.append &quot; -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt&quot;
+                    commandBuilder.append &quot; -buildTarget $BUILD_TARGET&quot;
+                    commandBuilder.append &quot; -BuildNumber $BUILD_ID&quot;
+                    commandBuilder.append &quot; -OutputPath $OUTPUT_PATH&quot;
+                    commandBuilder.append &quot; -buildKind ${params.BUILD_KIND}&quot;
+                    commandBuilder.append &quot; -androidArchitectures &apos;${params.ANDROID_ARCHS}&apos;&quot;
+
+                    // apk作成
+                    sh(script:commandBuilder.toString(), returnStdout:false)</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>バージョン情報の取得/apk保存</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">versionName = versionInfomationUtility.getVersionName(&apos;android&apos;, &quot;./${OUTPUT_PATH}&quot;, PRODUCT_NAME)
+                    VERSION = versionName.replaceAll(&quot;&apos;&quot;, &apos;&apos;)
+                    println &apos;apk/aab versionName:&apos; + VERSION</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                        <name>archiveArtifacts</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>artifacts</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                                <value class="string">&quot;${OUTPUT_PATH}/${PRODUCT_NAME}.apk,&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                            </entry>
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>fingerprint</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="boolean">true</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>followSymlinks</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="boolean">false</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>AppCenterのアップロード</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">wrap([$class: &apos;BuildUser&apos;]) {
+                        APP_NAME = appcenterUtility.getAppCenterAppName(&quot;android&quot;, params.BUILD_KIND)
+                        BUILDER = env.BUILD_USER_ID
+
+                        println &apos;appcenterへのアップロード&apos;
+                        build job: &apos;Upload_AppCenter&apos;,
+                        parameters: [
+                        string(name: &apos;APPCENTER_API_TOKEN&apos;, value: params.APPCENTER_API_TOKEN),
+                        string(name: &apos;APP_NAME&apos;, value: APP_NAME),
+                        string(name: &apos;OUTPUT_DIR&apos;, value: OUTPUT_PATH),
+                        string(name: &apos;copyArtifacts_ProjectName&apos;, value: &apos;DevBuild_Android_Single&apos;),
+                        string(name: &apos;target_filter_artifact&apos;, value: &apos;&apos;),
+                        string(name: &apos;upstream_build_number&apos;, value: env.BUILD_NUMBER),
+                        string(name: &apos;upstream_build_user&apos;, value: BUILDER),
+                        string(name: &apos;APP_FILENAME&apos;, value: &quot;${PRODUCT_NAME}.apk&quot;),
+                        string(name: &apos;DISTRIBUTION_GROUPS&apos;, value: appcenterUtility.getAppCenterDistributionGroups()),
+                        text(name: &apos;RELEASENOTE&apos;, value: params.RELEASENOTE)]
+                    }
+
+                    RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
+                    println &quot;appcenter ReleaseID:${RELEASE_ID}&quot;</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>20c8679c-5083-428a-bbf7-ac5b33f18def</uuid>
+          </stages>
+          <postBuild>
+            <conditions>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>success</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                      <name>script</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>scriptBlock</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">def preFixReleaseNote = &quot;:kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}&quot;
+                def releaseNote = &quot;${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}&quot;
+
+                def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
+                println &quot;downloadURL:${downloadURL}&quot;
+                slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
+                slackNotify.SetBuildUser(USERNAME.toString() + &quot;/@&quot; + BUILDER)
+                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
+                slackNotify.SetReleaseNotes(releaseNote)
+                slackNotify.SetAssetKind(AssetKind)
+                slackNotify.SetBuildTime(currentBuild.durationString)
+                slackUtility.notifySlackSendMessage(slackNotify)
+
+                println &quot;ビルド所要時間${currentBuild.durationString}&quot;</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>always</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                      <name>archiveArtifacts</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>allowEmptyArchive</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="boolean">true</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>artifacts</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                              <value class="string">&quot;Logs/build_${BUILD_ID}_log.txt, Logs/assetbuild_${BUILD_ID}_log.txt&quot;</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                          </entry>
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>fingerprint</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="boolean">true</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>followSymlinks</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="boolean">false</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStep>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+            </conditions>
+          </postBuild>
+          <environment>
+            <variables class="linked-hash-map">
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>gitUtility</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>appcenterUtility</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>slackUtility</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>slackNotify</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>versionInfomationUtility</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>buildUtility</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>GIT_URL</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">https://git-1.cocone.jp/projectp3/p3-client</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>GIT_CREDENTIAL</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">p3_jenkins_gitlab</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>GIT_LOG</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>GIT_HASH</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>BRANCH_NAME</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>RELEASE_ID</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>APP_NAME</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>UNITY_PATH</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                  <value class="string">&quot;/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity&quot;</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>ANDROID_PALYAER_PATH</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                  <value class="string">&quot;/Applications/Unity/Hub/Editor/${UNITY_VERSION}/PlaybackEngines/AndroidPlayer&quot;</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>ANDROID_SDK_PATH</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                  <value class="string">&quot;${ANDROID_PALYAER_PATH}/SDK&quot;</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>AAPT2_PATH</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                  <value class="string">&quot;${ANDROID_SDK_PATH}/build-tools/30.0.2&quot;</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>PATH</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+                  <value class="string">&quot;${AAPT2_PATH}/:$PATH&quot;</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-GStringValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>BUILDER</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>UNITY_METHOD</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">Cocone.ProjectP3.Client.Build</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>ADDRESSABLE_METHOD</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">Cocone.ProjectP3.BuildAddressableAssets.BatchBuild</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>BUILD_TARGET</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">Android</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>PRODUCT_NAME</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>VERSION</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string"></value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>OUTPUT_PATH</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">build_android</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>BUILD_CONFIG_DIR</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">Assets/App/Editor/Build/Configs</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+            </variables>
+          </environment>
+          <agent>
+            <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+              <value class="string">DevBuild_JobNode</value>
+            </variables>
+            <agentType>
+              <key>label</key>
+            </agentType>
+          </agent>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+      </pipelineDefs>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder plugin="credentials@1087.1089.v2f1b_9a_b_040e4">
+      <boundCredentials class="concurrent-hash-map"/>
+    </com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder>
+    <hudson.plugins.git.util.BuildData plugin="git@4.11.3">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.11.0">
+              <sha1>ae7ab27d753d025d4b766075595e08b39004653b</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>26</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://git-1.cocone.jp/projectp3/p3-tools</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@2.13">
+      <revisionStates>
+        <entry>
+          <string>git https://git-1.cocone.jp/projectp3/p3-client</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+        <entry>
+          <string>git https://git-1.cocone.jp/projectp3/p3-tools</string>
+          <hudson.scm.SCMRevisionState_-None reference="../../entry/hudson.scm.SCMRevisionState_-None"/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2660.vb_c0412dc4e6d">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <hudson.plugins.git.util.BuildData plugin="git@4.11.3">
+      <buildsByBranchName>
+        <entry>
+          <string>origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.11.0">
+              <sha1>0479054a5d77fce4ad87b6f1aa011fbaa31a3dae</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/master</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>26</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>origin/release</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.11.0">
+              <sha1>7b6d5fecb101eda44e6089d05411f03377b90c10</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/release</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@3.11.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>19</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>refs/remotes/origin/feature/test</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.11.0">
+              <sha1>6f9e67c6a81723bea8b9d9db5acc8697188f8e79</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/feature/test</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision plugin="git-client@3.11.0">
+              <sha1 reference="../../marked/sha1"/>
+              <branches class="list">
+                <hudson.plugins.git.Branch reference="../../../marked/branches/hudson.plugins.git.Branch"/>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>22</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://git-1.cocone.jp/projectp3/p3-client</string>
+      </remoteUrls>
+      <index>2</index>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>Logs/build_26_log.txt</string>
+          <string>a6669c71bf0ed09c00baad3160936038</string>
+        </entry>
+        <entry>
+          <string>Logs/assetbuild_26_log.txt</string>
+          <string>8e3be3929fa2e6a76a7f5d55ab6f394b</string>
+        </entry>
+        <entry>
+          <string>pokepiaQA.apk</string>
+          <string>1631ff58c3e48f7833d2771e4cdc755d</string>
+        </entry>
+        <entry>
+          <string>build_android/pokepiaQA.apk</string>
+          <string>1631ff58c3e48f7833d2771e4cdc755d</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.32"/>
+  </actions>
+  <queueId>9193</queueId>
+  <timestamp>1655929737790</timestamp>
+  <startTime>1655929737816</startTime>
+  <result>SUCCESS</result>
+  <description>ビルド種別：QA
+アセット種別：Dev
+ブランチ：master
+GITLOG：commit 0479054a5d77fce4ad87b6f1aa011fbaa31a3dae
+Author: ito.midori &lt;ito_midori@cocone.co.jp&gt;
+
+    プロフィールオープンでモーダル開くSE追加
+</description>
+  <duration>1201160</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>pipeline {
+    agent {
+        label &quot;DevBuild_JobNode&quot;
+    }
+
+    // param.ANDROID_ARCHSは、&quot;ARMv7;ARM64&quot;のように、複数の場合は;を入れて指定する
+    environment {
+        // groovy Files
+        gitUtility = &apos;&apos;
+        appcenterUtility = &apos;&apos;
+        slackUtility = &apos;&apos;
+        slackNotify = &apos;&apos;
+        versionInfomationUtility = &apos;&apos;
+        buildUtility = &apos;&apos;
+
+        // git
+        GIT_URL=&apos;https://git-1.cocone.jp/projectp3/p3-client&apos;
+        GIT_CREDENTIAL=&apos;p3_jenkins_gitlab&apos;
+        GIT_LOG = &apos;&apos;
+        GIT_HASH = &apos;&apos;
+
+        // branch name
+        BRANCH_NAME = &apos;&apos;
+
+        // appcenter
+        RELEASE_ID = &apos;&apos;
+        APP_NAME = &apos;&apos;
+
+        // environment values
+        UNITY_PATH=&quot;/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity&quot;
+        ANDROID_PALYAER_PATH=&quot;/Applications/Unity/Hub/Editor/${UNITY_VERSION}/PlaybackEngines/AndroidPlayer&quot;
+        ANDROID_SDK_PATH=&quot;${ANDROID_PALYAER_PATH}/SDK&quot;
+        AAPT2_PATH=&quot;${ANDROID_SDK_PATH}/build-tools/30.0.2&quot;
+        PATH = &quot;${AAPT2_PATH}/:$PATH&quot;
+        BUILDER = &apos;&apos;
+
+        // build configuration
+        UNITY_METHOD=&apos;Cocone.ProjectP3.Client.Build&apos;
+        ADDRESSABLE_METHOD=&apos;Cocone.ProjectP3.BuildAddressableAssets.BatchBuild&apos;
+        BUILD_TARGET=&apos;Android&apos;
+        PRODUCT_NAME=&apos;&apos;
+        VERSION=&quot;&quot;
+        OUTPUT_PATH=&apos;build_android&apos;
+        BUILD_CONFIG_DIR=&apos;Assets/App/Editor/Build/Configs&apos;
+    }
+
+    stages {
+        stage (&apos;ワークスペースのクリーン&apos;) {
+            steps {
+                script {
+                    if (params.needCleanWorkspace) {
+                        cleanWs()
+                    }
+                }
+            }
+        }
+        stage (&apos;groovy準備&apos;) {
+            steps {
+                script {
+                    // Git checkout before load source the file
+                    checkout scm
+
+                    // To know files are checked out or not
+                    sh &apos;&apos;&apos;
+                        ls -lhrt
+                    &apos;&apos;&apos;
+
+                    // load git utility
+                    def utilisPath = &quot;pipeline_script/utils&quot;
+                    gitUtility = load &quot;${utilisPath}/gitUtility.groovy&quot;
+                    appcenterUtility = load &quot;${utilisPath}/appcenterUtility.groovy&quot;
+
+                    def slackNotifyClass = load &quot;${utilisPath}/notify/SlackNotify.groovy&quot;
+                    slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, &quot;p3-notify-slack-token&quot;, params.BUILD_KIND, BUILD_TARGET, &quot;&quot;)
+                    slackUtility = load &quot;${utilisPath}/notify/slackUtility.groovy&quot;
+                    versionInfomationUtility = load &quot;${utilisPath}/getVersionInfomationUtility.groovy&quot;
+                    buildUtility = load &quot;${utilisPath}/buildUtility.groovy&quot;
+                }
+            }
+        }
+        stage(&apos;Git&apos;) {
+            steps {
+                script {
+                    def cause = currentBuild.getBuildCauses(&apos;hudson.model.Cause$UserIdCause&apos;)
+                    USERNAME = cause.userName
+
+                    BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
+
+                    checkout([$class: &apos;GitSCM&apos;,
+                        branches: [[name: BRANCH_NAME]],
+                        extensions: [
+                            [$class: &apos;GitLFSPull&apos;],
+                            [$class: &apos;CloneOption&apos;, timeout: 60],
+                            [$class: &apos;CheckoutOption&apos;, timeout: 60]
+                        ],
+                        gitTool: &apos;Default&apos;,
+                        userRemoteConfigs: [[credentialsId: &quot;$GIT_CREDENTIAL&quot;, url: &quot;$GIT_URL&quot;]]
+                    ])
+
+                    // Git情報の取得
+                    GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
+                    GIT_HASH = gitUtility.getGitRevision()
+                }
+            }
+        }
+        stage(&apos;yaml取得/初期化&apos;) {
+            steps {
+                script {
+                    // TODO:read yamlに直したい
+                    def yamlFile = &quot;${BUILD_CONFIG_DIR}/${BUILD_KIND}BuildSettings.yaml&quot;
+                    def script = $/eval &quot;cat ${yamlFile} | grep -o &apos;productName: .*$&apos; | sed -e &apos;s/productName: &apos;&apos;//&apos;&quot;/$
+                    PRODUCT_NAME = sh(script:&quot;${script}&quot;, returnStdout:true)
+                    PRODUCT_NAME = PRODUCT_NAME.replaceAll(&quot;\n&quot;, &quot;&quot;)
+                    println &apos;-------- PRODUCT_NAME:&apos; + PRODUCT_NAME
+
+                    yamlFile = &quot;${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml&quot;
+                    script = $/eval &quot;cat ${yamlFile} | grep -o &apos;Profile${AssetKind}: .*$&apos; | sed -e &apos;s/Profile${params.AssetKind}: &apos;&apos;//&apos;&quot;/$
+                    ASSET_PROFILE = sh(script:&quot;${script}&quot;, returnStdout:true)
+                    ASSET_PROFILE = ASSET_PROFILE.replaceAll(&quot;\n&quot;, &quot;&quot;)
+                    println &apos;-------- ASSET_PROFILE:&apos; + ASSET_PROFILE
+
+                    // キャッシュ削除が必要な場合Libraryフォルダーを削除
+                    if (params.CLEAR_CACHE)
+                    {
+                        dir(env.LIBRARY_PATH) {
+                            deleteDir()
+                        }
+                    }
+
+                    // ビルド前に出力ディレクトリの削除
+                    dir(env.OUTPUT_PATH) {
+                        deleteDir()
+                    }
+
+                    // 現在のジョブについての説明
+                    currentBuild.description = &quot;ビルド種別：${params.BUILD_KIND}\nアセット種別：${params.AssetKind}\nブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}&quot;
+                }
+            }
+        }
+        stage(&apos;Assets&apos;) {
+            options {
+                // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
+                timeout(time: 60, unit: &apos;MINUTES&apos;)
+            }
+            steps {
+                script {
+                    StringBuilder commandBuilder = new StringBuilder()
+                    commandBuilder.append &quot;$UNITY_PATH&quot;
+                    commandBuilder.append &quot; -projectPath $WORKSPACE&quot;
+                    commandBuilder.append &quot; -quit -batchmode&quot;
+                    commandBuilder.append &quot; -executeMethod $ADDRESSABLE_METHOD&quot;
+                    commandBuilder.append &quot; -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt&quot;
+                    commandBuilder.append &quot; -buildTarget $BUILD_TARGET&quot;
+                    commandBuilder.append &quot; -assetProfile $ASSET_PROFILE&quot;
+
+                    sh(script:commandBuilder.toString(), returnStdout:false)
+                }
+            }
+        }
+        stage(&apos;Unity&apos;) {
+            options {
+                // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
+                // androidはiosよりもステージは長くなる（xcode/exportを内包するため）
+                timeout(time: 45, unit: &apos;MINUTES&apos;)
+            }
+            steps {
+                script {
+                    println &quot;androidArchitecture:&quot; + params.ANDROID_ARCHS
+
+                    StringBuilder commandBuilder = new StringBuilder()
+                    commandBuilder.append &quot;$UNITY_PATH&quot;
+                    commandBuilder.append &quot; -projectPath $WORKSPACE&quot;
+                    commandBuilder.append &quot; -quit -batchmode&quot;
+                    commandBuilder.append &quot; -executeMethod $UNITY_METHOD&quot;
+                    commandBuilder.append &quot; -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt&quot;
+                    commandBuilder.append &quot; -buildTarget $BUILD_TARGET&quot;
+                    commandBuilder.append &quot; -BuildNumber $BUILD_ID&quot;
+                    commandBuilder.append &quot; -OutputPath $OUTPUT_PATH&quot;
+                    commandBuilder.append &quot; -buildKind ${params.BUILD_KIND}&quot;
+                    commandBuilder.append &quot; -androidArchitectures &apos;${params.ANDROID_ARCHS}&apos;&quot;
+
+                    // apk作成
+                    sh(script:commandBuilder.toString(), returnStdout:false)
+                }
+            }
+        }
+        stage(&apos;バージョン情報の取得/apk保存&apos;) {
+            steps {
+                script {
+                    versionName = versionInfomationUtility.getVersionName(&apos;android&apos;, &quot;./${OUTPUT_PATH}&quot;, PRODUCT_NAME)
+                    VERSION = versionName.replaceAll(&quot;&apos;&quot;, &apos;&apos;)
+                    println &apos;apk/aab versionName:&apos; + VERSION
+                }
+
+                archiveArtifacts artifacts: &quot;${OUTPUT_PATH}/${PRODUCT_NAME}.apk,&quot;,
+                fingerprint: true,
+                followSymlinks: false
+            }
+        }
+        stage(&apos;AppCenterのアップロード&apos;) {
+            steps {
+                script {
+                    wrap([$class: &apos;BuildUser&apos;]) {
+                        APP_NAME = appcenterUtility.getAppCenterAppName(&quot;android&quot;, params.BUILD_KIND)
+                        BUILDER = env.BUILD_USER_ID
+
+                        println &apos;appcenterへのアップロード&apos;
+                        build job: &apos;Upload_AppCenter&apos;,
+                        parameters: [
+                        string(name: &apos;APPCENTER_API_TOKEN&apos;, value: params.APPCENTER_API_TOKEN),
+                        string(name: &apos;APP_NAME&apos;, value: APP_NAME),
+                        string(name: &apos;OUTPUT_DIR&apos;, value: OUTPUT_PATH),
+                        string(name: &apos;copyArtifacts_ProjectName&apos;, value: &apos;DevBuild_Android_Single&apos;),
+                        string(name: &apos;target_filter_artifact&apos;, value: &apos;&apos;),
+                        string(name: &apos;upstream_build_number&apos;, value: env.BUILD_NUMBER),
+                        string(name: &apos;upstream_build_user&apos;, value: BUILDER),
+                        string(name: &apos;APP_FILENAME&apos;, value: &quot;${PRODUCT_NAME}.apk&quot;),
+                        string(name: &apos;DISTRIBUTION_GROUPS&apos;, value: appcenterUtility.getAppCenterDistributionGroups()),
+                        text(name: &apos;RELEASENOTE&apos;, value: params.RELEASENOTE)]
+                    }
+
+                    RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
+                    println &quot;appcenter ReleaseID:${RELEASE_ID}&quot;
+                }
+            }
+        }
+    }
+    post {
+        success {
+            // NOTE:GITのLogを付加したいので子ジョブで成功通知を出す
+            script {
+                def preFixReleaseNote = &quot;:kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}&quot;
+                def releaseNote = &quot;${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}&quot;
+
+                def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
+                println &quot;downloadURL:${downloadURL}&quot;
+                slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
+                slackNotify.SetBuildUser(USERNAME.toString() + &quot;/@&quot; + BUILDER)
+                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
+                slackNotify.SetReleaseNotes(releaseNote)
+                slackNotify.SetAssetKind(AssetKind)
+                slackNotify.SetBuildTime(currentBuild.durationString)
+                slackUtility.notifySlackSendMessage(slackNotify)
+
+                println &quot;ビルド所要時間${currentBuild.durationString}&quot;
+            }
+        }
+        always {
+            // ログ保存
+            archiveArtifacts allowEmptyArchive: true,
+            artifacts: &quot;Logs/build_${BUILD_ID}_log.txt, Logs/assetbuild_${BUILD_ID}_log.txt&quot;,
+            fingerprint: true,
+            followSymlinks: false
+        }
+    }
+}
+</script>
+    <loadedScripts class="map">
+      <entry>
+        <string>Script3</string>
+        <string>/**
+ * スラック通知ようのクラス
+ */
+class SlackNotify {
+    def channels
+    def credentialsId
+    def botUserName = &quot;P3 Jenkins ジョブ通知&quot;
+    def buildKind
+    def assetKind
+    def platform
+    def releaseNote
+    def downloadURL
+    def buildUser
+    def version
+    def buildTime
+
+    // for appcenter
+    def appcenterRleaseId
+
+    // for git infomation
+    def branch
+    def hash
+
+    def SlackNotify(channels, credentialsId, buildKind, platform, releaseNote) {
+        this.channels = channels
+        this.credentialsId = credentialsId
+        this.buildKind = buildKind
+        this.platform = platform
+        this.releaseNote = releaseNote
+    }
+
+    /**
+     * ビルドユーザーは後で設定できた方が楽の場合があるので
+     * @param user  [description]
+     */
+    void SetBuildUser(user) {
+        this.buildUser = user
+    }
+
+    /**
+     * アセット種別を指定
+     * @param assetKind  [description]
+     */
+    void SetAssetKind(kind) {
+        this.assetKind = kind
+    }
+
+    /**
+     * releaseNoteを設定する
+     * @param releaseNote  [description]
+     */
+    void SetReleaseNotes(releaseNote) {
+        this.releaseNote = releaseNote
+    }
+
+    /**
+     * appcenterの情報を後から入れられるようにしておく
+     * @param id           [description]
+     * @param downloadURL  [description]
+     */
+    void SetAppCenterInfomation(id, downloadURL, version) {
+        this.appcenterRleaseId = id
+        this.downloadURL = downloadURL
+        this.version = version
+    }
+
+    /**
+     * Gitのブランチ情報などを後から付与
+     * @param branch  [description]
+     * @param hash    [description]
+     */
+    void SetGitInfomation(branch, hash) {
+        this.branch = branch
+        this.hash = hash
+    }
+
+    /**
+     * かかったビルド時間の設定
+     * @param buildTime  [description]
+     */
+    void SetBuildTime(buildTime) {
+        this.buildTime = buildTime
+    }
+}
+
+return SlackNotify.class
+</string>
+      </entry>
+      <entry>
+        <string>Script4</string>
+        <string>
+// スタイルデータ
+STYLE_DATA = [
+                    &quot;Android_Dev&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:droid:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;Android Dev&quot;,
+                        &quot;NAME&quot; : &quot;Android Dev&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;A3C63E&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;ddf29d&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/droid/5636dcbfb58c7823.png&quot;
+                    ],
+                    &quot;Android_QA&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:droid:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;Android QA&quot;,
+                        &quot;NAME&quot; : &quot;Android QA&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;A3C63E&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;ddf29d&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/droid/5636dcbfb58c7823.png&quot;
+                    ],
+                	&quot;Android_Beta&quot; : [
+                		&quot;BOT_ICON&quot; : &quot;:droid:&quot;,
+                		&quot;SHORT_NAME&quot; : &quot;Android Beta&quot;,
+                		&quot;NAME&quot; : &quot;Android Beta&quot;,
+                		&quot;BAR_COLOR_1&quot; : &quot;A3C63E&quot;,
+                		&quot;BAR_COLOR_2&quot; : &quot;ddf29d&quot;,
+                		&quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/droid/5636dcbfb58c7823.png&quot;
+                	],
+                    &quot;Android_Release&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:droid:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;Android 本番&quot;,
+                        &quot;NAME&quot; : &quot;Android 本番&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;A3C63E&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;ddf29d&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/droid/5636dcbfb58c7823.png&quot;
+                    ],
+                    &quot;iOS_Dev&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:apple3:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;iOS Dev&quot;,
+                        &quot;NAME&quot; : &quot;iOS Dev&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;#ffffff&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;#d4d9d8&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/apple2/d1fb273e31a23336.png&quot;
+                    ],
+                    &quot;iOS_QA&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:apple3:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;iOS QA&quot;,
+                        &quot;NAME&quot; : &quot;iOS QA&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;#ffffff&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;#d4d9d8&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/apple2/d1fb273e31a23336.png&quot;
+                    ],
+                    &quot;iOS_Beta&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:apple3:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;iOS Beta&quot;,
+                        &quot;NAME&quot; : &quot;iOS Beta&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;#ffffff&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;#d4d9d8&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/apple2/d1fb273e31a23336.png&quot;
+                    ],
+                    &quot;iOS_Release&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:apple3:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;iOS 本番&quot;,
+                        &quot;NAME&quot; : &quot;iOS 本番&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;#ffffff&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;#d4d9d8&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/apple2/d1fb273e31a23336.png&quot;
+                    ],
+                    &quot;Asset_Dev&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:asset:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;Asset Dev|QA&quot;,
+                        &quot;NAME&quot; : &quot;Asset Dev|QA&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;#49829e&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;#a8d8f0&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/apple2/d1fb273e31a23336.png&quot;
+                    ],
+                    &quot;Asset_Test&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:asset:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;Asset Test&quot;,
+                        &quot;NAME&quot; : &quot;Asset Test&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;#49829e&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;#a8d8f0&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/apple2/d1fb273e31a23336.png&quot;
+                    ],
+                    &quot;Asset_Beta&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:asset:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;Asset Beta&quot;,
+                        &quot;NAME&quot; : &quot;Asset Beta&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;#49829e&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;#a8d8f0&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/apple2/d1fb273e31a23336.png&quot;
+                    ],
+                    &quot;Asset_Release&quot; : [
+                        &quot;BOT_ICON&quot; : &quot;:asset:&quot;,
+                        &quot;SHORT_NAME&quot; : &quot;Asset 本番&quot;,
+                        &quot;NAME&quot; : &quot;Asset 本番&quot;,
+                        &quot;BAR_COLOR_1&quot; : &quot;#49829e&quot;,
+                        &quot;BAR_COLOR_2&quot; : &quot;#a8d8f0&quot;,
+                        &quot;ICON_1&quot; : &quot;https://emoji.slack-edge.com/T02BEABAP/apple2/d1fb273e31a23336.png&quot;
+                    ],
+            	]
+
+/**
+ * Slack通知を行う（bot/attachments利用)
+ * @param platform iOS or Android
+ */
+void notifySlackSendMessage(SlackNotify slackNotify) {
+    def toMessageTarget = slackNotify.platform + &quot;_&quot; + slackNotify.buildKind
+    def style = STYLE_DATA[toMessageTarget]
+    println &quot;send message for Platform&quot; + toMessageTarget
+    def attachments = [
+                        [
+                            &quot;fallback&quot;: style[&quot;SHORT_NAME&quot;] + &quot;のダウロードが可能になりました&quot;,
+                            &quot;color&quot;: style[&quot;BAR_COLOR_1&quot;],
+                            &quot;author_name&quot;: style[&quot;NAME&quot;],
+                            &quot;author_icon&quot;: style[&quot;ICON_1&quot;],
+                            &quot;title&quot;: &quot;Click here to Download&quot;,
+                            &quot;text&quot; : slackNotify.releaseNote,
+                            &quot;title_link&quot;: slackNotify.downloadURL,
+                        ],
+                        [
+                            &quot;color&quot;: style[&quot;BAR_COLOR_2&quot;],
+                            &quot;fields&quot;: [
+                                [
+                                    &quot;title&quot;: &quot;Branch&quot;,
+                                    &quot;value&quot;: slackNotify.branch,
+                                    &quot;short&quot;: false
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Hash&quot;,
+                                    &quot;value&quot;: slackNotify.hash,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Version&quot;,
+                                    &quot;value&quot;: slackNotify.version,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;BuildKind&quot;,
+                                    &quot;value&quot;: slackNotify.buildKind,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;AssetKind&quot;,
+                                    &quot;value&quot;: slackNotify.assetKind,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Release ID&quot;,
+                                    &quot;value&quot;: slackNotify.appcenterRleaseId,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Builder&quot;,
+                                    &quot;value&quot;: slackNotify.buildUser,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;ビルド時間&quot;,
+                                    &quot;value&quot;: slackNotify.buildTime,
+                                    &quot;short&quot;: true
+                                ]
+                            ],
+
+                            &quot;footer&quot;: style[&quot;SHORT_NAME&quot;],
+                            &quot;footer_icon&quot;: style[&quot;ICON_1&quot;],
+                            &quot;ts&quot;: &quot;hogehogetime&quot;
+                        ]
+                    ]
+
+    slackSend channel:slackNotify.channels,
+    teamDomain: env.SLACK_DOMAIN,
+    tokenCredentialId: slackNotify.credentialsId,
+    botUser: true,
+    iconEmoji: style[&quot;BOT_ICON&quot;],
+    username: slackNotify.botUserName,
+    attachments: attachments
+}
+
+/**
+ * アセットジョブを走らせた場合の成功通知
+ * @param slackNotify  [description]
+ */
+void notifySlackSendMessageForAsset(SlackNotify slackNotify) {
+    def toMessageTarget =  &quot;Asset_&quot; + slackNotify.assetKind
+    def style = STYLE_DATA[toMessageTarget]
+    println &quot;send message for Asset &quot; + toMessageTarget
+
+    def attachments = [
+                        [
+                            &quot;fallback&quot;: style[&quot;SHORT_NAME&quot;] + &quot;のビルドが完了しました。&quot;,
+                            &quot;color&quot;: style[&quot;BAR_COLOR_1&quot;],
+                            &quot;author_name&quot;: style[&quot;NAME&quot;],
+                            &quot;author_icon&quot;: style[&quot;ICON_1&quot;],
+                            &quot;title&quot;: &quot;Success Upload Asset&quot;,
+                            &quot;text&quot; : slackNotify.releaseNote,
+                        ],
+                        [
+                            &quot;color&quot;: style[&quot;BAR_COLOR_2&quot;],
+                            &quot;fields&quot;: [
+                                [
+                                    &quot;title&quot;: &quot;Branch&quot;,
+                                    &quot;value&quot;: slackNotify.branch,
+                                    &quot;short&quot;: false
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Hash&quot;,
+                                    &quot;value&quot;: slackNotify.hash,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Target&quot;,
+                                    &quot;value&quot;: slackNotify.assetKind,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Builder&quot;,
+                                    &quot;value&quot;: slackNotify.buildUser,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;ビルド時間&quot;,
+                                    &quot;value&quot;: slackNotify.buildTime,
+                                    &quot;short&quot;: true
+                                ]
+                            ],
+
+                            &quot;footer&quot;: style[&quot;SHORT_NAME&quot;],
+                            &quot;footer_icon&quot;: style[&quot;ICON_1&quot;],
+                            &quot;ts&quot;: &quot;hogehogetime&quot;
+                        ]
+                    ]
+
+    slackSend channel:slackNotify.channels,
+    teamDomain: env.SLACK_DOMAIN,
+    tokenCredentialId: slackNotify.credentialsId,
+    botUser: true,
+    iconEmoji: style[&quot;BOT_ICON&quot;],
+    username: slackNotify.botUserName,
+    attachments: attachments
+}
+
+/**
+ * Jobを叩いたタイミングで開始通知を出す
+ * @param slackNotify  [description]
+ */
+void notifyStartSlackSendMessage(SlackNotify slackNotify) {
+    def toMessageTarget = slackNotify.platform + &quot;_&quot; + slackNotify.buildKind
+    def style = STYLE_DATA[toMessageTarget]
+    println &quot;send message for Platform&quot; + toMessageTarget
+    def attachments = [
+                        [
+                            &quot;fallback&quot;: style[&quot;SHORT_NAME&quot;] + &quot;のジョブを開始します。&quot;,
+                            &quot;color&quot;: style[&quot;BAR_COLOR_1&quot;],
+                            &quot;author_name&quot;: style[&quot;NAME&quot;],
+                            &quot;author_icon&quot;: style[&quot;ICON_1&quot;],
+                            &quot;text&quot; : slackNotify.releaseNote,
+                        ],
+                        [
+                            &quot;color&quot;: style[&quot;BAR_COLOR_2&quot;],
+                            &quot;fields&quot;: [
+                                [
+                                    &quot;title&quot;: &quot;Branch&quot;,
+                                    &quot;value&quot;: slackNotify.branch,
+                                    &quot;short&quot;: false
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Target&quot;,
+                                    &quot;value&quot;: slackNotify.buildKind,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Builder&quot;,
+                                    &quot;value&quot;: slackNotify.buildUser,
+                                    &quot;short&quot;: true
+                                ]
+                            ],
+
+                            &quot;footer&quot;: style[&quot;SHORT_NAME&quot;],
+                            &quot;footer_icon&quot;: style[&quot;ICON_1&quot;],
+                            &quot;ts&quot;: &quot;hogehogetime&quot;
+                        ]
+                    ]
+
+    slackSend channel:slackNotify.channels,
+    teamDomain: env.SLACK_DOMAIN,
+    tokenCredentialId: slackNotify.credentialsId,
+    botUser: true,
+    iconEmoji: style[&quot;BOT_ICON&quot;],
+    username: slackNotify.botUserName,
+    attachments: attachments
+}
+
+/**
+ * Jobを叩いたタイミングで開始通知を出す(Assetビルドの通知)
+ * @param slackNotify  [description]
+ */
+void notifyStartSlackSendMessageAsset(SlackNotify slackNotify) {
+    def toMessageTarget = &quot;Asset_&quot; + slackNotify.assetKind
+    def style = STYLE_DATA[toMessageTarget]
+    println &quot;send message for Asset&quot; + toMessageTarget
+    def attachments = [
+                        [
+                            &quot;fallback&quot;: style[&quot;SHORT_NAME&quot;] + &quot;のジョブを開始します。&quot;,
+                            &quot;color&quot;: style[&quot;BAR_COLOR_1&quot;],
+                            &quot;author_name&quot;: style[&quot;NAME&quot;],
+                            &quot;author_icon&quot;: style[&quot;ICON_1&quot;],
+                            &quot;text&quot; : slackNotify.releaseNote,
+                        ],
+                        [
+                            &quot;color&quot;: style[&quot;BAR_COLOR_2&quot;],
+                            &quot;fields&quot;: [
+                                [
+                                    &quot;title&quot;: &quot;Branch&quot;,
+                                    &quot;value&quot;: slackNotify.branch,
+                                    &quot;short&quot;: false
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Target&quot;,
+                                    &quot;value&quot;: slackNotify.assetKind,
+                                    &quot;short&quot;: true
+                                ],
+                                [
+                                    &quot;title&quot;: &quot;Builder&quot;,
+                                    &quot;value&quot;: slackNotify.buildUser,
+                                    &quot;short&quot;: true
+                                ]
+                            ],
+
+                            &quot;footer&quot;: style[&quot;SHORT_NAME&quot;],
+                            &quot;footer_icon&quot;: style[&quot;ICON_1&quot;],
+                            &quot;ts&quot;: &quot;hogehogetime&quot;
+                        ]
+                    ]
+
+    slackSend channel:slackNotify.channels,
+    teamDomain: env.SLACK_DOMAIN,
+    tokenCredentialId: slackNotify.credentialsId,
+    botUser: true,
+    iconEmoji: style[&quot;BOT_ICON&quot;],
+    username: slackNotify.botUserName,
+    attachments: attachments
+}
+
+return this
+</string>
+      </entry>
+      <entry>
+        <string>Script5</string>
+        <string>/**
+ * PlistBuddyとaapt2を使っています
+ * @param  platform                [description]
+ * @param  outputDir               [description]
+ * @param  appName                 [description]
+ * @return           [description]
+ */
+def getVersionName(platform, outputDir, appName) {
+    def command = &apos;&apos;
+    switch (platform) {
+        case &quot;ios&quot;:
+            command = &quot;&quot;&quot;
+            unzip -p &quot;${outputDir}/${appName}.ipa&quot; Payload/&quot;${appName}&quot;.app/Info.plist | plutil -convert json -o - -- - | jq -r .CFBundleShortVersionString
+            &quot;&quot;&quot;
+            return sh(script:command, returnStdout:true)
+        case &quot;android&quot;:
+            command = &quot;&quot;&quot;
+            aapt2 dump badging ${outputDir}/${appName}.apk | grep &apos;versionName&apos; | sed -e &apos;s/.*versionName=//&apos; -e &apos;s/ .*//&apos;
+            &quot;&quot;&quot;
+            return sh(script:command, returnStdout:true)
+    }
+
+    reurn &apos;&apos;
+}
+
+return this
+</string>
+      </entry>
+      <entry>
+        <string>Script6</string>
+        <string>/**
+ * ビルド種別からアセット種別を割り当て
+ * （基本的には一緒）
+ * @param  BuidKind               [description]
+ * @return          [description]
+ */
+def getAssetKind(buildKind) {
+    if (&quot;QA&quot;.equals(buildKind)) {
+        return &quot;Dev&quot;
+    }
+    else if (&quot;Beta&quot;.equals(buildKind)) {
+        return &quot;Beta&quot;
+    }
+    else if (&quot;Release&quot;.equals(buildKind)) {
+        return &quot;Release&quot;
+    }
+
+    return buildKind
+}
+
+return this
+</string>
+      </entry>
+      <entry>
+        <string>Script1</string>
+        <string>/**
+ * Git情報を取得するのを共通化するためのgroovy
+ * @param  from_branch_name               [description]
+ * @return                  [description]
+ */
+// ブランチ名の取得
+def get_branch_name(from_branch_name) {
+    def branch = from_branch_name.replace(&quot;refs/heads/&quot;, &quot;&quot;)
+
+    println &apos;--------------------&apos;
+    println &quot;branch_name = ${branch}&quot;
+    println &apos;--------------------&apos;
+    return branch
+}
+
+// gitのリビジョン番号の取得
+def getGitRevision() {
+    println &apos;*** git revision番号の取得 ***&apos;
+    def gitRevisionFull = sh(script:&apos;git rev-parse HEAD&apos;, returnStdout:true)
+    println &apos;Git Full Revision Number = &apos; + gitRevisionFull
+
+    // revision Number の抽出(7桁まで区切る）
+    def revisionNo = gitRevisionFull.toString().substring(0, 7)
+
+    return revisionNo
+}
+
+// ブランチを指定したログを取得
+def getGitLogMessage(branch) {
+    return sh(script: &quot;git log origin/${branch} --pretty=short -1&quot;, returnStdout: true)
+}
+
+// コミットメッセージ情報の取得
+def getGitCommitMessage() {
+    def commitMessage = sh(script:&apos;git log --format=format:%s -1&apos;, returnStdout:true)
+    return commitMessage
+}
+// コミットメッセージ情報の取得
+def getGitCommitAuthor() {
+    def author = sh(script:&apos;git log --format=format:%an -1&apos;, returnStdout:true)
+    return author
+}
+
+//コミット日時の取得
+def getGitCommitDate() {
+    def date = sh(script:&apos;git log --date=format-local:&quot;%Y/%m/%d %H:%M:%S&quot; --format=format:&quot;%cd&quot; -1&apos;, returnStdout:true)
+    return date
+}
+
+// commitInfomation(ある程度フィルタする)
+def getGitCommitInfomation(branch) {
+    def message = &apos;branch:&apos; + branch.GIT_LOCAL_BRANCH +
+    &apos;\nAuthor:&apos; + getGitCommitAuthor() +
+    &apos;\nMessage:&apos; + getGitCommitMessage()
+
+    return message
+}
+
+/**
+ * コミット時のdate/Author/messageのログを取得
+ * @return [description]
+ */
+def getGitCommitLatestLog() {
+    def message = &apos;Author:&apos; + getGitCommitAuthor() +
+    &apos;\nMessage:&apos; + getGitCommitMessage() +
+    &apos;\nDate:&apos; + getGitCommitDate()
+    return message
+}
+
+return this
+</string>
+      </entry>
+      <entry>
+        <string>Script2</string>
+        <string>/**
+ * AppCenterのAPPName を取得する
+ * @param  platform               [description]
+ * @param  appKind                [description]
+ * @return          [description]
+ */
+def getAppCenterAppName(platform, appKind) {
+    // Dictionaryみたいなのがあればそれがいいかも
+    if (platform == &quot;ios&quot;) {
+        def map = [
+                    &apos;Dev&apos;:&apos;Pokepia-iOS&apos;,
+                    &apos;QA&apos;:&apos;POKEPIA&apos;,
+                    &apos;Beta&apos;:&apos;POKEPIA-iOSbeta&apos;,
+                    &apos;Release&apos;:&apos;Pokepia-iOS-1&apos;
+                ]
+        if (map.containsKey(appKind)) {
+            return map.get(appKind)
+        }
+    }
+    else if (platform == &quot;android&quot;) {
+        def map = [
+                    &apos;Dev&apos;:&apos;Pokepia-Android&apos;,
+                    &apos;QA&apos;:&apos;Pokepia-Android-3&apos;,
+                    &apos;Beta&apos;:&apos;POKEPIA-Androidbeta&apos;,
+                    &apos;Release&apos;:&apos;Pokepia-Android-1&apos;
+                ]
+        if (map.containsKey(appKind)) {
+            return map.get(appKind)
+        }
+    }
+
+    return &quot;&quot;
+}
+
+/**
+ * AppCenter AppのToken情報取得
+ * @param  platform               [description]
+ * @param  appKind                [description]
+ * @return          [description]
+ */
+def getAppCenterToken(platform, appKind) {
+    if (platform == &quot;ios&quot;) {
+        def map = [
+                    &apos;Dev&apos;:&apos;3950f9fbd18dd8e2d18cb970933d125115bf6a67&apos;,
+                    &apos;QA&apos;:&apos;027d9e2eab70992a3681db2743ed6ebb3d18d93b&apos;,
+                    &apos;Beta&apos;:&apos;7e7c1f4cd71e0803466726400d82e783c5d0b319&apos;,
+                    &apos;Release&apos;:&apos;33686d7866a23604057424c52b0474392c5c3b7e&apos;
+                ]
+        if (map.containsKey(appKind)) {
+            return map.get(appKind)
+        }
+    }
+    else if (platform == &quot;android&quot;) {
+        def map = [
+                    &apos;Dev&apos;:&apos;f44294c51d7cec86b1ee9002a3c92a0b22b44322&apos;,
+                    &apos;QA&apos;:&apos;ef6bb95d43d77829b8b87f301288273fba6e5d40&apos;,
+                    &apos;Beta&apos;:&apos;956368c661c35b21264b6153d1f8e5ad46820401&apos;,
+                    &apos;Release&apos;:&apos;585387c9fed92e48c21dd4d2852823d8a14831f0&apos;
+                ]
+        if (map.containsKey(appKind)) {
+            return map.get(appKind)
+        }
+    }
+
+    retrun &apos;&apos;
+}
+
+/**
+ * AppCenter配布グループ情報の取得
+ * @return         [description]
+ */
+def getAppCenterDistributionGroups() {
+    return &quot;COCONE-QA, Collaborators, POKETRIA Members&quot;
+}
+
+/**
+ * appcenterの最新のreleaseIDを取得する（最新のreleaseIDを取得するのでタイミングがかち合わないと失敗の可能性はある）
+ * NOTE:AppCenter CLIが必要なので注意
+ * @param  ownerName               [description]
+ * @param  appName                 [description]
+ * @param  apiToken                [description]
+ * @return           [description]
+ */
+def getReleaseId(ownerName, appName, apiToken) {
+    def script = &quot;&quot;&quot;
+    appcenter distribute releases list --app ${ownerName}/${appName} --token ${apiToken} --output json | jq &apos;. | sort_by(.uploadedAt) | reverse | .[0].id&apos;
+    &quot;&quot;&quot;
+    return sh(script:script, returnStdout:true)
+}
+
+/**
+ * appcenterのダウンロードURLの取得
+ * @param  ownerName               [description]
+ * @param  appName                 [description]
+ * @param  releaseId               [description]
+ * @return           [description]
+ */
+def getDownloadURL(ownerName, appName, releaseId) {
+    return &quot;https://install.appcenter.ms/orgs/${ownerName}/apps/${appName}/releases/${releaseId}&quot;
+}
+
+return this
+</string>
+      </entry>
+    </loadedScripts>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>5953000867</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>1397098929</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>15881085418</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>963026793</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>5000547215</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>162</iota>
+    <head>1:162</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@4.11.3">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://git-1.cocone.jp/projectp3/p3-tools</url>
+            <credentialsId>1f53a4c2-f053-4789-9846-eb486d44a572</credentialsId>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions/>
+      </scm>
+      <node>DevBuild_JobNode</node>
+      <workspace>/Users/p3_dev/JenkinsJobs/DevBuild_JobNode/workspace/DevBuild_Android_Single</workspace>
+      <changelogFile>/Users/p3_dev/.jenkins/jobs/DevBuild_Android_Single/builds/26/changelog6781562701658923373.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" reference="../../org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout/scm"/>
+      <node>DevBuild_JobNode</node>
+      <workspace>/Users/p3_dev/JenkinsJobs/DevBuild_JobNode/workspace/DevBuild_Android_Single</workspace>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@4.11.3">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://git-1.cocone.jp/projectp3/p3-client</url>
+            <credentialsId>p3_jenkins_gitlab</credentialsId>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <gitTool>Default</gitTool>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.GitLFSPull/>
+          <hudson.plugins.git.extensions.impl.CloneOption>
+            <shallow>false</shallow>
+            <noTags>false</noTags>
+            <timeout>60</timeout>
+            <honorRefspec>false</honorRefspec>
+          </hudson.plugins.git.extensions.impl.CloneOption>
+          <hudson.plugins.git.extensions.impl.CheckoutOption>
+            <timeout>60</timeout>
+          </hudson.plugins.git.extensions.impl.CheckoutOption>
+        </extensions>
+      </scm>
+      <node>DevBuild_JobNode</node>
+      <workspace>/Users/p3_dev/JenkinsJobs/DevBuild_JobNode/workspace/DevBuild_Android_Single</workspace>
+      <changelogFile>/Users/p3_dev/.jenkins/jobs/DevBuild_Android_Single/builds/26/changelog1863207907965555970.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

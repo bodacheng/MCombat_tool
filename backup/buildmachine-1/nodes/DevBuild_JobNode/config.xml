@@ -1,0 +1,14 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<slave>
+  <name>DevBuild_JobNode</name>
+  <description>β以外のビルドノード</description>
+  <remoteFS>/Users/p3_dev/.jenkins/DevBuild_JobNode</remoteFS>
+  <numExecutors>2</numExecutors>
+  <mode>EXCLUSIVE</mode>
+  <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+  <launcher class="hudson.slaves.CommandLauncher" plugin="command-launcher@1.6">
+    <agentCommand>/opt/homebrew/Cellar/openjdk/16.0.1/bin/java -jar /Users/p3_dev/.jenkins/nodes/DevBuild_JobNode/agent.jar</agentCommand>
+  </launcher>
+  <label></label>
+  <nodeProperties/>
+</slave>

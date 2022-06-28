@@ -1,0 +1,284 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?><flow-definition plugin="workflow-job@2.41">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@1.8.5"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@1.8.5">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description>Unity 2020用 Androidクライアントビルド</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableResumeJobProperty/>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.20">
+      <gitLabConnection>GitLab Integration</gitLabConnection>
+      <jobCredentialId/>
+      <useAlternativeCredential>false</useAlternativeCredential>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.32">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.plugins.throttleconcurrents.ThrottleJobProperty plugin="throttle-concurrents@2.2">
+      <maxConcurrentPerNode>0</maxConcurrentPerNode>
+      <maxConcurrentTotal>0</maxConcurrentTotal>
+      <categories class="java.util.concurrent.CopyOnWriteArrayList"/>
+      <throttleEnabled>false</throttleEnabled>
+      <throttleOption>project</throttleOption>
+      <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
+      <paramsToUseForLimit/>
+    </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
+    
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@0.82">
+          <name>BRANCH</name>
+          <description>ブランチを選択してください</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>5</visibleItemCount>
+          <type>PT_SINGLE_SELECT</type>
+          <groovyScript>#!/usr/bin/env groovy
+
+import hudson.model.*
+import jenkins.model.*
+
+def listBranches() {
+    def gitURL = 'https://git-1.cocone.jp/projectp3/p3-client'
+    def branches = ("git ls-remote -t -h ${gitURL}").execute()
+    return branches.text.readLines().collect { it.split()[1].replaceAll('refs/heads/|refs/tags/', '') }.unique().join(",")
+}
+return listBranches()</groovyScript>
+          <bindings/>
+          <groovyClasspath/>
+          <defaultValue>master</defaultValue>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+        <hudson.model.TextParameterDefinition>
+          <name>RELEASENOTE</name>
+          <description>ビルド内容がわかるリリースノートを記入してください</description>
+          <trim>false</trim>
+        </hudson.model.TextParameterDefinition>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@0.82">
+          <name>UNITY_VERSION</name>
+          <description>,</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>2</visibleItemCount>
+          <type>PT_SINGLE_SELECT</type>
+          <value>2020.3.21f1,2019.4.16f1</value>
+          <defaultValue>2020.3.21f1</defaultValue>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>UPLOAD_ASSETS</name>
+          <description>Addressableアセットを更新する必要があればチェックしてください。</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>PRE_REGIST</name>
+          <description>事前登録用ビルドの場合はチェックしてください</description>
+          <defaultValue>false</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>10</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.92">
+    <script>pipeline {
+    agent any
+
+    environment {
+        // BRANCHとRELEASENOTEはジョブのパラメーターつきビルドで設定される
+        
+        // git
+        GIT_URL='https://git-1.cocone.jp/projectp3/p3-client'
+        GIT_CREDENTIAL='jenkins_gitlab'
+        
+        // environment values
+        UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
+        ANDROID_PALYAER_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/PlaybackEngines/AndroidPlayer"
+        ANDROID_SDK_PATH="${ANDROID_PALYAER_PATH}/SDK"
+        AAPT2_PATH="${ANDROID_SDK_PATH}/build-tools/30.0.2"
+        PATH = "${AAPT2_PATH}/:$PATH"
+        
+        // build configuration
+        UNITY_METHOD='Cocone.ProjectP3.Client.Build'
+        ADDRESSABLE_METHOD='BuildAddressableAssets.BatchBuild'
+        BUILD_TARGET='Android'
+        PRODUCT_NAME=''
+        VERSION=""
+        OUTPUT_PATH='build_android'
+        BUILD_CONFIG_DIR='Assets/App/Editor/Build/Configs'
+        BUILD_KIND='Alpha'
+        
+        // appcenter
+        APPCENTER_API_TOKEN='f44294c51d7cec86b1ee9002a3c92a0b22b44322'
+        APPCENTER_OWNER='coconecorp'
+        APPCENTER_APPNAME='Pokepia-Android'
+        APPCENTER_GROUPS='COCONE-QA, Collaborators, POKETRIA Members, P3_OUTSIDE'
+        
+        // Slack
+        SLACK_DOMAIN='cocone'
+        SLACK_CHANNEL='p3_jenkins'
+        
+        ASSET_VERSION='v1'
+        ASSET_PATH='ExtProject/p3-assets'
+    }
+
+    stages {
+        stage('Git') {
+            steps {
+                script{
+                    def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
+                    USERNAME = cause.userName
+                }
+                
+                checkout([$class: 'GitSCM',
+                    branches: [[name: "$BRANCH"]],
+                    extensions: [
+                        [$class: 'CloneOption', timeout: 60],
+                        [$class: 'CheckoutOption', timeout: 60]
+                    ],
+                    gitTool: 'Default', 
+                    userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
+                ])
+
+                // Git-LFSの値を反映させるための処理
+                sh 'git lfs pull'
+                sh 'git rm --cached -r .'
+                sh 'git reset --hard'
+                sh 'git rm .gitattributes'
+                sh 'git reset .'
+                
+                // 再チェックアウト
+                checkout([$class: 'GitSCM',
+                    branches: [[name: "$BRANCH"]],
+                    extensions: [
+                        [$class: 'CloneOption', timeout: 60],
+                        [$class: 'CheckoutOption', timeout: 60]
+                    ],
+                    gitTool: 'Default', 
+                    userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
+                ])
+            }
+        }
+        stage('yaml情報の取得') {
+            steps {
+                script {
+                    def yamlFile = "${BUILD_CONFIG_DIR}/${BUILD_KIND}BuildSettings.yaml"
+                    def script = $/eval "cat ${yamlFile} | grep -o 'productName: .*$' | sed -e 's/productName: ''//'"/$
+                    PRODUCT_NAME = sh(script:"${script}", returnStdout:true)
+                    PRODUCT_NAME = PRODUCT_NAME.replaceAll("\n", "")
+                    println 'PRODUCT_NAME:' + PRODUCT_NAME
+                }
+            }
+        }
+        stage('Deploy Assets') {
+            when {
+                expression { 
+                   return params.UPLOAD_ASSETS
+                }
+            }
+            steps {
+                sh '$UNITY_PATH -projectPath $WORKSPACE -quit -batchmode -executeMethod $ADDRESSABLE_METHOD -buildTarget $BUILD_TARGET -assetVersion $ASSET_VERSION -assetBuildType rebuild'
+                // sh 's3cmd put -r "$WORKSPACE"/ServerData/dev/"$BUILD_TARGET"/ s3://p3-alpha-coconeimg-jp/asset/"$BUILD_TARGET"/'
+            }
+        }
+        stage('Unity') {
+            options {
+                timeout(time: 2, unit: 'HOURS')
+            }
+            steps {
+                script {
+                    if (params.PRE_REGIST.toBoolean()) {
+                        PRE_REGIST_PARAM = "-preRegistration"
+                    }else{
+                        PRE_REGIST_PARAM = ""
+                    }
+                }
+
+                // apk 作成
+                sh """
+                $UNITY_PATH -projectPath $WORKSPACE -quit -batchmode -executeMethod $UNITY_METHOD -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt -buildTarget $BUILD_TARGET -BuildNumber $BUILD_ID -OutputPath $OUTPUT_PATH $PRE_REGIST_PARAM -buildKind $BUILD_KIND -androidArchitectures "ARM64"
+                """
+            }
+        }
+        stage('バージョン情報の取得') {
+            steps {
+                script {
+                    def APP_OUTPUT_PATH = "./$OUTPUT_PATH/${PRODUCT_NAME}.apk"
+                    def version_script = $/eval "aapt2 dump badging ${APP_OUTPUT_PATH} | grep 'versionName' | sed -e 's/.*versionName=//' -e 's/ .*//'"/$
+                    VERSION = sh(script:"${version_script}", returnStdout:true)
+                    VERSION = VERSION.replaceAll("'", "")
+                    echo "version=${VERSION}"
+                }
+            }
+        }
+        stage('apkの保存') {
+            steps {
+                archiveArtifacts artifacts: OUTPUT_PATH + "/" + PRODUCT_NAME + ".apk,", fingerprint: true, followSymlinks: false
+            }
+        }
+        stage('Deploy') {
+            steps {
+                retry(3) {
+                    appCenter apiToken: "$APPCENTER_API_TOKEN",
+                        ownerName: "$APPCENTER_OWNER",
+                        appName: "$APPCENTER_APPNAME",
+                        branchName: '',
+                        buildVersion: "$VERSION",
+                        commitHash: '',
+                        distributionGroups: "$APPCENTER_GROUPS",
+                        mandatoryUpdate: false,
+                        notifyTesters: true,
+    				    pathToApp: "$OUTPUT_PATH/${PRODUCT_NAME}.apk",
+                        pathToDebugSymbols: '',
+                        pathToReleaseNotes: '',
+                        releaseNotes: "ビルド${BUILD_ID} ${USERNAME} / RELEASE NOTE: ${RELEASENOTE}"
+                }
+            }
+        }
+    }
+    post {
+        success {
+            script {
+                // Slack投稿用にブランチのログを取得
+                GIT_LOG=sh(script: "git log origin/$BRANCH --pretty=short -1", returnStdout: true)
+            }
+            slackSend channel:"$SLACK_CHANNEL",
+                teamDomain: "$SLACK_DOMAIN",
+                color: "good",
+                message: ":kirby::tada:*ビルド成功 [$JOB_NAME:$BUILD_ID]*:tada::kirby:\n$BUILD_URL\nユーザー : $USERNAME\nbranch : $BRANCH \n$GIT_LOG\n--------------------\n[ReleaseNote]\n$RELEASENOTE\n[&lt;https://appcenter.ms/orgs/$APPCENTER_OWNER/apps/$APPCENTER_APPNAME/|Install App&gt;]"
+        }
+        failure {
+            archiveArtifacts allowEmptyArchive: true, artifacts: "${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt", fingerprint: true, followSymlinks: false
+
+            slackSend channel:"$SLACK_CHANNEL",
+                teamDomain: "$SLACK_DOMAIN",
+                color: "danger",
+                message: ":skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull:\n$BUILD_URL\nユーザー : $USERNAME\nbranch : $BRANCH"
+        }
+        aborted {
+            slackSend channel:"$SLACK_CHANNEL",
+                teamDomain: "$SLACK_DOMAIN",
+                color: "warning",
+                message: ":construction:*ビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:\n$BUILD_URL\nユーザー : $USERNAME\nbranch : $BRANCH"
+        }
+    }
+}</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

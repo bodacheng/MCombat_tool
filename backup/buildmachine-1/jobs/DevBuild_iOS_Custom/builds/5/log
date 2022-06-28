@@ -1,0 +1,50 @@
+[2022-06-14T10:40:26.414Z] ユーザー[8mha:////4LAsCf+yNaGualwe+w+h0oXLipvOzCAlF/qSxVFw7pM+AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgYR/dLi1CL93MSS4tLc/JL8+KLM7EQAEAZ4XckAAAA=[0m松本 りかが実行
+[2022-06-14T10:40:26.422Z] Lightweight checkout support not available, falling back to full checkout.
+[2022-06-14T10:40:26.422Z] Checking out git https://git-1.cocone.jp/projectp3/p3-tools into /Users/p3_dev/.jenkins/workspace/DevBuild_iOS_Custom@script/62f60911fdcae56000707dd4c7300a61bf05a8f205a3ea3321f1d0faa9749a0e to read pipeline_script/DevBuild/ios/build_custom.groovy
+[2022-06-14T10:40:26.424Z] The recommended git tool is: git
+[2022-06-14T10:40:26.424Z] using credential 1f53a4c2-f053-4789-9846-eb486d44a572
+[2022-06-14T10:40:26.447Z]  > git rev-parse --resolve-git-dir /Users/p3_dev/.jenkins/workspace/DevBuild_iOS_Custom@script/62f60911fdcae56000707dd4c7300a61bf05a8f205a3ea3321f1d0faa9749a0e/.git # timeout=10
+[2022-06-14T10:40:26.467Z] Fetching changes from the remote Git repository
+[2022-06-14T10:40:26.467Z]  > git config remote.origin.url https://git-1.cocone.jp/projectp3/p3-tools # timeout=10
+[2022-06-14T10:40:26.481Z] Fetching upstream changes from https://git-1.cocone.jp/projectp3/p3-tools
+[2022-06-14T10:40:26.481Z]  > git --version # timeout=10
+[2022-06-14T10:40:26.491Z]  > git --version # 'git version 2.30.1 (Apple Git-130)'
+[2022-06-14T10:40:26.492Z] using GIT_ASKPASS to set credentials for Gitlab
+[2022-06-14T10:40:26.492Z]  > git fetch --tags --force --progress -- https://git-1.cocone.jp/projectp3/p3-tools +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2022-06-14T10:40:27.366Z]  > git rev-parse refs/remotes/origin/features/fix_new_build_kind^{commit} # timeout=10
+[2022-06-14T10:40:27.380Z]  > git rev-parse features/fix_new_build_kind^{commit} # timeout=10
+[2022-06-14T10:40:27.390Z] Checking out Revision da7e9f6969e0cbcc4c86a8534f95f545f7679a39 (refs/remotes/origin/features/fix_new_build_kind)
+[2022-06-14T10:40:27.390Z]  > git config core.sparsecheckout # timeout=10
+[2022-06-14T10:40:27.399Z]  > git checkout -f da7e9f6969e0cbcc4c86a8534f95f545f7679a39 # timeout=10
+[2022-06-14T10:40:27.509Z] Commit message: "ワークスペースのクリーンを追加"
+[2022-06-14T10:40:27.509Z]  > git rev-list --no-walk af388fe83212c5d09182f8a3dc34fe10c640294b # timeout=10
+[2022-06-14T10:40:27.905Z] org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+[2022-06-14T10:40:27.905Z] WorkflowScript: 20: Not a valid stage section definition: "if (params.needCleanWorkspace) {
+[2022-06-14T10:40:27.905Z]                 cleanWs()
+[2022-06-14T10:40:27.905Z]             }". Some extra configuration is required. @ line 20, column 9.
+[2022-06-14T10:40:27.905Z]            stage('ワークスペースのクリーン') {
+[2022-06-14T10:40:27.905Z]            ^
+[2022-06-14T10:40:27.905Z] 
+[2022-06-14T10:40:27.905Z] WorkflowScript: 20: Expected one of "steps", "stages", or "parallel" for stage "ワークスペースのクリーン" @ line 20, column 9.
+[2022-06-14T10:40:27.905Z]            stage('ワークスペースのクリーン') {
+[2022-06-14T10:40:27.905Z]            ^
+[2022-06-14T10:40:27.905Z] 
+[2022-06-14T10:40:27.905Z] 2 errors
+[2022-06-14T10:40:27.905Z] 
+[2022-06-14T10:40:27.905Z] 	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:310)
+[2022-06-14T10:40:27.905Z] 	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1085)
+[2022-06-14T10:40:27.905Z] 	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:603)
+[2022-06-14T10:40:27.905Z] 	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:581)
+[2022-06-14T10:40:27.905Z] 	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:558)
+[2022-06-14T10:40:27.905Z] 	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:298)
+[2022-06-14T10:40:27.905Z] 	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:268)
+[2022-06-14T10:40:27.905Z] 	at groovy.lang.GroovyShell.parseClass(GroovyShell.java:688)
+[2022-06-14T10:40:27.905Z] 	at groovy.lang.GroovyShell.parse(GroovyShell.java:700)
+[2022-06-14T10:40:27.905Z] 	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:142)
+[2022-06-14T10:40:27.905Z] 	at org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:127)
+[2022-06-14T10:40:27.905Z] 	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:571)
+[2022-06-14T10:40:27.905Z] 	at org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:523)
+[2022-06-14T10:40:27.905Z] 	at org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:334)
+[2022-06-14T10:40:27.905Z] 	at hudson.model.ResourceController.execute(ResourceController.java:99)
+[2022-06-14T10:40:27.905Z] 	at hudson.model.Executor.run(Executor.java:432)
+[2022-06-14T10:40:27.969Z] Finished: FAILURE

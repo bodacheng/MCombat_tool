@@ -1,0 +1,268 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1145.v7f2433caa07f">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>matsumoto_rika</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+        <entry>
+          <com.sonyericsson.rebuild.RebuildCause plugin="rebuild@1.32">
+            <upstreamProject>DevBuild_Android_Period</upstreamProject>
+            <upstreamUrl>view/04%20%E5%AE%9A%E6%9C%9F%E3%83%93%E3%83%AB%E3%83%89/job/DevBuild_Android_Period/</upstreamUrl>
+            <upstreamBuild>1</upstreamBuild>
+            <upstreamCauses>
+              <hudson.model.Cause_-UserIdCause>
+                <userId>matsumoto_rika</userId>
+              </hudson.model.Cause_-UserIdCause>
+            </upstreamCauses>
+          </com.sonyericsson.rebuild.RebuildCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction plugin="buildtriggerbadge@251.vdf6ef853f3f5">
+      <cause class="hudson.model.Cause$UserIdCause" reference="../../hudson.model.CauseAction/causeBag/entry/hudson.model.Cause_-UserIdCause"/>
+    </org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction>
+    <org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction plugin="buildtriggerbadge@251.vdf6ef853f3f5">
+      <cause class="com.sonyericsson.rebuild.RebuildCause" reference="../../hudson.model.CauseAction/causeBag/entry[2]/com.sonyericsson.rebuild.RebuildCause"/>
+    </org.jenkinsci.plugins.buildtriggerbadge.BuildTriggerBadgeAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.19">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction plugin="pipeline-model-definition@1.8.5">
+      <stagesUUID>d3b24c85-1724-4109-9e11-7e6e7a47dd0f</stagesUUID>
+      <pipelineDefs>
+        <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef plugin="pipeline-model-api@1.8.5">
+          <stages>
+            <stages>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+                <name>customビルド</name>
+                <branches>
+                  <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                    <name>default</name>
+                    <steps>
+                      <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                        <name>script</name>
+                        <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                          <arguments class="linked-hash-map">
+                            <entry>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                                <key>scriptBlock</key>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                                <value class="string">build job: &apos;DevBuild_Android_Custom&apos;,
+                    parameters: [
+                    listGitBranches(name: &apos;BRANCH&apos;, value: &apos;master&apos;),
+                    extendedChoice(name: &apos;BUILD_KIND&apos;, value: &apos;QA&apos;),
+                    extendedChoice(name: &apos;AssetKind&apos;, value: &apos;QA&apos;),
+                    text(name: &apos;RELEASENOTE&apos;, value: &apos;&apos;), extendedChoice(name: &apos;UNITY_VERSION&apos;, value: &apos;2020.3.21f1&apos;),
+                    booleanParam(name: &apos;CLEAR_CACHE&apos;, value: false),
+                    booleanParam(name: &apos;needCleanWorkspace&apos;, value: false)]</value>
+                              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                            </entry>
+                          </arguments>
+                        </args>
+                      </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                    </steps>
+                  </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBranch>
+                </branches>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTStage>
+            </stages>
+            <uuid>d3b24c85-1724-4109-9e11-7e6e7a47dd0f</uuid>
+          </stages>
+          <postBuild>
+            <conditions>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>failure</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                      <name>script</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>scriptBlock</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">def message = &quot;&quot;&quot;${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull:
+                \n${BUILD_URL}
+                \n定期ビルド
+                \nbranch : master
+                &quot;&quot;&quot;
+                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+                    teamDomain: env.SLACK_DOMAIN,
+                    color: &quot;danger&quot;,
+                    message: message</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+              <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+                <condition>aborted</condition>
+                <branch>
+                  <name>default</name>
+                  <steps>
+                    <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                      <name>script</name>
+                      <args class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTNamedArgumentList">
+                        <arguments class="linked-hash-map">
+                          <entry>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                              <key>scriptBlock</key>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                            <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                              <value class="string">def message = &quot;&quot;&quot;${NOTIFY_EMOJI} :construction:*ビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:
+                \n$BUILD_URL
+                \n定期ビルド
+                \nbranch : master
+                &quot;&quot;&quot;
+                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+                    teamDomain: env.SLACK_DOMAIN,
+                    color: &quot;warning&quot;,
+                    message: message</value>
+                            </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                          </entry>
+                        </arguments>
+                      </args>
+                    </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTScriptBlock>
+                  </steps>
+                </branch>
+              </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTBuildCondition>
+            </conditions>
+          </postBuild>
+          <environment>
+            <variables class="linked-hash-map">
+              <entry>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                  <key>NOTIFY_EMOJI</key>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTKey>
+                <org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+                  <value class="string">:droid:</value>
+                </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue_-ConstantValue>
+              </entry>
+            </variables>
+          </environment>
+          <agent>
+            <variables class="org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTValue$ConstantValue">
+              <value class="string">Period_JobNode</value>
+            </variables>
+            <agentType>
+              <key>label</key>
+            </agentType>
+          </agent>
+        </org.jenkinsci.plugins.pipeline.modeldefinition.ast.ModelASTPipelineDef>
+      </pipelineDefs>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.ExecutionModelAction>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2660.vb_c0412dc4e6d">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.32"/>
+  </actions>
+  <queueId>8714</queueId>
+  <timestamp>1655468322246</timestamp>
+  <startTime>1655468322272</startTime>
+  <result>FAILURE</result>
+  <duration>423993</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>pipeline {
+    agent {
+        label &quot;Period_JobNode&quot;
+    }
+
+    environment {
+        NOTIFY_EMOJI = &apos;:droid:&apos;
+    }
+
+    stages {
+        stage(&apos;customビルド&apos;) {
+            steps {
+                script {
+                    build job: &apos;DevBuild_Android_Custom&apos;,
+                    parameters: [
+                    listGitBranches(name: &apos;BRANCH&apos;, value: &apos;master&apos;),
+                    extendedChoice(name: &apos;BUILD_KIND&apos;, value: &apos;QA&apos;),
+                    extendedChoice(name: &apos;AssetKind&apos;, value: &apos;QA&apos;),
+                    text(name: &apos;RELEASENOTE&apos;, value: &apos;&apos;), extendedChoice(name: &apos;UNITY_VERSION&apos;, value: &apos;2020.3.21f1&apos;),
+                    booleanParam(name: &apos;CLEAR_CACHE&apos;, value: false),
+                    booleanParam(name: &apos;needCleanWorkspace&apos;, value: false)]
+                }
+            }
+        }
+    }
+
+    post {
+        failure {
+            script {
+                def message = &quot;&quot;&quot;${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull:
+                \n${BUILD_URL}
+                \n定期ビルド
+                \nbranch : master
+                &quot;&quot;&quot;
+                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+                    teamDomain: env.SLACK_DOMAIN,
+                    color: &quot;danger&quot;,
+                    message: message
+            }
+        }
+        aborted {
+            script {
+                def message = &quot;&quot;&quot;${NOTIFY_EMOJI} :construction:*ビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:
+                \n$BUILD_URL
+                \n定期ビルド
+                \nbranch : master
+                &quot;&quot;&quot;
+                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+                    teamDomain: env.SLACK_DOMAIN,
+                    color: &quot;warning&quot;,
+                    message: message
+            }
+        }
+    }
+}
+</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>616418505</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>355819029</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>1329229834</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>121950459</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>288998419</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>13</iota>
+    <head>1:13</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

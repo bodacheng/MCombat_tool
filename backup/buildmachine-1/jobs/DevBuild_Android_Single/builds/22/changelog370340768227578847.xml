@@ -1,0 +1,10 @@
+commit f0d57e812cbca946673331bf86af3395633c7600
+tree 74c337df896beaf475b871e1fc4bb0a4419d6e68
+parent 9c403203d573338caeb067053937254a085eb71b
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-21 18:16:08 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-21 18:16:08 +0900
+
+    SlackのMR通知検証のためにreadme.mdを更新
+
+
+:100644 100644 6aad70e6fd50ad8e544bc690b7ec13cc86c3dc56 f80bad4ed71cf4bb1451c12c021d881b57cda383 M	README.md

@@ -1,0 +1,8 @@
+/**/.vscode/
+
+microsoft.gpg
+
+#/**/*bin/
+# *bin/
+
+.DS_Store

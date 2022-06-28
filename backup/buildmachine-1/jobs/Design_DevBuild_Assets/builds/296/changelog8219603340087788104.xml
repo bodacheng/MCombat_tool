@@ -1,0 +1,21 @@
+commit ff89a5bd6a51bd50fe231f6517356c45cd9fd107
+tree 0ae35d52a0c9d5d825c4231e04effc490ffd2cc6
+parent e2bda3a5c6af0b30bd97ec89618ff13ffe98756a
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:54:01 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:54:01 +0900
+
+    リリースノートの追加
+
+
+:100644 100644 acd6d6143fda48a46f07184dae499de984e15def b4751b6098e5ed1321ab64a9e16ffdf366d75aee M	pipeline_script/utils/notify/slackUtility.groovy
+commit e2bda3a5c6af0b30bd97ec89618ff13ffe98756a
+tree 06d6f51c968c94fc09432ba96a0111fe36843c2b
+parent 9d00589ea760ca05f328fdde5d0fa33b55f7de90
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:26:17 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 21:26:17 +0900
+
+    定期ビルド用のジョブノードの指定ミスを修正
+
+
+:100644 100644 6e95bed9958444eec607cc4bc2139614f187821a b9ab107ff74f9af9c65cf91c639aa8a3cdea972d M	pipeline_script/DevBuild/android/build_period.groovy
+:100644 100644 3664b9a592e3b8721a1560ae723146fea034b613 b073128d3fb668e4ba4b083d19f40e24ee29c677 M	pipeline_script/DevBuild/ios/build_period.groovy

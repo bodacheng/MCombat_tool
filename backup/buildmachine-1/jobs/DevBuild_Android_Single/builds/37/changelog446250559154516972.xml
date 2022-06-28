@@ -1,0 +1,11 @@
+commit 78e5e4e39f06e64831fad37afedb8222aa189484
+tree ba16946ea5b8c74ae5aac61e3433b19485b046e1
+parent f84fbb2d61559996126f9a006430c4f6e47e9e73
+author Nagasawa Takehito <nagasawa_takehito@cocone.co.jp> 2022-06-24 18:07:26 +0900
+committer Nagasawa Takehito <nagasawa_takehito@cocone.co.jp> 2022-06-24 18:07:26 +0900
+
+    HDR用レンダーテクスチャの生成を改良 (Android)
+
+
+:100644 100644 a9f20fb5b24ed05363295238bb5ff917551c6247 8596145fa9c88e0bd737166b33e8263c1f23118a M	Assets/App/Scripts/Contents/Photo/PhotoHandler.cs
+:100644 100644 d62de1639e4028cc8e06bdacfc3ea83b4fe8ff00 b4d17e3a41cb92a6e0bfe5fe9c7aa76f55ec88e3 M	Assets/App/Scripts/Contents/Photo/PhotoTop/PhotoTopModel.cs

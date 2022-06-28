@@ -1,0 +1,10 @@
+commit 7b6d5fecb101eda44e6089d05411f03377b90c10
+tree 0034a06fc6d526d8aeb45213532deae294286652
+parent dc404cb93d76565b3993eacbf7ca617dfe49ccb2
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-20 19:35:05 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-20 19:35:05 +0900
+
+    FIX: TRIA-4340【パーティー】終了画面を閉じる際にチャットボタンを押下すると進行不能になる
+
+
+:100644 100644 d7758727d84f6c07e426e8f04090adca0301f475 44d74c989be17347838ef414c6ea8a1826443a9d M	Assets/App/Scripts/Scenes/WorldScene.UI.cs

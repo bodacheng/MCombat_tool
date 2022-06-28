@@ -1,0 +1,33 @@
+commit 4117ae59b721d79ab8d23fb41298180750ad9fcc
+tree 6df28afc4504852819de2abeafa1735412048879
+parent 0492784f2cc18838b5bccb64bb67e0dc18e53879
+author gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-14 19:14:36 +0900
+committer gen nishijima <nishijima_gen@cocone.co.jp> 2022-06-14 19:14:36 +0900
+
+    mergeミス修正
+
+
+:100644 100644 2fa31b7695b9a081fc5462c610922311cdb09e8b 70a63ad8cdc2b3455c0c34126389dd9c406592d4 M	Assets/ExternalAssets/ReleaseTheme.yaml
+commit 0492784f2cc18838b5bccb64bb67e0dc18e53879
+tree a00915b406beef592e049d8ab40c9d09a9032d90
+parent 6ead1b8c12b48c8afe8e0f0fb3c554b5d546c80d
+author Takumi Maeda <maeda_takumi@cocone.co.jp> 2022-06-14 18:48:54 +0900
+committer Takumi Maeda <maeda_takumi@cocone.co.jp> 2022-06-14 18:48:54 +0900
+
+    FIX:TRIA-4269,TRIA-4273,TRIA-4274,TRIA-4267,TRIA-4265
+
+
+:100644 100644 e0ce7821dfedef1cf923066f089fe8c6e099091e 48ca7c7f075820d5059a2f6e0147d4acd6ca2dd0 M	Assets/ExternalAssets/Items/G0041/FG0041HA02/FG0041HA02.prefab
+:100644 100644 d5479d8f899729f4cf59bb6cc882c72b7dec34c2 f60a77df46b62ea88e8722dd929837e017eb37ed R061	Assets/ExternalAssets/Items/G0041/FG0041HA02/MatLow_Cutout_HA02.mat	Assets/ExternalAssets/Items/G0041/FG0041HA02/MatLow_SpectrumCutout_HA02.mat
+:100644 100644 7846093376ca70d712bcce00ff94fc05fb802660 5291e48f1eb8119cd4198b0c6b01c10d75269524 R079	Assets/ExternalAssets/Items/G0041/FG0041HA02/MatLow_Cutout_HA02.mat.meta	Assets/ExternalAssets/Items/G0041/FG0041HA02/MatLow_SpectrumCutout_HA02.mat.meta
+:100644 100644 5d4594e2d7dd2558c74c551e90fa711f3d8a44a9 cfa969db9c79a2cfda36dcd56eef929be7f1fc09 R077	Assets/ExternalAssets/Items/G0041/FG0041HA02/Mat_Cutout_HA02.mat	Assets/ExternalAssets/Items/G0041/FG0041HA02/Mat_SpectrumCutout_HA02.mat
+:100644 100644 43494ac962b8bc4ee311358ff21e51c02c18de34 43494ac962b8bc4ee311358ff21e51c02c18de34 R100	Assets/ExternalAssets/Items/G0041/FG0041HA02/Mat_Cutout_HA02.mat.meta	Assets/ExternalAssets/Items/G0041/FG0041HA02/Mat_SpectrumCutout_HA02.mat.meta
+:100644 100644 461568b27808aa5b2d204a15161efa9c80561179 cfa3ec505e8ec0ebbe5a5c843375e32fbeb08a1e M	Assets/ExternalAssets/Items/G0041/FG0041HA02/UVScroll2ndMaskTransparent_HA02_M.tga
+:100644 100644 4bfad74eb32d5f33528a1b53d36e159d242ab408 5a68f7bdbe5c9d08d69ff355270f31caf3394010 M	Assets/ExternalAssets/Items/G0041/FG0041OP01/FG0041OP01.fbx
+:100644 100644 cca3afc866c4356e06dabac183d7d60c6e1715e0 f2ed5818878ba84988fac57b98e87bd0300b7ca5 M	Assets/ExternalAssets/Items/G0041/FG0041OP01/FG0041OP01.prefab
+:100644 100644 978d2c8757ef2247255370a5c706e2da0460d052 f88afd134a7cdbbd210ae3fdef1fcdeca8d75858 M	Assets/ExternalAssets/Items/G0041/FG0041OP02/FG0041OP02.fbx
+:100644 100644 bd497b87ab6ca0c9afec85503f33332672d15b57 86179eb7f5758ac687f6e2cd58933c86266711fd M	Assets/ExternalAssets/Items/G0041/FG0041OP02/FG0041OP02.prefab
+:100644 100644 3d0a55bb3f9b37b0bcc36348d6c58843c191e41d 10abf107de639449183932652b98d521d9e0983f M	Assets/ExternalAssets/Items/G0041/FG0041OP03/FG0041OP03.fbx
+:100644 100644 4e7235cdd9712f1f48f5a15b30d159edd2a879a5 2ffd2062cc84005ab28dddc36725505cc73795ad M	Assets/ExternalAssets/Items/G0041/FG0041OP03/FG0041OP03.prefab
+:100644 100644 9e105abf03be867a1ceec955cdc0a84f723651ff 4e3b56c9c872fed37ece0f18b8dc0e955ea57baf M	Assets/ExternalAssets/Items/G0041/FG0041OP04/FG0041OP04.fbx
+:100644 100644 0ed6aa5c622c5bec23f736ec0f316a5510f2690a 70bba1abed74b8e65c7555e25f81b5f0a98aa6c9 M	Assets/ExternalAssets/Items/G0041/FG0041OP04/FG0041OP04.prefab

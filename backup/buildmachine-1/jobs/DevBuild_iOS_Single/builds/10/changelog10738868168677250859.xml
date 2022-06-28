@@ -1,0 +1,11 @@
+commit efe3bd56a7531f8dc1e42199a50ee97889809045
+tree f9917865c20bc17aafba392cb93039a988fdd8c2
+parent 10a43ed893de94965f78ba936c60472ae406cccf
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:11:28 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-17 20:11:28 +0900
+
+    [utils]アセットのスラック通知を少し変更
+
+
+:100644 100644 695a61d658b9fbd6949e511522bd0c33e4e98da8 8945ca55ed87ac554a8502e529ee11c6aaeff647 M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 0b0ac4d3977b12f57e1dd7de8b8d414ed55817b0 f760df6047e7dedd4363e0a761c31fc8af22a723 M	pipeline_script/utils/notify/slackUtility.groovy

@@ -1,0 +1,40 @@
+commit 6bf30bbbb4ff64d0dc39ad8027922932a3604323
+tree b25fb476154090b8884c7ebddf49cc933bed038a
+parent 48778a8d2aea266abf2424ba5e1d4050bb6297ea
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 17:32:30 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 17:32:30 +0900
+
+    [android]コピペミスを修正
+
+
+:100644 100644 90ab567dd4bfa75b83974c7c8a3d475746e8ba8e b9c6217bf069de40537b42414db1cb57eede59cc M	pipeline_script/DevBuild/android/release_build.groovy
+commit 48778a8d2aea266abf2424ba5e1d4050bb6297ea
+tree 1deee1bd5282b74ea92896b53fd6ce9131b3ee3c
+parent 211dc8c6c0f9ab3212cba79579420351d868ea13
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:20:08 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:20:08 +0900
+
+    [TEST]構文修正
+
+
+:100644 100644 3cdd6f45542bf068c76742b82f574fdb334496d2 bd42f023b8e04f9d357baa0e6cb217db85b9ec70 M	pipeline_script/TestScripts/agent_test.groovy
+commit 211dc8c6c0f9ab3212cba79579420351d868ea13
+tree 3c69a42665a6fee12442118c17ca21c0ea9411f1
+parent 14b90d36a9691a09fadc5608b0dbe04b4729f55c
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:14:25 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:14:25 +0900
+
+    構文ミスを修正
+
+
+:100644 100644 f9db6889c237add562d6d3d0bcb7df27dc29cd93 3cdd6f45542bf068c76742b82f574fdb334496d2 M	pipeline_script/TestScripts/agent_test.groovy
+commit 14b90d36a9691a09fadc5608b0dbe04b4729f55c
+tree 0d590b9d5f98e1a8bd62fe6b8465ed9ae5761b66
+parent 5d98c09940e19e8c75d40d83d80fb0674620b6da
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:13:30 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-20 16:13:30 +0900
+
+    labelの書き方テスト
+
+
+:100644 100644 bc67668cc230d69e4bbfcc96f4f78be3f0385efa f9db6889c237add562d6d3d0bcb7df27dc29cd93 M	pipeline_script/TestScripts/agent_test.groovy

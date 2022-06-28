@@ -1,0 +1,12 @@
+commit 9821952030923f32ff14e867c012b8417e0759e5
+tree 9a4edb264949042f36b5e348b91c510081dfdea8
+parent 2465e0107a7bb67ede901553029497623ef230ec
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-14 19:47:13 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-06-14 19:47:13 +0900
+
+    構文ミス？修正
+
+
+:100644 100644 1aebaa3550bb9a74586f0869e949d7e251171498 6ca49869f3cc336521fb2eb0eaa5424f6a094bfe M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 58633be031bbb4a8940f4512c959532ca253dea3 a0b0f4074f1cbc3c3f7c0bc8e0da41f4df659d2b M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 5b8726117d047b0f35bb62a8538b88d4257e3436 e8fa015dda264e1b09f5f169460833e07cc5c2eb M	pipeline_script/DevBuild/ios/build_custom.groovy

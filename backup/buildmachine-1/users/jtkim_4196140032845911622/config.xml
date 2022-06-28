@@ -1,0 +1,87 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<user>
+  <version>10</version>
+  <id>jtkim</id>
+  <fullName>金 政澤</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
+    </jenkins.security.ApiTokenProperty>
+    <hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty plugin="email-ext@2.83">
+      <triggers/>
+    </hudson.plugins.emailext.watching.EmailExtWatchAction_-UserProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.5">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <jenkins.plugins.slack.user.SlackUserProperty plugin="slack@2.48">
+      <disableNotifications>false</disableNotifications>
+    </jenkins.plugins.slack.user.SlackUserProperty>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>b6d9a6cfe892d345</seed>
+    </jenkins.security.seed.UserSeedProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>all</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.model.TimeZoneProperty/>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>true</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.5">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.34">
+      <emailAddress>jtkim@cocone.co.jp</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.LastGrantedAuthoritiesProperty>
+      <roles>
+        <string>STAFFALL</string>
+        <string>COCONE-JP-Development-Dev</string>
+        <string>ESR-SVN-Bigcache-RW</string>
+        <string>COCONE-JP-Development</string>
+        <string>COCONE-JP-Development-DevGlobal</string>
+        <string>ET-Regular</string>
+        <string>Title-Developer</string>
+        <string>COCONE-JP-Global-Dev</string>
+        <string>ESR-SSLVPN</string>
+        <string>ESR-Zendesk-Pokecolo</string>
+        <string>ESR-BIGBROTHER-MINIME</string>
+        <string>COCONE-JP-Project-C</string>
+        <string>ESR-CMS-Billing-Biblia</string>
+        <string>ESR-BIGBROTHER-TANE</string>
+        <string>ESR-SVN-Tane-App</string>
+        <string>ESR-CMS-Billing-Tane</string>
+        <string>ESR-CMS-TANE-CONTENTS1</string>
+        <string>ESR-CMS-ALPHATANE-SYSADMIN_TMP</string>
+        <string>ESR-CMS-ALPHATANE-SYSADMIN</string>
+        <string>ESR-BIGBROTHER-VITAMIN</string>
+        <string>ESR-SVN-Vitamin-Images-RW</string>
+        <string>ESR-SVN-Vitamin-App-RW</string>
+        <string>ESR-AZKABAN-Sensil-Admin</string>
+        <string>ESR-KPI-VITA</string>
+        <string>ESR-CMS-Sensil-Alpha</string>
+        <string>COCONE-Tokyo</string>
+        <string>ESR-SVN-Vitamin-Images-Global-RW</string>
+        <string>ESR-SVN-ProjS</string>
+        <string>ESR-KPI-MCN</string>
+        <string>ESR-AWS-CVPN</string>
+        <string>ESR-SVN-Biblia-Images</string>
+        <string>ESR-SVN-Poketria</string>
+        <string>authenticated</string>
+      </roles>
+      <timestamp>1628233349235</timestamp>
+    </jenkins.security.LastGrantedAuthoritiesProperty>
+  </properties>
+</user>

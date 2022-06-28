@@ -1,0 +1,45 @@
+commit ed12334568307cb048d34eb621a799158800d4c5
+tree 3a2d759e4a3e3515ace294e9f56bcde0bc865d8b
+parent e3c660afaf5baecb4154651562d539efa49615b6
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-04-13 20:33:28 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-04-13 20:33:28 +0900
+
+    [ios][android]ビルドURLの情報も付与
+
+
+:100644 100644 e73b7c185820ba54b1a207f299e4b556a2765784 befaabc7f81dc2c4abf6ddde22a5d0bac832feac M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 f76f441f8278792394e59a0807f390be1fc09d5c 9849e8c644c54a34dc4b7c12341bd71df7252cb5 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit e3c660afaf5baecb4154651562d539efa49615b6
+tree b07c013f5f60a3c6ae25f115f22e4cc58a22f437
+parent 62840f7ec9b0a7e6ecbfd440796b185c13f4efd5
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-04-13 20:28:16 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-04-13 20:28:16 +0900
+
+    [ios][android]p3_clientメンション付きにする（開始時の通知）
+
+
+:100644 100644 489747cfa3e5e9aad2db693c3588d3ab384fb275 e73b7c185820ba54b1a207f299e4b556a2765784 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 d49eaad293c549089faae00d875920332d51c9ad f76f441f8278792394e59a0807f390be1fc09d5c M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 62840f7ec9b0a7e6ecbfd440796b185c13f4efd5
+tree 99e1ad87bd60ad20a2ab32e8db94080fdabf7d45
+parent 557f61c0b1eb26ec9434aa0aa63c0d19f12cbc8f
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-04-13 20:23:49 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-04-13 20:23:49 +0900
+
+    [ios][android]BRANCH_NAMEの変数はBRANCHじゃないとだめだったので修正
+
+
+:100644 100644 049ec7d1f6196f2c9198d11b5e17b806f761ae09 489747cfa3e5e9aad2db693c3588d3ab384fb275 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 6003d7baad94f54182f8c98abba6133cde824301 d49eaad293c549089faae00d875920332d51c9ad M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 557f61c0b1eb26ec9434aa0aa63c0d19f12cbc8f
+tree 725a4e594759ba99d9e29fb892e3af0ff8eedf5d
+parent 13cecd423c1c7832ebdefc4ef845033c4f6c09cf
+author matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-04-13 20:19:53 +0900
+committer matsumoto_rika <matsumoto_rika@cocone.co.jp> 2022-04-13 20:19:53 +0900
+
+    [ios][android]本番ビルドスタート時に開始通知を投げられるようにする
+
+
+:100644 100644 0a5fdb9680a696897f25d962f6aff5253ccbb9a4 049ec7d1f6196f2c9198d11b5e17b806f761ae09 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 ab5f7319d64f2e5b976c07f76bec881d186d06fd 6003d7baad94f54182f8c98abba6133cde824301 M	pipeline_script/DevBuild/ios/release_build.groovy
+:100644 100644 d4d84c7df9eac54411f566be692bf7fbff9bf991 a4e795d2233be1b074565ad2955a7bd598754670 M	pipeline_script/utils/notify/slackUtility.groovy

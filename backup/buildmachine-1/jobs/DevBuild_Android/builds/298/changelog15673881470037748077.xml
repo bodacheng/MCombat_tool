@@ -1,0 +1,11 @@
+commit bd1ec79e960afe76a5c6814b68431e498e0ee18e
+tree f5c9ca5ad5296af3d523fc9a2111c1d89e5e9db6
+parent 62ff881f017e2f643d67a58ace2c2278d3243798
+author 伊藤 みどり <ito_midori@cocone.co.jp> 2022-05-16 15:40:29 +0900
+committer 伊藤 みどり <ito_midori@cocone.co.jp> 2022-05-16 15:40:29 +0900
+
+    本番ビルドに強制的にTestLoginSceneを表示するオプションの追加
+
+
+:100644 100644 befaabc7f81dc2c4abf6ddde22a5d0bac832feac f9d095e1fbae765e6cd598f85566ff5368cbfce2 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 9849e8c644c54a34dc4b7c12341bd71df7252cb5 1cb15d5e9c22189a5480e6beffb0ebb02b470661 M	pipeline_script/DevBuild/ios/release_build.groovy

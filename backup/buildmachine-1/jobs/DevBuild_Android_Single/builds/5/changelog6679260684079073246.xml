@@ -1,0 +1,30 @@
+commit 032ca12ea2c783d407c97766823032040cf80409
+tree 21d7bbd5ba6858310314e97625b64a57d9b3344d
+parent 517d9aae5061507aa4443268b223ccb77c8ae633
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-17 17:51:11 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-17 17:51:28 +0900
+
+    まとめて受け取りバッジ追加、フレンド解除処理
+
+
+:100644 100644 0a2e65ee7e069877087218f7e4a47f9577b228b7 9af1a052def4b9a144741dd8b6c25f5adf34d220 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 f66d7596634bbf6dcc53bc11df3e0c91824ff6be e54bb94a362270ed42a5c855e2fb9c13bd3ad16b M	Assets/App/Scripts/Contents/Friend/FriendListModal.cs
+:100644 100644 71fefa79e98edcec407ab74604d2d340d70f47ec 3f44f94264e9a502cde25c610ed802fd0d241853 M	Assets/App/Scripts/Contents/Friend/FriendModel.cs
+:100644 100644 8d604cf510caff0181baa9e4f6ffe8ba3d5e0c2f 06ecaecf5b84040e443bdd50521032edcb579bd3 M	Assets/App/Scripts/Contents/Friend/FriendService.cs
+:100644 100644 b47fc25d0be314a7e4a8c0c53cf7c61217ef77fb bfbb2198373283207590e31cf7c0ed537a738929 M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 9e0a9d53e88a55689e0972f19c16cab89bc7face 73e79463c1c98264f4afafbafbf72ac156f26324 M	Assets/App/Scripts/Contents/Profile/ProfileOptionLayer.cs
+:100644 100644 ae0458c3854e9c3bd2d0c10308a1d9dcb198844c be3cda3bebc51aa0699dc2faf3819a40e0a2bd61 M	Assets/App/Scripts/p3-proto/friend/Friend.cs
+:100644 100644 0879d1adadde884af0960121d8de77bcd547b457 a7184f964b997022e436a6422ecc344406c78d63 M	Assets/Resources/UI/Friend/FriendListModal.prefab
+:100644 100644 d2957c927a62ee80169637535a6653284c98b105 6787988c4f68dbf1a6c0e5448ab5fe2cfba3e1ac M	Assets/Resources/UI/Profile/ProfileOptionLayer.prefab
+commit 517d9aae5061507aa4443268b223ccb77c8ae633
+tree 5e1cea064669e7d5bd80a693fc08cab6756679dd
+parent a92879e1f7d76f1c8b26626e332c1ce3d0d50555
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-17 16:13:38 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-17 17:51:27 +0900
+
+    add friend deeplink
+
+
+:100644 100644 23236865cd162667f9bb26856e4c75a09df3b09d 0a2e65ee7e069877087218f7e4a47f9577b228b7 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 641268788372aa3b850ba18a628078d4615801be f66d7596634bbf6dcc53bc11df3e0c91824ff6be M	Assets/App/Scripts/Contents/Friend/FriendListModal.cs
+:100644 100644 fae47ebd39c2c259210818139f7c7a1449da3271 e9daa9ec4cca14d313954815d4ea72f3f1a6ff7c M	Assets/App/Scripts/Scenes/WorldScene.UI.cs

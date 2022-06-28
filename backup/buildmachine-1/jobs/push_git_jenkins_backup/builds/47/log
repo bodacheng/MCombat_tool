@@ -1,0 +1,258 @@
+定期的に実行
+Obtained pipeline_script/utils/backup_jenkins_configurations.groovy from git https://git-1.cocone.jp/projectp3/p3-tools
+Running in Durability level: MAX_SURVIVABILITY
+[8mha:////4KMIoPpwa9sqFTq42EQVBR294OIQWarrBsGrNE9xKOf2AAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4FnV1wKzJzbE5eiW3vtJTiY2f3yh3IW3VcMqO16BkGUKAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4F7iT+VqWwlyNWgyOEIUcW9t4LozJQcAXEp3F2vSXMLTAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgZR/eT83ILSktQifY2k0sycEt3MPE19AHHxbH3KAAAA[0mJenkins in /Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup
+[8mha:////4HOTXN9Zqq6YtU8Xf00ogNUH01uCT4WfFLxOFYF0AIJpAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4EvDMKRrIcxQ2ernxv9jvyTZb9OhRErwIGj6VXJU/saLAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4B33koANQuMIUmMUK9xzj5SiyB7Rh+K4hFAMBvvbzdLPAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Declarative: Checkout SCM)
+[8mha:////4HK6/oUpKnF/7AUBoNi1mpUML6DSgI0ZgXaQh0duBwY3AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] checkout
+The recommended git tool is: git
+using credential jenkins_gitlab
+ > git rev-parse --resolve-git-dir /Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://git-1.cocone.jp/projectp3/p3-tools # timeout=10
+Fetching upstream changes from https://git-1.cocone.jp/projectp3/p3-tools
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.1 (Apple Git-130)'
+using GIT_ASKPASS to set credentials JenkinsからGitLabへのアクセス用アカウント
+ > git fetch --tags --force --progress -- https://git-1.cocone.jp/projectp3/p3-tools +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 16ac5ce963e6984700d408328e4b8da0609b2549 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 16ac5ce963e6984700d408328e4b8da0609b2549 # timeout=10
+Commit message: "[chore][jenkins]定期バックアップ jenkins by buildmachine-1"
+ > git rev-list --no-walk ed335f6621cbd9b47fb6aad6c01d6a3d93199053 # timeout=10
+[8mha:////4MVFna0y9Im/TvViCkZuZbioQO3w5NXcCa+F9sl9BpG9AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4GPtPtcZjwJPcdrxOw/zXuSmgB8AbcZ0f3D9VUBgO22DAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4P0ZnC9lNv+j+PkFwxNHyJcL58QrGZxLQ3q16tk9/zkCAAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] withEnv
+[8mha:////4LiLXA2SBNyF0JY9MlcFy/tF5aYwbgtDprM0EeOTPSw8AAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] {
+[8mha:////4KgdtN3CIBC1UsmewXn1LWlwcKDuuVkmmGRYR4qZvCfHAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] stage
+[8mha:////4ASwsmXRF2l1qO6w9lNWoQZ/mP/2yOO1FvoZEsNNN1/IAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] { (cleanup workspace)
+[8mha:////4KxJxBngLJhDZQPetGJQblErjCCvtCVStfOUnBJqUaEmAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBgq0rvS+AAAA[0m[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[8mha:////4K8NdBRiZtYosJ56MEbZKAisfEPixFaHaRkSL/VMo9rsAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihKgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N7BnLt++AAAA[0m[Pipeline] }
+[8mha:////4GMzt/BDP+7i/MhCpuJl8T0z6L9XWwNTrJbPNc21BBKWAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiKGgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N4glvS6+AAAA[0m[Pipeline] // stage
+[8mha:////4ONGALoIoOtcOjvKgjNsAMVj6WnZCtb7+u7b+5DyBC1/AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUnRgQE2uUhROEJoSk0f9tkpJOnIircQdaKjHhwbItWe/1hioGOFEwzGnsLMbWst6PZk4sU+hunjJzdGUtYSSvmdBZkNLntQpKGlYVJWw4bDW2nqJFk2DHnXzI2ks09SWFeTtyKK0a4AkFn8lJhvQtU4D9fVSR8Mf5C4CpT1A2zWKH5Vl9ANydZ8vCAAAA[0m[Pipeline] stage
+[8mha:////4JBg5EcOKIq5V+NSNQEo+hvgL92At+gwXMu44hpxvH10AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUTCAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD0rlhNLCAAAA[0m[Pipeline] { (ブランチ)
+[8mha:////4EksSh2oTmoWkNfRNEVivnVlzO6YlTPiWiDg4V0POALbAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiOhCiSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyu3uU/vwBr2eB0O+AAAA[0m[Pipeline] git
+The recommended git tool is: git
+Warning: CredentialId "pokepia_buildmachine-1" could not be found.
+Cloning the remote Git repository
+Cloning repository https://git-1.cocone.jp/projectp3/p3-tools.git
+ > git init /Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup # timeout=10
+Fetching upstream changes from https://git-1.cocone.jp/projectp3/p3-tools.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.1 (Apple Git-130)'
+ > git fetch --tags --force --progress -- https://git-1.cocone.jp/projectp3/p3-tools.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://git-1.cocone.jp/projectp3/p3-tools.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 16ac5ce963e6984700d408328e4b8da0609b2549 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 16ac5ce963e6984700d408328e4b8da0609b2549 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b master 16ac5ce963e6984700d408328e4b8da0609b2549 # timeout=10
+Commit message: "[chore][jenkins]定期バックアップ jenkins by buildmachine-1"
+[8mha:////4MEmljz+tidiqDFph+ttwce2RRfy5bNwBdZZjDFYJM6iAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICVEgoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDQMEcr9Ntfu8AEWNdkpvgAAAA==[0m[Pipeline] }
+[8mha:////4PJrYsi/wsYaFwgMjYUdaP6E6mI3EB2XH8e2tRMVU27kAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKi0FAgqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAczeJyj3da768AEi+zpyvgAAAA==[0m[Pipeline] // stage
+[8mha:////4HAb0+EbgitRCqbewj2OSZ+Vba6CTkIHkyf644IyRQpqAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycohU7YqYWKMunCCkISSN/m+TlHbiRFyNOxCoxIQHy7ZkvecLyhjgSMFwp7G3GJXlg59MTnym0F89zdzRhSvCSF7zVs8tdfq01paShlUFg42ArUblKVo0CXbCybusvERTnVPI20EAs90IDyhEJicZ0rcsAfa3qYuEP85fACxDAlbX2Zrm8yzf8hZCqsIAAAA=[0m[Pipeline] stage
+[8mha:////4OxM3uHjR2vgcTP59PRzkn4FLSjxwA+bDhSM3pgl84jPAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUKiNiYo2ycILQhJA0+r9NUtKJE3E17kBLJSY8WLYl673eUMUAJwqGOY2dxdha1vvRzIllCt3NU2aOrqwljOQ1EzoLUvq8VkFJw6qihA2HrcbWU7RoEuy4kw9Ze4mmvqQwb0cOpVUDPKHgMznJkL5lCrC/jyoS/jh/ATD1CcqmWeywPKsPpnFij8IAAAA=[0m[Pipeline] { (バックアップディレクトリ走査)
+[8mha:////4D1q9xAI0UViUNwmFHwNwcoZygB8MonzKIiFYiE9LQx0AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUAjbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAd6e6VPCAAAA[0m[Pipeline] script
+[8mha:////4CJ6lodL41vmKSzcdBLeBM0jKFsGD5K6uqLpLRxc3PK+AAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUQjAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD/hYjrHCAAAA[0m[Pipeline] {
+[8mha:////4OaU3vZNtapMThgH01SjnPU5fhgavuWPYhyEae8SvpaFAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIUGDqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDhnK7+9Q+vAEIWoEpvgAAAA==[0m[Pipeline] sh
++ find /Users/p3_dev/backup_jenkins -name 'FULL-*' -maxdepth 1 -type d -print
++ sort
++ tail -n 1
+[8mha:////4EBUMCEPA+RsuQtKXIDgOM6rCkDAQASvIG8MSkfun/OhAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISEKRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpTb3af24Q1Ja5owvgAAAA==[0m[Pipeline] echo
+===================================================
+[8mha:////4GwH/BQgF4xp5f61G1w99to0qN4kPCWzXvtGANqaYZcMAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiISEhIaq0lhteYGJjnFh3xnZIKl7E1/gDgUhUbLHa2WaeL1imCEeOFltDnaPUOAy+t9PCgWN38Txgy2dsmBJ7g9IMkrWpZ5ScDcwpSlgIWBlqPCdHNsNatOquKq/IVqccp+8goHT6Bg8oxGTOKuYvjBE2114npp/nrwDGkKHc7j61D2+GdwK3vgAAAA==[0m[Pipeline] echo
+latest directory:/Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00
+[8mha:////4PCqpYN0qHPAglTNWCLqwFce1ZjcUqMVw/0VXC8qbEm8AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIVEgRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYMpTb3af24Q3HRhmuvgAAAA==[0m[Pipeline] echo
+workspace =/Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup
+[8mha:////4D1eBBeFKqL9GL28knwiGV5asnVOw1PlsbfFb6cHbmpcAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOKCQFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDREKHeHXPvt8AG5lxl+vgAAAA==[0m[Pipeline] echo
+===================================================
+[8mha:////4P6Hut6DNkRyWz9LZl3lmG97Cx9zX0FsnvkQQs2S19LaAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiQFQoFa3lhheYxBgn1l2wHZyKF/E1/oBFJCq2WO1sM683LIOHmr3BTlNvKTQWBzeavDCx76+OE3Z8wYYpsNModZLc6tOMkqOGOUUJCwErTY3jYMlEWItOPVTlFJnqHH3+jgJK297hCYXI5qh8/MLkYXMb28D08/wVwDREKHeHXPvt8AH4pgJnvgAAAA==[0m[Pipeline] echo
+workspace_backup_path =/Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup/backup/buildmachine-1/
+[8mha:////4Mvl86wLrdF5Hv/Bh23BslODqX8Zc+QzcEZTMMwOPLRKAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBVEhqrRWGl5gYmOcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThwM9poGS7Gz6N1o8sKJw3B1PGHPF+yYIjuNrZ5aVrpZsOWkYUlRwkrARlPnOFoyCbailw9ZOUmmOqeQv6OA0qo7PKEQ2ZxkSF+YA+xuo4pMP89fAcw+QVkfcu1r/wE79S9MvgAAAA==[0m[Pipeline] fileExists
+[8mha:////4ETxVi8Vxyf67q+61Z+yNK/pmn+SBBtG+DTWyTMGFIlkAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRiKgQVVorDS8w8WGcWHfGdkgqXsTX+AMWkajYYrWzzbzesI4BThyM6JEGS7GzwrvR5CUmDsPV8SR6voiOKbJD0eLUssZmwZYTwpKihJWEDVLnOFoyCbayVw9VOUWmOqeQv6OE0uo7PKGQ2ZxUSF+YA+xuo45MP89fAcw+Qbk/5Kpr/wF6xDRVvgAAAA==[0m[Pipeline] sh
++ rsync -au --delete /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/buildtriggerbadge.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/com.chikli.hudson.plugin.naginator.NaginatorPublisher.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/com.cloudbees.hudson.plugins.folder.config.AbstractFolderConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/com.dabsquared.gitlabjenkins.GitLabPushTrigger.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/com.dabsquared.gitlabjenkins.connection.GitLabConnectionConfig.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/com.sonyericsson.rebuild.RebuildDescriptor.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/config.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/credentials-configuration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/credentials.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/github-plugin-configuration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.model.UpdateCenter.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.build_timeout.operations.BuildStepOperation.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.copyartifact.CopyArtifactConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.copyartifact.TriggeredBuildSelector.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.emailext.ExtendedEmailPublisher.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.git.GitSCM.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.git.GitTool.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.gradle.Gradle.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.throttleconcurrents.ThrottleJobProperty.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.plugins.timestamper.TimestamperConfig.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.tasks.Ant.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.tasks.Mailer.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.tasks.Maven.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.tasks.Shell.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/hudson.triggers.SCMTrigger.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/installedPlugins.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/io.jenkins.plugins.junit.storage.JunitTestResultStorageConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.fingerprints.GlobalFingerprintConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.model.ArtifactManagerConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.model.GlobalBuildDiscarderConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.model.JenkinsLocationConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.mvn.GlobalMavenConfig.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.plugins.slack.SlackNotifier.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.security.QueueItemAuthenticatorConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.security.ResourceDomainConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.security.UpdateSiteWarningsConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.security.apitoken.ApiTokenPropertyConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.tasks.filters.EnvVarsFilterGlobalConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jenkins.telemetry.Correlator.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jobConfigHistory.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/jobs /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/nodeMonitors.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/nodes /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.codefirst.SimpleThemeDecorator.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkins.plugins.lockableresources.LockableResourcesManager.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.builduser.BuildUserVarsConfig.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.gitclient.JGitApacheTool.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.gitclient.JGitTool.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.github_branch_source.GitHubConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.pipelineConfigHistory.model.PipelineConfigHistoryGlobalConfiguration.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.resourcedisposer.AsyncResourceDisposer.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.unity3d.Unity3dBuilder.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.workflow.flow.FlowExecutionList.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.workflow.flow.GlobalDefaultFlowDurabilityLevel.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/queue.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/scriptApproval.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/thinBackup.xml /Users/p3_dev/backup_jenkins/FULL-2022-05-08_12-00/users /Users/p3_dev/.jenkins/workspace/push_git_jenkins_backup/backup/buildmachine-1/
+[8mha:////4CrLQF/4Ka0qIWHYAb5lCrCpTQLnkfv5c2D98QO2y+2VAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGIj8alQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw/KU6NBvgAAAA==[0m[Pipeline] }
+[8mha:////4GzP23MkAkZO9pf+jNvPMKAHYWGv2Ioo9oUSmpy9JqNIAAAApR+LCAAAAAAAAP9tjTsOwjAQRDdBFLSUHGIj8alQKlrLDScwiTFOrN1gOzgVJ+Jq3AGLSFRMMZo3zXu9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuDrm2+w/5sPj9vgAAAA==[0m[Pipeline] // script
+[8mha:////4JB+amsfMfM53nYiDaAqAsSXMwoMYMjXDbNZOeiDTgpkAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMKRiESDqNJaaXiBiQ/jxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgRI80WIqdFd6NJi8xcRiujifR80V0TJEdihanljU2C7acEJYUJawkbJA6x9GSSbCVvXqoyiky1TmF/B0llFbf4QmFzOakQvrCHGB3G3Vk+nn+CmD2PkFZH3Lt6w/0VwjlvgAAAA==[0m[Pipeline] }
+[8mha:////4IWuG+8M1No4Cj9SiBjG8i120j8Q/FZaZIyPq/whFRSSAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIihYICUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkG5P+Sq6w/HtFNZvgAAAA==[0m[Pipeline] // stage
+[8mha:////4D3TyWtQZ2f9A0N8iFMs3m5IISLnYxOsZn4f23eVQwUpAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUFQsSYuoadeEEoQkhafR/SVLSiRNxNe5AoBITHizbkvWeL6iChyN5zazCwWDoDRvdpHNiifxwcZSYpTPrCQM5xTqVOpKqXWpHUcGiooQVh7XC3lEwqCNsuBV3UTuBuj5Fn7cDh9LIGzyg4JkchY/fMnvYXicZCH+cvwCYxwhl02Tb7T/P6g0gPq6twgAAAA==[0m[Pipeline] stage
+[8mha:////4Jbl0DXDRINnKm5I6XUQTS+3/ChKZQbS5aeGa0I1K0PNAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YAEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD59NhPHCAAAA[0m[Pipeline] { (gitへのコミット)
+[8mha:////4AJ4QRXzrRfKxwrk1Vpz1ENNpS3FvoNa46H98Lu5klB8AAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUCRaEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WfbbT7P6g0Z/aLSwgAAAA==[0m[Pipeline] script
+[8mha:////4PGfLh7zoUzL+7EHMheXwLNereGEBsjeo0ZL6mxs8Y4xAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUJDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAbb5KxbCAAAA[0m[Pipeline] {
+[8mha:////4GCWwFcsepplke/B41jmxzkDtSkR3GuMRg0EIflRzGlmAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiEB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwZyv32U7vwBirOQHu+AAAA[0m[Pipeline] sh
++ echo 'git add -A'
+git add -A
++ git add -A .
++ echo 'git commit -m [chore][jenkins]定期バックアップ jenkins by buildmachine-1'
+git commit -m [chore][jenkins]定期バックアップ jenkins by buildmachine-1
++ git commit -m '[chore][jenkins]定期バックアップ jenkins by buildmachine-1'
+[master 62ff881] [chore][jenkins]定期バックアップ jenkins by buildmachine-1
+ 116 files changed, 252247 insertions(+), 209876 deletions(-)
+ delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/210/log
+ delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/210/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/211/changelog2195969987524486870.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/211/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/212/changelog17171298683650402141.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/212/log-index
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{211 => 240}/build.xml (98%)
+ create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/240/changelog7585357885188893634.xml
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{210/changelog15018249734294917551.xml => 240/changelog939708723378369979.xml} (100%)
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{211 => 240}/log (71%)
+ create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/240/log-index
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{210 => 241}/build.xml (98%)
+ create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/241/changelog15960984515618195662.xml
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{210/changelog8136249018608612208.xml => 241/changelog17489644389165342285.xml} (100%)
+ create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/241/log
+ create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/241/log-index
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{212 => 242}/build.xml (97%)
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{211/changelog2414138428995654106.xml => 242/changelog10823935231103346512.xml} (100%)
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{212/changelog16610637828661798316.xml => 242/changelog11236682473882968697.xml} (100%)
+ rename backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/{212 => 242}/log (71%)
+ create mode 100644 backup/buildmachine-1/jobs/Design_DevBuild_Assets/builds/242/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/43/build.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/43/changelog5902651904851680050.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/43/changelog9540944368006609819.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/43/log
+ delete mode 100644 backup/buildmachine-1/jobs/Design_ReleaseBuild_Assets/builds/43/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/266/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/267/changelog12745079191982834754.xml
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/267/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/268/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/269/changelog9905027298585630252.xml
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/269/log-index
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{267 => 276}/build.xml (97%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/276/changelog1479108189067904565.xml
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{266/changelog10529820443464141037.xml => 276/changelog5361671256245282556.xml} (100%)
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{267 => 276}/log (99%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/276/log-index
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{268 => 277}/build.xml (98%)
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{266/changelog9079724829700689063.xml => 277/changelog18014823723924407185.xml} (100%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/277/changelog9298346827913165530.xml
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{266 => 277}/log (99%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/277/log-index
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{266 => 278}/build.xml (97%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/278/changelog10366104823889464577.xml
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{267/changelog4463569779222448763.xml => 278/changelog466413998046253137.xml} (100%)
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{269 => 278}/log (99%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/278/log-index
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{269 => 279}/build.xml (97%)
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{268/changelog283013922718770567.xml => 279/changelog18025013707274166341.xml} (100%)
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{268/changelog7949841598469733165.xml => 279/changelog4829674020018886254.xml} (100%)
+ rename backup/buildmachine-1/jobs/QA_Build_Android/builds/{268 => 279}/log (99%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_Android/builds/279/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/287/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/288/changelog8457149186756833984.xml
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/288/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/289/log
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/289/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/290/changelog10860545842079668127.xml
+ delete mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/290/log-index
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{288 => 297}/build.xml (97%)
+ rename backup/buildmachine-1/jobs/{QA_Build_Android/builds/269/changelog10728463203413394998.xml => QA_Build_iOS/builds/297/changelog13565696356880133849.xml} (100%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/297/changelog17369118057610866644.xml
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{288 => 297}/log (99%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/297/log-index
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{289 => 298}/build.xml (98%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/298/changelog5908928735573211738.xml
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{287/changelog11461417782971357199.xml => 298/changelog7414802344973950651.xml} (100%)
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{287 => 298}/log (99%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/298/log-index
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{290 => 299}/build.xml (97%)
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{287/changelog2155566915423218163.xml => 299/changelog279798030000466981.xml} (100%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/299/changelog526562241457365936.xml
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/299/log
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/299/log-index
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{287 => 300}/build.xml (97%)
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{288/changelog1422808435483353918.xml => 300/changelog8028339569936333741.xml} (100%)
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{289/changelog7796296509642786645.xml => 300/changelog8273585521757608443.xml} (100%)
+ rename backup/buildmachine-1/jobs/QA_Build_iOS/builds/{290 => 300}/log (99%)
+ create mode 100644 backup/buildmachine-1/jobs/QA_Build_iOS/builds/300/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/112/changelog5602318643485075669.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/112/changelog9267016353844937864.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/112/log
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/112/log-index
+ rename backup/buildmachine-1/jobs/Release_Build_Android/builds/{112 => 122}/build.xml (80%)
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/122/changelog15416590615069669987.xml
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/122/changelog428614524712001072.xml
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/122/log
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_Android/builds/122/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/201/changelog5134658601957699527.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/201/log
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/201/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/202/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/203/changelog372742993316354702.xml
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/203/log
+ delete mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/203/log-index
+ rename backup/buildmachine-1/jobs/Release_Build_iOS/builds/{203 => 211}/build.xml (84%)
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/211/changelog1010130920555608129.xml
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/211/changelog15033354532069447304.xml
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/211/log
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/211/log-index
+ rename backup/buildmachine-1/jobs/Release_Build_iOS/builds/{202 => 212}/build.xml (79%)
+ rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/289/changelog962798445797701965.xml => Release_Build_iOS/builds/212/changelog3885824776776379441.xml} (100%)
+ rename backup/buildmachine-1/jobs/{QA_Build_iOS/builds/290/changelog13265131764777886096.xml => Release_Build_iOS/builds/212/changelog6137389638505674868.xml} (100%)
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/212/log
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/212/log-index
+ rename backup/buildmachine-1/jobs/Release_Build_iOS/builds/{201 => 213}/build.xml (75%)
+ rename backup/buildmachine-1/jobs/Release_Build_iOS/builds/{202/changelog14006653209966655154.xml => 213/changelog12177517222712046452.xml} (100%)
+ rename backup/buildmachine-1/jobs/Release_Build_iOS/builds/{202/changelog8297929494563951398.xml => 213/changelog15707535401527752534.xml} (100%)
+ rename backup/buildmachine-1/jobs/Release_Build_iOS/builds/{202 => 213}/log (97%)
+ create mode 100644 backup/buildmachine-1/jobs/Release_Build_iOS/builds/213/log-index
+ delete mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/36/changelog13454860870742411538.xml
+ delete mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/36/log-index
+ rename backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/{36 => 46}/build.xml (97%)
+ create mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/46/changelog15069397603429172635.xml
+ rename backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/{36 => 46}/log (50%)
+ create mode 100644 backup/buildmachine-1/jobs/push_git_jenkins_backup/builds/46/log-index
++ git status
+On branch master
+nothing to commit, working tree clean
+[8mha:////4EE2d7BMFSBRqgV+IqX1FXdbKCjGSwM1exrasF5fK6vAAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiBB2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nffWr7BmM+Nsi+AAAA[0m[Pipeline] }
+[8mha:////4Hm4TixMyyQek9JztA1aovDxLY5P0nJ8Xeu4TWLBqb3xAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCkQ5R0VppeIFJjLFj3Tm2g1PxIr7GHwhEomKL1c4283zBOgY4ctBoFfWGYmvQu1HPCzOH/uo4o+ULtkyRncJG5YY7dVqw4aRgSVHCSsBGUes4GtIJtsLKu6ycJF2dU5i/g4DSdAM8oBCzOcmQvjAF2N3GLjL9PH8FMHmfoKzrT+3fTT40or4AAAA=[0m[Pipeline] // script
+[8mha:////4LYEbfE3gdjjOW6PS3rHK3UVo1+F8NVzuJOKtl8teZ0qAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSAAVCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw+Lw/VfvgAAAA==[0m[Pipeline] }
+[8mha:////4KzPCFj8AocwNwLHPkjpko/YN9BwvbEtRF0LFhHjgm0eAAAAph+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJSgBASSkVrueEFJjHGiXUXbAen4kV8jT9gEYmKLVY728zrDcvgoWZvsNPUWwqNxcGNJi9M7Pur44QdX7BhCuw0Sp0kt/o0o+SoYU5RwkLASlPjOFgyEdaiUw9VOUWmOkefv6OA0rZ3eEIhsjkqH78wedjcxjYw/Tx/BTANQ4Ryt8+1PXwAs4Fmrr4AAAA=[0m[Pipeline] // stage
+[8mha:////4FG9OGP06XwsPLD5+/ugFKf9R0szYHDfCXJDotBAQozzAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUlZAYEFPXqAsnCE0ISaP/S5KSTpyIq3EHApWY8GDZlqz3fEEVPBzJa2YVDgZDb9joJp0TS+SHi6PELJ1ZTxjIKdap1JFU7VI7igoWFSWsOKwV9o6CQR1hw624i9oJ1PUp+rwdOJRG3uABBc/kKHz8ltnD9jrJQPjj/AXAPEYomybbbv95Vm97sl+ZwgAAAA==[0m[Pipeline] stage
+[8mha:////4Ip99qSTTyge7x5Ey+v2+Krzy4BCWF9GvhAE5symj9OXAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0QQIJMXWNsnCC0ISQNvq//KS0EyfiatyBlkpMeLBsS9Z7vaGIDCdiJxqLrcdYe9GF3k1JDMTtNdAgGrqImjBSsELZQZGx1VIVJQuLshxWEtYW60DRo0uwkY1+6DJodOU58bQdJeTe3OEJmZzISXP6lpFhe+tNJPxx/gJg7BLku/1sh/lZfAD9vR8YwgAAAA==[0m[Pipeline] { (git push)
+[8mha:////4O47aFpAyX1mpPsdf5yDtdJ4AnslJUYEGDz8E0hwVygsAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoh0YQAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD56au0DCAAAA[0m[Pipeline] script
+[8mha:////4GaTI+wAKkJuzooog0yYI7Lw54t2q87UgiUQrYBvC9EPAAAAqB+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycoiUAQaEOrFGXThBaEJIGv1fkpR04kRcjTsQqMSEB8u2ZL3nC6rgoSGvmVXYGwydYYMbdU4ske8vjhKzdGYdYSCnWKtSS1Id59pSVDCrKGHBYamwcxQM6ggrbsVd1E6grk/R5+3AoTTyBg8oeCZH4eO3TB7W11EGwh/nLwCmIUK53WfbbT7P6g0iH00AwgAAAA==[0m[Pipeline] {
+[8mha:////4FO3oOYu4MLwDAFFw9DV9fJ+tqyTiW4PV4W8VApWVNcCAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycogUBibE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5AfdrPt52fxAW2++SvCAAAA[0m[Pipeline] sshagent
+FATAL: [ssh-agent] Could not find specified credentials
+[ssh-agent] Looking for ssh-agent implementation...
+[ssh-agent]   Exec ssh-agent (binary ssh-agent on a remote machine)
+$ ssh-agent
+SSH_AUTH_SOCK=/var/folders/n2/xbp1wc7135s2nzzjwzzd94940000gp/T//ssh-wFPtHLr7qZbA/agent.81086
+SSH_AGENT_PID=81087
+[ssh-agent] Started.
+[8mha:////4INBc5n4h5xyH/Um4ym3chfDOYeamiXVfNi6b6wMssUfAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUIDEhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYL8sJttPz+LDwMT42zCAAAA[0m[Pipeline] {
+[8mha:////4CRfT3QTm+FFZ16Kjiw19eZ8ECRPuSxSFUyGdm3nyggYAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIigagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUO63n9qFN1+P256+AAAA[0m[Pipeline] sh
++ git push -u origin master
+To https://git-1.cocone.jp/projectp3/p3-tools.git
+   16ac5ce..62ff881  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+[8mha:////4LG9PTDARufGFCG4JrMSJdakT2lPFY/9DBPy+dqsds+AAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiIagQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcr97lPbN5RlVvO+AAAA[0m[Pipeline] }
+$ ssh-agent -k
+unset SSH_AUTH_SOCK;
+unset SSH_AGENT_PID;
+echo Agent pid 81087 killed;
+[ssh-agent] Stopped.
+[8mha:////4HtdIOkyl5sNLnZ1p1K3CeGPNLe++zkYeth3BYtxNPqhAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiilSIitZKwwtMYowd686xHZyKF/E1/kAgEhVbrHa2mecL1jHAkYNGq6g3FFuD3o16Xpg59FfHGS1fsGWK7BQ2KjfcqdOCDScFS4oSVgI2ilrH0ZBOsBVW3mXlJOnqnML8HQSUphvgAYWYzUmG9IUpwO42dpHp5/krgMn7BGVdf2r/BovnA6G+AAAA[0m[Pipeline] // sshagent
+[8mha:////4NpC2c6k+/efGaOXVdAHt0GX6o0Ke90qvwsNGi8/9sp2AAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOJCAw2iSmu54QUmNsaJdWdsh6TiRXyNPxCIRMUWq51t5vmCZYpw5GixNdQ5So3D4Hs7LRw4dhfPA7Z8xoYpsTcozSBZm3pGydnAnKKEhYCVocZzcmQzrEWr7qryimx1ynH6DgJKp2/wgEJM5qxi/sIYYXPtdWL6ef4KYAwhQ7nbf2r7BrOlkFC+AAAA[0m[Pipeline] }
+[8mha:////4EW0rhucvsEYC9bZY8hhwZetDQdAe0bR4e9pHDTpuw8qAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgBBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDu9rm2hw/z/wv7vgAAAA==[0m[Pipeline] // script
+[8mha:////4OZ1m+SLbTL/0Uu1Cc48xO0KjI6LUnAKwzLOUXFlHhnVAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgBQJUaW10vACExvjxLoztkNS8SK+xh+wiETFFqudbeb1hnUMcOJgsNc0WIqdRe9GkxdOHIar4wl7vmDHFNlpbPXUstLNgi0nDUuKElYCNpo6x9GSSbAVvXzIykky1TmF/B0FlFbd4QmFyOYkQ/rCHGB3G1Vk+nn+CmD2PkF5qHPt6w+wfVp9vgAAAA==[0m[Pipeline] }
+[8mha:////4GwkmGUh28q84Uurc7QZGDAxEhAz7T4pMN7Pa7eon2D3AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOLSgBBCqWgtN7zAJMY4se6C7eBUvIiv8QcsIlGxxWpnm3m9YRk81OwNdpp6S6GxOLjR5IWJfX91nLDjCzZMgZ1GqZPkVp9mlBw1zClKWAhYaWocB0smwlp06qEqp8hU5+jzdxRQ2vYOTyhENkfl4xcmD5vb2Aamn+evAKZhiFDuDrm2+w+Es7kmvgAAAA==[0m[Pipeline] // stage
+[8mha:////4O4n2mgwonuhYLhR2V3zTfPsb+yDiW/tcmBK2zIF3krNAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIhDQ2iSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOVhn6uuP6GpSqS+AAAA[0m[Pipeline] }
+[8mha:////4Jmd25veMPM5oUEHT9JF96ta9g1uCjOt7TaDAK7nRQ5vAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMIhDQ2iSmul4QUmPowT687YDknFi/gaf8AiEhVbrHa2mdcb1jHAiYMRPdJgKXZWeDeavMTEYbg6nkTPF9ExRXYoWpxa1tgs2HJCWFKUsJKwQeocR0smwVb26qEqp8hU5xTyd5RQWn2HJxQym5MK6QtzgN1t1JHp5/krgNn7BOWhzlXvP5JKERi+AAAA[0m[Pipeline] // withEnv
+[8mha:////4HgpqvtTDF22DzU+6eJ4QUPti98gYhMAteYFWpNp5mY0AAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKREKJBVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PutINt9AF1IgLW9AAAA[0m[Pipeline] }
+[8mha:////4NEFVUkSWYHQ+WfV0AE7aVG226mNM1BbVcsKzo6O+Wc5AAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IMJC7GybVh8Qsq1Fpo3sP2IUx+kb/mP0gkcfJO95zlvN5Yp4gjR6daS52nVHvVh8HNT40cu2vgUbV8UTVT4mBVZceKG3tasGKxWJblWGlsLNWBkycn2OrWPEwRDLniLHF2B43cN3c8kem5LCbKF6aI3W1oEtOv8zeAqe8F+b4UZOUHTvSEFr0AAAA=[0m[Pipeline] // node
+[8mha:////4Iy4zaKPCCZvIPmLcnhUNYomngJ6t6oSEuUNevtnM1aKAAAApB+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKREKJBVLRWGl5gEmOcWHfBvpBUvIiv8QciIlGx1c4083pjmSKOHJ1qLLWeUuVVF3o3PTVwbK+BB9XwRVVMiYNVpR1Kru1pxpLFYl6WY6GxslQFTp6cYK0b8zBFMOSKs8TJHTRyX9/xRKanspgoXxgjNre+Tky/zt8Axq4T5PudINt+AMgYo9O9AAAA[0m[Pipeline] End of Pipeline
+Finished: SUCCESS

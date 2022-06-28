@@ -1,0 +1,247 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?><flow-definition plugin="workflow-job@2.41">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@1.8.5"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@1.8.5">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description> Unity2020用iOSとAndroidのアセットビルドとS3デプロイ</description>
+  <displayName>[本番][Asset]アセットビルド</displayName>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty/>
+    <org.jenkinsci.plugins.workflow.job.properties.DisableResumeJobProperty/>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.20">
+      <gitLabConnection>GitLab Integration</gitLabConnection>
+      <jobCredentialId/>
+      <useAlternativeCredential>false</useAlternativeCredential>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.32">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.plugins.throttleconcurrents.ThrottleJobProperty plugin="throttle-concurrents@2.2">
+      <maxConcurrentPerNode>0</maxConcurrentPerNode>
+      <maxConcurrentTotal>0</maxConcurrentTotal>
+      <categories class="java.util.concurrent.CopyOnWriteArrayList"/>
+      <throttleEnabled>false</throttleEnabled>
+      <throttleOption>project</throttleOption>
+      <limitOneJobWithMatchingParams>false</limitOneJobWithMatchingParams>
+      <paramsToUseForLimit/>
+    </hudson.plugins.throttleconcurrents.ThrottleJobProperty>
+    
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@0.82">
+          <name>BRANCH</name>
+          <description>ブランチを指定してください</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>5</visibleItemCount>
+          <type>PT_SINGLE_SELECT</type>
+          <groovyScript>#!/usr/bin/env groovy
+
+import hudson.model.*
+import jenkins.model.*
+
+def listBranches() {
+    def gitURL = 'https://git-1.cocone.jp/projectp3/p3-client'
+    def branches = ("git ls-remote -t -h ${gitURL}").execute()
+    return branches.text.readLines().collect { it.split()[1].replaceAll('refs/heads/|refs/tags/', '') }.unique().join(",")
+}
+return listBranches()</groovyScript>
+          <bindings/>
+          <groovyClasspath/>
+          <defaultValue>design</defaultValue>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>ASSET_VERSION</name>
+          <description>アセットのバージョン（アプリ側と共通）
+</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>v1</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition plugin="extended-choice-parameter@0.82">
+          <name>UNITY_VERSION</name>
+          <description>Unityバージョン</description>
+          <quoteValue>false</quoteValue>
+          <saveJSONParameterToFile>false</saveJSONParameterToFile>
+          <visibleItemCount>2</visibleItemCount>
+          <type>PT_SINGLE_SELECT</type>
+          <value>2020.3.21f1,2019.4.16f1</value>
+          <defaultValue>2020.3.21f1</defaultValue>
+          <multiSelectDelimiter>,</multiSelectDelimiter>
+        </com.cwctravel.hudson.plugins.extended__choice__parameter.ExtendedChoiceParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>IOS</name>
+          <description>Upload bundles for iOS</description>
+          <defaultValue>true</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+        <hudson.model.BooleanParameterDefinition>
+          <name>ANDROID</name>
+          <description>Upload bundles for Android</description>
+          <defaultValue>true</defaultValue>
+        </hudson.model.BooleanParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers/>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.92">
+    <script>pipeline {
+    agent {
+        label "Design_JobNode"
+    }
+
+    environment {
+        // BRANCHとRELEASENOTEはジョブのパラメーターつきビルドで設定される
+        GIT_URL='https://git-1.cocone.jp/projectp3/p3-client'
+        GIT_CREDENTIAL='1f53a4c2-f053-4789-9846-eb486d44a572'
+        
+        // environment
+        UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
+        UNITY_METHOD='BuildAddressableAssets.BatchBuild'
+        SLACK_DOMAIN='cocone'
+        SLACK_CHANNEL='p3_jenkins'
+        
+        // path
+        BUILD_CONFIG_DIR='Assets/App/Editor/Build/Configs'
+        
+        // variablues
+        UPLOAD_S3_ADDRESS=''
+        BuildKind='OfficialRelease'
+        CACHE_UPLOAD='--cache-control "max-age=86400"'
+        SERVER_PROFILE_NAME=''
+        
+    }
+
+    stages {
+        stage('Git') {
+            options {
+                timeout(time: 2, unit: 'HOURS')   // timeout on whole pipeline job
+            }
+            
+            steps {
+                script{
+                    def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
+                    USERNAME = cause.userName
+                }
+                
+                dir("ServerData")
+                {
+                    echo "delete ServerData"
+                    deleteDir()
+                }
+
+                checkout([$class: 'GitSCM',
+                    branches: [[name: "$BRANCH"]],
+                    extensions: [
+                        [$class: 'CloneOption', timeout: 60],
+                        [$class: 'CheckoutOption', timeout: 60]
+                    ],
+                    gitTool: 'Default', 
+                    userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
+                ])
+
+                // Git-LFSの値を反映させるための処理
+                sh 'git lfs pull'
+                sh 'git rm --cached -r .'
+                sh 'git reset --hard'
+                sh 'git rm .gitattributes'
+                sh 'git reset .'
+
+                // 再チェックアウト
+                checkout([$class: 'GitSCM',
+                    branches: [[name: "$BRANCH"]],
+                    extensions: [
+                        [$class: 'CloneOption', timeout: 60],
+                        [$class: 'CheckoutOption', timeout: 60]
+                    ],
+                    gitTool: 'Default', 
+                    userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
+                ])
+            }
+        }
+        stage('yaml情報の取得') {
+            steps {
+                script {
+                    def yamlFile = "${BUILD_CONFIG_DIR}/${BuildKind}BuildSettings.yaml"
+                    def script = $/eval "cat ${yamlFile} | grep -o 'assetUploadAddress: .*$' | sed -e 's/assetUploadAddress: ''//'"/$
+                    UPLOAD_S3_ADDRESS = sh(script:"${script}", returnStdout:true)
+                    UPLOAD_S3_ADDRESS = UPLOAD_S3_ADDRESS.replaceAll("\n", "")
+                    println 'UPLOAD_S3_ADDRESS:' + UPLOAD_S3_ADDRESS
+                    
+                    SERVER_PROFILE_NAME= "p3" + BuildKind
+                }
+            }
+        }
+        stage('Deploy iOS Asset') {
+            when {
+                expression { 
+                   return params.IOS
+                }
+            }
+            steps {
+                println "upload server : " + BuildKind
+                sh '$UNITY_PATH -projectPath $WORKSPACE -quit -batchmode -executeMethod $UNITY_METHOD -buildTarget iOS -assetVersion $ASSET_VERSION -assetBuildType rebuild'
+                
+                sh """
+                aws s3 cp --recursive ${WORKSPACE}/ServerData/dev/iOS/ ${UPLOAD_S3_ADDRESS}/iOS/ --profile ${SERVER_PROFILE_NAME} ${CACHE_UPLOAD}
+                """
+            }
+        }
+        stage('Deploy Android Asset') {
+            when {
+                expression { 
+                   return params.ANDROID
+                }
+            }
+            steps {
+                println "upload server : " + BuildKind
+                sh '$UNITY_PATH -projectPath $WORKSPACE -quit -batchmode -executeMethod $UNITY_METHOD -buildTarget Android -assetVersion $ASSET_VERSION -assetBuildType rebuild'
+                
+                sh """
+                aws s3 cp --recursive ${WORKSPACE}/ServerData/dev/Android/ ${UPLOAD_S3_ADDRESS}/Android/ --profile ${SERVER_PROFILE_NAME} ${CACHE_UPLOAD}
+                """
+            }
+        }
+    }
+    post {
+        success {
+            script {
+                // Slack投稿用にブランチのログを取得
+                GIT_LOG=sh(script: "git log origin/$BRANCH --pretty=short -1", returnStdout: true)
+            }
+            slackSend channel:"$SLACK_CHANNEL",
+                teamDomain: "$SLACK_DOMAIN",
+                color: "good",
+                message: ":toolbox::tada:*アセットビルド成功 [$JOB_NAME:$BUILD_ID]*:tada:\n$BUILD_URL\nユーザー : $USERNAME\nAssetVer : $ASSET_VERSION / branch : $BRANCH"
+        }
+        failure {
+            slackSend channel:"$SLACK_CHANNEL",
+                teamDomain: "$SLACK_DOMAIN",
+                color: "danger",
+                message: ":toolbox::skull:*アセットビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull:\n$BUILD_URL\nユーザー : $USERNAME\nAssetVer : $ASSET_VERSION / branch : $BRANCH"
+        }
+        aborted {
+            slackSend channel:"$SLACK_CHANNEL",
+                teamDomain: "$SLACK_DOMAIN",
+                color: "warning",
+                message: ":toolbox::construction:*アセットビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:\n$BUILD_URL\nユーザー : $USERNAME\nAssetVer : $ASSET_VERSION / branch : $BRANCH"
+        }
+    }
+}
+</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

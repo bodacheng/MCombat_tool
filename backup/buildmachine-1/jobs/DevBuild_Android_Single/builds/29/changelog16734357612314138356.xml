@@ -1,0 +1,10 @@
+commit a3185ce67489fd56603a76f796ad69872d92948d
+tree ba7ace7784a57dcb6f10bb4d1d2c165abf035434
+parent b55d11f6f4bd61e298dff00787762feca76e8978
+author Nagasawa Takehito <nagasawa_takehito@cocone.co.jp> 2022-06-23 14:52:34 +0900
+committer Nagasawa Takehito <nagasawa_takehito@cocone.co.jp> 2022-06-23 14:52:34 +0900
+
+    Android は sRGB への変換を無効にする
+
+
+:100644 100644 aaf328101ed2bbc8a022bb78cd57a41a47d577fa 5d908abee13f6cd26cbd1a3e534abca9ab6813b6 M	Assets/App/Scripts/Contents/Photo/PhotoTop/PhotoTopModel.cs

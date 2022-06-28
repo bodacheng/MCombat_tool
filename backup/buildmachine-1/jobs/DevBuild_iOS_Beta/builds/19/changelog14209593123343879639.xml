@@ -1,0 +1,80 @@
+commit 41add094359f083c0258b56831ffe10a28b6d221
+tree 627d2b6dd2f23d85af1283aa550e1a2b45944a99
+parent 5d637bdd6765f9a234a5a6ebf73cfe161b05cc09
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 16:31:04 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 16:31:04 +0900
+
+    move LIBRARY_PATH to global environment
+
+
+:100644 100644 be912f3d00b4f4003a76189f62dbdaa29e450cc0 53fc38e7f5b4871d9b6123287a2afbe0d2760cd0 M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 216f506c2853c8d9ff6858084c6e78195c254292 245ae304273cb401b24b43c541846f9dd72ea6f0 M	pipeline_script/Design/build_asset_upload_custom_server.groovy
+:100644 100644 2c80fd2320ba2137630244d0bab27661fcb53af8 646e9c047ce6f2feca23f9423c6c068ff362199a M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy
+:100644 100644 930c68c30d37bb5759e931b246936a49e5b16d72 74a08a6617a5f3f51150deaa250b934d9c71f6f9 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 ac5003af34c6525093fd192f81f7f6fe694b86c2 021e05f7b29dc8fc7417d5345b20d6d1f6323153 M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 ccbf12cb06da27952a8e8a433409aef46133a55d 30e2dec555634c18d33587a1954a08936b00ba0e M	pipeline_script/DevBuild/android/qa_build.groovy
+:100644 100644 4dc025f25aad37d036af4d128730f8f7e1ddb4a4 0a5fdb9680a696897f25d962f6aff5253ccbb9a4 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 09b7bb4b9e9e0b6491fbcde09ac0f25b78c907d4 664a409060c58a09ea97801b024cd88f7c296eca M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 68de568c7935b041419be7a928a8ade73d6e2eb7 f7e94405539e4defbdc1019f23ca32221d1d8b40 M	pipeline_script/DevBuild/ios/devbuild.groovy
+:100644 100644 414cb46c08750d2dcfd7580344c8ff34b3552b5f b1c7bc4718841bcb0e3f8b08a5e6d213fa6de5ca M	pipeline_script/DevBuild/ios/qa_build.groovy
+:100644 100644 abcc190523aca2ab77e62e65c7255df04872556e ab5f7319d64f2e5b976c07f76bec881d186d06fd M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 5d637bdd6765f9a234a5a6ebf73cfe161b05cc09
+tree b0e55ff24652b8cc9f28b013fd834ee0a42ceba6
+parent 849bdc907eece9b13f9d7f933b4f99ec440163f6
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 15:50:19 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 15:50:19 +0900
+
+    fix legacy options
+
+
+:100644 100644 aafa366bdd8194240a89a4e2ffd5d5edce6b0c69 be912f3d00b4f4003a76189f62dbdaa29e450cc0 M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 46bb86fbf9c1134608c6d8a4a10b743c76e7c5f5 216f506c2853c8d9ff6858084c6e78195c254292 M	pipeline_script/Design/build_asset_upload_custom_server.groovy
+:100644 100644 4485d46e98df9763faaa85c1a6daca479018b186 2c80fd2320ba2137630244d0bab27661fcb53af8 M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy
+:100644 100644 54f38723de21faa8670af939cd921cceda752989 930c68c30d37bb5759e931b246936a49e5b16d72 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 f5506797c4bf1d78205a45bda8f39fb519d8c0a9 ac5003af34c6525093fd192f81f7f6fe694b86c2 M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 d3f9e0b1a3da75434d8ecad41e88c13dea44bef3 ccbf12cb06da27952a8e8a433409aef46133a55d M	pipeline_script/DevBuild/android/qa_build.groovy
+:100644 100644 b3fc2f9dc1a128f4a55d31a716f2bb733b3502c2 4dc025f25aad37d036af4d128730f8f7e1ddb4a4 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 522aeeecc7e9db027cffdc5d8b9b08fa2af738a7 09b7bb4b9e9e0b6491fbcde09ac0f25b78c907d4 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 8a006ffd955aea5ad9b4ccdb88dd824395f8c568 68de568c7935b041419be7a928a8ade73d6e2eb7 M	pipeline_script/DevBuild/ios/devbuild.groovy
+:100644 100644 f460a98dbbe4d743f63d35a62c01b73a8ed3437e 414cb46c08750d2dcfd7580344c8ff34b3552b5f M	pipeline_script/DevBuild/ios/qa_build.groovy
+:100644 100644 527523419f0fb719408539bc330c60583eff4552 abcc190523aca2ab77e62e65c7255df04872556e M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 849bdc907eece9b13f9d7f933b4f99ec440163f6
+tree b0eb593e7e5a30f17632eff03c643755a11f9f38
+parent 3b7aa148cd371296506201c9d59058f2d67f34d4
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 15:00:17 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 15:00:17 +0900
+
+    add to design builds
+
+
+:100644 100644 20880353012395e1f2fb9a48baef9308bb68d9e1 aafa366bdd8194240a89a4e2ffd5d5edce6b0c69 M	pipeline_script/Design/build_asset_upload_alpha_sever.groovy
+:100644 100644 2c27b4dd7fd61ae5c8265fb11d9d88f8ce9fbf50 46bb86fbf9c1134608c6d8a4a10b743c76e7c5f5 M	pipeline_script/Design/build_asset_upload_custom_server.groovy
+:100644 100644 fb7e8e7d2525fda59d796103ca15292bbe1b2b94 4485d46e98df9763faaa85c1a6daca479018b186 M	pipeline_script/Design/build_asset_upload_officialrelease_server.groovy
+commit 3b7aa148cd371296506201c9d59058f2d67f34d4
+tree 592a0f134c234e70afd6fe8822b89fd2bc912ed1
+parent 868ea413242f654def06dc98dce9685a85670bea
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 14:57:15 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 14:57:15 +0900
+
+    add to other builds
+
+
+:100644 100644 3c0e16203c2aea6c5054f3a5ac90538a34d8862f f5506797c4bf1d78205a45bda8f39fb519d8c0a9 M	pipeline_script/DevBuild/android/devbuild.groovy
+:100644 100644 9236d110c997a08d1dbc2f0619d888cacdac0ee3 d3f9e0b1a3da75434d8ecad41e88c13dea44bef3 M	pipeline_script/DevBuild/android/qa_build.groovy
+:100644 100644 53e5f759de820f9691d40d1e3d5cce14ce529453 b3fc2f9dc1a128f4a55d31a716f2bb733b3502c2 M	pipeline_script/DevBuild/android/release_build.groovy
+:100644 100644 26b5351964f32facd3e5295053450c0b0d2da07e 8a006ffd955aea5ad9b4ccdb88dd824395f8c568 M	pipeline_script/DevBuild/ios/devbuild.groovy
+:100644 100644 4ff6dcca91b146bcc7386decc04b009af46d5065 f460a98dbbe4d743f63d35a62c01b73a8ed3437e M	pipeline_script/DevBuild/ios/qa_build.groovy
+:100644 100644 a9bb276132a9888e5fe8d5870217e9a25841c038 527523419f0fb719408539bc330c60583eff4552 M	pipeline_script/DevBuild/ios/release_build.groovy
+commit 868ea413242f654def06dc98dce9685a85670bea
+tree b4926938a5926e876e47969972b5902fcaa48bf5
+parent 99cec63a905b83d0ceea32ffe65019350b09db3b
+author shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 14:49:52 +0900
+committer shin donggun <shin_donggun@cocone.co.jp> 2022-04-04 14:50:47 +0900
+
+    add CLEAR_CACHE option
+
+
+:100644 100644 e0a6ecbf6e6c42e5db80a2d864b148564dab9036 54f38723de21faa8670af939cd921cceda752989 M	pipeline_script/DevBuild/android/build.groovy
+:100644 100644 e82f18af2a5f0da7307ffb4de200c09570406e39 423e06dba8a582153f4881f5f1f93edc080b8351 M	pipeline_script/DevBuild/android/build_beta.groovy
+:100644 100644 dc15ac55446a9304fde67494d9d8915b8ae13bc4 522aeeecc7e9db027cffdc5d8b9b08fa2af738a7 M	pipeline_script/DevBuild/ios/build.groovy
+:100644 100644 8f71a199b09edcba2fefb7d96f339fdd537e4c79 fef5b1fb703e9a78afe3fc22037e0f3fef79fdc5 M	pipeline_script/DevBuild/ios/build_beta.groovy

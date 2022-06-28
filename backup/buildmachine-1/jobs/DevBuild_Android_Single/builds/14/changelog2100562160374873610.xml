@@ -1,0 +1,20 @@
+commit 8eae69d1e6c2fc14fe0cd7cdc7b088d28fd5203d
+tree 00560ea4a155d1e75513eca88b8881b5b44ebc0e
+parent 4bb7c361a372395e8d3d45c00933d5c1e214ee4a
+author ito.midori <ito_midori@cocone.co.jp> 2022-06-20 11:23:41 +0900
+committer ito.midori <ito_midori@cocone.co.jp> 2022-06-20 11:23:41 +0900
+
+    ピアプレゼント関連とプロフィール閉じた後のフレンドリスト更新
+
+
+:100644 100644 60fd59c8f604cccb6545f1b6ade4b5be1cc39507 05339fd6c6dfdb5fa484d57ff0a6cc32e3f6783d M	Assets/App/Scripts/Contents/Coordinate/CurrentCoordinate/CurrentCoordinateHandler.cs
+:100644 100644 2243ebed64db09f8f717e19a4257144a1d0e3d14 0ddbd901c9fa1b96a8caf4e8195c126de90f2a95 M	Assets/App/Scripts/Contents/Friend/FriendHandler.cs
+:100644 100644 d391e5a7a7263e2db97b7fb9d424192c7224208b 4351cc77afffee6923a5723ed27c66d8269f11e8 M	Assets/App/Scripts/Contents/Friend/FriendListLayout.cs
+:100644 100644 ac40fa03b2d0cbee41fde86c257bdbf8cee13e12 27852217b33f62eef4429ba4246a462e0ba464f9 M	Assets/App/Scripts/Contents/Friend/FriendListLayoutItem.cs
+:100644 100644 e54bb94a362270ed42a5c855e2fb9c13bd3ad16b 597d3ac0000740afd48d70306c77381a94049a42 M	Assets/App/Scripts/Contents/Friend/FriendListModal.cs
+:100644 100644 afe167eb547f7c5fa03abc8eb88a5dd3c4ac4647 cf52cbb2f9d81c7bdd28c1daa81bb6cfdd6fecf9 M	Assets/App/Scripts/Contents/Friend/FriendModel.cs
+:100644 100644 014fe099d2290605d2021d461ff40e3303aa176e f89bc355d04256f9b8a2681e789ee68ae4a69842 M	Assets/App/Scripts/Contents/Profile/ProfileHandler.cs
+:100644 100644 eec82d898bd622098129d34b835dba1859d73b21 0236e35fe072ac191686e1df79c9ee5576e47432 M	Assets/App/Scripts/Contents/Profile/ProfileLayer.cs
+:100644 100644 27b1aa5f8ec94f70f4dff6290cbc97c1ece34ff7 8f9cd9228960602eea1e5af5794a2e82fae1ec5e M	Assets/App/Scripts/Contents/Relation/GiftOpponentsLayer.cs
+:100644 100644 a76aef08a5a5479a06db2f042a23245ff7774853 3cb606253985b5aa4511aeffb108f37f568cf8f1 M	Assets/App/Scripts/Contents/Relation/RelationHandler.cs
+:100644 100644 71a15bfeb6382a6e3ed8960c5b29eb30ac010d34 bb69522971ac4f9851030d13050bb71a7921b52b M	Assets/Resources/UI/Friend/FriendListItemFriend.prefab

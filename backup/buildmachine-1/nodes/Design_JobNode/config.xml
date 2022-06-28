@@ -1,0 +1,14 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<slave>
+  <name>Design_JobNode</name>
+  <description>デザインのアセットサーバーアップロード専用ジョブノード</description>
+  <remoteFS>/Users/p3_dev/.jenkins/Design_JobNode</remoteFS>
+  <numExecutors>1</numExecutors>
+  <mode>NORMAL</mode>
+  <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+  <launcher class="hudson.slaves.CommandLauncher" plugin="command-launcher@1.6">
+    <agentCommand>/opt/homebrew/Cellar/openjdk/16.0.1/bin/java -jar /Users/p3_dev/.jenkins/nodes/Design_JobNode/agent.jar</agentCommand>
+  </launcher>
+  <label></label>
+  <nodeProperties/>
+</slave>
