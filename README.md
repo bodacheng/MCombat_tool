@@ -20,3 +20,4 @@ jenkinsマシンのアドレス等について記載します。
 
 - buildmachine-1 (http://pokepia-buildmachine-1.cocone.jp:8080/)
 - slave1 (pokepia-buildmachine-3.cocone.jp)
+# MCombat_tool
