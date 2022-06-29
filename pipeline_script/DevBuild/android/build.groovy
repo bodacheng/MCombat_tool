@@ -1,7 +1,7 @@
 pipeline {
-    agent {
-        label "master"
-    }
+//     agent {
+//         label "master"
+//     }
 
     // param.ANDROID_ARCHSは、"ARMv7;ARM64"のように、複数の場合は;を入れて指定する
     environment {
