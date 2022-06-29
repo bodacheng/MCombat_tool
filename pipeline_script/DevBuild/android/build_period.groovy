@@ -17,7 +17,7 @@ pipeline {
                     extendedChoice(name: 'BUILD_KIND', value: 'QA'),
                     extendedChoice(name: 'AssetKind', value: 'QA'),
                     text(name: 'RELEASENOTE', value: '定期ビルド'),
-                    extendedChoice(name: 'UNITY_VERSION', value: '2020.3.21f1'),
+                    extendedChoice(name: 'UNITY_VERSION', value: '2021.3.2f1'),
                     booleanParam(name: 'CLEAR_CACHE', value: true),
                     booleanParam(name: 'needCleanWorkspace', value: false)]
                 }
