@@ -197,33 +197,33 @@ pipeline {
                 followSymlinks: false
             }
         }
-        stage('AppCenterのアップロード') {
-            steps {
-                script {
-                    wrap([$class: 'BuildUser']) {
-                        APP_NAME = appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND)
-                        BUILDER = env.BUILD_USER_ID
-
-                        println 'appcenterへのアップロード'
-                        build job: 'Upload_AppCenter',
-                        parameters: [
-                        string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
-                        string(name: 'APP_NAME', value: APP_NAME),
-                        string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
-                        string(name: 'copyArtifacts_ProjectName', value: 'DevBuild_Android_Single'),
-                        string(name: 'target_filter_artifact', value: ''),
-                        string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
-                        string(name: 'upstream_build_user', value: BUILDER),
-                        string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
-                        string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
-                        text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
-                    }
-
-                    RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
-                    println "appcenter ReleaseID:${RELEASE_ID}"
-                }
-            }
-        }
+//         stage('AppCenterのアップロード') {
+//             steps {
+//                 script {
+//                     wrap([$class: 'BuildUser']) {
+//                         APP_NAME = appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND)
+//                         BUILDER = env.BUILD_USER_ID
+// 
+//                         println 'appcenterへのアップロード'
+//                         build job: 'Upload_AppCenter',
+//                         parameters: [
+//                         string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
+//                         string(name: 'APP_NAME', value: APP_NAME),
+//                         string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
+//                         string(name: 'copyArtifacts_ProjectName', value: 'DevBuild_Android_Single'),
+//                         string(name: 'target_filter_artifact', value: ''),
+//                         string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
+//                         string(name: 'upstream_build_user', value: BUILDER),
+//                         string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
+//                         string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
+//                         text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
+//                     }
+// 
+//                     RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
+//                     println "appcenter ReleaseID:${RELEASE_ID}"
+//                 }
+//             }
+//         }
     }
     post {
         success {
