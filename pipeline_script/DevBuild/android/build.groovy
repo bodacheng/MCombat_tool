@@ -90,8 +90,8 @@ pipeline {
                         branches: [[name: BRANCH_NAME]],
                         extensions: [
                             [$class: 'GitLFSPull'],
-                            [$class: 'CloneOption', timeout: 9999],
-                            [$class: 'CheckoutOption', timeout: 9999]
+                            [$class: 'CloneOption', timeout: 99999999],
+                            [$class: 'CheckoutOption', timeout: 99999999]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
