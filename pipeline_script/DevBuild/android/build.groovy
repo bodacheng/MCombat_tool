@@ -98,8 +98,8 @@ pipeline {
                     ])
                     
                     // Git情報の取得
-                    GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
-                    GIT_HASH = gitUtility.getGitRevision()
+                    //GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
+                    //GIT_HASH = gitUtility.getGitRevision()
                 }
             }
         }
