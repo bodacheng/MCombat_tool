@@ -88,11 +88,11 @@ pipeline {
 
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
-                        extensions: [
-                            [$class: 'GitLFSPull'],
-                            [$class: 'CloneOption', timeout: 100],
-                            [$class: 'CheckoutOption', timeout: 100]
-                        ],
+//                         extensions: [
+//                             [$class: 'GitLFSPull'],
+//                             [$class: 'CloneOption', timeout: 100],
+//                             [$class: 'CheckoutOption', timeout: 100]
+//                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
