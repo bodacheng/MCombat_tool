@@ -79,6 +79,11 @@ pipeline {
             }
         }
         stage('Git') {
+        
+            options {
+                skipDefaultCheckout true
+            }
+        
             steps {
                 script {
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
