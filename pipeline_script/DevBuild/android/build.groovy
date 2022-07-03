@@ -180,6 +180,8 @@ pipeline {
                     commandBuilder.append " -buildKind ${params.BUILD_KIND}"
                     commandBuilder.append " -androidArchitectures '${params.ANDROID_ARCHS}'"
 
+                    println "commandBuilder:" + script:commandBuilder.toString()
+
                     // apk作成
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
