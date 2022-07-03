@@ -137,26 +137,26 @@ pipeline {
                 }
             }
         }
-        stage('Assets') {
-            options {
-                // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
-                timeout(time: 60, unit: 'MINUTES')
-            }
-            steps {
-                script {
-                    StringBuilder commandBuilder = new StringBuilder()
-                    commandBuilder.append "$UNITY_PATH"
-                    commandBuilder.append " -projectPath $WORKSPACE"
-                    commandBuilder.append " -quit -batchmode"
-                    commandBuilder.append " -executeMethod $ADDRESSABLE_METHOD"
-                    commandBuilder.append " -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt"
-                    commandBuilder.append " -buildTarget $BUILD_TARGET"
-                    commandBuilder.append " -assetProfile $ASSET_PROFILE"
-
-                    sh(script:commandBuilder.toString(), returnStdout:false)
-                }
-            }
-        }
+//         stage('Assets') {
+//             options {
+//                 // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
+//                 timeout(time: 60, unit: 'MINUTES')
+//             }
+//             steps {
+//                 script {
+//                     StringBuilder commandBuilder = new StringBuilder()
+//                     commandBuilder.append "$UNITY_PATH"
+//                     commandBuilder.append " -projectPath $WORKSPACE"
+//                     commandBuilder.append " -quit -batchmode"
+//                     commandBuilder.append " -executeMethod $ADDRESSABLE_METHOD"
+//                     commandBuilder.append " -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt"
+//                     commandBuilder.append " -buildTarget $BUILD_TARGET"
+//                     commandBuilder.append " -assetProfile $ASSET_PROFILE"
+// 
+//                     sh(script:commandBuilder.toString(), returnStdout:false)
+//                 }
+//             }
+//         }
         stage('Unity') {
             options {
                 // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
@@ -232,17 +232,18 @@ pipeline {
                 def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
                 def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
 
-                def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
-                println "downloadURL:${downloadURL}"
-                slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
-                slackNotify.SetBuildUser(USERNAME.toString() + "/@" + BUILDER)
-                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
-                slackNotify.SetReleaseNotes(releaseNote)
-                slackNotify.SetAssetKind(AssetKind)
-                slackNotify.SetBuildTime(currentBuild.durationString)
-                slackUtility.notifySlackSendMessage(slackNotify)
+                //def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
+                //println "downloadURL:${downloadURL}"
+                
+                //slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
+                //slackNotify.SetBuildUser(USERNAME.toString() + "/@" + BUILDER)
+                //slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
+                //slackNotify.SetReleaseNotes(releaseNote)
+                //slackNotify.SetAssetKind(AssetKind)
+                //slackNotify.SetBuildTime(currentBuild.durationString)
+                //slackUtility.notifySlackSendMessage(slackNotify)
 
-                println "ビルド所要時間${currentBuild.durationString}"
+                //println "ビルド所要時間${currentBuild.durationString}"
             }
         }
         always {
