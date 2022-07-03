@@ -133,7 +133,7 @@ pipeline {
                     }
 
                     // 現在のジョブについての説明
-                    currentBuild.description = "ビルド種別：${params.BUILD_KIND}\nアセット種別：${params.AssetKind}\nブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}"
+                    //currentBuild.description = "ビルド種別：${params.BUILD_KIND}\nアセット種別：${params.AssetKind}\nブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}"
                 }
             }
         }
