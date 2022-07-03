@@ -90,13 +90,13 @@ pipeline {
                         branches: [[name: BRANCH_NAME]],
                         extensions: [
                             [$class: 'GitLFSPull'],
-                            [$class: 'CloneOption', timeout: 30],
-                            [$class: 'CheckoutOption', timeout: 30]
+                            [$class: 'CloneOption', timeout: 100],
+                            [$class: 'CheckoutOption', timeout: 100]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
-
+                    
                     // Git情報の取得
                     GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
                     GIT_HASH = gitUtility.getGitRevision()
