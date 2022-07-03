@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "DevBuild_JobNode"
+        label "master"
     }
     
     environment {

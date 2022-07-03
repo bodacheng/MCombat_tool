@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "PeriodBuild_JobNode"
+        label "master"
     }
 
     environment {
