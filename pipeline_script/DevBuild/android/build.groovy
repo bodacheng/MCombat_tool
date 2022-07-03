@@ -166,7 +166,7 @@ pipeline {
             steps {
                 script {
                     println "androidArchitecture:" + params.ANDROID_ARCHS
-                    println "WORKSPACE:" + $WORKSPACE
+                    println "WORKSPACE:" + WORKSPACE
 
                     StringBuilder commandBuilder = new StringBuilder()
                     commandBuilder.append "$UNITY_PATH"
