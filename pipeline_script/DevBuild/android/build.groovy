@@ -161,7 +161,7 @@ pipeline {
             options {
                 // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
                 // androidはiosよりもステージは長くなる（xcode/exportを内包するため）
-                timeout(time: 45, unit: 'MINUTES')
+                timeout(time: 360, unit: 'MINUTES')
             }
             steps {
                 script {
