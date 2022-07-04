@@ -165,26 +165,36 @@ pipeline {
             }
             steps {
                 script {
-                    println "androidArchitecture:" + params.ANDROID_ARCHS
-                    println "WORKSPACE:" + WORKSPACE
-
-                    StringBuilder commandBuilder = new StringBuilder()
-                    commandBuilder.append "$UNITY_PATH"
-                    commandBuilder.append " -projectPath $WORKSPACE"
-                    commandBuilder.append " -quit -batchmode"
-                    commandBuilder.append " -executeMethod $UNITY_METHOD"
-                    commandBuilder.append " -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt"
-                    commandBuilder.append " -buildTarget $BUILD_TARGET"
-                    commandBuilder.append " -BuildNumber $BUILD_ID"
-                    commandBuilder.append " -OutputPath $OUTPUT_PATH"
-                    commandBuilder.append " -buildKind ${params.BUILD_KIND}"
-                    commandBuilder.append " -androidArchitectures '${params.ANDROID_ARCHS}'"
-
-                    def tempPath = commandBuilder.toString()
-                    println tempPath
-
-                    // apk作成
-                    sh(script:commandBuilder.toString(), returnStdout:false)
+                withCredentials([
+                        string(credentialsId: 'keyalias_password', variable: "KEYALIAS_PASS"),
+                        string(credentialsId: 'keystore_password', variable: "KEYSTORE_PASS")
+                    ]) 
+                    
+                    {
+                        println "androidArchitecture:" + params.ANDROID_ARCHS
+                        println "WORKSPACE:" + WORKSPACE
+    
+                        StringBuilder commandBuilder = new StringBuilder()
+                        commandBuilder.append "$UNITY_PATH"
+                        commandBuilder.append " -projectPath $WORKSPACE"
+                        commandBuilder.append " -quit -batchmode"
+                        commandBuilder.append " -executeMethod $UNITY_METHOD"
+                        commandBuilder.append " -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt"
+                        commandBuilder.append " -buildTarget $BUILD_TARGET"
+                        commandBuilder.append " -BuildNumber $BUILD_ID"
+                        commandBuilder.append " -OutputPath $OUTPUT_PATH"
+                        commandBuilder.append " -buildKind ${params.BUILD_KIND}"
+                        commandBuilder.append " -androidArchitectures '${params.ANDROID_ARCHS}'"
+                        commandBuilder.append " -useAndroidAppBundle -uploadToStore"
+                        commandBuilder.append " -keystorePass ${KEYSTORE_PASS}"
+                        commandBuilder.append " -keyaliasPass ${KEYALIAS_PASS}"
+    
+                        def tempPath = commandBuilder.toString()
+                        println tempPath
+    
+                        // apk作成
+                        sh(script:commandBuilder.toString(), returnStdout:false)
+                    }
                 }
             }
         }
