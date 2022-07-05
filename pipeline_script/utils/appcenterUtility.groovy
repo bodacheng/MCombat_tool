@@ -41,10 +41,10 @@ def getAppCenterAppName(platform, appKind) {
 def getAppCenterToken(platform, appKind) {
     if (platform == "ios") {
         def map = [
-                    'Dev':'3950f9fbd18dd8e2d18cb970933d125115bf6a67',
-                    'QA':'027d9e2eab70992a3681db2743ed6ebb3d18d93b',
-                    'Beta':'7e7c1f4cd71e0803466726400d82e783c5d0b319',
-                    'Release':'33686d7866a23604057424c52b0474392c5c3b7e'
+                    'Dev':'',
+                    'QA':'',
+                    'Beta':'',
+                    'Release':''
                 ]
         if (map.containsKey(appKind)) {
             return map.get(appKind)
@@ -52,10 +52,10 @@ def getAppCenterToken(platform, appKind) {
     }
     else if (platform == "android") {
         def map = [
-                    'Dev':'f44294c51d7cec86b1ee9002a3c92a0b22b44322',
-                    'QA':'ef6bb95d43d77829b8b87f301288273fba6e5d40',
-                    'Beta':'956368c661c35b21264b6153d1f8e5ad46820401',
-                    'Release':'585387c9fed92e48c21dd4d2852823d8a14831f0'
+                    'Dev':'e6bc6821e4afb1b351a2a134c4fd370189ad5a71',
+                    'QA':'',
+                    'Beta':'',
+                    'Release':''
                 ]
         if (map.containsKey(appKind)) {
             return map.get(appKind)
