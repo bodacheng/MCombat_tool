@@ -224,7 +224,7 @@ pipeline {
                         string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
                         string(name: 'APP_NAME', value: APP_NAME),
                         string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
-                        string(name: 'copyArtifacts_ProjectName', value: 'DevBuild_Android_Single'),
+                        string(name: 'copyArtifacts_ProjectName', value: 'Androidcbuild'),
                         string(name: 'target_filter_artifact', value: ''),
                         string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
                         string(name: 'upstream_build_user', value: BUILDER),
