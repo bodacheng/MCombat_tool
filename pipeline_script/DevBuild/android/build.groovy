@@ -243,8 +243,8 @@ pipeline {
         success {
             // NOTE:GITのLogを付加したいので子ジョブで成功通知を出す
             script {
-                def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
-                def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
+                //def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
+                //def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
 
                 //def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
                 //println "downloadURL:${downloadURL}"
@@ -257,7 +257,7 @@ pipeline {
                 //slackNotify.SetBuildTime(currentBuild.durationString)
                 //slackUtility.notifySlackSendMessage(slackNotify)
 
-                //println "ビルド所要時間${currentBuild.durationString}"
+                println "ビルド所要時間${currentBuild.durationString}"
             }
         }
         always {
