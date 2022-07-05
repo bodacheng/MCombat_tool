@@ -206,7 +206,7 @@ pipeline {
                     println 'apk/aab versionName:' + VERSION
                 }
 
-                archiveArtifacts artifacts: "${OUTPUT_PATH}/${PRODUCT_NAME}.apk,",
+                archiveArtifacts artifacts: "./$OUTPUT_PATH/${PRODUCT_NAME}.apk",
                 fingerprint: true,
                 followSymlinks: false
             }
