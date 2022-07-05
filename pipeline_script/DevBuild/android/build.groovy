@@ -195,6 +195,7 @@ pipeline {
                         // apk作成
                         sh(script:commandBuilder.toString(), returnStdout:false)
                     }
+                    archiveArtifacts artifacts: OUTPUT_PATH + "/" + PRODUCT_NAME + ".apk,", fingerprint: true, followSymlinks: false
                 }
             }
         }
@@ -206,7 +207,7 @@ pipeline {
                     println 'apk/aab versionName:' + VERSION
                 }
 
-                archiveArtifacts artifacts: "${WORKSPACE}/${OUTPUT_PATH}/${PRODUCT_NAME}.apk,",
+                archiveArtifacts artifacts: "${OUTPUT_PATH}/${PRODUCT_NAME}.apk,",
                 fingerprint: true,
                 followSymlinks: false
             }
