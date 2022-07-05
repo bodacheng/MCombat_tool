@@ -19,7 +19,7 @@ def getAppCenterAppName(platform, appKind) {
     }
     else if (platform == "android") {
         def map = [
-                    'Dev':'Pokepia-Android',
+                    'Dev':'MCombat_A_Dev',
                     'QA':'Pokepia-Android-3',
                     'Beta':'POKEPIA-Androidbeta',
                     'Release':'Pokepia-Android-1'
@@ -70,7 +70,7 @@ def getAppCenterToken(platform, appKind) {
  * @return         [description]
  */
 def getAppCenterDistributionGroups() {
-    return "COCONE-QA, Collaborators, POKETRIA Members"
+    return "MCombat-QA, Collaborators, HAKU"
 }
 
 /**
