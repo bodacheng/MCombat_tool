@@ -96,7 +96,7 @@ def getReleaseId(ownerName, appName, apiToken) {
  * @return           [description]
  */
 def getDownloadURL(ownerName, appName, releaseId) {
-    return "https://install.appcenter.ms/orgs/${ownerName}/apps/${appName}/releases/${releaseId}"
+    return "https://install.appcenter.ms/users/${ownerName}/apps/${appName}/releases/${releaseId}"
 }
 
 return this
