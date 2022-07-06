@@ -34,21 +34,21 @@ pipeline {
         stage('AppCenterへのアップロード') {
             steps {
                 script {
-                    retry(3) {
+                    retry(2) {
                         appCenter apiToken: params.APPCENTER_API_TOKEN,
                             ownerName: env.APPCENTER_OWNER,
                             appName: params.APP_NAME,
-                            branchName: '',
-                            buildVersion: params.VERSION,
-                            commitHash: '',
+                            //branchName: '',
+                            //buildVersion: params.VERSION,
+                            //commitHash: '',
                             distributionGroups: "${params.DISTRIBUTION_GROUPS}",
-                            mandatoryUpdate: false,
-                            notifyTesters: true,
+                            //mandatoryUpdate: false,
+                            //notifyTesters: true,
                             pathToApp: "${params.OUTPUT_DIR}/${params.APP_FILENAME}",
-                            pathToDebugSymbols: '',
-                            pathToReleaseNotes: '',
-                            releaseNotes: "ビルド${params.upstream_build_number} ${params.upstream_build_user} / RELEASE NOTE: ${params.RELEASENOTE}"
-
+                            //pathToDebugSymbols: '',
+                            //pathToReleaseNotes: '',
+                            //releaseNotes: "ビルド${params.upstream_build_number} ${params.upstream_build_user} / RELEASE NOTE: ${params.RELEASENOTE}"
+                            
                         def releaseID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, params.APP_NAME, params.APPCENTER_API_TOKEN)
                         def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, params.APP_NAME, releaseID)
                         currentBuild.description = downloadURL
