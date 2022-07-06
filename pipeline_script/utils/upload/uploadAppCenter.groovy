@@ -46,7 +46,7 @@ pipeline {
                             distributionGroups: "${params.DISTRIBUTION_GROUPS}",
                             mandatoryUpdate: false,
                             notifyTesters: true,
-                            pathToApp: "${params.OUTPUT_DIR}/${params.APP_FILENAME}"
+                            pathToApp: "${params.OUTPUT_DIR}/${params.APP_FILENAME}",
                             pathToDebugSymbols: '',
                             pathToReleaseNotes: '',
                             releaseNotes: "ビルド${params.upstream_build_number} ${params.upstream_build_user} / RELEASE NOTE: ${params.RELEASENOTE}"
