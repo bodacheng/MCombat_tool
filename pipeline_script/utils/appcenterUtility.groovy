@@ -52,7 +52,7 @@ def getAppCenterToken(platform, appKind) {
     }
     else if (platform == "android") {
         def map = [
-                    'Dev':'1c4337ee-a845-4953-855c-bd1f396b4fc4',
+                    'Dev':'f15e49718855b8bba0a8d3104c4e6fcf48193865',
                     'QA':'',
                     'Beta':'',
                     'Release':''
