@@ -234,7 +234,7 @@ pipeline {
                     }
 
                     RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
-                    println "appcenter ReleaseID:${RELEASE_ID}"
+                    println "DA:" params.APPCENTER_API_TOKEN
                 }
             }
         }

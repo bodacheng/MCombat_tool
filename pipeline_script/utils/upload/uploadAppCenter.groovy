@@ -29,14 +29,16 @@ pipeline {
                 projectName: params.copyArtifacts_ProjectName,
                 target: params.target_filter_artifact,
                 selector:specific(params.upstream_build_number)
+                
+                println "BO DA:" params.APP_NAME
+                println "BO DA:" params.APPCENTER_API_TOKEN
+                println "BO DA:" params.OUTPUT_DIR
             }
         }
         stage('AppCenterへのアップロード') {
             steps {
                 script {
                     retry(2) {
-                        println "BO DA:" params.APPCENTER_API_TOKEN
-                    
                         appCenter apiToken: params.APPCENTER_API_TOKEN,
                             ownerName: env.APPCENTER_OWNER,
                             appName: params.APP_NAME,
