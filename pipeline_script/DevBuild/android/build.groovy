@@ -219,7 +219,8 @@ pipeline {
                         BUILDER = env.BUILD_USER_ID
                         
                         println 'appcenterへのアップロード'
-                        println params.APPCENTER_API_TOKEN
+                        println '疯了' + params.APPCENTER_API_TOKEN
+                        println 'hello' + params.RELEASENOTE
                         
                         build job: 'Upload_AppCenter',
                         parameters: [
