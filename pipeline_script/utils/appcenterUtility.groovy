@@ -70,7 +70,7 @@ def getAppCenterToken(platform, appKind) {
  * @return         [description]
  */
 def getAppCenterDistributionGroups() {
-    return "MCombat-QA, Collaborators, HAKU"
+    return "Collaborators"
 }
 
 /**
