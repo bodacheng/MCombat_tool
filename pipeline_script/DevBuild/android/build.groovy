@@ -212,13 +212,15 @@ pipeline {
             }
         }
         stage('AppCenterのアップロード') {
-            steps {
+             steps{
                 script {
                     wrap([$class: 'BuildUser']) {
                         APP_NAME = appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND)
                         BUILDER = env.BUILD_USER_ID
-
+                        
                         println 'appcenterへのアップロード'
+                        println params.APPCENTER_API_TOKEN
+                        
                         build job: 'Upload_AppCenter',
                         parameters: [
                         string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
@@ -232,9 +234,7 @@ pipeline {
                         string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
                         text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
                     }
-
                     RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
-                    println "DA:" params.APPCENTER_API_TOKEN
                 }
             }
         }
