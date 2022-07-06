@@ -35,6 +35,8 @@ pipeline {
             steps {
                 script {
                     retry(2) {
+                        println "BO DA:" params.APPCENTER_API_TOKEN
+                    
                         appCenter apiToken: params.APPCENTER_API_TOKEN,
                             ownerName: env.APPCENTER_OWNER,
                             appName: params.APP_NAME,
