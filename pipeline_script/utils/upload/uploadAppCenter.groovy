@@ -51,9 +51,9 @@ pipeline {
                             pathToReleaseNotes: '',
                             releaseNotes: "ビルド${params.upstream_build_number} ${params.upstream_build_user} / RELEASE NOTE: ${params.RELEASENOTE}"
                             
-                        def releaseID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, params.APP_NAME, params.APPCENTER_API_TOKEN)
-                        def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, params.APP_NAME, releaseID)
-                        currentBuild.description = downloadURL
+                        //def releaseID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, params.APP_NAME, params.APPCENTER_API_TOKEN)
+                        //def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, params.APP_NAME, releaseID)
+                        //currentBuild.description = downloadURL
                     }
                 }
             }
