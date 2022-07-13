@@ -1,12 +1,12 @@
 pipeline {
     agent {
-        label "Design_JobNode"
+        label "master"
     }
 
     environment {
         // BRANCHとRELEASENOTEはジョブのパラメーターつきビルドで設定される
-        GIT_URL='https://git-1.cocone.jp/projectp3/p3-client'
-        GIT_CREDENTIAL='p3_jenkins_gitlab'
+        GIT_URL='https://github.com/bodacheng/MComat.git'
+        GIT_CREDENTIAL='bodacheng1'
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
         UNITY_METHOD='Cocone.ProjectP3.BuildAddressableAssets.BatchBuild'
         GIT_HASH = ''
