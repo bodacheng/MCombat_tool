@@ -68,17 +68,17 @@ pipeline {
                     checkout([$class: 'GitSCM',
                         branches: [[name: "$BRANCH_NAME"]],
                         extensions: [
-                            [$class: 'GitLFSPull'],
-                            [$class: 'CloneOption', timeout: 60],
-                            [$class: 'CheckoutOption', timeout: 60]
+                            //[$class: 'GitLFSPull'],
+                            //[$class: 'CloneOption', timeout: 60],
+                            //[$class: 'CheckoutOption', timeout: 60]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
 
                     // Git情報の取得
-                    GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
-                    GIT_HASH = gitUtility.getGitRevision()
+                    //GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
+                    //GIT_HASH = gitUtility.getGitRevision()
                 }
             }
         }
