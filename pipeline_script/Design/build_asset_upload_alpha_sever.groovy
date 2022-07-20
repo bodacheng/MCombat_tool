@@ -134,13 +134,13 @@ pipeline {
 
                     sh(script:commandBuilder.toString(), returnStdout:false)
 
-                    commandBuilder = new StringBuilder()
-                    commandBuilder.append "aws s3 cp --recursive"
-                    commandBuilder.append " ${WORKSPACE}/${ASSET_BUILDPATH}iOS/"
-                    commandBuilder.append " ${UPLOAD_S3_ADDRESS}/iOS/"
-                    commandBuilder.append " --profile ${SERVER_PROFILE_NAME}"
-
-                    sh(script:commandBuilder.toString(), returnStdout:false)
+//                     commandBuilder = new StringBuilder()
+//                     commandBuilder.append "aws s3 cp --recursive"
+//                     commandBuilder.append " ${WORKSPACE}/${ASSET_BUILDPATH}iOS/"
+//                     commandBuilder.append " ${UPLOAD_S3_ADDRESS}/iOS/"
+//                     commandBuilder.append " --profile ${SERVER_PROFILE_NAME}"
+// 
+//                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
             }
         }
@@ -163,13 +163,13 @@ pipeline {
 
                     sh(script:commandBuilder.toString(), returnStdout:false)
 
-                    commandBuilder = new StringBuilder()
-                    commandBuilder.append "aws s3 cp --recursive"
-                    commandBuilder.append " ${WORKSPACE}/${ASSET_BUILDPATH}Android/"
-                    commandBuilder.append " ${UPLOAD_S3_ADDRESS}/Android/"
-                    commandBuilder.append " --profile ${SERVER_PROFILE_NAME}"
-
-                    sh(script:commandBuilder.toString(), returnStdout:false)
+//                     commandBuilder = new StringBuilder()
+//                     commandBuilder.append "aws s3 cp --recursive"
+//                     commandBuilder.append " ${WORKSPACE}/${ASSET_BUILDPATH}Android/"
+//                     commandBuilder.append " ${UPLOAD_S3_ADDRESS}/Android/"
+//                     commandBuilder.append " --profile ${SERVER_PROFILE_NAME}"
+// 
+//                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
             }
         }
@@ -181,26 +181,13 @@ pipeline {
                 if ("timer" == BUILDER) {
                     message += "\n定期ビルド"
                 }
-
-                slackNotify.SetBuildUser(USERNAME.toString() + "/@" + BUILDER)
-                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
-                slackNotify.SetAssetKind(AssetKind)
-                slackNotify.SetReleaseNotes(message)
-                slackNotify.SetBuildTime(currentBuild.durationString)
-                slackUtility.notifySlackSendMessageForAsset(slackNotify)
             }
         }
         failure {
-            slackSend channel:"${env.SLACK_NOTIFY_CHANNEL}",
-                teamDomain: "${env.SLACK_DOMAIN}",
-                color: "danger",
-                message: ":asset::skull:*アセットビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull:\n$BUILD_URL\nユーザー : $USERNAME @${BUILDER} \nbranch : $BRANCH_NAME"
+        
         }
         aborted {
-            slackSend channel:"${env.SLACK_NOTIFY_CHANNEL}",
-                teamDomain: "${env.SLACK_DOMAIN}",
-                color: "warning",
-                message: ":asset::construction:*アセットビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:\n$BUILD_URL\nユーザー : $USERNAME @${BUILDER} \nbranch : $BRANCH_NAME"
+        
         }
         always {
             // ログ保存
