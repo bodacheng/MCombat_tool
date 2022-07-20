@@ -184,10 +184,10 @@ pipeline {
             }
         }
         failure {
-        
+            println 'Fail'
         }
         aborted {
-        
+            println 'Aborted'
         }
         always {
             // ログ保存
