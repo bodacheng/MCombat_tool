@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "DevBuild_JobNode"
+        label "master"
     }
 
     environment {
@@ -23,9 +23,8 @@ pipeline {
         APP_NAME = ''
 
         // git
-        GIT_URL='https://git-1.cocone.jp/projectp3/p3-client'
-        GIT_P3_URL='https://git-1.cocone.jp/projectp3/p3-assets'
-        GIT_CREDENTIAL='p3_jenkins_gitlab'
+        GIT_URL='https://github.com/bodacheng/MComat.git'
+        GIT_CREDENTIAL='bodacheng1'
 
         // environment values
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
@@ -93,17 +92,17 @@ pipeline {
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
                         extensions: [
-                            [$class: 'GitLFSPull'],
-                            [$class: 'CloneOption', timeout: 60],
-                            [$class: 'CheckoutOption', timeout: 60]
+//                             [$class: 'GitLFSPull'],
+//                             [$class: 'CloneOption', timeout: 60],
+//                             [$class: 'CheckoutOption', timeout: 60]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
 
                     // Git情報の取得
-                    GIT_LOG = gitUtility.getGitCommitLatestLog()
-                    GIT_HASH = gitUtility.getGitRevision()
+//                     GIT_LOG = gitUtility.getGitCommitLatestLog()
+//                     GIT_HASH = gitUtility.getGitRevision()
                 }
             }
         }
