@@ -79,6 +79,8 @@ pipeline {
                     slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", params.BUILD_KIND, BUILD_TARGET, "")
                     slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
                     versionInfomationUtility = load "${utilisPath}/getVersionInfomationUtility.groovy"
+                    
+                    println '-------- 本环节成功？'
                 }
             }
         }
@@ -88,6 +90,8 @@ pipeline {
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
                     USERNAME = cause.userName
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
+
+                    println '-------- 开始checkout branch'
 
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
@@ -99,6 +103,8 @@ pipeline {
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
+                    
+                    println '-------- 来到这'
 
                     // Git情報の取得
 //                     GIT_LOG = gitUtility.getGitCommitLatestLog()
