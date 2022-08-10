@@ -53,7 +53,6 @@ pipeline {
         stage ('ワークスペースのクリーン') {
             steps {
                 script {
-                println '-------- 起码走到了本环节？？？'
                     if (params.needCleanWorkspace) {
                         cleanWs()
                     }
@@ -73,9 +72,9 @@ pipeline {
 
                     // load git utility
                     def utilisPath = "pipeline_script/utils"
-
                     gitUtility = load "${utilisPath}/gitUtility.groovy"
                     appcenterUtility = load "${utilisPath}/appcenterUtility.groovy"
+                    
                     def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
                     slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", params.BUILD_KIND, BUILD_TARGET, "")
                     slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
@@ -90,26 +89,23 @@ pipeline {
                 script {
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
                     USERNAME = cause.userName
-                    BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
 
-                    println '-------- 开始checkout branch'
+                    BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
 
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
                         extensions: [
-//                             [$class: 'GitLFSPull'],
-//                             [$class: 'CloneOption', timeout: 60],
-//                             [$class: 'CheckoutOption', timeout: 60]
+                            //[$class: 'GitLFSPull'],
+                            //[$class: 'CloneOption', timeout: 100],
+                            //[$class: 'CheckoutOption', timeout: 100]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
                     
-                    println '-------- 来到这'
-
                     // Git情報の取得
-//                     GIT_LOG = gitUtility.getGitCommitLatestLog()
-//                     GIT_HASH = gitUtility.getGitRevision()
+                    //GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
+                    //GIT_HASH = gitUtility.getGitRevision()
                 }
             }
         }
