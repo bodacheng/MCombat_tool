@@ -53,6 +53,7 @@ pipeline {
         stage ('ワークスペースのクリーン') {
             steps {
                 script {
+                println '-------- 起码走到了本环节？？？'
                     if (params.needCleanWorkspace) {
                         cleanWs()
                     }
