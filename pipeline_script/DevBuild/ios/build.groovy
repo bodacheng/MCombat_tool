@@ -103,6 +103,8 @@ pipeline {
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
                     
+                    println 'Checked out to' + BRANCH_NAME
+                    
                     // Git情報の取得
                     //GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
                     //GIT_HASH = gitUtility.getGitRevision()
@@ -153,7 +155,7 @@ pipeline {
                     }
 
                     // 現在のジョブについての説明
-                    currentBuild.description = "ビルド種別：${params.BUILD_KIND}\nアセット種別：${assetKind}\nブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}"
+                    //currentBuild.description = "ビルド種別：${params.BUILD_KIND}\nアセット種別：${assetKind}\nブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}"
                 }
             }
         }
