@@ -284,13 +284,13 @@ pipeline {
 
                 def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
                 println "downloadURL:${downloadURL}"
-                slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
-                slackNotify.SetBuildUser(USERNAME.toString() + "/@" + BUILDER)
-                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
-                slackNotify.SetReleaseNotes(releaseNote)
-                slackNotify.SetBuildTime(currentBuild.durationString)
-                slackNotify.SetAssetKind(AssetKind)
-                slackUtility.notifySlackSendMessage(slackNotify)
+                //slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
+                //slackNotify.SetBuildUser(USERNAME.toString() + "/@" + BUILDER)
+                //slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
+                //slackNotify.SetReleaseNotes(releaseNote)
+                //slackNotify.SetBuildTime(currentBuild.durationString)
+                //slackNotify.SetAssetKind(AssetKind)
+                //slackUtility.notifySlackSendMessage(slackNotify)
 
                 println "ビルド所要時間${currentBuild.durationString}"
             }
