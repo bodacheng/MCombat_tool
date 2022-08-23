@@ -269,8 +269,8 @@ pipeline {
                         text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
                     }
 
-                    RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
-                    println "appcenter ReleaseID:${RELEASE_ID}"
+                    //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
+                    //println "appcenter ReleaseID:${RELEASE_ID}"
                 }
             }
         }
@@ -279,11 +279,12 @@ pipeline {
         success {
             // NOTE:GITのLogを付加したいので子ジョブで成功通知を出す
             script {
-                def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
-                def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
+                //def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
+                //def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
 
-                def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
-                println "downloadURL:${downloadURL}"
+                //def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
+                //println "downloadURL:${downloadURL}"
+                
                 //slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
                 //slackNotify.SetBuildUser(USERNAME.toString() + "/@" + BUILDER)
                 //slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
