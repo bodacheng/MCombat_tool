@@ -8,7 +8,7 @@ def getAppCenterAppName(platform, appKind) {
     // Dictionaryみたいなのがあればそれがいいかも
     if (platform == "ios") {
         def map = [
-                    'Dev':'Pokepia-iOS',
+                    'Dev':'MCombat_I_Dev',
                     'QA':'POKEPIA',
                     'Beta':'POKEPIA-iOSbeta',
                     'Release':'Pokepia-iOS-1'
