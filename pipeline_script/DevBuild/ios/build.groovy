@@ -241,9 +241,9 @@ pipeline {
 
                 script {
                     def archiveDir = APP_OUTPUT_PATH.replace("/${IPA_EXECUTABLE_NAME}.ipa", "")
-                    versionName = versionInfomationUtility.getVersionName('ios', archiveDir, IPA_EXECUTABLE_NAME)
-                    VERSION = versionName.replace("\n", '')
-                    println 'ipa versionName:' + VERSION
+                    //versionName = versionInfomationUtility.getVersionName('ios', archiveDir, IPA_EXECUTABLE_NAME)
+                    //VERSION = versionName.replace("\n", '')
+                    //println 'ipa versionName:' + VERSION
                 }
             }
         }
