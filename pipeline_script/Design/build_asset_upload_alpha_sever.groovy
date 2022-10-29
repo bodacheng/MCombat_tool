@@ -103,7 +103,7 @@ pipeline {
                     println 'ASSET_BUILDPATH:' + ASSET_BUILDPATH
 
                     // プロファイルの名前設定
-                    SERVER_PROFILE_NAME = "p3Alpha"
+                    SERVER_PROFILE_NAME = "mcombatDev"
 
                     // キャッシュ削除が必要な場合Libraryフォルダーを削除
                     if (params.CLEAR_CACHE)
