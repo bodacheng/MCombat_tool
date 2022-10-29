@@ -163,13 +163,13 @@ pipeline {
 
                     sh(script:commandBuilder.toString(), returnStdout:false)
 
-//                     commandBuilder = new StringBuilder()
-//                     commandBuilder.append "aws s3 cp --recursive"
-//                     commandBuilder.append " ${WORKSPACE}/${ASSET_BUILDPATH}Android/"
-//                     commandBuilder.append " ${UPLOAD_S3_ADDRESS}/Android/"
-//                     commandBuilder.append " --profile ${SERVER_PROFILE_NAME}"
-// 
-//                     sh(script:commandBuilder.toString(), returnStdout:false)
+                    commandBuilder = new StringBuilder()
+                    commandBuilder.append "aws s3 cp --recursive"
+                    commandBuilder.append " ${WORKSPACE}/${ASSET_BUILDPATH}Android/"
+                    commandBuilder.append " ${UPLOAD_S3_ADDRESS}/Android/"
+                    commandBuilder.append " --profile ${SERVER_PROFILE_NAME}"
+
+                    sh(script:commandBuilder.toString(), returnStdout:false)
                 }
             }
         }
