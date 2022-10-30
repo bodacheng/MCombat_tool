@@ -1,12 +1,12 @@
 pipeline {
     agent {
-        label "Design_JobNode"
+        label "master"
     }
 
     environment {
         // BRANCHとRELEASENOTEはジョブのパラメーターつきビルドで設定される
-        GIT_URL='https://git-1.cocone.jp/projectp3/p3-client'
-        GIT_CREDENTIAL='p3_jenkins_gitlab'
+        GIT_URL='https://github.com/bodacheng/MComat.git'
+        GIT_CREDENTIAL='bodacheng1'
 
         // environment
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
@@ -64,19 +64,7 @@ pipeline {
                         BUILDER = env.BUILD_USER_ID
                     }
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
-
-                    // NOTE:通知テストテストする　後で消す
-                    def releaseNote = ":play: *アセットビルド開始します。* @p3_client \n[Job:$JOB_NAME/BuildNo:$BUILD_ID/URL:${env.BUILD_URL}]\n"
-                    slackNotify.SetBuildUser(USERNAME.toString() + "/@" + BUILDER)
-                    slackNotify.SetGitInfomation(params.BRANCH, "unknown")
-                    slackNotify.SetReleaseNotes(releaseNote)
-                    slackNotify.SetAssetKind(params.AssetKind)
-
-                    // 本番ビルドのときだけ通知する
-                    if (params.AssetKind == 'Release') {
-                        slackUtility.notifyStartSlackSendMessageAsset(slackNotify)
-                    }
-
+                    
                     dir("ServerData")
                     {
                         echo "delete ServerData"
@@ -86,17 +74,17 @@ pipeline {
                     checkout([$class: 'GitSCM',
                         branches: [[name: "$BRANCH_NAME"]],
                         extensions: [
-                            [$class: 'GitLFSPull'],
-                            [$class: 'CloneOption', timeout: 60],
-                            [$class: 'CheckoutOption', timeout: 60]
+//                             [$class: 'GitLFSPull'],
+//                             [$class: 'CloneOption', timeout: 60],
+//                             [$class: 'CheckoutOption', timeout: 60]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
 
                     // Git情報の取得
-                    GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
-                    GIT_HASH = gitUtility.getGitRevision()
+//                     GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
+//                     GIT_HASH = gitUtility.getGitRevision()
                 }
             }
         }
@@ -121,12 +109,7 @@ pipeline {
                     println 'ASSET_BUILDPATH:' + ASSET_BUILDPATH
 
                     // プロファイルの名前設定(Release以外はDev)
-                    SERVER_PROFILE_NAME = "p3Alpha"
-
-                    // キャッシュ有効化設定
-                    if (params.AssetKind == 'Release') {
-                        SERVER_PROFILE_NAME = "p3${AssetKind}"
-                    }
+                    SERVER_PROFILE_NAME = "mcombatDev"
 
                     println "upload server : " + params.AssetKind
                     println "cache enabled: " + params.AWS_CACHE
@@ -159,10 +142,7 @@ pipeline {
                     commandBuilder.append " -logFile ${WORKSPACE}/Logs/build_iOS_${BUILD_ID}_log.txt"
                     commandBuilder.append " -buildTarget iOS"
                     commandBuilder.append " -assetProfile $ASSET_PROFILE"
-                    if (params.UseReleaseList == true) {
-                        commandBuilder.append " -useReleaseList"
-                    }
-
+                    
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
             }
@@ -177,7 +157,7 @@ pipeline {
                 script {
                     // upload asset ( with 1day cache if needed )
                     println "upload asset files..."
-
+                    
                     StringBuilder commandBuilder = new StringBuilder()
                     commandBuilder.append "aws s3 cp --recursive"
                     commandBuilder.append " ${WORKSPACE}/${ASSET_BUILDPATH}iOS/"
@@ -223,10 +203,7 @@ pipeline {
                     commandBuilder.append " -logFile ${WORKSPACE}/Logs/build_Android_${BUILD_ID}_log.txt"
                     commandBuilder.append " -buildTarget Android"
                     commandBuilder.append " -assetProfile $ASSET_PROFILE"
-                    if (params.UseReleaseList == true) {
-                        commandBuilder.append " -useReleaseList"
-                    }
-
+                    
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
             }
@@ -276,24 +253,13 @@ pipeline {
         success {
             script {
                 def message = ":asset::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::asset:\n${env.BUILD_URL}"
-                slackNotify.SetBuildUser(USERNAME.toString() + "/@" + BUILDER)
-                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
-                slackNotify.SetReleaseNotes(message)
-                slackNotify.SetBuildTime(currentBuild.durationString)
-                slackUtility.notifySlackSendMessageForAsset(slackNotify)
             }
         }
         failure {
-            slackSend channel:"${env.SLACK_NOTIFY_CHANNEL}",
-                teamDomain: "${env.SLACK_DOMAIN}",
-                color: "danger",
-                message: ":asset::skull:*アセットビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull:\n$BUILD_URL\nユーザー : $USERNAME @${BUILDER} \nbranch : $BRANCH_NAME"
+            println 'Fail'
         }
         aborted {
-            slackSend channel:"${env.SLACK_NOTIFY_CHANNEL}",
-                teamDomain: "${env.SLACK_DOMAIN}",
-                color: "warning",
-                message: ":asset::construction:*アセットビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:\n$BUILD_URL\nユーザー : $USERNAME @${BUILDER} \nbranch : $BRANCH_NAME"
+            println 'Aborted'
         }
         always {
             // ログ保存
