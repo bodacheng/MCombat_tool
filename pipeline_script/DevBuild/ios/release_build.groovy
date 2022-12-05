@@ -80,30 +80,30 @@ pipeline {
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
                     USERNAME = cause.userName
 
-                    wrap([$class: 'BuildUser']) {
-                        // slack通知
-                        def releaseNote = ":play: *ビルド開始します。* @p3_client \n[Job:$JOB_NAME/BuildNo:$BUILD_ID/URL:${env.BUILD_URL}]\n${params.RELEASENOTE}\n"
-                        slackNotify.SetBuildUser(USERNAME.toString() + "/@" + env.BUILD_USER_ID)
-                        slackNotify.SetGitInfomation(params.BRANCH, "unknown")
-                        slackNotify.SetReleaseNotes(releaseNote)
-                        slackUtility.notifyStartSlackSendMessage(slackNotify)
-                    }
+//                     wrap([$class: 'BuildUser']) {
+//                         // slack通知
+//                         def releaseNote = ":play: *ビルド開始します。* @p3_client \n[Job:$JOB_NAME/BuildNo:$BUILD_ID/URL:${env.BUILD_URL}]\n${params.RELEASENOTE}\n"
+//                         slackNotify.SetBuildUser(USERNAME.toString() + "/@" + env.BUILD_USER_ID)
+//                         slackNotify.SetGitInfomation(params.BRANCH, "unknown")
+//                         slackNotify.SetReleaseNotes(releaseNote)
+//                         slackUtility.notifyStartSlackSendMessage(slackNotify)
+//                     }
 
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
                     checkout([$class: 'GitSCM',
                         branches: [[name: "$BRANCH_NAME"]],
                         extensions: [
-                            [$class: 'GitLFSPull'],
-                            [$class: 'CloneOption', timeout: 60],
-                            [$class: 'CheckoutOption', timeout: 60]
+                            //[$class: 'GitLFSPull'],
+                            //[$class: 'CloneOption', timeout: 60],
+                            //[$class: 'CheckoutOption', timeout: 60]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
 
                     // Git情報の取得
-                    GIT_LOG = gitUtility.getGitCommitLatestLog()
-                    GIT_HASH = gitUtility.getGitRevision()
+                    //GIT_LOG = gitUtility.getGitCommitLatestLog()
+                    //GIT_HASH = gitUtility.getGitRevision()
                 }
 
             }
@@ -143,7 +143,7 @@ pipeline {
                     }
 
                     // 現在のジョブについての説明
-                    currentBuild.description = "ブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}"
+                    //currentBuild.description = "ブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}"
                 }
             }
         }
@@ -182,10 +182,10 @@ pipeline {
                     commandBuilder.append " -buildKind $BUILD_KIND"
 
                     // 強制的にTestLoginSceneを表示する
-                    if (params.FORCE_TEST_LOGIN)
-                    {
-                        commandBuilder.append " -forceTestLogin"
-                    }
+//                     if (params.FORCE_TEST_LOGIN)
+//                     {
+//                         commandBuilder.append " -forceTestLogin"
+//                     }
 
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
@@ -231,9 +231,9 @@ pipeline {
 
                 script {
                     def ver_script = $/eval "unzip -p "${APP_OUTPUT_PATH}" Payload/"${IPA_EXECUTABLE_NAME}".app/Info.plist | plutil -convert json -o - -- - | jq -r .CFBundleShortVersionString"/$
-                    println ver_script
-                    VERSION = sh(script:"${ver_script}", returnStdout: true)
-                    echo "version=${VERSION}"
+                    //println ver_script
+                    //VERSION = sh(script:"${ver_script}", returnStdout: true)
+                    //echo "version=${VERSION}"
                 }
             }
         }
@@ -267,8 +267,8 @@ pipeline {
                         text(name: 'RELEASENOTE', value: releaseNote)]
                     }
 
-                    RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, APPCENTER_API_TOKEN)
-                    println "appcenter ReleaseID:${RELEASE_ID}"
+                    //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, APPCENTER_API_TOKEN)
+                    //println "appcenter ReleaseID:${RELEASE_ID}"
                 }
             }
         }
@@ -291,44 +291,44 @@ pipeline {
     post {
         success {
             script {
-                def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
-                def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
-
-                def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
-                println "downloadURL:${downloadURL}"
-                slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
-                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
-                slackNotify.SetReleaseNotes(releaseNote)
-                slackNotify.SetBuildTime(currentBuild.durationString)
-                slackUtility.notifySlackSendMessage(slackNotify)
+//                 def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
+//                 def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
+// 
+//                 def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
+//                 println "downloadURL:${downloadURL}"
+//                 slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
+//                 slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
+//                 slackNotify.SetReleaseNotes(releaseNote)
+//                 slackNotify.SetBuildTime(currentBuild.durationString)
+//                 slackUtility.notifySlackSendMessage(slackNotify)
             }
         }
         failure {
             script {
-                def message = """${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull::alert:
-                \n${BUILD_URL}
-                \nユーザー : $USERNAME @${BUILDER}
-                \nbranch : $BRANCH_NAME
-                \nRELEASE_NOTE : ${params.RELEASENOTE}
-                """
-                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
-                    teamDomain: env.SLACK_DOMAIN,
-                    color: "danger",
-                    message: message
+//                 def message = """${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull::alert:
+//                 \n${BUILD_URL}
+//                 \nユーザー : $USERNAME @${BUILDER}
+//                 \nbranch : $BRANCH_NAME
+//                 \nRELEASE_NOTE : ${params.RELEASENOTE}
+//                 """
+//                 slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+//                     teamDomain: env.SLACK_DOMAIN,
+//                     color: "danger",
+//                     message: message
             }
         }
         aborted {
             script {
-                def message = """${NOTIFY_EMOJI} :construction:*ビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:
-                \n${BUILD_URL}
-                \nユーザー : $USERNAME @${BUILDER}
-                \nbranch : $BRANCH_NAME
-                \nRELEASE_NOTE : ${params.RELEASENOTE}
-                """
-                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
-                    teamDomain: env.SLACK_DOMAIN,
-                    color: "warning",
-                    message: message
+//                 def message = """${NOTIFY_EMOJI} :construction:*ビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:
+//                 \n${BUILD_URL}
+//                 \nユーザー : $USERNAME @${BUILDER}
+//                 \nbranch : $BRANCH_NAME
+//                 \nRELEASE_NOTE : ${params.RELEASENOTE}
+//                 """
+//                 slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+//                     teamDomain: env.SLACK_DOMAIN,
+//                     color: "warning",
+//                     message: message
             }
         }
         always {
