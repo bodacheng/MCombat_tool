@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label "master"
+    }
 
     environment {
         // groovy Files
@@ -14,9 +16,8 @@ pipeline {
         APP_NAME = ''
 
         // git
-        GIT_URL='https://git-1.cocone.jp/projectp3/p3-client'
-        GIT_P3_URL='https://git-1.cocone.jp/projectp3/p3-assets'
-        GIT_CREDENTIAL='p3_jenkins_gitlab'
+        GIT_URL='https://github.com/bodacheng/MComat.git'
+        GIT_CREDENTIAL='bodacheng1'
         GIT_HASH = ''
 
         // branch name
@@ -38,9 +39,6 @@ pipeline {
         BUILD_CONFIG_DIR='Assets/App/Editor/Build/Configs'
         EXPORT_PLIST_DIR='${BUILD_CONFIG_DIR}/iOS'
         YamlFile = "${BUILD_CONFIG_DIR}/${BUILD_KIND}BuildSettings.yaml"
-
-        // AppCenter
-        APPCENTER_API_TOKEN='33686d7866a23604057424c52b0474392c5c3b7e'// 本番
     }
 
     stages {
@@ -255,7 +253,7 @@ pipeline {
                         println 'appcenterへのアップロード'
                         build job: 'Upload_AppCenter',
                         parameters: [
-                        string(name: 'APPCENTER_API_TOKEN', value: APPCENTER_API_TOKEN),
+                        string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
                         string(name: 'APP_NAME', value: APP_NAME),
                         string(name: 'OUTPUT_DIR', value: "$OUTPUT_PATH/Export"),
                         string(name: 'copyArtifacts_ProjectName', value: 'Release_Build_iOS'),
