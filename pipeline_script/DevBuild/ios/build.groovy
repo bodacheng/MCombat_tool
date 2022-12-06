@@ -37,8 +37,8 @@ pipeline {
         PRODUCT_NAME=''
         VERSION=""
         OUTPUT_PATH='build_ios'
-        IPA_FILENAME="ipa_file_name"
-        IPA_EXECUTABLE_NAME="ipa_executable_name"
+        IPA_FILENAME=''
+        IPA_EXECUTABLE_NAME=''
         BUILD_CONFIG_DIR='Assets/App/Editor/Build/Configs'
         EXPORT_PLIST_DIR='${BUILD_CONFIG_DIR}/iOS'
         APP_OUTPUT_PATH=''
