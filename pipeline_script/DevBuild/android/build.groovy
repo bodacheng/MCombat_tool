@@ -235,6 +235,25 @@ pipeline {
                 }
             }
         }
+        ///
+        stage('Deploy Upload Google Play Console') {
+            steps {
+                def buildKind = params.BUILD_KIND.toString();
+                if (buildKind.equals("Release")){
+                    androidApkUpload filesPattern: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab",
+                        googleCredentialsId: "google store upload",
+                        recentChangeList: [
+                            [
+                                language: 'ja-JP',
+                                text: "ビルド${BUILD_ID} ${USERNAME} / RELEASE NOTE: ${RELEASENOTE}"
+                            ]
+                        ],
+                        releaseName: "$VERSION",
+                        rolloutPercentage: '0',
+                        trackName: 'internal'
+                }
+            }
+        }
     }
     post {
         success {
