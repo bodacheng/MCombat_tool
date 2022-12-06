@@ -69,6 +69,7 @@ pipeline {
                     def slackNotifyClass = load "pipeline_script/utils/notify/SlackNotify.groovy"
                     slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", BUILD_KIND, BUILD_TARGET, "")
                     slackUtility = load "pipeline_script/utils/notify/slackUtility.groovy"
+                    println '-------- 本环节成功？'
                 }
             }
         }
@@ -98,6 +99,8 @@ pipeline {
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
                     ])
+                    
+                    println 'Checked out to' + BRANCH_NAME
 
                     // Git情報の取得
                     //GIT_LOG = gitUtility.getGitCommitLatestLog()
@@ -299,6 +302,8 @@ pipeline {
 //                 slackNotify.SetReleaseNotes(releaseNote)
 //                 slackNotify.SetBuildTime(currentBuild.durationString)
 //                 slackUtility.notifySlackSendMessage(slackNotify)
+
+                    println "success?"
             }
         }
         failure {
@@ -313,6 +318,8 @@ pipeline {
 //                     teamDomain: env.SLACK_DOMAIN,
 //                     color: "danger",
 //                     message: message
+
+                println "fail?"
             }
         }
         aborted {
@@ -327,6 +334,7 @@ pipeline {
 //                     teamDomain: env.SLACK_DOMAIN,
 //                     color: "warning",
 //                     message: message
+                println "aborted?"
             }
         }
         always {
