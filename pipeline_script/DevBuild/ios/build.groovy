@@ -276,8 +276,9 @@ pipeline {
         }
         stage('upload apple store') {
             steps {
-                if (params.BUILD_KIND.toString().equals("Release")) {
-                    script {
+                script {
+                    def buildKind = params.BUILD_KIND.toString();
+                    if (buildKind.equals("Release")) {
                         withCredentials([
                         string(credentialsId: 'AppleStore_API_Key', variable: 'API_KEY'),
                         string(credentialsId: 'AppleStore_API_Issuer', variable: 'API_ISSUE')
