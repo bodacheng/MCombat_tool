@@ -9,9 +9,9 @@ def getAppCenterAppName(platform, appKind) {
     if (platform == "ios") {
         def map = [
                     'Dev':'MCombat_I_Dev',
-                    'QA':'POKEPIA',
-                    'Beta':'POKEPIA-iOSbeta',
-                    'Release':'Pokepia-iOS-1'
+                    'QA':'MCombat_I_Dev',
+                    'Beta':'MCombat_I_Dev',
+                    'Release':'MCombat_I_Dev'
                 ]
         if (map.containsKey(appKind)) {
             return map.get(appKind)
@@ -20,9 +20,9 @@ def getAppCenterAppName(platform, appKind) {
     else if (platform == "android") {
         def map = [
                     'Dev':'MCombat_A',
-                    'QA':'Pokepia-Android-3',
-                    'Beta':'POKEPIA-Androidbeta',
-                    'Release':'Pokepia-Android-1'
+                    'QA':'MCombat_A',
+                    'Beta':'MCombat_A',
+                    'Release':'MCombat_A'
                 ]
         if (map.containsKey(appKind)) {
             return map.get(appKind)
