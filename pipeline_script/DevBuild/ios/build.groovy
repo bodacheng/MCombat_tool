@@ -37,8 +37,8 @@ pipeline {
         PRODUCT_NAME=''
         VERSION=""
         OUTPUT_PATH='build_ios'
-        IPA_FILENAME=''
-        IPA_EXECUTABLE_NAME=''
+        IPA_FILENAME="ipa_file_name"
+        IPA_EXECUTABLE_NAME="ipa_executable_name"
         BUILD_CONFIG_DIR='Assets/App/Editor/Build/Configs'
         EXPORT_PLIST_DIR='${BUILD_CONFIG_DIR}/iOS'
         APP_OUTPUT_PATH=''
@@ -271,6 +271,23 @@ pipeline {
 
                     //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
                     //println "appcenter ReleaseID:${RELEASE_ID}"
+                }
+            }
+        }
+        stage('upload apple store') {
+            steps {
+                if (params.BUILD_KIND == "Release"){
+                    script {
+                        withCredentials([
+                        string(credentialsId: 'AppleStore_API_Key', variable: 'API_KEY'),
+                        string(credentialsId: 'AppleStore_API_Issuer', variable: 'API_ISSUE')
+                        ]) {
+                            sh """
+                            xcrun altool --validate-app -f $OUTPUT_PATH/Export/"${IPA_FILENAME}".ipa -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
+                            xcrun altool --upload-app -f $OUTPUT_PATH/Export/"${IPA_FILENAME}".ipa -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
+                            """
+                        }
+                    }
                 }
             }
         }
