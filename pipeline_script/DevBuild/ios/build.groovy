@@ -252,6 +252,7 @@ pipeline {
                 script {
                     wrap([$class: 'BuildUser']) {
                         def token
+                        def buildKind = params.BUILD_KIND.toString()
                         if (buildKind.equals("Release")) {
                             token = params.APPCENTER_API_TOKEN_RELEASE
                         }else{
