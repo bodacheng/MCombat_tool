@@ -11,7 +11,7 @@ def getAppCenterAppName(platform, appKind) {
                     'Dev':'MCombat_I_Dev',
                     'QA':'MCombat_I_Dev',
                     'Beta':'MCombat_I_Dev',
-                    'Release':'MCombat_I_Dev'
+                    'Release':'MCombat_I_Release'
                 ]
         if (map.containsKey(appKind)) {
             return map.get(appKind)
