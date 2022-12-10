@@ -242,10 +242,10 @@ pipeline {
                 script {
                     def buildKind = params.BUILD_KIND.toString()
                     if (buildKind.equals("Release")) {
-                        def ver_script = $/eval "unzip -p "${APP_OUTPUT_PATH}" Payload/"${IPA_EXECUTABLE_NAME}".app/Info.plist | plutil -convert json -o - -- - | jq -r .CFBundleShortVersionString"/$
-                        println ver_script
-                        VERSION = sh(script:"${ver_script}", returnStdout: true)
-                        echo "version=${VERSION}"
+                        //def ver_script = $/eval "unzip -p "${APP_OUTPUT_PATH}" Payload/"${IPA_EXECUTABLE_NAME}".app/Info.plist | plutil -convert json -o - -- - | jq -r .CFBundleShortVersionString"/$
+                        //println ver_script
+                        //VERSION = sh(script:"${ver_script}", returnStdout: true)
+                        //echo "version=${VERSION}"
                     }else{
                         def archiveDir = APP_OUTPUT_PATH.replace("/${IPA_EXECUTABLE_NAME}.ipa", "")
                         //versionName = versionInfomationUtility.getVersionName('ios', archiveDir, IPA_EXECUTABLE_NAME)
