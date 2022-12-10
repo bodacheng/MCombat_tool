@@ -125,7 +125,7 @@ pipeline {
                     IPA_FILENAME = IPA_FILENAME.replaceAll("\n", "")
                     println '-------- IPA_FILENAME:' + IPA_FILENAME
 
-                    APP_OUTPUT_PATH = "$OUTPUT_PATH/Export/Apps/${IPA_FILENAME}.ipa"
+                    APP_OUTPUT_PATH = "$OUTPUT_PATH/Export/${IPA_FILENAME}.ipa"
                     println '-------- APP_OUTPUT_PATH:' + APP_OUTPUT_PATH
 
                     script = $/eval "cat ${yamlFile} | grep -o 'cfBundleExecutableName: .*$' | sed -e 's/cfBundleExecutableName: ''//'"/$
@@ -276,7 +276,7 @@ pipeline {
                         parameters: [
                         string(name: 'APPCENTER_API_TOKEN', value: token),
                         string(name: 'APP_NAME', value: APP_NAME),
-                        string(name: 'OUTPUT_DIR', value: "$OUTPUT_PATH/Export/Apps"),
+                        string(name: 'OUTPUT_DIR', value: "$OUTPUT_PATH/Export"),
                         string(name: 'copyArtifacts_ProjectName', value: 'CustomIOSBuild'),
                         string(name: 'target_filter_artifact', value: ''),
                         string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
@@ -301,8 +301,8 @@ pipeline {
                         string(credentialsId: 'AppleStore_API_Issuer', variable: 'API_ISSUE')
                         ]) {
                             sh """
-                            xcrun altool --validate-app -f $OUTPUT_PATH/Export/Apps/"${IPA_FILENAME}".ipa -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
-                            xcrun altool --upload-app -f $OUTPUT_PATH/Export/Apps/"${IPA_FILENAME}".ipa -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
+                            xcrun altool --validate-app -f $OUTPUT_PATH/Export/"${IPA_FILENAME}".ipa -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
+                            xcrun altool --upload-app -f $OUTPUT_PATH/Export/"${IPA_FILENAME}".ipa -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
                             """
                         }
                     }
