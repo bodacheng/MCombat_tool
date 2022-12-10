@@ -227,7 +227,7 @@ pipeline {
                 sh """
                 xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
                 -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
-                -exportPath "$OUTPUT_PATH"/Export/Apps \
+                -exportPath "$OUTPUT_PATH"/Export \
                 -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
                 """
             }
