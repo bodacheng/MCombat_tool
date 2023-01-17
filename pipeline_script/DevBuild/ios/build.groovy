@@ -125,7 +125,7 @@ pipeline {
                     IPA_FILENAME = IPA_FILENAME.replaceAll("\n", "")
                     println '-------- IPA_FILENAME:' + IPA_FILENAME
 
-                    APP_OUTPUT_PATH = "$OUTPUT_PATH/Export/${IPA_FILENAME}.ipa"
+                    APP_OUTPUT_PATH = "$OUTPUT_PATH/Export/Apps/${IPA_FILENAME}.ipa"
                     println '-------- APP_OUTPUT_PATH:' + APP_OUTPUT_PATH
 
                     script = $/eval "cat ${yamlFile} | grep -o 'cfBundleExecutableName: .*$' | sed -e 's/cfBundleExecutableName: ''//'"/$
@@ -247,12 +247,11 @@ pipeline {
                         //VERSION = sh(script:"${ver_script}", returnStdout: true)
                         //echo "version=${VERSION}"
                     }else{
-                        def archiveDir = APP_OUTPUT_PATH.replace("/${IPA_EXECUTABLE_NAME}.ipa", "")
+                        //def archiveDir = APP_OUTPUT_PATH.replace("/${IPA_EXECUTABLE_NAME}.ipa", "")
                         //versionName = versionInfomationUtility.getVersionName('ios', archiveDir, IPA_EXECUTABLE_NAME)
                         //VERSION = versionName.replace("\n", '')
                         //println 'ipa versionName:' + VERSION
                     }
-
                 }
             }
         }
