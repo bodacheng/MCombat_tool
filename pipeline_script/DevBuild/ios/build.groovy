@@ -124,8 +124,8 @@ pipeline {
                     IPA_FILENAME = sh(script:"${script}", returnStdout:true)
                     IPA_FILENAME = IPA_FILENAME.replaceAll("\n", "")
                     println '-------- IPA_FILENAME:' + IPA_FILENAME
-
-                    APP_OUTPUT_PATH = "$OUTPUT_PATH/Export/Apps/${IPA_FILENAME}.ipa"
+                    
+                    APP_OUTPUT_PATH = "$OUTPUT_PATH/Export/${IPA_FILENAME}.ipa"
                     println '-------- APP_OUTPUT_PATH:' + APP_OUTPUT_PATH
 
                     script = $/eval "cat ${yamlFile} | grep -o 'cfBundleExecutableName: .*$' | sed -e 's/cfBundleExecutableName: ''//'"/$
