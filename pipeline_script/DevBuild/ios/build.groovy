@@ -125,7 +125,15 @@ pipeline {
                     IPA_FILENAME = IPA_FILENAME.replaceAll("\n", "")
                     println '-------- IPA_FILENAME:' + IPA_FILENAME
                     
-                    APP_OUTPUT_PATH = "$OUTPUT_PATH/${IPA_FILENAME}.ipa"
+                    def buildKind = params.BUILD_KIND.toString()
+                    if (buildKind.equals("Release")) {
+                        APP_OUTPUT_PATH = "$OUTPUT_PATH/${IPA_FILENAME}.ipa"
+                    }else{
+                        // 底下这个真理解不了Apps是怎么回事，选dev开发的话自动生成的Apps这个目录
+                        // 可可奶的build machine也是针对这点把dev 和 release直接路径区别开了，前者加了Apps，我怀疑跟build的程序类型有关系，XCode擅自加上的
+                        APP_OUTPUT_PATH = "$OUTPUT_PATH/Apps/${IPA_FILENAME}.ipa"
+                    }
+                    
                     println '-------- APP_OUTPUT_PATH:' + APP_OUTPUT_PATH
 
                     script = $/eval "cat ${yamlFile} | grep -o 'cfBundleExecutableName: .*$' | sed -e 's/cfBundleExecutableName: ''//'"/$
