@@ -42,6 +42,7 @@ pipeline {
         BUILD_CONFIG_DIR='Assets/App/Editor/Build/Configs'
         EXPORT_PLIST_DIR='${BUILD_CONFIG_DIR}/iOS'
         APP_OUTPUT_PATH=''
+        T_OUTPUT_PATH=''
 
         // s3 upload variables
         UPLOAD_S3_ADDRESS=''
@@ -128,14 +129,14 @@ pipeline {
                     def buildKind = params.BUILD_KIND.toString()
                     if (buildKind.equals("Release")) {
                         APP_OUTPUT_PATH = "$OUTPUT_PATH/${IPA_FILENAME}.ipa"
+                        T_OUTPUT_PATH = "$OUTPUT_PATH"
                     }else{
                         // 底下这个真理解不了Apps是怎么回事，选dev开发的话自动生成的Apps这个目录
                         // 可可奶的build machine也是针对这点把dev 和 release直接路径区别开了，前者加了Apps，我怀疑跟build的程序类型有关系，XCode擅自加上的
                         APP_OUTPUT_PATH = "$OUTPUT_PATH/Apps/${IPA_FILENAME}.ipa"
+                        T_OUTPUT_PATH = "$OUTPUT_PATH/Apps"
                     }
                     
-                    println '-------- APP_OUTPUT_PATH:' + APP_OUTPUT_PATH
-
                     script = $/eval "cat ${yamlFile} | grep -o 'cfBundleExecutableName: .*$' | sed -e 's/cfBundleExecutableName: ''//'"/$
                     IPA_EXECUTABLE_NAME = sh(script:"${script}", returnStdout:true)
                     IPA_EXECUTABLE_NAME = IPA_EXECUTABLE_NAME.replaceAll("\n", "")
@@ -283,7 +284,7 @@ pipeline {
                         parameters: [
                         string(name: 'APPCENTER_API_TOKEN', value: token),
                         string(name: 'APP_NAME', value: APP_NAME),
-                        string(name: 'OUTPUT_DIR', value: "$OUTPUT_PATH"),
+                        string(name: 'OUTPUT_DIR', value: T_OUTPUT_PATH),
                         string(name: 'copyArtifacts_ProjectName', value: 'CustomIOSBuild'),
                         string(name: 'target_filter_artifact', value: ''),
                         string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
@@ -308,8 +309,8 @@ pipeline {
                         string(credentialsId: 'AppleStore_API_Issuer', variable: 'API_ISSUE')
                         ]) {
                             sh """
-                            xcrun altool --validate-app -f $OUTPUT_PATH/"${IPA_FILENAME}".ipa -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
-                            xcrun altool --upload-app -f $OUTPUT_PATH/"${IPA_FILENAME}".ipa -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
+                            xcrun altool --validate-app -f APP_OUTPUT_PATH -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
+                            xcrun altool --upload-app -f APP_OUTPUT_PATH -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
                             """
                         }
                     }
