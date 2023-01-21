@@ -309,8 +309,8 @@ pipeline {
                         string(credentialsId: 'AppleStore_API_Issuer', variable: 'API_ISSUE')
                         ]) {
                             sh """
-                            xcrun altool --validate-app -f APP_OUTPUT_PATH -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
-                            xcrun altool --upload-app -f APP_OUTPUT_PATH -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
+                            xcrun altool --validate-app -f "$APP_OUTPUT_PATH" -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
+                            xcrun altool --upload-app -f "$APP_OUTPUT_PATH" -t ios --apiKey ${API_KEY} --apiIssuer ${API_ISSUE} --verbose
                             """
                         }
                     }
