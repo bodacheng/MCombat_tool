@@ -224,7 +224,7 @@ pipeline {
         stage('Xcode') {
             steps {
                 sh """
-                xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
+                xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
                 -configuration Release \
                 clean archive -archivePath "$OUTPUT_PATH"/Archive \
                 -scheme Unity-iPhone
@@ -234,7 +234,7 @@ pipeline {
         stage('Export') {
             steps {
                 sh """
-                xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
+                xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
                 -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
                 -exportPath "$OUTPUT_PATH" \
                 -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
