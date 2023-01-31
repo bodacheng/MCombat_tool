@@ -222,14 +222,22 @@ pipeline {
             }
         }
         stage('Xcode') {
-            steps {
-                sh """
-                xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
-                -configuration Release \
-                clean archive -archivePath "$OUTPUT_PATH"/Archive \
-                -scheme Unity-iPhone
-                """
-            }
+//             steps {
+//                 sh """
+//                 xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
+//                 -configuration Release \
+//                 clean archive -archivePath "$OUTPUT_PATH"/Archive \
+//                 -scheme Unity-iPhone
+//                 """
+//             }
+                steps {
+                    sh """
+                    xcodebuild -workspace "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
+                    -configuration Release \
+                    clean archive -archivePath "$OUTPUT_PATH"/Archive \
+                    -scheme Unity-iPhone
+                    """
+                }
         }
         stage('Export') {
             steps {
