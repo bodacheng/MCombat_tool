@@ -221,6 +221,13 @@ pipeline {
                 }
             }
         }
+        stage('pod install') {
+            steps {
+                sh """
+                "$OUTPUT_PATH"/pod install
+                """
+            }
+        }
         stage('Xcode') {
 //             steps {
 //                 sh """
