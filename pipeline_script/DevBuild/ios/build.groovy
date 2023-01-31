@@ -224,7 +224,7 @@ pipeline {
         stage('pod install') {
             steps {
                 sh """
-                "$OUTPUT_PATH"/pod install
+                "$OUTPUT_PATH"\ pod install
                 """
             }
         }
