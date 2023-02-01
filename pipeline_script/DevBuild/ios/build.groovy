@@ -173,20 +173,23 @@ pipeline {
                 // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
                 timeout(time: 60, unit: 'MINUTES')
             }
+            when {
+                expression {
+                   return params.buildAsset
+                }
+            }
             steps {
-                if (params.buildAsset) {
-                    script {
-                        StringBuilder commandBuilder = new StringBuilder()
-                        commandBuilder.append "$UNITY_PATH"
-                        commandBuilder.append " -projectPath $WORKSPACE"
-                        commandBuilder.append " -quit -batchmode"
-                        commandBuilder.append " -executeMethod $ADDRESSABLE_METHOD"
-                        commandBuilder.append " -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt"
-                        commandBuilder.append " -buildTarget $BUILD_TARGET"
-                        commandBuilder.append " -assetProfile $ASSET_PROFILE"
-    
-                        sh(script:commandBuilder.toString(), returnStdout:false)
-                    }
+                script {
+                    StringBuilder commandBuilder = new StringBuilder()
+                    commandBuilder.append "$UNITY_PATH"
+                    commandBuilder.append " -projectPath $WORKSPACE"
+                    commandBuilder.append " -quit -batchmode"
+                    commandBuilder.append " -executeMethod $ADDRESSABLE_METHOD"
+                    commandBuilder.append " -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt"
+                    commandBuilder.append " -buildTarget $BUILD_TARGET"
+                    commandBuilder.append " -assetProfile $ASSET_PROFILE"
+
+                    sh(script:commandBuilder.toString(), returnStdout:false)
                 }
             }
         }
