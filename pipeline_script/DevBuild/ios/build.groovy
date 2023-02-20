@@ -171,7 +171,7 @@ pipeline {
         stage('Assets') {
             options {
                 // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
-                timeout(time: 60, unit: 'MINUTES')
+                timeout(time: 180, unit: 'MINUTES')
             }
             when {
                 expression {
@@ -196,7 +196,7 @@ pipeline {
         stage('Unity') {
             options {
                 // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
-                timeout(time: 30, unit: 'MINUTES')
+                timeout(time: 180, unit: 'MINUTES')
             }
             steps {
                 script {
