@@ -258,7 +258,6 @@ pipeline {
                 -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
                 -exportPath "$OUTPUT_PATH" \
                 -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
-                -allowProvisioningUpdates
                 """
             }
         }
