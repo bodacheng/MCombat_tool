@@ -248,7 +248,6 @@ pipeline {
                     -configuration Release \
                     clean archive -archivePath "$OUTPUT_PATH"/Archive \
                     -scheme Unity-iPhone
-                    OTHER_SWIFT_FLAGS="-Xlinker -no-objc-arc -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -no_adhoc_codesign -Xlinker -no_objc_category_merging -Xlinker -no_implicit_dylibs -Xlinker -no_deduplicate"
                     """
                 }
         }
@@ -259,7 +258,6 @@ pipeline {
                 -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
                 -exportPath "$OUTPUT_PATH" \
                 -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
-                OTHER_SWIFT_FLAGS="-Xlinker -no-objc-arc -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -no_adhoc_codesign -Xlinker -no_objc_category_merging -Xlinker -no_implicit_dylibs -Xlinker -no_deduplicate"
                 """
             }
         }
