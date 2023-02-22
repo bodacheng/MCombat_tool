@@ -83,15 +83,13 @@ pipeline {
                 script {
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
                     USERNAME = cause.userName
-
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
-
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
                         extensions: [
-                            //[$class: 'GitLFSPull'],
-                            //[$class: 'CloneOption', timeout: 100],
-                            //[$class: 'CheckoutOption', timeout: 100]
+                            [$class: 'GitLFSPull'],
+                            [$class: 'CloneOption', timeout: 360],
+                            [$class: 'CheckoutOption', timeout: 360]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
