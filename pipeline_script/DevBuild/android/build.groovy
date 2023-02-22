@@ -138,10 +138,6 @@ pipeline {
             }
         }
         stage('Assets') {
-            options {
-                // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
-                timeout(time: 60, unit: 'MINUTES')
-            }
             steps {
                 script {
                     StringBuilder commandBuilder = new StringBuilder()

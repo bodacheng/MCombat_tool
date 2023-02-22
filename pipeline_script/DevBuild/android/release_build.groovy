@@ -17,9 +17,8 @@ pipeline {
         BRANCH_NAME = ''
 
         // git
-        GIT_URL='https://git-1.cocone.jp/projectp3/p3-client'
-        GIT_P3_URL='https://git-1.cocone.jp/projectp3/p3-assets'
-        GIT_CREDENTIAL='p3_jenkins_gitlab'
+        GIT_URL='https://github.com/bodacheng/MComat.git'
+        GIT_CREDENTIAL='bodacheng1'
         GIT_HASH = ''
 
         // environment values
@@ -290,30 +289,30 @@ pipeline {
         success {
             // NOTE:GITのLogを付加したいので子ジョブで成功通知を出す
             script {
-                def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
-                def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
-
-                def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
-                println "downloadURL:${downloadURL}"
-                slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
-                slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
-                slackNotify.SetReleaseNotes(releaseNote)
-                slackNotify.SetBuildTime(currentBuild.durationString)
-                slackUtility.notifySlackSendMessage(slackNotify)
+//                 def preFixReleaseNote = ":kirby::tada:*ビルド成功 [Job:$JOB_NAME/BuildNo:$BUILD_ID]*:tada::kirby:\n${env.BUILD_URL}"
+//                 def releaseNote = "${preFixReleaseNote}\n--\n${params.RELEASENOTE}\n--\n${GIT_LOG}"
+// 
+//                 def downloadURL = appcenterUtility.getDownloadURL(env.APPCENTER_OWNER, APP_NAME, RELEASE_ID)
+//                 println "downloadURL:${downloadURL}"
+//                 slackNotify.SetAppCenterInfomation(RELEASE_ID, downloadURL, VERSION)
+//                 slackNotify.SetGitInfomation(BRANCH_NAME, GIT_HASH)
+//                 slackNotify.SetReleaseNotes(releaseNote)
+//                 slackNotify.SetBuildTime(currentBuild.durationString)
+//                 slackUtility.notifySlackSendMessage(slackNotify)
             }
         }
         failure {
             script {
-                def message = """${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull::alert:
-                \n${BUILD_URL}
-                \nユーザー : $USERNAME @${BUILDER}
-                \nbranch : $BRANCH_NAME
-                \nRELEASE_NOTE : ${params.RELEASENOTE}
-                """
-                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
-                    teamDomain: env.SLACK_DOMAIN,
-                    color: "danger",
-                    message: message
+//                 def message = """${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull::alert:
+//                 \n${BUILD_URL}
+//                 \nユーザー : $USERNAME @${BUILDER}
+//                 \nbranch : $BRANCH_NAME
+//                 \nRELEASE_NOTE : ${params.RELEASENOTE}
+//                 """
+//                 slackSend channel:env.SLACK_NOTIFY_CHANNEL,
+//                     teamDomain: env.SLACK_DOMAIN,
+//                     color: "danger",
+//                     message: message
             }
         }
         aborted {
