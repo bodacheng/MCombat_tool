@@ -136,6 +136,11 @@ pipeline {
             }
         }
         stage('Assets') {
+            when {
+                expression {
+                   return params.buildAsset
+                }
+            }
             steps {
                 script {
                     StringBuilder commandBuilder = new StringBuilder()
