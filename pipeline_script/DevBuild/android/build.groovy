@@ -163,7 +163,6 @@ pipeline {
                         string(credentialsId: 'keyalias_password', variable: "KEYALIAS_PASS"),
                         string(credentialsId: 'keystore_password', variable: "KEYSTORE_PASS")
                     ]) 
-                    
                     {
                         println "androidArchitecture:" + params.ANDROID_ARCHS
                         println "WORKSPACE:" + WORKSPACE
