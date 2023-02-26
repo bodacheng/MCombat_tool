@@ -1,4 +1,5 @@
 pipeline {
+
     agent any
 
     environment {
@@ -70,6 +71,10 @@ pipeline {
                     def slackNotifyClass = load "pipeline_script/utils/notify/SlackNotify.groovy"
                     slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", BUILD_KIND, BUILD_TARGET, "")
                     slackUtility = load "pipeline_script/utils/notify/slackUtility.groovy"
+                    
+                    wrap([$class: 'BuildUser']) {
+                        BUILDER = env.BUILD_USER_ID
+                    }
                 }
             }
         }
@@ -86,16 +91,15 @@ pipeline {
                             slackNotify.SetGitInfomation(params.BRANCH, "unknown")
                             slackNotify.SetReleaseNotes(releaseNote)
                             slackUtility.notifyStartSlackSendMessage(slackNotify)
-
-
+                            
                             BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
 
                             checkout([$class: 'GitSCM',
                                 branches: [[name: "$BRANCH_NAME"]],
                                 extensions: [
                                     [$class: 'GitLFSPull'],
-                                    [$class: 'CloneOption', timeout: 60],
-                                    [$class: 'CheckoutOption', timeout: 60]
+                                    [$class: 'CloneOption', timeout: 180],
+                                    [$class: 'CheckoutOption', timeout: 180]
                                 ],
                                 gitTool: 'Default',
                                 userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
@@ -145,7 +149,7 @@ pipeline {
                     commandBuilder.append " -executeMethod $ADDRESSABLE_METHOD"
                     commandBuilder.append " -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt"
                     commandBuilder.append " -buildTarget $BUILD_TARGET"
-                    commandBuilder.append " -assetProfile P3${BUILD_KIND}"
+                    commandBuilder.append " -assetProfile $ASSET_PROFILE"
 
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
@@ -153,7 +157,7 @@ pipeline {
         }
         stage('Unity export apk') {
             options {
-                timeout(time: 90, unit: 'MINUTES')
+                timeout(time: 180, unit: 'MINUTES')
             }
 
             steps {
@@ -169,13 +173,7 @@ pipeline {
                     commandBuilder.append " -OutputPath $OUTPUT_PATH"
                     commandBuilder.append " -buildKind $BUILD_KIND"
                     commandBuilder.append " -androidArchitectures ARM64"
-
-                    // 強制的にTestLoginSceneを表示する
-                    if (params.FORCE_TEST_LOGIN)
-                    {
-                        commandBuilder.append " -forceTestLogin"
-                    }
-
+                    
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
                 archiveArtifacts artifacts: OUTPUT_PATH + "/" + PRODUCT_NAME + ".apk,", fingerprint: true, followSymlinks: false
@@ -194,7 +192,7 @@ pipeline {
         }
         stage('Unity export aab') {
             options {
-                timeout(time: 90, unit: 'MINUTES')
+                timeout(time: 180, unit: 'MINUTES')
             }
 
             steps {
@@ -219,13 +217,7 @@ pipeline {
                         commandBuilder.append " -useAndroidAppBundle -uploadToStore"
                         commandBuilder.append " -keystorePass ${KEYSTORE_PASS}"
                         commandBuilder.append " -keyaliasPass ${KEYALIAS_PASS}"
-
-                        // 強制的にTestLoginSceneを表示する
-                        if (params.FORCE_TEST_LOGIN)
-                        {
-                            commandBuilder.append " -forceTestLogin"
-                        }
-
+                        
                         sh(script:commandBuilder.toString(), returnStdout:false)
                     }
                 }
@@ -245,24 +237,21 @@ pipeline {
                     \n    hash    : ${GIT_HASH}
                     """
 
-                    wrap([$class: 'BuildUser']) {
-                        APP_NAME = appcenterUtility.getAppCenterAppName("android", BUILD_KIND)
-                        BUILDER = env.BUILD_USER_ID
+                    APP_NAME = appcenterUtility.getAppCenterAppName("android", BUILD_KIND)
 
-                        println 'appcenterへのアップロード'
-                        build job: 'Upload_AppCenter',
-                        parameters: [
-                        string(name: 'APPCENTER_API_TOKEN', value: APPCENTER_API_TOKEN),
-                        string(name: 'APP_NAME', value: APP_NAME),
-                        string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
-                        string(name: 'copyArtifacts_ProjectName', value: 'Release_Build_Android'),
-                        string(name: 'target_filter_artifact', value: ''),
-                        string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
-                        string(name: 'upstream_build_user', value: BUILDER),
-                        string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
-                        string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
-                        text(name: 'RELEASENOTE', value: releaseNote)]
-                    }
+                    println 'appcenterへのアップロード'
+                    build job: 'Upload_AppCenter',
+                    parameters: [
+                    string(name: 'APPCENTER_API_TOKEN', value: APPCENTER_API_TOKEN),
+                    string(name: 'APP_NAME', value: APP_NAME),
+                    string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
+                    string(name: 'copyArtifacts_ProjectName', value:env.JOB_NAME),
+                    string(name: 'target_filter_artifact', value: ''),
+                    string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
+                    string(name: 'upstream_build_user', value: BUILDER),
+                    string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
+                    string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
+                    text(name: 'RELEASENOTE', value: releaseNote)]
 
                     RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, env.APPCENTER_API_TOKEN)
                     println "appcenter ReleaseID:${RELEASE_ID}"
