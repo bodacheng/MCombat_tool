@@ -227,12 +227,15 @@ pipeline {
             }
         }
         stage('pod install') {
-            steps {
-                if (params.INSTALL_POD){
-                    sh """
-                    pod install --project-directory="$OUTPUT_PATH"
-                    """
+            when {
+                expression {
+                   return params.INSTALL_POD
                 }
+            }
+            steps {
+                sh """
+                pod install --project-directory="$OUTPUT_PATH"
+                """
             }
         }
         stage('Xcode') {
