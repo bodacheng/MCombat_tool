@@ -28,10 +28,6 @@ pipeline {
 
         // environment values
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
-        ANDROID_PALYAER_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/PlaybackEngines/AndroidPlayer"
-        ANDROID_SDK_PATH="${ANDROID_PALYAER_PATH}/SDK"
-        AAPT2_PATH="${ANDROID_SDK_PATH}/build-tools/30.0.2"
-        PATH = "${AAPT2_PATH}/:$PATH"
         BUILDER = ''
 
         // build configuration
@@ -182,8 +178,8 @@ pipeline {
                         commandBuilder.append " -BuildNumber $BUILD_ID"
                         commandBuilder.append " -OutputPath $OUTPUT_PATH"
                         commandBuilder.append " -buildKind ${params.BUILD_KIND}"
+                        commandBuilder.append " -developmentBuild ${params.developmentBuild}"
                         commandBuilder.append " -androidArchitectures '${params.ANDROID_ARCHS}'"
-                        commandBuilder.append " -useAndroidAppBundle -uploadToStore"
                         commandBuilder.append " -keystorePass ${KEYSTORE_PASS}"
                         commandBuilder.append " -keyaliasPass ${KEYALIAS_PASS}"
     
@@ -204,7 +200,7 @@ pipeline {
                     println 'apk/aab versionName:' + VERSION
                 }
                 
-                archiveArtifacts artifacts: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab,",
+                archiveArtifacts artifacts: "${OUTPUT_PATH}/${PRODUCT_NAME}.apk,",
                 fingerprint: true,
                 followSymlinks: false
             }
@@ -221,36 +217,15 @@ pipeline {
                         string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
                         string(name: 'APP_NAME', value: APP_NAME),
                         string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
-                        string(name: 'copyArtifacts_ProjectName', value: 'Androidcbuild'),
+                        string(name: 'copyArtifacts_ProjectName', value:env.JOB_NAME),
                         string(name: 'target_filter_artifact', value: ''),
                         string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
                         string(name: 'upstream_build_user', value: BUILDER),
-                        string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.aab"),
+                        string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
                         string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
                         text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
                     }
                     //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
-                }
-            }
-        }
-        ///
-        stage('Deploy Upload Google Play Console') {
-            steps {
-                script {
-                    def buildKind = params.BUILD_KIND.toString()
-                    if (buildKind.equals("Release")){
-                        androidApkUpload filesPattern: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab",
-                            googleCredentialsId: "google store upload",
-                            recentChangeList: [
-                                [
-                                    language: 'ja-JP',
-                                    text: "ビルド${BUILD_ID} ${USERNAME} / RELEASE NOTE: ${RELEASENOTE}"
-                                ]
-                            ],
-                            releaseName: "$VERSION",
-                            rolloutPercentage: '0',
-                            trackName: 'internal'
-                    }
                 }
             }
         }
