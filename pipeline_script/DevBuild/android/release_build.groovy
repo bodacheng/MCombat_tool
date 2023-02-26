@@ -38,9 +38,6 @@ pipeline {
         VERSION=""
         OUTPUT_PATH='build_android'
         BUILD_KIND="Release"
-
-        // appcenter
-        APPCENTER_API_TOKEN='585387c9fed92e48c21dd4d2852823d8a14831f0' //本番向け
     }
 
     stages {
@@ -242,7 +239,7 @@ pipeline {
                     println 'appcenterへのアップロード'
                     build job: 'Upload_AppCenter',
                     parameters: [
-                    string(name: 'APPCENTER_API_TOKEN', value: APPCENTER_API_TOKEN),
+                    string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
                     string(name: 'APP_NAME', value: APP_NAME),
                     string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
                     string(name: 'copyArtifacts_ProjectName', value:env.JOB_NAME),
@@ -253,8 +250,8 @@ pipeline {
                     string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
                     text(name: 'RELEASENOTE', value: releaseNote)]
 
-                    RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, env.APPCENTER_API_TOKEN)
-                    println "appcenter ReleaseID:${RELEASE_ID}"
+                    //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, env.APPCENTER_API_TOKEN)
+                    //println "appcenter ReleaseID:${RELEASE_ID}"
                 }
             }
         }
