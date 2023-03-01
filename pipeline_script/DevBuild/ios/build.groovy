@@ -248,20 +248,22 @@ pipeline {
 //                 """
 //             }
                 steps {
-                    if (params.INSTALL_POD) {
-                        sh """
-                        xcodebuild -workspace "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
-                        -configuration Release \
-                        clean archive -archivePath "$OUTPUT_PATH"/Archive \
-                        -scheme Unity-iPhone
-                        """
-                    }else{
-                        sh """
-                        xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
-                        -configuration Release \
-                        clean archive -archivePath "$OUTPUT_PATH"/Archive \
-                        -scheme Unity-iPhone
-                        """
+                    script {
+                        if (params.INSTALL_POD) {
+                            sh """
+                            xcodebuild -workspace "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
+                            -configuration Release \
+                            clean archive -archivePath "$OUTPUT_PATH"/Archive \
+                            -scheme Unity-iPhone
+                            """
+                        }else{
+                            sh """
+                            xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
+                            -configuration Release \
+                            clean archive -archivePath "$OUTPUT_PATH"/Archive \
+                            -scheme Unity-iPhone
+                            """
+                        }
                     }
                 }
         }
