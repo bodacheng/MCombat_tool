@@ -267,20 +267,22 @@ pipeline {
         }
         stage('Export') {
             steps {
-                if (params.INSTALL_POD) {
-                    sh """
-                    xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
-                    -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
-                    -exportPath "$OUTPUT_PATH" \
-                    -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
-                    """
-                }else{
-                    sh """
-                    xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
-                    -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
-                    -exportPath "$OUTPUT_PATH" \
-                    -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
-                    """
+                script {
+                    if (params.INSTALL_POD) {
+                        sh """
+                        xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
+                        -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
+                        -exportPath "$OUTPUT_PATH" \
+                        -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
+                        """
+                    }else{
+                        sh """
+                        xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
+                        -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
+                        -exportPath "$OUTPUT_PATH" \
+                        -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
+                        """
+                    }
                 }
             }
         }
