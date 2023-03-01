@@ -248,22 +248,40 @@ pipeline {
 //                 """
 //             }
                 steps {
-                    sh """
-                    xcodebuild -workspace "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
-                    -configuration Release \
-                    clean archive -archivePath "$OUTPUT_PATH"/Archive \
-                    -scheme Unity-iPhone
-                    """
+                    if (params.INSTALL_POD) {
+                        sh """
+                        xcodebuild -workspace "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
+                        -configuration Release \
+                        clean archive -archivePath "$OUTPUT_PATH"/Archive \
+                        -scheme Unity-iPhone
+                        """
+                    }else{
+                        sh """
+                        xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
+                        -configuration Release \
+                        clean archive -archivePath "$OUTPUT_PATH"/Archive \
+                        -scheme Unity-iPhone
+                        """
+                    }
                 }
         }
         stage('Export') {
             steps {
-                sh """
-                xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
-                -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
-                -exportPath "$OUTPUT_PATH" \
-                -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
-                """
+                if (params.INSTALL_POD) {
+                    sh """
+                    xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
+                    -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
+                    -exportPath "$OUTPUT_PATH" \
+                    -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
+                    """
+                }else{
+                    sh """
+                    xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
+                    -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
+                    -exportPath "$OUTPUT_PATH" \
+                    -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
+                    """
+                }
             }
         }
         stage('ipa保存/version情報取得') {
