@@ -181,45 +181,24 @@ pipeline {
                         println "androidArchitecture:" + params.ANDROID_ARCHS
                         println "WORKSPACE:" + WORKSPACE
             
-                        def UNITY_VERSION = "2020.3.21f1"
-                        def UNITY_PATH = "C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor\\Unity.exe"
+                        def commandBuilder = new StringBuilder()
+                        commandBuilder.append("${UNITY_PATH}")
+                        commandBuilder.append(" -projectPath '${WORKSPACE}'")
+                        commandBuilder.append(" -quit -batchmode")
+                        commandBuilder.append(" -executeMethod ${UNITY_METHOD}")
+                        commandBuilder.append(" -logFile '${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt'")
+                        commandBuilder.append(" -buildTarget ${BUILD_TARGET}")
+                        commandBuilder.append(" -BuildNumber ${BUILD_ID}")
+                        commandBuilder.append(" -OutputPath ${OUTPUT_PATH}")
+                        commandBuilder.append(" -buildKind ${params.BUILD_KIND}")
+                        commandBuilder.append(" -developmentBuild ${params.developmentBuild}")
+                        commandBuilder.append(" -androidArchitectures '${params.ANDROID_ARCHS}'")
+                        commandBuilder.append(" -keystorePass ${KEYSTORE_PASS}")
+                        commandBuilder.append(" -keyaliasPass ${KEYALIAS_PASS}")
             
-                        StringBuilder commandBuilder = new StringBuilder()
-                        commandBuilder.append('"')
-                        commandBuilder.append(UNITY_PATH)
-                        commandBuilder.append('"')
-                        commandBuilder.append(' -projectPath "')
-                        commandBuilder.append(WORKSPACE)
-                        commandBuilder.append('"')
-                        commandBuilder.append(' -quit -batchmode')
-                        commandBuilder.append(' -executeMethod ')
-                        commandBuilder.append(UNITY_METHOD)
-                        commandBuilder.append(' -logFile "')
-                        commandBuilder.append("${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt")
-                        commandBuilder.append('"')
-                        commandBuilder.append(' -buildTarget ')
-                        commandBuilder.append(BUILD_TARGET)
-                        commandBuilder.append(' -BuildNumber ')
-                        commandBuilder.append(BUILD_ID)
-                        commandBuilder.append(' -OutputPath ')
-                        commandBuilder.append(OUTPUT_PATH)
-                        commandBuilder.append(' -buildKind ')
-                        commandBuilder.append(params.BUILD_KIND)
-                        commandBuilder.append(' -developmentBuild ')
-                        commandBuilder.append(params.developmentBuild)
-                        commandBuilder.append(' -androidArchitectures "')
-                        commandBuilder.append(params.ANDROID_ARCHS)
-                        commandBuilder.append('"')
-                        commandBuilder.append(' -keystorePass ')
-                        commandBuilder.append(KEYSTORE_PASS)
-                        commandBuilder.append(' -keyaliasPass ')
-                        commandBuilder.append(KEYALIAS_PASS)
-            
-                        def tempPath = commandBuilder.toString()
-                        println tempPath
-            
-                        // apk作成
-                        powershell(returnStdout: false, script: tempPath)
+                        def command = commandBuilder.toString()
+                        println command
+                        powershell(returnStdout: false, script: command)
                     }
                 }
             }
