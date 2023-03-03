@@ -62,7 +62,7 @@ pipeline {
                     '''
 
                     // load git utility
-                    def utilisPath = "C:/Users/bodacheng/Jenkins/.jenkins/workspace/CustomAndroidBuild/pipeline_script/utils"
+                    def utilisPath = "${env.WORKSPACE}/pipeline_script/utils"
                     println "${utilisPath}/gitUtility_win.groovy"
                     gitUtility = readFile "${utilisPath}/gitUtility_win.groovy"
                     println gitUtility
@@ -71,8 +71,8 @@ pipeline {
 //                     def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
 //                     slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", params.BUILD_KIND, BUILD_TARGET, "")
 //                     slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
-                    versionInfomationUtility = load "${utilisPath}/getVersionInfomationUtility.groovy"
-                    buildUtility = load "${utilisPath}/buildUtility.groovy"
+                    versionInfomationUtility = readFile "${utilisPath}/getVersionInfomationUtility.groovy"
+                    buildUtility = readFile "${utilisPath}/buildUtility.groovy"
                 }
             }
         }
