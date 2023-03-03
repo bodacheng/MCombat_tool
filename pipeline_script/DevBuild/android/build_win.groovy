@@ -121,7 +121,6 @@ pipeline {
                     yamlFile = "${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml"
                     script = "powershell -Command \"Get-Content '${yamlFile}' | Select-String -Pattern 'Profile${AssetKind}: .*' | ForEach-Object { \$_.ToString().Trim() -replace '^Profile${AssetKind}: ''', '' } | Out-String\""
                     ASSET_PROFILE = bat(script:script, returnStdout:true).trim()
-                    println 'ASSET_PROFILE:' + ASSET_PROFILE
                     lines = ASSET_PROFILE.tokenize("\n")
                     ASSET_PROFILE = lines[-1].trim()
                     lines = ASSET_PROFILE.tokenize(":")
@@ -175,34 +174,33 @@ pipeline {
             }
             steps {
                 script {
-                withCredentials([
+                    withCredentials([
                         string(credentialsId: 'keyalias_password', variable: "KEYALIAS_PASS"),
                         string(credentialsId: 'keystore_password', variable: "KEYSTORE_PASS")
                     ]) 
                     {
                         println "androidArchitecture:" + params.ANDROID_ARCHS
                         println "WORKSPACE:" + WORKSPACE
-    
+            
                         StringBuilder commandBuilder = new StringBuilder()
-                        commandBuilder.append "$UNITY_PATH"
-                        commandBuilder.append " -projectPath $WORKSPACE"
-                        commandBuilder.append " -quit -batchmode"
-                        commandBuilder.append " -executeMethod $UNITY_METHOD"
-                        commandBuilder.append " -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt"
-                        commandBuilder.append " -buildTarget $BUILD_TARGET"
-                        commandBuilder.append " -BuildNumber $BUILD_ID"
-                        commandBuilder.append " -OutputPath $OUTPUT_PATH"
-                        commandBuilder.append " -buildKind ${params.BUILD_KIND}"
-                        commandBuilder.append " -developmentBuild ${params.developmentBuild}"
-                        commandBuilder.append " -androidArchitectures '${params.ANDROID_ARCHS}'"
-                        commandBuilder.append " -keystorePass ${KEYSTORE_PASS}"
-                        commandBuilder.append " -keyaliasPass ${KEYALIAS_PASS}"
-    
+                        commandBuilder.append("$UNITY_PATH")
+                        commandBuilder.append(" -projectPath $WORKSPACE")
+                        commandBuilder.append(" -quit -batchmode")
+                        commandBuilder.append(" -executeMethod $UNITY_METHOD")
+                        commandBuilder.append(" -logFile ${WORKSPACE}\\Logs\\build_${BUILD_ID}_log.txt")
+                        commandBuilder.append(" -buildTarget $BUILD_TARGET")
+                        commandBuilder.append(" -BuildNumber $BUILD_ID")
+                        commandBuilder.append(" -OutputPath $OUTPUT_PATH")
+                        commandBuilder.append(" -buildKind ${params.BUILD_KIND}")
+                        commandBuilder.append(" -developmentBuild ${params.developmentBuild}")
+                        commandBuilder.append(" -androidArchitectures '${params.ANDROID_ARCHS}'")
+                        commandBuilder.append(" -keystorePass ${KEYSTORE_PASS}")
+                        commandBuilder.append(" -keyaliasPass ${KEYALIAS_PASS}")
+            
                         def tempPath = commandBuilder.toString()
                         println tempPath
-    
                         // apk作成
-                        bat(script:commandBuilder.toString(), returnStdout:false)
+                        bat(script:tempPath, returnStdout:false)
                     }
                 }
             }
