@@ -187,7 +187,7 @@ pipeline {
                         commandBuilder.append(" -projectPath $WORKSPACE")
                         commandBuilder.append(" -quit -batchmode")
                         commandBuilder.append(" -executeMethod $UNITY_METHOD")
-                        commandBuilder.append(" -logFile ${WORKSPACE}\\Logs\\build_${BUILD_ID}_log.txt")
+                        commandBuilder.append(" -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt")
                         commandBuilder.append(" -buildTarget $BUILD_TARGET")
                         commandBuilder.append(" -BuildNumber $BUILD_ID")
                         commandBuilder.append(" -OutputPath $OUTPUT_PATH")
@@ -198,10 +198,9 @@ pipeline {
                         commandBuilder.append(" -keyaliasPass ${KEYALIAS_PASS}")
             
                         def tempPath = commandBuilder.toString()
-                        tempPath = tempPath.replace(">","")// 谜
                         println tempPath
                         // apk作成
-                        bat(script:tempPath, returnStdout:false)
+                        powershell(returnStdout: false, script: tempPath)
                     }
                 }
             }
