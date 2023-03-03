@@ -57,20 +57,20 @@ pipeline {
                     checkout scm
 
                     // To know files are checked out or not
-                    bat '''
-                        dir /O:D /T:W /S
-                    '''
+//                     bat '''
+//                         dir /O:D /T:W /S
+//                     '''
 
                     // load git utility
                     def utilisPath = "${env.WORKSPACE}/pipeline_script/utils"
-                    gitUtility = readFile "${utilisPath}/gitUtility_win.groovy"
-                    appcenterUtility = readFile "${utilisPath}/appcenterUtility.groovy"
+                    gitUtility = load "${utilisPath}/gitUtility_win.groovy"
+                    appcenterUtility = load "${utilisPath}/appcenterUtility.groovy"
 
 //                     def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
 //                     slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", params.BUILD_KIND, BUILD_TARGET, "")
 //                     slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
-                    versionInfomationUtility = readFile "${utilisPath}/getVersionInfomationUtility.groovy"
-                    buildUtility = readFile "${utilisPath}/buildUtility.groovy"
+                    versionInfomationUtility = load "${utilisPath}/getVersionInfomationUtility.groovy"
+                    buildUtility = load "${utilisPath}/buildUtility.groovy"
                 }
             }
         }
