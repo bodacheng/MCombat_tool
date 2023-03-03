@@ -26,7 +26,7 @@ pipeline {
         APP_NAME = ''
 
         // environment values
-        UNITY_PATH="/Applications/Unity/Hub/Editor/2021.3.2f1"
+        UNITY_PATH="/Applications/Unity/Hub/Editor/"
         BUILDER = ''
 
         // build configuration
