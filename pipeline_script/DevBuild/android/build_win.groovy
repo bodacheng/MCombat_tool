@@ -183,7 +183,8 @@ pipeline {
                         println "WORKSPACE:" + WORKSPACE
                         
                         def UNITY_PATHH = "\"C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor\\Unity.exe\""
-                        commandBuilder.append(" ${UNITY_PATHH}")
+                        def commandBuilder = new StringBuilder()
+                        commandBuilder.append(" ${UNITY_PATH}")
                         commandBuilder.append(" -projectPath \"${WORKSPACE}\"")
                         commandBuilder.append(" -quit -batchmode")
                         commandBuilder.append(" -executeMethod ${UNITY_METHOD}")
@@ -196,7 +197,7 @@ pipeline {
                         commandBuilder.append(" -androidArchitectures \"${params.ANDROID_ARCHS}\"")
                         commandBuilder.append(" -keystorePass ${KEYSTORE_PASS}")
                         commandBuilder.append(" -keyaliasPass ${KEYALIAS_PASS}")
-                        
+            
                         def command = commandBuilder.toString()
                         println command
                         powershell(returnStdout: false, script: command)
