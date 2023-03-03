@@ -120,7 +120,8 @@ pipeline {
                     yamlFile = "${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml"
                     script = powershell(returnStdout: true, script: "Get-Content ${yamlFile} | Select-String -Pattern 'Profile${params.AssetKind}: ' | ForEach-Object { \$_.ToString().TrimStart('Profile${params.AssetKind}: ').Trim() }")
                     //script = $/eval "cat ${yamlFile} | grep -o 'Profile${AssetKind}: .*$' | sed -e 's/Profile${params.AssetKind}: ''//'"/$
-                    ASSET_PROFILE = bat(script:"${script}", returnStdout:true)
+                    println script
+                    ASSET_PROFILE = bat(script:" ${script}", returnStdout:true)
                     ASSET_PROFILE = ASSET_PROFILE.replaceAll("\n", "")
                     println '-------- ASSET_PROFILE:' + ASSET_PROFILE
 
