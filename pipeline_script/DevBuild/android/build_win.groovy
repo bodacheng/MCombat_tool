@@ -15,7 +15,6 @@ pipeline {
 
         // git
         GIT_URL='https://github.com/bodacheng/MComat.git'
-        GIT_CREDENTIAL='bodacheng1'
         GIT_LOG = ''
         GIT_HASH = ''
 
@@ -97,7 +96,7 @@ pipeline {
                             [$class: 'CheckoutOption', timeout: 360]
                         ],
                         gitTool: 'Default',
-                        userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
+                        userRemoteConfigs: [[credentialsId: "${params.CREDENTIAL}", url: "$GIT_URL"]]
                     ])
                     
                     // Git情報の取得
