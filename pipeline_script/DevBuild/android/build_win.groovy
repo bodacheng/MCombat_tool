@@ -67,13 +67,18 @@ pipeline {
                     def gitUtilityText = readFile "${utilisPath}\\gitUtility_win.groovy"
                     gitUtility = evaluate gitUtilityText
                     println gitUtility
-                    appcenterUtility = load "${utilisPath}\\appcenterUtility.groovy"
+                    
+                    def appcenterUtilityText= readFile "${utilisPath}\\appcenterUtility.groovy"
+                    appcenterUtility = evaluate appcenterUtilityText
                     
 //                     def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
 //                     slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", params.BUILD_KIND, BUILD_TARGET, "")
 //                     slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
-                    versionInfomationUtility = load "${utilisPath}/getVersionInfomationUtility.groovy"
-                    buildUtility = load "${utilisPath}/buildUtility.groovy"
+
+                    def versionInfomationUtilityText = readFile "${utilisPath}/getVersionInfomationUtility.groovy"
+                    versionInfomationUtility = evaluate versionInfomationUtilityText
+                    def buildUtilityText= readFile "${utilisPath}/buildUtility.groovy"
+                    buildUtility = evaluate buildUtilityText
                 }
             }
         }
