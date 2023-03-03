@@ -58,7 +58,7 @@ pipeline {
 
                     // To know files are checked out or not
                     bat '''
-                        dir -lhrt
+                        dir /O:D /T:W /S
                     '''
 
                     // load git utility
