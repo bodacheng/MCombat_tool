@@ -63,7 +63,7 @@ pipeline {
 
                     // load git utility
                     def utilisPath = "pipeline_script/utils"
-                    gitUtility = load "${utilisPath}/gitUtility.groovy"
+                    gitUtility = load "${utilisPath}/gitUtility_win.groovy"
                     appcenterUtility = load "${utilisPath}/appcenterUtility.groovy"
 
                     def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
