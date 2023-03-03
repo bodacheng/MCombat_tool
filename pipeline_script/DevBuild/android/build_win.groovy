@@ -116,15 +116,15 @@ pipeline {
                     PRODUCT_NAME = bat(script:script, returnStdout:true).trim()
                     def lines = PRODUCT_NAME.tokenize("\n")
                     PRODUCT_NAME = lines[-1].trim()
-                    println PRODUCT_NAME
+                    println 'PRODUCT_NAME:' +PRODUCT_NAME
                     
                     yamlFile = "${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml"
                     script = "powershell -Command \"Get-Content ${yamlFile} | Select-String -Pattern 'Profile${AssetKind}: .*' | foreach-object { \$_.Matches } | foreach-object { \$_.Value } | ForEach-Object { \$_ -replace 'Profile\${params.AssetKind}: ','' }\""
                     //script = $/eval "cat ${yamlFile} | grep -o 'Profile${AssetKind}: .*$' | sed -e 's/Profile${params.AssetKind}: ''//'"/$
-                    println script
                     ASSET_PROFILE = bat(script:" ${script}", returnStdout:true)
-                    ASSET_PROFILE = ASSET_PROFILE.replaceAll("\n", "")
-                    println '-------- ASSET_PROFILE:' + ASSET_PROFILE
+                    lines = ASSET_PROFILE.tokenize("\n")
+                    ASSET_PROFILE = lines[-1].trim()
+                    println 'ASSET_PROFILE:' + ASSET_PROFILE
 
                     // キャッシュ削除が必要な場合Libraryフォルダーを削除
                     if (params.CLEAR_CACHE)
