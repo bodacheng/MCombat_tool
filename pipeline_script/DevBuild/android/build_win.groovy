@@ -57,9 +57,9 @@ pipeline {
                     checkout scm
 
                     // To know files are checked out or not
-//                     bat '''
-//                         dir /O:D /T:W /S
-//                     '''
+                    bat '''
+                        dir /O:D /T:W /S
+                    '''
 
                     // load git utility
                     def utilisPath = "pipeline_script/utils"
