@@ -26,7 +26,7 @@ pipeline {
         APP_NAME = ''
 
         // environment values
-        UNITY_PATH="C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor\\Unity.exe"
+        UNITY_PATH="\"C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor\\Unity.exe\""
         BUILDER = ''
 
         // build configuration
@@ -154,6 +154,7 @@ pipeline {
             steps {
                 script {
                     StringBuilder commandBuilder = new StringBuilder()
+                    // UNITY_PATH="C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor\\Unity.exe"
                     commandBuilder.append "$UNITY_PATH"
                     commandBuilder.append " -projectPath $WORKSPACE"
                     commandBuilder.append " -quit -batchmode"
@@ -180,9 +181,9 @@ pipeline {
                     ]) {
                         println "androidArchitecture:" + params.ANDROID_ARCHS
                         println "WORKSPACE:" + WORKSPACE
-            
+                        
                         def commandBuilder = new StringBuilder()
-                        commandBuilder.append("${UNITY_PATH}")
+                        commandBuilder.append(UNITY_PATH)
                         commandBuilder.append(" -projectPath '${WORKSPACE}'")
                         commandBuilder.append(" -quit -batchmode")
                         commandBuilder.append(" -executeMethod ${UNITY_METHOD}")
