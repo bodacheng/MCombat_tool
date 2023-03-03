@@ -119,9 +119,9 @@ pipeline {
                     println 'PRODUCT_NAME:' +PRODUCT_NAME
                     
                     yamlFile = "${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml"
-                    script = "powershell -Command \"Get-Content ${yamlFile} | Select-String -Pattern 'Profile${AssetKind}: .*' | foreach-object { \$_.Matches } | foreach-object { \$_.Value } | ForEach-Object { \$_ -replace 'Profile\${params.AssetKind}: ','' }\""
-                    //script = $/eval "cat ${yamlFile} | grep -o 'Profile${AssetKind}: .*$' | sed -e 's/Profile${params.AssetKind}: ''//'"/$
-                    ASSET_PROFILE = bat(script:" ${script}", returnStdout:true)
+                    def script = "powershell -Command \"Get-Content '${yamlFile}' | Select-String -Pattern 'Profile${AssetKind}: .*' | ForEach-Object { \$_.ToString().Trim() -replace '^Profile${AssetKind}: ''', '' } | Out-String\""
+                    ASSET_PROFILE = bat(script:script, returnStdout:true).trim()
+                    println 'ASSET_PROFILE:' + ASSET_PROFILE
                     lines = ASSET_PROFILE.tokenize("\n")
                     ASSET_PROFILE = lines[-1].trim()
                     println 'ASSET_PROFILE:' + ASSET_PROFILE
