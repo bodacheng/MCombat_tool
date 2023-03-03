@@ -198,6 +198,7 @@ pipeline {
                         commandBuilder.append(" -keyaliasPass ${KEYALIAS_PASS}")
             
                         def tempPath = commandBuilder.toString()
+                        tempPath = tempPath.replace(">","")// 谜
                         println tempPath
                         // apk作成
                         bat(script:tempPath, returnStdout:false)
