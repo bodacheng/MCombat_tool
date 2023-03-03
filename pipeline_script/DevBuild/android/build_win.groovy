@@ -111,14 +111,12 @@ pipeline {
                     // TODO:read yamlに直したい
                     def yamlFile = "${BUILD_CONFIG_DIR}/${BUILD_KIND}BuildSettings.yaml"
                     
-                    def script = "powershell -Command \"Select-String -Path ${yamlFile} -Pattern 'productName: .*' | foreach-object { \$_.Matches } | foreach-object { \$_.Value } | ForEach-Object { \$_ -replace 'productName: ','' }\""
-                    //def script = $/eval "cat ${yamlFile} | grep -o 'productName: .*$' | sed -e 's/productName: ''//'"/$
-                    println script
                     
-                    PRODUCT_NAME = bat(script:"${script}", returnStdout:true)
-                    PRODUCT_NAME = PRODUCT_NAME.replaceAll("\n", "")
+                    def script = "powershell -Command \"(Select-String -Path ${yamlFile} -Pattern 'productName: .*' | foreach-object { \\\$_.Matches } | foreach-object { \\\$_.Value } | ForEach-Object { \$_ -replace 'productName: ','' }) | Out-String\""
+                    PRODUCT_NAME = bat(script:"${script}", returnStdout:true).trim()
+                    //def script = $/eval "cat ${yamlFile} | grep -o 'productName: .*$' | sed -e 's/productName: ''//'"/$
                     println '-------- PRODUCT_NAME:' + PRODUCT_NAME
-
+                    
                     yamlFile = "${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml"
                     script = "powershell -Command \"Get-Content ${yamlFile} | Select-String -Pattern 'Profile${AssetKind}: .*' | foreach-object { \$_.Matches } | foreach-object { \$_.Value } | ForEach-Object { \$_ -replace 'Profile\${params.AssetKind}: ','' }\""
                     //script = $/eval "cat ${yamlFile} | grep -o 'Profile${AssetKind}: .*$' | sed -e 's/Profile${params.AssetKind}: ''//'"/$
