@@ -112,10 +112,9 @@ pipeline {
                     def yamlFile = "${BUILD_CONFIG_DIR}/${BUILD_KIND}BuildSettings.yaml"
                     
                     
-                    def script = "powershell -Command \"(Select-String -Path ${yamlFile} -Pattern 'productName: .*' | foreach-object { \\\$_.Matches } | foreach-object { \\\$_.Value } | ForEach-Object { \$_ -replace 'productName: ','' }) | Out-String\""
-                    PRODUCT_NAME = bat(script:"${script}", returnStdout:true).trim()
-                    //def script = $/eval "cat ${yamlFile} | grep -o 'productName: .*$' | sed -e 's/productName: ''//'"/$
-                    println '-------- PRODUCT_NAME:' + PRODUCT_NAME
+                    def script = 'powershell "Get-Content ${yamlFile} | Select-String -Pattern \\"^productName:\\" | ForEach-Object { $_ -replace \\"^productName:\\", \\"\\" }"'
+                    PRODUCT_NAME = bat(script:script, returnStdout:true).trim()
+                    println PRODUCT_NAME
                     
                     yamlFile = "${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml"
                     script = "powershell -Command \"Get-Content ${yamlFile} | Select-String -Pattern 'Profile${AssetKind}: .*' | foreach-object { \$_.Matches } | foreach-object { \$_.Value } | ForEach-Object { \$_ -replace 'Profile\${params.AssetKind}: ','' }\""
