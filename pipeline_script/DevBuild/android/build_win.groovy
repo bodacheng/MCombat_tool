@@ -174,14 +174,17 @@ pipeline {
             }
 steps {
     script {
-        withCredentials([            string(credentialsId: 'keyalias_password', variable: "KEYALIAS_PASS"),            string(credentialsId: 'keystore_password', variable: "KEYSTORE_PASS")        ]) 
+        withCredentials([
+            string(credentialsId: 'keyalias_password', variable: "KEYALIAS_PASS"),
+            string(credentialsId: 'keystore_password', variable: "KEYSTORE_PASS")
+        ]) 
         {
             println "androidArchitecture:" + params.ANDROID_ARCHS
             println "WORKSPACE:" + WORKSPACE
 
             StringBuilder commandBuilder = new StringBuilder()
             commandBuilder.append("\"${UNITY_PATH}\\Editor\\Unity.exe\"")
-            commandBuilder.append(" -projectPath $WORKSPACE")
+            commandBuilder.append(" -projectPath '$WORKSPACE'")
             commandBuilder.append(" -quit -batchmode")
             commandBuilder.append(" -executeMethod $UNITY_METHOD")
             commandBuilder.append(" -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt")
