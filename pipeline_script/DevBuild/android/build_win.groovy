@@ -65,7 +65,7 @@ pipeline {
                     def utilisPath = "C:/Users/bodacheng/Jenkins/.jenkins/workspace/CustomAndroidBuild/pipeline_script/utils"
                     println "${utilisPath}/gitUtility_win.groovy"
                     gitUtility = readFile "${utilisPath}/gitUtility_win.groovy"
-                    println utilisPath
+                    println gitUtility
                     appcenterUtility = readFile "${utilisPath}/appcenterUtility.groovy"
 
 //                     def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
