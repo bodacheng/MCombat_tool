@@ -63,9 +63,7 @@ pipeline {
 
                     // load git utility
                     def utilisPath = "${env.WORKSPACE}/pipeline_script/utils"
-                    println "${utilisPath}/gitUtility_win.groovy"
                     gitUtility = readFile "${utilisPath}/gitUtility_win.groovy"
-                    println gitUtility
                     appcenterUtility = readFile "${utilisPath}/appcenterUtility.groovy"
 
 //                     def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
@@ -79,6 +77,7 @@ pipeline {
         stage('Git') {
             steps {
                 script {
+                    println gitUtility.get_branch_name(params.BRANCH)
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
                     USERNAME = cause.userName
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
