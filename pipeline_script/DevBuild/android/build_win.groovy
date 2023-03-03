@@ -182,21 +182,21 @@ pipeline {
                         println "androidArchitecture:" + params.ANDROID_ARCHS
                         println "WORKSPACE:" + WORKSPACE
                         
-                        def commandBuilder = new StringBuilder()
-                        commandBuilder.append(UNITY_PATH)
-                        commandBuilder.append(" -projectPath '${WORKSPACE}'")
+                        def UNITY_PATHH = "\"C:\\Program Files\\Unity\\Hub\\Editor\\${UNITY_VERSION}\\Editor\\Unity.exe\""
+                        commandBuilder.append(" ${UNITY_PATHH}")
+                        commandBuilder.append(" -projectPath \"${WORKSPACE}\"")
                         commandBuilder.append(" -quit -batchmode")
                         commandBuilder.append(" -executeMethod ${UNITY_METHOD}")
-                        //commandBuilder.append(" -logFile '${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt'")
+                        commandBuilder.append(" -logFile \"${WORKSPACE}/Logs/build_${BUILD_ID}_log.txt\"")
                         commandBuilder.append(" -buildTarget ${BUILD_TARGET}")
                         commandBuilder.append(" -BuildNumber ${BUILD_ID}")
                         commandBuilder.append(" -OutputPath ${OUTPUT_PATH}")
                         commandBuilder.append(" -buildKind ${params.BUILD_KIND}")
                         commandBuilder.append(" -developmentBuild ${params.developmentBuild}")
-                        commandBuilder.append(" -androidArchitectures '${params.ANDROID_ARCHS}'")
+                        commandBuilder.append(" -androidArchitectures \"${params.ANDROID_ARCHS}\"")
                         commandBuilder.append(" -keystorePass ${KEYSTORE_PASS}")
                         commandBuilder.append(" -keyaliasPass ${KEYALIAS_PASS}")
-            
+                        
                         def command = commandBuilder.toString()
                         println command
                         powershell(returnStdout: false, script: command)
