@@ -124,6 +124,8 @@ pipeline {
                     println 'ASSET_PROFILE:' + ASSET_PROFILE
                     lines = ASSET_PROFILE.tokenize("\n")
                     ASSET_PROFILE = lines[-1].trim()
+                    lines = ASSET_PROFILE.tokenize(":")
+                    ASSET_PROFILE = lines[-1].trim()
                     println 'ASSET_PROFILE:' + ASSET_PROFILE
 
                     // キャッシュ削除が必要な場合Libraryフォルダーを削除
