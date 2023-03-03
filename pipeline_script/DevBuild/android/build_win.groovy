@@ -63,7 +63,7 @@ pipeline {
 
                     // load git utility
                     def utilisPath = env.WORKSPACE + "\\pipeline_script\\utils"
-                    println utilisPath
+                    println "${utilisPath}\\gitUtility_win.groovy"
                     gitUtility = load "${utilisPath}\\gitUtility_win.groovy"
                     appcenterUtility = load "${utilisPath}\\appcenterUtility.groovy"
 
