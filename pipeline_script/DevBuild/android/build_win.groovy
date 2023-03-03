@@ -65,6 +65,7 @@ pipeline {
                     def utilisPath = env.WORKSPACE + "\\pipeline_script\\utils"
                     println "${utilisPath}\\gitUtility_win.groovy"
                     gitUtility = load "${utilisPath}\\gitUtility_win.groovy"
+                    println gitUtility
                     appcenterUtility = load "${utilisPath}\\appcenterUtility.groovy"
 
 //                     def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
