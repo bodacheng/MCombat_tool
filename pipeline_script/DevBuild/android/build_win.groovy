@@ -110,11 +110,10 @@ pipeline {
                 script {
                     // TODO:read yamlに直したい
                     def yamlFile = "${BUILD_CONFIG_DIR}/${BUILD_KIND}BuildSettings.yaml"
-                    
-                    def script = 'powershell "Get-Content $env:yamlFile | Select-String -Pattern \\"^productName:\\" | ForEach-Object { $_ -replace \\"^productName:\\", \\"\\" }"'
+                    def script = 'powershell "Get-Content \"${yamlFile}\" | Select-String -Pattern \\"^productName:\\" | ForEach-Object { $_ -replace \\"^productName:\\", \\"\\" }"'
                     PRODUCT_NAME = bat(script:script, returnStdout:true).trim()
                     println PRODUCT_NAME
-                    
+                                        
                     yamlFile = "${BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml"
                     script = "powershell -Command \"Get-Content ${yamlFile} | Select-String -Pattern 'Profile${AssetKind}: .*' | foreach-object { \$_.Matches } | foreach-object { \$_.Value } | ForEach-Object { \$_ -replace 'Profile\${params.AssetKind}: ','' }\""
                     //script = $/eval "cat ${yamlFile} | grep -o 'Profile${AssetKind}: .*$' | sed -e 's/Profile${params.AssetKind}: ''//'"/$
