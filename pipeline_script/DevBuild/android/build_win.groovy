@@ -112,7 +112,7 @@ pipeline {
                     println BUILD_KIND
                     // TODO:read yamlに直したい
                     def yamlFile = "${BUILD_CONFIG_DIR}/${BUILD_KIND}BuildSettings.yaml"
-                    def script = "echo off & powershell \"Get-Content '${yamlFile}' | Select-String -Pattern '^productName:' | ForEach-Object { \$_.ToString().Trim() -replace '^productName:\\s*', '' }\""
+                    def script = 23"echo off & powershell \"Get-Content '${yamlFile}' | Select-String -Pattern '^productName:' | ForEach-Object { \$_.ToString().Trim() -replace '^productName:\\s*', '' }\""
                     PRODUCT_NAME = bat(script:script, returnStdout:true).trim()
                     println PRODUCT_NAME
                     
