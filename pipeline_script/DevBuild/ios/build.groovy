@@ -210,6 +210,7 @@ pipeline {
                     commandBuilder.append " -BuildNumber $BUILD_ID"
                     commandBuilder.append " -OutputPath $OUTPUT_PATH"
                     commandBuilder.append " -buildKind ${params.BUILD_KIND}"
+                    commandBuilder.append " -developmentBuild ${params.developmentBuild}"
 
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
