@@ -82,13 +82,7 @@ pipeline {
                     USERNAME = cause.userName
 
                         wrap([$class: 'BuildUser']) {
-                            // slack通知
-                            def releaseNote = ":play: *ビルド開始します。* @p3_client \n[Job:$JOB_NAME/BuildNo:$BUILD_ID/URL:${env.BUILD_URL}]\n${params.RELEASENOTE}\n"
-                            slackNotify.SetBuildUser(USERNAME.toString() + "/@" + env.BUILD_USER_ID)
-                            slackNotify.SetGitInfomation(params.BRANCH, "unknown")
-                            slackNotify.SetReleaseNotes(releaseNote)
-                            slackUtility.notifyStartSlackSendMessage(slackNotify)
-                            
+                                                    
                             BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
 
                             checkout([$class: 'GitSCM',
