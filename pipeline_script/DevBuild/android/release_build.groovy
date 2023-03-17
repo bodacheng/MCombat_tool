@@ -285,34 +285,7 @@ pipeline {
 //                 slackNotify.SetReleaseNotes(releaseNote)
 //                 slackNotify.SetBuildTime(currentBuild.durationString)
 //                 slackUtility.notifySlackSendMessage(slackNotify)
-            }
-        }
-        failure {
-            script {
-//                 def message = """${NOTIFY_EMOJI} :skull:*ビルド失敗 [$JOB_NAME:$BUILD_ID]*:skull::alert:
-//                 \n${BUILD_URL}
-//                 \nユーザー : $USERNAME @${BUILDER}
-//                 \nbranch : $BRANCH_NAME
-//                 \nRELEASE_NOTE : ${params.RELEASENOTE}
-//                 """
-//                 slackSend channel:env.SLACK_NOTIFY_CHANNEL,
-//                     teamDomain: env.SLACK_DOMAIN,
-//                     color: "danger",
-//                     message: message
-            }
-        }
-        aborted {
-            script {
-                def message = """${NOTIFY_EMOJI} :construction:*ビルド中断 [$JOB_NAME:$BUILD_ID]*:construction:
-                \n${BUILD_URL}
-                \nユーザー : $USERNAME @${BUILDER}
-                \nbranch : $BRANCH_NAME
-                \nRELEASE_NOTE : ${params.RELEASENOTE}
-                """
-                slackSend channel:env.SLACK_NOTIFY_CHANNEL,
-                    teamDomain: env.SLACK_DOMAIN,
-                    color: "warning",
-                    message: message
+                println "ビルド所要時間${currentBuild.durationString}"
             }
         }
         always {
