@@ -114,6 +114,11 @@ pipeline {
                     PRODUCT_NAME = sh(script:"${script}", returnStdout:true)
                     PRODUCT_NAME = PRODUCT_NAME.replaceAll("\n", "")
                     println 'PRODUCT_NAME:' + PRODUCT_NAME
+                    
+                    script = $/eval "cat ${yamlFile} | grep -o 'Profile${AssetKind}: .*$' | sed -e 's/Profile${params.AssetKind}: ''//'"/$
+                    ASSET_PROFILE = sh(script:"${script}", returnStdout:true)
+                    ASSET_PROFILE = ASSET_PROFILE.replaceAll("\n", "")
+                    println '-------- ASSET_PROFILE:' + ASSET_PROFILE
 
                     // キャッシュ削除が必要な場合Libraryフォルダーを削除
                     if (params.CLEAR_CACHE)
