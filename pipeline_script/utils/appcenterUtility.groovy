@@ -9,8 +9,6 @@ def getAppCenterAppName(platform, appKind) {
     if (platform == "ios") {
         def map = [
                     'Dev':'MCombat_I_Dev',
-                    'QA':'MCombat_I_Dev',
-                    'Beta':'MCombat_I_Dev',
                     'Release':'MCombat_I_Release'
                 ]
         if (map.containsKey(appKind)) {
@@ -20,9 +18,7 @@ def getAppCenterAppName(platform, appKind) {
     else if (platform == "android") {
         def map = [
                     'Dev':'MCombat_A',
-                    'QA':'MCombat_A',
-                    'Beta':'MCombat_A',
-                    'Release':'MCombat_A'
+                    'Release':'MCombat_A_Release'
                 ]
         if (map.containsKey(appKind)) {
             return map.get(appKind)
