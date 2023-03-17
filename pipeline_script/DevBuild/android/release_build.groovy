@@ -115,11 +115,6 @@ pipeline {
                     PRODUCT_NAME = PRODUCT_NAME.replaceAll("\n", "")
                     println 'PRODUCT_NAME:' + PRODUCT_NAME
                     
-                    script = $/eval "cat ${yamlFile} | grep -o 'Profile${AssetKind}: .*$' | sed -e 's/Profile${params.AssetKind}: ''//'"/$
-                    ASSET_PROFILE = sh(script:"${script}", returnStdout:true)
-                    ASSET_PROFILE = ASSET_PROFILE.replaceAll("\n", "")
-                    println '-------- ASSET_PROFILE:' + ASSET_PROFILE
-
                     // キャッシュ削除が必要な場合Libraryフォルダーを削除
                     if (params.CLEAR_CACHE)
                     {
@@ -145,7 +140,7 @@ pipeline {
                     commandBuilder.append " -executeMethod $ADDRESSABLE_METHOD"
                     commandBuilder.append " -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt"
                     commandBuilder.append " -buildTarget $BUILD_TARGET"
-                    commandBuilder.append " -assetProfile $ASSET_PROFILE"
+                    commandBuilder.append " -assetProfile release"
 
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
