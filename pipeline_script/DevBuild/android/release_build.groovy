@@ -271,7 +271,7 @@ pipeline {
         stage('Deploy Upload Google Play Console') {
             steps {
                 androidApkUpload filesPattern: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab",
-                    googleCredentialsId: "google store upload",
+                    googleCredentialsId: "Google Play Console Developer",
                     recentChangeList: [
                         [
                             language: 'ja-JP',
