@@ -38,8 +38,6 @@ def getAppCenterToken(platform, appKind) {
     if (platform == "ios") {
         def map = [
                     'Dev':'',
-                    'QA':'',
-                    'Beta':'',
                     'Release':''
                 ]
         if (map.containsKey(appKind)) {
@@ -49,8 +47,6 @@ def getAppCenterToken(platform, appKind) {
     else if (platform == "android") {
         def map = [
                     'Dev':'f15e49718855b8bba0a8d3104c4e6fcf48193865',
-                    'QA':'',
-                    'Beta':'',
                     'Release':''
                 ]
         if (map.containsKey(appKind)) {

@@ -35,8 +35,21 @@ pipeline {
             steps {
                 script {
                     retry(2) {
-                        println '疯了' + params.APPCENTER_API_TOKEN
+                        println 'AppCenterへのアップロード parameters'
                         
+                        println 'apiToken:' + params.APPCENTER_API_TOKEN
+                        println 'ownerName:' + env.APPCENTER_OWNER
+                        println 'appName:' + params.APP_NAME
+                        println 'branchName:' + ''
+                        println 'buildVersion:' + params.VERSION
+                        println 'commitHash:' + ''
+                        println 'distributionGroups:' + "${params.DISTRIBUTION_GROUPS}"
+                        println 'mandatoryUpdate:' + false
+                        println 'pathToApp:' + "${params.OUTPUT_DIR}/${params.APP_FILENAME}"
+                        println 'pathToDebugSymbols:' + ''
+                        println 'pathToReleaseNotes:' + ''
+                        println 'releaseNotes:' + "ビルド${params.upstream_build_number} ${params.upstream_build_user} / RELEASE NOTE: ${params.RELEASENOTE}"
+                                                
                         appCenter apiToken: params.APPCENTER_API_TOKEN,
                             ownerName: env.APPCENTER_OWNER,
                             appName: params.APP_NAME,
