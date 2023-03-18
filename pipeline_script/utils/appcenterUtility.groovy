@@ -17,7 +17,7 @@ def getAppCenterAppName(platform, appKind) {
     }
     else if (platform == "android") {
         def map = [
-                    'Dev':'MCombat_A',
+                    'Dev':'MCombat_A_Dev',
                     'Release':'MCombat_A_Release'
                 ]
         if (map.containsKey(appKind)) {
