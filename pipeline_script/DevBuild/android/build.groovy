@@ -211,6 +211,18 @@ pipeline {
                     wrap([$class: 'BuildUser']) {
                         APP_NAME = appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND)
                         BUILDER = env.BUILD_USER_ID
+                        
+                        println 'appcenterへのアップロード parameters'
+                        println 'APPCENTER_API_TOKEN:'+ params.APPCENTER_API_TOKEN
+                        println 'APP_NAME:'+ APP_NAME
+                        println 'OUTPUT_DIR:'+ OUTPUT_PATH
+                        println 'copyArtifacts_ProjectName:'+ env.JOB_NAME
+                        println 'target_filter_artifact:'+ ''
+                        println 'upstream_build_number:'+ env.BUILD_NUMBER
+                        println 'upstream_build_user:'+ BUILDER
+                        println 'APP_FILENAME:'+ "${PRODUCT_NAME}.apk"
+                        println 'DISTRIBUTION_GROUPS:'+ appcenterUtility.getAppCenterDistributionGroups()
+                        println 'RELEASENOTE:'+ params.RELEASENOTE
                                                 
                         build job: 'Upload_AppCenter',
                         parameters: [
