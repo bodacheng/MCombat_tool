@@ -127,19 +127,15 @@ pipeline {
                     println '-------- IPA_FILENAME:' + IPA_FILENAME
                     
                     def buildKind = params.BUILD_KIND.toString()
-                    
-                    // 2023 12.12
-                    APP_OUTPUT_PATH = "$OUTPUT_PATH/${IPA_FILENAME}.ipa"
-                    T_OUTPUT_PATH = "$OUTPUT_PATH"
-//                     if (buildKind.equals("Release")) {
-//                         APP_OUTPUT_PATH = "$OUTPUT_PATH/${IPA_FILENAME}.ipa"
-//                         T_OUTPUT_PATH = "$OUTPUT_PATH"
-//                     }else{
-//                         // 底下这个真理解不了Apps是怎么回事，选dev开发的话自动生成的Apps这个目录
-//                         // 可可奶的build machine也是针对这点把dev 和 release直接路径区别开了，前者加了Apps，我怀疑跟build的程序类型有关系，XCode擅自加上的
-//                         APP_OUTPUT_PATH = "$OUTPUT_PATH/Apps/${IPA_FILENAME}.ipa"
-//                         T_OUTPUT_PATH = "$OUTPUT_PATH/Apps"
-//                     }
+                    if (buildKind.equals("Release")) {
+                        APP_OUTPUT_PATH = "$OUTPUT_PATH/${IPA_FILENAME}.ipa"
+                        T_OUTPUT_PATH = "$OUTPUT_PATH"
+                    }else{
+                        // 底下这个真理解不了Apps是怎么回事，选dev开发的话自动生成的Apps这个目录
+                        // 可可奶的build machine也是针对这点把dev 和 release直接路径区别开了，前者加了Apps，我怀疑跟build的程序类型有关系，XCode擅自加上的
+                        APP_OUTPUT_PATH = "$OUTPUT_PATH/Apps/${IPA_FILENAME}.ipa"
+                        T_OUTPUT_PATH = "$OUTPUT_PATH/Apps"
+                    }
                     
                     script = $/eval "cat ${yamlFile} | grep -o 'cfBundleExecutableName: .*$' | sed -e 's/cfBundleExecutableName: ''//'"/$
                     IPA_EXECUTABLE_NAME = sh(script:"${script}", returnStdout:true)
