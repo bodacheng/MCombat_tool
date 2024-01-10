@@ -250,17 +250,19 @@ pipeline {
 //             }
                 steps {
                     script {
+                        def buildKind = params.BUILD_KIND.toString();
+                    
                         if (params.INSTALL_POD) {
                             sh """
                             xcodebuild -workspace "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
-                            -configuration Release \
+                            -configuration "$buildKind" \
                             clean archive -archivePath "$OUTPUT_PATH"/Archive \
                             -scheme Unity-iPhone
                             """
                         }else{
                             sh """
                             xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
-                            -configuration Release \
+                            -configuration "$buildKind" \
                             clean archive -archivePath "$OUTPUT_PATH"/Archive \
                             -scheme Unity-iPhone
                             """
