@@ -227,18 +227,18 @@ pipeline {
                 }
             }
         }
-        stage('pod install') {
-            when {
-                expression {
-                   return params.INSTALL_POD
-                }
-            }
-            steps {
-                sh """
-                pod install --project-directory="$OUTPUT_PATH"
-                """
-            }
-        }
+//         stage('pod install') {
+//             when {
+//                 expression {
+//                    return params.INSTALL_POD
+//                 }
+//             }
+//             steps {
+//                 sh """
+//                 pod install --project-directory="$OUTPUT_PATH"
+//                 """
+//             }
+//         }
         stage('Xcode') {
 //             steps {
 //                 sh """
