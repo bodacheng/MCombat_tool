@@ -24,8 +24,7 @@ pipeline {
 
         // git
         GIT_URL='https://github.com/bodacheng/MComat.git'
-        GIT_CREDENTIAL='bodacheng1'
-
+        
         // environment values
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
         UNITY_METHOD='Cocone.ProjectP3.Client.Build'
@@ -101,7 +100,7 @@ pipeline {
                             //[$class: 'CheckoutOption', timeout: 100]
                         ],
                         gitTool: 'Default',
-                        userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
+                        userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
                     ])
                     
                     println 'Checked out to' + BRANCH_NAME
@@ -278,14 +277,14 @@ pipeline {
                         xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
                         -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
                         -exportPath "$OUTPUT_PATH" \
-                        -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
+                        -exportOptionsPlist "$EXPORT_PLIST_DIR"/"${params.machine_name}"/ExportOptions_"${params.BUILD_KIND}".plist
                         """
                     }else{
                         sh """
                         xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
                         -exportArchive -archivePath "$OUTPUT_PATH"/archive.xcarchive \
                         -exportPath "$OUTPUT_PATH" \
-                        -exportOptionsPlist "$EXPORT_PLIST_DIR"/ExportOptions_"${params.BUILD_KIND}".plist
+                        -exportOptionsPlist "$EXPORT_PLIST_DIR"/"${params.machine_name}"/ExportOptions_"${params.BUILD_KIND}".plist
                         """
                     }
                 }
