@@ -21,9 +21,6 @@ pipeline {
         // appcenter
         RELEASE_ID = ''
         APP_NAME = ''
-
-        // git
-        GIT_URL='https://github.com/bodacheng/MComat.git'
         
         // environment values
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
