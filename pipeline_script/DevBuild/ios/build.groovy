@@ -221,7 +221,7 @@ pipeline {
                 script {
                     withCredentials([string(credentialsId: 'PCUSER_PASSWORD', variable: 'PC_PASSWORD')]) {
                         sh """
-                        security unlock-keychain -p ${PC_PASSWORD} /Users/hakutaisei/Library/Keychains/login.keychain
+                        security unlock-keychain -p ${PC_PASSWORD} /Users/${USER}/Library/Keychains/login.keychain
                         """
                     }
                 }
