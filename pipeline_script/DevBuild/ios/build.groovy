@@ -325,7 +325,7 @@ pipeline {
                     APP_NAME = appcenterUtility.getAppCenterAppName("ios", params.BUILD_KIND)
                     BUILDER = env.BUILD_USER_ID
                     // TODO:Upsteram jobは後で変更必要
-                    println 'appcenterへのアップロード'
+                    println 'appcenterへのアップロード token:'+ token
                     build job: 'Upload_AppCenter',
                     parameters: [
                     string(name: 'APPCENTER_API_TOKEN', value: token),
