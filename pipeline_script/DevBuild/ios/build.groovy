@@ -313,32 +313,31 @@ pipeline {
         stage('AppCenterのアップロード') {
             steps {
                 script {
-                    wrap([$class: 'BuildUser']) {
-                        def token
-                        def buildKind = params.BUILD_KIND.toString()
-                        if (buildKind.equals("Release")) {
-                            token = params.APPCENTER_API_TOKEN_RELEASE
-                        }else{
-                            token = params.APPCENTER_API_TOKEN
-                        }
-                    
-                        APP_NAME = appcenterUtility.getAppCenterAppName("ios", params.BUILD_KIND)
-                        BUILDER = env.BUILD_USER_ID
-                        // TODO:Upsteram jobは後で変更必要
-                        println 'appcenterへのアップロード'
-                        build job: 'Upload_AppCenter',
-                        parameters: [
-                        string(name: 'APPCENTER_API_TOKEN', value: token),
-                        string(name: 'APP_NAME', value: APP_NAME),
-                        string(name: 'OUTPUT_DIR', value: T_OUTPUT_PATH),
-                        string(name: 'copyArtifacts_ProjectName', value: 'CustomIOSBuild'),
-                        string(name: 'target_filter_artifact', value: ''),
-                        string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
-                        string(name: 'upstream_build_user', value: BUILDER),
-                        string(name: 'APP_FILENAME', value: "${IPA_FILENAME}.ipa"),
-                        string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
-                        text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
+                
+                    def token
+                    def buildKind = params.BUILD_KIND.toString()
+                    if (buildKind.equals("Release")) {
+                        token = params.APPCENTER_API_TOKEN_RELEASE
+                    }else{
+                        token = params.APPCENTER_API_TOKEN
                     }
+                
+                    APP_NAME = appcenterUtility.getAppCenterAppName("ios", params.BUILD_KIND)
+                    BUILDER = env.BUILD_USER_ID
+                    // TODO:Upsteram jobは後で変更必要
+                    println 'appcenterへのアップロード'
+                    build job: 'Upload_AppCenter',
+                    parameters: [
+                    string(name: 'APPCENTER_API_TOKEN', value: token),
+                    string(name: 'APP_NAME', value: APP_NAME),
+                    string(name: 'OUTPUT_DIR', value: T_OUTPUT_PATH),
+                    string(name: 'copyArtifacts_ProjectName', value: 'CustomIOSBuild'),
+                    string(name: 'target_filter_artifact', value: ''),
+                    string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
+                    string(name: 'upstream_build_user', value: BUILDER),
+                    string(name: 'APP_FILENAME', value: "${IPA_FILENAME}.ipa"),
+                    string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
+                    text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
 
                     //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, token)
                     //println "appcenter ReleaseID:${RELEASE_ID}"
