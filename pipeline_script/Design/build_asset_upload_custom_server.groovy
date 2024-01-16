@@ -4,10 +4,7 @@ pipeline {
     }
 
     environment {
-        // BRANCHとRELEASENOTEはジョブのパラメーターつきビルドで設定される
-        GIT_URL='https://github.com/bodacheng/MComat.git'
-        GIT_CREDENTIAL='bodacheng1'
-
+    
         // environment
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
         UNITY_METHOD='Cocone.ProjectP3.BuildAddressableAssets.BatchBuild'
@@ -43,26 +40,25 @@ pipeline {
                     // load git utility
                     def utilisPath = "pipeline_script/utils"
                     gitUtility = load "${utilisPath}/gitUtility.groovy"
-
-                    def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
-
-                    slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", '', '', '')
-                    slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
+                    
+                    //def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
+                    //slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", '', '', '')
+                    //slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
                 }
             }
         }
         stage('Git') {
             options {
-                timeout(time: 2, unit: 'HOURS')   // timeout on whole pipeline job
+                timeout(time: 1, unit: 'HOURS')   // timeout on whole pipeline job
             }
-
+            
             steps {
                 script{
-                    def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
-                    USERNAME = cause.userName
-                    wrap([$class: 'BuildUser']) {
-                        BUILDER = env.BUILD_USER_ID
-                    }
+//                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
+//                     USERNAME = cause.userName
+//                     wrap([$class: 'BuildUser']) {
+//                         BUILDER = env.BUILD_USER_ID
+//                     }
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
                     
                     dir("ServerData")
@@ -79,7 +75,7 @@ pipeline {
 //                             [$class: 'CheckoutOption', timeout: 60]
                         ],
                         gitTool: 'Default',
-                        userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
+                        userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
                     ])
 
                     // Git情報の取得
