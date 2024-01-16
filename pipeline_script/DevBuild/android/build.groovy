@@ -12,16 +12,14 @@ pipeline {
         slackNotify = ''
         versionInfomationUtility = ''
         buildUtility = ''
-
+        
         // git
-        GIT_URL='https://github.com/bodacheng/MComat.git'
-        GIT_CREDENTIAL='bodacheng1'
         GIT_LOG = ''
         GIT_HASH = ''
-
+        
         // branch name
         BRANCH_NAME = ''
-
+        
         // appcenter
         RELEASE_ID = ''
         APP_NAME = ''
@@ -88,7 +86,7 @@ pipeline {
                             [$class: 'CheckoutOption', timeout: 360]
                         ],
                         gitTool: 'Default',
-                        userRemoteConfigs: [[credentialsId: "${params.CREDENTIAL}", url: "$GIT_URL"]]
+                        userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
                     ])
                     
                     // Git情報の取得
