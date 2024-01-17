@@ -161,6 +161,12 @@ pipeline {
                 withCredentials([
                         string(credentialsId: 'keyalias_password', variable: "KEYALIAS_PASS"),
                         string(credentialsId: 'keystore_password', variable: "KEYSTORE_PASS")
+                        // 这个的大体意思似乎是，keyalias_password也就是说用的你jenkins控制台设置的那个凭据的名字，
+                        // 在这个位置把它又给起了个名字叫KEYALIAS_PASS，然后就带入到底下那个${KEYSTORE_PASS}上去了。
+                        // 你在jenkins控制台设置的keyalias_password和keystore_password，里面的值其实是能跟着
+                        // 那个保留了所有jenkins设置的项目复制过去的，但是每次你在新电脑上建设jenkins的时候，
+                        // 你都似乎需要在unity里把keystore那个地方用密码输入一下，然后编译的时候就没问题了。
+                        // 密码似乎是890710gxy
                     ]) 
                     {
                         println "androidArchitecture:" + params.ANDROID_ARCHS
@@ -206,35 +212,34 @@ pipeline {
         stage('AppCenterのアップロード') {
              steps{
                 script {
-                    wrap([$class: 'BuildUser']) {
-                        APP_NAME = appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND)
-                        BUILDER = env.BUILD_USER_ID
-                        
-                        println 'appcenterへのアップロード parameters'
-                        println 'APPCENTER_API_TOKEN:'+ params.APPCENTER_API_TOKEN
-                        println 'APP_NAME:'+ APP_NAME
-                        println 'OUTPUT_DIR:'+ OUTPUT_PATH
-                        println 'copyArtifacts_ProjectName:'+ env.JOB_NAME
-                        println 'target_filter_artifact:'+ ''
-                        println 'upstream_build_number:'+ env.BUILD_NUMBER
-                        println 'upstream_build_user:'+ BUILDER
-                        println 'APP_FILENAME:'+ "${PRODUCT_NAME}.apk"
-                        println 'DISTRIBUTION_GROUPS:'+ appcenterUtility.getAppCenterDistributionGroups()
-                        println 'RELEASENOTE:'+ params.RELEASENOTE
-                                                
-                        build job: 'Upload_AppCenter',
-                        parameters: [
-                        string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
-                        string(name: 'APP_NAME', value: APP_NAME),
-                        string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
-                        string(name: 'copyArtifacts_ProjectName', value:env.JOB_NAME),
-                        string(name: 'target_filter_artifact', value: ''),
-                        string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
-                        string(name: 'upstream_build_user', value: BUILDER),
-                        string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
-                        string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
-                        text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
-                    }
+                    APP_NAME = appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND)
+                    BUILDER = env.BUILD_USER_ID
+                    
+                    println 'appcenterへのアップロード parameters'
+                    println 'APPCENTER_API_TOKEN:'+ params.APPCENTER_API_TOKEN
+                    println 'APP_NAME:'+ APP_NAME
+                    println 'OUTPUT_DIR:'+ OUTPUT_PATH
+                    println 'copyArtifacts_ProjectName:'+ env.JOB_NAME
+                    println 'target_filter_artifact:'+ ''
+                    println 'upstream_build_number:'+ env.BUILD_NUMBER
+                    println 'upstream_build_user:'+ BUILDER
+                    println 'APP_FILENAME:'+ "${PRODUCT_NAME}.apk"
+                    println 'DISTRIBUTION_GROUPS:'+ appcenterUtility.getAppCenterDistributionGroups()
+                    println 'RELEASENOTE:'+ params.RELEASENOTE
+                    
+                    build job: 'Upload_AppCenter',
+                    parameters: [
+                    string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
+                    string(name: 'APP_NAME', value: APP_NAME),
+                    string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
+                    string(name: 'copyArtifacts_ProjectName', value:env.JOB_NAME),
+                    string(name: 'target_filter_artifact', value: ''),
+                    string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
+                    string(name: 'upstream_build_user', value: BUILDER),
+                    string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
+                    string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
+                    text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
+                    
                     //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
                 }
             }
