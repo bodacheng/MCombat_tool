@@ -18,8 +18,6 @@ pipeline {
         BRANCH_NAME = ''
 
         // git
-        GIT_URL='https://github.com/bodacheng/MComat.git'
-        GIT_CREDENTIAL='bodacheng1'
         GIT_HASH = ''
 
         // environment values
@@ -80,27 +78,19 @@ pipeline {
                 script{
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
                     USERNAME = cause.userName
-
-                        wrap([$class: 'BuildUser']) {
-                                                    
-                            BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
-
-                            checkout([$class: 'GitSCM',
-                                branches: [[name: "$BRANCH_NAME"]],
-                                extensions: [
-                                    [$class: 'GitLFSPull'],
-                                    [$class: 'CloneOption', timeout: 180],
-                                    [$class: 'CheckoutOption', timeout: 180]
-                                ],
-                                gitTool: 'Default',
-                                userRemoteConfigs: [[credentialsId: "$GIT_CREDENTIAL", url: "$GIT_URL"]]
-                            ])
-
-                            // Git情報の取得
-                            GIT_LOG = gitUtility.getGitCommitLatestLog()
-                            GIT_HASH = gitUtility.getGitRevision()
-                        }
-
+                    BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
+                    checkout([$class: 'GitSCM',
+                        branches: [[name: "$BRANCH_NAME"]],
+                        extensions: [
+                        ],
+                        gitTool: 'Default',
+                        userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
+                    ])
+                    
+                    // Git情報の取得
+                    GIT_LOG = gitUtility.getGitCommitLatestLog()
+                    GIT_HASH = gitUtility.getGitRevision()
+                    
                     // 現在のジョブについての説明
                     currentBuild.description = "ブランチ：${BRANCH_NAME}\nGITLOG：${GIT_LOG}"
                 }
