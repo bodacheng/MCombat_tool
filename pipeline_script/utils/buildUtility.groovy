@@ -20,19 +20,13 @@ def getAssetKind(buildKind) {
 
 def deleteDirectory(dirPath) {
     println("尝试删除以下：" + dirPath)
-    def directory = new File(dirPath)
-
-    if (!directory.exists()) {
-        println("Directory does not exist: $dirPath")
-        return
-    }
-
-    try {
-        directory.deleteDir()
-        println("Deleted directory: $dirPath")
-    } catch (Exception e) {
-        println("Error deleting directory: $dirPath")
-        e.printStackTrace()
+    if (fileExists(dirPath)) {
+        // echo "File ${path} already exists. Deleting"
+        println("删除中：" + dirPath)
+        new File(dirPath).delete()
+    } else {
+        println("null：" + dirPath)
+        // echo "File ${path} does not exist."
     }
 }
 
