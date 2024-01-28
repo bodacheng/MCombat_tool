@@ -18,4 +18,21 @@ def getAssetKind(buildKind) {
     return buildKind
 }
 
+def deleteDirectory(dirPath) {
+    File directory = new File(dirPath)
+
+    if (!directory.exists()) {
+        println("Directory does not exist: $dirPath")
+        return
+    }
+
+    try {
+        directory.deleteDir()
+        println("Deleted directory: $dirPath")
+    } catch (Exception e) {
+        println("Error deleting directory: $dirPath")
+        e.printStackTrace()
+    }
+}
+
 return this

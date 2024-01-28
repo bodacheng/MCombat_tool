@@ -169,6 +169,8 @@ pipeline {
                         // 密码似乎是890710gxy
                     ]) 
                     {
+                        buildUtility.deleteDirectory(WORKSPACE+ "Library/Bee/Android");
+                    
                         println "androidArchitecture:" + params.ANDROID_ARCHS
                         println "WORKSPACE:" + WORKSPACE
     
