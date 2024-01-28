@@ -172,7 +172,7 @@ pipeline {
                         println "androidArchitecture:" + params.ANDROID_ARCHS
                         println "WORKSPACE:" + WORKSPACE
                         
-                        buildUtility.deleteDirectory(WORKSPACE+ "Library/Bee/Android");
+                        buildUtility.deleteDirectory(WORKSPACE+ "/Library/Bee/Android");
     
                         StringBuilder commandBuilder = new StringBuilder()
                         commandBuilder.append "$UNITY_PATH"
