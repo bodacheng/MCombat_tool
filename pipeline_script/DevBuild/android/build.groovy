@@ -169,10 +169,10 @@ pipeline {
                         // 密码似乎是890710gxy
                     ]) 
                     {
-                        buildUtility.deleteDirectory(WORKSPACE+ "Library/Bee/Android");
-                    
                         println "androidArchitecture:" + params.ANDROID_ARCHS
                         println "WORKSPACE:" + WORKSPACE
+                        
+                        buildUtility.deleteDirectory(WORKSPACE+ "Library/Bee/Android");
     
                         StringBuilder commandBuilder = new StringBuilder()
                         commandBuilder.append "$UNITY_PATH"

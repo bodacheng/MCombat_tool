@@ -21,6 +21,8 @@ def getAssetKind(buildKind) {
 def deleteDirectory(dirPath) {
     File directory = new File(dirPath)
 
+    println("尝试删除以下：" + dirPath)
+
     if (!directory.exists()) {
         println("Directory does not exist: $dirPath")
         return
