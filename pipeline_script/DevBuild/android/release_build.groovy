@@ -24,8 +24,6 @@ pipeline {
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
         ANDROID_PALYAER_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/PlaybackEngines/AndroidPlayer"
         ANDROID_SDK_PATH="${ANDROID_PALYAER_PATH}/SDK"
-        AAPT2_PATH="${ANDROID_SDK_PATH}/build-tools/30.0.2"
-        PATH = "${AAPT2_PATH}/:$PATH"
         BUILD_CONFIG_DIR='Assets/App/Editor/Build/Configs'
 
         // build configuration
@@ -148,6 +146,10 @@ pipeline {
                         string(credentialsId: 'keystore_password', variable: "KEYSTORE_PASS")
                     ])
                     {
+                        dir(WORKSPACE+ "/Library/Bee/Android") {
+                            deleteDir()
+                        }
+                        
                         StringBuilder commandBuilder = new StringBuilder()
                         commandBuilder.append "$UNITY_PATH"
                         commandBuilder.append " -projectPath $WORKSPACE"
@@ -165,7 +167,9 @@ pipeline {
                         sh(script:commandBuilder.toString(), returnStdout:false)
                     }
                 }
-                archiveArtifacts artifacts: OUTPUT_PATH + "/" + PRODUCT_NAME + ".apk,", fingerprint: true, followSymlinks: false
+                archiveArtifacts artifacts: OUTPUT_PATH + "/" + PRODUCT_NAME + ".apk,", 
+                fingerprint: true, 
+                followSymlinks: false
             }
         }
         stage('バージョン情報の取得') {
