@@ -192,6 +192,10 @@ pipeline {
                         ]) {
                             // architectureの文字列指定の仕方がよくないので引数割愛。指定しなくても上書きはしないので良いが、キレイに治したいところ
 
+                        dir(WORKSPACE+ "/Library/Bee/Android") {
+                            deleteDir()
+                        }
+                        
                         StringBuilder commandBuilder = new StringBuilder()
                         commandBuilder.append "$UNITY_PATH"
                         commandBuilder.append " -projectPath $WORKSPACE"
@@ -211,7 +215,9 @@ pipeline {
                     }
                 }
 
-                archiveArtifacts artifacts: OUTPUT_PATH + "/" + PRODUCT_NAME + ".aab,", fingerprint: false, followSymlinks: false
+                archiveArtifacts artifacts: OUTPUT_PATH + "/" + PRODUCT_NAME + ".aab,", 
+                fingerprint: true, 
+                followSymlinks: false
             }
         }
         // upload AppCenter for apk
