@@ -259,11 +259,20 @@ pipeline {
         stage('AppCenterのアップロード') {
              steps{
                 script {
+                
+                    def token
+                    def buildKind = params.BUILD_KIND.toString()
+                    if (buildKind.equals("Release")) {
+                        token = params.APPCENTER_API_TOKEN_RELEASE
+                    }else{
+                        token = params.APPCENTER_API_TOKEN
+                    }
+                
                     APP_NAME = appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND)
                     BUILDER = env.BUILD_USER_ID
                     
                     println 'appcenterへのアップロード parameters'
-                    println 'APPCENTER_API_TOKEN:'+ params.APPCENTER_API_TOKEN
+                    println 'APPCENTER_API_TOKEN:'+ token
                     println 'APP_NAME:'+ APP_NAME
                     println 'OUTPUT_DIR:'+ OUTPUT_PATH
                     println 'copyArtifacts_ProjectName:'+ env.JOB_NAME
@@ -276,7 +285,7 @@ pipeline {
                     
                     build job: 'Upload_AppCenter',
                     parameters: [
-                    string(name: 'APPCENTER_API_TOKEN', value: params.APPCENTER_API_TOKEN),
+                    string(name: 'APPCENTER_API_TOKEN', value: token),
                     string(name: 'APP_NAME', value: APP_NAME),
                     string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
                     string(name: 'copyArtifacts_ProjectName', value:env.JOB_NAME),
