@@ -21,8 +21,6 @@ pipeline {
 
         // environment values
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
-        ANDROID_PALYAER_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/PlaybackEngines/AndroidPlayer"
-        ANDROID_SDK_PATH="${ANDROID_PALYAER_PATH}/SDK"
         BUILD_CONFIG_DIR='Assets/App/Editor/Build/Configs'
 
         // build configuration

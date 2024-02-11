@@ -1,7 +1,6 @@
 pipeline {
-    agent {
-        label "master"
-    }
+
+    agent any
 
     // param.ANDROID_ARCHSは、"ARMv7;ARM64"のように、複数の場合は;を入れて指定する
     environment {
@@ -145,7 +144,7 @@ pipeline {
                     commandBuilder.append " -logFile ${WORKSPACE}/Logs/assetbuild_${BUILD_ID}_log.txt"
                     commandBuilder.append " -buildTarget $BUILD_TARGET"
                     commandBuilder.append " -assetProfile $ASSET_PROFILE"
-
+                    
                     sh(script:commandBuilder.toString(), returnStdout:false)
                 }
             }
@@ -213,6 +212,50 @@ pipeline {
                 followSymlinks: false
             }
         }
+        
+        stage('Unity export aab') {
+            when {
+                expression {
+                   return params.BUILD_KIND == "Release"
+                }
+            }
+            
+            steps {
+                script {
+                    withCredentials([
+                        string(credentialsId: 'keyalias_password', variable: "KEYALIAS_PASS"),
+                        string(credentialsId: 'keystore_password', variable: "KEYSTORE_PASS")
+                        ]) {
+                            // architectureの文字列指定の仕方がよくないので引数割愛。指定しなくても上書きはしないので良いが、キレイに治したいところ
+
+                        dir(WORKSPACE+ "/Library/Bee/Android") {
+                            deleteDir()
+                        }
+                        
+                        StringBuilder commandBuilder = new StringBuilder()
+                        commandBuilder.append "$UNITY_PATH"
+                        commandBuilder.append " -projectPath $WORKSPACE"
+                        commandBuilder.append " -quit -batchmode"
+                        commandBuilder.append " -executeMethod $UNITY_METHOD"
+                        commandBuilder.append " -logFile ${WORKSPACE}/Logs/build_${BUILD_ID}_aab_log.txt"
+                        commandBuilder.append " -buildTarget $BUILD_TARGET"
+                        commandBuilder.append " -BuildNumber $BUILD_ID"
+                        commandBuilder.append " -OutputPath $OUTPUT_PATH"
+                        commandBuilder.append " -buildKind $BUILD_KIND"
+                        commandBuilder.append " -androidArchitectures 'ARMv7;ARM64'"
+                        commandBuilder.append " -useAndroidAppBundle -uploadToStore"
+                        commandBuilder.append " -keystorePass ${KEYSTORE_PASS}"
+                        commandBuilder.append " -keyaliasPass ${KEYALIAS_PASS}"
+                        
+                        sh(script:commandBuilder.toString(), returnStdout:false)
+                    }
+                }
+                archiveArtifacts artifacts: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab,",
+                fingerprint: true, 
+                followSymlinks: false
+            }
+        }
+        
         stage('AppCenterのアップロード') {
              steps{
                 script {
@@ -246,6 +289,28 @@ pipeline {
                     
                     //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
                 }
+            }
+        }
+        
+        stage('Deploy Upload Google Play Console') {
+            when {
+                expression {
+                   return params.BUILD_KIND == "Release"
+                }
+            }
+            
+            steps {
+                androidApkUpload filesPattern: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab",
+                    googleCredentialsId: "MugenCombat",
+                    recentChangeList: [
+                        [
+                            language: 'ja-JP',
+                            text: "ビルド${BUILD_ID} ${USERNAME} / RELEASE NOTE: ${RELEASENOTE}"
+                        ]
+                    ],
+                    releaseName: "$VERSION",
+                    rolloutPercentage: '0',
+                    trackName: 'internal'
             }
         }
     }
