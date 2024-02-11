@@ -8,7 +8,6 @@ pipeline {
         appcenterUtility = ''
         slackUtility = ''
         slackNotify = ''
-        NOTIFY_EMOJI = ':apple3:'
 
         // appcenter
         RELEASE_ID = ''
@@ -60,14 +59,6 @@ pipeline {
                     // load git utility
                     gitUtility = load "pipeline_script/utils/gitUtility.groovy"
                     appcenterUtility = load "pipeline_script/utils/appcenterUtility.groovy"
-
-                    def slackNotifyClass = load "pipeline_script/utils/notify/SlackNotify.groovy"
-                    slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", BUILD_KIND, BUILD_TARGET, "")
-                    slackUtility = load "pipeline_script/utils/notify/slackUtility.groovy"
-                    
-                    wrap([$class: 'BuildUser']) {
-                        BUILDER = env.BUILD_USER_ID
-                    }
                 }
             }
         }
