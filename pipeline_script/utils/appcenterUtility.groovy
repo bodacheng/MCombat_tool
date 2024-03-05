@@ -24,7 +24,29 @@ def getAppCenterAppName(platform, appKind) {
             return map.get(appKind)
         }
     }
+    return ""
+}
 
+def getAppCenterAppNameV(platform, appKind) {
+    // Dictionaryみたいなのがあればそれがいいかも
+    if (platform == "ios") {
+        def map = [
+                    'Dev':'PocketStriker_I_Dev',
+                    'Release':'PocketStriker_I_Release'
+                ]
+        if (map.containsKey(appKind)) {
+            return map.get(appKind)
+        }
+    }
+    else if (platform == "android") {
+        def map = [
+                    'Dev':'PocketStriker_A_Dev',
+                    'Release':'PocketStriker_A_Release'
+                ]
+        if (map.containsKey(appKind)) {
+            return map.get(appKind)
+        }
+    }
     return ""
 }
 

@@ -322,7 +322,7 @@ pipeline {
                         token = params.APPCENTER_API_TOKEN
                     }
                 
-                    APP_NAME = appcenterUtility.getAppCenterAppName("ios", params.BUILD_KIND)
+                    APP_NAME = params.project_code.equals("m") ? appcenterUtility.getAppCenterAppName("ios", params.BUILD_KIND) : appcenterUtility.getAppCenterAppNameV("ios", params.BUILD_KIND)
                     BUILDER = env.BUILD_USER_ID
                     // TODO:Upsteram jobは後で変更必要
                     println 'appcenterへのアップロード token:'+ token
@@ -331,7 +331,7 @@ pipeline {
                     string(name: 'APPCENTER_API_TOKEN', value: token),
                     string(name: 'APP_NAME', value: APP_NAME),
                     string(name: 'OUTPUT_DIR', value: T_OUTPUT_PATH),
-                    string(name: 'copyArtifacts_ProjectName', value: 'CustomIOSBuild'),
+                    string(name: 'copyArtifacts_ProjectName', value: params.project_code.equals("m") ? 'CustomIOSBuild': 'CustomIOSBuild_V'),
                     string(name: 'target_filter_artifact', value: ''),
                     string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
                     string(name: 'upstream_build_user', value: BUILDER),
