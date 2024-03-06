@@ -267,8 +267,8 @@ pipeline {
                     }else{
                         token = params.APPCENTER_API_TOKEN
                     }
-                
-                    APP_NAME = appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND)
+                    
+                    APP_NAME = params.project_code.equals("m") ? appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND) : appcenterUtility.getAppCenterAppNameV("android", params.BUILD_KIND)
                     BUILDER = env.BUILD_USER_ID
                     
                     println 'appcenterへのアップロード parameters'
