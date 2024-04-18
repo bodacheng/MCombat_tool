@@ -72,6 +72,10 @@ pipeline {
             }
         }
         stage('Git') {
+            options {
+                // Mac Studio(M1 Max)はこのタイムアウト設定でいく想定
+                timeout(time: 180, unit: 'MINUTES')
+            }
             steps {
                 script {
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
