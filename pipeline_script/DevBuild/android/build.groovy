@@ -140,6 +140,11 @@ pipeline {
             }
             steps {
                 script {
+                
+                    dir(WORKSPACE+ "/Library/Bee/Android") {
+                        deleteDir()
+                    }
+                
                     StringBuilder commandBuilder = new StringBuilder()
                     commandBuilder.append "$UNITY_PATH"
                     commandBuilder.append " -projectPath $WORKSPACE"
