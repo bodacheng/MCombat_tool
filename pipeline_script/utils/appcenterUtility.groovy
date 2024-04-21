@@ -84,7 +84,7 @@ def getAppCenterToken(platform, appKind) {
  * @return         [description]
  */
 def getAppCenterDistributionGroups() {
-    return "Collaborator"
+    return "Collaborators"
 }
 
 /**
