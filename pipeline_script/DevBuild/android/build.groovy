@@ -319,7 +319,7 @@ pipeline {
             
             steps {
                 androidApkUpload filesPattern: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab",
-                    googleCredentialsId: "MugenCombat",
+                    googleCredentialsId: "${params.GoogleCredentialsId}",
                     recentChangeList: [
                         [
                             language: 'ja-JP',
