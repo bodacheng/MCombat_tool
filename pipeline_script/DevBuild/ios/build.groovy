@@ -96,7 +96,7 @@ pipeline {
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
                         extensions: [
-                            [$class: 'GitLFSPull'],
+                            //[$class: 'GitLFSPull'],
                             [$class: 'CloneOption', timeout: 9999999],
                             [$class: 'CheckoutOption', timeout: 9999999]
                         ],
