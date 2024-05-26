@@ -49,7 +49,7 @@ pipeline {
         }
         stage('Git') {
             options {
-                timeout(time: 3600, unit: 'HOURS')   // timeout on whole pipeline job
+                timeout(time: 180, unit: 'MINUTES')
             }
             
             steps {
@@ -71,8 +71,8 @@ pipeline {
                         branches: [[name: "$BRANCH_NAME"]],
                         extensions: [
                             //[$class: 'GitLFSPull'],
-                            //[$class: 'CloneOption', timeout: 999999999],
-                            //[$class: 'CheckoutOption', timeout: 999999999]
+                            [$class: 'CloneOption', timeout: 999999999],
+                            [$class: 'CheckoutOption', timeout: 999999999]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
