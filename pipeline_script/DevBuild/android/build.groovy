@@ -251,7 +251,7 @@ pipeline {
                         commandBuilder.append " -BuildNumber $BUILD_ID"
                         commandBuilder.append " -OutputPath $OUTPUT_PATH"
                         commandBuilder.append " -buildKind $BUILD_KIND"
-                        commandBuilder.append " -androidArchitectures 'ARMv7;ARM64'"
+                        //commandBuilder.append " -androidArchitectures 'ARMv7;ARM64'"
                         commandBuilder.append " -useAndroidAppBundle -uploadToStore"
                         commandBuilder.append " -keystorePass ${KEYSTORE_PASS}"
                         commandBuilder.append " -keyaliasPass ${KEYALIAS_PASS}"
