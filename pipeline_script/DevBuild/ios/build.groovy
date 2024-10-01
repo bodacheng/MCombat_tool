@@ -90,6 +90,7 @@ pipeline {
                 script {
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
                     USERNAME = cause.userName
+                    println 'USERNAME' + USERNAME
 
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
                     
