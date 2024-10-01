@@ -20,7 +20,16 @@ pipeline {
         CACHE_ASSET='--cache-control "max-age=86400"'
         FILTER_CATALOG='--exclude "*" --include "catalog_*"'
         FILTER_ASSET='--exclude "catalog_*"'
-        SERVER_PROFILE_NAME=''
+        SERVER_PROFILE_NAME=''// AWS CLI 配置文件,这个东西你每次再一个新的电脑或用户下搭建jenkins的时候都应该是要重新创建，
+        // 这个创建过程还有点麻烦，在AWS 管理控制台创建新访问密钥系统会为你生成 Access Key ID 和 Secret Access Key。
+        // 请务必妥善保存这些密钥，Secret Access Key 只能查看一次。
+        // 使用 AWS CLI 配置命令 aws configure --profile mcombatDev (mcombatDev就是下面咱们用的那个值，这个随便起名)
+        // 系统会提示你输入以下信息：
+        //  AWS Access Key ID: 输入你从 AWS 控制台获取的访问密钥。
+        //  AWS Secret Access Key: 输入相应的秘密密钥。
+        //  Default region name: 输入默认的区域（如 us-east-1 或 ap-northeast-1，取决于你在 AWS 上的资源位置）。
+        //  Default output format: 通常使用 json，也可以是 text 或 table，根据你的偏好。
+        // 这将自动生成 ~/.aws/credentials 和 ~/.aws/config 文件。
 
         BUILDER = ''
     }
