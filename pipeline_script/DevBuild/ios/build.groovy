@@ -92,6 +92,8 @@ pipeline {
                     USERNAME = cause.userName
 
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
+                    
+                    println 'Checked out to' + BRANCH_NAME
 
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
@@ -104,7 +106,7 @@ pipeline {
                         userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
                     ])
                     
-                    println 'Checked out to' + BRANCH_NAME
+                    println 'Git Stage success'
                     
                     // Git情報の取得
                     //GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
