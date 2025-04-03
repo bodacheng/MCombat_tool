@@ -99,6 +99,11 @@ pipeline {
                     
                     println 'Checked out to' + BRANCH_NAME
 
+                    ws("${params.CUSTOM_WORKSPACE}") {
+                        // 在此处执行需要在自定义工作空间中运行的步骤
+                        // 例如，代码拉取、编译等
+                    }
+
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
                         extensions: [
