@@ -98,28 +98,23 @@ pipeline {
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
                     
                     println 'Checked out to' + BRANCH_NAME
-
-                    ws("${params.CUSTOM_WORKSPACE}") {
-                        // 在此处执行需要在自定义工作空间中运行的步骤
-                        // 例如，代码拉取、编译等
-                        
-                        checkout([$class: 'GitSCM',
-                            branches: [[name: BRANCH_NAME]],
-                            extensions: [
-                                //[$class: 'GitLFSPull'],
-                                [$class: 'CloneOption', timeout: 9999999],
-                                [$class: 'CheckoutOption', timeout: 9999999]
-                            ],
-                            gitTool: 'Default',
-                            userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
-                        ])
-                        
-                        println 'Git Stage success'
-                        
-                        // Git情報の取得
-                        //GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
-                        //GIT_HASH = gitUtility.getGitRevision()
-                    }
+                    
+                    checkout([$class: 'GitSCM',
+                        branches: [[name: BRANCH_NAME]],
+                        extensions: [
+                            //[$class: 'GitLFSPull'],
+                            [$class: 'CloneOption', timeout: 9999999],
+                            [$class: 'CheckoutOption', timeout: 9999999]
+                        ],
+                        gitTool: 'Default',
+                        userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
+                    ])
+                    
+                    println 'Git Stage success'
+                    
+                    // Git情報の取得
+                    //GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
+                    //GIT_HASH = gitUtility.getGitRevision()
                 }
             }
         }
