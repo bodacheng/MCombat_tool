@@ -6,6 +6,8 @@ pipeline {
         }
     }
 
+    options { lock(resource: "${params.CUSTOM_WORKSPACE}") }
+
     environment {
         // groovy Files
         gitUtility = ''
