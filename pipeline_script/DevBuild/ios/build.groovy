@@ -5,9 +5,7 @@ pipeline {
             customWorkspace "${params.CUSTOM_WORKSPACE}"
         }
     }
-
-    options { lock(resource: "${params.CUSTOM_WORKSPACE}") }
-
+    
     environment {
         // groovy Files
         gitUtility = ''
@@ -50,7 +48,11 @@ pipeline {
         ASSET_BUILDPATH=''
         SERVER_PROFILE_NAME=''
     }
-
+    
+    options {
+        lock(resource: 'CustomIOSBuildWorkspace')
+    }
+    
     stages {
         stage ('ワークスペースのクリーン') {
             steps {
