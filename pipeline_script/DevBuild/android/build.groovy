@@ -265,50 +265,50 @@ pipeline {
             }
         }
         
-        stage('AppCenterのアップロード') {
-             steps{
-                script {
-                
-                    def token
-                    def buildKind = params.BUILD_KIND.toString()
-                    if (buildKind.equals("Release")) {
-                        token = params.APPCENTER_API_TOKEN_RELEASE
-                    }else{
-                        token = params.APPCENTER_API_TOKEN
-                    }
-                    
-                    APP_NAME = params.project_code.equals("m") ? appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND) : appcenterUtility.getAppCenterAppNameV("android", params.BUILD_KIND)
-                    BUILDER = env.BUILD_USER_ID
-                    
-                    println 'appcenterへのアップロード parameters'
-                    println 'APPCENTER_API_TOKEN:'+ token
-                    println 'APP_NAME:'+ APP_NAME
-                    println 'OUTPUT_DIR:'+ OUTPUT_PATH
-                    println 'copyArtifacts_ProjectName:'+ env.JOB_NAME
-                    println 'target_filter_artifact:'+ ''
-                    println 'upstream_build_number:'+ env.BUILD_NUMBER
-                    println 'upstream_build_user:'+ BUILDER
-                    println 'APP_FILENAME:'+ "${PRODUCT_NAME}.apk"
-                    println 'DISTRIBUTION_GROUPS:'+ appcenterUtility.getAppCenterDistributionGroups()
-                    println 'RELEASENOTE:'+ params.RELEASENOTE
-                    
-                    build job: 'Upload_AppCenter',
-                    parameters: [
-                    string(name: 'APPCENTER_API_TOKEN', value: token),
-                    string(name: 'APP_NAME', value: APP_NAME),
-                    string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
-                    string(name: 'copyArtifacts_ProjectName', value:env.JOB_NAME),
-                    string(name: 'target_filter_artifact', value: ''),
-                    string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
-                    string(name: 'upstream_build_user', value: BUILDER),
-                    string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
-                    string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
-                    text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
-                    
-                    //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
-                }
-            }
-        }
+//         stage('AppCenterのアップロード') {
+//              steps{
+//                 script {
+//                 
+//                     def token
+//                     def buildKind = params.BUILD_KIND.toString()
+//                     if (buildKind.equals("Release")) {
+//                         token = params.APPCENTER_API_TOKEN_RELEASE
+//                     }else{
+//                         token = params.APPCENTER_API_TOKEN
+//                     }
+//                     
+//                     APP_NAME = params.project_code.equals("m") ? appcenterUtility.getAppCenterAppName("android", params.BUILD_KIND) : appcenterUtility.getAppCenterAppNameV("android", params.BUILD_KIND)
+//                     BUILDER = env.BUILD_USER_ID
+//                     
+//                     println 'appcenterへのアップロード parameters'
+//                     println 'APPCENTER_API_TOKEN:'+ token
+//                     println 'APP_NAME:'+ APP_NAME
+//                     println 'OUTPUT_DIR:'+ OUTPUT_PATH
+//                     println 'copyArtifacts_ProjectName:'+ env.JOB_NAME
+//                     println 'target_filter_artifact:'+ ''
+//                     println 'upstream_build_number:'+ env.BUILD_NUMBER
+//                     println 'upstream_build_user:'+ BUILDER
+//                     println 'APP_FILENAME:'+ "${PRODUCT_NAME}.apk"
+//                     println 'DISTRIBUTION_GROUPS:'+ appcenterUtility.getAppCenterDistributionGroups()
+//                     println 'RELEASENOTE:'+ params.RELEASENOTE
+//                     
+//                     build job: 'Upload_AppCenter',
+//                     parameters: [
+//                     string(name: 'APPCENTER_API_TOKEN', value: token),
+//                     string(name: 'APP_NAME', value: APP_NAME),
+//                     string(name: 'OUTPUT_DIR', value: OUTPUT_PATH),
+//                     string(name: 'copyArtifacts_ProjectName', value:env.JOB_NAME),
+//                     string(name: 'target_filter_artifact', value: ''),
+//                     string(name: 'upstream_build_number', value: env.BUILD_NUMBER),
+//                     string(name: 'upstream_build_user', value: BUILDER),
+//                     string(name: 'APP_FILENAME', value: "${PRODUCT_NAME}.apk"),
+//                     string(name: 'DISTRIBUTION_GROUPS', value: appcenterUtility.getAppCenterDistributionGroups()),
+//                     text(name: 'RELEASENOTE', value: params.RELEASENOTE)]
+//                     
+//                     //RELEASE_ID = appcenterUtility.getReleaseId(env.APPCENTER_OWNER, APP_NAME, params.APPCENTER_API_TOKEN)
+//                 }
+//             }
+//         }
         
         stage('Deploy Upload Google Play Console') {
             when {
