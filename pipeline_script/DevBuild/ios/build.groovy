@@ -267,8 +267,7 @@ pipeline {
                             xcodebuild -workspace "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
                             -configuration "$buildKind" \
                             clean archive -archivePath "$OUTPUT_PATH"/Archive \
-                            -scheme Unity-iPhone \
-                            clean archive | xcpretty
+                            -scheme Unity-iPhone
                             """
                         }else{
                             sh """
