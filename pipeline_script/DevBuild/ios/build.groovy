@@ -266,6 +266,7 @@ pipeline {
                             sh """
                             xcodebuild -workspace "$OUTPUT_PATH"/Unity-iPhone.xcworkspace \
                             -configuration "$buildKind" \
+                            -destination 'generic/platform=iOS' \
                             clean archive -archivePath "$OUTPUT_PATH"/Archive \
                             -scheme Unity-iPhone
                             """
@@ -273,6 +274,7 @@ pipeline {
                             sh """
                             xcodebuild -project "$OUTPUT_PATH"/Unity-iPhone.xcodeproj \
                             -configuration "$buildKind" \
+                            -destination 'generic/platform=iOS' \
                             clean archive -archivePath "$OUTPUT_PATH"/Archive \
                             -scheme Unity-iPhone
                             """
