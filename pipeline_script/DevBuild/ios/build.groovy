@@ -239,9 +239,24 @@ pipeline {
                 }
             }
             steps {
-                sh """
-                pod install --project-directory="$OUTPUT_PATH"
-                """
+                sh '''
+                POD_BIN="$(command -v pod || true)"
+                if [ -z "$POD_BIN" ]; then
+                    for candidate in "$HOME"/.gem/ruby/*/bin/pod /opt/homebrew/bin/pod /usr/local/bin/pod; do
+                        if [ -x "$candidate" ]; then
+                            POD_BIN="$candidate"
+                            break
+                        fi
+                    done
+                fi
+
+                if [ -z "$POD_BIN" ]; then
+                    echo "pod command not found. Checked PATH, ~/.gem/ruby/*/bin/pod, /opt/homebrew/bin/pod, and /usr/local/bin/pod." >&2
+                    exit 127
+                fi
+
+                "$POD_BIN" install --project-directory="$OUTPUT_PATH"
+                '''
             }
         }
         stage('Xcode') {
