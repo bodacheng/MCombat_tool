@@ -31,8 +31,8 @@ pipeline {
                     def platform = "iOS"
                     def releaseNote = "test notify slack @matsumoto_rika"
 
-                    def slackNotifyClass = load "pipeline_script/utils/notify/SlackNotify.groovy"
-                    slackNotify = slackNotifyClass.newInstance(channels, credentialsId, buildKind, platform, releaseNote)
+                    def slackNotifyFactory = load "pipeline_script/utils/notify/SlackNotify.groovy"
+                    slackNotify = slackNotifyFactory.create(channels, credentialsId, buildKind, platform, releaseNote)
 
                     slackUtility = load "pipeline_script/utils/notify/slackUtility.groovy"
                 }

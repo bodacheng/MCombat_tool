@@ -74,8 +74,8 @@ pipeline {
                     gitUtility = load "${utilisPath}/gitUtility.groovy"
                     appcenterUtility = load "${utilisPath}/appcenterUtility.groovy"
                     
-                    def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
-                    slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", params.BUILD_KIND, BUILD_TARGET, "")
+                    def slackNotifyFactory = load "${utilisPath}/notify/SlackNotify.groovy"
+                    slackNotify = slackNotifyFactory.create(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", params.BUILD_KIND, BUILD_TARGET, "")
                     slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
                     versionInfomationUtility = load "${utilisPath}/getVersionInfomationUtility.groovy"
                     

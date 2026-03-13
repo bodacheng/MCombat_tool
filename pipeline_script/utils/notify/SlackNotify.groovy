@@ -1,7 +1,7 @@
 /**
  * スラック通知ようのクラス
  */
-class SlackNotify {
+class SlackNotify implements Serializable {
     def channels
     def credentialsId
     def botUserName = "P3 Jenkins ジョブ通知"
@@ -21,7 +21,7 @@ class SlackNotify {
     def branch
     def hash
 
-    def SlackNotify(channels, credentialsId, buildKind, platform, releaseNote) {
+    SlackNotify(channels, credentialsId, buildKind, platform, releaseNote) {
         this.channels = channels
         this.credentialsId = credentialsId
         this.buildKind = buildKind
@@ -83,4 +83,8 @@ class SlackNotify {
     }
 }
 
-return SlackNotify.class
+def create(channels, credentialsId, buildKind, platform, releaseNote) {
+    new SlackNotify(channels, credentialsId, buildKind, platform, releaseNote)
+}
+
+return this

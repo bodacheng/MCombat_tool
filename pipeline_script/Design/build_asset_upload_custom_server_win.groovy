@@ -44,9 +44,9 @@ pipeline {
                     def utilisPath = "pipeline_script/utils"
                     gitUtility = load "${utilisPath}/gitUtility.groovy"
 
-                    def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
+                    def slackNotifyFactory = load "${utilisPath}/notify/SlackNotify.groovy"
 
-                    slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", '', '', '')
+                    slackNotify = slackNotifyFactory.create(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", '', '', '')
                     slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
                 }
             }
