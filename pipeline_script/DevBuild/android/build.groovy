@@ -81,13 +81,21 @@ pipeline {
                     def cause = currentBuild.getBuildCauses('hudson.model.Cause$UserIdCause')
                     USERNAME = cause.userName
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
+                    def checkoutExtensions = [
+                        [$class: 'CloneOption', timeout: 3600],
+                        [$class: 'CheckoutOption', timeout: 3600]
+                    ]
+                    def hasGitLfs = sh(script: 'git lfs version >/dev/null 2>&1', returnStatus: true) == 0
+
+                    if (hasGitLfs) {
+                        checkoutExtensions.add(0, [$class: 'GitLFSPull'])
+                    } else {
+                        echo 'git-lfs is not installed on this node, skipping GitLFSPull.'
+                    }
+
                     checkout([$class: 'GitSCM',
                         branches: [[name: BRANCH_NAME]],
-                        extensions: [
-                            [$class: 'GitLFSPull'],
-                            [$class: 'CloneOption', timeout: 3600],
-                            [$class: 'CheckoutOption', timeout: 3600]
-                        ],
+                        extensions: checkoutExtensions,
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
                     ])
