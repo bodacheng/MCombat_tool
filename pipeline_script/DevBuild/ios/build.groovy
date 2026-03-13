@@ -1,4 +1,9 @@
 pipeline {
+    agent {
+        node {
+            customWorkspace "${params.CUSTOM_WORKSPACE}"
+        }
+    }
     
     environment {
         // groovy Files
