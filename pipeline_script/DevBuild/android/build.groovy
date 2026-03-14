@@ -326,17 +326,22 @@ pipeline {
             }
             
             steps {
-                androidApkUpload filesPattern: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab",
-                    googleCredentialsId: "${params.GoogleCredentialsId}",
-                    recentChangeList: [
-                        [
-                            language: 'ja-JP',
-                            text: "ビルド${BUILD_ID} ${USERNAME} / RELEASE NOTE: ${RELEASENOTE}"
-                        ]
-                    ],
-                    releaseName: "$VERSION",
-                    rolloutPercentage: '0',
-                    trackName: 'internal'
+                script {
+                    def googlePlayCredentialsId = params.GoogleCredentialsId?.trim() ?: 'google store upload'
+                    echo "Google Play credential ID: ${googlePlayCredentialsId}"
+
+                    androidApkUpload filesPattern: "${OUTPUT_PATH}/${PRODUCT_NAME}.aab",
+                        googleCredentialsId: googlePlayCredentialsId,
+                        recentChangeList: [
+                            [
+                                language: 'ja-JP',
+                                text: "ビルド${BUILD_ID} ${USERNAME} / RELEASE NOTE: ${RELEASENOTE}"
+                            ]
+                        ],
+                        releaseName: "$VERSION",
+                        rolloutPercentage: '0',
+                        trackName: 'internal'
+                }
             }
         }
     }
