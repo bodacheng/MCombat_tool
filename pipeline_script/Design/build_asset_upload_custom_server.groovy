@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'master'
+            label 'built-in'
             customWorkspace "${params.CUSTOM_WORKSPACE}"
         }
     }

@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "master"
+        label "built-in"
     }
 
     // param.ANDROID_ARCHSは、"ARMv7;ARM64"のように、複数の場合は;を入れて指定する
