@@ -7,6 +7,8 @@ pipeline {
     }
 
     environment {
+        // Homebrew binaries are not on the Jenkins service PATH by default on macOS.
+        PATH="/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
     
         // environment
         UNITY_PATH="/Applications/Unity/Hub/Editor/${UNITY_VERSION}/Unity.app/Contents/MacOS/Unity"
@@ -56,6 +58,29 @@ pipeline {
                     //def slackNotifyClass = load "${utilisPath}/notify/SlackNotify.groovy"
                     //slackNotify = slackNotifyClass.newInstance(env.SLACK_NOTIFY_CHANNEL, "p3-notify-slack-token", '', '', '')
                     //slackUtility = load "${utilisPath}/notify/slackUtility.groovy"
+                }
+            }
+        }
+        stage('AWS準備') {
+            steps {
+                script {
+                    SERVER_PROFILE_NAME = "mcombatDev"
+
+                    sh """
+                        set -eu
+
+                        if ! command -v aws >/dev/null 2>&1; then
+                            echo "AWS CLI not found in PATH=${PATH}"
+                            echo "Install awscli so Jenkins can upload assets."
+                            exit 1
+                        fi
+
+                        if ! aws configure list-profiles | grep -Fx '${SERVER_PROFILE_NAME}' >/dev/null 2>&1; then
+                            echo "AWS profile '${SERVER_PROFILE_NAME}' is not configured for Jenkins user \$(whoami)."
+                            echo "Run: aws configure --profile ${SERVER_PROFILE_NAME}"
+                            exit 1
+                        fi
+                    """
                 }
             }
         }
