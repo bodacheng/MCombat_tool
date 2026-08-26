@@ -90,6 +90,12 @@ pipeline {
                         userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
                     ])
 
+                    sh '''
+                        git submodule sync --recursive
+                        git submodule update --init --recursive
+                        git submodule status --recursive
+                    '''
+
                     // Git情報の取得
 //                     GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)
 //                     GIT_HASH = gitUtility.getGitRevision()
