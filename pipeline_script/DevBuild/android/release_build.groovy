@@ -69,6 +69,7 @@ pipeline {
                     checkout([$class: 'GitSCM',
                         branches: [[name: "$BRANCH_NAME"]],
                         extensions: [
+                            gitUtility.getSubmoduleCheckoutOption()
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]

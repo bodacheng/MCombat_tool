@@ -74,6 +74,7 @@ pipeline {
                     checkout([$class: 'GitSCM',
                         branches: [[name: "$BRANCH_NAME"]],
                         extensions: [
+                            gitUtility.getSubmoduleCheckoutOption()
 //                             [$class: 'GitLFSPull'],
 //                             [$class: 'CloneOption', timeout: 60],
 //                             [$class: 'CheckoutOption', timeout: 60]

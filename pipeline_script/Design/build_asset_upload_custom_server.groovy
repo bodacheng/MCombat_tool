@@ -83,18 +83,13 @@ pipeline {
                         branches: [[name: "$BRANCH_NAME"]],
                         extensions: [
                             //[$class: 'GitLFSPull'],
+                            gitUtility.getSubmoduleCheckoutOption(),
                             [$class: 'CloneOption', timeout: 999999999],
                             [$class: 'CheckoutOption', timeout: 999999999]
                         ],
                         gitTool: 'Default',
                         userRemoteConfigs: [[credentialsId: params.GIT_CREDENTIAL, url: params.GIT_URL]]
                     ])
-
-                    sh '''
-                        git submodule sync --recursive
-                        git submodule update --init --recursive
-                        git submodule status --recursive
-                    '''
 
                     // Git情報の取得
 //                     GIT_LOG = gitUtility.getGitLogMessage(BRANCH_NAME)

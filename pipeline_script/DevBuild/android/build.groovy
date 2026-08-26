@@ -82,6 +82,7 @@ pipeline {
                     USERNAME = cause.userName
                     BRANCH_NAME = gitUtility.get_branch_name(params.BRANCH)
                     def checkoutExtensions = [
+                        gitUtility.getSubmoduleCheckoutOption(),
                         [$class: 'CloneOption', timeout: 3600],
                         [$class: 'CheckoutOption', timeout: 3600]
                     ]

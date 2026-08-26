@@ -13,6 +13,19 @@ def get_branch_name(from_branch_name) {
     return branch
 }
 
+// 主仓库が固定しているリビジョンでsubmoduleを再帰的にチェックアウトする
+def getSubmoduleCheckoutOption() {
+    return [
+        $class: 'SubmoduleOption',
+        disableSubmodules: false,
+        parentCredentials: true,
+        recursiveSubmodules: true,
+        reference: '',
+        shallow: false,
+        trackingSubmodules: false
+    ]
+}
+
 // gitのリビジョン番号の取得
 def getGitRevision() {
     println '*** git revision番号の取得 ***'

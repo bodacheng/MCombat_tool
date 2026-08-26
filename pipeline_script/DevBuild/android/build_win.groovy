@@ -92,6 +92,7 @@ pipeline {
                         branches: [[name: BRANCH_NAME]],
                         extensions: [
                             [$class: 'GitLFSPull'],
+                            gitUtility.getSubmoduleCheckoutOption(),
                             [$class: 'CloneOption', timeout: 360],
                             [$class: 'CheckoutOption', timeout: 360]
                         ],
