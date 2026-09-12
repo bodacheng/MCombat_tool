@@ -115,6 +115,13 @@ HEADSLING_BUILD_NUMBER="$BUILD_NUMBER" \
   -buildTarget iOS \
   -executeMethod "$UNITY_BUILD_METHOD" \
   -logFile "$WORKSPACE/Logs/Jenkins/ios_${BUILD_NUMBER}.log"
+
+# HEADSLING only uses the operating system's exempt HTTPS/TLS encryption.
+# Embedding the declaration prevents App Store Connect from asking for export
+# compliance information again for every uploaded build.
+APP_INFO_PLIST="$WORKSPACE/$XCODE_OUTPUT_PATH/Info.plist"
+/usr/libexec/PlistBuddy -c "Add :ITSAppUsesNonExemptEncryption bool false" "$APP_INFO_PLIST" 2>/dev/null || \
+  /usr/libexec/PlistBuddy -c "Set :ITSAppUsesNonExemptEncryption false" "$APP_INFO_PLIST"
 '''
             }
         }
