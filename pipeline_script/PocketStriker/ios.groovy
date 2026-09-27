@@ -171,7 +171,7 @@ xcodebuild -exportArchive -archivePath "$WORKSPACE/$ARCHIVE_PATH" \
             }
         }
         stage('Upload App Store') {
-            when { expression { return !params.VALIDATE_ONLY && params.BUILD_KIND == 'Release' } }
+            when { expression { return !params.VALIDATE_ONLY && !params.SIGNING_VALIDATE_ONLY && params.BUILD_KIND == 'Release' } }
             steps {
                 withCredentials([
                     string(credentialsId: 'AppleStore_API_Key', variable: 'API_KEY'),
