@@ -105,6 +105,7 @@ fi
 PLAYBACK_ENGINES="${UNITY_PATH%/Unity.app/Contents/MacOS/Unity}/PlaybackEngines"
 if [ "$IOS" = 'true' ]; then test -d "$PLAYBACK_ENGINES/iOSSupport"; fi
 if [ "$ANDROID" = 'true' ]; then test -d "$PLAYBACK_ENGINES/AndroidPlayer"; fi
+xcrun metal --version
 mkdir -p Logs
 if [ "$VALIDATE_ONLY" != 'true' ]; then
     command -v aws

@@ -67,6 +67,7 @@ if [ "$PROJECT_UNITY_VERSION" != '6000.5.1f1' ]; then
     exit 2
 fi
 test -d "${UNITY_PATH%/Unity.app/Contents/MacOS/Unity}/PlaybackEngines/iOSSupport"
+xcrun metal --version
 mkdir -p Logs "$IPA_OUTPUT_PATH"
 plutil -lint "$EXPORT_OPTIONS_PATH"
 xcodebuild -version
