@@ -49,7 +49,7 @@ aws s3 cp --recursive "$ASSET_DIRECTORY" "$DESTINATION" --profile "$AWS_PROFILE"
 }
 
 pipeline {
-    agent { node { label 'built-in'; customWorkspace "${params.CUSTOM_WORKSPACE}" } }
+    agent { label 'built-in' }
     options {
         skipDefaultCheckout(true)
         disableConcurrentBuilds()
