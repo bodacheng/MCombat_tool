@@ -7,6 +7,24 @@ def requiredScalar(String path, String key) {
     return value
 }
 
+def projectVersion() {
+    def entries = readFile('ProjectSettings/ProjectSettings.asset').readLines().findAll { it.trim().startsWith('bundleVersion:') }
+    if (entries.size() != 1) { error('Expected exactly one bundleVersion in ProjectSettings/ProjectSettings.asset.') }
+    def version = entries[0].trim().substring('bundleVersion:'.length()).trim()
+    if (!(version ==~ /[0-9]+\.[0-9]+\.[0-9]+/)) { error('Project bundleVersion must be a numeric dotted version.') }
+    return version
+}
+
+def versionedAssetPath(String path, String key, String version, String kind) {
+    def template = requiredScalar(path, key)
+    def environment = kind.toLowerCase()
+    def pattern = key.startsWith('Build')
+        ? 'ServerData/' + environment + '/v/\\{version\\}/?'
+        : 's3://[A-Za-z0-9_.-]+/' + environment + '/v/\\{version\\}/?'
+    if (!(template ==~ pattern)) { error("${key} must use the ${environment}/v/{version} template; explicit versions are not allowed.") }
+    return template.replace('{version}', version)
+}
+
 def buildAssets(String target) {
     withEnv(["ASSET_TARGET=${target}"]) {
         sh '''#!/bin/bash
@@ -69,6 +87,9 @@ pipeline {
                     if (!(params.AssetKind in ['Dev', 'Release'])) { error('AssetKind must be Dev or Release.') }
                     if (!params.IOS && !params.ANDROID) { error('Select at least one asset platform.') }
                     if (!params.VALIDATE_ONLY && !(params.AWS_PROFILE ==~ /[A-Za-z0-9_-]+/)) { error('AWS_PROFILE is required.') }
+                    if (params.AssetKind == 'Release' && !params.VALIDATE_ONLY) {
+                        error('Release Addressables must be published from the matching iOS player build. A separate full content build can replace the catalog used by installed players.')
+                    }
                     def branch = (params.BRANCH ?: 'master').trim().replaceFirst('^refs/heads/', '')
                     if (!branch) { error('BRANCH must not be blank.') }
                     checkout([$class: 'GitSCM', branches: [[name: branch]],
@@ -84,12 +105,11 @@ pipeline {
             steps {
                 script {
                     def settings = 'Assets/App/Editor/Build/Configs/AddressablesProfileSettings.yaml'
+                    env.APP_VERSION = projectVersion()
                     env.ASSET_PROFILE = requiredScalar(settings, "Profile${params.AssetKind}")
-                    env.ASSET_BUILDPATH = requiredScalar(settings, "Build${params.AssetKind}")
-                    env.UPLOAD_S3_ADDRESS = requiredScalar(settings, "Upload${params.AssetKind}")
-                    if (!(env.ASSET_PROFILE ==~ /[A-Za-z0-9_-]+/)) { error('Invalid Addressables profile.') }
-                    if (!(env.ASSET_BUILDPATH ==~ /ServerData\/[A-Za-z0-9_\/.\-]+/) || env.ASSET_BUILDPATH.contains('..')) { error('Invalid Addressables build path.') }
-                    if (!(env.UPLOAD_S3_ADDRESS ==~ /s3:\/\/[A-Za-z0-9_\/.\-]+/) || env.UPLOAD_S3_ADDRESS.contains('..')) { error('Invalid S3 upload path.') }
+                    if (env.ASSET_PROFILE != params.AssetKind.toLowerCase()) { error('Addressables profile must match AssetKind.') }
+                    env.ASSET_BUILDPATH = versionedAssetPath(settings, "Build${params.AssetKind}", env.APP_VERSION, params.AssetKind)
+                    env.UPLOAD_S3_ADDRESS = versionedAssetPath(settings, "Upload${params.AssetKind}", env.APP_VERSION, params.AssetKind)
                     if (params.CLEAR_CACHE) { dir('Library') { deleteDir() } }
                     dir('ServerData') { deleteDir() }
                     currentBuild.description = "${params.AssetKind}: ${env.UPLOAD_S3_ADDRESS}" + (params.VALIDATE_ONLY ? ' (validation only)' : '')
