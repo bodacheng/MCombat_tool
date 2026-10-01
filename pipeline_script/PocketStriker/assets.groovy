@@ -43,9 +43,6 @@ if [ -z "$CATALOG" ] || [ -z "$HASH" ] || [ -z "$BUNDLE" ]; then
     echo "Addressables output is incomplete: $ASSET_DIRECTORY" >&2
     exit 3
 fi
-python3 Tools/package_addressables_bootstrap.py \
-  --runtime-dir "$WORKSPACE/Library/com.unity.addressables/aa/$ASSET_TARGET" \
-  --server-dir "$ASSET_DIRECTORY"
 '''
     }
 }
@@ -60,12 +57,10 @@ DESTINATION="${UPLOAD_S3_ADDRESS%/}/$ASSET_TARGET/"
 set --
 if [ "$AWS_CACHE" = 'true' ]; then set -- --cache-control 'max-age=86400'; fi
 aws s3 cp --recursive "$ASSET_DIRECTORY" "$DESTINATION" --profile "$AWS_PROFILE" \
-  --exclude 'catalog_*' --exclude 'player-bootstrap.zip' "$@"
-# Catalog and bootstrap must be available before the hash advertises new content.
+  --exclude 'catalog_*' "$@"
+# Catalog must be available before the hash advertises new content.
 aws s3 cp --recursive "$ASSET_DIRECTORY" "$DESTINATION" --profile "$AWS_PROFILE" \
   --exclude '*' --include 'catalog_*.bin' --include 'catalog_*.json' --cache-control 'no-cache'
-aws s3 cp "${ASSET_DIRECTORY}player-bootstrap.zip" "${DESTINATION}player-bootstrap.zip" \
-  --profile "$AWS_PROFILE" --cache-control 'no-cache'
 aws s3 cp --recursive "$ASSET_DIRECTORY" "$DESTINATION" --profile "$AWS_PROFILE" \
   --exclude '*' --include 'catalog_*.hash' --cache-control 'no-cache'
 '''
