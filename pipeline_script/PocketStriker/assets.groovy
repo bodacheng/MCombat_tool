@@ -43,6 +43,9 @@ if [ -z "$CATALOG" ] || [ -z "$HASH" ] || [ -z "$BUNDLE" ]; then
     echo "Addressables output is incomplete: $ASSET_DIRECTORY" >&2
     exit 3
 fi
+python3 Tools/package_addressables_bootstrap.py \
+  --runtime-dir "$WORKSPACE/Library/com.unity.addressables/aa/$ASSET_TARGET" \
+  --server-dir "$ASSET_DIRECTORY"
 '''
     }
 }
@@ -57,11 +60,14 @@ DESTINATION="${UPLOAD_S3_ADDRESS%/}/$ASSET_TARGET/"
 set --
 if [ "$AWS_CACHE" = 'true' ]; then set -- --cache-control 'max-age=86400'; fi
 aws s3 cp --recursive "$ASSET_DIRECTORY" "$DESTINATION" --profile "$AWS_PROFILE" \
-  --exclude 'catalog_*' "$@"
-set --
-if [ "$AWS_CACHE" = 'true' ]; then set -- --cache-control 'max-age=10'; fi
+  --exclude 'catalog_*' --exclude 'player-bootstrap.zip' "$@"
+# Catalog and bootstrap must be available before the hash advertises new content.
 aws s3 cp --recursive "$ASSET_DIRECTORY" "$DESTINATION" --profile "$AWS_PROFILE" \
-  --exclude '*' --include 'catalog_*' "$@"
+  --exclude '*' --include 'catalog_*.bin' --include 'catalog_*.json' --cache-control 'no-cache'
+aws s3 cp "${ASSET_DIRECTORY}player-bootstrap.zip" "${DESTINATION}player-bootstrap.zip" \
+  --profile "$AWS_PROFILE" --cache-control 'no-cache'
+aws s3 cp --recursive "$ASSET_DIRECTORY" "$DESTINATION" --profile "$AWS_PROFILE" \
+  --exclude '*' --include 'catalog_*.hash' --cache-control 'no-cache'
 '''
     }
 }
@@ -87,9 +93,6 @@ pipeline {
                     if (!(params.AssetKind in ['Dev', 'Release'])) { error('AssetKind must be Dev or Release.') }
                     if (!params.IOS && !params.ANDROID) { error('Select at least one asset platform.') }
                     if (!params.VALIDATE_ONLY && !(params.AWS_PROFILE ==~ /[A-Za-z0-9_-]+/)) { error('AWS_PROFILE is required.') }
-                    if (params.AssetKind == 'Release' && !params.VALIDATE_ONLY) {
-                        error('Release Addressables must be published from the matching iOS player build. A separate full content build can replace the catalog used by installed players.')
-                    }
                     def branch = (params.BRANCH ?: 'master').trim().replaceFirst('^refs/heads/', '')
                     if (!branch) { error('BRANCH must not be blank.') }
                     checkout([$class: 'GitSCM', branches: [[name: branch]],

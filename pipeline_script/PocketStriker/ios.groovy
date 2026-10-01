@@ -15,16 +15,6 @@ def projectVersion() {
     return version
 }
 
-def versionedAssetPath(String path, String key, String version, String kind) {
-    def template = requiredScalar(path, key)
-    def environment = kind.toLowerCase()
-    def pattern = key.startsWith('Build')
-        ? 'ServerData/' + environment + '/v/\\{version\\}/?'
-        : 's3://[A-Za-z0-9_.-]+/' + environment + '/v/\\{version\\}/?'
-    if (!(template ==~ pattern)) { error("${key} must use the ${environment}/v/{version} template; explicit versions are not allowed.") }
-    return template.replace('{version}', version)
-}
-
 pipeline {
     agent { label 'built-in' }
     options {
@@ -72,14 +62,10 @@ pipeline {
                     def assetSettings = "${env.BUILD_CONFIG_DIR}/AddressablesProfileSettings.yaml"
                     env.ASSET_PROFILE = requiredScalar(assetSettings, "Profile${env.ASSET_KIND}")
                     if (env.ASSET_PROFILE != env.ASSET_KIND.toLowerCase()) { error('Addressables profile must match BUILD_KIND.') }
-                    env.ASSET_BUILDPATH = versionedAssetPath(assetSettings, "Build${env.ASSET_KIND}", env.APP_VERSION, env.ASSET_KIND)
-                    env.UPLOAD_S3_ADDRESS = versionedAssetPath(assetSettings, "Upload${env.ASSET_KIND}", env.APP_VERSION, env.ASSET_KIND)
-                    env.AWS_PROFILE = (params.AWS_PROFILE ?: 'mcombatDev').trim()
-                    if (!(env.AWS_PROFILE ==~ /[A-Za-z0-9_-]+/)) { error('Invalid AWS_PROFILE.') }
                     env.EXPORT_OPTIONS_PATH = "${env.BUILD_CONFIG_DIR}/iOS/${params.machine_name}/ExportOptions_${params.BUILD_KIND}.plist"
                     if (!fileExists(env.EXPORT_OPTIONS_PATH)) { error("Missing ${env.EXPORT_OPTIONS_PATH}") }
                     env.XCODE_CONFIGURATION = params.developmentBuild ? 'Debug' : 'Release'
-                    currentBuild.description = "${params.BUILD_KIND}: ${env.APP_VERSION}, ${env.UPLOAD_S3_ADDRESS}"
+                    currentBuild.description = "${params.BUILD_KIND}: ${env.APP_VERSION}, assets ${env.ASSET_PROFILE}"
                     if (params.CLEAR_CACHE) { dir('Library') { deleteDir() } }
                     dir('build_ios') { deleteDir() }
                 }
@@ -112,21 +98,6 @@ set -euo pipefail
   -machineName "$machine_name" -assetProfile "$ASSET_PROFILE"
 test -f "$OUTPUT_PATH/Unity-iPhone.xcodeproj/project.pbxproj"
 '''
-            }
-        }
-        stage('Archive Matching Addressables') {
-            steps {
-                sh '''#!/bin/bash
-set -euo pipefail
-ASSET_DIRECTORY="$WORKSPACE/${ASSET_BUILDPATH%/}/iOS"
-python3 Tools/Validation/verify_ios_addressables_pair.py \
-  --player-aa "$OUTPUT_PATH/Data/Raw/aa" \
-  --server-dir "$ASSET_DIRECTORY" \
-  --manifest "build_ios/addressables_${BUILD_NUMBER}_iOS_manifest.json"
-tar -czf "build_ios/addressables_${BUILD_NUMBER}_iOS.tar.gz" -C "$ASSET_DIRECTORY" .
-'''
-                archiveArtifacts artifacts: "build_ios/addressables_${env.BUILD_NUMBER}_iOS_manifest.json,build_ios/addressables_${env.BUILD_NUMBER}_iOS.tar.gz",
-                    fingerprint: true, followSymlinks: false
             }
         }
         stage('CocoaPods') {
@@ -195,31 +166,6 @@ xcodebuild -exportArchive -archivePath "$WORKSPACE/$ARCHIVE_PATH" \
                     env.APP_OUTPUT_PATH = ipaFiles[0]
                 }
                 archiveArtifacts artifacts: 'build_ios/IPA/**/*.ipa', fingerprint: true, followSymlinks: false
-            }
-        }
-        stage('Publish Matching Addressables') {
-            when { expression { return !params.VALIDATE_ONLY && !params.SIGNING_VALIDATE_ONLY && params.BUILD_KIND == 'Release' } }
-            steps {
-                sh '''#!/bin/bash
-set -euo pipefail
-python3 Tools/publish_ios_addressables.py \
-  --player-aa "$OUTPUT_PATH/Data/Raw/aa" \
-  --server-dir "$WORKSPACE/${ASSET_BUILDPATH%/}/iOS" \
-  --aws-profile "$AWS_PROFILE" \
-  --publish
-'''
-            }
-        }
-        stage('Verify Published Addressables') {
-            when { expression { return !params.VALIDATE_ONLY && !params.SIGNING_VALIDATE_ONLY && params.BUILD_KIND == 'Release' } }
-            steps {
-                sh '''#!/bin/bash
-set -euo pipefail
-python3 Tools/Validation/verify_ios_addressables_pair.py \
-  --player-aa "$OUTPUT_PATH/Data/Raw/aa" \
-  --server-dir "$WORKSPACE/${ASSET_BUILDPATH%/}/iOS" \
-  --check-remote
-'''
             }
         }
         stage('Upload App Store') {
